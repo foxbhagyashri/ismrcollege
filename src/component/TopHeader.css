@@ -1,0 +1,73 @@
+/* ===== Top Header Area ===== */
+.top-header-area {
+    background-color: #002147;
+    /* dark blue like Adma */
+    color: #fff;
+    font-size: 15px;
+    padding: 8px 0;
+}
+
+.top-header-area ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.top-header-left ul,
+.top-header-right ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.top-header-left a,
+.top-header-right a {
+    text-decoration: none;
+    color: #ffffffcc;
+    /* soft white */
+    transition: color 0.3s ease;
+    font-weight: 400;
+}
+
+.top-header-left a:hover,
+.top-header-right a:hover {
+    color: #ffffff;
+}
+
+/* Icons */
+.top-header-left i {
+    margin-right: 8px;
+    color: #ffb100;
+    /* golden accent like Adma */
+}
+
+/* Right side alignment */
+.top-header-right {
+    text-align: right;
+}
+
+.top-header-right ul {
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+/* Responsive (mobile view) */
+@media (max-width: 768px) {
+
+    .top-header-left ul,
+    .top-header-right ul {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .top-header-right {
+        text-align: center;
+    }
+}
+
+.top-header-area .container-fluid {
+    max-width: 1140px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
