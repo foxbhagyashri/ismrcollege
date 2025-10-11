@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import './App.css'
-import Topbar from './component/topbar'
+import Topbar from './component/Topbar'
 import "remixicon/fonts/remixicon.css";
 import Header from './component/Header';
-import Banner from './component/banner';
+import Banner from './component/Banner';
 
 
 
