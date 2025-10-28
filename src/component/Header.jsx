@@ -60,20 +60,9 @@ const Header = () => {
               </li>
 
               {/* About */}
-              <li className="nav-item">
-                <a href="#" className="nav-link">
-                  About
-                </a>
-              </li>
-
-              {/* Admissions */}
               <li className="nav-item dropdown">
-                <a
-                  href="#"
-                  className="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                >
-                  Admissions
+                <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                  About
                 </a>
                 <ul className="dropdown-menu">
                   <li>
@@ -109,14 +98,14 @@ const Header = () => {
                 </ul>
               </li>
 
-              {/* Placement */}
+              {/* Admissions */}
               <li className="nav-item dropdown">
                 <a
                   href="#"
                   className="nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
                 >
-                  Placement
+                  Admissions
                 </a>
                 <ul className="dropdown-menu">
                   <li>
@@ -157,6 +146,64 @@ const Header = () => {
                   <li>
                     <a href="event-details.html" className="dropdown-item">
                       Admission Contact
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              {/* Placement */}
+              <li className="nav-item dropdown">
+                <a
+                  href="#"
+                  className="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                >
+                  Placement
+                </a>
+                <ul className="dropdown-menu">
+                  <li>
+                    <a href="fitness-athletics.html" className="dropdown-item">
+                      Placement Overview
+                    </a>
+                  </li>
+                  <li>
+                    <a href="fitness-athletics.html" className="dropdown-item">
+                      Placement Process
+                    </a>
+                  </li>
+                  <li>
+                    <a href="fitness-athletics.html" className="dropdown-item">
+                      Placement Rules & REgulations
+                    </a>
+                  </li>
+                  <li>
+                    <a href="fitness-athletics.html" className="dropdown-item">
+                      Placement  Statistics
+                    </a>
+                  </li>
+                  <li>
+                    <a href="fitness-athletics.html" className="dropdown-item">
+                      Our Intership & Placement
+                    </a>
+                  </li>
+                  <li>
+                    <a href="fitness-athletics.html" className="dropdown-item">
+                      Alumni Talk
+                    </a>
+                  </li>
+                  <li>
+                    <a href="fitness-athletics.html" className="dropdown-item">
+                      Corporate  Testimonials
+                    </a>
+                  </li>
+                  <li>
+                    <a href="fitness-athletics.html" className="dropdown-item">
+                      Student Testimonials
+                    </a>
+                  </li>
+                  <li>
+                    <a href="fitness-athletics.html" className="dropdown-item">
+                      Placement Contact
                     </a>
                   </li>
                 </ul>
