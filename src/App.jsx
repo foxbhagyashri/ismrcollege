@@ -4,19 +4,22 @@ import Topbar from './component/Topbar'
 import "remixicon/fonts/remixicon.css";
 import Header from './component/Header';
 import Banner from './component/Banner';
-
-
+import Marquee from './component/marquee';
+import AboutAdmaUniversity from './component/AboutAdmaUniversity';
+import ProgramsSection from "./component/ProgramsSection";
 
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <Topbar />
       <Header />
-      <Banner/>
+      <Banner />
+      <Marquee />
+      <AboutAdmaUniversity />
+      <ProgramsSection />
     </>
   )
 }

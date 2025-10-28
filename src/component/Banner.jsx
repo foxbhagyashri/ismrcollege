@@ -9,9 +9,9 @@ const Banner = () => {
                     <div className="row align-items-center">
                         <div className="col-lg-6">
                             <div className="banner-wrap-image">
-                                <img src="/banner-wrap-1.png" alt="banner-wrap-image"></img>
+                                <img src="/banner-wrap-1.png" alt="banner-wrap-image" className="student-img"></img>
                                 <div className="image-2">
-                                    <img src="/banner-wrap-city.png" alt="banner-wrap"></img>
+                                    <img src="/banner-wrap-city.png" alt="banner-wrap" className="rotating-img"></img>
                                     <div className="middle-img">
                                         <img src="/banner-wrap-city-2.png" alt="banner-wrap"></img>
                                     </div>
@@ -22,7 +22,7 @@ const Banner = () => {
                             <div className="banner-wrap-content">
                                 <div className="title">
                                     <p>The Best University In The NY City Since <span>1996</span></p>
-                                    <h1>Build Your Career At Adma</h1>
+                                    <h1>Build Your<br></br> Career At Adma</h1>
                                     <p>We are a Top 06 Canadian university and one of the Top 120 in the world. Find out what
                                         makes our student experience so rich.</p>
                                 </div>
@@ -30,7 +30,9 @@ const Banner = () => {
                                     <li className="d-inline-block">
                                         <a className="text-decoration-none default-btn" href="university-overview.html">
                                             University Overview
-                                            <i className="flaticon-right-arrow"></i>
+                                            &nbsp; <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                            </svg>
                                         </a>
                                     </li>
                                     <li className="d-inline-block">
@@ -45,7 +47,9 @@ const Banner = () => {
                                                 <a className="text-decoration-none arrow-btn" data-fslightbox="gallery"
                                                     href="https://www.youtube.com/watch?v=3nQNiWdeH2Q">
                                                     See How To Apply
-                                                    <i className="flaticon-right-arrow"></i>
+                                                    &nbsp; <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                                    </svg>
                                                 </a>
                                             </li>
                                         </ul>
@@ -74,7 +78,8 @@ const Banner = () => {
                                     </li>
                                 </ul>
                                 <div className="content-shape">
-                                    <img src="/banner-wrap-city-3.png" alt="banner-wrap-shape"></img>
+                                    <img src="/banner-wrap-city-3.png" alt="banner-wrap-shape" className="shape-img"></img>
+                                    <span className="red-dot"></span>
                                 </div>
                             </div>
                         </div>
