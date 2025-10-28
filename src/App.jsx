@@ -4,7 +4,7 @@ import Topbar from './component/Topbar'
 import "remixicon/fonts/remixicon.css";
 import Header from './component/Header';
 import Banner from './component/Banner';
-import Marquee from './component/marquee';
+import Marquee from './component/Marquee';
 import AboutAdmaUniversity from './component/AboutAdmaUniversity';
 import ProgramsSection from "./component/ProgramsSection";
 
