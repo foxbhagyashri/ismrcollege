@@ -220,64 +220,6 @@ const Header = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a href="fitness-athletics.html" className="dropdown-item">
-                      Placement Overview
-                    </a>
-                  </li>
-                  <li>
-                    <a href="fitness-athletics.html" className="dropdown-item">
-                      Placement Process
-                    </a>
-                  </li>
-                  <li>
-                    <a href="fitness-athletics.html" className="dropdown-item">
-                      Placement Rules & REgulations
-                    </a>
-                  </li>
-                  <li>
-                    <a href="fitness-athletics.html" className="dropdown-item">
-                      Placement  Statistics
-                    </a>
-                  </li>
-                  <li>
-                    <a href="fitness-athletics.html" className="dropdown-item">
-                      Our Intership & Placement
-                    </a>
-                  </li>
-                  <li>
-                    <a href="fitness-athletics.html" className="dropdown-item">
-                      Alumni Talk
-                    </a>
-                  </li>
-                  <li>
-                    <a href="fitness-athletics.html" className="dropdown-item">
-                      Corporate  Testimonials
-                    </a>
-                  </li>
-                  <li>
-                    <a href="fitness-athletics.html" className="dropdown-item">
-                      Student Testimonials
-                    </a>
-                  </li>
-                  <li>
-                    <a href="fitness-athletics.html" className="dropdown-item">
-                      Placement Contact
-                    </a>
-                  </li>
-                </ul>
-              </li>
-
-              {/* Student Corner */}
-              <li className="nav-item dropdown">
-                <a
-                  href="#"
-                  className="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                >
-                  Student Corner → Academics
-                </a>
-                <ul className="dropdown-menu">
-                  <li>
                     <a href="university-life.html" className="dropdown-item">
                       Student Campus Life
                     </a>
@@ -290,14 +232,14 @@ const Header = () => {
                 </ul>
               </li>
 
-              {/* Reach Us */}
+              {/* Student Corner */}
               <li className="nav-item dropdown">
                 <a
                   href="#"
                   className="nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
                 >
-                  Reach Us
+                  Student Corner
                 </a>
                 <ul className="dropdown-menu">
                   <li>
@@ -348,6 +290,27 @@ const Header = () => {
                 </ul>
               </li>
 
+              {/* Reach Us */}
+              <li className="nav-item dropdown">
+                <a
+                  href="#"
+                  className="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                >
+                  Reach Us
+                </a>
+                <ul className="dropdown-menu">
+                  <li>
+                    <a href="university-life.html" className="dropdown-item">
+                     How To Reach
+                    </a>
+                  </li>
+                 
+                
+                 
+                </ul>
+              </li>
+
               {/* ✅ Add Newsletter / NAAC / Contact inside mobile menu */}
               <div className="d-lg-none mt-3 border-top pt-2">
                 <ul className="navbar-nav">
@@ -365,7 +328,15 @@ const Header = () => {
                           href="university-life.html"
                           className="dropdown-item"
                         >
-                          How To Reach
+                          August 2025
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="university-life.html"
+                          className="dropdown-item"
+                        >
+                          September 2025
                         </a>
                       </li>
                     </ul>
@@ -439,7 +410,12 @@ const Header = () => {
                 <ul className="dropdown-menu">
                   <li>
                     <a href="university-life.html" className="dropdown-item">
-                      How To Reach
+                    August 2025
+                    </a>
+                  </li>
+                  <li>
+                    <a href="university-life.html" className="dropdown-item">
+                    September 2025
                     </a>
                   </li>
                 </ul>
