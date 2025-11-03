@@ -1,24 +1,40 @@
 .marquee-container {
     overflow: hidden;
-    white-space: nowrap;
-    margin-top:70px;
-    margin-bottom:70px;
-}
-
-.marquee-content {
-    /* display: inline-block; */
-    animation: scroll-left 15s linear infinite;
-}
-.marquee-content img{
-    width:10%;
-}
-
-@keyframes scroll-left {
+    width: 80%;           /* 👈 reduce width (try 70%, 60%, or px value like 900px) */
+    background: #fff;
+    padding: 15px 0;
+    margin: 80px auto 60px;  /* 👈 centers horizontally using auto margins */
+    /* border-radius: 12px;    */
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.1);  */
+    text-align: center;      /* centers the content inside */
+  }
+  
+  
+  .marquee-content {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* spacing between logos */
+    animation: scroll 25s linear infinite; /* slow and smooth */
+  }
+  
+  .marquee-logo {
+    height: 55px; /* adjust as needed */
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(0%);
+    transition: transform 0.3s ease;
+  }
+  
+  .marquee-logo:hover {
+    transform: scale(1.05);
+  }
+  
+  @keyframes scroll {
     from {
-        transform: translateX(0%);
+      transform: translateX(0);
     }
-
     to {
-        transform: translateX(-100%);
+      transform: translateX(-50%);
     }
-}
+  }
+  

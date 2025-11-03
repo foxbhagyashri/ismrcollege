@@ -1,0 +1,100 @@
+.testimonials-section {
+    background-color: #fff;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #002147;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* === Card Styles === */
+  .testimonial-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    margin: 10px auto; /* centers the card */
+    width: 400px; /* increased width */
+    max-width: 100%;
+    min-height: 320px;
+  }
+  
+  
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonial-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .testimonial-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  /* === Slider Customizations === */
+  .slick-slide {
+    padding: 10px;
+  }
+  
+  .slick-track {
+    display: flex;
+    align-items: stretch;
+  }
+  
+  /* === Arrow Styles (Adma look) === */
+  .testimonial-arrows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .arrow-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #002147;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  
+  .arrow-btn:hover {
+    background-color: #f8b400;
+    color: #002147;
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 1.6rem;
+    }
+    .testimonial-card {
+      padding: 15px;
+    }
+  }
+  .text-dark{
+    font-size: 16px;
+  }
+  .card-body{
+    padding: 0px;
+  }
+  .text-muted{
+    font-size: 13px;
+  }
+  
