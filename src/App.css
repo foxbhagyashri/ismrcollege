@@ -1,0 +1,11 @@
+.roboto { font-family: 'Roboto', sans-serif; }
+.lato { font-family: 'Lato', sans-serif; }
+.montserrat { font-family: 'Montserrat', sans-serif; }
+.opensans { font-family: 'Open Sans', sans-serif; }
+.nunito { font-family: 'Nunito', sans-serif; }
+.raleway { font-family: 'Raleway', sans-serif; }
+.sourcesans { font-family: 'Source Sans Pro', sans-serif; }
+.montserrat-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900; /* bold */
+}

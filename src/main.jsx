@@ -5,7 +5,10 @@ import App from './App.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-
+// Import Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
+// Import Bootstrap JS (optional, for components like dropdowns, modals)
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
