@@ -1,0 +1,19 @@
+.counterpara{
+    text-align: left;
+}
+.fw-bold{
+    font-weight: 700;
+    font-size: 48px;
+    font-family: "Roboto Slab", serif;
+    
+}
+.fw-bold span{
+    color:rgb(0, 30, 67);
+}
+.fw-bold b{
+    color:rgb(0, 30, 67);
+}
+.text-muted{
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+}

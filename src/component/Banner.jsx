@@ -1,5 +1,8 @@
 import React from 'react'
 import "./Banner.css";
+import "./Javascript.js"
+import { FaPlay, FaArrowRight } from "react-icons/fa";
+
 
 const Banner = () => {
     return (
@@ -21,8 +24,8 @@ const Banner = () => {
                         <div className="col-lg-6">
                             <div className="banner-wrap-content">
                                 <div className="title">
-                                    <p>The Best University In The NY City Since <span>1996</span></p>
-                                    <h1>Build Your<br></br> Career At Adma</h1>
+                                    <p>The Best University In The Pune City Since <span>1996</span></p>
+                                    <h1>Build Your<br></br> Career At ISMR</h1>
                                     <p>We are a Top 06 Canadian university and one of the Top 120 in the world. Find out what
                                         makes our student experience so rich.</p>
                                 </div>
@@ -44,18 +47,16 @@ const Banner = () => {
                                                 </a>
                                             </li>
                                             <li>
-                                                <a className="text-decoration-none arrow-btn" data-fslightbox="gallery"
+                                                <a className="see" data-fslightbox="gallery"
                                                     href="https://www.youtube.com/watch?v=3nQNiWdeH2Q">
                                                     See How To Apply
-                                                    &nbsp; <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                                                    </svg>
+                                                    &nbsp;   <FaArrowRight className="ms-2 arrow-icon" />
                                                 </a>
                                             </li>
                                         </ul>
                                     </li>
                                 </ul>
-                                <ul className="list-unstyled ps-0 mb-0 d-flex align-items-center user-list">
+                                <ul className=" ps-0 mb-0 d-flex align-items-center user-list">
                                     <li>
                                         <ul className="list-unstyled ps-0 mb-0 d-flex align-items-center image">
                                             <li>
@@ -72,9 +73,9 @@ const Banner = () => {
                                             </li>
                                         </ul>
                                     </li>
-                                    <li>
-                                        <h2><span className="counter">90859</span>+</h2>
-                                        <p>Student around in the world</p>
+                                    <li class="user-listtext">
+                                        <h2><span class="counter">4200</span>+</h2>
+                                        <p class="subtext">Student around in the world</p>
                                     </li>
                                 </ul>
                                 <div className="content-shape">

@@ -1,0 +1,134 @@
+/* Section wrapper */
+.apply-section {
+    background: #f3f3f4;
+    padding: 60px 20px 213px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* inner container to limit width */
+.apply-inner {
+    width: 1100px;
+    max-width: 95%;
+    position: relative;
+}
+
+/* Title */
+.apply-title {
+    font-family: "Roboto Slab", serif;
+    color: #0a2259;
+    font-size: 45px;
+    font-weight: 800;
+    margin: 0 0 60px  0;
+    text-align: left;
+}
+
+/* Top button (right side in screenshot) */
+.apply-btn.top-btn {
+    position: absolute;
+    right: 0;
+    top: 8px;
+    background: #fa394a;
+    color: #fff;
+    border: none;
+    padding: 6px 24px 12px 24px;
+   
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* container for cards */
+.apply-container {
+    display: flex;
+    gap: 28px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* each card */
+.apply-box {
+    background: #fff;
+    flex: 1 1 31%;
+    min-width: 260px;
+    padding: 28px;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(14, 20, 30, 0.06);
+    position: relative;
+    overflow: hidden;
+}
+
+/* icon */
+.apply-icon {
+    font-size: 36px;
+    color: #ef476f;
+    margin-bottom: 10px;
+}
+
+/* big faint step number */
+.apply-step {
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    font-size: 44px;
+    font-weight: 800;
+    color: rgba(239, 71, 111, 0.10);
+}
+
+/* heading and text */
+.apply-heading {
+    color: #0a2259;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 6px 0 12px;
+}
+
+.apply-text {
+    color: #666;
+    font-size: 17px;
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;
+}
+.getarrow{
+    font-size: 23px;
+    font-weight: 500;
+}
+
+/* small responsive behavior */
+@media (max-width: 900px) {
+    .apply-inner {
+        width: 96%;
+    }
+
+    .apply-container {
+        gap: 18px;
+    }
+
+    .apply-box {
+        flex-basis: 48%;
+    }
+
+    .apply-btn.top-btn {
+        position: static;
+        display: inline-block;
+        margin-left: auto;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 560px) {
+    .apply-box {
+        flex-basis: 100%;
+    }
+
+    .apply-title {
+        font-size: 26px;
+    }
+
+    .apply-step {
+        font-size: 36px;
+        right: 12px;
+        top: 12px;
+    }
+}
+
