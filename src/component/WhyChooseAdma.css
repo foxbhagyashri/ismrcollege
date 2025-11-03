@@ -1,0 +1,109 @@
+/* === Why Choose Adma Section === */
+
+.why-choose-section {
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.why-title {
+    font-size: 44px;
+    font-weight: 700;
+    color: #002147;
+    font-family: "Roboto Slab", serif;
+}
+
+.why-text {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: "Poppins", sans-serif;
+}
+
+.overview-btn {
+    color: #dc3545 !important;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: underline;
+    padding-left: 0;
+    transition: color 0.3s ease;
+}
+
+.overview-btn:hover {
+    color: #b91c1c !important;
+    text-decoration: underline;
+}
+
+/* === Counters === */
+
+.counter-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.counter-icon {
+    font-size: 2rem;
+    color: #dc3545;
+    /* red tone */
+}
+
+.counter-number {
+    font-size: 60px;
+    font-weight: 700;
+    color: #002147;
+    margin-bottom: 0;
+}
+
+.counter-label {
+    font-size: 16px;
+    color: #002147;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+/* === Image + Quote Box === */
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.quote-box {
+    position: absolute;
+    bottom: 15px;
+    left: -10px;
+    background-color: #ffc107;
+    /* Adma yellow */
+    color: #002147;
+    padding: 15px 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    max-width: 80%;
+}
+
+/* === Responsive === */
+
+@media (max-width: 768px) {
+    .why-title {
+        font-size: 1.6rem;
+    }
+
+    .quote-box {
+        position: static;
+        margin-top: 1rem;
+        max-width: 100%;
+    }
+
+    .counter-item {
+        justify-content: center;
+        text-align: center;
+    }
+}
