@@ -104,23 +104,30 @@ const InstitutionStats = () => {
             International School of Management and Research.
           </span>
         </h2>
-        <p style={{ fontSize: "16px", color: "#444", lineHeight: "1.7" ,marginTop: "2rem", }}>
-          ISMR Pune is a hub of innovation, learning, and excellence. Our
-          mission is to combine <strong>science and spirituality</strong>
-          to create an environment that fosters holistic development. From
-          state-of-the-art infrastructure to experienced faculty, ISMR is
-          committed to nurturing future leaders in every field. Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Nesciunt enim corrupti
-          itaque odio eos odit iusto sequi provident repellendus aperiam et
-          fugit, voluptate, velit modi at cum quasi maxime voluptates. Lorem
-          ipsum, dolor sit amet consectetur adipisicing elit. Ducimus repellat
-          iste ipsa aut ea deleniti voluptatum autem provident magnam, iure
-          velit, vel omnis facere totam accusamus fuga sunt, unde ad!Lorem Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Quidem vitae sint
-          sapiente. Soluta rem consectetur distinctio, libero, fugit id natus
-          voluptatem est ipsa doloribus quaerat. Facere est saepe aliquid!
-          Totam?
-        </p>
+        <p
+  style={{
+    fontSize: "16px",
+    color: "#444",
+    lineHeight: "1.7",
+    marginTop: "2rem",
+    textAlign: "justify",      // makes text evenly distributed
+    textJustify: "inter-word", // improves spacing between words
+  }}
+>
+  ISMR Pune is a hub of innovation, learning, and excellence. Our mission
+  is to combine <strong>science and spirituality</strong> to create an
+  environment that fosters holistic development. From state-of-the-art
+  infrastructure to experienced faculty, ISMR is committed to nurturing
+  future leaders in every field. Lorem ipsum dolor sit amet consectetur
+  adipisicing elit. Nesciunt enim corrupti itaque odio eos odit iusto sequi
+  provident repellendus aperiam et fugit, voluptate, velit modi at cum quasi
+  maxime voluptates. Lorem ipsum, dolor sit amet consectetur adipisicing
+  elit. Ducimus repellat iste ipsa aut ea deleniti voluptatum autem
+  provident magnam, iure velit, vel omnis facere totam accusamus fuga sunt,
+  unde ad! Quidem vitae sint sapiente. Soluta rem consectetur distinctio,
+  libero, fugit id natus voluptatem est ipsa doloribus quaerat. Facere est
+  saepe aliquid! Totam?
+</p>
 
         <div className="row justify-content-center pt-4   marginTop: 2rem">
           <div className="col-12">
@@ -155,9 +162,11 @@ const InstitutionStats = () => {
                   borderBottomRightRadius: "0.75rem",
                 }}
               >
-                <h5 className="mb-0 fw-bold">
-                  ISMR Campus - Where Excellence Meets Innovation
-                </h5>
+             <h6 className="mb-0 fw-semibold text-white text-uppercase">
+  ISMR Campus – <span className="fw-light fst-italic">Where Excellence Meets Innovation</span>
+</h6>
+
+
               </div>
             </div>
           </div>
@@ -165,81 +174,86 @@ const InstitutionStats = () => {
       </div>
 
       {/* -------- STATS SECTION -------- */}
-      <div className="container pb-4 pt-3">
-        <div className="row g-3 text-center justify-content-center">
-          <div className="col-6 col-md-3">
-            <div
-              className="rounded h-100 d-flex flex-column justify-content-center align-items-center"
-              style={{
-                backgroundColor: "#002A5C",
-                color: "#FFC333",
-                padding: "1.5rem",
-                minHeight: "140px",
-                borderRadius: "12px",
-                fontWeight: 500,
-                boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
-              }}
-            >
-              <StatCounter endValue={150} duration={2000} suffix="+" />
-              <div className="mt-2">Programmes</div>
-            </div>
-          </div>
-
-          <div className="col-6 col-md-3">
-            <div
-              className="rounded h-100 d-flex flex-column justify-content-center align-items-center"
-              style={{
-                backgroundColor: "#FFC333",
-                color: "#002A5C",
-                padding: "1.5rem",
-                minHeight: "140px",
-                borderRadius: "12px",
-                fontWeight: 500,
-                boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
-              }}
-            >
-              <StatCounter endValue={12} duration={2000} suffix="+" />
-              <div className="mt-2">Schools</div>
-            </div>
-          </div>
-
-          <div className="col-6 col-md-3">
-            <div
-              className="rounded h-100 d-flex flex-column justify-content-center align-items-center"
-              style={{
-                backgroundColor: "#002A5C",
-                color: "#FFC333",
-                padding: "1.5rem",
-                minHeight: "140px",
-                borderRadius: "12px",
-                fontWeight: 500,
-                boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
-              }}
-            >
-              <StatCounter endValue={31} duration={2000} suffix="+" />
-              <div className="mt-2">Departments</div>
-            </div>
-          </div>
-
-          <div className="col-6 col-md-3">
-            <div
-              className="rounded h-100 d-flex flex-column justify-content-center align-items-center"
-              style={{
-                backgroundColor: "#FFC333",
-                color: "#002A5C",
-                padding: "1.5rem",
-                minHeight: "140px",
-                borderRadius: "12px",
-                fontWeight: 500,
-                boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
-              }}
-            >
-              <StatCounter endValue={100000} duration={3000} suffix="+" />
-              <div className="mt-2">Alumni</div>
-            </div>
-          </div>
-        </div>
+     <div className="container pb-4 pt-3">
+  <div className="row g-4 text-center justify-content-center">
+    {/* Programmes */}
+    <div className="col-12 col-sm-6 col-md-3">
+      <div
+        className="rounded h-100 d-flex flex-column justify-content-center align-items-center"
+        style={{
+          backgroundColor: "#002A5C",
+          color: "#FFC333",
+          padding: "1.5rem",
+          minHeight: "140px",
+          borderRadius: "12px",
+          fontWeight: 500,
+          boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
+        }}
+      >
+        <StatCounter endValue={150} duration={2000} suffix="+" />
+        <div className="mt-2">Programmes</div>
       </div>
+    </div>
+
+    {/* Schools */}
+    <div className="col-12 col-sm-6 col-md-3">
+      <div
+        className="rounded h-100 d-flex flex-column justify-content-center align-items-center"
+        style={{
+          backgroundColor: "#FFC333",
+          color: "#002A5C",
+          padding: "1.5rem",
+          minHeight: "140px",
+          borderRadius: "12px",
+          fontWeight: 500,
+          boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
+        }}
+      >
+        <StatCounter endValue={12} duration={2000} suffix="+" />
+        <div className="mt-2">Schools</div>
+      </div>
+    </div>
+
+    {/* Departments */}
+    <div className="col-12 col-sm-6 col-md-3">
+      <div
+        className="rounded h-100 d-flex flex-column justify-content-center align-items-center"
+        style={{
+          backgroundColor: "#002A5C",
+          color: "#FFC333",
+          padding: "1.5rem",
+          minHeight: "140px",
+          borderRadius: "12px",
+          fontWeight: 500,
+          boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
+        }}
+      >
+        <StatCounter endValue={31} duration={2000} suffix="+" />
+        <div className="mt-2">Departments</div>
+      </div>
+    </div>
+
+    {/* Alumni */}
+    <div className="col-12 col-sm-6 col-md-3">
+      <div
+        className="rounded h-100 d-flex flex-column justify-content-center align-items-center"
+        style={{
+          backgroundColor: "#FFC333",
+          color: "#002A5C",
+          padding: "1.5rem",
+          minHeight: "140px",
+          borderRadius: "12px",
+          fontWeight: 500,
+          boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
+        }}
+      >
+        <StatCounter endValue={100000} duration={3000} suffix="+" />
+        <div className="mt-2">Alumni</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
       {/* -------- VALUE / VISION / MISSION -------- */}
    

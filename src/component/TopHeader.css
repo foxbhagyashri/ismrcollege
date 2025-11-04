@@ -1,32 +1,39 @@
 /* ===== Top Header Area ===== */
 .top-header-area {
     background-color: #002147;
-    /* dark blue like Adma */
     color: #fff;
-    font-size: 12px;
-    padding: 1px 0;
+    font-size: 12px; /* smaller than original 14px */
+    padding: 6px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    white-space: nowrap; /* keep in one line */
+    overflow-x: auto; /* horizontal scroll if needed */
 }
 
 .top-header-area ul {
     list-style: none;
     margin: 0;
-    padding: 2px;
-}
-
-.top-header-left ul,
-.top-header-right ul {
+    padding: 0;
     display: flex;
     align-items: center;
-    gap: 30px;
+}
+
+.top-header-left ul {
+    gap: 20px;
+}
+
+.top-header-right ul {
+    gap: 15px;
+    justify-content: flex-end;
 }
 
 .top-header-left a,
 .top-header-right a {
     text-decoration: none;
     color: #ffffffcc;
-    /* soft white */
     transition: color 0.3s ease;
     font-weight: 400;
+    display: flex;
+    align-items: center;
 }
 
 .top-header-left a:hover,
@@ -34,40 +41,67 @@
     color: #ffffff;
 }
 
-/* Icons */
 .top-header-left i {
-    margin-right: 8px;
+    margin-right: 6px;
     color: #ffb100;
-    /* golden accent like Adma */
+    font-size: 14px;
 }
 
-/* Right side alignment */
+/* Single line always */
+.top-header-left,
 .top-header-right {
-    text-align: right;
+    display: flex;
+    align-items: center;
 }
 
-.top-header-right ul {
-    justify-content: flex-end;
-    gap: 40px;
-}
-
-/* Responsive (mobile view) */
+/* Mobile adjustments */
 @media (max-width: 768px) {
-
-    .top-header-left ul,
-    .top-header-right ul {
-        flex-direction: column;
-        gap: 89px;
-        text-align: center;
+    .top-header-area {
+        font-size: 11px;
+        padding: 4px 8px;
     }
 
-    .top-header-right {
-        text-align: center;
+    /* Hide email to fit in one line */
+    .top-header-left ul li:nth-child(2) {
+        display: none;
+    }
+
+    .top-header-left ul {
+        gap: 10px;
+    }
+
+    .top-header-right ul {
+        gap: 8px;
+    }
+
+    .top-header-left i {
+        font-size: 12px;
+        margin-right: 4px;
+    }
+
+    .top-header-left a,
+    .top-header-right a {
+        font-size: 11px;
     }
 }
 
-.top-header-area .container-fluid {
-    max-width: 1140px;
-    padding-left: 12px;
-    padding-right: 12px;
+@media (max-width: 576px) {
+    .top-header-area {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+    .top-header-left ul {
+        gap: 8px;
+    }
+    .top-header-right ul {
+        gap: 6px;
+    }
+    .top-header-left i {
+        font-size: 11px;
+        margin-right: 3px;
+    }
+    .top-header-left a,
+    .top-header-right a {
+        font-size: 10px;
+    }
 }

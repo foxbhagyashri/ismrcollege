@@ -1,101 +1,224 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+  const navbarRef = useRef(null);
+
+  const toggleDropdown = (index) => {
+    setActiveDropdown(activeDropdown === index ? null : index);
+  };
+
+  const closeAll = () => {
+    setActiveDropdown(null);
+    setIsNavbarOpen(false);
+    
+    // Close Bootstrap navbar collapse
+    const navbarCollapse = document.getElementById('navbarNav');
+    if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+      navbarCollapse.classList.remove('show');
+    }
+  };
+
+  const handleNavLinkClick = () => {
+    closeAll();
+  };
+
+  const handleDropdownItemClick = () => {
+    closeAll();
+  };
+
+  const toggleNavbar = () => {
+    setIsNavbarOpen(!isNavbarOpen);
+    if (!isNavbarOpen) {
+      setActiveDropdown(null);
+    }
+  };
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+        setActiveDropdown(null);
+      }
+    };
+
+    // Add event listener only for desktop
+    if (window.innerWidth >= 992) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  // Close dropdowns when window is resized to mobile
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 992) {
+        setActiveDropdown(null);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const navItems = (
     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
       {/* Home */}
       <li className="nav-item">
-        <Link className="nav-link" to="/">
+        <Link 
+          className="nav-link" 
+          to="/" 
+          onClick={handleNavLinkClick}
+        >
           Home
         </Link>
       </li>
 
       {/* About Dropdown */}
-      <li className="nav-item dropdown">
+      <li className={`nav-item dropdown ${activeDropdown === 0 ? 'show' : ''}`}>
         <a
           href="#"
           className="nav-link dropdown-toggle"
           role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
+          onClick={(e) => {
+            e.preventDefault();
+            toggleDropdown(0);
+          }}
+          aria-expanded={activeDropdown === 0}
         >
           About
         </a>
-        <ul className="dropdown-menu">
+        <ul className={`dropdown-menu ${activeDropdown === 0 ? 'show' : ''}`}>
           <li>
-            <Link className="dropdown-item" to="/Aboutpage/Aboutinstutue">
+            <Link 
+              className="dropdown-item" 
+              to="/Aboutpage/Aboutinstutue"
+              onClick={handleDropdownItemClick}
+            >
               About Institute
             </Link>
           </li>
           <li>
-            <Link className="dropdown-item" to="/Aboutpage/Leadership">
+            <Link 
+              className="dropdown-item" 
+              to="/Aboutpage/Leadership"
+              onClick={handleDropdownItemClick}
+            >
               Leadership Team
             </Link>
           </li>
           <li>
-            <Link className="dropdown-item" to="/Aboutpage/Ismr">
+            <Link 
+              className="dropdown-item" 
+              to="/Aboutpage/Ismr"
+              onClick={handleDropdownItemClick}
+            >
               Why ISMR?
             </Link>
           </li>
           <li>
-            <Link className="dropdown-item" to="/Aboutpage/Award">
+            <Link 
+              className="dropdown-item" 
+              to="/Aboutpage/Award"
+              onClick={handleDropdownItemClick}
+            >
               Awards & Ranking
             </Link>
           </li>
-          
         </ul>
       </li>
 
       {/* Admissions Dropdown */}
-      <li className="nav-item dropdown">
+      <li className={`nav-item dropdown ${activeDropdown === 1 ? 'show' : ''}`}>
         <a
           href="#"
           className="nav-link dropdown-toggle"
           role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
+          onClick={(e) => {
+            e.preventDefault();
+            toggleDropdown(1);
+          }}
+          aria-expanded={activeDropdown === 1}
         >
           Admissions
         </a>
-        <ul className="dropdown-menu">
+        <ul className={`dropdown-menu ${activeDropdown === 1 ? 'show' : ''}`}>
           <li>
-            <a href="eligibility.html" className="dropdown-item">
+            <a 
+              href="eligibility.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Eligibility Criteria
             </a>
           </li>
           <li>
-            <a href="how-to-apply.html" className="dropdown-item">
+            <a 
+              href="how-to-apply.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               How To Apply
             </a>
           </li>
           <li>
-            <a href="documents.html" className="dropdown-item">
+            <a 
+              href="documents.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               List Of Documents
             </a>
           </li>
           <li>
-            <a href="education-loan.html" className="dropdown-item">
+            <a 
+              href="education-loan.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Education Loan
             </a>
           </li>
           <li>
-            <a href="disclaimer.html" className="dropdown-item">
+            <a 
+              href="disclaimer.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Disclaimer
             </a>
           </li>
           <li>
-            <a href="refund-policy.html" className="dropdown-item">
+            <a 
+              href="refund-policy.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Refund Policy
             </a>
           </li>
           <li>
-            <a href="fees-structure.html" className="dropdown-item">
+            <a 
+              href="fees-structure.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Fees Structure
             </a>
           </li>
           <li>
-            <a href="admission-contact.html" className="dropdown-item">
+            <a 
+              href="admission-contact.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Admission Contact
             </a>
           </li>
@@ -103,59 +226,98 @@ const Header = () => {
       </li>
 
       {/* Placement Dropdown */}
-      <li className="nav-item dropdown">
+      <li className={`nav-item dropdown ${activeDropdown === 2 ? 'show' : ''}`}>
         <a
           href="#"
           className="nav-link dropdown-toggle"
           role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
+          onClick={(e) => {
+            e.preventDefault();
+            toggleDropdown(2);
+          }}
+          aria-expanded={activeDropdown === 2}
         >
           Placement
         </a>
-        <ul className="dropdown-menu">
+        <ul className={`dropdown-menu ${activeDropdown === 2 ? 'show' : ''}`}>
           <li>
-            <a href="placement-overview.html" className="dropdown-item">
+            <a 
+              href="placement-overview.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Placement Overview
             </a>
           </li>
           <li>
-            <a href="placement-process.html" className="dropdown-item">
+            <a 
+              href="placement-process.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Placement Process
             </a>
           </li>
           <li>
-            <a href="placement-rules.html" className="dropdown-item">
+            <a 
+              href="placement-rules.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Placement Rules & Regulations
             </a>
           </li>
           <li>
-            <a href="placement-statistics.html" className="dropdown-item">
+            <a 
+              href="placement-statistics.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Placement Statistics
             </a>
           </li>
           <li>
-            <a href="internship-placement.html" className="dropdown-item">
+            <a 
+              href="internship-placement.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Our Internship & Placement
             </a>
           </li>
           <li>
-            <a href="alumni-talk.html" className="dropdown-item">
+            <a 
+              href="alumni-talk.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Alumni Talk
             </a>
           </li>
           <li>
-            <a href="corporate-testimonials.html" className="dropdown-item">
+            <a 
+              href="corporate-testimonials.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Corporate Testimonials
             </a>
           </li>
           <li>
-            <a href="student-testimonials.html" className="dropdown-item">
+            <a 
+              href="student-testimonials.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Student Testimonials
             </a>
           </li>
           <li>
-            <a href="placement-contact.html" className="dropdown-item">
+            <a 
+              href="placement-contact.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Placement Contact
             </a>
           </li>
@@ -163,24 +325,35 @@ const Header = () => {
       </li>
 
       {/* Life @ Campus Dropdown */}
-      <li className="nav-item dropdown">
+      <li className={`nav-item dropdown ${activeDropdown === 3 ? 'show' : ''}`}>
         <a
           href="#"
           className="nav-link dropdown-toggle"
           role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
+          onClick={(e) => {
+            e.preventDefault();
+            toggleDropdown(3);
+          }}
+          aria-expanded={activeDropdown === 3}
         >
           Life @ Campus
         </a>
-        <ul className="dropdown-menu">
+        <ul className={`dropdown-menu ${activeDropdown === 3 ? 'show' : ''}`}>
           <li>
-            <a href="student-campus-life.html" className="dropdown-item">
+            <a 
+              href="student-campus-life.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Student Campus Life
             </a>
           </li>
           <li>
-            <a href="student-facilities.html" className="dropdown-item">
+            <a 
+              href="student-facilities.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Student Facilities
             </a>
           </li>
@@ -188,59 +361,98 @@ const Header = () => {
       </li>
 
       {/* Student Corner Dropdown */}
-      <li className="nav-item dropdown">
+      <li className={`nav-item dropdown ${activeDropdown === 4 ? 'show' : ''}`}>
         <a
           href="#"
           className="nav-link dropdown-toggle"
           role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
+          onClick={(e) => {
+            e.preventDefault();
+            toggleDropdown(4);
+          }}
+          aria-expanded={activeDropdown === 4}
         >
           Student Corner
         </a>
-        <ul className="dropdown-menu">
+        <ul className={`dropdown-menu ${activeDropdown === 4 ? 'show' : ''}`}>
           <li>
-            <a href="academics.html" className="dropdown-item">
+            <a 
+              href="academics.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Academics
             </a>
           </li>
           <li>
-            <a href="mah-cet.html" className="dropdown-item">
+            <a 
+              href="mah-cet.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Apply For MAH-CET Form
             </a>
           </li>
           <li>
-            <a href="caste-validity.html" className="dropdown-item">
+            <a 
+              href="caste-validity.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Apply for Caste Validity
             </a>
           </li>
           <li>
-            <a href="ebc-scholarship.html" className="dropdown-item">
+            <a 
+              href="ebc-scholarship.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Apply for EBC & Scholarship Form
             </a>
           </li>
           <li>
-            <a href="mat-form.html" className="dropdown-item">
+            <a 
+              href="mat-form.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Apply for MAT Entrance Exam Form
             </a>
           </li>
           <li>
-            <a href="cmat-form.html" className="dropdown-item">
+            <a 
+              href="cmat-form.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Apply for CMAT Entrance Exam Form
             </a>
           </li>
           <li>
-            <a href="mba-entrance-form.html" className="dropdown-item">
+            <a 
+              href="mba-entrance-form.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Apply for MBA Entrance Exam Form
             </a>
           </li>
           <li>
-            <a href="mba-exam-form.html" className="dropdown-item">
+            <a 
+              href="mba-exam-form.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Apply for MBA Exam Form
             </a>
           </li>
           <li>
-            <a href="ndl-form.html" className="dropdown-item">
+            <a 
+              href="ndl-form.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Apply for National Digital Library Form (NDL)
             </a>
           </li>
@@ -248,46 +460,62 @@ const Header = () => {
       </li>
 
       {/* Reach Us Dropdown */}
-      <li className="nav-item dropdown">
+      <li className={`nav-item dropdown ${activeDropdown === 5 ? 'show' : ''}`}>
         <a
           href="#"
           className="nav-link dropdown-toggle"
           role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
+          onClick={(e) => {
+            e.preventDefault();
+            toggleDropdown(5);
+          }}
+          aria-expanded={activeDropdown === 5}
         >
           Reach Us
         </a>
-        <ul className="dropdown-menu">
+        <ul className={`dropdown-menu ${activeDropdown === 5 ? 'show' : ''}`}>
           <li>
-            <a href="how-to-reach.html" className="dropdown-item">
+            <a 
+              href="how-to-reach.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               How To Reach
             </a>
           </li>
         </ul>
       </li>
 
-      
-
       {/* Newsletter Dropdown */}
-      <li className="nav-item dropdown">
+      <li className={`nav-item dropdown ${activeDropdown === 6 ? 'show' : ''}`}>
         <a
           href="#"
           className="nav-link dropdown-toggle"
           role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
+          onClick={(e) => {
+            e.preventDefault();
+            toggleDropdown(6);
+          }}
+          aria-expanded={activeDropdown === 6}
         >
           Newsletter
         </a>
-        <ul className="dropdown-menu">
+        <ul className={`dropdown-menu ${activeDropdown === 6 ? 'show' : ''}`}>
           <li>
-            <a href="newsletter-aug-25.html" className="dropdown-item">
+            <a 
+              href="newsletter-aug-25.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               August 2025
             </a>
           </li>
           <li>
-            <a href="newsletter-sep-25.html" className="dropdown-item">
+            <a 
+              href="newsletter-sep-25.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               September 2025
             </a>
           </li>
@@ -295,42 +523,66 @@ const Header = () => {
       </li>
 
       {/* NAAC Dropdown */}
-      <li className="nav-item dropdown">
+      <li className={`nav-item dropdown ${activeDropdown === 7 ? 'show' : ''}`}>
         <a
           href="#"
           className="nav-link dropdown-toggle"
           role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
+          onClick={(e) => {
+            e.preventDefault();
+            toggleDropdown(7);
+          }}
+          aria-expanded={activeDropdown === 7}
         >
           NAAC
         </a>
-        <ul className="dropdown-menu">
+        <ul className={`dropdown-menu ${activeDropdown === 7 ? 'show' : ''}`}>
           <li>
-            <a href="accreditation-certificate.html" className="dropdown-item">
+            <a 
+              href="accreditation-certificate.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Accreditation Certificate
             </a>
           </li>
           <li>
-            <a href="ssr-cycle1.html" className="dropdown-item">
+            <a 
+              href="ssr-cycle1.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               SSR – Cycle 1
             </a>
           </li>
           <li>
-            <a href="assessment-sheet-cycle1.html" className="dropdown-item">
+            <a 
+              href="assessment-sheet-cycle1.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               Assessment Sheet – Cycle 1
             </a>
           </li>
           <li>
-            <a href="iqac.html" className="dropdown-item">
+            <a 
+              href="iqac.html" 
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
               IQAC
             </a>
           </li>
         </ul>
       </li>
+
       {/* Contact Us */}
       <li className="nav-item">
-        <a href="contact.html" className="nav-link">
+        <a 
+          href="contact.html" 
+          className="nav-link"
+          onClick={handleNavLinkClick}
+        >
           Contact <span className="text-warning">Us</span>
         </a>
       </li>
@@ -369,6 +621,7 @@ const Header = () => {
           padding: 12px 15px;
           transition: all 0.3s ease;
           text-transform: capitalize;
+          cursor: pointer;
         }
         
         .custom-navbar .nav-link:hover,
@@ -404,6 +657,7 @@ const Header = () => {
           padding: 10px 20px;
           transition: all 0.2s ease;
           font-size: 14px;
+          cursor: pointer;
         }
         
         .custom-navbar .dropdown-item:hover {
@@ -432,6 +686,8 @@ const Header = () => {
           box-shadow: 0 4px 10px rgba(0, 42, 92, 0.3);
           font-size: 14px;
           white-space: nowrap;
+          cursor: pointer;
+          flex-shrink: 0;
         }
         
         .apply-btn:hover {
@@ -470,64 +726,211 @@ const Header = () => {
           height: 1.2em;
         }
         
-        .custom-offcanvas {
-          background-color: #002a5c;
-          color: white;
-          width: 280px;
+        /* Desktop-specific styles - FIXED DROPDOWN BEHAVIOR */
+        @media (min-width: 992px) {
+          .custom-navbar .container-fluid {
+            max-width: 100%;
+            padding: 0 1rem;
+          }
+          
+          .custom-navbar .nav-item {
+            margin-right: 2px;
+          }
+          
+          .custom-navbar .nav-link {
+            font-size: 14px;
+            padding: 12px 14px;
+          }
+          
+          /* FIX: Proper Bootstrap dropdown behavior */
+          .navbar-expand-lg .navbar-nav .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+            display: none;
+            float: left;
+            min-width: 10rem;
+            margin: 0.125rem 0 0;
+            font-size: 1rem;
+            color: #212529;
+            text-align: left;
+            list-style: none;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 0.375rem;
+          }
+          
+          .navbar-expand-lg .navbar-nav .dropdown-menu.show {
+            display: block;
+          }
+          
+          /* FIX: Ensure dropdowns open downwards properly */
+          .custom-navbar .dropdown-menu {
+            margin-top: 0;
+            border: none;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+          }
+          
+          /* FIX: Remove any overlay issues */
+          .custom-navbar .dropdown {
+            position: relative;
+          }
+          
+          .custom-navbar .dropdown-toggle::after {
+            display: inline-block;
+            margin-left: 0.255em;
+            vertical-align: 0.255em;
+            content: "";
+            border-top: 0.3em solid;
+            border-right: 0.3em solid transparent;
+            border-bottom: 0;
+            border-left: 0.3em solid transparent;
+          }
+          
+          /* Apply button responsiveness */
+          .apply-btn-container {
+            margin-left: auto;
+            flex-shrink: 0;
+          }
+          
+          .apply-btn {
+            padding: 10px 16px;
+            font-size: 13px;
+            white-space: nowrap;
+          }
+          
+          /* Compact navigation for smaller desktop screens */
+          @media (max-width: 1199px) {
+            .custom-navbar .nav-link {
+              font-size: 13px;
+              padding: 10px 12px;
+            }
+            
+            .custom-navbar .dropdown-item {
+              font-size: 13px;
+              padding: 8px 16px;
+            }
+            
+            .apply-btn {
+              padding: 8px 14px;
+              font-size: 12px;
+            }
+          }
+          
+          /* Extra small desktop screens */
+          @media (max-width: 1024px) {
+            .custom-navbar .nav-link {
+              font-size: 12px;
+              padding: 8px 10px;
+            }
+            
+            .custom-navbar .dropdown-item {
+              font-size: 12px;
+              padding: 6px 14px;
+            }
+            
+            .apply-btn {
+              padding: 6px 12px;
+              font-size: 11px;
+            }
+          }
         }
         
-        .custom-offcanvas .offcanvas-header {
-          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-          padding: 1.5rem;
-        }
-        
-        .custom-offcanvas .offcanvas-title {
-          color: #ffb100;
-          font-weight: 700;
-          font-size: 1.25rem;
-        }
-        
-        .custom-offcanvas .btn-close {
-          filter: brightness(0) invert(1);
-          opacity: 0.8;
-        }
-        
-        .custom-offcanvas .btn-close:hover {
-          opacity: 1;
-        }
-        
-        .custom-offcanvas .nav-link {
-          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-          margin-bottom: 0;
-          padding: 12px 20px;
-        }
-        
-        .custom-offcanvas .dropdown-menu {
-          background-color: rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          margin: 0;
-        }
-        
-        .custom-offcanvas .dropdown-item {
-          color: rgba(255, 255, 255, 0.8) !important;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-          padding: 10px 30px;
-        }
-        
-        .custom-offcanvas .dropdown-item:hover {
-          background-color: rgba(255, 177, 0, 0.1);
-          color: #ffb100 !important;
+        /* Mobile-specific styles */
+        @media (max-width: 991.98px) {
+          .custom-navbar .navbar-collapse {
+            background-color: #002a5c;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 8px;
+            max-height: 80vh;
+            overflow-y: auto;
+          }
+          
+          .custom-navbar .dropdown-menu {
+            position: static !important;
+            transform: none !important;
+            width: 100%;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          }
+          
+          .custom-navbar .dropdown.show .dropdown-menu {
+            display: block;
+            animation: slideInRight 0.3s ease;
+          }
+          
+          @keyframes slideInRight {
+            from {
+              opacity: 0;
+              transform: translateX(20px);
+            }
+            to {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          }
+          
+          .custom-navbar .nav-item.dropdown {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          }
+          
+          .custom-navbar .dropdown-toggle::after {
+            float: right;
+            margin-top: 8px;
+            transform: rotate(-90deg);
+            transition: transform 0.3s ease;
+          }
+          
+          .custom-navbar .dropdown.show .dropdown-toggle::after {
+            transform: rotate(0deg);
+          }
+          
+          .custom-navbar .dropdown-item {
+            padding: 12px 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            font-size: 14px;
+          }
+          
+          .custom-navbar .dropdown-item:last-child {
+            border-bottom: none;
+          }
+          
+          .custom-navbar .nav-link {
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+          }
+          
+          .navbar-nav .nav-item:not(.dropdown) .nav-link {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          }
+          
+          /* Mobile apply button */
+          .mobile-apply-btn {
+            width: 100%;
+            justify-content: center;
+            margin-top: 1rem;
+          }
         }
         
         /* Responsive adjustments */
         @media (max-width: 575.98px) {
           .custom-navbar .container-fluid {
-            padding: 0 15px;
+            padding: 0 10px;
           }
           
           .custom-navbar .navbar-brand img {
-            height: 50px;
-            width: 50px;
+            height: 45px;
+            width: 45px;
           }
           
           .apply-btn {
@@ -535,13 +938,14 @@ const Header = () => {
             justify-content: center;
             margin-top: 1rem;
             padding: 12px 20px;
+            font-size: 14px;
           }
         }
         
         @media (min-width: 576px) and (max-width: 767.98px) {
           .custom-navbar .navbar-brand img {
-            height: 55px;
-            width: 55px;
+            height: 50px;
+            width: 50px;
           }
         }
         
@@ -557,35 +961,34 @@ const Header = () => {
           }
         }
         
-        @media (min-width: 992px) {
-          .custom-navbar .container-fluid {
-            max-width: 100%;
-            padding: 0 2rem;
-          }
-          
-          .custom-navbar .nav-item {
-            margin-right: 5px;
-          }
-          
+        /* Large desktop screens */
+        @media (min-width: 1200px) {
           .custom-navbar .nav-link {
             font-size: 15px;
             padding: 12px 18px;
           }
           
-          .navbar-expand-lg .navbar-nav .dropdown-menu {
-            position: absolute;
+          .apply-btn {
+            padding: 12px 20px;
+            font-size: 14px;
           }
         }
         
-        @media (min-width: 1200px) {
+        /* Extra large screens */
+        @media (min-width: 1400px) {
           .custom-navbar .nav-link {
             font-size: 16px;
             padding: 12px 20px;
           }
+          
+          .apply-btn {
+            padding: 12px 24px;
+            font-size: 15px;
+          }
         }
       `}</style>
 
-      <nav className="navbar navbar-expand-lg custom-navbar">
+      <nav className="navbar navbar-expand-lg custom-navbar" ref={navbarRef}>
         <div className="container-fluid">
           {/* Logo */}
           <a href="index.html" className="navbar-brand">
@@ -594,7 +997,11 @@ const Header = () => {
 
           {/* Apply Button - Mobile Top */}
           <div className="d-lg-none ms-auto me-3">
-            <a href="admission.html" className="apply-btn d-none d-sm-inline-flex">
+            <a 
+              href="admission.html" 
+              className="apply-btn d-none d-sm-inline-flex"
+              onClick={handleNavLinkClick}
+            >
               Apply Now
               <i className="bx bx-right-arrow-alt"></i>
             </a>
@@ -604,57 +1011,42 @@ const Header = () => {
           <button
             className="navbar-toggler"
             type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#navbarOffcanvas"
-            aria-controls="navbarOffcanvas"
-            aria-expanded="false"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded={isNavbarOpen}
             aria-label="Toggle navigation"
+            onClick={toggleNavbar}
           >
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          {/* Desktop Navigation */}
-          <div className="collapse navbar-collapse" id="navbarNav">
+          {/* Desktop & Mobile Navigation */}
+          <div className={`collapse navbar-collapse ${isNavbarOpen ? 'show' : ''}`} id="navbarNav">
             {navItems}
 
-            {/* Apply Button - Desktop */}
-            <div className="d-none d-lg-block ms-auto">
-              <a href="admission.html" className="apply-btn">
+            {/* Apply Button - Desktop with responsive container */}
+            <div className="apply-btn-container d-none d-lg-block ms-lg-2">
+              <a 
+                href="admission.html" 
+                className="apply-btn"
+                onClick={handleNavLinkClick}
+              >
                 Apply Now
                 <i className="bx bx-right-arrow-alt"></i>
               </a>
             </div>
-          </div>
 
-          {/* Offcanvas Menu - Mobile */}
-          <div
-            className="offcanvas offcanvas-end custom-offcanvas d-lg-none"
-            tabIndex="-1"
-            id="navbarOffcanvas"
-            aria-labelledby="navbarOffcanvasLabel"
-          >
-            <div className="offcanvas-header">
-              <h5 className="offcanvas-title" id="navbarOffcanvasLabel">
-                ISMR Menu
-              </h5>
-              <button
-                type="button"
-                className="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-
-            <div className="offcanvas-body p-0">
-              {navItems}
-
-              {/* Apply Button - Mobile */}
-              <div className="p-3 border-top border-secondary">
-                <a href="admission.html" className="apply-btn w-100 text-center">
-                  Apply Now
-                  <i className="bx bx-right-arrow-alt"></i>
-                </a>
-              </div>
+            {/* Apply Button - Mobile Bottom */}
+            <div className="d-lg-none mobile-apply-btn">
+              <a 
+                href="admission.html" 
+                className="apply-btn w-100 text-center"
+                onClick={handleNavLinkClick}
+              >
+                Apply Now
+                <i className="bx bx-right-arrow-alt"></i>
+              </a>
             </div>
           </div>
         </div>

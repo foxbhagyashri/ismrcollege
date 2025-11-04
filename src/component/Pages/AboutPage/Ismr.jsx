@@ -164,7 +164,7 @@ function WhyISMRPage() {
         <div className="container position-relative">
           <h1 className="page-heading mb-3 text-white">WHY ISMR ?</h1>
           <p className="body-text text-white-50 mb-0">
-            Bout • <span className="text-warning">ISMR</span>
+            About • <span className="text-warning">ISMR</span>
           </p>
         </div>
       </section>
