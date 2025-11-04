@@ -1,19 +1,101 @@
-.counterpara{
+/* Global Font for CounterSection */
+.single-counter, .single-counter * {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Counter Container */
+.counterpara {
     text-align: left;
 }
-.fw-bold{
+
+/* Counter Number */
+.fw-bold {
     font-weight: 700;
     font-size: 48px;
-    font-family: "Roboto Slab", serif;
-    
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
-.fw-bold span{
-    color:rgb(0, 30, 67);
+
+.fw-bold span {
+    color: rgb(0, 30, 67);
 }
-.fw-bold b{
-    color:rgb(0, 30, 67);
+
+.fw-bold b {
+    color: rgb(0, 30, 67);  
 }
-.text-muted{
+
+/* Counter Label */
+.text-muted {
     font-size: 17px;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* Individual Counter Box */
+.single-counter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+/* Counter Icon */
+.single-counter .display-5 {
+    font-size: 50px;
+}
+
+/* Responsive Styling */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .fw-bold {
+        font-size: 40px;
+    }
+
+    .text-muted {
+        font-size: 16px;
+    }
+
+    .single-counter .display-5 {
+        font-size: 40px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .single-counter {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .fw-bold {
+        font-size: 36px;
+    }
+
+    .text-muted {
+        font-size: 15px;
+    }
+
+    .single-counter .display-5 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 480px) {
+    .fw-bold {
+        font-size: 32px;
+    }
+
+    .text-muted {
+        font-size: 14px;
+    }
+
+    .single-counter .display-5 {
+        font-size: 30px;
+        margin-bottom: 8px;
+    }
 }

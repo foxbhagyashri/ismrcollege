@@ -1,40 +1,148 @@
+/* Font setup */
+* {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Section Styling */
+.marquee-section {
+  /* color: #1b263b; */
+  /* background-color: #f8f9fb; */
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #0d1b2a;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #0077b6, #00b4d8);
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  color: #4a5568;
+  font-size: 1.05rem;
+  margin-bottom: 35px;
+}
+
+/* Marquee Styles */
 .marquee-container {
-    overflow: hidden;
-    width: 80%;           /* 👈 reduce width (try 70%, 60%, or px value like 900px) */
-    background: #fff;
-    padding: 15px 0;
-    margin: 80px auto 60px;  /* 👈 centers horizontally using auto margins */
-    /* border-radius: 12px;    */
-    /* box-shadow: 0 2px 8px rgba(0,0,0,0.1);  */
-    text-align: center;      /* centers the content inside */
+  overflow: hidden;
+  width: 95%;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+  margin: 0 auto;
+  position: relative;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+  animation: scroll 40s linear infinite;
+  padding: 10px 0;
+}
+
+.announcement-card {
+  flex: 0 0 320px;
+  height: 220px;
+}
+
+.announcement-card .card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.announcement-card .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(13, 27, 42, 0.15) !important;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #003566;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #495057;
+  line-height: 1.4;
+}
+
+/* Badges */
+.badge-success { background-color: #2ecc71 !important; }
+.badge-primary { background-color: #0077b6 !important; }
+.badge-warning { background-color: #f1c40f !important; color: #212529; }
+.badge-info { background-color: #00b4d8 !important; }
+.badge-danger { background-color: #e63946 !important; }
+
+/* Animation */
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Pause on Hover */
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* Button */
+.btn-primary {
+  background-color: #003566;
+  border-color: #003566;
+}
+
+.btn-primary:hover {
+  background-color: #001d3d;
+  border-color: #001d3d;
+}
+
+.btn-outline-primary {
+  border-color: #0077b6;
+  color: #0077b6;
+}
+
+.btn-outline-primary:hover {
+  background-color: #0077b6;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .marquee-container {
+    width: 98%;
   }
-  
-  
+
+  .announcement-card {
+    flex: 0 0 280px;
+    height: 240px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
   .marquee-content {
-    display: flex;
-    align-items: center;
-    gap: 40px; /* spacing between logos */
-    animation: scroll 25s linear infinite; /* slow and smooth */
+    gap: 20px;
   }
-  
-  .marquee-logo {
-    height: 55px; /* adjust as needed */
-    width: auto;
-    object-fit: contain;
-    filter: grayscale(0%);
-    transition: transform 0.3s ease;
+}
+
+@media (max-width: 576px) {
+  .announcement-card {
+    flex: 0 0 260px;
   }
-  
-  .marquee-logo:hover {
-    transform: scale(1.05);
-  }
-  
-  @keyframes scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
-  }
-  
+}

@@ -1,56 +1,152 @@
-h2 {
+/* Global Font for StudentLife Section */
+.student-life, .student-life * {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Section Padding */
+.student-life {
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
+
+/* Heading */
+.student-life h2 {
   font-size: 40px;
   color: rgb(0, 30, 67);
   margin-bottom: 15px;
   font-weight: 800;
-  font-family: "Roboto Slab", serif;
 }
 
+/* Paragraph Text */
 .program-text {
   line-height: 1.6;
   margin-bottom: 20px;
-  font-family: "Poppins", sans-serif;
   font-size: 17px;
-
 }
 
-.btn .btn-danger {
-  position: absolute;
-  right: 0;
-  top: 8px;
-  background: #fa394a;
-  color: #fff;
-  border: none;
-  padding: 6px 24px 12px 24px;
-  cursor: pointer;
-  font-weight: 700;
-}
-
-
-
-.text-decoration-none {
-  color: rgb(0, 30, 67);
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  text-decoration: underline !important;
-}
-
+/* ListGroup Items */
 .list-group-item {
   margin-bottom: 30px;
   background-color: transparent;
+  padding: 0;
+  border: none;
 }
 
+/* List Links */
+.list-group-item a {
+  color: rgb(0, 30, 67);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none; /* Remove underline */
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.list-group-item a:hover {
+  color: #C00D0D; /* Optional hover color */
+  text-decoration: none;
+}
+
+/* Arrow */
 .listgroup-arrow {
   font-size: 32px;
-
+  margin-left: 5px;
 }
 
+/* ListGroup Container Background */
 .list-group-flush {
   background-color: #f6f6f6;
   padding: 30px;
+  border-radius: 10px;
 }
-.student-life{
-  padding-top: 100px;
-  padding-bottom: 30px;
+
+/* Button */
+.default-btn {
+  display: inline-block;
+  background-color: #fa394a;
+  color: #fff;
+  padding: 10px 25px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.default-btn:hover {
+  background-color: #d7323d;
+  color: #fff;
+}
+
+/* Image Styling */
+.student-life img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Responsive Styling */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .student-life h2 {
+    font-size: 36px;
+  }
+
+  .program-text {
+    font-size: 16px;
+  }
+
+  .listgroup-arrow {
+    font-size: 28px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .student-life h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .program-text {
+    font-size: 15px;
+  }
+
+  .list-group-flush {
+    padding: 20px;
+  }
+
+  .listgroup-arrow {
+    font-size: 24px;
+  }
+
+  .default-btn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  .student-life .text-center img {
+    margin-bottom: 20px;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 480px) {
+  .student-life h2 {
+    font-size: 28px;
+  }
+
+  .program-text {
+    font-size: 14px;
+  }
+
+  .listgroup-arrow {
+    font-size: 20px;
+  }
+
+  .default-btn {
+    padding: 6px 18px;
+    font-size: 13px;
+  }
 }

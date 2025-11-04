@@ -2,11 +2,12 @@
 .top-header-area {
     background-color: #002147;
     color: #fff;
-    font-size: 12px; /* smaller than original 14px */
+    font-size: 9px; /* base font size */
     padding: 6px 10px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     white-space: nowrap; /* keep in one line */
-    overflow-x: auto; /* horizontal scroll if needed */
+    overflow-x: auto;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
 .top-header-area ul {
@@ -15,93 +16,92 @@
     padding: 0;
     display: flex;
     align-items: center;
-}
-
-.top-header-left ul {
     gap: 20px;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
-.top-header-right ul {
-    gap: 15px;
-    justify-content: flex-end;
-}
-
-.top-header-left a,
-.top-header-right a {
+/* LEFT SIDE CONTACT LINKS */
+.top-header-left a {
     text-decoration: none;
     color: #ffffffcc;
     transition: color 0.3s ease;
     font-weight: 400;
     display: flex;
     align-items: center;
+    font-size: 14px; /* smaller than default */
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
-.top-header-left a:hover,
-.top-header-right a:hover {
+.top-header-left a:hover {
     color: #ffffff;
 }
 
 .top-header-left i {
-    margin-right: 6px;
+    margin-right: 4px; /* smaller spacing */
     color: #ffb100;
-    font-size: 14px;
+    font-size: 10px; /* smaller icon */
 }
 
-/* Single line always */
-.top-header-left,
-.top-header-right {
-    display: flex;
-    align-items: center;
+/* RIGHT SIDE BUTTONS */
+.top-header-right ul li button {
+    white-space: nowrap;
+    font-size: 11px; /* keep slightly bigger */
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+/* Desktop: increase button text */
+@media (min-width: 992px) {
+    .top-header-right ul li button {
+        font-size: 14px;
+        padding: 6px 16px;
+    }
 }
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
     .top-header-area {
-        font-size: 11px;
+        font-size: 10px;
         padding: 4px 8px;
     }
 
-    /* Hide email to fit in one line */
-    .top-header-left ul li:nth-child(2) {
-        display: none;
-    }
-
-    .top-header-left ul {
+    .top-header-area ul {
         gap: 10px;
     }
 
-    .top-header-right ul {
-        gap: 8px;
+    .top-header-left a {
+        font-size: 9px; /* smaller left text */
     }
 
     .top-header-left i {
-        font-size: 12px;
-        margin-right: 4px;
+        font-size: 11px;
+        margin-right: 3px;
     }
 
-    .top-header-left a,
-    .top-header-right a {
-        font-size: 11px;
+    .top-header-right ul li button {
+        font-size: 10px;
     }
 }
 
 @media (max-width: 576px) {
     .top-header-area {
-        font-size: 10px;
+        font-size: 9px;
         padding: 3px 6px;
     }
-    .top-header-left ul {
+
+    .top-header-area ul {
         gap: 8px;
     }
-    .top-header-right ul {
-        gap: 6px;
+
+    .top-header-left a {
+        font-size: 8px; /* smallest left text */
     }
+
     .top-header-left i {
-        font-size: 11px;
-        margin-right: 3px;
-    }
-    .top-header-left a,
-    .top-header-right a {
         font-size: 10px;
+        margin-right: 2px;
+    }
+
+    .top-header-right ul li button {
+        font-size: 9px;
     }
 }

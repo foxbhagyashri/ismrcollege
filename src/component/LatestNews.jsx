@@ -3,7 +3,6 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import { FaCalendarAlt, FaUserAlt } from "react-icons/fa";
 import "./LatestNews.css";
 
-
 const LatestNews = () => {
   const newsData = [
     {
@@ -54,7 +53,7 @@ const LatestNews = () => {
                 </div>
                 <Card.Body>
                   <Card.Title className="news-title">{item.title}</Card.Title>
-                  <div className="news-meta d-flex align-items-center mt-3">
+                  <div className="news-meta d-flex align-items-center mt-3 flex-wrap">
                     <div className="d-flex align-items-center me-3 text-mutedd small">
                       <FaCalendarAlt className="me-1 text-danger" />
                       {item.date}

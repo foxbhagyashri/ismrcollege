@@ -1,98 +1,200 @@
-.programs-section {
-  background-color: #fff;
-  padding: 60px 10%;
-  text-align: center;
+/* Global Font - applies to all text inside programs-section */
+.programs-section, .programs-section * {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 
-.programs-title {
-  font-size: 45px;
+/* Section Styling */
+.programs-section {
+  background: #f8f9fa;
+  padding: 80px 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 800px;
+}
+
+.section-title {
+  font-size: 3rem;
   font-weight: 800;
   color: #0b214a;
-  margin-bottom: 40px;
-  font-family: "Roboto Slab", serif;
+  margin-bottom: 20px;
 }
 
-.programs-container {
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #6c757d;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Grid Layout */
+.specializations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Card Styling */
+.specialization-card {
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Alternate Card Background Colors */
+.specialization-card:nth-child(odd) {
+  background-color: #002A5C; /* Dark blue */
+}
+
+.specialization-card:nth-child(even) {
+  background-color: #FFC333; /* Yellow */
+}
+
+/* Icon Styling */
+.card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  /* gap: 20px; */
-}
-
-.program-box {
-  flex: 1;
-  min-width: 280px;
-  max-width: 360px;
-  padding: 30px;
-  /* border-radius: 8px; */
-  text-align: left;
+  margin: 0 auto 20px;
+  font-size: 26px;
+  background: white;
+  color: #C00D0D; /* red icon */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.program-box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+/* Icon background adjustment for alternating cards */
+.specialization-card:nth-child(odd) .card-icon {
+  background: rgba(255, 255, 255, 0.9);
+  color: #C00D0D;
 }
 
-.navy-box {
-  background-color: #0b214a;
-  color: rgba(255, 255, 255, 0.81);
+.specialization-card:nth-child(even) .card-icon {
+  background: rgba(255, 255, 255, 0.95);
+  color: #C00D0D;
 }
 
-.yellow-box {
-  background-color: #fcbf49;
-  color: #0b214a;
+/* Force readable text for card title & description */
+.specialization-card:nth-child(odd) .card-title,
+.specialization-card:nth-child(odd) .card-description {
+  color: #ffffff; /* White text on dark blue */
 }
 
-.program-heading {
-  font-size: 18px;
+.specialization-card:nth-child(even) .card-title,
+.specialization-card:nth-child(even) .card-description {
+  color: #ffffff; /* White text on yellow */
+}
+
+/* Hover Effect */
+.specialization-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.specialization-card:hover .card-icon {
+  transform: scale(1.2) rotate(5deg);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Card Title & Description */
+.card-title {
+  font-size: 1.4rem;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
-.program-text {
+.card-description {
+  font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 20px;
-  font-family: "Poppins", sans-serif;
-  font-size: 17px;
-  
 }
 
-ul {
-  list-style: none;
-  padding-left: 0;
+/* Responsive Styling */
+
+/* Laptop / Tablet */
+@media (max-width: 1024px) {
+  .specializations-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+
+  .specialization-card {
+    padding: 35px 25px;
+  }
+
+  .card-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-description {
+    font-size: 0.95rem;
+  }
 }
 
-ul li {
-  display: flex;
-  justify-content: space-between;
-  font-size: 17px;
-  margin-bottom: 8px;
-  align-items: center;
-  font-weight: 600;
+/* Mobile */
+@media (max-width: 768px) {
+  .specializations-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .specialization-card {
+    padding: 30px 20px;
+  }
+
+  .card-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-description {
+    font-size: 0.9rem;
+  }
 }
 
-ul li span {
-  font-weight: bold;
-}
+/* Extra Small Mobile */
+@media (max-width: 480px) {
+  .specialization-card {
+    padding: 25px 15px;
+  }
 
-.program-footer {
-  margin-top: 20px;
-  font-weight: 600;
-}
-.arrow {
-  font-size: 27px; /* increase the number for a bigger arrow */
-  font-weight: bold; /* optional */
-  color: #fcbf49;
-}
-.arroww{
-  font-size: 27px; /* increase the number for a bigger arrow */
-  font-weight: bold; /* optional */
-  color: #ec2f2f;
-}
-hr{
-  color: #d4d4d45e;
-}
-.icon{
-  font-size: 22px;
+  .card-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-description {
+    font-size: 0.85rem;
+  }
 }

@@ -13,11 +13,11 @@ const Header = () => {
   const closeAll = () => {
     setActiveDropdown(null);
     setIsNavbarOpen(false);
-    
+
     // Close Bootstrap navbar collapse
-    const navbarCollapse = document.getElementById('navbarNav');
-    if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-      navbarCollapse.classList.remove('show');
+    const navbarCollapse = document.getElementById("navbarNav");
+    if (navbarCollapse && navbarCollapse.classList.contains("show")) {
+      navbarCollapse.classList.remove("show");
     }
   };
 
@@ -46,11 +46,11 @@ const Header = () => {
 
     // Add event listener only for desktop
     if (window.innerWidth >= 992) {
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
@@ -62,9 +62,9 @@ const Header = () => {
       }
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -72,17 +72,13 @@ const Header = () => {
     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
       {/* Home */}
       <li className="nav-item">
-        <Link 
-          className="nav-link" 
-          to="/" 
-          onClick={handleNavLinkClick}
-        >
+        <Link className="nav-link" to="/" onClick={handleNavLinkClick}>
           Home
         </Link>
       </li>
 
       {/* About Dropdown */}
-      <li className={`nav-item dropdown ${activeDropdown === 0 ? 'show' : ''}`}>
+      <li className={`nav-item dropdown ${activeDropdown === 0 ? "show" : ""}`}>
         <a
           href="#"
           className="nav-link dropdown-toggle"
@@ -95,10 +91,10 @@ const Header = () => {
         >
           About
         </a>
-        <ul className={`dropdown-menu ${activeDropdown === 0 ? 'show' : ''}`}>
+        <ul className={`dropdown-menu ${activeDropdown === 0 ? "show" : ""}`}>
           <li>
-            <Link 
-              className="dropdown-item" 
+            <Link
+              className="dropdown-item"
               to="/Aboutpage/Aboutinstutue"
               onClick={handleDropdownItemClick}
             >
@@ -106,8 +102,8 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link 
-              className="dropdown-item" 
+            <Link
+              className="dropdown-item"
               to="/Aboutpage/Leadership"
               onClick={handleDropdownItemClick}
             >
@@ -115,8 +111,8 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link 
-              className="dropdown-item" 
+            <Link
+              className="dropdown-item"
               to="/Aboutpage/Ismr"
               onClick={handleDropdownItemClick}
             >
@@ -124,8 +120,8 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link 
-              className="dropdown-item" 
+            <Link
+              className="dropdown-item"
               to="/Aboutpage/Award"
               onClick={handleDropdownItemClick}
             >
@@ -136,7 +132,7 @@ const Header = () => {
       </li>
 
       {/* Admissions Dropdown */}
-      <li className={`nav-item dropdown ${activeDropdown === 1 ? 'show' : ''}`}>
+      <li className={`nav-item dropdown ${activeDropdown === 1 ? "show" : ""}`}>
         <a
           href="#"
           className="nav-link dropdown-toggle"
@@ -149,10 +145,10 @@ const Header = () => {
         >
           Admissions
         </a>
-        <ul className={`dropdown-menu ${activeDropdown === 1 ? 'show' : ''}`}>
+        <ul className={`dropdown-menu ${activeDropdown === 1 ? "show" : ""}`}>
           <li>
-            <a 
-              href="eligibility.html" 
+            <a
+              href="eligibility.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -160,8 +156,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="how-to-apply.html" 
+            <a
+              href="how-to-apply.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -169,8 +165,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="documents.html" 
+            <a
+              href="documents.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -178,8 +174,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="education-loan.html" 
+            <a
+              href="education-loan.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -187,8 +183,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="disclaimer.html" 
+            <a
+              href="disclaimer.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -196,8 +192,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="refund-policy.html" 
+            <a
+              href="refund-policy.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -205,8 +201,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="fees-structure.html" 
+            <a
+              href="fees-structure.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -214,8 +210,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="admission-contact.html" 
+            <a
+              href="admission-contact.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -226,7 +222,7 @@ const Header = () => {
       </li>
 
       {/* Placement Dropdown */}
-      <li className={`nav-item dropdown ${activeDropdown === 2 ? 'show' : ''}`}>
+      <li className={`nav-item dropdown ${activeDropdown === 2 ? "show" : ""}`}>
         <a
           href="#"
           className="nav-link dropdown-toggle"
@@ -239,10 +235,10 @@ const Header = () => {
         >
           Placement
         </a>
-        <ul className={`dropdown-menu ${activeDropdown === 2 ? 'show' : ''}`}>
+        <ul className={`dropdown-menu ${activeDropdown === 2 ? "show" : ""}`}>
           <li>
-            <a 
-              href="placement-overview.html" 
+            <a
+              href="placement-overview.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -250,8 +246,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="placement-process.html" 
+            <a
+              href="placement-process.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -259,8 +255,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="placement-rules.html" 
+            <a
+              href="placement-rules.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -268,8 +264,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="placement-statistics.html" 
+            <a
+              href="placement-statistics.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -277,8 +273,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="internship-placement.html" 
+            <a
+              href="internship-placement.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -286,8 +282,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="alumni-talk.html" 
+            <a
+              href="alumni-talk.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -295,8 +291,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="corporate-testimonials.html" 
+            <a
+              href="corporate-testimonials.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -304,8 +300,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="student-testimonials.html" 
+            <a
+              href="student-testimonials.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -313,8 +309,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="placement-contact.html" 
+            <a
+              href="placement-contact.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -325,7 +321,7 @@ const Header = () => {
       </li>
 
       {/* Life @ Campus Dropdown */}
-      <li className={`nav-item dropdown ${activeDropdown === 3 ? 'show' : ''}`}>
+      <li className={`nav-item dropdown ${activeDropdown === 3 ? "show" : ""}`}>
         <a
           href="#"
           className="nav-link dropdown-toggle"
@@ -338,10 +334,10 @@ const Header = () => {
         >
           Life @ Campus
         </a>
-        <ul className={`dropdown-menu ${activeDropdown === 3 ? 'show' : ''}`}>
+        <ul className={`dropdown-menu ${activeDropdown === 3 ? "show" : ""}`}>
           <li>
-            <a 
-              href="student-campus-life.html" 
+            <a
+              href="student-campus-life.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -349,8 +345,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="student-facilities.html" 
+            <a
+              href="student-facilities.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -361,7 +357,7 @@ const Header = () => {
       </li>
 
       {/* Student Corner Dropdown */}
-      <li className={`nav-item dropdown ${activeDropdown === 4 ? 'show' : ''}`}>
+      <li className={`nav-item dropdown ${activeDropdown === 4 ? "show" : ""}`}>
         <a
           href="#"
           className="nav-link dropdown-toggle"
@@ -374,10 +370,10 @@ const Header = () => {
         >
           Student Corner
         </a>
-        <ul className={`dropdown-menu ${activeDropdown === 4 ? 'show' : ''}`}>
+        <ul className={`dropdown-menu ${activeDropdown === 4 ? "show" : ""}`}>
           <li>
-            <a 
-              href="academics.html" 
+            <a
+              href="academics.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -385,8 +381,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="mah-cet.html" 
+            <a
+              href="mah-cet.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -394,8 +390,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="caste-validity.html" 
+            <a
+              href="caste-validity.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -403,8 +399,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="ebc-scholarship.html" 
+            <a
+              href="ebc-scholarship.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -412,8 +408,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="mat-form.html" 
+            <a
+              href="mat-form.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -421,8 +417,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="cmat-form.html" 
+            <a
+              href="cmat-form.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -430,8 +426,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="mba-entrance-form.html" 
+            <a
+              href="mba-entrance-form.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -439,8 +435,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="mba-exam-form.html" 
+            <a
+              href="mba-exam-form.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -448,8 +444,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="ndl-form.html" 
+            <a
+              href="ndl-form.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -460,7 +456,7 @@ const Header = () => {
       </li>
 
       {/* Reach Us Dropdown */}
-      <li className={`nav-item dropdown ${activeDropdown === 5 ? 'show' : ''}`}>
+      <li className={`nav-item dropdown ${activeDropdown === 5 ? "show" : ""}`}>
         <a
           href="#"
           className="nav-link dropdown-toggle"
@@ -473,10 +469,10 @@ const Header = () => {
         >
           Reach Us
         </a>
-        <ul className={`dropdown-menu ${activeDropdown === 5 ? 'show' : ''}`}>
+        <ul className={`dropdown-menu ${activeDropdown === 5 ? "show" : ""}`}>
           <li>
-            <a 
-              href="how-to-reach.html" 
+            <a
+              href="how-to-reach.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -487,7 +483,7 @@ const Header = () => {
       </li>
 
       {/* Newsletter Dropdown */}
-      <li className={`nav-item dropdown ${activeDropdown === 6 ? 'show' : ''}`}>
+      <li className={`nav-item dropdown ${activeDropdown === 6 ? "show" : ""}`}>
         <a
           href="#"
           className="nav-link dropdown-toggle"
@@ -500,10 +496,10 @@ const Header = () => {
         >
           Newsletter
         </a>
-        <ul className={`dropdown-menu ${activeDropdown === 6 ? 'show' : ''}`}>
+        <ul className={`dropdown-menu ${activeDropdown === 6 ? "show" : ""}`}>
           <li>
-            <a 
-              href="newsletter-aug-25.html" 
+            <a
+              href="newsletter-aug-25.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -511,8 +507,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="newsletter-sep-25.html" 
+            <a
+              href="newsletter-sep-25.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -523,7 +519,7 @@ const Header = () => {
       </li>
 
       {/* NAAC Dropdown */}
-      <li className={`nav-item dropdown ${activeDropdown === 7 ? 'show' : ''}`}>
+      <li className={`nav-item dropdown ${activeDropdown === 7 ? "show" : ""}`}>
         <a
           href="#"
           className="nav-link dropdown-toggle"
@@ -536,10 +532,10 @@ const Header = () => {
         >
           NAAC
         </a>
-        <ul className={`dropdown-menu ${activeDropdown === 7 ? 'show' : ''}`}>
+        <ul className={`dropdown-menu ${activeDropdown === 7 ? "show" : ""}`}>
           <li>
-            <a 
-              href="accreditation-certificate.html" 
+            <a
+              href="accreditation-certificate.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -547,8 +543,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="ssr-cycle1.html" 
+            <a
+              href="ssr-cycle1.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -556,8 +552,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="assessment-sheet-cycle1.html" 
+            <a
+              href="assessment-sheet-cycle1.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -565,8 +561,8 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a 
-              href="iqac.html" 
+            <a
+              href="iqac.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
@@ -578,13 +574,9 @@ const Header = () => {
 
       {/* Contact Us */}
       <li className="nav-item">
-        <a 
-          href="contact.html" 
-          className="nav-link"
-          onClick={handleNavLinkClick}
-        >
+        <Link to="/Contactus" className="nav-link" onClick={handleNavLinkClick}>
           Contact <span className="text-warning">Us</span>
-        </a>
+        </Link>
       </li>
     </ul>
   );
@@ -600,7 +592,9 @@ const Header = () => {
           top: 0;
           z-index: 1030;
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          font-family: 'Inter', Arial, Helvetica, sans-serif !important;
         }
+         
         
         .custom-navbar .navbar-brand img {
           height: 60px;
@@ -997,8 +991,8 @@ const Header = () => {
 
           {/* Apply Button - Mobile Top */}
           <div className="d-lg-none ms-auto me-3">
-            <a 
-              href="admission.html" 
+            <a
+              href="admission.html"
               className="apply-btn d-none d-sm-inline-flex"
               onClick={handleNavLinkClick}
             >
@@ -1022,13 +1016,16 @@ const Header = () => {
           </button>
 
           {/* Desktop & Mobile Navigation */}
-          <div className={`collapse navbar-collapse ${isNavbarOpen ? 'show' : ''}`} id="navbarNav">
+          <div
+            className={`collapse navbar-collapse ${isNavbarOpen ? "show" : ""}`}
+            id="navbarNav"
+          >
             {navItems}
 
             {/* Apply Button - Desktop with responsive container */}
             <div className="apply-btn-container d-none d-lg-block ms-lg-2">
-              <a 
-                href="admission.html" 
+              <a
+                href="admission.html"
                 className="apply-btn"
                 onClick={handleNavLinkClick}
               >
@@ -1039,8 +1036,8 @@ const Header = () => {
 
             {/* Apply Button - Mobile Bottom */}
             <div className="d-lg-none mobile-apply-btn">
-              <a 
-                href="admission.html" 
+              <a
+                href="admission.html"
                 className="apply-btn w-100 text-center"
                 onClick={handleNavLinkClick}
               >
