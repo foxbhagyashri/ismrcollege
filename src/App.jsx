@@ -31,6 +31,11 @@ import Award from "./component/Pages/AboutPage/Award";
 import Ismr from "./component/Pages/AboutPage/Ismr";
 import Recognition from "./component/Pages/AboutPage/Recognition";
 
+
+
+// Contactus Page
+import Contactus from "./component/Common/Contactus"
+
 function App() {
   return (
     <Router>
@@ -65,8 +70,13 @@ function App() {
         <Route path="/Aboutpage/Award" element={<Award />} />
         <Route path="/Aboutpage/Ismr" element={<Ismr />} />
         {/* <Route path="/Aboutpage/Recognition" element={<Recognition />} /> */}
+
+
+        {/* Contact us Page */}
+        <Route path="/Contactus" element={<Contactus/>} />
       </Routes>
        <Footer />
+       {/* <Contactus/> */}
     </Router>
   );
 }

@@ -1,3 +1,9 @@
+/* Global font for the section */
+.apply-section, .apply-section * {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
 /* Section wrapper */
 .apply-section {
     background: #f3f3f4;
@@ -15,15 +21,14 @@
 
 /* Title */
 .apply-title {
-    font-family: "Roboto Slab", serif;
     color: #0a2259;
-    font-size: 45px;
-    font-weight: 800;
-    margin: 0 0 60px  0;
+    font-size: 46px;
+    font-weight: 700;
+    margin: 0 0 60px 0;
     text-align: left;
 }
 
-/* Top button (right side in screenshot) */
+/* Top button */
 .apply-btn.top-btn {
     position: absolute;
     right: 0;
@@ -32,9 +37,9 @@
     color: #fff;
     border: none;
     padding: 6px 24px 12px 24px;
-   
     cursor: pointer;
     font-weight: 700;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
 /* container for cards */
@@ -71,14 +76,14 @@
     right: 18px;
     top: 18px;
     font-size: 44px;
-    font-weight: 800;
+    font-weight: 400;
     color: rgba(239, 71, 111, 0.10);
 }
 
 /* heading and text */
 .apply-heading {
     color: #0a2259;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     margin: 6px 0 12px;
 }
@@ -87,25 +92,60 @@
     color: #666;
     font-size: 17px;
     line-height: 1.6;
-    font-family: "Poppins", sans-serif;
 }
+
+/* arrow in button */
 .getarrow{
     font-size: 23px;
     font-weight: 500;
 }
 
-/* small responsive behavior */
-@media (max-width: 900px) {
+/* Responsive Styles */
+
+/* Laptop / Tablet */
+@media (max-width: 1024px) {
     .apply-inner {
         width: 96%;
     }
 
     .apply-container {
-        gap: 18px;
+        gap: 20px;
     }
 
     .apply-box {
         flex-basis: 48%;
+    }
+
+    .apply-title {
+        font-size: 36px;
+    }
+
+    .apply-step {
+        font-size: 36px;
+        right: 14px;
+        top: 14px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .apply-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .apply-box {
+        flex-basis: 100%;
+    }
+
+    .apply-title {
+        font-size: 28px;
+    }
+
+    .apply-step {
+        font-size: 32px;
+        right: 12px;
+        top: 12px;
     }
 
     .apply-btn.top-btn {
@@ -116,19 +156,27 @@
     }
 }
 
-@media (max-width: 560px) {
-    .apply-box {
-        flex-basis: 100%;
-    }
-
+/* Extra small mobile */
+@media (max-width: 480px) {
     .apply-title {
-        font-size: 26px;
+        font-size: 24px;
     }
 
     .apply-step {
-        font-size: 36px;
-        right: 12px;
-        top: 12px;
+        font-size: 28px;
+        right: 10px;
+        top: 10px;
+    }
+
+    .apply-box {
+        padding: 20px;
+    }
+
+    .apply-text {
+        font-size: 15px;
+    }
+
+    .apply-heading {
+        font-size: 16px;
     }
 }
-

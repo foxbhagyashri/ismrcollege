@@ -42,10 +42,7 @@ const HowToApply = () => {
                     </article>
                 </div>
             </div>
-            
         </section>
-
-        
     );
 };
 

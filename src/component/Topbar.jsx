@@ -1,38 +1,60 @@
-import React from 'react';
+import React from "react";
 import "./TopHeader.css";
 
 const TopHeader = () => {
-    return (
-        <div className="top-header-area">
-            <div className="container-fluid d-flex justify-content-between align-items-center">
-                {/* Left Section - Contact Info */}
-                <div className="top-header-left">
-                    <ul>
-                        <li>
-                            <a href="tel:+4599399990">
-                                <i className="ri-phone-fill"></i> +459 9393 9990
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:helloadma@gmail.com">
-                                <i className="ri-mail-line"></i> helloadma@gmail.com
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                {/* Right Section - Links */}
-                <div className="top-header-right">
-                    <ul>
-                        <li><a href="/faculty">Faculty</a></li>
-                        <li><a href="/community">Community</a></li>
-                        <li><a href="/login">Log in</a></li>
-                        <li><a href="/register">Register</a></li>
-                    </ul>
-                </div>
-            </div>
+  return (
+    <div className="top-header-area">
+      <div className="container-fluid d-flex justify-content-between align-items-center">
+        {/* Left Section - Contact Info */}
+        <div className="top-header-left">
+          <ul>
+            <li>
+              <a href="tel:+919923786079">
+                <i className="ri-phone-fill"></i> +91 9923786079
+              </a>
+            </li>
+            <li>
+              <a href="mailto:admissions@ismrpune.edu.in">
+                <i className="ri-mail-line"></i> admissions@ismrpune.edu.in
+              </a>
+            </li>
+          </ul>
         </div>
-    );
+
+        {/* Right Section - Buttons */}
+        <div className="top-header-right">
+          <ul className="list-unstyled d-flex gap-2 mb-0">
+            <li>
+              <button
+                onClick={() => (window.location.href = "/Appltonline")}
+                className="btn btn-sm"
+                style={{
+                  backgroundColor: "#dcb413ff",
+                  color: "#2c2626ff",
+                  border: "none",
+                }}
+              >
+                Apply Online
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => (window.location.href = "/register")}
+                className="btn btn-sm"
+                style={{
+                  backgroundColor: "#dcb413ff",
+                  color: "#2c2626ff",
+                  border: "none",
+                }}
+              >
+                Pay Fees
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default TopHeader;

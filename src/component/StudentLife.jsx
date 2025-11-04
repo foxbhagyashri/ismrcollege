@@ -1,7 +1,6 @@
 import React from "react";
-import { Container, Row, Col, Button, ListGroup } from "react-bootstrap";
+import { Container, Row, Col, ListGroup } from "react-bootstrap";
 import "./StudentLife.css";
-
 
 const StudentLife = () => {
     return (
@@ -17,56 +16,48 @@ const StudentLife = () => {
                         />
                     </Col>
 
-                    {/* Right Content */}
+                    {/* List Links */}
                     <Col md={3}>
-
-
-                        {/* List Links */}
-                        <ListGroup variant="flush" className="mb-4">
-                            <ListGroup.Item className=" p-0 border-0">
-                                <a href="#athletics" className="text-decoration-none">
-                                    Athletics & Fitness
+                        <ListGroup variant="flush" className="mb-4 list-group-flush">
+                            <ListGroup.Item>
+                                <a href="#athletics">
+                                    Athletics & Fitness <span className="listgroup-arrow">→</span>
                                 </a>
-                                <span className="listgroup-arrow">&nbsp;→</span>
                             </ListGroup.Item>
-                            <ListGroup.Item className=" p-0 border-0">
-                                <a href="#support" className="text-decoration-none">
-                                    Support & Guidance
+                            <ListGroup.Item>
+                                <a href="#support">
+                                    Support & Guidance <span className="listgroup-arrow">→</span>
                                 </a>
-                                <span className="listgroup-arrow">&nbsp;→</span>
                             </ListGroup.Item>
-                            <ListGroup.Item className=" p-0 border-0">
-                                <a href="#activities" className="text-decoration-none">
-                                    Student Activities
+                            <ListGroup.Item>
+                                <a href="#activities">
+                                    Student Activities <span className="listgroup-arrow">→</span>
                                 </a>
-                                <span className="listgroup-arrow">&nbsp;→</span>
                             </ListGroup.Item>
-                            <ListGroup.Item className=" p-0 border-0">
-                                <a href="#campus" className="text-decoration-none">
-                                    Campus Life
+                            <ListGroup.Item>
+                                <a href="#campus">
+                                    Campus Life <span className="listgroup-arrow">→</span>
                                 </a>
-                                <span className="listgroup-arrow">&nbsp;→</span>
                             </ListGroup.Item>
                         </ListGroup>
-
-
                     </Col>
+
+                    {/* Right Content */}
                     <Col md={5}>
                         <h2 className="mb-4">Student Life At ISMR</h2>
                         <p className="program-text">
                             We are proud of our alumni network, which spans across industries
-                            and continents. Our graduates are equipped with the skills, values
+                            and continents. Our graduates are equipped with the skills, values,
                             knowledge, and to excel in their chosen fields and make positive
                             impact on society.
                         </p>
                         <p className="program-text">
-                            Our graduates are equipped with the skills, values knowledge, and
-                            to excel in their chosen fields and make positive.
+                            Our graduates are equipped with the skills, values, knowledge, and
+                            ability to excel in their chosen fields and make a positive impact.
                         </p>
 
-
-                        <a className=" default-btn" href="#application-form">
-                            Application Form <span className="arrowst">&nbsp; →</span>
+                        <a className="default-btn" href="#application-form">
+                            Application Form <span className="arrowst">→</span>
                         </a>
                     </Col>
                 </Row>

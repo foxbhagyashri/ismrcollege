@@ -1,99 +1,151 @@
+/* Global Font */
+.testimonials-section, .testimonials-section * {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
 .testimonials-section {
-    background-color: #fff;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #002147;
-    font-family: "Poppins", sans-serif;
-  }
-  
-  /* === Card Styles === */
+  background-color: #fff;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #002147;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* === Card Styles === */
+.testimonial-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  margin: 10px auto;
+  width: 400px;
+  max-width: 100%;
+  min-height: 320px;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Image */
+.testimonial-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Text */
+.testimonial-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Name & Role */
+.text-dark {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.text-muted {
+  font-size: 13px;
+  color: #6c757d;
+}
+
+/* === Slider Customizations === */
+.slick-slide {
+  padding: 10px;
+}
+
+.slick-track {
+  display: flex;
+  align-items: stretch;
+}
+
+/* === Arrow Styles === */
+.testimonial-arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.arrow-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #002147;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.arrow-btn:hover {
+  background-color: #f8b400;
+  color: #002147;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
   .testimonial-card {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 25px;
-    transition: all 0.3s ease;
-    margin: 10px auto; /* centers the card */
-    width: 400px; /* increased width */
-    max-width: 100%;
-    min-height: 320px;
+    width: 90%;
+    min-height: auto;
   }
-  
-  
-  .testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.6rem;
   }
-  
-  .testimonial-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
+
+  .testimonial-card {
+    padding: 20px;
+    width: 95%;
   }
-  
+
   .testimonial-text {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #555;
-    font-weight: 500;
-    font-style: italic;
+    font-size: 0.9rem;
   }
-  
-  /* === Slider Customizations === */
-  .slick-slide {
-    padding: 10px;
+
+  .text-dark {
+    font-size: 15px;
   }
-  
-  .slick-track {
-    display: flex;
-    align-items: stretch;
+
+  .text-muted {
+    font-size: 12px;
   }
-  
-  /* === Arrow Styles (Adma look) === */
-  .testimonial-arrows {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+}
+
+@media (max-width: 480px) {
+  .testimonial-card {
+    padding: 15px;
+    min-height: auto;
   }
-  
-  .arrow-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #002147;
-    color: #fff;
-    border: none;
-    font-size: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
+
+  .testimonial-text {
+    font-size: 0.85rem;
   }
-  
-  .arrow-btn:hover {
-    background-color: #f8b400;
-    color: #002147;
-    transform: translateY(-2px);
+
+  .text-dark {
+    font-size: 14px;
   }
-  
-  @media (max-width: 768px) {
-    .section-title {
-      font-size: 1.6rem;
-    }
-    .testimonial-card {
-      padding: 15px;
-    }
+
+  .text-muted {
+    font-size: 11px;
   }
-  .text-dark{
-    font-size: 16px;
-  }
-  .card-body{
-    padding: 0px;
-  }
-  .text-muted{
-    font-size: 13px;
-  }
+}
