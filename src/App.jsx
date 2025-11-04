@@ -62,7 +62,7 @@ function App() {
         {/* About Page Routes */}
         <Route path="/Aboutpage/Aboutinstutue" element={<Aboutinstutue />} />
         <Route path="/Aboutpage/Leadership" element={<Leadership />} />
-        {/* <Route path="/Aboutpage/Award" element={<Award />} /> */}
+        <Route path="/Aboutpage/Award" element={<Award />} />
         <Route path="/Aboutpage/Ismr" element={<Ismr />} />
         {/* <Route path="/Aboutpage/Recognition" element={<Recognition />} /> */}
       </Routes>

@@ -154,7 +154,7 @@ function AwardsRankings() {
             font-size: 14px;
           }
           .caption-text {
-            font-size: 12px;
+            font-size: 14px;
           }
         }
       `}</style>
@@ -231,46 +231,70 @@ function AwardsRankings() {
       </section>
 
       {/* AWARDS GRID */}
-      <section className="py-5 bg-white">
-        <div className="container">
-          <div className="text-center mb-5">
-            <h2 className="section-heading mb-3">Our Recent Awards</h2>
-            <p className="caption-text">
-              Recognition from prestigious organizations worldwide
-            </p>
-          </div>
-          <div className="row g-4">
-            {awards.map((award) => (
-              <div className="col-12 col-md-6 col-lg-4" key={award.id}>
-                <div
-                  className="p-4 rounded-4 text-center shadow-sm h-100 border border-2 border-transparent bg-light"
-                  style={{ transition: "0.3s ease" }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-10px)";
-                    e.currentTarget.style.borderColor = "#FFC53D";
-                    e.currentTarget.style.backgroundColor = "white";
-                    e.currentTarget.style.boxShadow =
-                      "0 10px 25px rgba(0,0,0,0.15)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.borderColor = "transparent";
-                    e.currentTarget.style.backgroundColor = "#f8f9fa";
-                    e.currentTarget.style.boxShadow = "none";
-                  }}
-                >
-                  <div className="fs-1 mb-3">{award.icon}</div>
-                  <span className="badge bg-warning text-dark mb-2">
-                    {award.year}
-                  </span>
-                  <h5 className="card-heading mb-2">{award.title}</h5>
-                  <p className="caption-text mb-0">{award.organization}</p>
-                </div>
+      <section className="py-5 bg-light">
+  <div className="container text-center">
+    <h1 className="section-heading mb-3" style={{ fontFamily: "Roboto, sans-serif", fontWeight: "700", fontSize: "1.8rem" }}>
+      Our Rankings
+    </h1>
+    <p className="caption-text mb-5" style={{ fontFamily: "Poppins, sans-serif", fontSize: "0.95rem", color: "#555" }}>
+      Consistently ranked among the top institutions
+    </p>
+
+    <div className="row g-4">
+      {rankings.map((ranking, index) => {
+        const isEven = index % 2 === 0;
+        const bgColor = isEven ? "#002A5C" : "#FFC333";
+        const textColor = isEven ? "#FFC333" : "#002A5C";
+
+        return (
+          <div className="col-12 col-md-6 col-lg-3" key={index}>
+            <div
+              className="p-3 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-center align-items-center"
+              style={{
+                backgroundColor: bgColor,
+                color: textColor,
+                transition: "0.3s ease",
+                minHeight: "180px",
+              }}
+            >
+              <div
+                className="fw-bold mb-2"
+                style={{
+                  fontSize: "1.5rem", // ↓ Smaller number font
+                  fontFamily: "Roboto, sans-serif",
+                }}
+              >
+                {ranking.rank}
               </div>
-            ))}
+
+              <h6
+                className="fw-semibold mb-1"
+                style={{
+                  fontSize: "1.4rem", // ↓ Smaller category text
+                  fontFamily: "Roboto, sans-serif",
+                }}
+              >
+                {ranking.category}
+              </h6>
+
+              <p
+                className="mb-0"
+                style={{
+                  fontSize: "1rem", // ↓ Smaller description
+                  lineHeight: "1.4",
+                  fontFamily: "Poppins, sans-serif",
+                }}
+              >
+                {ranking.description}
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
 
       {/* RECOGNITION SECTION */}
       <section className="py-5 bg-light">
@@ -295,52 +319,7 @@ function AwardsRankings() {
       </section>
 
       {/* RANKINGS */}
-      <section className="py-5 bg-light">
-        <div className="container text-center">
-          <h2 className="section-heading mb-3">Our Rankings</h2>
-          <p className="caption-text mb-5">
-            Consistently ranked among the top institutions
-          </p>
-
-          <div className="row g-4">
-            {rankings.map((ranking, index) => {
-              const isEven = index % 2 === 0;
-              const bgColor = isEven ? "#002A5C" : "#FFC333";
-              const textColor = isEven ? "#FFC333" : "#002A5C";
-
-              return (
-                <div className="col-12 col-md-6 col-lg-3" key={index}>
-                  <div
-                    className="p-4 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-center align-items-center"
-                    style={{
-                      backgroundColor: bgColor,
-                      color: textColor,
-                      transition: "0.3s ease",
-                    }}
-                  >
-                    <div
-                      className="fw-bold mb-2"
-                      style={{
-                        fontSize: "3rem",
-                        color: textColor,
-                      }}
-                    >
-                      {ranking.rank}
-                    </div>
-                    <h6 className="fw-bold mb-2">{ranking.category}</h6>
-                    <p
-                      className="caption-text mb-0"
-                      style={{ color: textColor }}
-                    >
-                      {ranking.description}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 }
