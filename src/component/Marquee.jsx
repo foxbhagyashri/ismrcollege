@@ -56,35 +56,23 @@ const Marquee = () => {
 
   const getBadgeClass = (type) => {
     switch (type) {
-      case "scholarship":
-        return "badge-success";
-      case "event":
-        return "badge-primary";
-      case "admission":
-        return "badge-warning";
-      case "course":
-        return "badge-info";
-      case "achievement":
-        return "badge-danger";
-      default:
-        return "badge-secondary";
+      case "scholarship": return "badge-success";
+      case "event": return "badge-primary";
+      case "admission": return "badge-warning";
+      case "course": return "badge-info";
+      case "achievement": return "badge-danger";
+      default: return "badge-secondary";
     }
   };
 
   const getBadgeText = (type) => {
     switch (type) {
-      case "scholarship":
-        return "Scholarship";
-      case "event":
-        return "Event";
-      case "admission":
-        return "Admission";
-      case "course":
-        return "New Course";
-      case "achievement":
-        return "Achievement";
-      default:
-        return "Announcement";
+      case "scholarship": return "Scholarship";
+      case "event": return "Event";
+      case "admission": return "Admission";
+      case "course": return "New Course";
+      case "achievement": return "Achievement";
+      default: return "Announcement";
     }
   };
 
@@ -92,16 +80,16 @@ const Marquee = () => {
     <div className="container my-5 marquee-section">
       <div className="row justify-content-center">
         <div className="col-12 text-center">
-          <h2 className="section-title">Institute Announcements</h2>
+          <h1 className="section-title">Institute Announcements</h1>
           <br /><br />
         </div>
       </div>
 
-      <div className="marquee-container rounded shadow-sm p-3">
+      <div className="marquee-container p-3">
         <div className="marquee-content">
           {announcements.concat(announcements).map((announcement, index) => (
             <div key={index} className="announcement-card">
-              <div className="card border-0 shadow-sm h-100">
+              <div className="card shadow-sm h-100">
                 <div className="card-body">
                   <div className="d-flex justify-content-between align-items-start mb-2">
                     <span className={`badge ${getBadgeClass(announcement.type)}`}>
@@ -112,7 +100,7 @@ const Marquee = () => {
                   <h6 className="card-title">{announcement.title}</h6>
                   <p className="card-text">{announcement.message}</p>
                 </div>
-                <div className="card-footer bg-transparent border-top-0 text-center">
+                <div className="card-footer text-center">
                   <button className="btn btn-sm btn-outline-primary">Read More</button>
                 </div>
               </div>
@@ -120,8 +108,6 @@ const Marquee = () => {
           ))}
         </div>
       </div>
-
-   
     </div>
   );
 };

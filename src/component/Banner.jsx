@@ -32,7 +32,7 @@ const Banner = () => {
               <div className="banner-wrap-content">
                 <div className="title">
                   <p>
-                    Sri Balaji Education Society's <span>2007</span>
+                    Shri Balaji Education Society's <span>2007</span>
                   </p>
                   <h1>
                     INTERNATIONAL SCHOOL<br></br> OF MANAGEMENT AND RESEARCH
@@ -40,7 +40,10 @@ const Banner = () => {
                   <p>
                     MBA : DTE College Code 6798 | BBA & BCA College Code 16301
                     Approved by AICTE, Ministry of HRD, Govt of India.
-                    <br /> <b>Affiliated to S.P.Pune University</b>
+                    <br /><b style={{ color: "#201b1bff", fontWeight: 750 }}>
+  Affiliated to S.P.Pune University
+</b>
+
                   </p>
                 </div>
                 <ul className="list-unstyled  d-flex align-items-center btn-list">

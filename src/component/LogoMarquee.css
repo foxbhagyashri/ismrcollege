@@ -1,0 +1,112 @@
+/* Font setup */
+* {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Section container */
+.partners-section { 
+  padding: 40px 0;
+ 
+}
+
+/* Title */
+.partners-title {
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #0d1b2a;
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
+/* Marquee main container */
+.partners-container {
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 40px; 
+  border-radius: 10px;
+  position: relative;
+    
+
+}
+
+/* Marquee scrolling content */
+.partners-content {
+  
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  animation: partners-scroll 40s linear infinite;
+  padding: 10px 0;
+}
+
+/* Card wrapper for each logo */
+.partners-card {
+  flex: 0 0 150px;
+  height: 80px;
+}
+
+.partners-card-inner {
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(13, 27, 42, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.partners-card-inner:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(13, 27, 42, 0.15);
+}
+
+/* Logo icon styling */
+.partners-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.partners-icon {
+  font-size: 32px;
+  transition: transform 0.3s ease;
+}
+
+.partners-wrapper:hover .partners-icon {
+  transform: scale(1.1);
+}
+
+/* Marquee animation */
+@keyframes partners-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Pause on hover */
+.partners-container:hover .partners-content {
+  animation-play-state: paused;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .partners-container { width: 95%; padding: 0 30px; }
+  .partners-card { flex: 0 0 130px; height: 70px; }
+  .partners-content { gap: 20px; }
+}
+
+@media (max-width: 768px) {
+  .partners-container { width: 98%; padding: 0 20px; }
+  .partners-card { flex: 0 0 120px; height: 60px; }
+  .partners-content { gap: 16px; }
+}
+
+@media (max-width: 480px) {
+  .partners-container { width: 98%; padding: 0 12px; }
+  .partners-card { flex: 0 0 100px; height: 50px; }
+  .partners-content { gap: 12px; }
+}
