@@ -34,7 +34,7 @@ const TopHeader = () => {
                   border: "none",
                 }}
               >
-                Apply Online
+                Pay Fees
               </button>
             </li>
             <li>
@@ -47,7 +47,7 @@ const TopHeader = () => {
                   border: "none",
                 }}
               >
-                Pay Fees
+                Apply Online
               </button>
             </li>
           </ul>

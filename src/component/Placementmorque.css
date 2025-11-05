@@ -1,0 +1,110 @@
+/* Font setup */
+* {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Section container */
+.partners-section {
+  
+  padding-top: 70px;
+  background-color: #fff;
+}
+
+/* Title */
+.partners-title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #002A5C;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Marquee container */
+.partners-container {
+  overflow: hidden;
+  width: 88%;
+  margin: 0 auto;
+  padding: 0 10px;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* Scrolling content */
+.partners-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  animation: partners-scroll 35s linear infinite;
+  padding: 10px 0;
+}
+
+/* Each logo card */
+.partners-card {
+  flex: 0 0 160px;
+  height: 160px;
+}
+
+.partners-card-inner {
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(13, 27, 42, 0.1);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.partners-card-inner:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(13, 27, 42, 0.15);
+}
+
+/* Image styling */
+.partners-img {
+  width: 100%;
+  max-width: 120px;
+  max-height: 120px;
+  object-fit: contain;
+  filter: grayscale(0);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.partners-wrapper:hover .partners-img {
+  transform: scale(1.1);
+  filter: none;
+}
+
+/* Marquee animation */
+@keyframes partners-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Pause on hover */
+.partners-container:hover .partners-content {
+  animation-play-state: paused;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .partners-container { width: 95%; }
+  .partners-card { flex: 0 0 130px; height: 130px; }
+  .partners-content { gap: 30px; }
+  .partners-img { max-width: 100px; }
+}
+
+@media (max-width: 768px) {
+  .partners-container { width: 98%; }
+  .partners-card { flex: 0 0 120px; height: 100px; }
+  .partners-content { gap: 20px; }
+  .partners-img { max-width: 90px; }
+}
+
+@media (max-width: 480px) {
+  .partners-container { width: 98%; }
+  .partners-card { flex: 0 0 100px; height: 80px; }
+  .partners-content { gap: 16px; }
+  .partners-img { max-width: 70px; }
+}

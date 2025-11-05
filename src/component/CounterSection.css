@@ -12,7 +12,7 @@
 /* Counter Number */
 .fw-bold {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 40px;
     font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
@@ -75,7 +75,7 @@
     }
 
     .text-muted {
-        font-size: 15px;
+        font-size: 10px;
     }
 
     .single-counter .display-5 {
