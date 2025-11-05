@@ -12,10 +12,10 @@
 
 /* Heading */
 .why-title {
-    font-size: 44px;
+    font-size: 40px;
     font-weight: 700;
     color: #002147;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 /* Paragraph Text */
@@ -24,6 +24,16 @@
     font-size: 16px;
     line-height: 1.7;
     margin-bottom: 20px;
+    /* constrain lines and justify so each line appears more even */
+    max-width: 60ch;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    text-justify: inter-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
 }
 
 /* Overview Button */
@@ -31,31 +41,32 @@
     color: #dc3545 !important;
     font-weight: 600;
     font-size: 1rem;
-    text-decoration: underline;
+    text-decoration: none; /* remove underline as requested */
     padding-left: 0;
-    transition: color 0.3s ease;
+    transition: color 0.25s ease, border-bottom-color 0.25s ease;
+    border-bottom: 2px solid transparent; /* subtle indicator on hover */
 }
 
 .overview-btn:hover {
     color: #b91c1c !important;
-    text-decoration: underline;
+    border-bottom-color: #b91c1c;
 }
 
 /* === Counters === */
 .counter-item {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 20px;
     margin-bottom: 1.5rem;
 }
 
 .counter-icon {
-    font-size: 2rem;
+    font-size: 2.3rem;
     color: #dc3545;
 }
 
 .counter-number {
-    font-size: 60px;
+    font-size: 45px;
     font-weight: 700;
     color: #002147;
     margin-bottom: 0;

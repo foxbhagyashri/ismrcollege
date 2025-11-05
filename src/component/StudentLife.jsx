@@ -4,7 +4,7 @@ import "./StudentLife.css";
 
 const StudentLife = () => {
     return (
-        <section className="student-life my-5">
+        <section className="student-life">
             <Container>
                 <Row className="align-items-center">
                     {/* Left Image */}

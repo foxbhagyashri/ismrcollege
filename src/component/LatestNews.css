@@ -10,7 +10,7 @@
 
 /* Section Title */
 .section-title {
-  font-size: 43px;
+  font-size: 40px;
   font-weight: 700;
   color: #002147;
   margin-bottom: 40px;
@@ -73,6 +73,21 @@
   cursor: pointer;
 }
 
+/* Small, non-bold title variant for compact headlines (e.g. "$165-million ...") */
+.news-title--small {
+  font-size: 7px;
+  font-weight: 400;
+  color: #002147;
+  line-height: 1.4;
+  margin-top: 15px;
+  transition: color 0.3s ease;
+}
+
+.news-title--small:hover {
+  color: #e63946;
+  cursor: pointer;
+}
+
 .news-meta {
   font-size: 0.9rem;
 }
@@ -82,13 +97,13 @@
 }
 
 .text-mutedd {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
   .section-title {
-    font-size: 36px;
+    font-size: 10px;
   }
 
   .news-img {
@@ -96,17 +111,17 @@
   }
 
   .news-title {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .text-mutedd {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 768px) {
   .section-title {
-    font-size: 28px;
+    font-size: 22px;
     text-align: center;
   }
 
@@ -123,7 +138,7 @@
   }
 
   .text-mutedd {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
@@ -141,6 +156,6 @@
   }
 
   .text-mutedd {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
