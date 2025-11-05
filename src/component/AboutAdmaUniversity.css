@@ -1,11 +1,12 @@
 /* Apply font globally */
 .about-container, .about-container * {
   font-family: 'Inter', Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 
 /* Main container */
 .about-container {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -15,7 +16,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .about-left {
@@ -31,23 +32,32 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-weight: 700;
 }
 
 .about-icon {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .about-text {
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 17px;
+  line-height: 1.8;
   color: #333;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-top: 10px;
 }
 
 .about-right img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  height: 100%;
+  max-height: 400px;
+  /* Use contain so the full image is visible and any transparent background stays transparent */
+  object-fit: contain;
+  background: transparent;
+  border-radius: 10px;
+  /* remove heavy shadow so image appears without a colored background */
+  box-shadow: none;
 }
 
 /* Bottom Row */
@@ -55,63 +65,122 @@
   background-color: #002A5C;
   color: white;
   padding: 3rem 2rem;
-  border-radius: 8px;
+  border-radius: 12px;
+  margin-top: 4rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 
 /* Logos Section */
 .logos-section {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* Use flex so cards sit in a single equal-width row on wide screens */
+  display: flex;
   gap: 2rem;
-  align-items: center;
-  justify-items: center;
+  align-items: stretch; /* make cards equal height */
+  justify-content: space-between;
 }
 
 .logo-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; /* center content vertically so cards look uniform */
   background-color: white;
-  color: red;
-  padding: 1rem;
-  border-radius: 8px;
+  /* color: black; */
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
   width: 100%;
-  max-width: 200px;
+  /* allow cards to share available space equally */
+  flex: 1 1 0;
+  max-width: none;
+  /* enforce same visual height for all cards and allow larger logos */
+  min-height: 280px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  gap: 0.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  gap: 0.8rem;
+  /* Make every card stretch to the same height inside the grid */
+  height: 100%;
 }
 
-.logo-card .logo-icon {
-  font-size: 50px;
+.logo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
 }
+
+.logo-card .logo-image {
+  /* Fixed square area for all logos so they appear equal regardless of original image dimensions */
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  background: transparent; /* preserve transparency for PNG/SVG */
+}
+
+/* Slightly smaller AICTE logo (use class added in JSX) so it looks balanced */
+.logo-image.aicte {
+  width: 105px;
+  height: 120px;
+}
+
+/* Ensure grid items (cards) stretch to equal heights */
+.logos-section {
+  align-items: stretch;
+}
+
+/* Make the caption/text under each logo bold and explicitly use Inter */
+.logo-card > span {
+  font-weight: 700;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  color: #002A5C; /* make caption stand out on white cards */
+}
+
+/* Removed AICTE-specific size override so all logos use the same size */
 
 /* Responsive */
 @media (max-width: 1024px) {
   .about-top {
     grid-template-columns: 1fr;
   }
-  
   .logos-section {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+  }
+  /* slightly smaller logos on tablet */
+  .logo-card .logo-image {
+    width: 100px;
+    height: 100px;
+  }
+  /* AICTE slightly smaller on tablet */
+  .logo-image.aicte {
+    width: 90px;
+    height: 90px;
   }
 }
 
 @media (max-width: 600px) {
   .logos-section {
+    display: grid;
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
-
+  /* smaller logos on mobile */
+  .logo-card .logo-image {
+    width: 80px;
+    height: 80px;
+  }
+  /* AICTE slightly smaller on mobile */
+  .logo-image.aicte {
+    width: 70px;
+    height: 70px;
+  }
   .logo-card {
     max-width: 100%;
   }
-  
   .about-title {
     font-size: 2rem;
   }
-
   .about-text {
-    font-size: 1rem;
+    font-size: 15px;
   }
 }

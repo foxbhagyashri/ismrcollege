@@ -58,13 +58,12 @@ const Footer = () => {
             <h5 className="footer-title">Contact Us</h5>
             <ul className="footer-contact">
               <li>
-                <FaPhoneAlt className="icon" /> +459 9393 9990
+                <FaPhoneAlt className="icon" /> +91 9923786079
+
               </li>
+           
               <li>
-                <FaEnvelope className="icon" /> hello.adma@gmail.com
-              </li>
-              <li>
-                <FaEnvelope className="icon" /> adma@gmail.com
+                <FaEnvelope className="icon" /> Wadki, Opp. Hotel Vijay Executive, Pune – 412308
               </li>
               <li>
                 <FaMapMarkerAlt className="icon" /> 3001810 Campus Way IUTothell WA 98011-8246
