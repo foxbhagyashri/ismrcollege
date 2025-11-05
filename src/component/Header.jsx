@@ -575,7 +575,7 @@ const Header = () => {
       {/* Contact Us */}
       <li className="nav-item">
         <Link to="/Contactus" className="nav-link" onClick={handleNavLinkClick}>
-          Contact <span className="text-warning">Us</span>
+          Contact Us
         </Link>
       </li>
     </ul>
@@ -1022,29 +1022,8 @@ const Header = () => {
           >
             {navItems}
 
-            {/* Apply Button - Desktop with responsive container */}
-            <div className="apply-btn-container d-none d-lg-block ms-lg-2">
-              <a
-                href="admission.html"
-                className="apply-btn"
-                onClick={handleNavLinkClick}
-              >
-                Apply Now
-                <i className="bx bx-right-arrow-alt"></i>
-              </a>
-            </div>
-
-            {/* Apply Button - Mobile Bottom */}
-            <div className="d-lg-none mobile-apply-btn">
-              <a
-                href="admission.html"
-                className="apply-btn w-100 text-center"
-                onClick={handleNavLinkClick}
-              >
-                Apply Now
-                <i className="bx bx-right-arrow-alt"></i>
-              </a>
-            </div>
+           
+          
           </div>
         </div>
       </nav>

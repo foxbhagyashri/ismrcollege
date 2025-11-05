@@ -22,6 +22,7 @@ import CounterSection from "./component/CounterSection";
 import WhyChooseAdma from "./component/WhyChooseAdma";
 import Testimonials from "./component/Testimonials";
 import LatestNews from "./component/LatestNews";
+import Placementmorque from "./component/Placementmorque";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // About Page Components
@@ -54,6 +55,7 @@ function App() {
               <ProgramsSection />
               <HowToApply />
               <VideoSection />
+              <Placementmorque />
               <StudentLife />
               <CounterSection />
               <WhyChooseAdma />
