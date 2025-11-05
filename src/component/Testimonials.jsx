@@ -10,8 +10,8 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: "William Sekel",
-      role: "Adma’s student",
+      name: "Samagya Sharma",
+      role: "ISMR student",
       img: "./usericon.png",
       text: "Universities value students who can think critically & solve problems. Reviewer may assess student ability analyze information, evaluate different perspectives.",
       rating: 5,
@@ -19,7 +19,7 @@ const Testimonials = () => {
     {
       id: 2,
       name: "Jesonal Smith",
-      role: "Adma’s student",
+      role: "ISMR student",
       img: "./usericon.png",
       text: "Universities value students who can think critically & solve problems. Reviewer may assess student ability analyze information, evaluate different perspectives.",
       rating: 5,
@@ -27,7 +27,7 @@ const Testimonials = () => {
     {
       id: 3,
       name: "John Smith",
-      role: "Adma’s student",
+      role: "ISMR student",
       img: "./usericon.png",
       text: "Universities value students who can think critically & solve problems. Reviewer may assess student ability analyze information, evaluate different perspectives.",
       rating: 5,
@@ -35,9 +35,41 @@ const Testimonials = () => {
     {
       id: 4,
       name: "Mary Johnson",
-      role: "Adma’s student",
+      role: "ISMR student",
       img: "./usericon.png",
-      text: "Adma provides excellent facilities and mentors who guide us to think creatively and achieve our goals.",
+      text: "ISMR provides excellent facilities and mentors who guide us to think creatively and achieve our goals.",
+      rating: 5,
+    },
+    {
+      id: 5,
+      name: "Samagya Sharma",
+      role: "ISMR B-School (2020-22)",
+      img: "./usericon.png",
+      text: `I Samagya Sharma pursuing MBA (2020-22) at ISMR B-School, Pune. I am delighted to share that in 1st semester itself I got placed in Ambitious Polytech, Pune as "Business Development Intern".`,
+      rating: 5,
+    },
+    {
+      id: 6,
+      name: "Krishna Mishra",
+      role: "ISMR B-School (2020-22)",
+      img: "./usericon.png",
+      text: `I Krishna Mishra pursuing MBA (2020-22) from ISMR B-School, Pune. I got an opportunity to carry out my internship at UAS International, Delhi in sales and marketing.`,
+      rating: 5,
+    },
+    {
+      id: 7,
+      name: "Bharat Ratangan",
+      role: "ISMR B-School (2019-21)",
+      img: "./usericon.png",
+      text: `I Bharat Rotangan pursuing MBA (2019-21) at ISMR B-School, Pune. I was lucky enough to get a placement with XL Dynamics company with a good annual package.`,
+      rating: 5,
+    },
+    {
+      id: 8,
+      name: "Shruti Sinha Plummer",
+      role: "ISMR B-School (2020-22)",
+      img: "./usericon.png",
+      text: `This is Shruti Sinha pursuing MBA (2020-22) from ISMR B-School, Pune. I was provided with a wonderful opportunity to work for Blitzjobs, Pune by ISMR Placement Cell.`,
       rating: 5,
     },
   ];
@@ -61,7 +93,7 @@ const Testimonials = () => {
   return (
     <section className="testimonials-section py-5">
       <Container>
-        <h2 className="section-title text-center mb-5">What Students Say</h2>
+        <p className="section-title text-center mb-5 ">What Students Say</p>
 
         <Slider ref={sliderRef} {...settings}>
           {testimonials.map((item) => (
@@ -112,3 +144,10 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+
+
+
+
+
+
+// 

@@ -6,8 +6,18 @@
 
 /* Section Padding */
 .student-life {
-  padding-top: 100px;
-  padding-bottom: 30px;
+
+  padding-bottom: 70px;
+  
+}
+
+/* Inner wrapper to align with other sections (same max-width/padding used elsewhere) */
+.student-life .student-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+ 
+  padding: 0 2rem; /* consistent side padding */
+  display: block;
 }
 
 /* Heading */
@@ -15,14 +25,24 @@
   font-size: 40px;
   color: rgb(0, 30, 67);
   margin-bottom: 15px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 /* Paragraph Text */
 .program-text {
   line-height: 1.6;
   margin-bottom: 20px;
-  font-size: 17px;
+  font-size: 16px; /* set subcontent to 16px as requested */
+  /* Limit paragraph width by character count and justify for even lines */
+  max-width: 46ch; /* roughly 60 characters per line */
+  margin-left: 12px;
+  margin-right: auto;
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
 }
 
 /* ListGroup Items */
@@ -51,7 +71,7 @@
 
 /* Arrow */
 .listgroup-arrow {
-  font-size: 32px;
+  font-size: 16px; /* make arrow size match link text (16px) */
   margin-left: 5px;
 }
 
@@ -69,6 +89,7 @@
   color: #fff;
   padding: 10px 25px;
   font-weight: 700;
+  font-size: 16px; /* Application Form button text size */
   text-decoration: none;
   border-radius: 6px;
   transition: background 0.3s ease;

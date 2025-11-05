@@ -20,14 +20,14 @@
 }
 
 .section-title {
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: 40px;
+  font-weight: 700;
   color: #0b214a;
   margin-bottom: 20px;
 }
 
 .section-subtitle {
-  font-size: 1.2rem;
+  font-size: 16px;
   color: #6c757d;
   line-height: 1.6;
   max-width: 600px;
@@ -42,6 +42,7 @@
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  align-items: stretch; /* ensure cards stretch to equal height */
 }
 
 /* Card Styling */
@@ -52,6 +53,13 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  /* make card a column-flex so content aligns and cards have equal height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  min-height: 260px; /* keeps cards visually balanced */
 }
 
 /* Alternate Card Background Colors */
@@ -120,7 +128,8 @@
 }
 
 .card-description {
-  font-size: 1rem;
+  /* sub content: use 14px as requested and ensure readable line-height */
+  font-size: 14px;
   line-height: 1.6;
 }
 
@@ -148,7 +157,8 @@
   }
 
   .card-description {
-    font-size: 0.95rem;
+    /* keep sub content at 14px on tablet for consistency */
+    font-size: 14px;
   }
 }
 
@@ -174,7 +184,8 @@
   }
 
   .card-description {
-    font-size: 0.9rem;
+    /* mobile: keep at 14px unless you prefer smaller */
+    font-size: 14px;
   }
 }
 
@@ -195,6 +206,7 @@
   }
 
   .card-description {
-    font-size: 0.85rem;
+    /* extra small mobile: still 14px, adjust if you want a smaller size */
+    font-size: 14px;
   }
 }

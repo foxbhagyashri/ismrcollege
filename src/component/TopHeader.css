@@ -38,8 +38,9 @@
 
 .top-header-left i {
     margin-right: 4px; /* smaller spacing */
-    color: #ffb100;
-    font-size: 10px; /* smaller icon */
+    color: #FFC333;
+    font-size: 10px;
+    font-weight: 500; /* smaller icon */
 }
 
 /* RIGHT SIDE BUTTONS */
