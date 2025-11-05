@@ -36,7 +36,7 @@ import Howtoapply from "./component/Addmissions/Howtoapply";
 import Educationloan from "./component/Addmissions/Educationloan";
 import Disclaimer from "./component/Addmissions/Disclaimer";
 import Refundpolicy from "./component/Addmissions/Refundpolicy";
-import Feesstructure from "./component/Addmissions/feesstructure";
+import Feesstructure from "./component/Addmissions/Feesstructure";
 import Admissioncontact from "./component/Addmissions/Admissioncontact";
 // Contactus Page
 import Contactus from "./component/Common/Contactus"
