@@ -147,76 +147,76 @@ const Header = () => {
         </a>
         <ul className={`dropdown-menu ${activeDropdown === 1 ? "show" : ""}`}>
           <li>
-            <a
-              href="eligibility.html"
+            <Link
               className="dropdown-item"
+              to="/Addmissions/Eligibility-criteria"
               onClick={handleDropdownItemClick}
             >
               Eligibility Criteria
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="how-to-apply.html"
+            <Link
               className="dropdown-item"
+              to="/Addmissions/Howtoapply"
               onClick={handleDropdownItemClick}
             >
               How To Apply
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="documents.html"
+            <Link
               className="dropdown-item"
+              to="/Addmissions/Eligibility-criteria"
               onClick={handleDropdownItemClick}
             >
               List Of Documents
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="education-loan.html"
+            <Link
               className="dropdown-item"
+              to="/Addmissions/Educationloan"
               onClick={handleDropdownItemClick}
             >
               Education Loan
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="disclaimer.html"
+            <Link
               className="dropdown-item"
+              to="/Addmissions/Disclaimer"
               onClick={handleDropdownItemClick}
             >
               Disclaimer
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="refund-policy.html"
+          <Link
               className="dropdown-item"
+              to="/Addmissions/Refundpolicy"
               onClick={handleDropdownItemClick}
             >
               Refund Policy
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="fees-structure.html"
+          <Link
               className="dropdown-item"
+              to="/Addmissions/Feesstructure"
               onClick={handleDropdownItemClick}
             >
               Fees Structure
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="admission-contact.html"
+          <Link
               className="dropdown-item"
+              to="/Addmissions/Admissioncontact"
               onClick={handleDropdownItemClick}
             >
               Admission Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </li>

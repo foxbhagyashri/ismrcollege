@@ -30,9 +30,13 @@ import Leadership from "./component/Pages/AboutPage/Leadership";
 import Award from "./component/Pages/AboutPage/Award";
 import Ismr from "./component/Pages/AboutPage/Ismr";
 import Recognition from "./component/Pages/AboutPage/Recognition";
-
-
-
+import Eligibilitycriteria from "./component/Addmissions/Eligibility-criteria";
+import Howtoapply from "./component/Addmissions/Howtoapply";
+import Educationloan from "./component/Addmissions/Educationloan";
+import Disclaimer from "./component/Addmissions/Disclaimer";
+import Refundpolicy from "./component/Addmissions/Refundpolicy";
+import Feesstructure from "./component/Addmissions/feesstructure";
+import Admissioncontact from "./component/Addmissions/Admissioncontact";
 // Contactus Page
 import Contactus from "./component/Common/Contactus"
 
@@ -59,7 +63,7 @@ function App() {
               <WhyChooseAdma />
               <Testimonials />
               <LatestNews />
-             
+
             </>
           }
         />
@@ -71,12 +75,19 @@ function App() {
         <Route path="/Aboutpage/Ismr" element={<Ismr />} />
         {/* <Route path="/Aboutpage/Recognition" element={<Recognition />} /> */}
 
+        <Route path="/Addmissions/Eligibility-criteria" element={<Eligibilitycriteria />} />
+        <Route path="/Addmissions/Howtoapply" element={<Howtoapply />} />
+        <Route path="/Addmissions/Educationloan" element={<Educationloan />} />
+        <Route path="/Addmissions/Disclaimer" element={<Disclaimer />} />
+        <Route path="/Addmissions/Refundpolicy" element={<Refundpolicy />} />
+        <Route path="/Addmissions/Feesstructure" element={<Feesstructure />} />
+        <Route path="/Addmissions/Admissioncontact" element={<Admissioncontact />} />
 
         {/* Contact us Page */}
-        <Route path="/Contactus" element={<Contactus/>} />
+        <Route path="/Contactus" element={<Contactus />} />
       </Routes>
-       <Footer />
-       {/* <Contactus/> */}
+      <Footer />
+      {/* <Contactus/> */}
     </Router>
   );
 }
