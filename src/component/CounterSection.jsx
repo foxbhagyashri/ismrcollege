@@ -1,29 +1,38 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import CountUp from "react-countup";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLaptopCode,
+  faUserGraduate,
+  faBookOpen,
+  faChalkboardTeacher,
+} from "@fortawesome/free-solid-svg-icons";
 import "./CounterSection.css";
 
 const CounterSection = () => {
   const counters = [
-    { id: 1, end: 124, label: "Online Programs", icon: "🎓" },
-    { id: 2, end: 140, label: "Graduates Programs", icon: "📘" },
-    { id: 3, end: 393, label: "The Best Courses", icon: "📖" },
-    { id: 4, end: 865, label: "Professional Teacher", icon: "👨‍🏫" },
+    { id: 1, end: 124, label: "Online Programs", icon: faLaptopCode },
+    { id: 2, end: 140, label: "Graduate Programs", icon: faUserGraduate },
+    { id: 3, end: 393, label: "Best Courses", icon: faBookOpen },
+    { id: 4, end: 865, label: "Pro Teachers", icon: faChalkboardTeacher },
   ];
 
   return (
-    <section className="py-3 text-center">
+    <section className="counter-section text-center">
       <Container>
-        <Row className="gy-4">
+        <Row className="gy-4 gx-4 justify-content-center">
           {counters.map((item) => (
             <Col key={item.id} xs={6} md={3}>
-              <div className="single-counter h-100">
-                <div className="display-5 mb-2">{item.icon}</div>
-                <div className="mx-3 counterpara">
-                  <h3 className="fw-bold text-primary">
-                    <CountUp end={item.end} duration={2} /><b>+</b>
+              <div className="single-counter">
+                <div className="counter-icon">
+                  <FontAwesomeIcon icon={item.icon} />
+                </div>
+                <div className="counter-inline">
+                  <h3 className="counter-number">
+                    <CountUp end={item.end} duration={2} />+
                   </h3>
-                  <p className="mb-0 text-muted">{item.label}</p>
+                  <p className="counter-label">{item.label}</p>
                 </div>
               </div>
             </Col>

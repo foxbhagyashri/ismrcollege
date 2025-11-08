@@ -1,5 +1,6 @@
-/* Global Font - applies to all text inside programs-section */
-.programs-section, .programs-section * {
+/* Global Font */
+.programs-section,
+.programs-section * {
   font-family: 'Inter', Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
@@ -7,7 +8,7 @@
 /* Section Styling */
 .programs-section {
   background: #f8f9fa;
-  padding: 80px 5%;
+  padding: 80px 8%; /* increased for side breathing room */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,29 +21,30 @@
 }
 
 .section-title {
-  font-size: 40px;
+  font-size: 42px;
   font-weight: 700;
   color: #0b214a;
   margin-bottom: 20px;
 }
 
 .section-subtitle {
-  font-size: 16px;
+  font-size: 17px;
   color: #6c757d;
-  line-height: 1.6;
-  max-width: 600px;
+  line-height: 1.7;
+  max-width: 620px;
   margin: 0 auto;
 }
 
 /* Grid Layout */
 .specializations-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(3, 1fr); /* always 3 per row on large screens */
+  gap: 35px;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  align-items: stretch; /* ensure cards stretch to equal height */
+  align-items: stretch;
+  justify-items: center;
 }
 
 /* Card Styling */
@@ -53,63 +55,52 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  /* make card a column-flex so content aligns and cards have equal height */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  min-height: 260px; /* keeps cards visually balanced */
+  min-height: 280px;
+  width: 100%;
 }
 
-/* Alternate Card Background Colors */
+/* Alternate Backgrounds */
 .specialization-card:nth-child(odd) {
-  background-color: #002A5C; /* Dark blue */
+  background-color: #002A5C;
 }
 
 .specialization-card:nth-child(even) {
-  background-color: #FFC333; /* Yellow */
+  background-color: #FFC333;
 }
 
 /* Icon Styling */
 .card-icon {
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 20px;
-  font-size: 26px;
+  font-size: 28px;
   background: white;
-  color: #C00D0D; /* red icon */
+  color: #C00D0D;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Icon background adjustment for alternating cards */
-.specialization-card:nth-child(odd) .card-icon {
-  background: rgba(255, 255, 255, 0.9);
-  color: #C00D0D;
-}
-
-.specialization-card:nth-child(even) .card-icon {
-  background: rgba(255, 255, 255, 0.95);
-  color: #C00D0D;
-}
-
-/* Force readable text for card title & description */
+/* Text colors for contrast */
 .specialization-card:nth-child(odd) .card-title,
 .specialization-card:nth-child(odd) .card-description {
-  color: #ffffff; /* White text on dark blue */
+  color: #ffffff;
 }
 
 .specialization-card:nth-child(even) .card-title,
 .specialization-card:nth-child(even) .card-description {
-  color: #ffffff; /* White text on yellow */
+  color: #002A5C;
 }
 
-/* Hover Effect */
+/* Hover Effects */
 .specialization-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
@@ -125,25 +116,39 @@
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .card-description {
-  /* sub content: use 14px as requested and ensure readable line-height */
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.6;
+  max-width: 280px;
 }
 
-/* Responsive Styling */
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
 
-/* Laptop / Tablet */
+/* Large Laptop */
+@media (max-width: 1400px) {
+  .programs-section {
+    padding: 70px 6%;
+  }
+
+  .specializations-grid {
+    gap: 30px;
+  }
+}
+
+/* Tablet Landscape */
 @media (max-width: 1024px) {
   .specializations-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
     gap: 25px;
   }
 
-  .specialization-card {
-    padding: 35px 25px;
+  .section-title {
+    font-size: 36px;
   }
 
   .card-icon {
@@ -152,25 +157,24 @@
     font-size: 24px;
   }
 
-  .card-title {
-    font-size: 1.3rem;
-  }
-
-  .card-description {
-    /* keep sub content at 14px on tablet for consistency */
-    font-size: 14px;
+  .programs-section {
+    padding: 70px 5%;
   }
 }
 
-/* Mobile */
+/* Tablet Portrait & Mobile */
 @media (max-width: 768px) {
   .specializations-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr; /* stack vertically */
+    gap: 25px;
   }
 
-  .specialization-card {
-    padding: 30px 20px;
+  .programs-section {
+    padding: 60px 8%;
+  }
+
+  .section-title {
+    font-size: 28px;
   }
 
   .card-icon {
@@ -179,34 +183,31 @@
     font-size: 22px;
   }
 
-  .card-title {
-    font-size: 1.2rem;
-  }
-
   .card-description {
-    /* mobile: keep at 14px unless you prefer smaller */
     font-size: 14px;
   }
 }
 
 /* Extra Small Mobile */
 @media (max-width: 480px) {
-  .specialization-card {
-    padding: 25px 15px;
+  .programs-section {
+    padding: 50px 6%;
   }
 
-  .card-icon {
-    width: 45px;
-    height: 45px;
-    font-size: 20px;
+  .section-title {
+    font-size: 24px;
   }
 
   .card-title {
     font-size: 1.1rem;
   }
 
+  .card-icon {
+    width: 45px;
+    height: 45px;
+  }
+
   .card-description {
-    /* extra small mobile: still 14px, adjust if you want a smaller size */
-    font-size: 14px;
+    font-size: 13px;
   }
 }

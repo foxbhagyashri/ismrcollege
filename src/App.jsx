@@ -4,7 +4,6 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "remixicon/fonts/remixicon.css";
 
-
 // Common Components
 import Topbar from "./component/Topbar";
 import Header from "./component/Header";
@@ -38,8 +37,23 @@ import Disclaimer from "./component/Addmissions/Disclaimer";
 import Refundpolicy from "./component/Addmissions/Refundpolicy";
 import Feesstructure from "./component/Addmissions/Feesstructure";
 import Admissioncontact from "./component/Addmissions/Admissioncontact";
+// Placement
+import Placementoverview from "./component/Pages/Placementpage/Placementoverview";
+import Ourplacement from "./component/Pages/Placementpage/Ourplacement";
+import Corporate from "./component/Pages/Placementpage/Corporate";
+// import
+// Studentcampus
+import Studentcampus from "./component/Pages/Life@compusPage/Studentcampus";
+import StudentFacilities from "./component/Pages/Life@compusPage/StudentFacilities";
+
+
+//Academics
+import Academics from "./component/Pages/Academics/Academics";
+import Courseduration from "./component/Pages/Academics/Courseduration";
+// newsletter
+import Newsletter from "./component/Pages/NewsPage/Newsletter";
 // Contactus Page
-import Contactus from "./component/Common/Contactus"
+import Contactus from "./component/Common/Contactus";
 
 function App() {
   return (
@@ -65,7 +79,6 @@ function App() {
               <WhyChooseAdma />
               <Testimonials />
               <LatestNews />
-
             </>
           }
         />
@@ -77,13 +90,40 @@ function App() {
         <Route path="/Aboutpage/Ismr" element={<Ismr />} />
         {/* <Route path="/Aboutpage/Recognition" element={<Recognition />} /> */}
 
-        <Route path="/Addmissions/Eligibility-criteria" element={<Eligibilitycriteria />} />
+        <Route
+          path="/Addmissions/Eligibility-criteria"
+          element={<Eligibilitycriteria />}
+        />
         <Route path="/Addmissions/Howtoapply" element={<Howtoapply />} />
         <Route path="/Addmissions/Educationloan" element={<Educationloan />} />
         <Route path="/Addmissions/Disclaimer" element={<Disclaimer />} />
         <Route path="/Addmissions/Refundpolicy" element={<Refundpolicy />} />
         <Route path="/Addmissions/Feesstructure" element={<Feesstructure />} />
-        <Route path="/Addmissions/Admissioncontact" element={<Admissioncontact />} />
+        <Route
+          path="/Addmissions/Admissioncontact"
+          element={<Admissioncontact />}
+        />
+        {/* Placement Page */}
+        <Route
+          path="/Placementpage/Placementoverview"
+          element={<Placementoverview />}
+        />
+        <Route path="/Placementpage/Ourplacement" element={<Ourplacement />} />
+        <Route path="/Placementpage/Corporate" element={<Corporate />} />
+
+        {/* Student Life Page */}
+        <Route path="/Life@campus/Studentcampus" element={<Studentcampus />} />
+        <Route
+          path="/Life@campus/StudentFacilities"
+          element={<StudentFacilities />}
+        />
+
+        {/* Academics Page */}
+        <Route path="/Academics/Academics" element={<Academics />} />
+        <Route path="/Academics/Courseduration" element={<Courseduration />} />
+
+        {/* Newsletter Page */}
+        <Route path="/NewsPage/Newsletter" element={<Newsletter />} />
 
         {/* Contact us Page */}
         <Route path="/Contactus" element={<Contactus />} />
