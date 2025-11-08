@@ -50,7 +50,7 @@ const StatCounter = ({ endValue, duration, suffix }) => {
 // ---------------- MAIN COMPONENT ----------------
 const InstitutionStats = () => {
   return (
-    <div style={{ fontFamily: "'Poppins', sans-serif" }}>
+    <div style={{ fontFamily: "Inter, Arial, Helvetica, sans-serif" }}>
       {/* -------- HEADER -------- */}
       <section
         className="py-5 text-white text-center position-relative"
@@ -72,16 +72,17 @@ const InstitutionStats = () => {
           <h1
             className="mb-3"
             style={{
-              fontFamily: "Roboto Slab, serif",
-              fontSize: "47px",
-              fontWeight: 900,
+              fontFamily: "Inter, Arial, Helvetica, sans-serif",
+              fontSize: "40px",
+              fontWeight: 700,
+              margin: 0,
             }}
           >
             About <span className="text-warning">ISMR,</span> Pune
           </h1>
           <p
             className="mb-0"
-            style={{ fontFamily: "'Poppins', sans-serif", fontSize: "16px" }}
+            style={{ fontFamily: "Inter, Arial, Helvetica, sans-serif", fontSize: "16px", marginTop: "0.5rem" }}
           >
             About • <span className="text-warning">About Institute</span>
           </p>
@@ -114,19 +115,10 @@ const InstitutionStats = () => {
     textJustify: "inter-word", // improves spacing between words
   }}
 >
-  ISMR Pune is a hub of innovation, learning, and excellence. Our mission
-  is to combine <strong>science and spirituality</strong> to create an
-  environment that fosters holistic development. From state-of-the-art
-  infrastructure to experienced faculty, ISMR is committed to nurturing
-  future leaders in every field. Lorem ipsum dolor sit amet consectetur
-  adipisicing elit. Nesciunt enim corrupti itaque odio eos odit iusto sequi
-  provident repellendus aperiam et fugit, voluptate, velit modi at cum quasi
-  maxime voluptates. Lorem ipsum, dolor sit amet consectetur adipisicing
-  elit. Ducimus repellat iste ipsa aut ea deleniti voluptatum autem
-  provident magnam, iure velit, vel omnis facere totam accusamus fuga sunt,
-  unde ad! Quidem vitae sint sapiente. Soluta rem consectetur distinctio,
-  libero, fugit id natus voluptatem est ipsa doloribus quaerat. Facere est
-  saepe aliquid! Totam?
+  International School of Management and Research (ISMR), is a mission-oriented Institute, run by Sri Balaji Education Society since 2007, with a vision to be a world class Business School, achieving excellence in management education and research through continuous competency building. ISMR is a premier Management Institute in Pune, ranked among the Top Institutes for excellence in placements, with a 100% placement assistance record since inception.
+We, at ISMR, are focused in implementing our mission of “Placing You First”. ISMR also believes in developing certain entrepreneurial qualities in the students, helping them in the path of pursuing something beyond normal career growth.
+Today: ISMR campus vibrates with varied co-curricular activities like National & International Conventions, Symposia, Seminars, Student Competitions, Guest Lectures, Outbound Programmes, Industry Interface & Cultural Activities. With a goal to create multi-skilled managers who are well equipped to perform effectively & efficiently in any environment, ISMR Institute not only tries to instil the rigorous syllabi in the students but try to create, a passion for knowledge and also attempt to teach them how to apply that knowledge in real-life situations
+
 </p>
 
         <div className="row justify-content-center pt-4   marginTop: 2rem">

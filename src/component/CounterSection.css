@@ -1,101 +1,82 @@
-/* Global Font for CounterSection */
-.single-counter, .single-counter * {
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
+.counter-section {
+  background-color: #f8f9fa;
+  padding: 70px 0;
 }
 
-/* Counter Container */
-.counterpara {
-    text-align: left;
-}
-
-/* Counter Number */
-.fw-bold {
-    font-weight: 700;
-    font-size: 40px;
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
-}
-
-.fw-bold span {
-    color: rgb(0, 30, 67);
-}
-
-.fw-bold b {
-    color: rgb(0, 30, 67);  
-}
-
-/* Counter Label */
-.text-muted {
-    font-size: 17px;
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
-    margin: 0;
-}
-
-/* Individual Counter Box */
+/* Clean inline counter layout */
 .single-counter {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
 }
 
-/* Counter Icon */
-.single-counter .display-5 {
-    font-size: 50px;
+.single-counter:hover {
+  transform: translateY(-5px);
 }
 
-/* Responsive Styling */
-
-/* Tablets */
-@media (max-width: 1024px) {
-    .fw-bold {
-        font-size: 40px;
-    }
-
-    .text-muted {
-        font-size: 16px;
-    }
-
-    .single-counter .display-5 {
-        font-size: 40px;
-    }
+/* Icon */
+.counter-icon {
+  font-size: 36px;
+  color: #FFC333;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-    .single-counter {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .fw-bold {
-        font-size: 36px;
-    }
-
-    .text-muted {
-        font-size: 10px;
-    }
-
-    .single-counter .display-5 {
-        font-size: 36px;
-        margin-bottom: 10px;
-    }
+.single-counter:hover .counter-icon {
+  transform: scale(1.1);
+  color: #0b214a;
 }
 
-/* Extra Small Mobile */
-@media (max-width: 480px) {
-    .fw-bold {
-        font-size: 32px;
-    }
+/* Inline number + label */
+.counter-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* slight gap between number and text */
+  justify-content: center;
+  flex-wrap: nowrap;
+  white-space: nowrap; /* keep in one line */
+}
 
-    .text-muted {
-        font-size: 14px;
-    }
+/* Number styling */
+.counter-number {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0b214a;
+  margin: 0;
+  line-height: 1;
+}
 
-    .single-counter .display-5 {
-        font-size: 30px;
-        margin-bottom: 8px;
-    }
+/* Label styling */
+.counter-label {
+  font-size: 14px;
+  color: #6c757d;
+  margin: 0;
+  line-height: 1;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .counter-icon {
+    font-size: 32px;
+  }
+  .counter-number {
+    font-size: 1.4rem;
+  }
+  .counter-label {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .counter-icon {
+    font-size: 28px;
+    margin-bottom: 6px;
+  }
+  .counter-number {
+    font-size: 1.3rem;
+  }
+  .counter-label {
+    font-size: 12.5px;
+  }
 }

@@ -35,11 +35,11 @@ const Banner = () => {
                     Shri Balaji Education Society's <span>2007</span>
                   </p>
                   <h1>
-                    INTERNATIONAL SCHOOL<br></br> OF MANAGEMENT AND RESEARCH
+                    INTERNATIONAL SCHOOL OF<br></br>  MANAGEMENT AND RESEARCH
                   </h1>
                   <p>
                     MBA : DTE College Code 6798 | BBA & BCA College Code 16301
-                    Approved by AICTE, Ministry of HRD, Govt of India.
+                   <br /> Approved by AICTE, Ministry of HRD, Govt of India.
                     <br /><b style={{ color: "#201b1bff", fontWeight: 750 }}>
   Affiliated to S.P.Pune University
 </b>
