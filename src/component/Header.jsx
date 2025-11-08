@@ -69,7 +69,10 @@ const Header = () => {
   }, []);
 
   const navItems = (
-    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+    <ul
+      className="navbar-nav  mb-2 mb-lg-0"
+      style={{ marginLeft: "130px", marginRight: "70px" }}
+    >
       {/* Home */}
       <li className="nav-item">
         <Link className="nav-link" to="/" onClick={handleNavLinkClick}>
@@ -182,17 +185,9 @@ const Header = () => {
               Education Loan
             </Link>
           </li>
+        
           <li>
             <Link
-              className="dropdown-item"
-              to="/Addmissions/Disclaimer"
-              onClick={handleDropdownItemClick}
-            >
-              Disclaimer
-            </Link>
-          </li>
-          <li>
-          <Link
               className="dropdown-item"
               to="/Addmissions/Refundpolicy"
               onClick={handleDropdownItemClick}
@@ -201,7 +196,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-          <Link
+            <Link
               className="dropdown-item"
               to="/Addmissions/Feesstructure"
               onClick={handleDropdownItemClick}
@@ -210,7 +205,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-          <Link
+            <Link
               className="dropdown-item"
               to="/Addmissions/Admissioncontact"
               onClick={handleDropdownItemClick}
@@ -218,9 +213,108 @@ const Header = () => {
               Admission Contact
             </Link>
           </li>
+            <li>
+            <Link
+              className="dropdown-item"
+              to="/Addmissions/Disclaimer"
+              onClick={handleDropdownItemClick}
+            >
+              Disclaimer
+            </Link>
+          </li>
         </ul>
       </li>
+      {/* Academics */}
+      <li className={`nav-item dropdown ${activeDropdown === 4 ? "show" : ""}`}>
+        <a
+          href="#"
+          className="nav-link dropdown-toggle"
+          role="button"
+          onClick={(e) => {
+            e.preventDefault();
+            toggleDropdown(4);
+          }}
+          aria-expanded={activeDropdown === 4}
+        >
+          Academics
+        </a>
+        <ul className={`dropdown-menu ${activeDropdown === 4 ? "show" : ""}`}>
+          <li>
+            <Link
+              className="dropdown-item"
+              to="/Academics/Academics"
+              onClick={handleDropdownItemClick}
+            >
+              Academics
+            </Link>
+          </li>
 
+          <li>
+            <Link
+              className="dropdown-item"
+              to="/Academics/Courseduration"
+              onClick={handleDropdownItemClick}
+            >
+              Course Duration
+            </Link>
+          </li>
+
+          {/* <li>
+            <a
+              href="ebc-scholarship.html"
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
+              Apply for EBC & Scholarship Form
+            </a>
+          </li> */}
+          {/* <li>
+            <a
+              href="mat-form.html"
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
+              Apply for MAT Entrance Exam Form
+            </a>
+          </li> */}
+          {/* <li>
+            <a
+              href="cmat-form.html"
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
+              Apply for CMAT Entrance Exam Form
+            </a>
+          </li> */}
+          {/* <li>
+            <a
+              href="mba-entrance-form.html"
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
+              Apply for MBA Entrance Exam Form
+            </a>
+          </li> */}
+          {/* <li>
+            <a
+              href="mba-exam-form.html"
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
+              Apply for MBA Exam Form
+            </a>
+          </li> */}
+          {/* <li>
+            <a
+              href="ndl-form.html"
+              className="dropdown-item"
+              onClick={handleDropdownItemClick}
+            >
+              Apply for National Digital Library Form (NDL)
+            </a>
+          </li> */}
+        </ul>
+      </li>
       {/* Placement Dropdown */}
       <li className={`nav-item dropdown ${activeDropdown === 2 ? "show" : ""}`}>
         <a
@@ -237,15 +331,16 @@ const Header = () => {
         </a>
         <ul className={`dropdown-menu ${activeDropdown === 2 ? "show" : ""}`}>
           <li>
-            <a
-              href="placement-overview.html"
+            <Link
               className="dropdown-item"
+              to="/Placementpage/Placementoverview"
               onClick={handleDropdownItemClick}
             >
               Placement Overview
-            </a>
+            </Link>
           </li>
-          <li>
+
+          {/* <li>
             <a
               href="placement-process.html"
               className="dropdown-item"
@@ -253,8 +348,8 @@ const Header = () => {
             >
               Placement Process
             </a>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <a
               href="placement-rules.html"
               className="dropdown-item"
@@ -262,8 +357,8 @@ const Header = () => {
             >
               Placement Rules & Regulations
             </a>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <a
               href="placement-statistics.html"
               className="dropdown-item"
@@ -271,17 +366,19 @@ const Header = () => {
             >
               Placement Statistics
             </a>
-          </li>
+          </li> */}
+
           <li>
-            <a
-              href="internship-placement.html"
+            <Link
               className="dropdown-item"
+              to="/Placementpage/Ourplacement"
               onClick={handleDropdownItemClick}
             >
               Our Internship & Placement
-            </a>
+            </Link>
           </li>
-          <li>
+
+          {/* <li>
             <a
               href="alumni-talk.html"
               className="dropdown-item"
@@ -289,17 +386,19 @@ const Header = () => {
             >
               Alumni Talk
             </a>
-          </li>
+          </li> */}
+
           <li>
-            <a
-              href="corporate-testimonials.html"
+            <Link
               className="dropdown-item"
+              to="/Placementpage/Corporate"
               onClick={handleDropdownItemClick}
             >
-              Corporate Testimonials
-            </a>
+              Corporate & Student Testimonials
+            </Link>
           </li>
-          <li>
+
+          {/* <li>
             <a
               href="student-testimonials.html"
               className="dropdown-item"
@@ -307,8 +406,8 @@ const Header = () => {
             >
               Student Testimonials
             </a>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <a
               href="placement-contact.html"
               className="dropdown-item"
@@ -316,7 +415,7 @@ const Header = () => {
             >
               Placement Contact
             </a>
-          </li>
+          </li> */}
         </ul>
       </li>
 
@@ -336,127 +435,38 @@ const Header = () => {
         </a>
         <ul className={`dropdown-menu ${activeDropdown === 3 ? "show" : ""}`}>
           <li>
-            <a
-              href="student-campus-life.html"
+            <Link
               className="dropdown-item"
+              to="/Life@campus/Studentcampus"
               onClick={handleDropdownItemClick}
             >
-              Student Campus Life
-            </a>
+              Student Campus life
+            </Link>
           </li>
-          <li>
+          {/* <li>
             <a
               href="student-facilities.html"
               className="dropdown-item"
               onClick={handleDropdownItemClick}
             >
-              Student Facilities
+              Student Clubs
             </a>
-          </li>
-        </ul>
-      </li>
+          </li> */}
 
-      {/* Student Corner Dropdown */}
-      <li className={`nav-item dropdown ${activeDropdown === 4 ? "show" : ""}`}>
-        <a
-          href="#"
-          className="nav-link dropdown-toggle"
-          role="button"
-          onClick={(e) => {
-            e.preventDefault();
-            toggleDropdown(4);
-          }}
-          aria-expanded={activeDropdown === 4}
-        >
-          Student Corner
-        </a>
-        <ul className={`dropdown-menu ${activeDropdown === 4 ? "show" : ""}`}>
           <li>
-            <a
-              href="academics.html"
+            <Link
               className="dropdown-item"
+              to="/Life@campus/StudentFacilities"
               onClick={handleDropdownItemClick}
             >
-              Academics
-            </a>
-          </li>
-          <li>
-            <a
-              href="mah-cet.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              Apply For MAH-CET Form
-            </a>
-          </li>
-          <li>
-            <a
-              href="caste-validity.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              Apply for Caste Validity
-            </a>
-          </li>
-          <li>
-            <a
-              href="ebc-scholarship.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              Apply for EBC & Scholarship Form
-            </a>
-          </li>
-          <li>
-            <a
-              href="mat-form.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              Apply for MAT Entrance Exam Form
-            </a>
-          </li>
-          <li>
-            <a
-              href="cmat-form.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              Apply for CMAT Entrance Exam Form
-            </a>
-          </li>
-          <li>
-            <a
-              href="mba-entrance-form.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              Apply for MBA Entrance Exam Form
-            </a>
-          </li>
-          <li>
-            <a
-              href="mba-exam-form.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              Apply for MBA Exam Form
-            </a>
-          </li>
-          <li>
-            <a
-              href="ndl-form.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              Apply for National Digital Library Form (NDL)
-            </a>
+              Student Facilities
+            </Link>
           </li>
         </ul>
       </li>
 
       {/* Reach Us Dropdown */}
-      <li className={`nav-item dropdown ${activeDropdown === 5 ? "show" : ""}`}>
+      {/* <li className={`nav-item dropdown ${activeDropdown === 5 ? "show" : ""}`}>
         <a
           href="#"
           className="nav-link dropdown-toggle"
@@ -480,7 +490,7 @@ const Header = () => {
             </a>
           </li>
         </ul>
-      </li>
+      </li> */}
 
       {/* Newsletter Dropdown */}
       <li className={`nav-item dropdown ${activeDropdown === 6 ? "show" : ""}`}>
@@ -498,22 +508,13 @@ const Header = () => {
         </a>
         <ul className={`dropdown-menu ${activeDropdown === 6 ? "show" : ""}`}>
           <li>
-            <a
-              href="newsletter-aug-25.html"
+            <Link
               className="dropdown-item"
+              to="/NewsPage/Newsletter"
               onClick={handleDropdownItemClick}
             >
-              August 2025
-            </a>
-          </li>
-          <li>
-            <a
-              href="newsletter-sep-25.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              September 2025
-            </a>
+              All Newsletters
+            </Link>
           </li>
         </ul>
       </li>
@@ -587,21 +588,37 @@ const Header = () => {
         /* Custom Navbar Styling */
         .custom-navbar {
           background-color: #002a5c !important;
-          padding: 0.5rem 0;
+          padding: 10px 0;
           position: sticky;
           top: 0;
+         
           z-index: 1030;
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
           font-family: 'Inter', Arial, Helvetica, sans-serif !important;
         }
          
         
+        .custom-navbar .navbar-brand {
+          position: relative;
+          padding-left: 25px;
+          margin-left: 15px;
+          
+        }
+
         .custom-navbar .navbar-brand img {
-          height: 60px;
-          width: 60px;
+          height: 125px;
+           
+          width: 125px;
           border-radius: 50%;
           transition: transform 0.3s ease;
           object-fit: cover;
+          position: absolute;
+          top: -20px;
+          
+          left: 18px;
+          z-index: 1031;
+          border: 6px solid #002a5c;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         }
         
         .custom-navbar .navbar-brand img:hover {
@@ -611,17 +628,21 @@ const Header = () => {
         .custom-navbar .nav-link {
           color: rgba(255, 255, 255, 0.8) !important;
           font-weight: 500;
-          font-size: 14px;
-          padding: 12px 15px;
+          font-size: 16px;
+          padding: 18px 22px;
+          margin: 2px 12px;
           transition: all 0.3s ease;
           text-transform: capitalize;
           cursor: pointer;
+          letter-spacing: 0.2px;
+          
         }
         
         .custom-navbar .nav-link:hover,
         .custom-navbar .nav-link.active,
         .custom-navbar .nav-link.show {
           color: #ffb100 !important;
+       
         }
         
         .custom-navbar .dropdown-menu {
@@ -728,7 +749,8 @@ const Header = () => {
           }
           
           .custom-navbar .nav-item {
-            margin-right: 2px;
+            margin-right: 5px;
+            margin-left: 5px;
           }
           
           .custom-navbar .nav-link {
@@ -1021,9 +1043,6 @@ const Header = () => {
             id="navbarNav"
           >
             {navItems}
-
-           
-          
           </div>
         </div>
       </nav>

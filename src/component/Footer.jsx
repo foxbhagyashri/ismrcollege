@@ -54,20 +54,12 @@ const Footer = () => {
           </Col>
 
           {/* Contact Us */}
-          <Col lg={5} md={6} sm={12} className="mb-4">
+          <Col lg={5} md={6} sm={12} className="mb-4 contact-section">
             <h5 className="footer-title">Contact Us</h5>
             <ul className="footer-contact">
-              <li>
-                <FaPhoneAlt className="icon" /> +91 9923786079
-
-              </li>
-           
-              <li>
-                <FaEnvelope className="icon" /> Wadki, Opp. Hotel Vijay Executive, Pune – 412308
-              </li>
-              <li>
-                <FaMapMarkerAlt className="icon" /> 3001810 Campus Way IUTothell WA 98011-8246
-              </li>
+              <li><FaPhoneAlt className="icon" /> +91 9923786079</li>
+              <li><FaEnvelope className="icon" /> Wadki, Opp. Hotel Vijay Executive, Pune – 412308</li>
+              <li><FaMapMarkerAlt className="icon" /> 3001810 Campus Way IUTothell WA 98011-8246</li>
             </ul>
           </Col>
         </Row>
@@ -78,7 +70,7 @@ const Footer = () => {
         <Container className="d-flex flex-column flex-md-row align-items-center justify-content-between">
           <div className="footer-logo d-flex align-items-center mb-3 mb-md-0">
             <span>
-              Copyright @ Website Design & Developed By{" "}
+              Copyright © Website Design & Developed By{" "}
               <span className="footer-brand">Fox Aircomm Pvt Ltd</span> All Rights Reserved.
             </span>
           </div>
