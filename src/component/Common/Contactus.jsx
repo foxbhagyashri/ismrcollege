@@ -17,25 +17,25 @@ function Contactus() {
       icon: 'fa-graduation-cap',
       title: 'Careers',
       email: 'careers@ismrpune.edu.in',
-      phones: ['+91 9923786079', '+91 9158000595']
+      phones: ['+91 9923786079']
     },
     {
       icon: 'fa-user-graduate',
       title: 'Academics',
       email: 'academics@ismrpune.edu.in',
-      phones: ['+91 9373513331', '+91 9923786079']
+      phones: ['+91 9373513331']
     },
     {
       icon: 'fa-building',
       title: 'Admissions',
       email: 'admissions@ismrpune.edu.in',
-      phones: ['+91 9923786079', '+91 9158000595']
+      phones: ['+91 9923786079']
     },
     {
       icon: 'fa-briefcase',
       title: 'Placements',
       email: 'placements@ismrpune.edu.in',
-      phones: ['+91 9923786079', '+91 9158000595']
+      phones: ['+91 9923786079']
     }
   ];
 
@@ -52,7 +52,7 @@ function Contactus() {
 
         .contact-page {
           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      
           min-height: 100vh;
           padding: 60px 0;
         }
@@ -333,30 +333,31 @@ function Contactus() {
         <h1 className="page-title">How to Reach</h1>
 
         {/* Contact Cards */}
-        <div className="row g-4 mb-5">
-          {contactData.map((contact, index) => (
-            <div className="col-lg-3 col-md-6" key={index}>
-              <div className="contact-card">
-                <div className="icon-wrapper">
-                  <i className={`fas ${contact.icon}`}></i>
-                </div>
-                <h3 className="contact-title">{contact.title}</h3>
-                <ul className="contact-info">
-                  <li>
-                    <i className="fas fa-envelope"></i>
-                    <a href={`mailto:${contact.email}`}>{contact.email}</a>
-                  </li>
-                  {contact.phones.map((phone, idx) => (
-                    <li key={idx}>
-                      <i className={`fas ${idx === 0 ? 'fa-phone' : 'fa-phone-alt'}`}></i>
-                      <a href={`tel:${phone.replace(/\s/g, '')}`}>{phone}</a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
+     <div className="row g-4 mb-5">
+  {contactData.map((contact, index) => (
+    <div className="col-lg-3 col-md-6" key={index}>
+      <div className="contact-card">
+        <div className="icon-wrapper">
+          <i className={`fas ${contact.icon}`}></i>
         </div>
+        <h3 className="contact-title">{contact.title}</h3>
+        <ul className="contact-info">
+          <li>
+            <i className="fas fa-envelope"></i>
+            <a href={`mailto:${contact.email}`}>{contact.email}</a>
+          </li>
+          {[...new Set(contact.phones)].map((phone, idx) => (
+            <li key={idx}>
+              <i className={`fas ${idx === 0 ? 'fa-phone' : 'fa-phone-alt'}`}></i>
+              <a href={`tel:${phone.replace(/\s/g, '')}`}>{phone}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  ))}
+</div>
+
 
         {/* CTA Section */}
         <div className="cta-section">
@@ -374,52 +375,52 @@ function Contactus() {
               <button className="btn btn-custom btn-primary-custom">
                 Application Form <i className="fas fa-arrow-right ms-2"></i>
               </button>
-              <button className="btn btn-custom btn-outline-custom">
-                How To Apply <i className="fas fa-arrow-right ms-2"></i>
-              </button>
+             
             </div>
           </div>
         </div>
 
-        {/* Newsletter Section */}
-        <div className="newsletter-section">
-          <div className="row">
-            <div className="col-lg-6">
-              <h3>Subscribe To Our Newsletter</h3>
-              <p>
-                Stay informed about the latest developments, breakthroughs, and
-                trends in our industry. Our team of experts scours the web to bring
-                you the most relevant and engaging news articles.
-              </p>
-            </div>
-            <div className="col-lg-6">
-              <form className="newsletter-form" onSubmit={handleSubscribe}>
-                <input
-                  type="email"
-                  className="form-control"
-                  placeholder="Your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-                <button type="submit" className="btn btn-subscribe">
-                  Subscribe Now <i className="fas fa-arrow-right ms-2"></i>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-
+            
         {/* Map Section */}
-        <div className="map-section">
-          <div className="map-placeholder">
-            <div className="text-center">
-              <i className="fas fa-map-marker-alt fa-3x mb-3"></i>
-              <p>Interactive Map Location</p>
-              <small>Embed your Google Maps iframe here</small>
-            </div>
-          </div>
+      <div className="container my-5">
+  <div className="row d-flex align-items-stretch">
+    {/* Left info panel - narrower */}
+    <div className="col-md-3">
+      <div
+        className="h-100 p-4 text-white d-flex flex-column justify-content-center"
+        style={{ backgroundColor: "#002a5c", borderRadius: "8px" }}
+      >
+        <div className="text-center">
+          <i className="fas fa-map-marker-alt fa-3x mb-3"></i>
+          <h5>Interactive Map Location</h5>
+          <p className="mt-3" style={{ fontSize: "0.9rem", lineHeight: "1.4" }}>
+            Bypass Pune Saswad Road, Sr. No 907, Opp Hotel Vijay Executive, Gaidhara Kanifnath College Road, Wadki, Pune - 412308, Maharashtra
+          </p>
         </div>
+      </div>
+    </div>
+
+    {/* Right map panel - wider */}
+    <div className="col-md-9">
+      <iframe
+        title="Pune Location Map"
+        src="https://www.google.com/maps?q=Bypass+Pune+Saswad+Road,+Sr.+No+907,+Opp+Hotel+Vijay+Executive,+Gaidhara+Kanifnath+College+Road,+Wadki,+Pune,+Maharashtra+412308&output=embed"
+        width="100%"
+        height="500px"
+        style={{ border: 0, borderRadius: "8px" }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+</div>
+
+  
+
+
+
+
       </div>
     </div>
   );
