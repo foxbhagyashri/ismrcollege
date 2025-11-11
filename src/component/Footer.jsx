@@ -12,7 +12,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="footer-section pt-5">
+    <footer className="footer-section pt-5 pb-4">
       <Container>
         <Row>
           {/* About ISMR */}
@@ -54,13 +54,15 @@ const Footer = () => {
           </Col>
 
           {/* Contact Us */}
-          <Col lg={5} md={6} sm={12} className="mb-4 contact-section">
-            <h5 className="footer-title">Contact Us</h5>
-            <ul className="footer-contact">
-              <li><FaPhoneAlt className="icon" /> +91 9923786079</li>
-              <li><FaEnvelope className="icon" /> Wadki, Opp. Hotel Vijay Executive, Pune – 412308</li>
-              <li><FaMapMarkerAlt className="icon" /> 3001810 Campus Way IUTothell WA 98011-8246</li>
-            </ul>
+          <Col lg={5} md={6} sm={12} className="mb-4">
+            <div className="contact-section">
+              <h5 className="footer-title">Contact Us</h5>
+              <ul className="footer-contact">
+                <li><FaPhoneAlt className="icon" /> +91 9923786079</li>
+                <li><FaEnvelope className="icon" /> Wadki, Opp. Hotel Vijay Executive, Pune – 412308</li>
+                <li><FaMapMarkerAlt className="icon" /> 3001810 Campus Way IUTothell WA 98011-8246</li>
+              </ul>
+            </div>
           </Col>
         </Row>
       </Container>
@@ -68,12 +70,10 @@ const Footer = () => {
       {/* Bottom Footer */}
       <div className="footer-bottom py-3 mt-4">
         <Container className="d-flex flex-column flex-md-row align-items-center justify-content-between">
-          <div className="footer-logo d-flex align-items-center mb-3 mb-md-0">
-            <span>
-              Copyright © Website Design & Developed By{" "}
-              <span className="footer-brand">Fox Aircomm Pvt Ltd</span> All Rights Reserved.
-            </span>
-          </div>
+          <span className="footer-bottom-text text-center">
+            © Website Design & Developed By{" "}
+            <span className="footer-brand">Fox Aircomm Pvt Ltd</span> | All Rights Reserved.
+          </span>
         </Container>
       </div>
     </footer>

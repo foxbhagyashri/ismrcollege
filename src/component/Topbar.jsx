@@ -13,9 +13,9 @@ const TopHeader = () => {
                 <i className="ri-phone-fill"></i> +91 9923786079
               </a>
             </li>
-            <li>
+            <li >
               <a href="mailto:admissions@ismrpune.edu.in">
-                <i className="ri-mail-line"></i> admissions@ismrpune.edu.in
+                <i className="ri-mail-line " ></i> admissions@ismrpune.edu.in
               </a>
             </li>
           </ul>
