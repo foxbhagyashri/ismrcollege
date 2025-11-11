@@ -188,7 +188,7 @@ const Ourplacement = () => {
 
         <div className="container position-relative py-5">
           <h1
-            className="mb-3"
+            className="mb-3 banner-title"
             style={{
               fontFamily: "Inter, Arial, Helvetica, sans-serif",
               fontSize: "40px",
@@ -198,7 +198,7 @@ const Ourplacement = () => {
             Internship <span className="text-warning">& Placement</span>
           </h1>
           <p
-            className="mb-0"
+            className="mb-0 banner-subtitle"
             style={{
               fontFamily: "Inter, Arial, Helvetica, sans-serif",
               fontSize: "16px",
@@ -353,6 +353,12 @@ const Ourplacement = () => {
             color: #0a2240 !important;
           }
 
+          /* Slightly tighter section padding on mobile */
+          .section-padding {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+          }
+
           @keyframes scroll-left {
             0% { transform: translateX(0%); }
             100% { transform: translateX(-50%); }
@@ -453,6 +459,43 @@ const Ourplacement = () => {
             .alumni-card-3d {
               width: 280px;
               height: auto;
+            }
+            .banner-title {
+              font-size: 30px !important;
+            }
+            .banner-subtitle {
+              font-size: 14px !important;
+            }
+            .tab-link {
+              font-size: 14px;
+              padding: 6px 10px;
+            }
+            .logo-box {
+              width: 130px;
+              height: 90px;
+              margin: 0 10px;
+            }
+            .section-padding {
+              padding-left: 1rem;
+              padding-right: 1rem;
+            }
+          }
+
+          @media (max-width: 576px) {
+            .banner-title {
+              font-size: 26px !important;
+            }
+            .banner-subtitle {
+              font-size: 13px !important;
+            }
+            .logo-box {
+              width: 115px;
+              height: 80px;
+              margin: 0 8px;
+            }
+            .tab-link {
+              font-size: 13px;
+              padding: 6px 8px;
             }
           }
         `}
