@@ -1,118 +1,75 @@
-import React from "react";
-import "./Banner.css";
-import "./Javascript.js";
-import { FaPlay, FaArrowRight } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
+import "./Banner.css"; // Assuming the CSS file is named Banner.css
 
-const Banner = () => {
+const Travel = () => {
+  const videos = [
+    "mp.mp4",
+    "mp1.mp4",
+    "mp3.mp4",
+    "mp4.mp4",
+    "mp5.mp4",
+  ];
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  // Auto-slide functionality remains the same
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % videos.length);
+    }, 7000); // Change slide every 7 seconds
+    return () => clearInterval(timer);
+  }, [videos.length]);
+
   return (
-    <div>
-      <div className="banner-wrap-area">
-        <div className="container-fluid">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
-              <div className="banner-wrap-image">
-                <img
-                  src="/banner-wrap-1.png"
-                  alt="banner-wrap-image"
-                  className="student-img"
-                ></img>
-                <div className="image-2">
-                  <img
-                    src="/banner-wrap-city.png"
-                    alt="banner-wrap"
-                    className="rotating-img"
-                  ></img>
-                  <div className="middle-img">
-                    <img src="/banner-wrap-city-2.png" alt="banner-wrap"></img>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="banner-wrap-content">
-                <div className="title">
-                  <p>
-                    Shri Balaji Education Society's <span>2007</span>
-                  </p>
-                  <h1>
-                    INTERNATIONAL SCHOOL OF<br></br>  MANAGEMENT AND RESEARCH
-                  </h1>
-                  <p>
-                    MBA : DTE College Code 6798 | BBA & BCA College Code 16301
-                   <br /> Approved by AICTE, Ministry of HRD, Govt of India.
-                    <br /><b style={{ color: "#201b1bff", fontWeight: 750 }}>
-  Affiliated to S.P.Pune University
-</b>
+    <section className="home">
+      {/* Background Videos */}
+      {videos.map((src, i) => (
+        <video
+          key={i}
+          className={`video-slide ${i === activeIndex ? "active" : ""}`}
+          src={src}
+          autoPlay
+          muted
+          loop
+        ></video>
+      ))}
 
-                  </p>
-                </div>
-                <ul className="list-unstyled  d-flex align-items-center btn-list">
-                  <li className="d-inline-block">
-                    <a className="default-btn" href="university-overview.html">
-                      University Overview &nbsp;{" "}
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        fill="currentColor"
-                        class="bi bi-arrow-right"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
-                        />
-                      </svg>
-                    </a>
-                  </li>
-                  {/* <li className="d-inline-block">
-                    <ul className="list-unstyled d-flex align-items-center ps-0 mb-0 play-btn">
-                      <li>
-                        <a
-                          className="see"
-                          data-fslightbox="gallery"
-                          href="https://www.youtube.com/watch?v=3nQNiWdeH2Q"
-                        >
-                          See How To Apply &nbsp;{" "}
-                          <FaArrowRight className="ms-2 arrow-icon" />
-                        </a>
-                      </li>
-                    </ul>
-                  </li> */}
-                </ul>
+      {/* Overlay added via CSS ::after */}
 
-                {/*  */}
-                <ul className="ps-0 mb-0 d-flex align-items-center user-list">
-                  <li>
-                    <ul className="list-unstyled ps-0 mb-0 d-flex align-items-center image">
-                      <li>
-                        <img src="/hero-user-1.jpg" alt="hero-user" />
-                      </li>
-                      <li>
-                        <img src="/hero-user-2.jpg" alt="hero-user" />
-                      </li>
-                      <li>
-                        <img src="/hero-user-3.jpg" alt="hero-user" />
-                      </li>
-                      <li>
-                        <img src="/hero-user-4.jpg" alt="hero-user" />
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="user-listtext">
-                    <h2>
-                      <span className="counter">4200</span>+
-                    </h2>
-                    <p className="subtext">Student around in the world</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      {/* STATIC Text Content - RENDERED ONCE */}
+      <div className="content active">
+        <div className="title"> 
+          <p>
+            Shri Balaji Education Society's <span>2007</span>
+          </p>
+          <h1>
+            INTERNATIONAL SCHOOL OF<br /> MANAGEMENT AND RESEARCH
+          </h1>
+        
+          {/* Optional: Add the "Read more" link if desired, though it wasn't in the provided static structure */}
+          <a href="#">Read more</a>
         </div>
       </div>
-    </div>
+
+      {/* Social Media Icons */}
+      <div className="media_icon">
+        <a href="#"><i className="fab fa-facebook-f"></i></a>
+        <a href="#"><i className="fab fa-instagram"></i></a>
+        <a href="#"><i className="fab fa-twitter"></i></a>
+      </div>
+
+      {/* Navigation Dots */}
+      <div className="slide-navigation">
+        {videos.map((_, i) => (
+          <div
+            key={i}
+            className={`nav-btn ${i === activeIndex ? "active" : ""}`}
+            onClick={() => setActiveIndex(i)}
+          ></div>
+        ))}
+      </div>
+    </section>
   );
 };
 
-export default Banner;
+export default Travel;

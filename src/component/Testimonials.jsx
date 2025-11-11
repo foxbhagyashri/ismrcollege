@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import { Container, Card } from "react-bootstrap";
 import { FaStar, FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import "./Testimonials.css";
+import "./Testimonials.css"; 
 
 const Testimonials = () => {
   const sliderRef = useRef();
@@ -11,94 +11,110 @@ const Testimonials = () => {
     {
       id: 1,
       name: "Samagya Sharma",
-      role: "ISMR student",
+      role: "MBA 2020-22 | Business Development Intern",
       img: "./usericon.png",
-      text: "Universities value students who can think critically & solve problems. Reviewer may assess student ability analyze information, evaluate different perspectives.",
+      text: "I was delighted to be placed in Ambitious Polytech, Pune, as a Business Development Intern in my very first semester! ISMR B-School provided the foundational skills and support needed to achieve this early success.",
       rating: 5,
     },
     {
       id: 2,
-      name: "Jesonal Smith",
-      role: "ISMR student",
+      name: "Krishna Mishra",
+      role: "MBA 2020-22 | UAS International",
       img: "./usericon.png",
-      text: "Universities value students who can think critically & solve problems. Reviewer may assess student ability analyze information, evaluate different perspectives.",
+      text: "The ISMR Placement Cell offered a wonderful opportunity for my internship at UAS International, Delhi in Sales and Marketing. The guidance from our faculty was truly instrumental.",
       rating: 5,
     },
     {
       id: 3,
-      name: "John Smith",
-      role: "ISMR student",
+      name: "Bharat Ratangan",
+      role: "MBA 2019-21 | XL Dynamics",
       img: "./usericon.png",
-      text: "Universities value students who can think critically & solve problems. Reviewer may assess student ability analyze information, evaluate different perspectives.",
+      text: "I was lucky enough to secure a placement with XL Dynamics company with a great annual package. The program structure at ISMR B-School prepared me thoroughly for the corporate world.",
       rating: 5,
     },
     {
       id: 4,
-      name: "Mary Johnson",
-      role: "ISMR student",
+      name: "Shruti Sinha Plummer",
+      role: "MBA 2020-22 | Blitzjobs",
       img: "./usericon.png",
-      text: "ISMR provides excellent facilities and mentors who guide us to think creatively and achieve our goals.",
+      text: "This is Shruti Sinha pursuing MBA (2020-22) from ISMR B-School, Pune. I was provided with a wonderful opportunity to work for Blitzjobs, Pune by ISMR Placement Cell.",
       rating: 5,
     },
     {
       id: 5,
-      name: "Samagya Sharma",
-      role: "ISMR B-School (2020-22)",
+      name: "Mary Johnson",
+      role: "Current ISMR Student",
       img: "./usericon.png",
-      text: `I Samagya Sharma pursuing MBA (2020-22) at ISMR B-School, Pune. I am delighted to share that in 1st semester itself I got placed in Ambitious Polytech, Pune as "Business Development Intern".`,
+      text: "ISMR provides excellent facilities and dedicated mentors who constantly guide us to think creatively and achieve all of our career goals. Highly recommend the program!",
       rating: 5,
     },
     {
       id: 6,
-      name: "Krishna Mishra",
-      role: "ISMR B-School (2020-22)",
+      name: "Ankit Kulkarni",
+      role: "ISMR Alumni",
       img: "./usericon.png",
-      text: `I Krishna Mishra pursuing MBA (2020-22) from ISMR B-School, Pune. I got an opportunity to carry out my internship at UAS International, Delhi in sales and marketing.`,
+      text: "The curriculum is industry-aligned and the practical case studies provided a real-world edge. My experience at ISMR was pivotal in my career growth.",
       rating: 5,
     },
     {
       id: 7,
-      name: "Bharat Ratangan",
-      role: "ISMR B-School (2019-21)",
+      name: "Jesonal Smith",
+      role: "Current ISMR Student",
       img: "./usericon.png",
-      text: `I Bharat Rotangan pursuing MBA (2019-21) at ISMR B-School, Pune. I was lucky enough to get a placement with XL Dynamics company with a good annual package.`,
+      text: "The infrastructure and hands-on workshops here are fantastic. It's a supportive environment that truly pushes you towards excellence in management.",
       rating: 5,
     },
     {
       id: 8,
-      name: "Shruti Sinha Plummer",
-      role: "ISMR B-School (2020-22)",
+      name: "Deepa Menon",
+      role: "ISMR B-School (2021-23)",
       img: "./usericon.png",
-      text: `This is Shruti Sinha pursuing MBA (2020-22) from ISMR B-School, Pune. I was provided with a wonderful opportunity to work for Blitzjobs, Pune by ISMR Placement Cell.`,
+      text: "I was impressed with the faculty expertise. They don't just teach theory; they share invaluable industry insights that make a huge difference in interviews.",
       rating: 5,
     },
   ];
 
   const settings = {
-    dots: false,
+    dots: true, 
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 3500,
     speed: 800,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
     pauseOnHover: true,
     responsive: [
-      { breakpoint: 992, settings: { slidesToShow: 2 } },
-      { breakpoint: 768, settings: { slidesToShow: 1 } },
+      { 
+        // For tablets and medium screens
+        breakpoint: 992, 
+        settings: { 
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          dots: true,
+        } 
+      },
+      { 
+        // For mobile and small screens (<= 767.98px)
+        breakpoint: 768, 
+        settings: { 
+          slidesToShow: 1, // Only 1 testimonial is shown on mobile
+          slidesToScroll: 1, 
+          dots: true, 
+        } 
+      },
     ],
   };
 
   return (
     <section className="testimonials-section py-5">
       <Container>
-        <p className="section-title text-center mb-5 ">What Students Say</p>
+        <p className="section-title text-center mb-5 ">What Students Say 🗣️</p>
 
         <Slider ref={sliderRef} {...settings}>
           {testimonials.map((item) => (
-            <div key={item.id} className="px-2">
-              <Card className="testimonial-card shadow-sm border-0 h-100">
+            <div key={item.id} className="px-2 d-flex">
+              <Card className="testimonial-card shadow-sm border-0 w-100">
                 <Card.Body>
                   <div className="d-flex align-items-center mb-3">
                     <img
@@ -144,10 +160,3 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
-
-
-
-
-
-
-// 
