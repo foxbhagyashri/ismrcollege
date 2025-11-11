@@ -2,7 +2,7 @@
 .top-header-area {
     background-color: #002147;
     color: #fff;
-    font-size: 9px; /* base font size */
+    font-size: 13px; /* base font size */
     padding: 6px 10px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     white-space: nowrap; /* keep in one line */
@@ -13,7 +13,7 @@
 .top-header-area ul {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 4px;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -62,7 +62,7 @@
 @media (max-width: 768px) {
     .top-header-area {
         font-size: 10px;
-        padding: 4px 8px;
+        padding: 6px;
     }
 
     .top-header-area ul {
@@ -86,23 +86,44 @@
 @media (max-width: 576px) {
     .top-header-area {
         font-size: 9px;
-        padding: 3px 6px;
+        padding: 8px;
     }
 
     .top-header-area ul {
-        gap: 8px;
+        display: grid;
+        margin-top: 4px;
     }
 
     .top-header-left a {
+            margin-top: -10px;
         font-size: 8px; /* smallest left text */
     }
 
     .top-header-left i {
         font-size: 10px;
         margin-right: 2px;
+
+        
     }
 
     .top-header-right ul li button {
         font-size: 9px;
+    }
+}
+
+/* === Keep phone and email same size on mobile === */
+@media (max-width: 768px) {
+    .top-header-left a.phone,
+    .top-header-left a.email {
+        font-size: 14px !important;
+           
+    }
+}
+
+@media (max-width: 576px) {
+    .top-header-left a.phone,
+    .top-header-left a.email {
+ 
+        font-size: 14px !important;
     }
 }

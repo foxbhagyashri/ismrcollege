@@ -7,7 +7,13 @@ const Header = () => {
   const navbarRef = useRef(null);
 
   const toggleDropdown = (index) => {
-    setActiveDropdown(activeDropdown === index ? null : index);
+    // Only toggle if the navbar is open (mobile view) or if on desktop
+    if (window.innerWidth < 992) {
+      setActiveDropdown(activeDropdown === index ? null : index);
+    } else {
+      // For desktop, simply toggle the dropdown on click
+      setActiveDropdown(activeDropdown === index ? null : index);
+    }
   };
 
   const closeAll = () => {
@@ -32,22 +38,19 @@ const Header = () => {
   const toggleNavbar = () => {
     setIsNavbarOpen(!isNavbarOpen);
     if (!isNavbarOpen) {
-      setActiveDropdown(null);
+      setActiveDropdown(null); // Close any open dropdown when opening the navbar
     }
   };
 
-  // Close dropdowns when clicking outside
+  // Close dropdowns when clicking outside (Desktop only)
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+      if (window.innerWidth >= 992 && navbarRef.current && !navbarRef.current.contains(event.target)) {
         setActiveDropdown(null);
       }
     };
 
-    // Add event listener only for desktop
-    if (window.innerWidth >= 992) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
+    document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -70,8 +73,8 @@ const Header = () => {
 
   const navItems = (
     <ul
-      className="navbar-nav  mb-2 mb-lg-0"
-      style={{ marginLeft: "130px", marginRight: "70px" }}
+      className="navbar-nav mb-2 mb-lg-0"
+      // Removed inline style for margin, now handled by CSS media query
     >
       {/* Home */}
       <li className="nav-item">
@@ -170,7 +173,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/Addmissions/Eligibility-criteria"
+              to="/Addmissions/Eligibility-criteria" // Note: This link path is a duplicate
               onClick={handleDropdownItemClick}
             >
               List Of Documents
@@ -185,7 +188,7 @@ const Header = () => {
               Education Loan
             </Link>
           </li>
-        
+          
           <li>
             <Link
               className="dropdown-item"
@@ -224,7 +227,7 @@ const Header = () => {
           </li>
         </ul>
       </li>
-      {/* Academics */}
+      {/* Academics Dropdown */}
       <li className={`nav-item dropdown ${activeDropdown === 4 ? "show" : ""}`}>
         <a
           href="#"
@@ -259,60 +262,7 @@ const Header = () => {
             </Link>
           </li>
 
-          {/* <li>
-            <a
-              href="ebc-scholarship.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              Apply for EBC & Scholarship Form
-            </a>
-          </li> */}
-          {/* <li>
-            <a
-              href="mat-form.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              Apply for MAT Entrance Exam Form
-            </a>
-          </li> */}
-          {/* <li>
-            <a
-              href="cmat-form.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              Apply for CMAT Entrance Exam Form
-            </a>
-          </li> */}
-          {/* <li>
-            <a
-              href="mba-entrance-form.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              Apply for MBA Entrance Exam Form
-            </a>
-          </li> */}
-          {/* <li>
-            <a
-              href="mba-exam-form.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              Apply for MBA Exam Form
-            </a>
-          </li> */}
-          {/* <li>
-            <a
-              href="ndl-form.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              Apply for National Digital Library Form (NDL)
-            </a>
-          </li> */}
+          {/* Cleaned up commented links */}
         </ul>
       </li>
       {/* Placement Dropdown */}
@@ -340,33 +290,7 @@ const Header = () => {
             </Link>
           </li>
 
-          {/* <li>
-            <a
-              href="placement-process.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              Placement Process
-            </a>
-          </li> */}
-          {/* <li>
-            <a
-              href="placement-rules.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              Placement Rules & Regulations
-            </a>
-          </li> */}
-          {/* <li>
-            <a
-              href="placement-statistics.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              Placement Statistics
-            </a>
-          </li> */}
+          {/* Cleaned up commented links */}
 
           <li>
             <Link
@@ -378,15 +302,7 @@ const Header = () => {
             </Link>
           </li>
 
-          {/* <li>
-            <a
-              href="alumni-talk.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              Alumni Talk
-            </a>
-          </li> */}
+          {/* Cleaned up commented links */}
 
           <li>
             <Link
@@ -398,24 +314,7 @@ const Header = () => {
             </Link>
           </li>
 
-          {/* <li>
-            <a
-              href="student-testimonials.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              Student Testimonials
-            </a>
-          </li> */}
-          {/* <li>
-            <a
-              href="placement-contact.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              Placement Contact
-            </a>
-          </li> */}
+          {/* Cleaned up commented links */}
         </ul>
       </li>
 
@@ -443,15 +342,7 @@ const Header = () => {
               Student Campus life
             </Link>
           </li>
-          {/* <li>
-            <a
-              href="student-facilities.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              Student Clubs
-            </a>
-          </li> */}
+          {/* Cleaned up commented links */}
 
           <li>
             <Link
@@ -464,33 +355,6 @@ const Header = () => {
           </li>
         </ul>
       </li>
-
-      {/* Reach Us Dropdown */}
-      {/* <li className={`nav-item dropdown ${activeDropdown === 5 ? "show" : ""}`}>
-        <a
-          href="#"
-          className="nav-link dropdown-toggle"
-          role="button"
-          onClick={(e) => {
-            e.preventDefault();
-            toggleDropdown(5);
-          }}
-          aria-expanded={activeDropdown === 5}
-        >
-          Reach Us
-        </a>
-        <ul className={`dropdown-menu ${activeDropdown === 5 ? "show" : ""}`}>
-          <li>
-            <a
-              href="how-to-reach.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              How To Reach
-            </a>
-          </li>
-        </ul>
-      </li> */}
 
       {/* Newsletter Dropdown */}
       <li className={`nav-item dropdown ${activeDropdown === 6 ? "show" : ""}`}>
@@ -588,15 +452,16 @@ const Header = () => {
         /* Custom Navbar Styling */
         .custom-navbar {
           background-color: #002a5c !important;
-          padding: 10px 0;
+          // padding: 10px 0;
+          padding: 3px;
           position: sticky;
           top: 0;
-         
+           
           z-index: 1030;
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
           font-family: 'Inter', Arial, Helvetica, sans-serif !important;
         }
-         
+          
         
         .custom-navbar .navbar-brand {
           position: relative;
@@ -607,7 +472,7 @@ const Header = () => {
 
         .custom-navbar .navbar-brand img {
           height: 125px;
-           
+            
           width: 125px;
           border-radius: 50%;
           transition: transform 0.3s ease;
@@ -642,7 +507,7 @@ const Header = () => {
         .custom-navbar .nav-link.active,
         .custom-navbar .nav-link.show {
           color: #ffb100 !important;
-       
+        
         }
         
         .custom-navbar .dropdown-menu {
@@ -743,6 +608,13 @@ const Header = () => {
         
         /* Desktop-specific styles - FIXED DROPDOWN BEHAVIOR */
         @media (min-width: 992px) {
+          
+          /* NEW: Apply desktop-only margins for ul */
+          .custom-navbar .navbar-nav {
+            margin-left: 110px !important;
+            margin-right: 70px !important;
+          }
+
           .custom-navbar .container-fluid {
             max-width: 100%;
             padding: 0 1rem;
@@ -855,8 +727,15 @@ const Header = () => {
           }
         }
         
-        /* Mobile-specific styles */
+        /* Mobile-specific styles (max-width: 991.98px) */
         @media (max-width: 991.98px) {
+          
+          /* NEW: Override ul margins for mobile */
+          .custom-navbar .navbar-nav {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+          }
+          
           .custom-navbar .navbar-collapse {
             background-color: #002a5c;
             padding: 1rem;
@@ -914,20 +793,29 @@ const Header = () => {
             font-size: 14px;
           }
           
+          .custom-navbar .dropdown-item:hover {
+            padding-left: 25px; /* Keep hover effect consistent */
+          }
+
           .custom-navbar .dropdown-item:last-child {
             border-bottom: none;
           }
           
+          /* KEY CHANGE: Left align text and space out arrow */
           .custom-navbar .nav-link {
             padding: 15px 0;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between; /* Pushes toggle to the far right */
             align-items: center;
             font-size: 16px;
+            padding-left: 15px; /* Added left padding for text alignment */
+            padding-right: 15px; /* Added right padding */
           }
           
+          /* Ensure non-dropdown links also align cleanly */
           .navbar-nav .nav-item:not(.dropdown) .nav-link {
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            justify-content: flex-start;
           }
           
           /* Mobile apply button */
@@ -945,8 +833,19 @@ const Header = () => {
           }
           
           .custom-navbar .navbar-brand img {
-            height: 45px;
-            width: 45px;
+            
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+            object-fit: cover;
+            position: absolute;
+            top: -18px;
+            
+            left: -4px;
+            z-index: 1031;
+            border: 4px solid #002a5c;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
           }
           
           .apply-btn {
@@ -960,20 +859,21 @@ const Header = () => {
         
         @media (min-width: 576px) and (max-width: 767.98px) {
           .custom-navbar .navbar-brand img {
-            height: 50px;
-            width: 50px;
+            height: 30px;
+            width: 30px;
+          
           }
         }
         
         @media (min-width: 768px) and (max-width: 991.98px) {
           .custom-navbar .nav-link {
-            font-size: 13px;
-            padding: 10px 12px;
+            font-size: 15px; /* Slightly larger for larger tablets */
+            padding: 8px 15px;
           }
           
           .custom-navbar .dropdown-item {
-            font-size: 13px;
-            padding: 8px 15px;
+            font-size: 14px;
+            padding: 10px 20px;
           }
         }
         
@@ -1007,12 +907,12 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg custom-navbar" ref={navbarRef}>
         <div className="container-fluid">
           {/* Logo */}
-          <a href="index.html" className="navbar-brand">
+          <a href="/" className="navbar-brand">
             <img src="/ISMR logo_page-0001.jpg" alt="Institute Logo" />
           </a>
 
           {/* Apply Button - Mobile Top */}
-          <div className="d-lg-none ms-auto me-3">
+          <div className="d-lg-none ms-auto me-2">
             <a
               href="admission.html"
               className="apply-btn d-none d-sm-inline-flex"
@@ -1043,6 +943,8 @@ const Header = () => {
             id="navbarNav"
           >
             {navItems}
+            {/* Mobile-specific Apply Now Button (inside the collapsed menu) */}
+            
           </div>
         </div>
       </nav>

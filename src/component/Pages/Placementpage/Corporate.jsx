@@ -56,7 +56,7 @@ function Corporate() {
 
         <div className="container position-relative py-5">
           <h1
-            className="mb-3"
+            className="mb-3 banner-title"
             style={{
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               fontSize: "40px",
@@ -66,7 +66,7 @@ function Corporate() {
             Corporate & Student <span className="text-warning">Testimonials</span>
           </h1>
           <p
-            className="mb-0"
+            className="mb-0 banner-subtitle"
             style={{
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               fontSize: "16px",
@@ -385,6 +385,37 @@ function Corporate() {
           </div>
         </div>
       </section>
+
+      {/* ====== Responsive Tweaks ====== */}
+      <style>
+        {`
+          @media (max-width: 768px) {
+            .banner-title {
+              font-size: 30px !important;
+            }
+            .banner-subtitle {
+              font-size: 14px !important;
+            }
+            .testimonial-card {
+              width: 200px !important;
+              height: 320px !important;
+            }
+          }
+
+          @media (max-width: 576px) {
+            .banner-title {
+              font-size: 26px !important;
+            }
+            .banner-subtitle {
+              font-size: 13px !important;
+            }
+            .testimonial-card {
+              width: 180px !important;
+              height: 300px !important;
+            }
+          }
+        `}
+      </style>
 
     </>
   )

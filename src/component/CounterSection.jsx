@@ -21,23 +21,25 @@ const CounterSection = () => {
   return (
     <section className="counter-section text-center">
       <Container>
-        <Row className="gy-4 gx-4 justify-content-center">
-          {counters.map((item) => (
-            <Col key={item.id} xs={6} md={3}>
-              <div className="single-counter">
-                <div className="counter-icon">
-                  <FontAwesomeIcon icon={item.icon} />
+        <div className="counter-scroll-container">
+          <Row className="gy-4 gx-4 justify-content-center flex-nowrap">
+            {counters.map((item) => (
+              <Col key={item.id} xs={6} md={3}>
+                <div className="single-counter">
+                  <div className="counter-icon">
+                    <FontAwesomeIcon icon={item.icon} />
+                  </div>
+                  <div className="counter-inline">
+                    <h3 className="counter-number">
+                      <CountUp end={item.end} duration={2} />+
+                    </h3>
+                    <p className="counter-label">{item.label}</p>
+                  </div>
                 </div>
-                <div className="counter-inline">
-                  <h3 className="counter-number">
-                    <CountUp end={item.end} duration={2} />+
-                  </h3>
-                  <p className="counter-label">{item.label}</p>
-                </div>
-              </div>
-            </Col>
-          ))}
-        </Row>
+              </Col>
+            ))}
+          </Row>
+        </div>
       </Container>
     </section>
   );

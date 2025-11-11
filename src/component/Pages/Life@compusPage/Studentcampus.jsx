@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BriefcaseFill } from "react-bootstrap-icons"; // Add this if you use it in the heading
+import { BriefcaseFill } from "react-bootstrap-icons";
 
 function StudentCampusAndActivities() {
   const [activeSection, setActiveSection] = useState(
@@ -26,27 +26,37 @@ function StudentCampusAndActivities() {
       <div>
         <h3
           className="mb-3"
-          style={{ ...interFont, fontWeight: 800, fontSize: "1.75rem", color: "#0a2240" }}
+          style={{
+            ...interFont,
+            fontWeight: 800,
+            fontSize: "1.75rem",
+            color: "#0a2240",
+          }}
         >
           🌍 National & International Industrial Visits
         </h3>
-        <p style={{ ...interFont, maxWidth: "800px", textAlign: "justify" }}>
+        <p
+          className="campus-text"
+          style={{
+            ...interFont,
+            maxWidth: "800px",
+            textAlign: "justify",
+          }}
+        >
           Our students regularly participate in <strong>industrial visits</strong> 
           to leading organizations across India and abroad. These visits bridge 
           the gap between theoretical learning and real-world application, allowing 
           students to understand modern technologies, management practices, and 
           global business trends.
           <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea doloribus optio, fugit repellendus ullam recusandae sunt animi, omnis commodi vitae totam culpa delectus eum obcaecati est aut temporibus doloremque ab?
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis voluptatem iusto ullam dolorem nostrum vero velit impedit aut, blanditiis numquam, distinctio beatae laudantium adipisci voluptate perspiciatis animi quisquam quae asperiores.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, beatae blanditiis, dolorum harum molestiae odio unde reprehenderit quos iure corporis voluptas corrupti quisquam? Fuga debitis alias minus dolore! Corrupti, molestias.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident iusto tempora placeat delectus optio maiores labore rerum, sed quibusdam id porro, dolores accusamus? Consequatur quod maxime porro quidem eaque ad!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus neque molestias optio temporibus. Ullam dolorem obcaecati est praesentium ratione nostrum impedit expedita corrupti nesciunt, consequatur sequi illum illo quo suscipit?
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat ipsa illum deleniti esse molestiae aliquam recusandae placeat repudiandae nihil suscipit libero dicta, voluptatibus animi qui eveniet dolorum, at nesciunt amet.
-          <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolorum numquam delectus id sint, autem deserunt quidem. Error ullam praesentium consequatur sequi. Odit necessitatibus facilis quam cum vitae, repudiandae sapiente!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio voluptatum nostrum, animi ex reprehenderit explicabo commodi! Placeat quibusdam fugit sit voluptatibus assumenda quos possimus? Dolorum officiis repudiandae distinctio. Aliquid, voluptatibus.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, quas. Aut doloribus rerum incidunt esse illum voluptatibus repellendus rem optio ut, dolorem consequatur animi molestias molestiae, provident veniam, magni amet!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea doloribus
+          optio, fugit repellendus ullam recusandae sunt animi, omnis commodi
+          vitae totam culpa delectus eum obcaecati est aut temporibus doloremque
+          ab?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
+          beatae blanditiis, dolorum harum molestiae odio unde reprehenderit
+          quos iure corporis voluptas corrupti quisquam? Fuga debitis alias
+          minus dolore!
         </p>
         <ul style={{ ...interFont, paddingLeft: "1.5rem" }}>
           <li>Exposure to global industry standards and innovation.</li>
@@ -59,11 +69,23 @@ function StudentCampusAndActivities() {
       <div>
         <h3
           className="mb-3"
-          style={{ ...interFont, fontWeight: 800, fontSize: "1.75rem", color: "#0a2240" }}
+          style={{
+            ...interFont,
+            fontWeight: 800,
+            fontSize: "1.75rem",
+            color: "#0a2240",
+          }}
         >
           🧠 Training & Development
         </h3>
-              <p style={{ ...interFont, maxWidth: "800px", textAlign: "justify" }}>
+        <p
+          className="campus-text"
+          style={{
+            ...interFont,
+            maxWidth: "800px",
+            textAlign: "justify",
+          }}
+        >
           The institute conducts comprehensive <strong>training and development programs</strong> 
           to enhance students’ employability skills, focusing on communication, aptitude, 
           technical proficiency, and personality development.
@@ -79,13 +101,25 @@ function StudentCampusAndActivities() {
       <div>
         <h3
           className="mb-3"
-          style={{ ...interFont, fontWeight: 800, fontSize: "1.75rem", color: "#0a2240" }}
+          style={{
+            ...interFont,
+            fontWeight: 800,
+            fontSize: "1.75rem",
+            color: "#0a2240",
+          }}
         >
           🏅 Academic Award Ceremony
         </h3>
-             <p style={{ ...interFont, maxWidth: "800px", textAlign: "justify" }}>
+        <p
+          className="campus-text"
+          style={{
+            ...interFont,
+            maxWidth: "800px",
+            textAlign: "justify",
+          }}
+        >
           The Academic Award Ceremony recognizes outstanding students for their 
-          <strong>excellence in academics, leadership, and extracurricular achievements.</strong>
+          <strong> excellence in academics, leadership, and extracurricular achievements.</strong>
         </p>
         <ul style={{ ...interFont, paddingLeft: "1.5rem" }}>
           <li>Best performer awards across all departments.</li>
@@ -98,11 +132,23 @@ function StudentCampusAndActivities() {
       <div>
         <h3
           className="mb-3"
-          style={{ ...interFont, fontWeight: 800, fontSize: "1.75rem", color: "#0a2240" }}
+          style={{
+            ...interFont,
+            fontWeight: 800,
+            fontSize: "1.75rem",
+            color: "#0a2240",
+          }}
         >
           ✈️ Domestic & International Study Tours
         </h3>
-             <p style={{ ...interFont, maxWidth: "800px", textAlign: "justify" }}>
+        <p
+          className="campus-text"
+          style={{
+            ...interFont,
+            maxWidth: "800px",
+            textAlign: "justify",
+          }}
+        >
           Study tours offer an opportunity for students to learn beyond classrooms. 
           These curated tours combine <strong>academic exposure with cultural learning</strong>.
         </p>
@@ -117,21 +163,27 @@ function StudentCampusAndActivities() {
       <div>
         <h3
           className="mb-3"
-          style={{ ...interFont, fontWeight: 800, fontSize: "1.75rem", color: "#0a2240" }}
+          style={{
+            ...interFont,
+            fontWeight: 800,
+            fontSize: "1.75rem",
+            color: "#0a2240",
+          }}
         >
           🎭 Cultural Activities
         </h3>
-            <p style={{ ...interFont, maxWidth: "800px", textAlign: "justify" }}>
+        <p
+          className="campus-text"
+          style={{
+            ...interFont,
+            maxWidth: "800px",
+            textAlign: "justify",
+          }}
+        >
           The vibrant cultural life at our campus encourages students to express 
           themselves creatively. Annual festivals, talent shows, and cultural events 
           foster <strong>teamwork, leadership, and community engagement.</strong>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolores ex enim nobis, quos incidunt eligendi expedita! Impedit eligendi voluptate, quaerat itaque illo animi, deleniti sit adipisci ratione quia labore.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio voluptatum nostrum, animi ex reprehenderit explicabo commodi! Placeat quibusdam fugit sit voluptatibus assumenda quos possimus? Dolorum officiis repudiandae distinctio. Aliquid, voluptatibus.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, quas. Aut doloribus rerum incidunt esse illum voluptatibus repellendus rem optio ut, dolorem consequatur animi molestias molestiae, provident veniam, magni amet!
-            <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolorum numquam delectus id sint, autem deserunt quidem. Error ullam praesentium consequatur sequi. Odit necessitatibus facilis quam cum vitae, repudiandae sapiente!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus neque molestias optio temporibus. Ullam dolorem obcaecati est praesentium ratione nostrum impedit expedita corrupti nesciunt, consequatur sequi illum illo quo suscipit?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, voluptates voluptatibus, possimus corrupti facilis officiis ab ducimus corporis amet illum quibusdam nulla laborum tempore minus sunt excepturi id maxime hic?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolores ex enim nobis.
         </p>
         <ul style={{ ...interFont, paddingLeft: "1.5rem" }}>
           <li>Annual cultural fest and intercollegiate competitions.</li>
@@ -144,8 +196,50 @@ function StudentCampusAndActivities() {
 
   return (
     <>
+      <style>{`
+        @media (max-width: 768px) {
+          h1 {
+            font-size: 1.9rem !important;
+            line-height: 1.3;
+          }
+          .campus-text {
+            font-size: 14px !important;
+            line-height: 1.6 !important;
+            word-spacing: 0.3px !important;
+            letter-spacing: 0.2px !important;
+            text-align: left !important;
+          }
+          .container h1 span {
+            display: inline;
+            white-space: nowrap;
+          }
+          .p-md-5 {
+            padding: 1.5rem !important;
+          }
+          .p-4 {
+            padding: 1rem !important;
+          }
+          .col-md-4 {
+            margin-bottom: 20px !important;
+          }
+        }
+        @media (max-width: 576px) {
+          h1 {
+            font-size: 1.7rem !important;
+            text-align: center !important;
+          }
+          .campus-text {
+            font-size: 13px !important;
+            line-height: 1.5 !important;
+            text-align: justify !important;
+          }
+          .row.g-4 {
+            gap: 1.2rem !important;
+          }
+        }
+      `}</style>
+
       {/* ===== Header Section ===== */}
-      
       <section
         className="py-5 text-white text-center position-relative"
         style={{
@@ -165,22 +259,19 @@ function StudentCampusAndActivities() {
 
         <div className="container position-relative py-5">
           <h1
-            className="mb-3"
+            className="mb-3 text-uppercase"
             style={{
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               fontSize: "40px",
               fontWeight: 700,
+              whiteSpace: "nowrap",
             }}
           >
             Student <span className="text-warning">Campus Life</span>
           </h1>
           <p
-            className="mb-0"
-            style={{
-              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-              fontSize: "16px",
-              marginTop: "0.5rem",
-            }}
+            className="text-white-50 mb-0 text-center"
+            style={{ fontSize: "13px" }}
           >
             Campus • <span className="text-warning">Student Activities</span>
           </p>
@@ -188,7 +279,6 @@ function StudentCampusAndActivities() {
       </section>
 
       {/* ===== Main Section ===== */}
-      
       <div
         className="container-fluid py-5"
         style={{
@@ -196,21 +286,23 @@ function StudentCampusAndActivities() {
           fontFamily: "'Inter', Arial, Helvetica, sans-serif",
         }}
       >
-        
         <div className="container">
-             <h1
-              className="mb-5"
-              style={{
-                fontSize: "2.5rem",
-                fontWeight: 700,
-                color: "#0a2240",
-                fontFamily: "Inter, Arial, Helvetica, sans-serif",
-              }}
-            >
-              <BriefcaseFill className="me-3" style={{ color: "#0a2240" }} />
-              Campus <span style={{ color: "#1a4d7a" }}>Life</span>
-            </h1>
-          <div className="row g-4  mt-2">
+          <h1
+            className="mb-4 text-center text-md-start"
+            style={{
+              fontSize: "30px",
+              fontWeight: 700,
+              color: "#0a2240",
+            }}
+          >
+            <BriefcaseFill
+              className="me-2"
+              style={{ color: "#0a2240", verticalAlign: "middle" }}
+            />
+            Campus <span style={{ color: "#1a4d7a" }}>Life</span>
+          </h1>
+
+          <div className="row g-4 mt-2">
             {/* Left Navigation */}
             <div className="col-md-4 col-lg-3">
               <div

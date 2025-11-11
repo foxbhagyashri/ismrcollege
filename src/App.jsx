@@ -11,6 +11,7 @@ import Footer from "./component/Footer";
 
 // Home Page Components
 import Banner from "./component/Banner";
+import Banner2 from "./banner2";
 import Marquee from "./component/Marquee";
 import AboutAdmaUniversity from "./component/AboutAdmaUniversity";
 import ProgramsSection from "./component/ProgramsSection";
@@ -53,7 +54,7 @@ import Courseduration from "./component/Pages/Academics/Courseduration";
 // newsletter
 import Newsletter from "./component/Pages/NewsPage/Newsletter";
 // Contactus Page
-import Contactus from "./component/Common/Contactus";
+import Contactus from "./component/Pages/Contactus/Contactus";
 
 function App() {
   return (
@@ -68,11 +69,12 @@ function App() {
           element={
             <>
               <Banner />
+              <Banner2 />
               <Marquee />
               <AboutAdmaUniversity />
               <ProgramsSection />
               <HowToApply />
-              <VideoSection />
+              {/* <VideoSection /> */}
               <Placementmorque />
               <StudentLife />
               <CounterSection />

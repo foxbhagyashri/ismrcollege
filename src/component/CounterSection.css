@@ -1,9 +1,11 @@
+/* ===== Counter Section ===== */
 .counter-section {
   background-color: #f8f9fa;
   padding: 70px 0;
+  overflow-x: hidden;
 }
 
-/* Clean inline counter layout */
+/* ===== Single Counter Box ===== */
 .single-counter {
   display: flex;
   flex-direction: column;
@@ -15,7 +17,7 @@
   transform: translateY(-5px);
 }
 
-/* Icon */
+/* ===== Icon Styling ===== */
 .counter-icon {
   font-size: 36px;
   color: #FFC333;
@@ -28,17 +30,17 @@
   color: #0b214a;
 }
 
-/* Inline number + label */
+/* ===== Inline number + label ===== */
 .counter-inline {
   display: flex;
   align-items: center;
-  gap: 8px; /* slight gap between number and text */
+  gap: 8px;
   justify-content: center;
   flex-wrap: nowrap;
-  white-space: nowrap; /* keep in one line */
+  white-space: nowrap;
 }
 
-/* Number styling */
+/* ===== Number Styling ===== */
 .counter-number {
   font-size: 1.6rem;
   font-weight: 700;
@@ -47,7 +49,7 @@
   line-height: 1;
 }
 
-/* Label styling */
+/* ===== Label Styling ===== */
 .counter-label {
   font-size: 14px;
   color: #6c757d;
@@ -55,7 +57,7 @@
   line-height: 1;
 }
 
-/* Responsive */
+/* ===== Responsive Styling ===== */
 @media (max-width: 992px) {
   .counter-icon {
     font-size: 32px;
@@ -78,5 +80,34 @@
   }
   .counter-label {
     font-size: 12.5px;
+  }
+}
+
+/* ===== Horizontal Scroll (Mobile Only) ===== */
+@media (max-width: 768px) {
+  .counter-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* enable touch scroll */
+    gap: 16px;
+    padding: 10px 5px;
+  }
+
+  /* Hide scrollbar */
+  .counter-scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Each counter should have fixed width to allow scroll */
+  .single-counter {
+    min-width: 150px;
+    flex: 0 0 auto;
+  }
+
+  /* Optional: center content alignment in scroll view */
+  .counter-section .container {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
