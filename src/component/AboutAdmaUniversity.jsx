@@ -9,24 +9,8 @@ const AboutAdmaUniversity = () => {
   return (
     <section className="about-container">
       {/* Top Row */}
-      <div className="about-top">
-        <div className="about-left">
-          <h2 className="about-title">
-            <span className="about-icon">🎓</span> About Institute
-          </h2>
-          <p className="about-text">
-            International School of Management & Research, Pune ranked 20th in
-            Beyond IIM's Top 100 B-School Survey, is one of the top B-Schools in Pune. 
-            Approved by AICTE, Directorate of Technical Education, and affiliated to 
-            Savitribai Phule Pune University, ISMR ensures academic excellence with a 
-            100% placement record since inception.
-          </p>
-        </div>
-
-        <div className="about-right">
-          <img src="/about-2.jpg" alt="Adma University" />
-        </div>
-      </div>
+    
+      <h1 className="section-title text-center">Accreditations</h1>
 
       {/* Bottom Row */}
       <div className="about-bottom">
