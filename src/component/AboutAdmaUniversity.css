@@ -62,12 +62,10 @@
 
 /* Bottom Row */
 .about-bottom {
-  background-color: #002A5C;
-  color: white;
-  padding: 3rem 2rem;
+  
   border-radius: 12px;
   margin-top: 4rem;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  /* box-shadow: 0 6px 20px rgba(0,0,0,0.2); */
 }
 
 /* Logos Section */
@@ -87,7 +85,7 @@
   background-color: white;
   /* color: black; */
   padding: 1.5rem 1rem;
-  border-radius: 12px;
+  border-radius: 18px;
   width: 100%;
   /* allow cards to share available space equally */
   flex: 1 1 0;
@@ -95,9 +93,9 @@
   /* enforce same visual height for all cards and allow larger logos */
   min-height: 280px;
   text-align: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0px 1px 1px 2px  #002A5C;;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  gap: 0.8rem;
+  gap: 1.2rem;
   /* Make every card stretch to the same height inside the grid */
   height: 100%;
 }
