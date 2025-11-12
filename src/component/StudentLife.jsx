@@ -45,6 +45,7 @@ const StudentLife = () => {
                     {/* Right Content */}
                     <Col md={5}>
                         <h2 className="mb-4">Student Life At ISMR</h2>
+                            
                         <p className="program-text">
                             We are proud of our alumni network, which spans across industries
                             and continents. Our graduates are equipped with the skills, values,

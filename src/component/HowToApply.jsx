@@ -6,9 +6,9 @@ const HowToApply = () => {
     return (
         <section className="apply-section">
             <div className="apply-inner">
-                <h2 className="apply-title">How To Apply At ISMR</h2>
+              
+                <h1 className="section-title mb-5">How To Apply At ISMR</h1>
 
-                <button className="apply-btn top-btn">Get Started Now <span className="getarrow">→</span></button>
 
                 <div className="apply-container">
                     <article className="apply-box">
