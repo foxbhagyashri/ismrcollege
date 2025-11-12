@@ -170,7 +170,7 @@ const Header = () => {
               How To Apply
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               className="dropdown-item"
               to="/Addmissions/Eligibility-criteria" // Note: This link path is a duplicate
@@ -178,7 +178,7 @@ const Header = () => {
             >
               List Of Documents
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
               className="dropdown-item"
@@ -353,10 +353,22 @@ const Header = () => {
               Student Facilities
             </Link>
           </li>
+          
+          <li>
+            <Link
+              className="dropdown-item"
+              to="/NewsPage/Newsletter"
+              onClick={handleDropdownItemClick}
+            >
+              Newsletters
+            </Link>
+          </li>
+  
         </ul>
+        
       </li>
 
-      {/* Newsletter Dropdown */}
+      {/* Newsletter Dropdown
       <li className={`nav-item dropdown ${activeDropdown === 6 ? "show" : ""}`}>
         <a
           href="#"
@@ -381,7 +393,7 @@ const Header = () => {
             </Link>
           </li>
         </ul>
-      </li>
+      </li> */}
 
       {/* NAAC Dropdown */}
       <li className={`nav-item dropdown ${activeDropdown === 7 ? "show" : ""}`}>

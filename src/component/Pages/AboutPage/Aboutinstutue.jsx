@@ -40,7 +40,15 @@ const StatCounter = ({ endValue, duration, suffix }) => {
   }, [endValue, duration]);
 
   return (
-    <div style={{ fontSize: "2.5rem", fontWeight: "700" }} ref={ref}>
+    <div 
+      style={{ 
+        fontSize: "2.5rem", 
+        fontWeight: "700",
+        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+        lineHeight: "1.2"
+      }} 
+      ref={ref}
+    >
       {count.toLocaleString()}
       {suffix}
     </div>
@@ -50,7 +58,7 @@ const StatCounter = ({ endValue, duration, suffix }) => {
 // ---------------- MAIN COMPONENT ----------------
 const InstitutionStats = () => {
   return (
-    <div style={{ fontFamily: "Inter, Arial, Helvetica, sans-serif" }}>
+    <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
       {/* -------- HEADER -------- */}
       <section
         className="py-5 text-white text-center position-relative"
@@ -72,7 +80,7 @@ const InstitutionStats = () => {
           <h1
             className="mb-3"
             style={{
-              fontFamily: "Inter, Arial, Helvetica, sans-serif",
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               fontSize: "40px",
               fontWeight: 700,
               margin: 0,
@@ -82,7 +90,11 @@ const InstitutionStats = () => {
           </h1>
           <p
             className="mb-0"
-            style={{ fontFamily: "Inter, Arial, Helvetica, sans-serif", fontSize: "16px", marginTop: "0.5rem" }}
+            style={{ 
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif", 
+              fontSize: "16px", 
+              marginTop: "0.5rem" 
+            }}
           >
             About • <span className="text-warning">About Institute</span>
           </p>
@@ -93,7 +105,7 @@ const InstitutionStats = () => {
       <div className="container pb-5">
         <h2
           style={{
-            fontFamily: "Roboto Slab, serif",
+            fontFamily: "'Inter', Arial, Helvetica, sans-serif",
             fontSize: "32px",
             fontWeight: 700,
             color: "#0a2240",
@@ -106,22 +118,22 @@ const InstitutionStats = () => {
           </span>
         </h2>
         <p
-  style={{
-    fontSize: "16px",
-    color: "#444",
-    lineHeight: "1.7",
-    marginTop: "2rem",
-    textAlign: "justify",      // makes text evenly distributed
-    textJustify: "inter-word", // improves spacing between words
-  }}
->
-  International School of Management and Research (ISMR), is a mission-oriented Institute, run by Sri Balaji Education Society since 2007, with a vision to be a world class Business School, achieving excellence in management education and research through continuous competency building. ISMR is a premier Management Institute in Pune, ranked among the Top Institutes for excellence in placements, with a 100% placement assistance record since inception.
-We, at ISMR, are focused in implementing our mission of “Placing You First”. ISMR also believes in developing certain entrepreneurial qualities in the students, helping them in the path of pursuing something beyond normal career growth.
-Today: ISMR campus vibrates with varied co-curricular activities like National & International Conventions, Symposia, Seminars, Student Competitions, Guest Lectures, Outbound Programmes, Industry Interface & Cultural Activities. With a goal to create multi-skilled managers who are well equipped to perform effectively & efficiently in any environment, ISMR Institute not only tries to instil the rigorous syllabi in the students but try to create, a passion for knowledge and also attempt to teach them how to apply that knowledge in real-life situations
+          style={{
+            fontSize: "16px",
+            color: "#444",
+            lineHeight: "1.7",
+            marginTop: "2rem",
+            fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+            textAlign: "justify",
+            textJustify: "inter-word",
+          }}
+        >
+          International School of Management and Research (ISMR), is a mission-oriented Institute, run by Sri Balaji Education Society since 2007, with a vision to be a world class Business School, achieving excellence in management education and research through continuous competency building. ISMR is a premier Management Institute in Pune, ranked among the Top Institutes for excellence in placements, with a 100% placement assistance record since inception.
+          We, at ISMR, are focused in implementing our mission of "Placing You First". ISMR also believes in developing certain entrepreneurial qualities in the students, helping them in the path of pursuing something beyond normal career growth.
+          Today: ISMR campus vibrates with varied co-curricular activities like National & International Conventions, Symposia, Seminars, Student Competitions, Guest Lectures, Outbound Programmes, Industry Interface & Cultural Activities. With a goal to create multi-skilled managers who are well equipped to perform effectively & efficiently in any environment, ISMR Institute not only tries to instil the rigorous syllabi in the students but try to create, a passion for knowledge and also attempt to teach them how to apply that knowledge in real-life situations.
+        </p>
 
-</p>
-
-        <div className="row justify-content-center pt-4   marginTop: 2rem">
+        <div className="row justify-content-center pt-4" style={{ marginTop: "2rem" }}>
           <div className="col-12">
             <div
               style={{
@@ -148,17 +160,17 @@ Today: ISMR campus vibrates with varied co-curricular activities like National &
                   width: "100%",
                   padding: "1rem",
                   color: "#fff",
-                  background:
-                    "linear-gradient(to top, rgba(0,0,0,0.7), transparent)",
+                  background: "linear-gradient(to top, rgba(0,0,0,0.7), transparent)",
                   borderBottomLeftRadius: "0.75rem",
                   borderBottomRightRadius: "0.75rem",
                 }}
               >
-             <h6 className="mb-0 fw-semibold text-white text-uppercase">
-  ISMR Campus – <span className="fw-light fst-italic">Where Excellence Meets Innovation</span>
-</h6>
-
-
+                <h6 
+                  className="mb-0 fw-semibold text-white text-uppercase"
+                  style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}
+                >
+                  ISMR Campus – <span className="fw-light fst-italic">Where Excellence Meets Innovation</span>
+                </h6>
               </div>
             </div>
           </div>
@@ -166,89 +178,97 @@ Today: ISMR campus vibrates with varied co-curricular activities like National &
       </div>
 
       {/* -------- STATS SECTION -------- */}
-     <div className="container pb-4 pt-3">
-  <div className="row g-4 text-center justify-content-center">
-    {/* Programmes */}
-    <div className="col-12 col-sm-6 col-md-3">
-      <div
-        className="rounded h-100 d-flex flex-column justify-content-center align-items-center"
-        style={{
-          backgroundColor: "#002A5C",
-          color: "#FFC333",
-          padding: "1.5rem",
-          minHeight: "140px",
-          borderRadius: "12px",
-          fontWeight: 500,
-          boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
-        }}
-      >
-        <StatCounter endValue={150} duration={2000} suffix="+" />
-        <div className="mt-2">Programmes</div>
+      <div className="container pb-4 pt-3">
+        <div className="row g-4 text-center justify-content-center">
+          {/* Programmes */}
+          <div className="col-12 col-sm-6 col-md-3">
+            <div
+              className="rounded h-100 d-flex flex-column justify-content-center align-items-center"
+              style={{
+                backgroundColor: "#002A5C",
+                color: "#FFC333",
+                padding: "1.5rem",
+                minHeight: "140px",
+                borderRadius: "12px",
+                fontWeight: 500,
+                boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              }}
+            >
+              <StatCounter endValue={150} duration={2000} suffix="+" />
+              <div className="mt-2" style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
+                Programmes
+              </div>
+            </div>
+          </div>
+
+          {/* Schools */}
+          <div className="col-12 col-sm-6 col-md-3">
+            <div
+              className="rounded h-100 d-flex flex-column justify-content-center align-items-center"
+              style={{
+                backgroundColor: "#FFC333",
+                color: "#002A5C",
+                padding: "1.5rem",
+                minHeight: "140px",
+                borderRadius: "12px",
+                fontWeight: 500,
+                boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              }}
+            >
+              <StatCounter endValue={12} duration={2000} suffix="+" />
+              <div className="mt-2" style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
+                Schools
+              </div>
+            </div>
+          </div>
+
+          {/* Departments */}
+          <div className="col-12 col-sm-6 col-md-3">
+            <div
+              className="rounded h-100 d-flex flex-column justify-content-center align-items-center"
+              style={{
+                backgroundColor: "#002A5C",
+                color: "#FFC333",
+                padding: "1.5rem",
+                minHeight: "140px",
+                borderRadius: "12px",
+                fontWeight: 500,
+                boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              }}
+            >
+              <StatCounter endValue={31} duration={2000} suffix="+" />
+              <div className="mt-2" style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
+                Departments
+              </div>
+            </div>
+          </div>
+
+          {/* Alumni */}
+          <div className="col-12 col-sm-6 col-md-3">
+            <div
+              className="rounded h-100 d-flex flex-column justify-content-center align-items-center"
+              style={{
+                backgroundColor: "#FFC333",
+                color: "#002A5C",
+                padding: "1.5rem",
+                minHeight: "140px",
+                borderRadius: "12px",
+                fontWeight: 500,
+                boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              }}
+            >
+              <StatCounter endValue={100000} duration={3000} suffix="+" />
+              <div className="mt-2" style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
+                Alumni
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-
-    {/* Schools */}
-    <div className="col-12 col-sm-6 col-md-3">
-      <div
-        className="rounded h-100 d-flex flex-column justify-content-center align-items-center"
-        style={{
-          backgroundColor: "#FFC333",
-          color: "#002A5C",
-          padding: "1.5rem",
-          minHeight: "140px",
-          borderRadius: "12px",
-          fontWeight: 500,
-          boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
-        }}
-      >
-        <StatCounter endValue={12} duration={2000} suffix="+" />
-        <div className="mt-2">Schools</div>
-      </div>
-    </div>
-
-    {/* Departments */}
-    <div className="col-12 col-sm-6 col-md-3">
-      <div
-        className="rounded h-100 d-flex flex-column justify-content-center align-items-center"
-        style={{
-          backgroundColor: "#002A5C",
-          color: "#FFC333",
-          padding: "1.5rem",
-          minHeight: "140px",
-          borderRadius: "12px",
-          fontWeight: 500,
-          boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
-        }}
-      >
-        <StatCounter endValue={31} duration={2000} suffix="+" />
-        <div className="mt-2">Departments</div>
-      </div>
-    </div>
-
-    {/* Alumni */}
-    <div className="col-12 col-sm-6 col-md-3">
-      <div
-        className="rounded h-100 d-flex flex-column justify-content-center align-items-center"
-        style={{
-          backgroundColor: "#FFC333",
-          color: "#002A5C",
-          padding: "1.5rem",
-          minHeight: "140px",
-          borderRadius: "12px",
-          fontWeight: 500,
-          boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
-        }}
-      >
-        <StatCounter endValue={100000} duration={3000} suffix="+" />
-        <div className="mt-2">Alumni</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-      {/* -------- VALUE / VISION / MISSION -------- */}
-   
     </div>
   );
 };

@@ -17,7 +17,8 @@ const PartnersMarquee = () => {
 
   return (
     <section className="partners-section">
-      <h2 className="partners-title">Our Partners</h2>
+    
+       <h1 className="section-title text-center">Our Recruiters Partners</h1>
 
       <div className="partners-container">
         <div className="partners-content">

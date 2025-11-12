@@ -78,6 +78,6 @@ const ProgramsSection = () => {
       </div>
     </section>
   );
-};
+};  
 
 export default ProgramsSection;
