@@ -32,7 +32,7 @@ const Banner = () => {
               <div className="banner-wrap-content">
                 <div className="title">
                   <p>
-                    Shri Balaji Education Society's <span>2007</span>
+                    Shri Balaji Education Society's 
                   </p>
                   <h1>
                     INTERNATIONAL SCHOOL OF<br></br>  MANAGEMENT AND RESEARCH
