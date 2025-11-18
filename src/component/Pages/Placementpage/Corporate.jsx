@@ -1,4 +1,5 @@
 import React from 'react'
+import allsectionbg from "../../../assets/allsectionbg.jpg";
 
 function Corporate() {
   const testimonials = [
@@ -40,15 +41,13 @@ function Corporate() {
       <section
         className="py-5 text-white text-center position-relative"
         style={{
-          background: "linear-gradient(135deg, #0a2240 0%, #0a2240 100%)",
-          fontFamily: "'Inter', Arial, Helvetica, sans-serif"
+          background: "linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%)",
         }}
       >
         <div
-          className="position-absolute top-0 end-0 w-50 h-100 opacity-25"
+          className="position-absolute top-0 end-0 w-100 h-100 opacity-25"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop)",
+            backgroundImage: `url(${allsectionbg})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
           }}
@@ -61,6 +60,7 @@ function Corporate() {
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               fontSize: "40px",
               fontWeight: 700,
+              margin: 0,
             }}
           >
             Corporate & Student <span className="text-warning">Testimonials</span>
@@ -69,7 +69,7 @@ function Corporate() {
             className="mb-0 banner-subtitle"
             style={{
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-              fontSize: "16px",
+              fontSize: "15px",
               marginTop: "0.5rem",
             }}
           >

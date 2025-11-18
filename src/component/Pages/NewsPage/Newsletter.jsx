@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import allsectionbg from "../../../assets/allsectionbg.jpg";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { ChevronLeft, ChevronRight } from "react-bootstrap-icons";
 
@@ -12,6 +13,9 @@ const newsletterData = {
     secondaryArticle: "World-Class Infrastructure & Learning Environment",
     secondaryText:
       "The faculty at ISMR are exceptional mentors who go above and beyond to ensure student success. The state-of-the-art laboratories, libraries, and learning environment have prepared me well for my career.",
+    quote: "Sustainable Growth & Community Engagement",
+    quoteText:
+      "We believe in education that contributes positively to society. Our initiatives focus on eco-friendly operations and community outreach, preparing ethical and responsible leaders.",
     points: [
       "State-of-the-art labs & library",
       "Active industry collaborations",
@@ -28,7 +32,10 @@ const newsletterData = {
       "Our strong partnerships with leading companies and a dedicated placement cell have resulted in a record placement season. ISMR ensures every student receives excellent career guidance and opportunities.",
     secondaryArticle: "Future-Ready Skills Development",
     secondaryText:
-      "Through soft-skills training, leadership workshops, and practical exposure, we focus on holistic development, ensuring graduates possess both technical expertise and interpersonal skills.",
+      "Through mandatory soft-skills training, leadership workshops, and practical exposure, we focus on holistic development, ensuring graduates possess both technical expertise and essential interpersonal skills.",
+    quote: "Industry-Ready Graduates",
+    quoteText:
+      "Our curriculum is designed by industry veterans to ensure 100% employability.",
     points: [
       "100% placement support",
       "Soft skills & leadership training",
@@ -46,6 +53,9 @@ const newsletterData = {
     secondaryArticle: "Major Research Grants Awarded",
     secondaryText:
       "ISMR faculty members secured three major grants this month for groundbreaking research in Renewable Energy and Data Science, strengthening our research profile.",
+    quote: "The Power of Mentorship",
+    quoteText:
+      "Mentorship is key to guiding students toward success and fostering personal growth.",
     points: [
       "Mentorship from experienced faculty",
       "Research grants & scholarships",
@@ -71,17 +81,20 @@ function MonthlyNewsletter() {
   const newsletterContent = newsletterData[selectedMonth];
 
   const handleSelectMonth = (month) => setSelectedMonth(month);
-
   const handlePrev = () => {
     const currentIdx = allMonths.indexOf(selectedMonth);
     if (currentIdx > 0) {
       const newIdx = currentIdx - 1;
       setSelectedMonth(allMonths[newIdx]);
-      setStartIndex((prev) =>
-        newIdx < prev ? Math.max(0, newIdx) : prev
-      );
+      setStartIndex((prev) => {
+        if (newIdx < prev) return Math.max(0, newIdx);
+        return prev;
+      });
     } else {
-      setSelectedMonth(allMonths[allMonths.length - 1]);
+      // wrap to last
+      const newIdx = allMonths.length - 1;
+      setSelectedMonth(allMonths[newIdx]);
+      // ensure last is visible in window
       setStartIndex(Math.max(0, allMonths.length - monthsToShow));
     }
   };
@@ -91,13 +104,14 @@ function MonthlyNewsletter() {
     if (currentIdx < allMonths.length - 1) {
       const newIdx = currentIdx + 1;
       setSelectedMonth(allMonths[newIdx]);
-      setStartIndex((prev) =>
-        newIdx > prev + monthsToShow - 1
-          ? Math.min(allMonths.length - monthsToShow, newIdx - monthsToShow + 1)
-          : prev
-      );
+      setStartIndex((prev) => {
+        if (newIdx > prev + monthsToShow - 1) return Math.min(allMonths.length - monthsToShow, newIdx - monthsToShow + 1);
+        return prev;
+      });
     } else {
-      setSelectedMonth(allMonths[0]);
+      // wrap to first
+      const newIdx = 0;
+      setSelectedMonth(allMonths[newIdx]);
       setStartIndex(0);
     }
   };
@@ -106,215 +120,235 @@ function MonthlyNewsletter() {
     <div className="monthly-newsletter-page pt-0 pb-5">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        .monthly-newsletter-page {
-          font-family: 'Inter', Arial, Helvetica, sans-serif;
-          color: #444;
-          background-color: #f8f9fa;
-        }
-
-        /* --- General --- */
+        .monthly-newsletter-page { font-family: 'Inter', Arial, Helvetica, sans-serif; color: #444; background-color: #f8f9fa; }
         .newsletter-heading { font-weight: 700; font-size: 40px; color: #0a2240; margin: 0; }
-        .newsletter-month-title { color: #003366 !important; font-weight: 700; }
         .newsletter-title { font-weight: 600; font-size: 24px; color: #0a2240; margin-bottom: 0.5rem; }
-        .body-text { font-size: 16px; line-height: 1.5; color: #555; text-align: justify; }
-        .blue-bg-col { background-color: #003366; color: white; padding: 30px; display: flex; flex-direction: column; border-radius: 0 12px 12px 0; }
+        .section-subheading { font-weight: 600; font-size: 20px; color: #0a2240; padding-left: 10px; border-left: 5px solid #FFC53D; line-height: 1.2; margin-bottom: 10px; }
+  .body-text { font-size: 16px; line-height: 1.8; color: #555; margin-bottom: 1.5rem; word-break: break-word; white-space: normal; text-align: justify; }
+        .newsletter-card { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); border: none; overflow: visible; background: white; min-height: auto; }
+        .blue-bg-col { background-color: #003366; color: white; padding: 30px; display: flex; flex-direction: column; }
+        .quote-box { background-color: rgba(255, 255, 255, 0.1); padding: 20px; border-left: 5px solid #FFC53D; margin-bottom: 20px; }
+        .quote-icon { font-family: serif; font-size: 4rem; line-height: 1; color: #FFC53D; display: block; margin-bottom: 0; }
+        .month-selector-item { cursor: pointer; transition: all 0.3s ease; font-weight: 600; color: #0a2240; border: 2px solid #0a2240; background-color: #ffffff; }
+        .month-selector-item.active { background-color: #FFC53D; color: #0a2240; border-color: #FFC53D; transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        .month-selector-nav { background-color: #0a2240; color: white; border-color: #0a2240; }
+        .month-selector-nav:disabled { opacity: 0.5; }
         .blue-point { font-size: 14px; margin-bottom: 0.5rem; }
-        .newsletter-card { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); border: none; background: white; border-radius: 12px; margin-top: 40px; }
+        .institute-label { font-size: 30px; font-weight: 500; color: #0a2240; }
+        .edition-text { font-size: 30px; font-weight: 500; color: #0a2240; }
+        .lead { font-size: 16px; }
+        .caption-text { font-size: 16px; }
+        .connect-link { font-size: 16px; color: #FFC53D; font-weight: 600; margin: 0; }
+        @media (max-width: 992px) { .blue-bg-col { order: -1; margin-bottom: 20px; } }
 
-        /* --- Month Selector --- */
-        .month-selector-container {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 16px; /* Increased gap between buttons */
-          padding: 20px 10px;
-          margin: 0 auto 50px;
-          flex-wrap: nowrap;
-          overflow-x: auto;
-          white-space: nowrap;
-        }
-        .month-selector-item {
-          cursor: pointer;
-          transition: all 0.3s ease;
-          font-weight: 600;
-          color: #0a2240;
-          border: 2px solid #0a2240;
-          background-color: #ffffff;
-          border-radius: 25px;
-          padding: 8px 22px;
-          font-size: 15px;
-          flex-shrink: 0;
-        }
-        .month-selector-item.active {
-          background-color: #FFC53D;
-          border-color: #FFC53D;
-          color: #0a2240;
-          transform: translateY(-2px);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .month-selector-nav {
-          background-color: #0a2240;
-          color: white;
-          border: none;
-          border-radius: 50%;
-          width: 46px; /* Increased size */
-          height: 46px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-shrink: 0;
-          transition: all 0.3s ease;
-        }
-        .month-selector-nav:hover {
-          transform: scale(1.1);
-          background-color: #003366;
-        }
-
-        /* --- Header Section --- */
+        /* About Section Styles */
         .monthly-newsletter-about {
+          font-family: 'Inter', Arial, Helvetica, sans-serif;
+          color: #0a2240;
           background: linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%);
-          color: white;
           position: relative;
-          padding: 60px 0;
+        }
+        .monthly-newsletter-about::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 50%;
+          height: 100%;
+          background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop');
+          background-size: cover;
+          background-position: center;
+          opacity: 0.25;
+          z-index: 0;
+        }
+        .monthly-newsletter-about .container {
+          position: relative;
+          z-index: 1;
         }
         .monthly-newsletter-about .newsletter-heading {
+          font-weight: 700;
+          font-size: 40px;
+          margin-bottom: 0.5rem;
           color: #FFC53D;
-          font-size: 38px;
-          margin-bottom: 10px;
         }
         .monthly-newsletter-about .lead-text {
           font-size: 16px;
           color: #ffffff;
+          margin-bottom: 0;
         }
-
-        /* --- Responsive --- */
-        @media (max-width: 768px) {
-          .monthly-newsletter-about { padding: 40px 0; }
-          .newsletter-heading { font-size: 28px; }
-          .month-selector-container {
-            gap: 10px;
-            margin: 20px auto 40px;
-          }
-          .month-selector-item {
-            font-size: 13px;
-            padding: 6px 16px;
-          }
-          .month-selector-nav {
-            width: 40px;
-            height: 40px;
-          }
-        }
-
-        @media (max-width: 576px) {
-          .newsletter-heading { font-size: 24px; }
-          .month-selector-item {
-            font-size: 12px;
-            padding: 5px 12px;
-          }
-          .month-selector-container {
-            margin-bottom: 30px;
+        .featured-img { height: 150px; width: 100%; object-fit: cover; }
+        .newsletter-hr { border-color: #ddd; }
+        @media (max-width: 992px) {
+          .monthly-newsletter-about .newsletter-heading {
+            font-size: 32px;
           }
         }
       `}</style>
 
       {/* Header Section */}
-      <section className="monthly-newsletter-about text-center">
-        <div className="container">
-          <h1 className="newsletter-heading mb-3">
-            ISMR Institute Newsletter
+      <section
+        className="py-5 text-white text-center position-relative"
+        style={{
+          background: "linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%)",
+        }}
+      >
+        <div
+          className="position-absolute top-0 end-0 w-100 h-100 opacity-25"
+          style={{
+            backgroundImage: `url(${allsectionbg})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        ></div>
+        <div className="container position-relative py-4">
+          <h1
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "40px",
+              fontWeight: 700,
+              margin: 0,
+              marginBottom: "10px",
+            }}
+          >
+            ISMR Institute <span className="text-warning">Newsletter</span>
           </h1>
-         
-{/*  */}
           <p
-  className="body-text text-white-50 mb-0 text-center"
-  style={{ fontSize: "13px" }}
->
-  Newsletter • <span className="text-warning">ISMR Newsletter</span>
-</p>
-
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "15px",
+              margin: 0,
+            }}
+          >
+            Newsletter • <span className="text-warning">ISMR Newsletter</span>
+          </p>
         </div>
       </section>
 
-      {/* Month Selector */}
-      <Container className="text-center mt-5">
-        <div className="month-selector-container">
-          <Button
-            variant="dark"
-            className="month-selector-nav"
-            onClick={handlePrev}
-          >
-            <ChevronLeft size={20} />
-          </Button>
+  {/* Header & Month Selector */}
+  <Container className="mb-5 ">
+      
 
-          {allMonths
-            .slice(startIndex, startIndex + monthsToShow)
-            .map((month) => (
-              <Button
-                key={month}
-                variant="light"
-                className={`month-selector-item ${
-                  selectedMonth === month ? "active" : ""
-                }`}
-                onClick={() => handleSelectMonth(month)}
-              >
-                {month.split(" ")[0]}
-              </Button>
-            ))}
-
-          <Button
-            variant="dark"
-            className="month-selector-nav"
-            onClick={handleNext}
+        <Row className="justify-content-center mt-5">
+          <Col
+            lg={8}
+            className="d-flex align-items-center justify-content-center"
           >
-            <ChevronRight size={20} />
-          </Button>
-        </div>
+            <Button
+              variant="secondary"
+              className="month-selector-nav p-2 me-2"
+              onClick={handlePrev}
+            >
+              <ChevronLeft size={20} />
+            </Button>
+            {allMonths
+              .slice(startIndex, startIndex + monthsToShow)
+              .map((month) => (
+                <Button
+                  key={month}
+                  variant="light"
+                  className={`month-selector-item mx-2 px-4 py-2 rounded-pill ${
+                    selectedMonth === month ? "active" : ""
+                  }`}
+                  onClick={() => handleSelectMonth(month)}
+                >
+                  {month}
+                </Button>
+              ))}
+            <Button
+              variant="secondary"
+              className="month-selector-nav p-2 ms-2"
+              onClick={handleNext}
+            >
+              <ChevronRight size={20} />
+            </Button>
+          </Col>
+        </Row>
       </Container>
 
-      {/* Newsletter Section */}
+      {/* Newsletter Content */}
       <Container>
         <Row className="justify-content-center">
-          <Col lg={10}>
+          <Col lg={12}>
             {newsletterContent ? (
-              <Card className="newsletter-card shadow-lg mt-4 mb-5">
+              <Card className="newsletter-card shadow-lg">
                 <Row className="g-0 h-100">
+                  {/* Left Column */}
                   <Col lg={8} className="p-4 p-md-5 d-flex flex-column">
-                    <h2 className="text-uppercase newsletter-month-title mb-3 text-center">
-                      {selectedMonth.split(" ")[0]} Newsletter
+                    <div className="d-flex justify-content-between align-items-baseline mb-4">
+                      <div className="institute-label">ISMR INSTITUTE</div>
+                      <div className="edition-text text-end">
+                        <span className="fw-semibold">{selectedMonth}</span>{" "}
+                        Edition
+                      </div>
+                    </div>
+
+                    <h2 className="newsletter-heading mb-4 text-uppercase">
+                      NEWSLETTER
                     </h2>
-                    <img
-                      src={newsletterContent.image1}
-                      alt="Featured"
-                      className="featured-img mb-4"
-                    />
+
+                    <Row className="mb-4 g-2">
+                      <Col xs={8}>
+                        <img
+                          src={newsletterContent.image1}
+                          alt="Featured"
+                          className="img-fluid rounded featured-img"
+                        />
+                      </Col>
+                    </Row>
+
                     <h3 className="newsletter-title text-center mb-1">
                       {newsletterContent.title}
                     </h3>
-                    <hr className="my-4" />
-                    <p className="section-subheading">
-                      {newsletterContent.mainArticle}
-                    </p>
-                    <p className="body-text">{newsletterContent.mainText}</p>
-                    <p className="section-subheading">
-                      {newsletterContent.secondaryArticle}
-                    </p>
-                    <p className="body-text">{newsletterContent.secondaryText}</p>
+
+                    <hr className="my-4 newsletter-hr" />
+
+                    {/* Main Article */}
+                    <div className="mb-5">
+                      <p className="section-subheading">
+                        {newsletterContent.mainArticle}
+                      </p>
+                      <p className="body-text">{newsletterContent.mainText}</p>
+                    </div>
+
+                    {/* Secondary Article */}
+                    <div className="mb-5">
+                      <p className="section-subheading">
+                        {newsletterContent.secondaryArticle}
+                      </p>
+                      <p className="body-text">
+                        {newsletterContent.secondaryText}
+                      </p>
+                    </div>
                   </Col>
 
+                  {/* Right Column */}
                   <Col lg={4} className="blue-bg-col">
                     <div className="d-flex flex-column h-100">
+                      {/* Top Quote Section */}
                       <div>
-                        {newsletterContent.points.map((point, idx) => (
-                          <p key={idx} className="blue-point text-white-50">
-                            • {point}
-                          </p>
-                        ))}
+                        <div className="text-end caption-text mb-3">
+                          <span className="p-1 px-3 rounded-pill bg-white bg-opacity-25">
+                            ISMR Business
+                          </span>
+                        </div>
+
+                        {/* Points Section */}
+                        <div className="mt-4">
+                          {newsletterContent.points &&
+                            newsletterContent.points.map((point, idx) => (
+                              <p key={idx} className="blue-point text-white-50">
+                                • {point}
+                              </p>
+                            ))}
+                        </div>
                       </div>
-                      <div className="text-center mt-auto pt-3">
-                        <p className="text-white-50 mb-1">Connect with us</p>
-                        <p className="fw-semibold text-warning mb-0">
-                          www.ismr.edu
+
+                      {/* Bottom Connect Section */}
+                      <div className="text-center mt-auto">
+                        <p className="caption-text text-white-50 mb-1">
+                          Connect with us
                         </p>
+                        <p className="connect-link mb-0">www.ismr.edu</p>
                       </div>
                     </div>
                   </Col>

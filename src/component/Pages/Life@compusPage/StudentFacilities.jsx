@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import allsectionbg from "../../../assets/allsectionbg.jpg";
 import { ArrowRight } from "lucide-react";
 import { BriefcaseFill } from "react-bootstrap-icons";
 
@@ -245,12 +246,39 @@ function StudentFacilities() {
       `}</style>
 
       {/* ---------- Header Section ---------- */}
-      <section className="hero">
+      <section
+        className="py-5 text-white text-center position-relative"
+        style={{
+          background: "linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%)",
+        }}
+      >
+        <div
+          className="position-absolute top-0 end-0 w-100 h-100 opacity-25"
+          style={{
+            backgroundImage: `url(${allsectionbg})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        ></div>
         <div className="container position-relative py-4">
-          <h1>
+          <h1
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "40px",
+              fontWeight: 700,
+              margin: 0,
+              marginBottom: "10px",
+            }}
+          >
             Student <span className="text-warning">Facilities</span>
           </h1>
-          <p>
+          <p
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "15px",
+              margin: 0,
+            }}
+          >
             Campus • <span className="text-warning">Student Facilities</span>
           </p>
         </div>

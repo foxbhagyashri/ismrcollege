@@ -6,7 +6,7 @@
 
 /* Section Styling */
 .marquee-section { 
-
+  text-align: center;
 }
 
 .section-title {
@@ -39,19 +39,20 @@
 /* Marquee Styles */
 .marquee-container {
   overflow: hidden;
-  width: 95%;
+  width: 100%;
   /* background: #ffffff; */
-  border-radius: 10px;
-    border: 2px solid rgb(255, 255, 255);
+  /* border-radius: 10px; */
+    /* border: 2px solid rgb(255, 255, 255); */
   margin: 0 auto;
   position: relative;
+  background-color: #efefef;
 }
 
 .marquee-content {
   display: flex;
   align-items: stretch;
   gap: 30px;
-  animation: scroll 40s linear infinite;
+  animation: scroll 20s linear infinite;
   padding: 10px 0;
 }
 

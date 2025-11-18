@@ -1,34 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import allsectionbg from "../../../assets/allsectionbg.jpg";
+import loanImage from "../../../assets/Homeimg/LOAN.png";
+import Faq from "../../Faq";
 
 export default function EducationLoad() {
-  const [programs, setPrograms] = useState([]);
-  const [visible, setVisible] = useState(4);
-  const [loading, setLoading] = useState(true);
-  const [filter, setFilter] = useState('all');
-
-  const ALL_PROGRAMS = [
-    { id: 1, name: 'B.Sc Computer Science', type: 'Undergraduate' },
-    { id: 2, name: 'M.Sc Biotechnology', type: 'Postgraduate' },
-    { id: 3, name: 'MBA (Finance)', type: 'Postgraduate' },
-    { id: 4, name: 'B.A Psychology', type: 'Undergraduate' },
-    { id: 5, name: 'M.Tech Data Science', type: 'Postgraduate' },
-    { id: 6, name: 'B.Com Accounting', type: 'Undergraduate' },
-    { id: 7, name: 'BBA', type: 'Undergraduate' },
-    { id: 8, name: 'M.A English', type: 'Postgraduate' },
-  ];
-
-  useEffect(() => {
-    setTimeout(() => {
-      setPrograms(ALL_PROGRAMS);
-      setLoading(false);
-    }, 800);
-  }, []);
-
-  const filtered = filter === 'all' ? programs : programs.filter(p => p.type === filter);
-  const showLoadMore = filtered.length > visible;
 
   return (
     <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
+      {/* Add FontAwesome */}
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      />
+
       {/* -------- HEADER SECTION -------- */}
       <section
         className="py-5 text-white text-center position-relative"
@@ -37,10 +21,9 @@ export default function EducationLoad() {
         }}
       >
         <div
-          className="position-absolute top-0 end-0 w-50 h-100 opacity-25"
+          className="position-absolute top-0 end-0 w-100 h-100 opacity-25"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop)",
+            backgroundImage: `url(${allsectionbg})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
           }}
@@ -62,7 +45,7 @@ export default function EducationLoad() {
             className="mb-0"
             style={{ 
               fontFamily: "'Inter', Arial, Helvetica, sans-serif", 
-              fontSize: "16px", 
+              fontSize: "15px", 
               marginTop: "0.5rem" 
             }}
           >
@@ -72,171 +55,324 @@ export default function EducationLoad() {
       </section>
 
       {/* -------- MAIN CONTENT -------- */}
-      <div className="container pb-5" style={{ marginTop: "3rem" }}>
-        {/* FILTER BUTTONS */}
-        <div className="row justify-content-center mb-5">
+      <div className="container py-5">
+        {/* Introduction Section with Image */}
+        <div className="row align-items-center mb-5 g-4">
+          <div className="col-lg-7 mb-4 mb-lg-0">
+            <h2
+              style={{
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                fontSize: "32px",
+                fontWeight: "700",
+                color: "#0a2240",
+                marginBottom: "1.5rem",
+              }}
+            >
+              <i className="fas fa-graduation-cap me-3" style={{ color: "#FFC333" }}></i>
+              EDUCATION LOAN
+            </h2>
+            <p
+              style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.8",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+              }}
+            >
+              International School of Management & Research has tied up with Credenc to help students avail education loans easily from a number of banks and NBFCs. The education loan for the students of International School of Management & Research is offer based on the credit history of the co-applicant and academic performance of the applicant.
+            </p>
+          </div>
+          <div className="col-lg-5 d-flex justify-content-center">
+            <img
+              src={loanImage}
+              alt="Education Loan"
+              className="img-fluid rounded-3 shadow-lg"
+              style={{
+                maxWidth: "400px",
+                width: "100%",
+                height: "auto",
+                objectFit: "cover",
+              }}
+            />
+          </div>
+        </div>
+
+        {/* Benefits Section */}
+        <div className="row mb-5">
           <div className="col-12">
-            <div className="d-flex justify-content-center flex-wrap gap-3">
-              <button
-                className={`btn fw-semibold ${filter === 'all' ? '' : 'btn-outline-secondary'}`}
-                onClick={() => setFilter('all')}
+            <div
+              className="rounded-3 p-4 p-md-5"
+              style={{
+                background: "linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%)",
+                color: "#fff",
+              }}
+            >
+              <h3
+                className="text-center mb-4"
                 style={{
-                  padding: "12px 24px",
-                  backgroundColor: filter === 'all' ? "#0a2240" : "transparent",
-                  color: filter === 'all' ? "#fff" : "#0a2240",
-                  border: `2px solid ${filter === 'all' ? "#0a2240" : "#0a2240"}`,
-                  borderRadius: "8px",
-                  fontSize: "16px",
                   fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                  transition: "all 0.3s ease",
+                  fontSize: "28px",
+                  fontWeight: "700",
                 }}
               >
-                All Programs
-              </button>
-              <button
-                className={`btn fw-semibold ${filter === 'Undergraduate' ? '' : 'btn-outline-secondary'}`}
-                onClick={() => setFilter('Undergraduate')}
-                style={{
-                  padding: "12px 24px",
-                  backgroundColor: filter === 'Undergraduate' ? "#0a2240" : "transparent",
-                  color: filter === 'Undergraduate' ? "#fff" : "#0a2240",
-                  border: `2px solid ${filter === 'Undergraduate' ? "#0a2240" : "#0a2240"}`,
-                  borderRadius: "8px",
-                  fontSize: "16px",
-                  fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                  transition: "all 0.3s ease",
-                }}
-              >
-                Undergraduate
-              </button>
-              <button
-                className={`btn fw-semibold ${filter === 'Postgraduate' ? '' : 'btn-outline-secondary'}`}
-                onClick={() => setFilter('Postgraduate')}
-                style={{
-                  padding: "12px 24px",
-                  backgroundColor: filter === 'Postgraduate' ? "#0a2240" : "transparent",
-                  color: filter === 'Postgraduate' ? "#fff" : "#0a2240",
-                  border: `2px solid ${filter === 'Postgraduate' ? "#0a2240" : "#0a2240"}`,
-                  borderRadius: "8px",
-                  fontSize: "16px",
-                  fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                  transition: "all 0.3s ease",
-                }}
-              >
-                Postgraduate
-              </button>
+                <i className="fas fa-gift me-3" style={{ color: "#FFC333" }}></i>
+                BENEFITS
+              </h3>
+              <div className="row g-4">
+                <div className="col-md-6">
+                  <div className="d-flex align-items-start">
+                    <i className="fas fa-check-circle fa-2x me-3" style={{ color: "#FFC333", flexShrink: 0 }}></i>
+                    <p style={{ fontSize: "16px", lineHeight: "1.7", margin: 0 }}>
+                      Easy availability of education loans for a number of courses
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="d-flex align-items-start">
+                    <i className="fas fa-percent fa-2x me-3" style={{ color: "#FFC333", flexShrink: 0 }}></i>
+                    <p style={{ fontSize: "16px", lineHeight: "1.7", margin: 0 }}>
+                      Low interest rates with a repayment period ranging from 5 to 15 years
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="d-flex align-items-start">
+                    <i className="fas fa-hand-holding-usd fa-2x me-3" style={{ color: "#FFC333", flexShrink: 0 }}></i>
+                    <p style={{ fontSize: "16px", lineHeight: "1.7", margin: 0 }}>
+                      Education, living and other expenses covered
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="d-flex align-items-start">
+                    <i className="fas fa-calendar-alt fa-2x me-3" style={{ color: "#FFC333", flexShrink: 0 }}></i>
+                    <p style={{ fontSize: "16px", lineHeight: "1.7", margin: 0 }}>
+                      Moratorium period ranging from 6 months to a year
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="d-flex align-items-start">
+                    <i className="fas fa-file-invoice-dollar fa-2x me-3" style={{ color: "#FFC333", flexShrink: 0 }}></i>
+                    <p style={{ fontSize: "16px", lineHeight: "1.7", margin: 0 }}>
+                      Income Tax Benefits
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* PROGRAM GRID */}
-        <div className="row g-4">
-          {loading ? (
-            [...Array(4)].map((_, i) => (
-              <div key={i} className="col-12 col-sm-6 col-lg-3">
-                <div
-                  className="rounded-3 h-100 d-flex flex-column justify-content-center align-items-center"
-                  style={{
-                    backgroundColor: "#f8f9fa",
-                    padding: "2rem",
-                    minHeight: "150px",
-                    border: "2px dashed #dee2e6",
-                  }}
-                >
-                  <div
-                    className="spinner-border text-primary"
-                    role="status"
-                    style={{
-                      color: "#0a2240 !important"
-                    }}
-                  >
-                    <span className="visually-hidden">Loading...</span>
-                  </div>
+        {/* Loan Options Section */}
+        <div className="row mb-5">
+          <div className="col-12">
+            <div
+              className="rounded-3 p-4 p-md-5"
+              style={{
+                backgroundColor: "#f8f9fa",
+                border: "2px solid #FFC333",
+              }}
+            >
+              <h3
+                className="mb-4"
+                style={{
+                  fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                  fontSize: "28px",
+                  fontWeight: "700",
+                  color: "#0a2240",
+                }}
+              >
+                <i className="fas fa-briefcase me-3" style={{ color: "#FFC333" }}></i>
+                LOAN OPTIONS
+              </h3>
+              <div className="row align-items-center">
+                <div className="col-lg-8 mb-3 mb-lg-0">
                   <p
-                    className="mt-2 mb-0"
                     style={{
+                      fontSize: "16px",
+                      color: "#444",
+                      lineHeight: "1.8",
                       fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                      color: "#6c757d",
-                      fontSize: "14px"
+                      marginBottom: "1rem",
                     }}
                   >
-                    Loading...
+                    <i className="fas fa-info-circle me-2" style={{ color: "#0a2240" }}></i>
+                    Credenc is a tech-enabled platform committed to making education loans more accessible, affordable and transparent. It provides a personalized rate of interest with the best terms and fastest response time.
+                  </p>
+                  <p
+                    style={{
+                      fontSize: "18px",
+                      color: "#0a2240",
+                      lineHeight: "1.8",
+                      fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                      fontWeight: "600",
+                      margin: 0,
+                    }}
+                  >
+                    <i className="fas fa-handshake me-2" style={{ color: "#FFC333" }}></i>
+                    Tie Up with Axis Bank
                   </p>
                 </div>
               </div>
-            ))
-          ) : (
-            filtered.slice(0, visible).map((program) => (
-              <div key={program.id} className="col-12 col-sm-6 col-lg-3">
-                <div
-                  className="rounded-3 h-100 p-4 position-relative"
-                  style={{
-                    backgroundColor: "#fff",
-                    boxShadow: "0 8px 30px rgba(15,51,80,0.06)",
-                    border: "1px solid rgba(0,0,0,0.05)",
-                    transition: "all 0.3s ease",
-                    cursor: "pointer",
-                    minHeight: "150px",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-5px)";
-                    e.currentTarget.style.boxShadow = "0 12px 40px rgba(15,51,80,0.15)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow = "0 8px 30px rgba(15,51,80,0.06)";
-                  }}
-                >
-                  <h3
-                    style={{
-                      fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                      fontSize: "18px",
-                      fontWeight: "600",
-                      color: "#0a2240",
-                      marginBottom: "0.5rem",
-                      lineHeight: "1.4"
-                    }}
-                  >
-                    {program.name}
-                  </h3>
+            </div>
+          </div>
+        </div>
+
+        {/* Documents Checklist Section */}
+        <div className="row">
+          <div className="col-12">
+            <div
+              className="rounded-3 p-4 p-md-5"
+              style={{
+                backgroundColor: "#fff",
+                boxShadow: "0 10px 40px rgba(0,0,0,0.1)",
+              }}
+            >
+              <h3
+                className="text-center mb-5"
+                style={{
+                  fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                  fontSize: "32px",
+                  fontWeight: "700",
+                  color: "#0a2240",
+                }}
+              >
+                <i className="fas fa-clipboard-list me-3" style={{ color: "#FFC333" }}></i>
+                DOCUMENTS CHECKLIST
+              </h3>
+
+              <div className="row g-4">
+                {/* Borrower Documents */}
+                <div className="col-lg-6">
                   <div
-                    className="badge"
+                    className="h-100 rounded-3 p-4"
                     style={{
-                      backgroundColor: program.type === 'Undergraduate' ? "#FFC333" : "#d95c5c",
-                      color: program.type === 'Undergraduate' ? "#0a2240" : "#fff",
-                      padding: "4px 12px",
-                      borderRadius: "20px",
-                      fontSize: "12px",
-                      fontWeight: "600",
-                      fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                      background: "linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%)",
+                      color: "#fff",
                     }}
                   >
-                    {program.type}
+                    <h4
+                      className="mb-4"
+                      style={{
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        fontSize: "22px",
+                        fontWeight: "700",
+                        borderBottom: "2px solid #FFC333",
+                        paddingBottom: "10px",
+                      }}
+                    >
+                      <i className="fas fa-user-graduate me-2" style={{ color: "#FFC333" }}></i>
+                      Borrower Documents
+                    </h4>
+                    <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                      <li className="mb-3" style={{ fontSize: "16px", lineHeight: "1.6" }}>
+                        <i className="fas fa-id-card me-2" style={{ color: "#FFC333" }}></i>
+                        Aadhaar Card/ PAN Card
+                      </li>
+                      <li className="mb-3" style={{ fontSize: "16px", lineHeight: "1.6" }}>
+                        <i className="fas fa-certificate me-2" style={{ color: "#FFC333" }}></i>
+                        X and XII Marksheets
+                      </li>
+                      <li className="mb-3" style={{ fontSize: "16px", lineHeight: "1.6" }}>
+                        <i className="fas fa-file-invoice me-2" style={{ color: "#FFC333" }}></i>
+                        Salary Slip (If Employed)
+                      </li>
+                      <li className="mb-3" style={{ fontSize: "16px", lineHeight: "1.6" }}>
+                        <i className="fas fa-envelope-open-text me-2" style={{ color: "#FFC333" }}></i>
+                        University Admission Letter
+                      </li>
+                    </ul>
                   </div>
+                </div>
+
+                {/* Co-Borrower Documents */}
+                <div className="col-lg-6">
                   <div
-                    className="position-absolute"
+                    className="h-100 rounded-3 p-4"
                     style={{
-                      bottom: "1rem",
-                      right: "1rem",
-                      fontSize: "24px",
-                      color: "rgba(10, 34, 64, 0.1)"
+                      backgroundColor: "#f8f9fa",
+                      border: "2px solid #0a2240",
                     }}
                   >
-                    📚
+                    <h4
+                      className="mb-4"
+                      style={{
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        fontSize: "22px",
+                        fontWeight: "700",
+                        color: "#0a2240",
+                        borderBottom: "2px solid #FFC333",
+                        paddingBottom: "10px",
+                      }}
+                    >
+                      <i className="fas fa-users me-2" style={{ color: "#FFC333" }}></i>
+                      Co-Borrower Documents
+                    </h4>
+                    <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                      <li className="mb-3" style={{ fontSize: "16px", lineHeight: "1.6", color: "#444" }}>
+                        <i className="fas fa-id-card me-2" style={{ color: "#0a2240" }}></i>
+                        Aadhaar Card
+                      </li>
+                      <li className="mb-3" style={{ fontSize: "16px", lineHeight: "1.6", color: "#444" }}>
+                        <i className="fas fa-id-badge me-2" style={{ color: "#0a2240" }}></i>
+                        PAN Card
+                      </li>
+                      <li className="mb-3" style={{ fontSize: "16px", lineHeight: "1.6", color: "#444" }}>
+                        <i className="fas fa-home me-2" style={{ color: "#0a2240" }}></i>
+                        Residence Proof
+                      </li>
+                      <li className="mb-3" style={{ fontSize: "16px", lineHeight: "1.6", color: "#444" }}>
+                        <i className="fas fa-university me-2" style={{ color: "#0a2240" }}></i>
+                        6 Months Bank Account Statement
+                      </li>
+                      <li className="mb-3" style={{ fontSize: "16px", lineHeight: "1.6", color: "#444" }}>
+                        <i className="fas fa-file-alt me-2" style={{ color: "#0a2240" }}></i>
+                        ITR/Form 16
+                      </li>
+                      <li className="mb-3" style={{ fontSize: "16px", lineHeight: "1.6", color: "#444" }}>
+                        <i className="fas fa-money-check-alt me-2" style={{ color: "#0a2240" }}></i>
+                        Income Proof
+                      </li>
+                      <li className="mb-3" style={{ fontSize: "16px", lineHeight: "1.6", color: "#444" }}>
+                        <i className="fas fa-building me-2" style={{ color: "#0a2240" }}></i>
+                        Assets And Liabilities Brief (If Providing Collateral)
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
-            ))
-          )}
+            </div>
+          </div>
         </div>
 
-        {/* LOAD MORE BUTTON */}
-        {showLoadMore && !loading && (
-          <div className="row mt-5">
-            <div className="col-12 text-center">
+        {/* Call to Action */}
+        <div className="row mt-5">
+          <div className="col-12">
+            <div
+              className="rounded-3 p-4 text-center"
+              style={{
+                backgroundColor: "#FFC333",
+              }}
+            >
+              <h4
+                style={{
+                  fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                  fontSize: "24px",
+                  fontWeight: "700",
+                  color: "#0a2240",
+                  marginBottom: "1rem",
+                }}
+              >
+                <i className="fas fa-phone-alt me-2"></i>
+                Need Help with Your Loan Application?
+              </h4>
+              <p style={{ fontSize: "16px", color: "#0a2240", marginBottom: "1.5rem" }}>
+                Contact our financial aid office for assistance
+              </p>
               <button
                 className="btn fw-semibold"
-                onClick={() => setVisible(visible + 4)}
                 style={{
                   padding: "12px 40px",
                   backgroundColor: "#0a2240",
@@ -248,7 +384,7 @@ export default function EducationLoad() {
                   transition: "all 0.3s ease",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "#d95c5c";
+                  e.currentTarget.style.backgroundColor = "#1a4d7a";
                   e.currentTarget.style.transform = "translateY(-2px)";
                 }}
                 onMouseLeave={(e) => {
@@ -256,81 +392,14 @@ export default function EducationLoad() {
                   e.currentTarget.style.transform = "translateY(0)";
                 }}
               >
-                Load More Programs
+                <i className="fas fa-envelope me-2"></i>
+                Contact Us
               </button>
-            </div>
-          </div>
-        )}
-
-        {/* LOAN INFORMATION SECTION */}
-        <div className="row mt-5 pt-5">
-          <div className="col-12">
-            <div
-              className="rounded-3 p-4 p-md-5 text-center"
-              style={{
-                backgroundColor: "#f8f9fa",
-                border: "2px solid #FFC333",
-              }}
-            >
-              <h2
-                style={{
-                  fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                  fontSize: "28px",
-                  fontWeight: "700",
-                  color: "#0a2240",
-                  marginBottom: "1rem"
-                }}
-              >
-                Need Help with Educational Loans?
-              </h2>
-              <p
-                style={{
-                  fontSize: "16px",
-                  color: "#444",
-                  lineHeight: "1.7",
-                  marginBottom: "2rem",
-                  fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                  maxWidth: "600px",
-                  margin: "0 auto 2rem auto"
-                }}
-              >
-                Our financial aid office can help you explore various educational loan options, 
-                scholarship opportunities, and payment plans to make your education affordable.
-              </p>
-              <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-                <button
-                  className="btn fw-semibold"
-                  style={{
-                    padding: "12px 30px",
-                    backgroundColor: "#d95c5c",
-                    color: "#fff",
-                    border: "none",
-                    borderRadius: "8px",
-                    fontSize: "16px",
-                    fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                  }}
-                >
-                  📞 Contact Financial Aid
-                </button>
-                <button
-                  className="btn fw-semibold"
-                  style={{
-                    padding: "12px 30px",
-                    backgroundColor: "#0a2240",
-                    color: "#fff",
-                    border: "none",
-                    borderRadius: "8px",
-                    fontSize: "16px",
-                    fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                  }}
-                >
-                  📄 Download Loan Guide
-                </button>
-              </div>
             </div>
           </div>
         </div>
       </div>
+      <Faq />
     </div>
   );
 }

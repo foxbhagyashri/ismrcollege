@@ -3,6 +3,7 @@
   background-color: #f8f9fa;
   padding: 70px 0;
   overflow-x: hidden;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
 /* ===== Single Counter Box ===== */
@@ -42,7 +43,7 @@
 
 /* ===== Number Styling ===== */
 .counter-number {
-  font-size: 1.6rem;
+  font-size: 40px;
   font-weight: 700;
   color: #0b214a;
   margin: 0;
@@ -51,7 +52,7 @@
 
 /* ===== Label Styling ===== */
 .counter-label {
-  font-size: 14px;
+  font-size: 18px;
   color: #6c757d;
   margin: 0;
   line-height: 1;

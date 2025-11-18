@@ -25,7 +25,7 @@
     font-size: 40px;
     font-weight: 700;
     margin: 0 0 60px 0;
-    text-align: left;
+    text-align: center;
 }
 
 /* Top button */
@@ -94,9 +94,9 @@
 }
 .apply-text {
     color: #666;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.6;
-    text-align: center; /* align subcontent centrally for best appearance */
+    text-align: center;
 }
 
 /* arrow in button */

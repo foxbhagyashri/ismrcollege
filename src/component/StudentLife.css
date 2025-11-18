@@ -26,15 +26,15 @@
   color: rgb(0, 30, 67);
   margin-bottom: 15px;
   font-weight: 700;
+  text-align: center;
 }
 
 /* Paragraph Text */
 .program-text {
   line-height: 1.6;
   margin-bottom: 20px;
-  font-size: 16px; /* set subcontent to 16px as requested */
-  /* Limit paragraph width by character count and justify for even lines */
-  max-width: 46ch; /* roughly 60 characters per line */
+  font-size: 18px;
+  max-width: 46ch;
   margin-left: 12px;
   margin-right: auto;
   text-align: justify;
@@ -56,9 +56,9 @@
 /* List Links */
 .list-group-item a {
   color: rgb(0, 30, 67);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
-  text-decoration: none; /* Remove underline */
+  text-decoration: none;
   display: inline-flex;
   align-items: center;
   transition: color 0.3s ease;
@@ -71,7 +71,7 @@
 
 /* Arrow */
 .listgroup-arrow {
-  font-size: 16px; /* make arrow size match link text (16px) */
+  font-size: 18px;
   margin-left: 5px;
 }
 
@@ -89,7 +89,7 @@
   color: #fff;
   padding: 10px 25px;
   font-weight: 700;
-  font-size: 16px; /* Application Form button text size */
+  font-size: 18px;
   text-decoration: none;
   border-radius: 6px;
   transition: background 0.3s ease;

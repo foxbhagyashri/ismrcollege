@@ -7,7 +7,7 @@ const HowToApply = () => {
         <section className="apply-section">
             <div className="apply-inner">
               
-                <h1 className="section-title mb-5">How To Apply At ISMR</h1>
+                <h1 className="section-title mb-5 text-center">How To Apply</h1>
 
 
                 <div className="apply-container">

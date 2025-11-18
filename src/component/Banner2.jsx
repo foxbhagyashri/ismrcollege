@@ -31,25 +31,29 @@ const Banner = () => {
             <div className="col-lg-6">
               <div className="banner-wrap-content">
                 <div className="title">
-                  <p>
-                    Shri Balaji Education Society's 
-                  </p>
-                  <h1>
-                    INTERNATIONAL SCHOOL OF<br></br>  MANAGEMENT AND RESEARCH
+                  <p>Sri Balaji Education Society's</p>
+                  <h1 className="fs-2">
+                    INTERNATIONAL SCHOOL OF <br></br> MANAGEMENT AND RESEARCH
                   </h1>
                   <p>
-                    MBA : DTE College Code 6798 | BBA & BCA College Code 16301
-                   <br /> Approved by AICTE, Ministry of HRD, Govt of India.
-                    <br /><b style={{ color: "#201b1bff", fontWeight: 750 }}>
-  Affiliated to S.P.Pune University
-</b>
-
+                    <b
+                      style={{
+                        color: "#201b1bff",
+                        fontWeight: 750,
+                        fontSize: "18px",
+                      }}
+                    >
+                      MBA : DTE College Code 6798 | BBA & BCA College Code 16301
+                      <br /> Approved by AICTE, Ministry of HRD, Govt of India.
+                      <br />
+                      Affiliated to S.P.Pune University
+                    </b>
                   </p>
                 </div>
                 <ul className="list-unstyled  d-flex align-items-center btn-list">
                   <li className="d-inline-block">
-                    <a className="default-btn" href="university-overview.html">
-                      University Overview &nbsp;{" "}
+                    <a className="default-btn" href="institute-overview.html">
+                      Institute Overview &nbsp;{" "}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="20"
@@ -60,7 +64,7 @@ const Banner = () => {
                       >
                         <path
                           fill-rule="evenodd"
-                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                          d="M1 8a.5.5 0 0 1 .5-.h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
                         />
                       </svg>
                     </a>
@@ -101,9 +105,9 @@ const Banner = () => {
                   </li>
                   <li className="user-listtext">
                     <h2>
-                      <span className="counter">4200</span>+
+                      <span className="counter">9300</span>+
                     </h2>
-                    <p className="subtext">Student around in the world</p>
+                    <p className="subtext"> worldwide Students</p>
                   </li>
                 </ul>
               </div>

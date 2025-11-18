@@ -7,6 +7,7 @@ export default function FaqAndContactSection() {
     name: "",
     phone: "",
     email: "",
+    city: "",
     program: "",
     message: "",
   });
@@ -26,7 +27,7 @@ export default function FaqAndContactSection() {
     },
     {
       q: "Who do I contact for help?",
-      a: "Contact our admissions team at +91 12345 67890 or admissions@college.edu. Provide your application ID and a short description of the issue for faster support.",
+      a: "Contact our admissions team at 7030680680 or admissions@college.edu. Provide your application ID and a short description of the issue for faster support.",
     },
     {
       q: "Can I apply for multiple programmes in the same intake?",
@@ -51,7 +52,7 @@ export default function FaqAndContactSection() {
   };
 
   const handleReset = () =>
-    setFormData({ name: "", phone: "", email: "", program: "", message: "" });
+    setFormData({ name: "", phone: "", email: "", city: "", program: "", message: "" });
 
   return (
     <section className="faq-contact-section">
@@ -386,15 +387,25 @@ export default function FaqAndContactSection() {
               required
             />
 
+            <input
+              type="text"
+              name="city"
+              placeholder="City"
+              value={formData.city}
+              onChange={handleChange}
+              required
+            />
+
             <select
               name="program"
               value={formData.program}
               onChange={handleChange}
+              required
             >
-              <option value="">Select Programme (Optional)</option>
-              <option value="mba">MBA</option>
+              <option value="">Select Programme *</option>
               <option value="bba">BBA</option>
-              <option value="pgdm">PGDM</option>
+              <option value="bca">BCA</option>
+              <option value="mca">MCA</option>
             </select>
 
             <textarea
@@ -416,6 +427,8 @@ export default function FaqAndContactSection() {
                 Reset
               </button>
             </div>
+
+        
 
             <p className="form-note">
               By submitting you agree to our <a href="#">privacy policy</a>.
