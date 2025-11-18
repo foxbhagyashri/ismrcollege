@@ -261,6 +261,15 @@ const Header = () => {
               Course Duration
             </Link>
           </li>
+          <li>
+            <Link
+              className="dropdown-item"
+              to="/Academics/Courseduration"
+              onClick={handleDropdownItemClick}
+            >
+              Student Corner
+            </Link>
+          </li>
 
           {/* Cleaned up commented links */}
         </ul>

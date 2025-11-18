@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import allsectionbg from "../../../assets/allsectionbg.jpg";
 import { Row, Col } from "react-bootstrap";
 import { BriefcaseFill, ChatSquareQuoteFill, StarFill } from "react-bootstrap-icons";
 
@@ -173,14 +174,13 @@ const Ourplacement = () => {
       <section
         className="py-5 text-white text-center position-relative"
         style={{
-          background: "linear-gradient(135deg, #0a2240 0%, #0a2240 100%)",
+          background: "linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%)",
         }}
       >
         <div
-          className="position-absolute top-0 end-0 w-50 h-100 opacity-25"
+          className="position-absolute top-0 end-0 w-100 h-100 opacity-25"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop)",
+            backgroundImage: `url(${allsectionbg})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
           }}
@@ -188,24 +188,25 @@ const Ourplacement = () => {
 
         <div className="container position-relative py-5">
           <h1
-            className="mb-3 banner-title"
+            className="mb-3"
             style={{
-              fontFamily: "Inter, Arial, Helvetica, sans-serif",
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               fontSize: "40px",
               fontWeight: 700,
+              margin: 0,
             }}
           >
-            Internship <span className="text-warning">& Placement</span>
+            Our Internship & <span className="text-warning">Placement</span>
           </h1>
           <p
-            className="mb-0 banner-subtitle"
+            className="mb-0"
             style={{
-              fontFamily: "Inter, Arial, Helvetica, sans-serif",
-              fontSize: "16px",
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "15px",
               marginTop: "0.5rem",
             }}
           >
-            Placement • <span className="text-warning">Internship & Placement</span>
+            Placement • <span className="text-warning">Our Internship & Placement</span>
           </p>
         </div>
       </section>

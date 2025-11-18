@@ -1,268 +1,349 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import allsectionbg from "../../../assets/allsectionbg.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faDollarSign,
+  faTree,
+  faBriefcase,
+  faGlobe,
+  faAward,
+  faUniversity,
+  faPlane,
+  faWifi,
+  faChalkboardTeacher,
+  faBook,
+  faUsers,
+  faComments,
+  faUserTie,
+  faFileExcel,
+  faPuzzlePiece,
+  faFutbol,
+  faDumbbell,
+  faMusic,
+  faBed,
+  faUtensils,
+  faHospital,
+  faShield,
+  faSmile,
+  faMountain,
+  faLightbulb,
+  faBus,
+} from "@fortawesome/free-solid-svg-icons";
+
+const whyIsmrFeatures = [
+  {
+    id: 1,
+    title: "Excellent Return on Investment",
+    icon: faDollarSign,
+  },
+  {
+    id: 2,
+    title: "20 Acres Serene Campus",
+    icon: faTree,
+  },
+  {
+    id: 3,
+    title: "100% Placement Assistance",
+    icon: faBriefcase,
+  },
+  {
+    id: 4,
+    title: "Foreign Placement Assistance",
+    icon: faGlobe,
+  },
+  {
+    id: 5,
+    title: "Scholarships to Meritorious Students",
+    icon: faAward,
+  },
+  {
+    id: 6,
+    title: "Education Loan Tie up with Leading Banks",
+    icon: faUniversity,
+  },
+  {
+    id: 7,
+    title: "Domestic and International Industrial Visits",
+    icon: faPlane,
+  },
+  {
+    id: 8,
+    title: "State-of-the-Art Infrastructure with Fully Wi-Fi Enabled Campus",
+    icon: faWifi,
+  },
+  {
+    id: 9,
+    title: "Seminar based, Career Oriented, and Industry Focused Curriculum",
+    icon: faChalkboardTeacher,
+  },
+  {
+    id: 10,
+    title: "Access to Study Material / Newspapers / Journals / Case Studies etc.",
+    icon: faBook,
+  },
+  {
+    id: 11,
+    title: "Leadership and Team Building Activities",
+    icon: faUsers,
+  },
+  {
+    id: 12,
+    title: "Special classes on Personality Development, Communication, and Foreign Language",
+    icon: faComments,
+  },
+  {
+    id: 13,
+    title: "Dedicated and Experienced Faculties from Academic and Industrial Background",
+    icon: faUserTie,
+  },
+  {
+    id: 14,
+    title: "Advanced Excel Certification",
+    icon: faFileExcel,
+  },
+  {
+    id: 15,
+    title: "Extra Activities",
+    icon: faPuzzlePiece,
+  },
+  {
+    id: 16,
+    title: "Indoor and Outdoor Recreational Activities",
+    icon: faFutbol,
+  },
+  {
+    id: 17,
+    title: "Gymnasium with all Latest Equipments",
+    icon: faDumbbell,
+  },
+  {
+    id: 18,
+    title: "Cultural Programme and Intra-Collegiate Programme",
+    icon: faMusic,
+  },
+  {
+    id: 19,
+    title: "Hostel Facilities for Boys and Girls",
+    icon: faBed,
+  },
+  {
+    id: 20,
+    title: "Mess Facility",
+    icon: faUtensils,
+  },
+  {
+    id: 21,
+    title: "Medicare Facility during the Course",
+    icon: faHospital,
+  },
+  {
+    id: 22,
+    title: "Accidental Mediclaim Policy during the course",
+    icon: faShield,
+  },
+  {
+    id: 23,
+    title: "A Fun-Filled College Life Experience",
+    icon: faSmile,
+  },
+  {
+    id: 24,
+    title: "Outbound Management Programs",
+    icon: faMountain,
+  },
+  {
+    id: 25,
+    title: "Innovative Learning: Mentorship, Internship, Practical Exposure in Industry",
+    icon: faLightbulb,
+  },
+  {
+    id: 26,
+    title: "Free Bus Transportation (First Year Only)",
+    icon: faBus,
+  },
+];
 
 function WhyISMRPage() {
-  const testimonials = [
-    {
-      id: 1,
-      name: "John Smith",
-      title: "MBA Student",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=600&fit=crop",
-      mainImage:
-        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&h=800&fit=crop",
-      text: "Universities value students who can think critically and solve problems. Reviewers may assess a student's ability to analyze information, evaluate different perspectives, and apply logical reasoning to arrive at solutions.",
-    },
-    {
-      id: 2,
-      name: "Sarah Johnson",
-      title: "Engineering Graduate",
-      image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=600&fit=crop",
-      mainImage:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=800&fit=crop",
-      text: "The faculty at ISMR are exceptional mentors who go above and beyond to ensure student success. The infrastructure and learning environment have prepared me well for my career.",
-    },
-    {
-      id: 3,
-      name: "Michael Chen",
-      title: "Computer Science Student",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
-      mainImage:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=800&fit=crop",
-      text: "ISMR has provided me with cutting-edge technical knowledge and hands-on experience. The placement support and industry connections are outstanding.",
-    },
-    {
-      id: 4,
-      name: "Priya Sharma",
-      title: "Medical Student",
-      image:
-        "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=600&h=600&fit=crop",
-      mainImage:
-        "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&h=800&fit=crop",
-      text: "The comprehensive curriculum and practical exposure at ISMR have been invaluable. The research facilities and experienced professors create an ideal learning environment.",
-    },
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => handleNext(), 5000);
-    return () => clearInterval(interval);
-  }, [currentIndex]);
-
-  const handleNext = () => {
-    if (!isAnimating) {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-        setIsAnimating(false);
-      }, 300);
-    }
-  };
-
-  const handlePrev = () => {
-    if (!isAnimating) {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setCurrentIndex(
-          (prev) => (prev - 1 + testimonials.length) % testimonials.length
-        );
-        setIsAnimating(false);
-      }, 300);
-    }
-  };
-
-  const current = testimonials[currentIndex];
-
   return (
-    <div className="why-ismr-page">
+    <div className="font-poppins">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto+Slab:wght@900&display=swap');
-
-        .why-ismr-page {
-          font-family: 'Poppins', sans-serif;
-          color: #444;
+        /* Fonts */
+        .font-roboto-slab {
+          font-family: "Roboto Slab", serif;
+        }
+        .font-poppins {
+          font-family: "Poppins", sans-serif;
         }
 
+        /* Headings */
         .page-heading {
-          font-family: 'Roboto Slab', serif;
-          font-weight: 900;
+          font-family: "Roboto Slab", serif;
           font-size: 46px;
+          font-weight: 900;
           text-align: center;
           color: #0a2240;
         }
 
         .section-heading {
-          font-family: 'Roboto Slab', serif;
-          font-weight: 900;
+          font-family: "Roboto Slab", serif;
           font-size: 36px;
+          font-weight: 900;
           color: #0a2240;
           text-align: center;
         }
 
         .card-heading {
-          font-family: 'Roboto Slab', serif;
-          font-weight: 900;
+          font-family: "Roboto Slab", serif;
           font-size: 24px;
+          font-weight: 700;
           color: #0a2240;
         }
 
-        .body-text {
-          font-family: 'Poppins', sans-serif;
+        /* Body Text */
+        .body-text, .caption-text {
+          font-family: "Poppins", sans-serif;
           font-size: 16px;
-          line-height: 1.6;
+          color: #444;
         }
 
         .caption-text {
-          font-family: 'Poppins', sans-serif;
-          font-size: 14px;
           color: #666;
         }
 
         @media (max-width: 768px) {
-          .page-heading { font-size: 32px; }
+          .page-heading { font-size: 36px; }
           .section-heading { font-size: 28px; }
           .card-heading { font-size: 20px; }
-          .body-text { font-size: 15px; }
-          .caption-text { font-size: 13px; }
-        }
-
-        @media (max-width: 480px) {
-          .page-heading { font-size: 26px; }
-          .section-heading { font-size: 22px; }
-          .card-heading { font-size: 18px; }
-          .body-text { font-size: 14px; }
-          .caption-text { font-size: 12px; }
+          .body-text, .caption-text { font-size: 14px; }
         }
       `}</style>
 
-      {/* HERO SECTION */}
-      <section className="py-5 text-white text-center position-relative" style={{ background: "linear-gradient(135deg, #003366 0%, #003366 100%)" }}>
+      {/* Hero Section */}
+      <section
+        className="py-5 text-white text-center position-relative"
+        style={{
+          background: "linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%)",
+        }}
+      >
         <div
+          className="position-absolute top-0 end-0 w-100 h-100 opacity-25"
           style={{
-            position: "absolute",
-            top: 0,
-            right: 0,
-            width: "50%",
-            height: "100%",
-            opacity: 0.25,
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&h=600&fit=crop)",
+            backgroundImage: `url(${allsectionbg})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
           }}
         ></div>
-        <div className="container position-relative">
-          <h1 className="page-heading mb-3 text-white">WHY ISMR ?</h1>
-          <p className="body-text text-white-50 mb-0">
-            About • <span className="text-warning">ISMR</span>
+        <div className="container position-relative py-5">
+          <h1
+            className="mb-3"
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "40px",
+              fontWeight: 700,
+              margin: 0,
+            }}
+          >
+            Why <span className="text-warning">ISMR?</span>
+          </h1>
+          <p
+            className="mb-0"
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "15px",
+              marginTop: "0.5rem",
+            }}
+          >
+            About • <span className="text-warning">Why ISMR</span>
           </p>
         </div>
       </section>
 
-      {/* FEATURES SECTION */}
-      <section className="py-5 bg-light">
+      {/* Introduction Text */}
+      <div className="container pb-3">
+        <h2
+          style={{
+            fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+            fontSize: "32px",
+            fontWeight: 700,
+            color: "#0a2240",
+            marginTop: "3rem",
+            marginBottom: "1.5rem",
+          }}
+        >
+          TOP 25 REASONS TO BE AN ISMRIAN
+        </h2>
+        <p
+          style={{
+            fontSize: "18px",
+            color: "#444",
+            lineHeight: "1.7",
+            fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+            textAlign: "justify",
+            textJustify: "inter-word",
+          }}
+        >
+          ISMR Pune is a hub of innovation, learning, and excellence. Our
+          mission is to combine <strong>science and spirituality</strong> to
+          create an environment that fosters holistic development. From
+          state-of-the-art infrastructure to experienced faculty, ISMR is
+          committed to nurturing future leaders in every field. We provide a
+          comprehensive learning experience that prepares students for the
+          challenges of tomorrow.
+        </p>
+      </div>
+
+      {/* Features List */}
+      <section className="py-4 bg-light">
         <div className="container">
-          <div className="row g-4">
-            {[
-              {
-                title: "Academic Excellence",
-                desc: "Cutting-edge curriculum designed by industry experts with focus on practical learning.",
-                icon: <path d="M22 10v6M2 10l10-5 10 5-10 5z M6 12v5c3 3 9 3 12 0v-5" />,
-              },
-              {
-                title: "Expert Faculty",
-                desc: "Learn from distinguished professors and industry professionals with decades of experience.",
-                icon: (
-                  <>
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                    <circle cx="9" cy="7" r="4" />
-                  </>
-                ),
-              },
-              {
-                title: "World-Class Infrastructure",
-                desc: "State-of-the-art laboratories, libraries, and research facilities equipped with latest technology.",
-                icon: (
-                  <>
-                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-                  </>
-                ),
-              },
-              {
-                title: "Industry Connections",
-                desc: "Strong partnerships with leading companies ensuring excellent placement opportunities.",
-                icon: (
-                  <>
-                    <circle cx="12" cy="12" r="10" />
-                    <polyline points="12 6 12 12 16 14" />
-                  </>
-                ),
-              },
-              {
-                title: "Research Opportunities",
-                desc: "Engage in groundbreaking research projects with access to advanced research facilities.",
-                icon: (
-                  <>
-                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                    <path d="M2 12l10 5 10-5" />
-                  </>
-                ),
-              },
-              {
-                title: "Holistic Development",
-                desc: "Focus on personality development through sports, culture, and leadership programs.",
-                icon: (
-                  <>
-                    <polyline points="7 10 12 15 17 10" />
-                    <line x1="12" y1="15" x2="12" y2="3" />
-                  </>
-                ),
-              },
-            ].map((feature, index) => (
-              <div className="col-md-4 col-sm-6" key={index}>
+          <div className="row g-3">
+            {whyIsmrFeatures.map((feature) => (
+              <div className="col-12 col-md-6" key={feature.id}>
                 <div
-                  className="p-4 bg-white rounded-4 text-center h-100 shadow-sm"
+                  className="d-flex align-items-center p-3 bg-white rounded shadow-sm"
                   style={{
-                    transition: "transform 0.3s, box-shadow 0.3s",
-                    cursor: "pointer",
+                    transition: "all 0.3s ease",
+                    border: "1px solid #e0e0e0",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-10px)";
-                    e.currentTarget.style.boxShadow =
-                      "0 15px 30px rgba(0,0,0,0.15)";
+                    e.currentTarget.style.transform = "translateX(10px)";
+                    e.currentTarget.style.boxShadow = "0 4px 15px rgba(0,0,0,0.1)";
+                    e.currentTarget.style.borderColor = "#FFC333";
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow =
-                      "0 4px 10px rgba(0,0,0,0.08)";
+                    e.currentTarget.style.transform = "translateX(0)";
+                    e.currentTarget.style.boxShadow = "0 1px 3px rgba(0,0,0,0.12)";
+                    e.currentTarget.style.borderColor = "#e0e0e0";
                   }}
                 >
                   <div
-                    className="mx-auto mb-3 d-flex align-items-center justify-content-center rounded-circle"
+                    className="d-flex align-items-center justify-content-center flex-shrink-0"
                     style={{
-                      width: "80px",
-                      height: "80px",
-                      background: "#0a2240",
+                      width: "50px",
+                      height: "50px",
+                      backgroundColor: "#0a2240",
+                      borderRadius: "10px",
+                      marginRight: "1rem",
                     }}
                   >
-                    <svg
-                      width="40"
-                      height="40"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#FFC53D"
-                      strokeWidth="2"
-                    >
-                      {feature.icon}
-                    </svg>
+                    <FontAwesomeIcon
+                      icon={feature.icon}
+                      style={{ fontSize: "22px", color: "#FFC333" }}
+                    />
                   </div>
-                  <h3 className="card-heading mb-3">{feature.title}</h3>
-                  <p className="body-text">{feature.desc}</p>
+                  
+                  <h6
+                    className="mb-0"
+                    style={{
+                      fontSize: "15px",
+                      fontWeight: 600,
+                      color: "#0a2240",
+                      fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                      lineHeight: "1.4",
+                    }}
+                  >
+                    {feature.title}
+                  </h6>
                 </div>
               </div>
             ))}
@@ -270,69 +351,36 @@ function WhyISMRPage() {
         </div>
       </section>
 
-      {/* TESTIMONIALS SECTION */}
-      <section className="py-5" style={{ background: "#f1f5f9" }}>
-        <div className="container text-center mb-5">
-          <h2 className="section-heading mb-3">What Our Students Say</h2>
-          <div
-            style={{
-              width: "80px",
-              height: "4px",
-              background: "#FFC53D",
-              margin: "0 auto",
-              borderRadius: "2px",
-            }}
-          ></div>
-        </div>
-
-        <div className="container">
-          <div className="row align-items-center justify-content-center gy-4">
-            <div className="col-lg-5 col-md-6 text-center">
-              <img
-                src={current.mainImage}
-                alt={current.name}
-                className="img-fluid rounded-4 shadow"
-                style={{
-                  width: "100%",
-                  maxWidth: "400px",
-                  height: "auto",
-                }}
-              />
-            </div>
-            <div className="col-lg-6 col-md-6 text-start">
-              <p className="body-text fst-italic mb-4">"{current.text}"</p>
-              <div className="d-flex align-items-center gap-3 mb-4">
-                <img
-                  src={current.image}
-                  alt={current.name}
-                  className="rounded-circle border border-warning"
-                  style={{
-                    width: "60px",
-                    height: "60px",
-                    objectFit: "cover",
-                  }}
-                />
-                <div>
-                  <h4 className="card-heading mb-1">{current.name}</h4>
-                  <p className="caption-text mb-0">{current.title}</p>
-                </div>
-              </div>
-              <div className="d-flex gap-3">
-                <button
-                  onClick={handlePrev}
-                  className="btn btn-outline-primary rounded-pill px-4 py-2 fw-semibold"
-                >
-                  ← Prev
-                </button>
-                <button
-                  onClick={handleNext}
-                  className="btn btn-primary rounded-pill px-4 py-2 fw-semibold"
-                  style={{ background: "#0a2240", borderColor: "#0a2240" }}
-                >
-                  Next →
-                </button>
-              </div>
-            </div>
+      {/* CTA Section */}
+      <section className="py-5 bg-white">
+        <div className="container text-center">
+          <div className="p-5 rounded-4 shadow-sm bg-light">
+            <h2
+              className="mb-3"
+              style={{
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                fontSize: "32px",
+                fontWeight: 700,
+                color: "#0a2240",
+              }}
+            >
+              Join ISMR And Transform Your Future
+            </h2>
+            <p
+              className="mb-0"
+              style={{
+                fontSize: "18px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                color: "#444",
+                lineHeight: "1.7",
+              }}
+            >
+              Experience a world-class management education that prepares you
+              for leadership roles in the global business landscape. Our
+              comprehensive programs, expert faculty, and industry connections
+              ensure that you graduate with the skills and confidence to excel
+              in your chosen career path.
+            </p>
           </div>
         </div>
       </section>

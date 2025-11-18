@@ -1,38 +1,14 @@
 import React, { useState } from "react";
+import allsectionbg from "../../../assets/allsectionbg.jpg";
+import Faq from "../../Faq";
 
 export default function HowToApply() {
   const [tab, setTab] = useState("overview");
-  const [faqQuery, setFaqQuery] = useState("");
+ 
   const [openIndex, setOpenIndex] = useState(null);
 
-  const faqs = [
-    {
-      q: "Can I edit my application after submission?",
-      a: "No — once you finalise and submit the application, edits are not allowed. Please review all fields carefully before submitting. If you need to make corrections after submission, contact admissions immediately with your application ID.",
-    },
-    {
-      q: "What is the refund policy for the application fee?",
-      a: "Application fees are non-refundable. However, in rare cases (for example duplicate payments), you may contact support for review and possible refund.",
-    },
-    {
-      q: "How do I upload large files?",
-      a: "We accept PDF/JPG up to 5MB. If a document exceeds size limits, compress it to PDF or split across multiple uploads where allowed.",
-    },
-    {
-      q: "Who do I contact for help?",
-      a: "Contact our admissions team at +91 12345 67890 or admissions@college.edu. Provide your application ID and a short description of the issue for faster support.",
-    },
-    {
-      q: "Can I apply for multiple programmes in the same intake?",
-      a: "Yes — you can submit separate applications for different programmes. Each application requires a separate fee and unique submission.",
-    },
-  ];
+  
 
-  const filtered = faqs.filter(
-    (f) =>
-      f.q.toLowerCase().includes(faqQuery.toLowerCase()) ||
-      f.a.toLowerCase().includes(faqQuery.toLowerCase())
-  );
 
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
 
@@ -576,65 +552,64 @@ export default function HowToApply() {
         }
       `}</style>
 
-    
+      <section
+        className="py-5 text-white text-center position-relative"
+        style={{
+          background: "linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%)",
+        }}
+      >
+        <div
+          className="position-absolute top-0 end-0 w-100 h-100 opacity-25"
+          style={{
+            backgroundImage: `url(${allsectionbg})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        ></div>
 
- <section
-                className="py-5 text-white text-center position-relative"
-                style={{
-                    background: "linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%)",
-                }}
-            >
-                <div
-                    className="position-absolute top-0 end-0 w-50 h-100 opacity-25"
-                    style={{
-                        backgroundImage:
-                            "url(https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop)",
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                    }}
-                ></div>
+        <div className="container position-relative py-5">
+          <h1
+            className="mb-3"
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "40px",
+              fontWeight: 700,
+              margin: 0,
+            }}
+          >
+            How To <span className="text-warning">Apply</span>
+          </h1>
+          <p
+            className="mb-0"
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "15px",
+              marginTop: "0.5rem",
+            }}
+          >
+            Admissions • <span className="text-warning">How to Apply</span>
+          </p>
+        </div>
+      </section>
 
-                <div className="container position-relative py-5">
-                    <h1
-                        className="mb-3"
-                        style={{
-                            fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                            fontSize: "45px",
-                            fontWeight: 700,
-                            margin: 0,
-                        }}
-                    >
-                        How To <span className="text-warning">Apply</span>
-                    </h1>
-                    <p
-                        className="mb-0"
-                        style={{ 
-                            fontFamily: "'Inter', Arial, Helvetica, sans-serif", 
-                            fontSize: "16px", 
-                            marginTop: "0.5rem" 
-                        }}
-                    >
-                        Admissions • <span className="text-warning">How to Apply</span>
-                    </p>
-                </div>
-            </section>
-
-
-      <div className="content-area">
+        <div className="content-area">
         <div className="content-container">
           <div className="tabs" role="tablist" aria-label="Apply tabs">
-            {["overview", "steps", "documents", "fees", "faq"].map((tabName) => (
-              <button
-                key={tabName}
-                className={`tab-btn ${tab === tabName ? "active" : ""}`}
-                onClick={() => setTab(tabName)}
-                role="tab"
-                aria-selected={tab === tabName}
-                id={`tab-${tabName}`}
-              >
-                {tabName.charAt(0).toUpperCase() + tabName.slice(1).replace('-', ' & ')}
-              </button>
-            ))}
+            {["overview", "steps", "documents", "fees"].map(
+              (tabName) => (
+                <button
+                  key={tabName}
+                  className={`tab-btn ${tab === tabName ? "active" : ""}`}
+                  onClick={() => setTab(tabName)}
+                  role="tab"
+                  aria-selected={tab === tabName}
+                  id={`tab-${tabName}`}
+                >
+                  {tabName.charAt(0).toUpperCase() +
+                    tabName.slice(1).replace("-", " & ")}
+                </button>
+              )
+            )}
           </div>
 
           <div className="panel" role="region" aria-live="polite">
@@ -642,8 +617,9 @@ export default function HowToApply() {
               <div id="panel-overview" aria-labelledby="tab-overview">
                 <h2>Quick Overview</h2>
                 <p>
-                  Apply online using the institute application portal, upload required documents, pay the application fee
-                  and wait for the selection communication. Below are quick actions:
+                  Apply online using the institute application portal, upload
+                  required documents, pay the application fee and wait for the
+                  selection communication. Below are quick actions:
                 </p>
                 <div className="cta-row">
                   <button className="btn-primary">Apply Now</button>
@@ -655,15 +631,36 @@ export default function HowToApply() {
             {tab === "steps" && (
               <div id="panel-steps" aria-labelledby="tab-steps">
                 <h2>Step-by-Step Application Process</h2>
-                <p>Follow these simple steps to complete your application successfully:</p>
+                <p>
+                  Follow these simple steps to complete your application
+                  successfully:
+                </p>
                 <div className="step-list">
                   {[
-                    { title: "1. Choose Programme", desc: "Select the course and intake you want to apply for." },
-                    { title: "2. Create Account", desc: "Register on the application portal and verify your email." },
-                    { title: "3. Fill Application Form", desc: "Complete the online form with accurate personal and academic details." },
-                    { title: "4. Upload Documents", desc: "Upload scanned copies of mark sheets, ID and photos." },
-                    { title: "5. Pay Application Fee", desc: "Pay application fee using the payment gateway or bank transfer." },
-                    { title: "6. Submit & Track", desc: "Submit the application and track status from your dashboard." }
+                    {
+                      title: "1. Apply Online",
+                      desc: "Visit the official website, click on Apply Online, fill the application form, and pay the ₹1,080 registration fee.",
+                    },
+
+                    {
+                      title: "2. Counselling & Interview",
+                      desc: "Once the form is submitted, the admission cell initiates the counselling process followed by an interview session.",
+                    },
+
+                    {
+                      title: "3. Eligibility Verification",
+                      desc: "Admission consideration is based on valid entrance exam scores (MAH-MBA CET/CMAT/CAT/MAT/XAT/ATMA/GMAT) and a minimum of 50% marks in graduation (45% for reserved categories), along with performance in the telephonic interview.",
+                    },
+
+                    {
+                      title: "4. Seat Confirmation",
+                      desc: "After clearing counselling and interview, candidates must confirm their seat by paying ₹30,000 within four days of receiving the Admission Letter.",
+                    },
+
+                    {
+                      title: "5. Provisional Admission",
+                      desc: "Upon payment, admission is provisionally confirmed subject to completing remaining formalities and submitting all required documents.",
+                    },
                   ].map((step, index) => (
                     <div key={index} className="step">
                       <h3>{step.title}</h3>
@@ -677,15 +674,18 @@ export default function HowToApply() {
             {tab === "documents" && (
               <div id="panel-documents" aria-labelledby="tab-documents">
                 <h2>Required Documents</h2>
-                <p>Prepare clear scanned copies (PDF/JPG, max 5MB each). Typical documents required:</p>
+                <p>
+                  Prepare clear scanned copies (PDF/JPG, max 5MB each). Typical
+                  documents required:
+                </p>
                 <div className="doc-grid">
                   {[
                     "10th Marksheet & Certificate",
-                    "12th Marksheet / Diploma Certificate", 
+                    "12th Marksheet / Diploma Certificate",
                     "Graduation Degree (if applicable)",
                     "Recent Photograph & ID Proof",
                     "Entrance Scorecard (if applicable)",
-                    "Caste / Category Certificate (if applicable)"
+                    "Caste / Category Certificate (if applicable)",
                   ].map((doc, index) => (
                     <div key={index} className="doc">
                       {doc}
@@ -699,137 +699,30 @@ export default function HowToApply() {
               <div id="panel-fees" aria-labelledby="tab-fees">
                 <h2>Fees & Important Dates</h2>
                 <p>
-                  Application fee: <strong>₹1,000</strong> (online). Fee waiver for eligible categories may apply.
-                  Payment can be made via credit/debit card, net banking, or UPI.
+                  Application fee: <strong>₹1,000</strong> (online). Fee waiver
+                  for eligible categories may apply. Payment can be made via
+                  credit/debit card, net banking, or UPI.
                 </p>
                 <ul>
                   {[
                     "Application opens: June 1, 2024",
-                    "Application closes: August 15, 2024", 
+                    "Application closes: August 15, 2024",
                     "Entrance test (where applicable): September 5, 2024",
                     "Admission list announcement: September 25, 2024",
-                    "Last date for fee payment: October 10, 2024"
+                    "Last date for fee payment: October 10, 2024",
                   ].map((item, index) => (
                     <li key={index}>
-                      <strong>{item.split(": ")[0]}:</strong> {item.split(": ")[1]}
+                      <strong>{item.split(": ")[0]}:</strong>{" "}
+                      {item.split(": ")[1]}
                     </li>
                   ))}
                 </ul>
               </div>
             )}
-
-            {tab === "faq" && (
-              <div id="panel-faq" aria-labelledby="tab-faq">
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "24px" }}>
-                  <h2 style={{ margin: 0 }}>Frequently Asked Questions</h2>
-                  <span style={{ fontSize: "1rem", color: "#666", fontWeight: "600" }}>
-                    {filtered.length} result{filtered.length !== 1 ? 's' : ''}
-                  </span>
-                </div>
-
-                <div className="faq-wrap">
-                  <div className="faq-main">
-                    <div className="faq-search" role="search" aria-label="Search FAQs">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
-                        <path d="M21 21l-4.35-4.35" stroke="#999" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        <circle cx="11" cy="11" r="6" stroke="#999" strokeWidth="1.5" />
-                      </svg>
-
-                      <input
-                        placeholder="Search questions or keywords..."
-                        value={faqQuery}
-                        onChange={(e) => setFaqQuery(e.target.value)}
-                        aria-label="Search frequently asked questions"
-                      />
-
-                      {faqQuery && (
-                        <button
-                          onClick={() => setFaqQuery("")}
-                          aria-label="Clear search"
-                          style={{ border: 0, background: "transparent", cursor: "pointer", fontSize: "18px", color: "#999" }}
-                        >
-                          ✕
-                        </button>
-                      )}
-                    </div>
-
-                    <div className="accordion" role="list">
-                      {filtered.map((f, i) => (
-                        <div className="acc-item" key={i} role="listitem">
-                          <button
-                            className="acc-btn"
-                            onClick={() => toggle(i)}
-                            aria-expanded={openIndex === i}
-                            aria-controls={`faq-${i}-body`}
-                          >
-                            <div className="acc-q">
-                              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
-                                <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z" stroke="#0f3350" strokeWidth="1.2" fill="#f0f7ff" />
-                                <path
-                                  d="M10.2 8.5c.4-.9 1.3-1.4 2.3-1.4 1.4 0 2.3.8 2.3 1.9 0 1.1-.7 1.6-1.9 2.2-.9.4-1.1.8-1.1 1.4"
-                                  stroke="#0f3350"
-                                  strokeWidth="1"
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                />
-                              </svg>
-                              <span>{f.q}</span>
-                            </div>
-
-                            <svg
-                              className="chev"
-                              width="20"
-                              height="20"
-                              viewBox="0 0 24 24"
-                              style={{ transform: openIndex === i ? "rotate(180deg)" : "rotate(0deg)" }}
-                              aria-hidden
-                            >
-                              <path d="M6 9l6 6 6-6" stroke="#666" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                            </svg>
-                          </button>
-
-                          <div id={`faq-${i}-body`} className={`acc-body ${openIndex === i ? "" : "closed"}`}>
-                            <p style={{ margin: 0 }}>{f.a}</p>
-                          </div>
-                        </div>
-                      ))}
-
-                      {filtered.length === 0 && (
-                        <div style={{ padding: "40px", color: "#666", textAlign: "center", fontSize: "1.1rem" }}>
-                          No FAQs match your search. Try different keywords.
-                        </div>
-                      )}
-                    </div>
-                  </div>
-
-                  <aside className="faq-meta">
-                    <h4>Need Direct Help?</h4>
-                    <p>Contact our admissions team for personalized assistance. Please include your application ID for faster service.</p>
-                    <p>
-                      <strong>Phone:</strong><br />
-                      <a href="tel:+911234567890">+91 12345 67890</a>
-                    </p>
-                    <p>
-                      <strong>Email:</strong><br />
-                      <a href="mailto:admissions@college.edu">admissions@college.edu</a>
-                    </p>
-
-                    <div style={{ marginTop: "24px" }}>
-                      <h4 style={{ marginBottom: "16px" }}>Quick Links</h4>
-                      <ul>
-                        <li><a href="#">Application Portal</a></li>
-                        <li><a href="#">Fee Payment</a></li>
-                        <li><a href="#">Download Brochure</a></li>
-                        <li><a href="#">Contact Support</a></li>
-                      </ul>
-                    </div>
-                  </aside>
-                </div>
-              </div>
-            )}
           </div>
         </div>
       </div>
+      <Faq />
     </section>
   );
 }

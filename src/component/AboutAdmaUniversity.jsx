@@ -4,12 +4,16 @@ import AICTE from "../assets/Homeimg/AICTE.png";
 import DOTE from "../assets/Homeimg/DOTE.png";
 import NAAC from "../assets/Homeimg/NAAC.png";
 import SPPU from "../assets/Homeimg/SPPU.png";
+import LOAN from "../assets/Homeimg/LOAN.png";
+import AIMA from "../assets/Homeimg/AIMA.png";
+import AIMS from "../assets/Homeimg/AIMS.png";
+import AISE from "../assets/Homeimg/AISE.png";
 
 const AboutAdmaUniversity = () => {
   return (
     <section className="about-container">
       {/* Top Row */}
-    
+
       <h1 className="section-title text-center">Accreditations</h1>
 
       {/* Bottom Row */}
@@ -31,6 +35,29 @@ const AboutAdmaUniversity = () => {
           <div className="logo-card">
             <img src={NAAC} alt="NAAC Logo" className="logo-image" />
             <span>National Assessment and Accreditation Council</span>
+          </div>
+        </div>
+      </div>
+      <div className="about-bottom">
+        <div className="logos-section">
+          <div className="logo-card">
+            {/* add specific class so we can style AICTE separately */}
+            <img src={AIMA} alt="AIMA Logo" className="logo-image aima" />
+            <span>All India Management Association</span>
+          </div>
+          <div className="logo-card">
+            <img src={AIMS} alt="DOTE Logo" className="logo-image" />
+            <span>Association of Indian
+Management Schools</span>
+          </div>
+          <div className="logo-card">
+            <img src={AISE} alt="AISE Logo" className="logo-image" />
+            <span>All India Survey on
+Higher Education</span>
+          </div>
+          <div className="logo-card">
+            <img src={LOAN} alt="LOAN Logo" className="logo-image" />
+            <span>Education Loan Facility: tie-up with Axis Bank</span>
           </div>
         </div>
       </div>

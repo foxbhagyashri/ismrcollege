@@ -2,7 +2,8 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrophy } from "@fortawesome/free-solid-svg-icons";
-import awardImg from "../../../assets/Trophyimg.png"; 
+import allsectionbg from "../../../assets/allsectionbg.jpg";
+import TrophyImg from "../../../assets/Trophyimg.png"; 
 function AwardsRankings() {
   const awards = [
     {
@@ -66,7 +67,7 @@ function AwardsRankings() {
       description: "QS World University Rankings",
     },
     {
-      rank: "A+",
+      rank: "B+",
       category: "NAAC Accreditation",
       description: "Highest Grade Accreditation",
     },
@@ -167,78 +168,319 @@ function AwardsRankings() {
         }}
       >
         <div
-          className="position-absolute top-0 end-0 w-50 h-100 opacity-25"
+          className="position-absolute top-0 end-0 w-100 h-100 opacity-25"
           style={{
-             backgroundImage: `url(${awardImg})`, 
+            backgroundImage: `url(${allsectionbg})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
           }}
         ></div>
 
         <div className="container position-relative py-5">
-          <h1 className="page-heading text-white mb-3">
-            Our <span className="text-warning">Legacy</span> of Excellence
+          <h1
+            className="mb-3"
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "40px",
+              fontWeight: 700,
+              margin: 0,
+            }}
+          >
+            Awards & <span className="text-warning">Rankings</span>
           </h1>
-          <p className="body-text text-white-50 mb-0">
+          <p
+            className="mb-0"
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "15px",
+              marginTop: "0.5rem",
+            }}
+          >
             About • <span className="text-warning">Awards & Rankings</span>
           </p>
         </div>
       </section>
 
-      {/* TROPHY SHOWCASE */}
+      {/* TROPHY SHOWCASE - Award of Excellence */}
       <section className="py-5 bg-light">
-        <div className="container text-center">
-          <h2 className="section-heading mb-4">
-            Our Pride – The{" "}
-            <span className="text-warning">Trophy of Excellence</span>
+        <div className="container">
+          <h2
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "32px",
+              fontWeight: 700,
+              color: "#0a2240",
+              marginTop: "2rem",
+              marginBottom: "1.5rem",
+            }}
+          >
+            Award of <span className="text-warning">Excellence</span>
           </h2>
           <p
-            className="caption-text mb-5 mx-auto"
-            style={{ maxWidth: "800px" }}
+            style={{
+              fontSize: "18px",
+              color: "#444",
+              lineHeight: "1.7",
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              textAlign: "justify",
+              textJustify: "inter-word",
+              marginBottom: "3rem",
+            }}
           >
-            A symbol of dedication, innovation, and excellence. This trophy
-            represents the countless achievements and milestones of ISMR
-            throughout the years.
+            Our awards and recognitions are designed to exemplify the
+            dedication, best practices, ingenuity, and excellence in our
+            academic pursuits. These accolades reflect our commitment to
+            providing world-class management education and nurturing future
+            business leaders.
           </p>
 
-          <div className="d-flex justify-content-center my-5">
-            <div
-              className="card shadow-lg border-0 rounded-4 d-flex flex-column flex-md-row align-items-center"
-              style={{ maxWidth: "1100px", width: "100%" }}
-            >
+          {/* Trophy with Awards on Both Sides */}
+          <div className="row align-items-center g-4">
+            {/* Left Side Awards */}
+            <div className="col-12 col-lg-4">
               <div
-                className="d-flex justify-content-center align-items-center p-4"
+                className="p-4 mb-3"
                 style={{
-                  width: "100%",
-                  maxWidth: "400px",
-                  height: "250px",
-                  color: "#FFC107",
-                  fontSize: "6rem",
+                  border: "2px solid #0a2240",
+                  borderRadius: "12px",
+                  backgroundColor: "#ffffff",
                 }}
               >
-                <FontAwesomeIcon icon={faTrophy} />
+                <div className="d-flex align-items-start gap-3">
+                  <FontAwesomeIcon
+                    icon={faTrophy}
+                    style={{ fontSize: "24px", color: "#0a2240", marginTop: "4px" }}
+                  />
+                  <p
+                    style={{
+                      fontSize: "16px",
+                      fontWeight: 600,
+                      color: "#0a2240",
+                      marginBottom: 0,
+                      fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                      lineHeight: "1.5",
+                    }}
+                  >
+                    Awarded "Business School of the Year 2019" by Media Partner
+                    THE ACADEMIC INSIGHTS
+                  </p>
+                </div>
               </div>
-              <div className="card-body text-center text-md-start p-4 p-md-5">
-                <h3 className="card-heading mb-3">Award of Excellence</h3>
-                <p className="body-text mb-0">
-                  Honoring our continuous success and unwavering commitment to
-                  excellence, leadership, and innovation.
-                </p>
+
+              <div
+                className="p-4 mb-3"
+                style={{
+                  border: "2px solid #0a2240",
+                  borderRadius: "12px",
+                  backgroundColor: "#ffffff",
+                }}
+              >
+                <div className="d-flex align-items-start gap-3">
+                  <FontAwesomeIcon
+                    icon={faTrophy}
+                    style={{ fontSize: "24px", color: "#0a2240", marginTop: "4px" }}
+                  />
+                  <p
+                    style={{
+                      fontSize: "16px",
+                      fontWeight: 600,
+                      color: "#0a2240",
+                      marginBottom: 0,
+                      fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                      lineHeight: "1.5",
+                    }}
+                  >
+                    Awarded "Excellence in Students Placements for 2018" by
+                    Education World-Wide India
+                  </p>
+                </div>
+              </div>
+
+              <div
+                className="p-4"
+                style={{
+                  border: "2px solid #0a2240",
+                  borderRadius: "12px",
+                  backgroundColor: "#ffffff",
+                }}
+              >
+                <div className="d-flex align-items-start gap-3">
+                  <FontAwesomeIcon
+                    icon={faTrophy}
+                    style={{ fontSize: "24px", color: "#0a2240", marginTop: "4px" }}
+                  />
+                  <p
+                    style={{
+                      fontSize: "16px",
+                      fontWeight: 600,
+                      color: "#0a2240",
+                      marginBottom: 0,
+                      fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                      lineHeight: "1.5",
+                    }}
+                  >
+                    Winner of "Best Business School Award in 2017" by 24 MRC
+                    Award – For Excellence in Higher Education.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Center Trophy Image */}
+            <div className="col-12 col-lg-4">
+              <div className="text-center">
+                <img
+                  src={TrophyImg}
+                  alt="Trophy of Excellence"
+                  style={{
+                    width: "100%",
+                    maxWidth: "280px",
+                    height: "auto",
+                    transition: "all 0.6s ease",
+                    transform: "perspective(1000px) rotateY(0deg) rotateX(0deg)",
+                    transformStyle: "preserve-3d",
+                    filter: "drop-shadow(0 10px 20px rgba(0,0,0,0.3))",
+                  }}
+                  onMouseMove={(e) => {
+                    const rect = e.currentTarget.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = ((y - centerY) / centerY) * -15;
+                    const rotateY = ((x - centerX) / centerX) * 15;
+                    e.currentTarget.style.transform = `perspective(1000px) rotateY(${rotateY}deg) rotateX(${rotateX}deg) scale(1.1)`;
+                    e.currentTarget.style.filter = "drop-shadow(0 20px 40px rgba(0,0,0,0.4))";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1)";
+                    e.currentTarget.style.filter = "drop-shadow(0 10px 20px rgba(0,0,0,0.3))";
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* Right Side Awards (Duplicate) */}
+            <div className="col-12 col-lg-4">
+              <div
+                className="p-4 mb-3"
+                style={{
+                  border: "2px solid #0a2240",
+                  borderRadius: "12px",
+                  backgroundColor: "#ffffff",
+                }}
+              >
+                <div className="d-flex align-items-start gap-3">
+                  <FontAwesomeIcon
+                    icon={faTrophy}
+                    style={{ fontSize: "24px", color: "#0a2240", marginTop: "4px" }}
+                  />
+                  <p
+                    style={{
+                      fontSize: "16px",
+                      fontWeight: 600,
+                      color: "#0a2240",
+                      marginBottom: 0,
+                      fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                      lineHeight: "1.5",
+                    }}
+                  >
+                    Awarded "Business School of the Year 2019" by Media Partner
+                    THE ACADEMIC INSIGHTS
+                  </p>
+                </div>
+              </div>
+
+              <div
+                className="p-4 mb-3"
+                style={{
+                  border: "2px solid #0a2240",
+                  borderRadius: "12px",
+                  backgroundColor: "#ffffff",
+                }}
+              >
+                <div className="d-flex align-items-start gap-3">
+                  <FontAwesomeIcon
+                    icon={faTrophy}
+                    style={{ fontSize: "24px", color: "#0a2240", marginTop: "4px" }}
+                  />
+                  <p
+                    style={{
+                      fontSize: "16px",
+                      fontWeight: 600,
+                      color: "#0a2240",
+                      marginBottom: 0,
+                      fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                      lineHeight: "1.5",
+                    }}
+                  >
+                    Awarded "Excellence in Students Placements for 2018" by
+                    Education World-Wide India
+                  </p>
+                </div>
+              </div>
+
+              <div
+                className="p-4"
+                style={{
+                  border: "2px solid #0a2240",
+                  borderRadius: "12px",
+                  backgroundColor: "#ffffff",
+                }}
+              >
+                <div className="d-flex align-items-start gap-3">
+                  <FontAwesomeIcon
+                    icon={faTrophy}
+                    style={{ fontSize: "24px", color: "#0a2240", marginTop: "4px" }}
+                  />
+                  <p
+                    style={{
+                      fontSize: "16px",
+                      fontWeight: 600,
+                      color: "#0a2240",
+                      marginBottom: 0,
+                      fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                      lineHeight: "1.5",
+                    }}
+                  >
+                    Winner of "Best Business School Award in 2017" by 24 MRC
+                    Award – For Excellence in Higher Education.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* AWARDS GRID */}
-      <section className="py-5 bg-light">
-  <div className="container text-center">
-    <h1 className="section-heading mb-3" style={{ fontFamily: "Roboto, sans-serif", fontWeight: "700", fontSize: "1.8rem" }}>
-      Our Rankings
-    </h1>
-    <p className="caption-text mb-5" style={{ fontFamily: "Poppins, sans-serif", fontSize: "0.95rem", color: "#555" }}>
-      Consistently ranked among the top institutions
-    </p>
+      {/* RANKINGS SECTION */}
+      <section className="py-5 bg-white">
+        <div className="container">
+          <h2
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "32px",
+              fontWeight: 700,
+              color: "#0a2240",
+              marginBottom: "1.5rem",
+            }}
+          >
+            Our Rankings
+          </h2>
+          <p
+            style={{
+              fontSize: "18px",
+              color: "#444",
+              lineHeight: "1.7",
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              textAlign: "justify",
+              textJustify: "inter-word",
+              marginBottom: "2rem",
+            }}
+          >
+            Consistently ranked among the top institutions for excellence in
+            management education, research, and placement opportunities.
+          </p>
 
     <div className="row g-4">
       {rankings.map((ranking, index) => {
@@ -298,19 +540,57 @@ function AwardsRankings() {
 
       {/* RECOGNITION SECTION */}
       <section className="py-5 bg-light">
-        <div className="container text-center">
-          <h2 className="section-heading mb-4">Recognitions</h2>
-          <p className="caption-text mb-5">
-            Honors and approvals that validate our excellence and standards
+        <div className="container">
+          <h2
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "32px",
+              fontWeight: 700,
+              color: "#0a2240",
+              marginBottom: "1.5rem",
+            }}
+          >
+            Recognitions
+          </h2>
+          <p
+            style={{
+              fontSize: "18px",
+              color: "#444",
+              lineHeight: "1.7",
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              textAlign: "justify",
+              textJustify: "inter-word",
+              marginBottom: "2rem",
+            }}
+          >
+            Honors and approvals that validate our excellence and standards in
+            management education and institutional development.
           </p>
-          <div className="row g-4 justify-content-center">
+          <div className="row g-4">
             {recognitions.map((rec) => (
               <div className="col-12 col-md-4" key={rec.id}>
                 <div className="p-4 bg-white shadow-sm rounded-4 h-100">
-                  <h5 className="card-heading text-primary mb-2">
+                  <h5
+                    style={{
+                      fontSize: "20px",
+                      fontWeight: 700,
+                      color: "#0a2240",
+                      marginBottom: "0.5rem",
+                      fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                    }}
+                  >
                     {rec.title}
                   </h5>
-                  <p className="body-text mb-0">{rec.description}</p>
+                  <p
+                    style={{
+                      fontSize: "16px",
+                      color: "#666",
+                      marginBottom: 0,
+                      fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                    }}
+                  >
+                    {rec.description}
+                  </p>
                 </div>
               </div>
             ))}
