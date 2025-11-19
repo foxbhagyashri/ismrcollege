@@ -85,13 +85,13 @@ const Marquee = () => {
         </div>
       </div>
 
-      <div className="marquee-container p-3">
+      <div className="marquee-container p-5">
         <div className="marquee-content">
           {announcements.concat(announcements).map((announcement, index) => (
             <div key={index} className="announcement-card">
               <div className="card shadow-sm h-100">
                 <div className="card-body">
-                  <div className="d-flex justify-content-between align-items-start mb-2">
+                  <div className="d-flex justify-content-between align-items-start mb-4">
                     <span className={`badge ${getBadgeClass(announcement.type)}`}>
                       {getBadgeText(announcement.type)}
                     </span>
@@ -100,9 +100,7 @@ const Marquee = () => {
                   <h6 className="card-title">{announcement.title}</h6>
                   <p className="card-text">{announcement.message}</p>
                 </div>
-                <div className="card-footer text-center">
-                  <button className="btn btn-sm btn-outline-primary">Read More</button>
-                </div>
+                
               </div>
             </div>
           ))}

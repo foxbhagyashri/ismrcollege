@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import allsectionbg from "../../../assets/allsectionbg.jpg";
 
 function Contactus() {
   const [email, setEmail] = useState("");
@@ -53,7 +54,6 @@ function Contactus() {
         .contact-page {
           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
           background-color: #f8f9fa;
-          padding: 60px 0;
         }
 
         .page-title {
@@ -273,7 +273,48 @@ function Contactus() {
         rel="stylesheet"
       />
 
-      <div className="container">
+      {/* Header Section */}
+      <section
+        className="py-5 text-white text-center position-relative"
+        style={{
+          background: "linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%)",
+        }}
+      >
+        <div
+          className="position-absolute top-0 end-0 w-100 h-100 opacity-25"
+          style={{
+            backgroundImage: `url(${allsectionbg})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        ></div>
+
+        <div className="container position-relative py-5">
+          <h1
+            className="mb-3"
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "40px",
+              fontWeight: 700,
+              margin: 0,
+            }}
+          >
+            Contact <span className="text-warning">Us</span>
+          </h1>
+          <p
+            className="mb-0"
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "15px",
+              marginTop: "0.5rem",
+            }}
+          >
+            Contact • <span className="text-warning">Reach Us</span>
+          </p>
+        </div>
+      </section>
+
+      <div className="container" style={{ paddingTop: "60px" }}>
         <h1 className="page-title">How to Reach</h1>
 
         {/* Contact Cards */}

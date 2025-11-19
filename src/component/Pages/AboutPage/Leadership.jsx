@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import allsectionbg from "../../../assets/allsectionbg.jpg";
 
 const leadershipTeam = [
   {
@@ -131,26 +132,37 @@ function Leadership() {
       <section
         className="py-5 text-white text-center position-relative"
         style={{
-          background: "linear-gradient(135deg, #003366 0%, #003366 100%)",
+          background: "linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%)",
         }}
       >
         <div
+          className="position-absolute top-0 end-0 w-100 h-100 opacity-25"
           style={{
-            position: "absolute",
-            top: 0,
-            right: 0,
-            width: "50%",
-            height: "100%",
-            opacity: 0.25,
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&h=600&fit=crop)",
+            backgroundImage: `url(${allsectionbg})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
           }}
         ></div>
-        <div className="container position-relative">
-          <h1 className="page-heading text-white mb-3">Leadership Team</h1>
-          <p className="body-text text-white-50 mb-0">
+        <div className="container position-relative py-5">
+          <h1
+            className="mb-3"
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "40px",
+              fontWeight: 700,
+              margin: 0,
+            }}
+          >
+            Leadership <span className="text-warning">Team</span>
+          </h1>
+          <p
+            className="mb-0"
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "15px",
+              marginTop: "0.5rem",
+            }}
+          >
             About • <span className="text-warning">Leadership Team</span>
           </p>
         </div>
@@ -161,7 +173,7 @@ function Leadership() {
          <div className="container pb-3">
            <h2
           style={{
-            fontFamily: "Roboto Slab, serif",
+            fontFamily: "'Inter', Arial, Helvetica, sans-serif",
             fontSize: "32px",
             fontWeight: 700,
             color: "#0a2240",
@@ -171,7 +183,7 @@ function Leadership() {
         >
           Our Executive Board
         </h2>
-        <p style={{ fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+        <p style={{ fontSize: "18px", color: "#444", lineHeight: "1.7", fontFamily: "'Inter', Arial, Helvetica, sans-serif", textAlign: "justify", textJustify: "inter-word" }}>
           ISMR Pune is a hub of innovation, learning, and excellence. Our
           mission is to combine <strong>science and spirituality</strong>
           to create an environment that fosters holistic development. From
@@ -189,14 +201,14 @@ function Leadership() {
           <div className="row g-4">
             {leadershipTeam.map((leader) => (
               <div className="col-12 col-md-6 col-lg-4" key={leader.id}>
-                <div className="card h-100 border-0 shadow-sm rounded-3">
+                <div className="card h-100 border-0 shadow-sm" style={{ borderRadius: "16px", overflow: "hidden" }}>
                   <div className="overflow-hidden position-relative">
                     <img
                       src={leader.image}
                       alt={leader.name}
                       className="w-100"
                       style={{
-                        height: "440px",
+                        height: "320px",
                         objectFit: "cover",
                         filter: "grayscale(100%)",
                         transition: "0.5s ease",
@@ -212,30 +224,49 @@ function Leadership() {
                     />
                   </div>
 
-                  <div className="card-body text-center">
-                    <h5 className="card-heading mb-1">{leader.name}</h5>
-                    <p className="text-danger fw-semibold mb-3 body-text">
+                  <div className="card-body text-center" style={{ padding: "1.25rem" }}>
+                    <h5 className="card-heading mb-1" style={{ fontSize: "20px" }}>{leader.name}</h5>
+                    <p className="text-danger fw-semibold mb-2" style={{ fontSize: "14px" }}>
                       {leader.position}
                     </p>
 
-                    <p className="mb-1 body-text">
+                    <p className="mb-1" style={{ fontSize: "13px", color: "#666" }}>
                       <strong className="text-secondary">Qualification:</strong>{" "}
                       {leader.qualification}
                     </p>
-                    <p className="mb-3 body-text">
+                    <p className="mb-2" style={{ fontSize: "13px", color: "#666" }}>
                       <strong className="text-secondary">Experience:</strong>{" "}
                       {leader.experience}
                     </p>
 
-                    <hr />
-                    <p className="caption-text small mb-1">
+                    <hr style={{ margin: "0.75rem 0" }} />
+                    <p className="small mb-2" style={{ fontSize: "13px", color: "#666" }}>
                       <i className="bi bi-envelope me-2"></i>
                       {leader.email}
                     </p>
-                    <p className="caption-text small">
-                      <i className="bi bi-telephone me-2"></i>
-                      {leader.phone}
-                    </p>
+                    
+                    <button
+                      className="btn btn-sm"
+                      style={{
+                        backgroundColor: "#002A5C",
+                        color: "#ffffffff",
+                        fontSize: "14px",
+                        padding: "6px 20px",
+                        borderRadius: "10px",
+                        fontWeight: 600,
+                        transition: "all 0.3s ease",
+                      }}
+                      onMouseEnter={(e) => {
+                    
+                        e.currentTarget.style.color = "#eaecefff";
+                      }}
+                      onMouseLeave={(e) => {
+                       
+                        e.currentTarget.style.color = "#ffffffff";
+                      }}
+                    >
+                      Read More
+                    </button>
                   </div>
                 </div>
               </div>
@@ -248,10 +279,10 @@ function Leadership() {
       <section className="py-5 bg-white">
         <div className="container text-center">
           <div className="p-5 rounded-4 shadow-sm bg-light">
-            <h2 className="section-heading mb-3">
+            <h2 className="mb-3" style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif", fontSize: "32px", fontWeight: 700, color: "#0a2240" }}>
               Leading with Vision and Excellence
             </h2>
-            <p className="body-text mb-0">
+            <p className="mb-0" style={{ fontSize: "18px", fontFamily: "'Inter', Arial, Helvetica, sans-serif", color: "#444", lineHeight: "1.7" }}>
               Our leadership team brings together decades of experience in
               academia, research, and administration. United by a shared
               commitment to educational excellence, they guide our institution

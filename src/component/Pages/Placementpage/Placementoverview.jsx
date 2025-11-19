@@ -7,6 +7,7 @@ import {
   GraphUp,
   FileEarmarkSpreadsheet,
 } from "react-bootstrap-icons";
+import allsectionbg from "../../../assets/allsectionbg.jpg";
 
 function EnhancedPlacementStatus() {
   const [activeYear, setActiveYear] = useState("2024-25 (ONGOING)");
@@ -255,24 +256,38 @@ function Placementoverview() {
       <section
         className="py-5 text-white text-center position-relative"
         style={{
-          background: "linear-gradient(135deg, #0a2240 0%, #003366 100%)",
+          background: "linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%)",
           fontFamily: "'Inter', Arial, Helvetica, sans-serif",
         }}
       >
+        <div
+          className="position-absolute top-0 end-0 w-100 h-100 opacity-25"
+          style={{
+            backgroundImage: `url(${allsectionbg})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        ></div>
+
         <div className="container position-relative py-5">
           <h1
-            className="mb-3 text-uppercase"
+            className="mb-3"
             style={{
-              fontSize: "30px",
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "40px",
               fontWeight: 700,
-              whiteSpace: "nowrap",
+              margin: 0,
             }}
           >
             Placement <span className="text-warning">Overview</span>
           </h1>
           <p
-            className="text-white-50 mb-0 text-center"
-            style={{ fontSize: "13px" }}
+            className="mb-0"
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "15px",
+              marginTop: "0.5rem",
+            }}
           >
             Placement • <span className="text-warning">Placement Overview</span>
           </p>

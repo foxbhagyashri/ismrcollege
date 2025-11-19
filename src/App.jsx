@@ -132,7 +132,7 @@ function App() {
         {/* Contact us Page */}
         <Route path="/Contactus" element={<Contactus />} />
       </Routes>
-         <Faq />
+         {/* <Faq /> */}
       <Footer />
       {/* <Contactus/> */}
     </Router>

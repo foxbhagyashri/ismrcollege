@@ -40,7 +40,7 @@ const Travel = () => {
       <div className="content active">
         <div className="title"> 
           <p>
-            Shri Balaji Education Society's 
+            Sri Balaji Education Society's 
           </p>
           <h1>
             INTERNATIONAL SCHOOL OF<br /> MANAGEMENT AND RESEARCH

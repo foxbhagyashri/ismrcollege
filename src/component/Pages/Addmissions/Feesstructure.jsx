@@ -1,30 +1,12 @@
 import React, { useState } from "react";
+import allsectionbg from "../../../assets/allsectionbg.jpg";
+import Faq from "../../Faq";
 
 export default function FeesStructure() {
-    const [programme, setProgramme] = useState("B.Sc Computer Science");
+    const [programme, setProgramme] = useState("MBA (Finance)");
     const [view, setView] = useState("annual"); // annual | semester
 
     const programmes = [
-        {
-            name: "B.Sc Computer Science",
-            type: "Undergraduate",
-            currency: "INR",
-            fees: {
-                annual: [
-                    { label: "Tuition Fee", amount: 80000 },
-                    { label: "Development & Lab Fee", amount: 8000 },
-                    { label: "Library Fee", amount: 2000 },
-                    { label: "Exam Fee", amount: 1500 },
-                    { label: "Student Activity Fee", amount: 1000 },
-                ],
-                semester: [
-                    { label: "Tuition Fee (per sem)", amount: 40000 },
-                    { label: "Lab Fee (per sem)", amount: 4000 },
-                    { label: "Exam Fee (per sem)", amount: 750 },
-                    { label: "Student Activity Fee (per sem)", amount: 500 },
-                ],
-            },
-        },
         {
             name: "MBA (Finance)",
             type: "Postgraduate",
@@ -45,18 +27,20 @@ export default function FeesStructure() {
             },
         },
         {
-            name: "M.A. English",
-            type: "Postgraduate",
+            name: "BCA",
+            type: "Undergraduate",
             currency: "INR",
             fees: {
                 annual: [
-                    { label: "Tuition Fee", amount: 50000 },
-                    { label: "Library & Resources", amount: 3000 },
+                    { label: "Tuition Fee", amount: 70000 },
+                    { label: "Development & Lab Fee", amount: 7000 },
+                    { label: "Library Fee", amount: 2000 },
                     { label: "Exam Fee", amount: 1500 },
                 ],
                 semester: [
-                    { label: "Tuition Fee (per sem)", amount: 25000 },
-                    { label: "Library Fee (per sem)", amount: 1500 },
+                    { label: "Tuition Fee (per sem)", amount: 35000 },
+                    { label: "Lab Fee (per sem)", amount: 3500 },
+                    { label: "Library Fee (per sem)", amount: 1000 },
                     { label: "Exam Fee (per sem)", amount: 750 },
                 ],
             },
@@ -113,10 +97,9 @@ export default function FeesStructure() {
                 }}
             >
                 <div
-                    className="position-absolute top-0 end-0 w-50 h-100 opacity-25"
+                    className="position-absolute top-0 end-0 w-100 h-100 opacity-25"
                     style={{
-                        backgroundImage:
-                            "url(https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop)",
+                        backgroundImage: `url(${allsectionbg})`,
                         backgroundPosition: "center",
                         backgroundSize: "cover",
                     }}
@@ -127,7 +110,7 @@ export default function FeesStructure() {
                         className="mb-3"
                         style={{
                             fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                            fontSize: "45px",
+                            fontSize: "40px",
                             fontWeight: 700,
                             margin: 0,
                         }}
@@ -138,7 +121,7 @@ export default function FeesStructure() {
                         className="mb-0"
                         style={{ 
                             fontFamily: "'Inter', Arial, Helvetica, sans-serif", 
-                            fontSize: "16px", 
+                            fontSize: "15px", 
                             marginTop: "0.5rem" 
                         }}
                     >
@@ -149,6 +132,47 @@ export default function FeesStructure() {
 
             {/* -------- MAIN CONTENT -------- */}
             <div className="container pb-5" style={{ marginTop: "3rem" }}>
+                {/* MBA Information Section */}
+                <div
+                    className="rounded-3 p-4 mb-4 text-center"
+                    style={{
+                        backgroundColor: "#f8f9fa",
+                        border: "2px solid #FFC333",
+                    }}
+                >
+                    <h3
+                        style={{
+                            fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                            fontSize: "20px",
+                            fontWeight: "700",
+                            color: "#0a2240",
+                            marginBottom: "0.5rem",
+                        }}
+                    >
+                        MBA Approved by AICTE, Affiliated to Savitribai Phule Pune University, Recognized by Govt. of Maharashtra
+                    </h3>
+                    <p
+                        style={{
+                            fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                            fontSize: "16px",
+                            color: "#444",
+                            marginBottom: "0.5rem",
+                        }}
+                    >
+                        <strong>Institute code - MB6798 - International School of Management & Research</strong>
+                    </p>
+                    <p
+                        style={{
+                            fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                            fontSize: "16px",
+                            color: "#444",
+                            margin: 0,
+                        }}
+                    >
+                        Course Fee: <strong>As per Shikshan Shulka Samiti</strong>
+                    </p>
+                </div>
+
                 <div 
                     className="rounded-3 p-4 p-md-5"
                     style={{
@@ -483,6 +507,7 @@ export default function FeesStructure() {
                     </div>
                 </div>
             </div>
+            <Faq />
         </div>
     );
 }
