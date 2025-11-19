@@ -205,8 +205,8 @@ const styles = {
     marginBottom: "60px",
   },
   title: {
-    fontSize: "3rem",
-    fontWeight: "800",
+    fontSize: "40px",
+    fontWeight: "700",
     color: "#002147",
     marginBottom: "16px",
     background: "linear-gradient(135deg, #002147 0%, #1a365d 100%)",
@@ -214,8 +214,7 @@ const styles = {
     WebkitTextFillColor: "transparent",
   },
   subtitle: {
-    fontSize: "1.2rem",
- 
+    fontSize: "18px",
     maxWidth: "600px",
     margin: "0 auto",
     lineHeight: "1.6",
@@ -274,7 +273,7 @@ const styles = {
     flexGrow: 1,
   },
   text: {
-    fontSize: "13px",
+    fontSize: "18px",
     lineHeight: "1.7",
     color: "#4a5568",
     marginBottom: "25px",
@@ -286,13 +285,13 @@ const styles = {
     marginTop: "auto",
   },
   name: {
-    fontSize: "14px",
+    fontSize: "18px",
     fontWeight: "700",
     color: "#002147",
     marginBottom: "5px",
   },
   role: {
-    fontSize: "14px",
+    fontSize: "18px",
     color: "#718096",
     margin: "0 0 12px 0",
     fontWeight: "500",
@@ -322,7 +321,7 @@ const styles = {
     backgroundColor: "#002147",
     color: "#fff",
     border: "none",
-    fontSize: "18px",
+    fontSize: "12px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",

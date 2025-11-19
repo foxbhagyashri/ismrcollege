@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import allsectionbg from "../../../assets/allsectionbg.jpg";
 import { BookFill } from "react-bootstrap-icons";
 
 function ProgramOfferedPage() {
@@ -238,15 +239,13 @@ function ProgramOfferedPage() {
       <section
         className="py-5 text-white text-center position-relative"
         style={{
-          background: "linear-gradient(135deg, #0a2240 0%, #0a2240 100%)",
-          fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+          background: "linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%)",
         }}
       >
         <div
-          className="position-absolute top-0 end-0 w-50 h-100 opacity-25"
+          className="position-absolute top-0 end-0 w-100 h-100 opacity-25"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&h=800&fit=crop)",
+            backgroundImage: `url(${allsectionbg})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
           }}
@@ -259,6 +258,7 @@ function ProgramOfferedPage() {
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               fontSize: "40px",
               fontWeight: 700,
+              margin: 0,
             }}
           >
             Program <span className="text-warning">Offered</span>
@@ -267,7 +267,7 @@ function ProgramOfferedPage() {
             className="mb-0"
             style={{
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-              fontSize: "16px",
+              fontSize: "15px",
               marginTop: "0.5rem",
             }}
           >

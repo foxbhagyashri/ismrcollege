@@ -60,7 +60,7 @@
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  min-height: 280px;
+  min-height: 320px;
   width: 100%;
 }
 
@@ -123,6 +123,61 @@
   font-size: 15px;
   line-height: 1.6;
   max-width: 280px;
+  margin-bottom: 20px;
+}
+
+/* View More Button */
+.view-more-btn {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Button styles for odd cards (blue background) */
+.specialization-card:nth-child(odd) .view-more-btn {
+  background: #FFC333;
+  color: #002A5C;
+}
+
+.specialization-card:nth-child(odd) .view-more-btn:hover {
+  background: #ffffff;
+  color: #002A5C;
+  transform: translateX(5px);
+  box-shadow: 0 6px 20px rgba(255, 195, 51, 0.4);
+}
+
+/* Button styles for even cards (yellow background) */
+.specialization-card:nth-child(even) .view-more-btn {
+  background: #002A5C;
+  color: #ffffff;
+}
+
+.specialization-card:nth-child(even) .view-more-btn:hover {
+  background: #001a3d;
+  color: #FFC333;
+  transform: translateX(5px);
+  box-shadow: 0 6px 20px rgba(0, 42, 92, 0.4);
+}
+
+/* Button arrow animation */
+.view-more-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.view-more-btn:hover svg {
+  transform: translateX(4px);
 }
 
 /* ===========================
@@ -208,6 +263,11 @@
   }
 
   .card-description {
+    font-size: 13px;
+  }
+
+  .view-more-btn {
+    padding: 10px 22px;
     font-size: 13px;
   }
 }

@@ -1,8 +1,16 @@
 import React from "react";
+import allsectionbg from "../../../assets/allsectionbg.jpg";
+import Faq from "../../Faq";
 
 export default function DisclaimerPage() {
   return (
     <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
+      {/* Add FontAwesome */}
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      />
+
       {/* -------- HEADER SECTION -------- */}
       <section
         className="py-5 text-white text-center position-relative"
@@ -11,10 +19,9 @@ export default function DisclaimerPage() {
         }}
       >
         <div
-          className="position-absolute top-0 end-0 w-50 h-100 opacity-25"
+          className="position-absolute top-0 end-0 w-100 h-100 opacity-25"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop)",
+            backgroundImage: `url(${allsectionbg})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
           }}
@@ -36,7 +43,7 @@ export default function DisclaimerPage() {
             className="mb-0"
             style={{ 
               fontFamily: "'Inter', Arial, Helvetica, sans-serif", 
-              fontSize: "16px", 
+              fontSize: "15px", 
               marginTop: "0.5rem" 
             }}
           >
@@ -61,217 +68,149 @@ export default function DisclaimerPage() {
               fontSize: "32px",
               fontWeight: 700,
               color: "#0a2240",
-              marginBottom: "1.5rem"
+              marginBottom: "1.5rem",
+              textAlign: "center"
             }}
           >
-            Website Disclaimer
+            DISCLAIMER
           </h2>
           
           <p
             style={{
-              fontSize: "16px",
-              color: "#444",
-              lineHeight: "1.7",
+              fontSize: "18px",
+              color: "#0a2240",
+              lineHeight: "1.8",
               marginBottom: "2rem",
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               textAlign: "justify",
-              textJustify: "inter-word"
+              fontWeight: "600"
             }}
           >
-            The information provided on this website is for general informational purposes only. 
-            While we strive to keep the content accurate and up to date, we make no warranties of any kind 
-            about the completeness, accuracy, reliability or suitability of the information and materials 
-            contained on the site for any purpose.
+            ISMR B-School Pune has not appointed any person or any third party to take admission on behalf of the International School of Management & Research.
           </p>
 
-          {/* NO PROFESSIONAL ADVICE SECTION */}
-          <div className="mb-4">
-            <h3
-              style={{
-                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                fontSize: "24px",
-                fontWeight: 600,
-                color: "#0a2240",
-                marginBottom: "1rem"
-              }}
-            >
-              No Professional Advice
-            </h3>
-            <p
-              style={{
-                fontSize: "16px",
-                color: "#444",
-                lineHeight: "1.7",
-                margin: 0,
-                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                textAlign: "justify",
-                textJustify: "inter-word"
-              }}
-            >
-              Nothing on this site should be construed as professional, legal, financial, medical or academic advice. 
-              Always consult a qualified professional for specific advice related to your situation.
-            </p>
-          </div>
-
-          {/* EXTERNAL LINKS SECTION */}
-          <div className="mb-4">
-            <h3
-              style={{
-                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                fontSize: "24px",
-                fontWeight: 600,
-                color: "#0a2240",
-                marginBottom: "1rem"
-              }}
-            >
-              External Links and Third Parties
-            </h3>
-            <p
-              style={{
-                fontSize: "16px",
-                color: "#444",
-                lineHeight: "1.7",
-                margin: 0,
-                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                textAlign: "justify",
-                textJustify: "inter-word"
-              }}
-            >
-              We may provide links to external websites for convenience. We do not endorse and are not responsible 
-              for the content, accuracy, or practices of these external sites.
-            </p>
-          </div>
-
-          {/* LIABILITY SECTION */}
-          <div className="mb-4">
-            <h3
-              style={{
-                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                fontSize: "24px",
-                fontWeight: 600,
-                color: "#0a2240",
-                marginBottom: "1rem"
-              }}
-            >
-              Limitation of Liability
-            </h3>
-            <p
-              style={{
-                fontSize: "16px",
-                color: "#444",
-                lineHeight: "1.7",
-                margin: 0,
-                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                textAlign: "justify",
-                textJustify: "inter-word"
-              }}
-            >
-              To the fullest extent permitted by law, neither the institute nor its staff shall be liable for any 
-              loss or damage arising directly or indirectly from the use of this website.
-            </p>
-          </div>
-
-          {/* CONTENT CHANGES SECTION */}
-          <div className="mb-4">
-            <h3
-              style={{
-                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                fontSize: "24px",
-                fontWeight: 600,
-                color: "#0a2240",
-                marginBottom: "1rem"
-              }}
-            >
-              Changes to the Content
-            </h3>
-            <p
-              style={{
-                fontSize: "16px",
-                color: "#444",
-                lineHeight: "1.7",
-                margin: 0,
-                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                textAlign: "justify",
-                textJustify: "inter-word"
-              }}
-            >
-              We reserve the right to update or remove content without prior notice. Please check this page 
-              periodically for any changes.
-            </p>
-          </div>
-
-          {/* SPECIFIC DISCLAIMERS SECTION */}
-          <div className="mb-4">
-            <h3
-              style={{
-                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                fontSize: "24px",
-                fontWeight: 600,
-                color: "#0a2240",
-                marginBottom: "1rem"
-              }}
-            >
-              Specific Disclaimers
-            </h3>
-            <ul 
-              className="ps-4"
-              style={{
-                fontSize: "16px",
-                color: "#444",
-                lineHeight: "1.7",
-                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-              }}
-            >
-              <li className="mb-3">
-                <strong style={{ color: "#0a2240" }}>Admissions & Eligibility:</strong> Programme eligibility criteria 
-                and intake details are subject to change — always refer to the official programme page or prospectus.
-              </li>
-              <li className="mb-3">
-                <strong style={{ color: "#0a2240" }}>Fees & Dates:</strong> Fee structures and deadlines published here 
-                are indicative. Confirm the latest fees with admissions.
-              </li>
-              <li className="mb-3">
-                <strong style={{ color: "#0a2240" }}>Images & Branding:</strong> Images used on the site are for 
-                illustrative purposes and may not represent actual facilities.
-              </li>
-              <li className="mb-3">
-                <strong style={{ color: "#0a2240" }}>Course Content:</strong> Curriculum and course structures are 
-                subject to change based on industry requirements and academic reviews.
-              </li>
-              <li>
-                <strong style={{ color: "#0a2240" }}>Placement Statistics:</strong> Placement records represent 
-                historical data and do not guarantee future employment outcomes.
-              </li>
-            </ul>
-          </div>
-
-          {/* NOTE BOX */}
-          <div
-            className="rounded-3 p-4 mb-4"
+          <p
             style={{
-              borderLeft: "4px solid #FFC333",
-              backgroundColor: "#FFF8E6",
-              border: "1px solid #FFE8A3"
+              fontSize: "16px",
+              color: "#444",
+              lineHeight: "1.8",
+              marginBottom: "2rem",
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              textAlign: "justify"
+            }}
+          >
+            Candidates are advised to get in touch directly with the institute for any admission related procedure.
+          </p>
+
+          <p
+            style={{
+              fontSize: "16px",
+              color: "#444",
+              lineHeight: "1.8",
+              marginBottom: "2rem",
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              textAlign: "justify"
+            }}
+          >
+            <strong style={{ color: "#0a2240" }}>Fees to be paid at institute counter or in the following account only:</strong> You are advised to remit the amount through a bank draft, drawn in favour of <strong>"International School of Management & Research (ISMR)"</strong>, payable at Pune or through online payment via NEFT or RTGS.
+          </p>
+
+          {/* BANK DETAILS SECTION */}
+          <div className="mb-4">
+            <h3
+              style={{
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                fontSize: "24px",
+                fontWeight: 700,
+                color: "#0a2240",
+                marginBottom: "1.5rem",
+                textAlign: "center"
+              }}
+            >
+              College Bank Details
+            </h3>
+            <div
+              className="rounded-3 p-4"
+              style={{
+                background: "linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%)",
+                color: "#fff"
+              }}
+            >
+              <div className="row g-3">
+                <div className="col-md-6">
+                  <div className="d-flex align-items-start mb-3">
+                    <i className="fas fa-building fa-lg me-3 mt-1" style={{ color: "#FFC333" }}></i>
+                    <div>
+                      <p style={{ margin: 0, fontSize: "14px", opacity: 0.8 }}>ACCOUNT NAME</p>
+                      <p style={{ margin: 0, fontSize: "16px", fontWeight: "600" }}>International School of Management & Research</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="d-flex align-items-start mb-3">
+                    <i className="fas fa-university fa-lg me-3 mt-1" style={{ color: "#FFC333" }}></i>
+                    <div>
+                      <p style={{ margin: 0, fontSize: "14px", opacity: 0.8 }}>BANK NAME</p>
+                      <p style={{ margin: 0, fontSize: "16px", fontWeight: "600" }}>ICICI Bank</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="d-flex align-items-start mb-3">
+                    <i className="fas fa-credit-card fa-lg me-3 mt-1" style={{ color: "#FFC333" }}></i>
+                    <div>
+                      <p style={{ margin: 0, fontSize: "14px", opacity: 0.8 }}>ACCOUNT NUMBER</p>
+                      <p style={{ margin: 0, fontSize: "16px", fontWeight: "600" }}>337601000351</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="d-flex align-items-start mb-3">
+                    <i className="fas fa-code-branch fa-lg me-3 mt-1" style={{ color: "#FFC333" }}></i>
+                    <div>
+                      <p style={{ margin: 0, fontSize: "14px", opacity: 0.8 }}>IFSC CODE</p>
+                      <p style={{ margin: 0, fontSize: "16px", fontWeight: "600" }}>ICIC0003376</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-12">
+                  <div className="d-flex align-items-start">
+                    <i className="fas fa-map-marker-alt fa-lg me-3 mt-1" style={{ color: "#FFC333" }}></i>
+                    <div>
+                      <p style={{ margin: 0, fontSize: "14px", opacity: 0.8 }}>BRANCH NAME</p>
+                      <p style={{ margin: 0, fontSize: "16px", fontWeight: "600" }}>Fursungi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* IMPORTANT NOTE BOX */}
+          <div
+            className="rounded-3 p-4"
+            style={{
+              borderLeft: "4px solid #d95c5c",
+              backgroundColor: "#FFEBEE",
+              border: "1px solid #FFCDD2"
             }}
           >
             <p
               style={{
                 fontSize: "16px",
-                color: "#664400",
+                color: "#c62828",
                 lineHeight: "1.7",
                 margin: 0,
-                fontWeight: "500",
+                fontWeight: "600",
                 fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               }}
             >
-              📝 <strong>Important Note:</strong> If you require formal confirmation of any information, 
-              please contact our admissions office with specific queries — contact details are available 
-              on the Contact page.
+              ⚠️ <strong>NOTE:</strong> Institute will not be responsible, if any Students pay any fees or part of fees to any person or deposits in any other account.
             </p>
           </div>
 
           {/* ACTION BUTTONS */}
-          <div className="d-flex flex-column flex-sm-row gap-3 mb-4">
+          <div className="d-flex flex-column flex-sm-row gap-3 mt-4">
             <button
               className="btn fw-semibold"
               onClick={() => window.print()}
@@ -288,21 +227,6 @@ export default function DisclaimerPage() {
             >
               🖨️ Print / Save as PDF
             </button>
-            <button
-              className="btn fw-semibold"
-              style={{
-                padding: "12px 30px",
-                backgroundColor: "#0a2240",
-                color: "#fff",
-                border: "none",
-                borderRadius: "8px",
-                fontSize: "16px",
-                flex: "1",
-                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-              }}
-            >
-              📥 Download Disclaimer PDF
-            </button>
           </div>
 
           {/* LAST UPDATED */}
@@ -310,7 +234,8 @@ export default function DisclaimerPage() {
             style={{
               paddingTop: "1.5rem",
               borderTop: "2px solid #f0f0f0",
-              textAlign: "center"
+              textAlign: "center",
+              marginTop: "2rem"
             }}
           >
             <p
@@ -322,11 +247,12 @@ export default function DisclaimerPage() {
                 fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               }}
             >
-              Last updated: <strong>June 1, 2025</strong>
+              Last updated: <strong>November 18, 2025</strong>
             </p>
           </div>
         </div>
       </div>
+      <Faq />
     </div>
   );
 }

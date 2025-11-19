@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BriefcaseFill } from "react-bootstrap-icons";
+import allsectionbg from "../../../assets/allsectionbg.jpg";
 
 function StudentCampusAndActivities() {
   const [activeSection, setActiveSection] = useState(
@@ -243,15 +244,14 @@ function StudentCampusAndActivities() {
       <section
         className="py-5 text-white text-center position-relative"
         style={{
-          background: "linear-gradient(135deg, #0a2240 0%, #0a2240 100%)",
+          background: "linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%)",
           fontFamily: "'Inter', Arial, Helvetica, sans-serif",
         }}
       >
         <div
-          className="position-absolute top-0 end-0 w-50 h-100 opacity-25"
+          className="position-absolute top-0 end-0 w-100 h-100 opacity-25"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop)",
+            backgroundImage: `url(${allsectionbg})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
           }}
@@ -259,19 +259,23 @@ function StudentCampusAndActivities() {
 
         <div className="container position-relative py-5">
           <h1
-            className="mb-3 text-uppercase"
+            className="mb-3"
             style={{
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               fontSize: "40px",
               fontWeight: 700,
-              whiteSpace: "nowrap",
+              margin: 0,
             }}
           >
             Student <span className="text-warning">Campus Life</span>
           </h1>
           <p
-            className="text-white-50 mb-0 text-center"
-            style={{ fontSize: "13px" }}
+            className="mb-0"
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "15px",
+              marginTop: "0.5rem",
+            }}
           >
             Campus • <span className="text-warning">Student Activities</span>
           </p>
