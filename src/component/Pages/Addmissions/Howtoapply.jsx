@@ -4,10 +4,11 @@ import Faq from "../../Faq";
 
 export default function HowToApply() {
   const [tab, setTab] = useState("overview");
- 
+
   const [openIndex, setOpenIndex] = useState(null);
 
-  
+  const [selectedCategory, setSelectedCategory] = useState("OMS Students");
+
 
 
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
@@ -15,6 +16,39 @@ export default function HowToApply() {
   return (
     <section className="apply-wrapper">
       <style>{`
+
+.category-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.category-tab {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #f7f7f7;
+  cursor: pointer;
+}
+
+.category-tab.active {
+  background: #FFC333;
+  color: #000;
+  font-weight: 600;
+}
+  .doc-list ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.doc-list li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+
+
+
         .apply-wrapper {
           font-family: 'Inter', Arial, Helvetica, sans-serif;
           color: #111;
@@ -592,7 +626,7 @@ export default function HowToApply() {
         </div>
       </section>
 
-        <div className="content-area">
+      <div className="content-area">
         <div className="content-container">
           <div className="tabs" role="tablist" aria-label="Apply tabs">
             {["overview", "steps", "documents", "fees"].map(
@@ -674,26 +708,155 @@ export default function HowToApply() {
             {tab === "documents" && (
               <div id="panel-documents" aria-labelledby="tab-documents">
                 <h2>Required Documents</h2>
+                <h5>(Documents required for MBA)</h5>
                 <p>
-                  Prepare clear scanned copies (PDF/JPG, max 5MB each). Typical
-                  documents required:
+                  List of Documents to be submitted at the time of Admission
                 </p>
-                <div className="doc-grid">
+
+                {/* Category Tabs */}
+                <div className="category-tabs">
                   {[
-                    "10th Marksheet & Certificate",
-                    "12th Marksheet / Diploma Certificate",
-                    "Graduation Degree (if applicable)",
-                    "Recent Photograph & ID Proof",
-                    "Entrance Scorecard (if applicable)",
-                    "Caste / Category Certificate (if applicable)",
-                  ].map((doc, index) => (
-                    <div key={index} className="doc">
-                      {doc}
-                    </div>
+                    "OMS Students",
+                    "SC / ST Students",
+                    "OBC / SBC / VJNT / SEBC Students",
+                    "Open / General / EBC / EWS Students",
+                  ].map((category, index) => (
+                    <button
+                      key={index}
+                      className={`category-tab ${selectedCategory === category ? "active" : ""
+                        }`}
+                      onClick={() => setSelectedCategory(category)}
+                    >
+                      {category}
+                    </button>
                   ))}
+                </div>
+
+                {/* Category-wise Documents List Format */}
+                <div className="doc-list">
+                  {selectedCategory === "OMS Students" && (
+                    <div className="doc-list">
+                      <ul>
+                        <li>	Valid Entrance Score Card</li>
+                        <li>	S.S.C. Mark Statement (Std. X)</li>
+                        <li>	H.S.C. (Std. XII)/ Diploma Mark Statement</li>
+                        <li>All Semester Graduation Mark sheet</li>
+                        <li>Leaving/Transfer Certificate</li>
+                        <li>	Domicile and Nationality Certificate</li>
+                        <li>Migration Certificate (Other than Home University)</li>
+                        <li>Copy of Aadhar Card</li>
+                        <li>Copy of Pan Card</li>
+                        <li>Passport Size Photos (10 Copies)</li>
+                        <li>	Gap Certificate <b>(If Applicable)</b></li>
+                      </ul>
+                      <h4>Note :-</h4>
+                      <ul>
+                        <li>All the above documents should be colour-scanned in the PDF format & to be emailed on admissions@ismrpune.edu.in</li>
+                        <li>For any documents related queries contact us on +91-9923786079 / +91-9158000595</li>
+
+                      </ul>
+                    </div>
+                  )}
+
+                  {selectedCategory === "SC / ST Students" && (
+                    <div className="doc-list">
+                      <ul>
+                        <li>Valid Entrance Score Card</li>
+                        <li>S.S.C. Mark Statement (Std. X)</li>
+                        <li>H.S.C. (Std. XII)/ Diploma Mark Statement</li>
+                        <li>All Semester Graduation Mark sheet</li>
+                        <li>Leaving/Transfer Certificate</li>
+                        <li>Domicile and Nationality Certificate</li>
+                        <li>	Migration Certificate (Other than Home University)</li>
+                        <li>Income Certificate of Current Financial Year issued by Tahasildar / Sub Div. Officer/ Deputy Collector</li>
+                        <li>Copy of Aadhar Card</li>
+                        <li>	Copy of Pan Card</li>
+                        <li>	Passport Size Photos (10 Copies)</li>
+                        <li>Gap Certificate <b>(If Applicable)</b></li>
+                        <li>Caste Certificate</li>
+                        <li>	Caste Validity Certificate</li>
+                        <li>Linking of Aadhar Number to Bank Account</li>
+                        <li>	Students Nationalized Bank Account Details (First Page of Passbook)</li>
+                      </ul>
+                      <h4>Note :-</h4>
+                      <ul>
+                        <li>All the above documents should be colour-scanned in the PDF format & to be emailed on admissions@ismrpune.edu.in</li>
+                        <li>For any documents related queries contact us on +91-9923786079 / +91-9158000595</li>
+
+                      </ul>
+                    </div>
+                  )}
+
+                  {selectedCategory === "OBC / SBC / VJNT / SEBC Students" && (
+                    <div className="doc-list">
+                      <ul>
+                        <li>Valid Entrance Score Card</li>
+                        <li>S.S.C. Mark Statement (Std. X)</li>
+                        <li>H.S.C. (Std. XII)/ Diploma Mark Statement</li>
+                        <li>	All Semester Graduation Mark sheet</li>
+                        <li>	Leaving/Transfer Certificate</li>
+                        <li>Domicile and Nationality Certificate</li>
+                        <li>	Migration Certificate (Other than Home University)</li>
+                        <li>	Income Certificate of Current Financial Year issued by Tahasildar / Sub Div. Officer/ Deputy Collector</li>
+                        <li>	Copy of Aadhar Card</li>
+                        <li>Copy of Pan Card</li>
+                        <li>Passport Size Photos (10 Copies)</li>
+                        <li>Gap Certificate <b>(If Applicable)</b></li>
+                        <li>Caste Certificate</li>
+                        <li>Caste Validity Certificate</li>
+                        <li>Non Creamy Layer certificate Valid till 2026</li>
+                        <li>Linking of Aadhar Number to Bank Account</li>
+                        <li>	Students Nationalized Bank Account Details (First Page of Passbook)</li>
+                      </ul>
+
+                      <h4>Note :-</h4>
+                      <ul>
+                        <li>All the above documents should be colour-scanned in the PDF format & to be emailed on admissions@ismrpune.edu.in</li>
+                        <li>For any documents related queries contact us on +91-9923786079 / +91-9158000595</li>
+
+                      </ul>
+                    </div>
+                  )}
+
+                  {selectedCategory === "Open / General / EBC / EWS Students" && (
+                    <div className="doc-list">
+                      <ul>
+                        <li>	Valid Entrance Score Card</li>
+                        <li>	S.S.C. Mark Statement (Std. X)</li>
+                        <li>	H.S.C. (Std. XII)/ Diploma Mark Statement</li>
+                        <li>All Semester Graduation Mark sheet</li>
+                        <li>Leaving/Transfer Certificate</li>
+                        <li>Domicile and Nationality Certificate</li>
+                        <li>	Migration Certificate (Other than Home University)</li>
+                        <li>	Income Certificate of Current Financial Year issued by Tahasildar / Sub Div. Officer/ Deputy Collector <b>(If Applicable)</b></li>
+                        <li>Copy of Aadhar Card</li>
+                        <li>	Copy of Pan Card</li>
+                        <li>Passport Size Photos (10 Copies)</li>
+                        <li>Gap Certificate <b>(If Applicable)</b></li>
+                      </ul>
+
+                      <h4>Note :-</h4>
+                      <ul>
+                        <li>All the above documents should be colour-scanned in the PDF format & to be emailed on admissions@ismrpune.edu.in</li>
+                        <li>For any documents related queries contact us on +91-9923786079 / +91-9158000595</li>
+                        <li>Eligibility Certificate for Economically Weaker Section is Mandatory for those who want to enroll their admission in EWS Category. </li>
+                      </ul>
+                      <a
+                        href="/Eligibility-Certificate-for-Economically-Weaker-Section.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <strong>Annexure - A for EWS Eligibility Certificate</strong>
+                      </a>
+
+                    </div>
+
+                  )}
                 </div>
               </div>
             )}
+
+
 
             {tab === "fees" && (
               <div id="panel-fees" aria-labelledby="tab-fees">

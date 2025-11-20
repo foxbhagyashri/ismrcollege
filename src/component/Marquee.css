@@ -1,155 +1,80 @@
-/* Font setup */
-* {
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
-  /* box-sizing: border-box; */
-}
-
-/* Section Styling */
-.marquee-section { 
+.announcement-wrapper {
   text-align: center;
+  padding: 40px 0;
 }
 
-.section-title {
+.announcement-title {
+  font-size: 32px;
   font-weight: 700;
-  font-size: 2.2rem;
-  color: #0d1b2a;
+  color: #002b5b;
+  margin-bottom: 25px;
   position: relative;
-  margin-bottom: 0px;
-
 }
 
-.section-title::after {
+.announcement-title::after {
   content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 4px;
-  
-  background: linear-gradient(90deg, #0077b6, #00b4d8);
+  width: 90px;
+  height: 3px;
+  background: #00a9ff;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 3px;
 }
 
-.section-subtitle {
-  color: #4a5568;
-  font-size: 1.05rem;
-  margin-bottom: 35px;
-}
-
-/* Marquee Styles */
-.marquee-container {
-  overflow: hidden;
-  width: 100%;
-  /* background: #ffffff; */
-  /* border-radius: 10px; */
-    /* border: 2px solid rgb(255, 255, 255); */
+/* Marquee Box */
+.marquee-box {
+  width: 90%;
+  /* Reduce width (change to 60–80% as needed) */
   margin: 0 auto;
-  position: relative;
-  background-color: #efefef;
-}
-
-.marquee-content {
-  display: flex;
-  align-items: stretch;
-  gap: 30px;
-  animation: scroll 20s linear infinite;
-  padding: 10px 0;
-}
-
-.announcement-card {
-  flex: 0 0 320px;
-  height: 220px;
-}
-
-.announcement-card .card {
-  border: none !important;
-  transition: all 0.3s ease;
+  /* Center align */
+  overflow: hidden;
+  background: #f5f9ff;
+  border: 1px solid #dce6f5;
+  padding: 12px 0;
+  /* Reduced padding for smaller height */
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(13, 27, 42, 0.1);
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.05);
+
 }
 
-.announcement-card .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(13, 27, 42, 0.15);
+
+/* Scroll Track */
+.marquee-track {
+  display: flex;
+  /* display: inline-flex; */
+  gap: 40px;
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
 }
 
-.card-footer {
-  border: none !important;
-  background: transparent !important;
+/* Each Announcement Item */
+.marquee-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  padding: 12px 25px;
+  border-radius: 30px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.06);
+  font-size: 16px;
+  font-weight: 500;
+  color: #002b5b;
+  border: 1px solid #e5e9f2;
 }
 
-.card-title {
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #003566;
+.marquee-item .icon {
+  font-size: 18px;
+  color: #0056d2;
 }
-
-.card-text {
-  font-size: 0.9rem;
-  color: #495057;
-  line-height: 1.4;
-}
-
-/* Badges */
-.badge-success { background-color: #2ecc71 !important; }
-.badge-primary { background-color: #0077b6 !important; }
-.badge-warning { background-color: #f1c40f !important; color: #212529; }
-.badge-info { background-color: #00b4d8 !important; }
-.badge-danger { background-color: #e63946 !important; }
 
 /* Animation */
 @keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-/* Pause on Hover */
-.marquee-container:hover .marquee-content {
-  animation-play-state: paused;
-}
-
-/* Button */
-.btn-primary {
-  background-color: #003566;
-  border: none !important;
-}
-
-.btn-primary:hover {
-  background-color: #001d3d;
-}
-
-.btn-outline-primary {
-  border: none !important;
-  color: #0077b6;
-}
-
-.btn-outline-primary:hover {
-  background-color: #0077b6;
-  color: #fff;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .marquee-container {
-    width: 98%;
+  0% {
+    transform: translateX(0);
   }
 
-  .announcement-card {
-    flex: 0 0 280px;
-    height: 240px;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .marquee-content {
-    gap: 20px;
-  }
-}
-
-@media (max-width: 576px) {
-  .announcement-card {
-    flex: 0 0 260px;
+  100% {
+    transform: translateX(-100%);
+    /* Previously -50% */
   }
 }

@@ -14,7 +14,7 @@ const AboutAdmaUniversity = () => {
     <section className="about-container">
       {/* Top Row */}
 
-      <h1 className="section-title text-center">Accreditations</h1>
+      <h1 className="section-title text-center">Affiliation and Accreditations</h1>
 
       {/* Bottom Row */}
       <div className="about-bottom">
@@ -48,16 +48,16 @@ const AboutAdmaUniversity = () => {
           <div className="logo-card">
             <img src={AIMS} alt="DOTE Logo" className="logo-image" />
             <span>Association of Indian
-Management Schools</span>
+              Management Schools</span>
           </div>
           <div className="logo-card">
             <img src={AISE} alt="AISE Logo" className="logo-image" />
             <span>All India Survey on
-Higher Education</span>
+              Higher Education</span>
           </div>
           <div className="logo-card">
             <img src={LOAN} alt="LOAN Logo" className="logo-image" />
-            <span>Education Loan Facility: tie-up with Axis Bank</span>
+            <span>CET Cell</span>
           </div>
         </div>
       </div>

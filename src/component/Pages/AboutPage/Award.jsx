@@ -261,8 +261,7 @@ function AwardsRankings() {
                       lineHeight: "1.5",
                     }}
                   >
-                    Awarded "Business School of the Year 2019" by Media Partner
-                    THE ACADEMIC INSIGHTS
+                    Awarded “Business School of the Year 2019” by Media Partner THE ACADEMIC INSIGHTS.
                   </p>
                 </div>
               </div>
@@ -290,8 +289,7 @@ function AwardsRankings() {
                       lineHeight: "1.5",
                     }}
                   >
-                    Awarded "Excellence in Students Placements for 2018" by
-                    Education World-Wide India
+                    	Ranked “Top 10 Colleges and Institutes in Maharashtra” by Media Partner Higher Education Digest for the year 2019.
                   </p>
                 </div>
               </div>
@@ -319,8 +317,7 @@ function AwardsRankings() {
                       lineHeight: "1.5",
                     }}
                   >
-                    Winner of "Best Business School Award in 2017" by 24 MRC
-                    Award – For Excellence in Higher Education.
+                  Ranked 20th in India by “Higher Education Review Magazine” Beyond IIM’s Top 100 B-School survey.
                   </p>
                 </div>
               </div>
@@ -385,8 +382,7 @@ function AwardsRankings() {
                       lineHeight: "1.5",
                     }}
                   >
-                    Awarded "Business School of the Year 2019" by Media Partner
-                    THE ACADEMIC INSIGHTS
+                    Awarded “Excellence in Students Placements for 2018” by Education World- Wide India.
                   </p>
                 </div>
               </div>
@@ -414,8 +410,7 @@ function AwardsRankings() {
                       lineHeight: "1.5",
                     }}
                   >
-                    Awarded "Excellence in Students Placements for 2018" by
-                    Education World-Wide India
+                 Winner of “Best Business School Award in 2017” by 24 MRC Award – For Excellence in Higher Education.
                   </p>
                 </div>
               </div>
@@ -443,8 +438,7 @@ function AwardsRankings() {
                       lineHeight: "1.5",
                     }}
                   >
-                    Winner of "Best Business School Award in 2017" by 24 MRC
-                    Award – For Excellence in Higher Education.
+                   Jagran Josh recognizing “Top Private Management Institute in Western India.”
                   </p>
                 </div>
               </div>

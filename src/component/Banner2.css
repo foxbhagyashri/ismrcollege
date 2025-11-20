@@ -31,7 +31,7 @@
 .banner-wrap-image .city-img {
   width: 100%;
   max-width: 550px;
-  opacity: 0.9;
+  /* opacity: 0.9; */
 }
 
 .banner-wrap-image .middle-img {
@@ -43,7 +43,6 @@
 
 .banner-wrap-image .middle-img img {
   width: 150px;
-  opacity: 0.8;
 }
 
 .banner-wrap-content {

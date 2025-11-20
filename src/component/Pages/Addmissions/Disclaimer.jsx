@@ -37,7 +37,7 @@ export default function DisclaimerPage() {
               margin: 0,
             }}
           >
-            Website <span className="text-warning">Disclaimer</span>
+             <span className="text-warning">Disclaimer</span>
           </h1>
           <p
             className="mb-0"
@@ -72,7 +72,7 @@ export default function DisclaimerPage() {
               textAlign: "center"
             }}
           >
-            DISCLAIMER
+            DISCLAIMER FOR FEES
           </h2>
           
           <p
@@ -80,7 +80,7 @@ export default function DisclaimerPage() {
               fontSize: "18px",
               color: "#0a2240",
               lineHeight: "1.8",
-              marginBottom: "2rem",
+              marginBottom: "1rem",
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               textAlign: "justify",
               fontWeight: "600"
@@ -92,9 +92,9 @@ export default function DisclaimerPage() {
           <p
             style={{
               fontSize: "16px",
-              color: "#444",
+              color: "#000",
               lineHeight: "1.8",
-              marginBottom: "2rem",
+              marginBottom: "1rem",
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               textAlign: "justify"
             }}
@@ -105,7 +105,7 @@ export default function DisclaimerPage() {
           <p
             style={{
               fontSize: "16px",
-              color: "#444",
+              color: "#000",
               lineHeight: "1.8",
               marginBottom: "2rem",
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
@@ -115,76 +115,8 @@ export default function DisclaimerPage() {
             <strong style={{ color: "#0a2240" }}>Fees to be paid at institute counter or in the following account only:</strong> You are advised to remit the amount through a bank draft, drawn in favour of <strong>"International School of Management & Research (ISMR)"</strong>, payable at Pune or through online payment via NEFT or RTGS.
           </p>
 
-          {/* BANK DETAILS SECTION */}
-          <div className="mb-4">
-            <h3
-              style={{
-                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                fontSize: "24px",
-                fontWeight: 700,
-                color: "#0a2240",
-                marginBottom: "1.5rem",
-                textAlign: "center"
-              }}
-            >
-              College Bank Details
-            </h3>
-            <div
-              className="rounded-3 p-4"
-              style={{
-                background: "linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%)",
-                color: "#fff"
-              }}
-            >
-              <div className="row g-3">
-                <div className="col-md-6">
-                  <div className="d-flex align-items-start mb-3">
-                    <i className="fas fa-building fa-lg me-3 mt-1" style={{ color: "#FFC333" }}></i>
-                    <div>
-                      <p style={{ margin: 0, fontSize: "14px", opacity: 0.8 }}>ACCOUNT NAME</p>
-                      <p style={{ margin: 0, fontSize: "16px", fontWeight: "600" }}>International School of Management & Research</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="d-flex align-items-start mb-3">
-                    <i className="fas fa-university fa-lg me-3 mt-1" style={{ color: "#FFC333" }}></i>
-                    <div>
-                      <p style={{ margin: 0, fontSize: "14px", opacity: 0.8 }}>BANK NAME</p>
-                      <p style={{ margin: 0, fontSize: "16px", fontWeight: "600" }}>ICICI Bank</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="d-flex align-items-start mb-3">
-                    <i className="fas fa-credit-card fa-lg me-3 mt-1" style={{ color: "#FFC333" }}></i>
-                    <div>
-                      <p style={{ margin: 0, fontSize: "14px", opacity: 0.8 }}>ACCOUNT NUMBER</p>
-                      <p style={{ margin: 0, fontSize: "16px", fontWeight: "600" }}>337601000351</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="d-flex align-items-start mb-3">
-                    <i className="fas fa-code-branch fa-lg me-3 mt-1" style={{ color: "#FFC333" }}></i>
-                    <div>
-                      <p style={{ margin: 0, fontSize: "14px", opacity: 0.8 }}>IFSC CODE</p>
-                      <p style={{ margin: 0, fontSize: "16px", fontWeight: "600" }}>ICIC0003376</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-12">
-                  <div className="d-flex align-items-start">
-                    <i className="fas fa-map-marker-alt fa-lg me-3 mt-1" style={{ color: "#FFC333" }}></i>
-                    <div>
-                      <p style={{ margin: 0, fontSize: "14px", opacity: 0.8 }}>BRANCH NAME</p>
-                      <p style={{ margin: 0, fontSize: "16px", fontWeight: "600" }}>Fursungi</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+       
+        
 
           {/* IMPORTANT NOTE BOX */}
           <div
@@ -209,47 +141,9 @@ export default function DisclaimerPage() {
             </p>
           </div>
 
-          {/* ACTION BUTTONS */}
-          <div className="d-flex flex-column flex-sm-row gap-3 mt-4">
-            <button
-              className="btn fw-semibold"
-              onClick={() => window.print()}
-              style={{
-                padding: "12px 30px",
-                backgroundColor: "#d95c5c",
-                color: "#fff",
-                border: "none",
-                borderRadius: "8px",
-                fontSize: "16px",
-                flex: "1",
-                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-              }}
-            >
-              🖨️ Print / Save as PDF
-            </button>
-          </div>
+       
 
-          {/* LAST UPDATED */}
-          <div
-            style={{
-              paddingTop: "1.5rem",
-              borderTop: "2px solid #f0f0f0",
-              textAlign: "center",
-              marginTop: "2rem"
-            }}
-          >
-            <p
-              style={{
-                fontSize: "14px",
-                color: "#666",
-                margin: 0,
-                fontStyle: "italic",
-                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-              }}
-            >
-              Last updated: <strong>November 18, 2025</strong>
-            </p>
-          </div>
+         
         </div>
       </div>
       <Faq />
