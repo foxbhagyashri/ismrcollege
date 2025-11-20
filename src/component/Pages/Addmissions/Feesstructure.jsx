@@ -154,7 +154,7 @@ export default function FeesStructure() {
                     <p
                         style={{
                             fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                            fontSize: "16px",
+                            fontSize: "20px",
                             color: "#444",
                             marginBottom: "0.5rem",
                         }}

@@ -19,7 +19,9 @@ section {
   margin: 0;
   overflow: hidden;
 }
-
+.banner-wrap-content .title p{
+  font-size: 20px!important;
+}
 /* Home container */
 .home {
   position: relative;

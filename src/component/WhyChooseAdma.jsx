@@ -12,6 +12,7 @@ import {
   FaTrophy,
 } from "react-icons/fa";
 import "./WhyChooseAdma.css";
+import { Link } from "react-router-dom";
 
 const WhyChooseAdma = () => {
   const features = [
@@ -77,9 +78,9 @@ const WhyChooseAdma = () => {
             </div>
 
             <div className="text-center mt-5">
-              <Button variant="link" className="overview-btn">
+              <a href="Aboutpage/Ismr"  className="overview-btn">
                 Institute Overview →
-              </Button>
+              </a>
             </div>
           </Col>
         </Row>

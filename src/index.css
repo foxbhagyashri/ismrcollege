@@ -40,7 +40,7 @@ Banner Main Area
 
 .banner-wrap-image .middle-img img {
   width: 100px;
-  opacity: 0.8;
+  /* opacity: 0.8; */
 }
 
 .banner-wrap-content {

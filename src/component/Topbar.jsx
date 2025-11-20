@@ -1,5 +1,13 @@
 import React from "react";
 import "./TopHeader.css";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 
 const TopHeader = () => {
   return (
@@ -18,6 +26,28 @@ const TopHeader = () => {
                 <i className="ri-mail-line " ></i> admissions@ismrpune.edu.in
               </a>
             </li>
+            <li><a
+              href="https://www.facebook.com/ismrcollegepune/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookF />
+            </a>
+            </li>
+            <li><a
+              href="https://www.instagram.com/ismrofficial/?hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram />
+            </a></li>
+            <li><a
+              href="https://www.linkedin.com/school/international-school-of-management-and-research-pune/?originalSubdomain=in"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedinIn />
+            </a></li>
           </ul>
         </div>
 
@@ -34,7 +64,7 @@ const TopHeader = () => {
                   border: "none",
                 }}
               >
-                Pay Fees
+                Pay Fees Online
               </button>
             </li>
             <li>
@@ -47,7 +77,20 @@ const TopHeader = () => {
                   border: "none",
                 }}
               >
-                Apply Online
+                Apply for BBA/ BCA
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => (window.location.href = "/register")}
+                className="btn btn-sm"
+                style={{
+                  backgroundColor: "#dcb413ff",
+                  color: "#2c2626ff",
+                  border: "none",
+                }}
+              >
+                Apply for MBA
               </button>
             </li>
           </ul>

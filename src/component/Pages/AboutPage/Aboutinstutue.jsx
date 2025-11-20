@@ -3,13 +3,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import AboutImg from "../../../assets/About-img.jpg";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaCheckCircle } from "react-icons/fa";
+
 import {
   faGem,
   faGlobe,
   faHandsHelping,
   faEye,
   faRocket,
-  faCogs,
+   faCircle,
+   faHandHoldingHeart 
 } from "@fortawesome/free-solid-svg-icons";
 
 // ---------------- STAT COUNTER ----------------
@@ -89,7 +92,7 @@ const InstitutionStats = () => {
               margin: 0,
             }}
           >
-            About <span className="text-warning">ISMR,</span> Pune
+            About Institute
           </h1>
           <p
             className="mb-0"
@@ -131,32 +134,97 @@ const InstitutionStats = () => {
             textJustify: "inter-word",
           }}
         >
-          International School of Management and Research (ISMR) is a
-          mission-oriented institute, run by Sri Balaji Education Society since
-          2007, with a vision to be a world-class business school.
-          <strong>
-            The institute is committed to excellence in management education and
-            research through continuous competency building.
-          </strong>
-          ISMR is a premier management institute in Pune,
-          <strong>
-            ranked among the top institutes for excellence in placements with a
-            100% placement assistance record since inception.
-          </strong>
-          We, at ISMR, are focused on implementing our mission of
-          <strong>“Placing You First.”</strong> The institute also believes in
-          nurturing entrepreneurial qualities in students, helping them pursue
-          growth beyond traditional career paths. Today, the ISMR campus
-          vibrates with diverse co-curricular activities such as national and
-          international conventions, symposia, seminars, student competitions,
-          guest lectures, outbound programs, industry interactions, and cultural
-          events. With a goal to create multi-skilled managers who can perform
-          effectively in any environment,
-          <strong>
-            ISMR not only delivers a rigorous curriculum but also inspires
-            students to apply their knowledge to real-life situations.
-          </strong>
+          International School of Management and Research (ISMR), is a mission-oriented Institute, run by Sri Balaji Education Society since 2007, with a vision to be a world class Business School, achieving excellence in management education and research through continuous competency building. ISMR is a premier Management Institute in Pune, ranked among the Top Institutes for excellence in placements, with a 100% placement assistance record since inception.<br></br>
+
+          We, at ISMR, are focused in implementing our mission of “Placing You First”. ISMR also believes in developing certain entrepreneurial qualities in the students, helping them in the path of pursuing something beyond normal career growth.<br></br>
+
+
+          Today: ISMR campus vibrates with varied co-curricular activities like National & International Conventions, Symposia, Seminars, Student Competitions, Guest Lectures, Outbound Programmes, Industry Interface & Cultural Activities. With a goal to create multi-skilled managers who are well equipped to perform effectively & efficiently in any environment, ISMR Institute not only tries to instil the rigorous syllabi in the students but try to create, a passion for knowledge and also attempt to teach them how to apply that knowledge in real-life situations.
         </p>
+
+
+
+
+        <h2
+          style={{
+            fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+            fontSize: "28px",
+            fontWeight: 700,
+            color: "#0a2240",
+            marginBottom: "1.5rem",
+          }}
+        >
+          Reason to Join With Us
+        </h2>
+
+        <div className="row">
+          <div className="col-md-6">
+            <ul style={{ listStyle: "none", paddingLeft: 0 }}>
+              {[
+                "Best Institute in Western Region for Academics and Placements Excellence",
+                "Management & Leadership Development Programmes",
+                "Indoor and Outdoor Recreational Activities",
+                "Domestic and International Industrial Visits",
+                "Education Loan Tie-up with Leading Banks",
+                "Accidental Insurance Coverage",
+                "Scholarships to Meritorious Students",
+                "Fully Wi-Fi Enabled Campus",
+                "Domestic Study Tour",
+              ].map((item, index) => (
+                <li
+                  key={index}
+                  style={{
+                    fontSize: "16px",
+                    color: "#444",
+                    marginBottom: "12px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                  }}
+                >
+                  <FaCheckCircle style={{ color: "#d95c5c" }} />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="col-md-6">
+            <ul style={{ listStyle: "none", paddingLeft: 0 }}>
+              {[
+                "Excellent Return on Investment",
+                "International Study Tour",
+                "Gym Facility in Campus",
+                "Medicare Facility during the duration of the Course",
+                "Hostel & Mess Facilities for Boys and Girls",
+                "100% Placement Assistance Since Inception",
+                "Extra activities",
+                "Dedicated and Experienced Faculties",
+                "Cultural Programme and Intra Collegiate Programme",
+                "20 Acres Serene Campus",
+              ].map((item, index) => (
+                <li
+                  key={index}
+                  style={{
+                    fontSize: "16px",
+                    color: "#444",
+                    marginBottom: "12px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                  }}
+                >
+                  <FaCheckCircle style={{ color: "#d95c5c" }} />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+
+
+
 
         <div
           className="row justify-content-center pt-4"
@@ -170,29 +238,29 @@ const InstitutionStats = () => {
                 borderRadius: "0.75rem",
               }}
             >
-             <div style={{ position: "relative", maxHeight: "500px", overflow: "hidden", borderRadius: "0.75rem", border: "5px solid #f8f9fa" }}>
-  <img
-    src={AboutImg}
-    alt="ISMR Campus"
-    className="img-fluid w-100 shadow-lg"
-    style={{
-      objectFit: "cover",
-      width: "100%",
-      height: "100%",
-      display: "block",
-    }}
-  />
-  <div
-    style={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-      backgroundColor: "rgba(0, 0, 0, 0.3)", // adjust 0.3 for darkness
-    }}
-  />
-</div>
+              <div style={{ position: "relative", maxHeight: "500px", overflow: "hidden", borderRadius: "0.75rem", border: "5px solid #f8f9fa" }}>
+                <img
+                  src={AboutImg}
+                  alt="ISMR Campus"
+                  className="img-fluid w-100 shadow-lg"
+                  style={{
+                    objectFit: "cover",
+                    width: "100%",
+                    height: "100%",
+                    display: "block",
+                  }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    backgroundColor: "rgba(0, 0, 0, 0.3)", // adjust 0.3 for darkness
+                  }}
+                />
+              </div>
 
               <div
                 style={{
@@ -334,7 +402,7 @@ const InstitutionStats = () => {
       <section
         className="py-5"
         style={{
-         
+
           fontFamily: "'Inter', Arial, Helvetica, sans-serif",
         }}
       >
@@ -348,7 +416,7 @@ const InstitutionStats = () => {
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
             }}
           >
-            Our Vision, Mission And Philosophy
+            Our Vision, Mission, Goals And Core Values 
           </h2>
 
           <div className="row g-4">
@@ -416,9 +484,7 @@ const InstitutionStats = () => {
                     fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                   }}
                 >
-                  To be a world class business school, achieving excellence in
-                  imparting management education and research through continuous
-                  competency building.
+                  To be a globally recognized center of excellence in management and technology education that nurtures innovation, leadership, and social responsibility — empowering students to create a positive impact in the dynamic business world.
                 </p>
               </div>
             </div>
@@ -486,16 +552,17 @@ const InstitutionStats = () => {
                     fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                   }}
                 >
-                  To provide managerial talent with risk taking ability, passion
-                  for lifelong learning; creative, innovative thinking and
-                  values in rapidly evolving economic and social global
-                  environment.
+                  1.	To provide value-based and industry-oriented education that bridges the gap between academia and corporate practices.<br></br>
+
+                  2.	To foster holistic student development through experiential learning, research, and entrepreneurship.<br></br>
+                  3.	To maintain a student-centric approach that supports personal growth, mental well-being, and lifelong learning.<br></br>
+                  4.	To maintain academic excellence through continuous improvement, innovation, and collaboration with global institutions and industries.
                 </p>
               </div>
             </div>
 
             {/* OPERATING PHILOSOPHY CARD - FULL WIDTH */}
-            <div className="col-12">
+            <div className="col-6">
               <div
                 className="h-100 p-4"
                 style={{
@@ -530,7 +597,7 @@ const InstitutionStats = () => {
                     }}
                   >
                     <FontAwesomeIcon
-                      icon={faCogs}
+                      icon={faCircle}
                       style={{ fontSize: "16px", color: "#FFC333" }}
                     />
                   </div>
@@ -544,7 +611,7 @@ const InstitutionStats = () => {
                         fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                       }}
                     >
-                      OPERATING PHILOSOPHY
+                      GOALS
                     </h3>
                   </div>
                 </div>
@@ -560,19 +627,104 @@ const InstitutionStats = () => {
                   }}
                 >
                   <li style={{ marginBottom: "12px" }}>
-                    Ensure that education is accessible to all irrespective of
-                    the financial standings.
+                    <b>I - Inspire</b><br></br>
+                    Inspire our students to discover their true potential and strive for academic and personal excellence.
                   </li>
                   <li style={{ marginBottom: "12px" }}>
-                    Provide application-oriented excellence in teaching and
-                    anticipate dynamic diversities enabling 'Happy Learning'
-                    ambience.
+                    <b>S -Strengthen</b><br></br>
+                    Strengthen their knowledge, confidence, and character through continuous learning and exposure.
                   </li>
-                  <li>
-                    Transform students to lead the economy of tomorrow equipped
-                    with abilities to overcome challenges of the corporate
-                    world. Empower students to grab the opportunity by choice
-                    and not by chance.
+                  <li style={{ marginBottom: "12px" }}>
+                    <b>M-Motivate</b><br></br>
+                    Motivate every learner to lead with innovation,
+                    purpose, and professionalism in their chosen field.
+
+                  </li>
+                  <li style={{ marginBottom: "12px" }}>
+                    <b>R-Rise</b><br></br>
+                    Rise beyond limitations to become globally
+                    competent, responsible, and successful individuals.
+
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="col-6">
+              <div
+                className="h-100 p-4"
+                style={{
+                  backgroundColor: "#ffffff",
+                  borderRadius: "16px",
+                  boxShadow: "0 8px 24px rgba(0, 0, 0, 0.1)",
+                  transition: "all 0.3s ease",
+                  border: "1px solid #e5e7eb",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-8px)";
+                  e.currentTarget.style.boxShadow =
+                    "0 12px 32px rgba(0, 0, 0, 0.15)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.boxShadow =
+                    "0 8px 24px rgba(0, 0, 0, 0.1)";
+                }}
+              >
+                <div className="d-flex align-items-start gap-3">
+                  <div
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                      backgroundColor: "#0a2240",
+                      borderRadius: "12px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                    }}
+                  >
+                    <FontAwesomeIcon
+                      icon={faHandHoldingHeart}
+                      style={{ fontSize: "16px", color: "#FFC333" }}
+                    />
+                  </div>
+                  <div>
+                    <h3
+                      style={{
+                        fontSize: "32px",
+                        fontWeight: 700,
+                        color: "#0a2240",
+                        marginBottom: "10px",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                      }}
+                    >
+                      CORE VALUES - SBES
+                    </h3>
+                  </div>
+                </div>
+                <ul
+                  style={{
+                    fontSize: "18px",
+                    lineHeight: "1.7",
+                    color: "#444",
+                    marginTop: "20px",
+                    paddingLeft: "20px",
+                    fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                    textAlign: "justify",
+                  }}
+                >
+                  <li style={{ marginBottom: "12px" }}>
+                    <b>S -</b> Service
+                  </li>
+                  <li style={{ marginBottom: "12px" }}>
+                  <b>B -</b> Brilliance
+                  </li>
+                  <li style={{ marginBottom: "12px" }}>
+                    <b>E - </b> Excellence
+                  </li>
+                  <li style={{ marginBottom: "12px" }}>
+                   <b>S -</b> Sustainability
                   </li>
                 </ul>
               </div>
@@ -580,7 +732,7 @@ const InstitutionStats = () => {
           </div>
         </div>
       </section>
-    </div>
+    </div >
   );
 };
 

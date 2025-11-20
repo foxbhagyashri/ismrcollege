@@ -466,20 +466,16 @@ export default function RefundPolicy() {
               <ul className="list">
                 <li>Entire amount of Security/Caution Money Deposit will be refunded to the candidate.</li>
                 <li>For calculation of the cancellation charges on the pro-rata basis, one month shall be treated as one Semester.</li>
-                <li><strong>Refund of fees will be done on or after 15th November 2025.</strong></li>
+                <li>Refund of fees will be done on or after 15th November 2026.</li>
               </ul>
             </div>
           </div>
 
-          <div className="actions">
-            <button className="btn btn-primary" onClick={() => window.print()}>
-              Print / Save PDF
-            </button>
-          </div>
+         
 
-          <div className="muted">
-            Last updated: <strong>November 18, 2025</strong>
-          </div>
+          {/* <div className="muted">
+            Last updated: <strong>November 18, 2026</strong>
+          </div> */}
         </div>
       </div>
     </section>

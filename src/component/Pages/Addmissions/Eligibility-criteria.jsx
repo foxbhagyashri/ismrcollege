@@ -137,66 +137,21 @@ export default function PrivacySection() {
                       fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                     }}
                   >
-                    Candidates applying for undergraduate (graduation)
-                    programmes must meet the following minimum criteria:
+                    Candidates with minimum 50% marks in 10+2 (H.S.C.) standard or its equivalent examination (45% for reserved categories) from any recognized Jr. college/Institute with a valid score card in entrance test of MAH-BCA/BBA/BMS/BBM-CET-2026 is eligible to apply. Enabling the candidate to appear for selection Process directly.
                   </p>
-                  <ol
+                 
+                  <p
                     style={{
                       fontSize: "16px",
                       color: "#444",
                       lineHeight: "1.7",
-                      marginBottom: "2rem",
+                      marginBottom: "1.5rem",
                       fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                      paddingLeft: "1.5rem",
                     }}
                   >
-                    <li className="mb-2">
-                      Candidates must have passed 10+2 (H.S.C.) or an equivalent
-                      examination from a recognized board with a minimum of 50%
-                      marks (45% for reserved categories).
-                    </li>
-                    <li className="mb-2">
-                      A valid MAH-BCA/BBA/BMS/BBM-CET-2025 scorecard is required
-                      for direct consideration in the selection process.
-                    </li>
-                    <li className="mb-2">
-                      Candidates with 60% or above in both 10th and 12th
-                      examinations will be given preference.
-                    </li>
-                    <li className="mb-2">
-                      Subject-specific requirements may vary based on the
-                      selected course.
-                    </li>
-                    <li className="mb-2">
-                      Final selection may be based on entrance test performance
-                      and/or merit list, wherever applicable.
-                    </li>
-                    <li className="mb-2">
-                      Reserved category relaxations will be provided as per
-                      government norms.
-                    </li>
-                  </ol>
-                  <div
-                    className="rounded-3 p-3"
-                    style={{
-                      backgroundColor: "#f8f9fa",
-                      borderLeft: "4px solid #FFC333",
-                    }}
-                  >
-                    <p
-                      style={{
-                        fontSize: "15px",
-                        color: "#0a2240",
-                        margin: 0,
-                        fontWeight: "600",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                      }}
-                    >
-                      📋 <strong>Documents Required:</strong> 10th & 12th mark
-                      sheets, ID proof, passport photo, category certificate (if
-                      applicable), and other course-specific documents.
-                    </p>
-                  </div>
+                  Candidates with 60% at 10th and 12th standard or it’s equivalent examination, will be given preference
+                  </p>
+               
                 </div>
               )}
 
@@ -223,69 +178,34 @@ export default function PrivacySection() {
                       fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                     }}
                   >
-                    Applicants for postgraduate programmes should satisfy the
-                    following:
+                    Candidates with minimum 50% marks in graduation (45% for reserved categories) from any recognized university and with a valid score card in national-level entrance tests like with MAH-MBA CET/CMAT/CAT/MAT/XAT/ATMA/GMAT are eligible to apply (all such exams shall be treated at par) enabling the candidate to appear for selection Process directly.
                   </p>
-                  <ol
+            
+                  <p
                     style={{
                       fontSize: "16px",
                       color: "#444",
                       lineHeight: "1.7",
-                      marginBottom: "2rem",
+                      marginBottom: "1.5rem",
                       fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                      paddingLeft: "1.5rem",
                     }}
                   >
-                    <li className="mb-2">
-                      Candidates with a minimum of 50% marks in graduation (45%
-                      for reserved categories) from any recognized university
-                      and a valid score in national-level entrance exams such as
-                      MAH-MBA CET, CMAT, CAT, MAT, XAT, ATMA, or GMAT are
-                      eligible to apply. All these exams will be treated at par
-                      for direct consideration in the selection process.
-                    </li>
+                   Candidates appearing for final year degree examination up to July 2026 can also apply. Such candidates, whose final year degree results is not declared at the time of admission will be admitted provisionally and after submitting a bonafide certificate from the Head of the Institute stating that he/she is a regular student. The admission of such a candidate will be confirmed only if he/she provides a proof of passing the final year degree examination marksheet on or before 31st July 2026.
+                  </p>
 
-                    <li className="mb-2">
-                      Candidates appearing for their final year degree
-                      examination up to July 2025 are also eligible to apply.
-                      Such applicants will be granted provisional admission upon
-                      submitting a bonafide certificate from the Head of their
-                      Institute confirming their student status.
-                    </li>
-
-                    <li className="mb-2">
-                      Admission will be confirmed only after submitting the
-                      final year marksheet as proof of graduation on or before
-                      31st July 2025.
-                    </li>
-
-                    <li className="mb-2">
-                      Candidates who have maintained 60% marks throughout their
-                      academic career will be given preference.
-                    </li>
-                  </ol>
-                  <div
-                    className="rounded-3 p-3"
+                  <p
                     style={{
-                      backgroundColor: "#f8f9fa",
-                      borderLeft: "4px solid #FFC333",
+                      fontSize: "16px",
+                      color: "#444",
+                      lineHeight: "1.7",
+                      marginBottom: "1.5rem",
+                      fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                     }}
                   >
-                    <p
-                      style={{
-                        fontSize: "15px",
-                        color: "#0a2240",
-                        margin: 0,
-                        fontWeight: "600",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                      }}
-                    >
-                      📋 <strong>Documents Required:</strong> Degree
-                      certificate, provisional certificate/mark sheets, ID
-                      proof, experience letters (if applicable), and
-                      passport-sized photos.
-                    </p>
-                  </div>
+                  Candidates with 60% throughout their academic career, will be given preference.
+                  </p>
+
+            
                 </div>
               )}
 
@@ -366,46 +286,7 @@ export default function PrivacySection() {
                 </div>
               )}
 
-              {/* ADDITIONAL INFORMATION */}
-              <div className="mt-5 pt-4 border-top">
-                <h3
-                  style={{
-                    fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                    fontSize: "20px",
-                    fontWeight: "600",
-                    color: "#0a2240",
-                    marginBottom: "1rem",
-                  }}
-                >
-                  Additional Information
-                </h3>
-                <ul
-                  style={{
-                    fontSize: "16px",
-                    color: "#444",
-                    lineHeight: "1.7",
-                    fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                    paddingLeft: "1.5rem",
-                  }}
-                >
-                  <li className="mb-2">
-                    All eligibility criteria are subject to change as per
-                    university guidelines
-                  </li>
-                  <li className="mb-2">
-                    International students must provide equivalent qualification
-                    certificates
-                  </li>
-                  <li className="mb-2">
-                    Application deadlines must be strictly adhered to
-                  </li>
-                  <li className="mb-2">
-                    For specific programme requirements, contact our admissions
-                    office
-                  </li>
-                </ul>
-              </div>
-
+            
               {/* CONTACT CTA */}
               <div
                 className="rounded-3 p-4 mt-4 text-center"
@@ -435,7 +316,7 @@ export default function PrivacySection() {
                   Contact our admissions team for personalized guidance on
                   eligibility requirements.
                 </p>
-                <button
+                <a href="tel:9923786079"
                   className="btn fw-semibold"
                   style={{
                     padding: "10px 24px",
@@ -448,7 +329,7 @@ export default function PrivacySection() {
                   }}
                 >
                   📞 Contact Admissions
-                </button>
+                </a>
               </div>
             </div>
           </div>
