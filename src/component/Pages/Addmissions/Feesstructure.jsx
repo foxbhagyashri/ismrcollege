@@ -3,12 +3,12 @@ import allsectionbg from "../../../assets/allsectionbg.jpg";
 import Faq from "../../Faq";
 
 export default function FeesStructure() {
-    const [programme, setProgramme] = useState("MBA (Finance)");
+    const [programme, setProgramme] = useState("MBA");
     const [view, setView] = useState("annual"); // annual | semester
 
     const programmes = [
         {
-            name: "MBA (Finance)",
+            name: "MBA",
             type: "Postgraduate",
             currency: "INR",
             fees: {

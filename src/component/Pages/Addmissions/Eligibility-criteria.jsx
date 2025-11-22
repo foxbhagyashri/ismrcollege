@@ -55,6 +55,31 @@ export default function PrivacySection() {
         <div className="row justify-content-center mb-5">
           <div className="col-12">
             <div className="d-flex justify-content-center flex-wrap gap-3">
+             
+             
+            <button
+                className={`btn fw-semibold ${
+                  filter === "postgraduation" ? "" : "btn-outline-secondary"
+                }`}
+                onClick={() => setFilter("postgraduation")}
+                style={{
+                  padding: "12px 24px",
+                  backgroundColor:
+                    filter === "postgraduation" ? "#0a2240" : "transparent",
+                  color: filter === "postgraduation" ? "#fff" : "#0a2240",
+                  border: `2px solid ${
+                    filter === "postgraduation" ? "#0a2240" : "#0a2240"
+                  }`,
+                  borderRadius: "8px",
+                  fontSize: "16px",
+                  fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                  transition: "all 0.3s ease",
+                }}
+              >
+               MBA
+              </button>
+             
+             
               <button
                 className={`btn fw-semibold ${
                   filter === "graduation" ? "" : "btn-outline-secondary"
@@ -74,29 +99,9 @@ export default function PrivacySection() {
                   transition: "all 0.3s ease",
                 }}
               >
-                Under Graduation
+               BBA/ BCA
               </button>
-              <button
-                className={`btn fw-semibold ${
-                  filter === "postgraduation" ? "" : "btn-outline-secondary"
-                }`}
-                onClick={() => setFilter("postgraduation")}
-                style={{
-                  padding: "12px 24px",
-                  backgroundColor:
-                    filter === "postgraduation" ? "#0a2240" : "transparent",
-                  color: filter === "postgraduation" ? "#fff" : "#0a2240",
-                  border: `2px solid ${
-                    filter === "postgraduation" ? "#0a2240" : "#0a2240"
-                  }`,
-                  borderRadius: "8px",
-                  fontSize: "16px",
-                  fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                  transition: "all 0.3s ease",
-                }}
-              >
-                Post Graduation
-              </button>
+             
             </div>
           </div>
         </div>
@@ -169,6 +174,18 @@ export default function PrivacySection() {
                   >
                     ELIGIBILITY CRITERIA FOR MBA
                   </h2>
+                  <p
+                    style={{
+                      fontSize: "16px",
+                      color: "#444",
+                      lineHeight: "1.7",
+                      marginBottom: "1.5rem",
+                      fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                    }}
+                  >
+                Candidates appearing for final year degree examination up to July 2026 can also apply.
+
+                  </p>
                   <p
                     style={{
                       fontSize: "16px",

@@ -79,7 +79,7 @@ const WhyChooseAdma = () => {
 
             <div className="text-center mt-5">
               <a href="Aboutpage/Ismr"  className="overview-btn">
-                Institute Overview →
+               More reasons to join ISMR →
               </a>
             </div>
           </Col>

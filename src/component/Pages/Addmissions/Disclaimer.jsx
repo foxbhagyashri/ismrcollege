@@ -37,14 +37,14 @@ export default function DisclaimerPage() {
               margin: 0,
             }}
           >
-             <span className="text-warning">Disclaimer</span>
+            <span className="text-warning">Disclaimer</span>
           </h1>
           <p
             className="mb-0"
-            style={{ 
-              fontFamily: "'Inter', Arial, Helvetica, sans-serif", 
-              fontSize: "15px", 
-              marginTop: "0.5rem" 
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "15px",
+              marginTop: "0.5rem"
             }}
           >
             Admissions • <span className="text-warning">Disclaimer</span>
@@ -54,7 +54,7 @@ export default function DisclaimerPage() {
 
       {/* -------- MAIN CONTENT -------- */}
       <div className="container pb-5" style={{ marginTop: "3rem" }}>
-        <div 
+        <div
           className="rounded-3 p-4 p-md-5"
           style={{
             backgroundColor: "#fff",
@@ -74,8 +74,8 @@ export default function DisclaimerPage() {
           >
             DISCLAIMER FOR FEES
           </h2>
-          
-          <p
+
+          {/* <p
             style={{
               fontSize: "18px",
               color: "#0a2240",
@@ -87,7 +87,34 @@ export default function DisclaimerPage() {
             }}
           >
             ISMR B-School Pune has not appointed any person or any third party to take admission on behalf of the International School of Management & Research.
-          </p>
+          </p> */}
+
+          {/* <p
+            style={{
+              fontSize: "16px",
+              color: "#000",
+              lineHeight: "1.8",
+              marginBottom: "1rem",
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              textAlign: "justify"
+            }}
+          >
+            Candidates are advised to get in touch directly with the institute for any admission related procedure.
+          </p> */}
+
+          {/* <p
+            style={{
+              fontSize: "16px",
+              color: "#000",
+              lineHeight: "1.8",
+              marginBottom: "2rem",
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              textAlign: "justify"
+            }}
+          >
+            <strong style={{ color: "#0a2240" }}>Fees to be paid at institute counter or in the following account only:</strong> You are advised to remit the amount through a bank draft, drawn in favour of <strong>"International School of Management & Research (ISMR)"</strong>, payable at Pune or through online payment via NEFT or RTGS.
+          </p> */}
+
 
           <p
             style={{
@@ -99,24 +126,12 @@ export default function DisclaimerPage() {
               textAlign: "justify"
             }}
           >
-            Candidates are advised to get in touch directly with the institute for any admission related procedure.
+            ISMR Pune has not authorized any person or third party to take admissions on its behalf.
+            For any admission-related information or process, please contact the institute directly.
+
           </p>
 
-          <p
-            style={{
-              fontSize: "16px",
-              color: "#000",
-              lineHeight: "1.8",
-              marginBottom: "2rem",
-              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-              textAlign: "justify"
-            }}
-          >
-            <strong style={{ color: "#0a2240" }}>Fees to be paid at institute counter or in the following account only:</strong> You are advised to remit the amount through a bank draft, drawn in favour of <strong>"International School of Management & Research (ISMR)"</strong>, payable at Pune or through online payment via NEFT or RTGS.
-          </p>
 
-       
-        
 
           {/* IMPORTANT NOTE BOX */}
           <div
@@ -137,13 +152,14 @@ export default function DisclaimerPage() {
                 fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               }}
             >
-              ⚠️ <strong>NOTE:</strong> Institute will not be responsible, if any Students pay any fees or part of fees to any person or deposits in any other account.
+              ⚠️ <strong>Important :</strong> All fees must be paid only to the official institute bank account through this link - 
+              Do not pay fees to any individual or unofficial account.
             </p>
           </div>
 
-       
 
-         
+
+
         </div>
       </div>
       <Faq />
