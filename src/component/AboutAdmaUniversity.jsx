@@ -8,6 +8,7 @@ import LOAN from "../assets/Homeimg/LOAN.png";
 import AIMA from "../assets/Homeimg/AIMA.png";
 import AIMS from "../assets/Homeimg/AIMS.png";
 import AISE from "../assets/Homeimg/AISE.png";
+import CET from "../assets/Homeimg/cetcell.png";
 
 const AboutAdmaUniversity = () => {
   return (
@@ -29,13 +30,14 @@ const AboutAdmaUniversity = () => {
             <span>Directorate of Technical Education, Maharashtra</span>
           </div>
           <div className="logo-card">
+            <img src={CET} alt="LOAN Logo" className="logo-image" />
+            <span>CET Cell</span>
+          </div>
+          <div className="logo-card">
             <img src={SPPU} alt="SPPU Logo" className="logo-image" />
             <span>Savitribai Phule Pune University</span>
           </div>
-          <div className="logo-card">
-            <img src={NAAC} alt="NAAC Logo" className="logo-image" />
-            <span>National Assessment and Accreditation Council</span>
-          </div>
+          
         </div>
       </div>
       <div className="about-bottom">
@@ -56,8 +58,8 @@ const AboutAdmaUniversity = () => {
               Higher Education</span>
           </div>
           <div className="logo-card">
-            <img src={LOAN} alt="LOAN Logo" className="logo-image" />
-            <span>CET Cell</span>
+            <img src={NAAC} alt="NAAC Logo" className="logo-image" />
+            <span>National Assessment and Accreditation Council</span>
           </div>
         </div>
       </div>

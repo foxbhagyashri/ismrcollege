@@ -44,9 +44,10 @@ const Banner = () => {
                       }}
                     >
                       MBA : DTE College Code 6798 | BBA & BCA College Code 16301
-                      <br /> Approved by AICTE, Ministry of HRD, Govt of India.
+                      <br /> Approved by AICTE, Ministry of Education, Govt of India.
                       <br />
-                      Affiliated to S.P.Pune University
+                      Affiliated to S.P. (Savitribai Phule) Pune University<br></br>
+                      National Assessment and Accreditation Council (NAAC) Accredited
                     </b>
                   </p>
                 </div>

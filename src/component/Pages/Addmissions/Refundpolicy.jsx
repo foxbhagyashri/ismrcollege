@@ -35,10 +35,10 @@ export default function RefundPolicy() {
           </h1>
           <p
             className="mb-0"
-            style={{ 
-              fontFamily: "'Inter', Arial, Helvetica, sans-serif", 
-              fontSize: "15px", 
-              marginTop: "0.5rem" 
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "15px",
+              marginTop: "0.5rem"
             }}
           >
             Admissions • <span className="text-warning">Refund Policy</span>
@@ -46,8 +46,8 @@ export default function RefundPolicy() {
         </div>
       </section>
 
-    <section className="refund-policy">
-      <style>{`
+      <section className="refund-policy">
+        <style>{`
         .refund-policy {
           font-family: 'Inter', Arial, Helvetica, sans-serif;
           color: #0f2b44;
@@ -393,93 +393,110 @@ export default function RefundPolicy() {
         }
       `}</style>
 
-      <div className="container">
-        <div className="panel" role="region" aria-labelledby="refund-heading">
-          <h2 id="refund-heading">Refund Policy</h2>
-          <p className="lead">
-            The refund policy for fees at International School of Management & Research is outlined below.
-          </p>
+        <div className="container">
+          <div className="panel" role="region" aria-labelledby="refund-heading">
+            <h2 id="refund-heading">Refund Policy</h2>
+            <p className="lead">
+              The refund policy for fees at International School of Management & Research is outlined below.
+            </p>
 
-          <div className="section">
-            <h3>Refund Schedule - Table 1</h3>
-            <table className="table" aria-describedby="refund-heading">
-              <thead>
-                <tr>
-                  <th>Sr. No.</th>
-                  <th>Situation</th>
-                  <th>Refund</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>1.</strong></td>
-                  <td>Request Received before date of start of session.</td>
-                  <td>Entire fee less Rs.1000/- Processing Fees</td>
-                </tr>
-                <tr>
-                  <td><strong>2.</strong></td>
-                  <td>Request received after commencement the course & seat could be filled by the Institute.</td>
-                  <td>Entire fees collected after a deduction of the processing fee of Rs.1000/- and proportionate deductions of monthly tuition fee and hostel rent.</td>
-                </tr>
-                <tr>
-                  <td><strong>3.</strong></td>
-                  <td>Request received after commencement the course & seat could not be filled.</td>
-                  <td>No Refund. Only Security Deposit (if any) will be refunded.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div className="section">
-            <h3>Refund Schedule - Table 2</h3>
-            <table className="table" aria-describedby="refund-heading">
-              <thead>
-                <tr>
-                  <th>Sr. No.</th>
-                  <th>Situation</th>
-                  <th>Refund</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>1.</strong></td>
-                  <td>On request received before the date of start of the academic session & seat could be filled by the Institute before the cut off date</td>
-                  <td>Entire fee less Rs.1000/-</td>
-                </tr>
-                <tr>
-                  <td><strong>2.</strong></td>
-                  <td>On request received on/ after the beginning of academic session & seat could be filled by the Institute before the cut off date.</td>
-                  <td>Entire fee less the seat Cancellation Charges on pro rata basis**</td>
-                </tr>
-                <tr>
-                  <td><strong>3.</strong></td>
-                  <td>On request received before/after the start of the academic session & seat could not be filled by the Institute.</td>
-                  <td>No refund (expect security deposit if any)</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div className="section">
-            <h3>Important Notes</h3>
-            <div className="note">
-              <ul className="list">
-                <li>Entire amount of Security/Caution Money Deposit will be refunded to the candidate.</li>
-                <li>For calculation of the cancellation charges on the pro-rata basis, one month shall be treated as one Semester.</li>
-                <li>Refund of fees will be done on or after 15th November 2026.</li>
-              </ul>
+            <div className="section">
+              <h3>Refund Schedule - Table 1</h3>
+              <table className="table" aria-describedby="refund-heading">
+                <thead>
+                  <tr>
+                    <th>Sr. No.</th>
+                    <th>Situation</th>
+                    <th>Refund</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>1.</strong></td>
+                    <td>Request Received before date of start of session.</td>
+                    <td>Entire fee less Rs.1000-2000/- Processing Fees</td>
+                  </tr>
+                  <tr>
+                    <td><strong>2.</strong></td>
+                    <td>Request received after commencement the course & seat could be filled by the Institute.</td>
+                    <td>Entire fees collected after a deduction of the processing fee of Rs.1000/- and proportionate deductions of monthly tuition fee and hostel rent.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>3.</strong></td>
+                    <td>Request received after commencement the course & seat could not be filled.</td>
+                    <td>No Refund. Only Security Deposit (if any) will be refunded.</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-          </div>
 
-         
+            <div className="section">
+              <h3>Refund Schedule - Table 2</h3>
+              <table className="table" aria-describedby="refund-heading">
+                <thead>
+                  <tr>
+                    <th>Sr. No.</th>
+                    <th>Situation</th>
+                    <th>Refund</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>1.</strong></td>
+                    <td>On request received before the date of start of the academic session & seat could be filled by the Institute before the cut off date</td>
+                    <td>Entire fee less Rs.1000/-</td>
+                  </tr>
+                  <tr>
+                    <td><strong>2.</strong></td>
+                    <td>On request received on/ after the beginning of academic session & seat could be filled by the Institute before the cut off date.</td>
+                    <td>Entire fee less the seat Cancellation Charges on pro rata basis**</td>
+                  </tr>
+                  <tr>
+                    <td><strong>3.</strong></td>
+                    <td>On request received before/after the start of the academic session & seat could not be filled by the Institute.</td>
+                    <td>No refund (expect security deposit if any)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
-          {/* <div className="muted">
+            <div className="section">
+              <h3>Important Notes</h3>
+              <div className="note">
+                <ul className="list">
+                  <li>Refund of fees will be done on or after 15th November 2026.
+                  </li>
+                  <li>For admission cancellation and refund, please send a detailed email to admissions@ismrpune.edu.in.
+                  </li>
+                  <li>Make sure to include:
+                  </li>
+                  <ul className="list">
+                    <li>Your exact name as per your bank account, and
+
+                    </li>
+                    <li>A scanned copy of the required supporting documents
+
+                    </li>
+
+                  </ul>
+
+                </ul>
+                <p><b>Please note :
+                </b>Your request will be accepted only until the last date announced by CET Cell.
+                  After this date, no requests will be processed.
+                </p>
+              </div>
+            </div>
+
+
+
+            {/* <div className="muted">
             Last updated: <strong>November 18, 2026</strong>
           </div> */}
+          </div>
         </div>
-      </div>
-    </section>
-    <Faq />
+      </section>
+      <Faq />
     </div>
   );
 }

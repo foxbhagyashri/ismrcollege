@@ -1,6 +1,6 @@
 import React from 'react';
 import allsectionbg from "../../../assets/allsectionbg.jpg";
-import loanImage from "../../../assets/Homeimg/LOAN.png";
+import loanImage from "../../../assets/Homeimg/loann.jpg";
 import Faq from "../../Faq";
 
 export default function EducationLoad() {
@@ -43,10 +43,10 @@ export default function EducationLoad() {
           </h1>
           <p
             className="mb-0"
-            style={{ 
-              fontFamily: "'Inter', Arial, Helvetica, sans-serif", 
-              fontSize: "15px", 
-              marginTop: "0.5rem" 
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "15px",
+              marginTop: "0.5rem"
             }}
           >
             Admissions • <span className="text-warning">Educational Loan</span>
@@ -80,7 +80,7 @@ export default function EducationLoad() {
                 textAlign: "justify",
               }}
             >
-              International School of Management & Research has tied up with Credenc to help students avail education loans easily from a number of banks and NBFCs. The education loan for the students of International School of Management & Research is offer based on the credit history of the co-applicant and academic performance of the applicant.
+              International School of Management & Research has tied up with HDFC and ICICI to help students avail education loans easily from a number of banks and NBFCs. The education loan for the students of International School of Management & Research is offer based on the credit history of the co-applicant and academic performance of the applicant.
             </p>
           </div>
           <div className="col-lg-5 d-flex justify-content-center">
@@ -120,14 +120,14 @@ export default function EducationLoad() {
                 BENEFITS
               </h3>
               <div className="row g-4">
-                <div className="col-md-6">
+                {/* <div className="col-md-6">
                   <div className="d-flex align-items-start">
                     <i className="fas fa-check-circle fa-2x me-3" style={{ color: "#FFC333", flexShrink: 0 }}></i>
                     <p style={{ fontSize: "16px", lineHeight: "1.7", margin: 0 }}>
                       Easy availability of education loans for a number of courses
                     </p>
                   </div>
-                </div>
+                </div> */}
                 <div className="col-md-6">
                   <div className="d-flex align-items-start">
                     <i className="fas fa-percent fa-2x me-3" style={{ color: "#FFC333", flexShrink: 0 }}></i>
@@ -212,7 +212,7 @@ export default function EducationLoad() {
                     }}
                   >
                     <i className="fas fa-handshake me-2" style={{ color: "#FFC333" }}></i>
-                    Tie Up with Axis Bank
+                    Tie Up with HDFC and ICICI
                   </p>
                 </div>
               </div>
@@ -273,17 +273,19 @@ export default function EducationLoad() {
                       </li>
                       <li className="mb-3" style={{ fontSize: "16px", lineHeight: "1.6" }}>
                         <i className="fas fa-certificate me-2" style={{ color: "#FFC333" }}></i>
-                        X and XII Marksheets
+                        X<sup>th</sup> and XII<sup>th</sup> Marksheets
                       </li>
+
                       <li className="mb-3" style={{ fontSize: "16px", lineHeight: "1.6" }}>
-                        <i className="fas fa-file-invoice me-2" style={{ color: "#FFC333" }}></i>
-                        Salary Slip (If Employed)
+                        <i className="fas fa-envelope-open-text me-2" style={{ color: "#FFC333" }}></i>
+                        College Admission Letter
                       </li>
                       <li className="mb-3" style={{ fontSize: "16px", lineHeight: "1.6" }}>
                         <i className="fas fa-envelope-open-text me-2" style={{ color: "#FFC333" }}></i>
-                        University Admission Letter
+                        Graduation Marksheets (If Applicable)
                       </li>
                     </ul>
+                    <p><b>Note :-</b> Any other documents as required by requested bank</p>
                   </div>
                 </div>
 
@@ -339,7 +341,12 @@ export default function EducationLoad() {
                         <i className="fas fa-building me-2" style={{ color: "#0a2240" }}></i>
                         Assets And Liabilities Brief (If Providing Collateral)
                       </li>
+                      <li className="mb-3" style={{ fontSize: "16px", lineHeight: "1.6" }}>
+                        <i className="fas fa-file-invoice me-2" style={{ color: "#0a2240" }}></i>
+                        Salary Slip (If Employed)
+                      </li>
                     </ul>
+                    <p><b>Note :-</b> Any other documents as required by requested bank</p>
                   </div>
                 </div>
               </div>
@@ -371,7 +378,7 @@ export default function EducationLoad() {
               <p style={{ fontSize: "16px", color: "#0a2240", marginBottom: "1.5rem" }}>
                 Contact our financial aid office for assistance
               </p>
-              <button
+          <a href="tel:9923786079">   <button
                 className="btn fw-semibold"
                 style={{
                   padding: "12px 40px",
@@ -394,7 +401,7 @@ export default function EducationLoad() {
               >
                 <i className="fas fa-envelope me-2"></i>
                 Contact Us
-              </button>
+              </button></a> 
             </div>
           </div>
         </div>

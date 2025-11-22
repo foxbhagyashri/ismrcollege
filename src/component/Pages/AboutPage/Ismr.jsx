@@ -11,8 +11,8 @@ import {
   faUniversity,
   faPlane,
   faWifi,
-  faChalkboardTeacher,
-  faBook,
+  faShieldAlt,
+  faGraduationCap,
   faUsers,
   faComments,
   faUserTie,
@@ -24,7 +24,7 @@ import {
   faBed,
   faUtensils,
   faHospital,
-  faShield,
+ 
   faSmile,
   faMountain,
   faLightbulb,
@@ -32,137 +32,28 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const whyIsmrFeatures = [
-  {
-    id: 1,
-    title: "Excellent Return on Investment",
-    icon: faDollarSign,
-  },
-  {
-    id: 2,
-    title: "20 Acres Serene Campus",
-    icon: faTree,
-  },
-  {
-    id: 3,
-    title: "100% Placement Assistance",
-    icon: faBriefcase,
-  },
-  {
-    id: 4,
-    title: "Foreign Placement Assistance",
-    icon: faGlobe,
-  },
-  {
-    id: 5,
-    title: "Scholarships to Meritorious Students",
-    icon: faAward,
-  },
-  {
-    id: 6,
-    title: "Education Loan Tie up with Leading Banks",
-    icon: faUniversity,
-  },
-  {
-    id: 7,
-    title: "Domestic and International Industrial Visits",
-    icon: faPlane,
-  },
-  {
-    id: 8,
-    title: "State-of-the-Art Infrastructure with Fully Wi-Fi Enabled Campus",
-    icon: faWifi,
-  },
-  {
-    id: 9,
-    title: "Seminar based, Career Oriented, and Industry Focused Curriculum",
-    icon: faChalkboardTeacher,
-  },
-  {
-    id: 10,
-    title: "Access to Study Material / Newspapers / Journals / Case Studies etc.",
-    icon: faBook,
-  },
-  {
-    id: 11,
-    title: "Leadership and Team Building Activities",
-    icon: faUsers,
-  },
-  {
-    id: 12,
-    title: "Special classes on Personality Development, Communication, and Foreign Language",
-    icon: faComments,
-  },
-  {
-    id: 13,
-    title: "Dedicated and Experienced Faculties from Academic and Industrial Background",
-    icon: faUserTie,
-  },
-  {
-    id: 14,
-    title: "Advanced Excel Certification",
-    icon: faFileExcel,
-  },
-  {
-    id: 15,
-    title: "Extra Activities",
-    icon: faPuzzlePiece,
-  },
-  {
-    id: 16,
-    title: "Indoor and Outdoor Recreational Activities",
-    icon: faFutbol,
-  },
-  {
-    id: 17,
-    title: "Gymnasium with all Latest Equipments",
-    icon: faDumbbell,
-  },
-  {
-    id: 18,
-    title: "Cultural Programme and Intra-Collegiate Programme",
-    icon: faMusic,
-  },
-  {
-    id: 19,
-    title: "Hostel Facilities for Boys and Girls",
-    icon: faBed,
-  },
-  {
-    id: 20,
-    title: "Mess Facility",
-    icon: faUtensils,
-  },
-  {
-    id: 21,
-    title: "Medicare Facility during the Course",
-    icon: faHospital,
-  },
-  {
-    id: 22,
-    title: "Accidental Mediclaim Policy during the course",
-    icon: faShield,
-  },
-  {
-    id: 23,
-    title: "A Fun-Filled College Life Experience",
-    icon: faSmile,
-  },
-  {
-    id: 24,
-    title: "Outbound Management Programs",
-    icon: faMountain,
-  },
-  {
-    id: 25,
-    title: "Innovative Learning: Mentorship, Internship, Practical Exposure in Industry",
-    icon: faLightbulb,
-  },
-  {
-    id: 26,
-    title: "Free Bus Transportation (First Year Only)",
-    icon: faBus,
-  },
+  { id: 1, title: "Best Institute in Western Region for Academics and Placements Excellence", icon: faAward },
+  { id: 2, title: "Management & Leadership Development Programmes", icon: faUsers },
+  { id: 3, title: "Indoor and Outdoor Recreational Activities", icon: faFutbol },
+  { id: 4, title: "Domestic and International Industrial Visits", icon: faPlane },
+  { id: 5, title: "Education Loan Tie-up with Leading Banks", icon: faUniversity },
+  { id: 6, title: "Accidental Insurance Coverage", icon: faShieldAlt },
+  { id: 7, title: "Scholarships to Meritorious Students", icon: faGraduationCap },
+  { id: 8, title: "Fully Wi-Fi Enabled Campus", icon: faWifi },
+  { id: 9, title: "Domestic Study Tour", icon: faBus },
+  
+  { id: 10, title: "Excellent Return on Investment", icon: faDollarSign },
+  { id: 11, title: "International Study Tour", icon: faGlobe },
+  { id: 12, title: "Gym Facility in Campus", icon: faDumbbell },
+  { id: 13, title: "Medicare Facility during the duration of the Course", icon: faHospital },
+  { id: 14, title: "Hostel & Mess Facilities for Boys and Girls", icon: faBed },
+  { id: 15, title: "100% Placement Assistance Since Inception", icon: faBriefcase },
+  { id: 16, title: "Extra Activities", icon: faPuzzlePiece },
+  { id: 17, title: "Dedicated and Experienced Faculties", icon: faUserTie },
+  { id: 18, title: "Cultural Programme and Intra Collegiate Programme", icon: faMusic },
+  { id: 19, title: "20 Acres Serene Campus", icon: faTree },
 ];
+
 
 function WhyISMRPage() {
   return (
@@ -331,7 +222,7 @@ function WhyISMRPage() {
                       style={{ fontSize: "22px", color: "#FFC333" }}
                     />
                   </div>
-                  
+
                   <h6
                     className="mb-0"
                     style={{

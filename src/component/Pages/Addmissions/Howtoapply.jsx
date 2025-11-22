@@ -651,9 +651,7 @@ export default function HowToApply() {
               <div id="panel-overview" aria-labelledby="tab-overview">
                 <h2>Quick Overview</h2>
                 <p>
-                  Apply online using the institute application portal, upload
-                  required documents, pay the application fee and wait for the
-                  selection communication. Below are quick actions:
+                  Admission consideration is based on valid entrance exam scores (MAH-MBA CET/CMAT/CAT/MAT/XAT/ATMA/GMAT) and a minimum of 50% marks in graduation (45% for reserved categories), along with performance in the telephonic interview.
                 </p>
                 <div className="cta-row">
                   <button className="btn-primary">Apply Now</button>
@@ -673,7 +671,7 @@ export default function HowToApply() {
                   {[
                     {
                       title: "1. Apply Online",
-                      desc: "Visit the official website, click on Apply Online, fill the application form, and pay the ₹1,080 registration fee.",
+                      desc: "Visit the official website, click on Apply Online, fill the institute portal form, and pay the ₹ 1105 registration fee.",
                     },
 
                     {
@@ -681,18 +679,14 @@ export default function HowToApply() {
                       desc: "Once the form is submitted, the admission cell initiates the counselling process followed by an interview session.",
                     },
 
-                    {
-                      title: "3. Eligibility Verification",
-                      desc: "Admission consideration is based on valid entrance exam scores (MAH-MBA CET/CMAT/CAT/MAT/XAT/ATMA/GMAT) and a minimum of 50% marks in graduation (45% for reserved categories), along with performance in the telephonic interview.",
-                    },
 
                     {
-                      title: "4. Seat Confirmation",
+                      title: "3. Seat Confirmation",
                       desc: "After clearing counselling and interview, candidates must confirm their seat by paying ₹30,000 within four days of receiving the Admission Letter.",
                     },
 
                     {
-                      title: "5. Provisional Admission",
+                      title: "4. Provisional Admission",
                       desc: "Upon payment, admission is provisionally confirmed subject to completing remaining formalities and submitting all required documents.",
                     },
                   ].map((step, index) => (
@@ -738,15 +732,15 @@ export default function HowToApply() {
                     <div className="doc-list">
                       <ul>
                         <li>	Valid Entrance Score Card</li>
-                        <li>	S.S.C. Mark Statement (Std. X)</li>
-                        <li>	H.S.C. (Std. XII)/ Diploma Mark Statement</li>
-                        <li>All Semester Graduation Mark sheet</li>
+                        <li>	S.S.C. (Std. X<sup>th</sup>) Marksheet and certificate</li>
+                        <li>	H.S.C. (Std. XII<sup>th</sup>)/ Diploma Marksheet and certificate</li>
+                        <li>All Semester Graduation Marksheet and certificate</li>
                         <li>Leaving/Transfer Certificate</li>
                         <li>	Domicile and Nationality Certificate</li>
                         <li>Migration Certificate (Other than Home University)</li>
                         <li>Copy of Aadhar Card</li>
                         <li>Copy of Pan Card</li>
-                        <li>Passport Size Photos (10 Copies)</li>
+                        <li>Passport Size Colour Photos (10 Copies)</li>
                         <li>	Gap Certificate <b>(If Applicable)</b></li>
                       </ul>
                       <h4>Note :-</h4>
@@ -762,16 +756,16 @@ export default function HowToApply() {
                     <div className="doc-list">
                       <ul>
                         <li>Valid Entrance Score Card</li>
-                        <li>S.S.C. Mark Statement (Std. X)</li>
-                        <li>H.S.C. (Std. XII)/ Diploma Mark Statement</li>
-                        <li>All Semester Graduation Mark sheet</li>
+                        <li>S.S.C. (Std. X<sup>th</sup>) Marksheet and certificate</li>
+                        <li>H.S.C. (Std. XII<sup>th</sup>)/ Diploma Marksheet and certificate</li>
+                        <li>All Semester Graduation Marksheet and certificate</li>
                         <li>Leaving/Transfer Certificate</li>
                         <li>Domicile and Nationality Certificate</li>
                         <li>	Migration Certificate (Other than Home University)</li>
                         <li>Income Certificate of Current Financial Year issued by Tahasildar / Sub Div. Officer/ Deputy Collector</li>
                         <li>Copy of Aadhar Card</li>
                         <li>	Copy of Pan Card</li>
-                        <li>	Passport Size Photos (10 Copies)</li>
+                        <li>	Passport Size Colour Photos (10 Copies)</li>
                         <li>Gap Certificate <b>(If Applicable)</b></li>
                         <li>Caste Certificate</li>
                         <li>	Caste Validity Certificate</li>
@@ -791,16 +785,16 @@ export default function HowToApply() {
                     <div className="doc-list">
                       <ul>
                         <li>Valid Entrance Score Card</li>
-                        <li>S.S.C. Mark Statement (Std. X)</li>
-                        <li>H.S.C. (Std. XII)/ Diploma Mark Statement</li>
-                        <li>	All Semester Graduation Mark sheet</li>
+                        <li>S.S.C. (Std. X<sup>th</sup>) Marksheet and certificate</li>
+                        <li>H.S.C. (Std. XII<sup>th</sup>)/ Diploma Marksheet and certificate</li>
+                        <li>	All Semester Graduation Marksheet and certificate</li>
                         <li>	Leaving/Transfer Certificate</li>
                         <li>Domicile and Nationality Certificate</li>
                         <li>	Migration Certificate (Other than Home University)</li>
                         <li>	Income Certificate of Current Financial Year issued by Tahasildar / Sub Div. Officer/ Deputy Collector</li>
                         <li>	Copy of Aadhar Card</li>
                         <li>Copy of Pan Card</li>
-                        <li>Passport Size Photos (10 Copies)</li>
+                        <li>Passport Size Colour Photos (10 Copies)</li>
                         <li>Gap Certificate <b>(If Applicable)</b></li>
                         <li>Caste Certificate</li>
                         <li>Caste Validity Certificate</li>
@@ -822,16 +816,16 @@ export default function HowToApply() {
                     <div className="doc-list">
                       <ul>
                         <li>	Valid Entrance Score Card</li>
-                        <li>	S.S.C. Mark Statement (Std. X)</li>
-                        <li>	H.S.C. (Std. XII)/ Diploma Mark Statement</li>
-                        <li>All Semester Graduation Mark sheet</li>
+                        <li>	S.S.C. (Std. X<sup>th</sup>) Marksheet and certificate</li>
+                        <li>	H.S.C. (Std. XII<sup>th</sup>)/ Diploma Marksheet and certificate</li>
+                        <li>All Semester Graduation Marksheet and certificate</li>
                         <li>Leaving/Transfer Certificate</li>
                         <li>Domicile and Nationality Certificate</li>
                         <li>	Migration Certificate (Other than Home University)</li>
                         <li>	Income Certificate of Current Financial Year issued by Tahasildar / Sub Div. Officer/ Deputy Collector <b>(If Applicable)</b></li>
                         <li>Copy of Aadhar Card</li>
                         <li>	Copy of Pan Card</li>
-                        <li>Passport Size Photos (10 Copies)</li>
+                        <li>Passport Size Colour Photos (10 Copies)</li>
                         <li>Gap Certificate <b>(If Applicable)</b></li>
                       </ul>
 
@@ -862,17 +856,17 @@ export default function HowToApply() {
               <div id="panel-fees" aria-labelledby="tab-fees">
                 <h2>Fees & Important Dates</h2>
                 <p>
-                  Application fee: <strong>₹1,000</strong> (online). Fee waiver
-                  for eligible categories may apply. Payment can be made via
-                  credit/debit card, net banking, or UPI.
+                  Application fee: <strong>₹ 1105</strong> (online). Fee waiver
+                  for eligible categories may apply. Payment can be made by clicking on this link.
+                  
                 </p>
                 <ul>
                   {[
-                    "Application opens: June 1, 2024",
-                    "Application closes: August 15, 2024",
-                    "Entrance test (where applicable): September 5, 2024",
-                    "Admission list announcement: September 25, 2024",
-                    "Last date for fee payment: October 10, 2024",
+                    "Application opens: Nov 1, 2025",
+                    "Application closes: August 15, 2026",
+                    "Entrance test (where applicable): September 5, 2025",
+                    "Admission list announcement: September 25, 2026",
+                    "Last date for fee payment: October 10, 2026",
                   ].map((item, index) => (
                     <li key={index}>
                       <strong>{item.split(": ")[0]}:</strong>{" "}

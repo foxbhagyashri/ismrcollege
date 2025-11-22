@@ -57,6 +57,9 @@ export default function FaqAndContactSection() {
   return (
     <section className="faq-contact-section">
       <style>{`
+
+
+
         .faq-contact-section {
           font-family: 'Inter', Arial, Helvetica, sans-serif;
           background: #288aec39;
@@ -293,31 +296,10 @@ export default function FaqAndContactSection() {
         <div className="faq-section">
           <div className="faq-header">
             <h2>Frequently Asked Questions</h2>
-           
+
           </div>
 
-          <div className="faq-search">
-            <input
-              placeholder="Search questions or keywords..."
-              value={faqQuery}
-              onChange={(e) => setFaqQuery(e.target.value)}
-            />
-            {faqQuery && (
-              <button
-                onClick={() => setFaqQuery("")}
-                aria-label="Clear search"
-                style={{
-                  border: 0,
-                  background: "transparent",
-                  cursor: "pointer",
-                  fontSize: "18px",
-                  color: "#999",
-                }}
-              >
-                ✕
-              </button>
-            )}
-          </div>
+
 
           <div className="accordion">
             {filtered.map((f, i) => (
@@ -349,6 +331,8 @@ export default function FaqAndContactSection() {
               </div>
             )}
           </div>
+
+          <a href="#" class="default-btn">More FAQ's</a>
         </div>
 
         {/* RIGHT: CONTACT FORM */}
@@ -428,11 +412,23 @@ export default function FaqAndContactSection() {
               </button>
             </div>
 
-        
 
-            <p className="form-note">
-              By submitting you agree to our <a href="#">privacy policy</a>.
-            </p>
+            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+  <input
+    type="checkbox"
+    id="vehicle1"
+    name="vehicle1"
+    value="Bike"
+    style={{ transform: "scale(1.6)", accentColor: "#d32f2f", width: "100px"}} required // scale increases size
+  />
+  <label htmlFor="vehicle1">I authorize International School of Management and Research, Pune and its representatives to Call, SMS,RCS, Email or WhatsApp me about its programmers and offers. This consent overrides any registration for DNC / NDNC. </label>
+</div>
+
+
+
+
+
+
           </form>
         </div>
       </div>
