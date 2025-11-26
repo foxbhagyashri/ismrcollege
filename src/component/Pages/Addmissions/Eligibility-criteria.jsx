@@ -174,18 +174,7 @@ export default function PrivacySection() {
                   >
                     ELIGIBILITY CRITERIA FOR MBA
                   </h2>
-                  <p
-                    style={{
-                      fontSize: "16px",
-                      color: "#444",
-                      lineHeight: "1.7",
-                      marginBottom: "1.5rem",
-                      fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                    }}
-                  >
-                Candidates appearing for final year degree examination up to July 2026 can also apply.
-
-                  </p>
+                  
                   <p
                     style={{
                       fontSize: "16px",

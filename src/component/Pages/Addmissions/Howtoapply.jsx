@@ -864,7 +864,7 @@ export default function HowToApply() {
                   {[
                     "Application opens: Nov 1, 2025",
                     "Application closes: August 15, 2026",
-                    "Entrance test (where applicable): September 5, 2025",
+                    "Entrance test (where applicable): September 5, 2026",
                     "Admission list announcement: September 25, 2026",
                     "Last date for fee payment: October 10, 2026",
                   ].map((item, index) => (

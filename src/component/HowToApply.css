@@ -45,29 +45,26 @@
 /* container for cards */
 .apply-container {
     display: flex;
-    gap: 28px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: nowrap; /* keeps one row */
+  }
 
 /* each card */
 .apply-box {
-    background: #fff;
-    flex: 1 1 31%;
-    min-width: 260px;
-    padding: 28px;
-    border-radius: 6px;
-    box-shadow: 0 6px 18px rgba(14, 20, 30, 0.06);
-    position: relative;
-    overflow: hidden;
-    /* center content inside the card for best visual alignment */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    width: 23%; /* updated width for 4 items */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+  }
 
+  .apply-box:hover {
+    transform: translateY(-5px);
+  }
 /* icon */
 .apply-icon {
     font-size: 36px;
@@ -185,3 +182,16 @@
         font-size: 16px;
     }
 }
+@media (max-width: 992px) {
+    .apply-container {
+      flex-wrap: wrap;
+    }
+    .apply-box {
+      width: 45%;
+    }
+  }
+  @media (max-width: 576px) {
+    .apply-box {
+      width: 100%;
+    }
+  }

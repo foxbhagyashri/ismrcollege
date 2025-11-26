@@ -57,6 +57,7 @@ import Courseduration from "./component/Pages/Academics/Courseduration";
 import Newsletter from "./component/Pages/NewsPage/Newsletter";
 // Contactus Page
 import Contactus from "./component/Pages/Contactus/Contactus";
+import FAQPage from "./component/Pages/Addmissions/more-faqs";
 
 function App() {
   return (
@@ -131,6 +132,10 @@ function App() {
 
         {/* Contact us Page */}
         <Route path="/Contactus" element={<Contactus />} />
+
+        {/* more faqs */}
+        <Route path="/Addmissions/more-faqs" element={<FAQPage />} />
+
       </Routes>
          {/* <Faq /> */}
       <Footer />
