@@ -14,24 +14,32 @@ export default function FaqAndContactSection() {
 
   const faqs = [
     {
-      q: "Can I edit my application after submission?",
-      a: "No — once you finalise and submit the application, edits are not allowed. Please review all fields carefully before submitting. If you need to make corrections after submission, contact admissions immediately with your application ID.",
+      q: "What courses does ISMR Pune offer?",
+      a: "ISMR offers a full-time SPPU affiliated MBA, BBA & BCA program with specializations in Marketing, Finance, HR, Business Analytics, Operations & Supply Chain, Agri-Business Management & Pharma Health Care Management. ",
     },
     {
-      q: "What is the refund policy for the application fee?",
-      a: "Application fees are non-refundable. However, in rare cases (for example duplicate payments), you may contact support for review and possible refund.",
+      q: "Is the MBA, BBA & BCA program at ISMR affiliated?",
+      a: "Yes. The MBA program is affiliated with SavitribaiPhule Pune University (SPPU).",
     },
     {
-      q: "How do I upload large files?",
-      a: "We accept PDF/JPG up to 5MB. If a document exceeds size limits, compress it to PDF or split across multiple uploads where allowed.",
+      q: "Is the MBA, BBA & BCA program at ISMR approved?",
+      a: "Yes. The MBA program is approved by AICTE.",
     },
     {
-      q: "Who do I contact for help?",
-      a: "Contact our admissions team at 7030680680 or admissions@college.edu. Provide your application ID and a short description of the issue for faster support.",
+      q: "What is the eligibility for admission to the MBA, BBA & BCA program?",
+      a: "You must be a graduate (minimum 50% marks) from any recognized university. Final-year students can also apply.",
     },
     {
-      q: "Can I apply for multiple programmes in the same intake?",
-      a: "Yes — you can submit separate applications for different programmes. Each application requires a separate fee and unique submission.",
+      q: "Which entrance exams are accepted?",
+      a: "ISMR accepts CAT, MAT, CMAT, XAT, ATMA, MH-CET, or any other equivalent and valid national-level entrance exam score.",
+    },
+    {
+      q: "What is the campus environment like?",
+      a: "The ISMR campus offers a modern, industry-oriented learning environment with classrooms, labs, seminar halls, library, recreational facilities etc.",
+    },
+    {
+      q: "How do I apply for admission?",
+      a: "You can apply online through the ISMR website. Or click on the following link - ",
     },
   ];
 
@@ -332,7 +340,7 @@ export default function FaqAndContactSection() {
             )}
           </div>
 
-          <a href="#" class="default-btn">More FAQ's</a>
+          <a href="/Addmissions/more-faqs" class="default-btn">More FAQ's</a>
         </div>
 
         {/* RIGHT: CONTACT FORM */}

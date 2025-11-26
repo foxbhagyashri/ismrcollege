@@ -199,7 +199,7 @@ export default function EducationLoad() {
                     }}
                   >
                     <i className="fas fa-info-circle me-2" style={{ color: "#0a2240" }}></i>
-                    Credenc is a tech-enabled platform committed to making education loans more accessible, affordable and transparent. It provides a personalized rate of interest with the best terms and fastest response time.
+                    HDFC & ICICI is a tech-enabled platform committed to making education loans more accessible, affordable and transparent. It provides a personalized rate of interest with the best terms and fastest response time.
                   </p>
                   <p
                     style={{
@@ -285,7 +285,7 @@ export default function EducationLoad() {
                         Graduation Marksheets (If Applicable)
                       </li>
                     </ul>
-                    <p><b>Note :-</b> Any other documents as required by requested bank</p>
+                    <p><b>Note :-</b> Any other documents as required by the bank</p>
                   </div>
                 </div>
 
@@ -346,7 +346,7 @@ export default function EducationLoad() {
                         Salary Slip (If Employed)
                       </li>
                     </ul>
-                    <p><b>Note :-</b> Any other documents as required by requested bank</p>
+                    <p><b>Note :-</b> Any other documents as required by the bank</p>
                   </div>
                 </div>
               </div>
