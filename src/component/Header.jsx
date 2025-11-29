@@ -261,7 +261,7 @@ const Header = () => {
               Course Duration
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               className="dropdown-item"
               to="/Academics/Courseduration"
@@ -269,7 +269,7 @@ const Header = () => {
             >
               Student Corner
             </Link>
-          </li>
+          </li> */}
 
           {/* Cleaned up commented links */}
         </ul>
@@ -348,6 +348,147 @@ const Header = () => {
         </ul>
       </li>
 
+
+      {/* Student Corner */}
+      <li className={`nav-item dropdown ${activeDropdown === 6 ? "show" : ""}`}>
+        <a
+          href="#"
+          className="nav-link dropdown-toggle"
+          role="button"
+          onClick={(e) => {
+            e.preventDefault();
+            toggleDropdown(6);
+          }}
+          aria-expanded={activeDropdown === 6}
+        >
+          Student Corner
+        </a>
+        <ul className={`dropdown-menu ${activeDropdown === 6 ? "show" : ""}`}>
+          <li>
+            <Link
+              className="dropdown-item"
+              to="https://ccvis.barti.in/"
+              onClick={handleDropdownItemClick}
+            >
+              Apply For Caste Validity
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              className="dropdown-item"
+              to="https://cetcell.mahacet.org/"
+              onClick={handleDropdownItemClick}
+            >
+              Apply For MAH-CET Form
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="dropdown-item"
+              to="https://mahadbt.maharashtra.gov.in/Login/Login"
+              onClick={handleDropdownItemClick}
+            >
+              Apply For EBC & Scholarship Form
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="dropdown-item"
+              to="https://atmaaims.com/"
+              onClick={handleDropdownItemClick}
+            >
+              Apply For ATMA Entrance Exam Form
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="dropdown-item"
+              to="https://mat.aima.in/?utm_source=collegedunia&utm_medium=text11&utm_campaign=online"
+              onClick={handleDropdownItemClick}
+            >
+              Apply For MAT Entrance Exam Form
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="dropdown-item"
+              to="https://cmat.nta.nic.in/"
+              onClick={handleDropdownItemClick}
+            >
+              Apply For CMAT Entrance Exam Form
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              className="dropdown-item"
+              to="https://exam.unipune.ac.in/Pages/ExamFormsOnline.html"
+              onClick={handleDropdownItemClick}
+            >
+              Apply For MBA Exam Form
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="dropdown-item"
+              to="https://ndl.iitkgp.ac.in/"
+              onClick={handleDropdownItemClick}
+            >
+              Apply For National Digital Library (NDL)
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="dropdown-item"
+              to="https://www.delnet.in/"
+              onClick={handleDropdownItemClick}
+            >
+              Apply For DELNET
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="dropdown-item"
+              to="https://swayam.gov.in/"
+              onClick={handleDropdownItemClick}
+            >
+              Apply For SWAYAM
+            </Link>
+          </li>
+
+
+
+
+          {/* Cleaned up commented links */}
+
+          <li>
+            <Link
+              className="dropdown-item"
+              to="/Placementpage/Ourplacement"
+              onClick={handleDropdownItemClick}
+            >
+              Our Internship & Placement
+            </Link>
+          </li>
+
+          {/* Cleaned up commented links */}
+
+          <li>
+            <Link
+              className="dropdown-item"
+              to="/Placementpage/Corporate"
+              onClick={handleDropdownItemClick}
+            >
+              Corporate & Student Testimonials
+            </Link>
+          </li>
+
+          {/* Cleaned up commented links */}
+        </ul>
+      </li>
+
+
       {/* Life @ Campus Dropdown */}
       <li className={`nav-item dropdown ${activeDropdown === 3 ? "show" : ""}`}>
         <a
@@ -398,32 +539,7 @@ const Header = () => {
 
       </li>
 
-      {/* Newsletter Dropdown
-      <li className={`nav-item dropdown ${activeDropdown === 6 ? "show" : ""}`}>
-        <a
-          href="#"
-          className="nav-link dropdown-toggle"
-          role="button"
-          onClick={(e) => {
-            e.preventDefault();
-            toggleDropdown(6);
-          }}
-          aria-expanded={activeDropdown === 6}
-        >
-          Newsletter
-        </a>
-        <ul className={`dropdown-menu ${activeDropdown === 6 ? "show" : ""}`}>
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/NewsPage/Newsletter"
-              onClick={handleDropdownItemClick}
-            >
-              All Newsletters
-            </Link>
-          </li>
-        </ul>
-      </li> */}
+
 
       {/* NAAC Dropdown */}
       <li className={`nav-item dropdown ${activeDropdown === 7 ? "show" : ""}`}>
