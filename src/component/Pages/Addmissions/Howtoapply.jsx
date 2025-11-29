@@ -856,7 +856,7 @@ export default function HowToApply() {
               <div id="panel-fees" aria-labelledby="tab-fees">
                 <h2>Fees & Important Dates</h2>
                 <p>
-                  Application fee: <strong>₹ 1105</strong> (online). Fee waiver
+                  Application fee: <strong>₹ 1100</strong> (online). Fee waiver
                   for eligible categories may apply. Payment can be made by clicking on this link.
                   
                 </p>

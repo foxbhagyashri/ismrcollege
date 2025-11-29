@@ -104,17 +104,7 @@ function EnhancedPlacementStatus() {
                   </ListGroup>
                 </div>
 
-                <Button
-                  className="w-100 mt-4 py-3 fw-semibold"
-                  style={{
-                    backgroundColor: "#0a2240",
-                    borderColor: "#0a2240",
-                    fontSize: "0.95rem",
-                  }}
-                >
-                  <FileEarmarkSpreadsheet className="me-2" />
-                  View Detailed Report
-                </Button>
+              
               </Card.Body>
             </Card>
           </Col>

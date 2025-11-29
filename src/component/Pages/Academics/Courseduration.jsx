@@ -200,20 +200,12 @@ function Courseduration() {
       id: 'grad',
       bgColorClass: 'bg-accent-yellow',
       icon: graduateIcon,
-      title: 'Graduate Programs',
+      title: 'Post Graduate Programs',
       description: 'Graduate programs offer advanced specialization and research opportunities, deepening expertise in a chosen discipline.',
       courses: ['MBA (Master of Business Admin.)', 'MCA (Comp. Applications)'],
       footer: 'Online + Onsite'
     },
-    {
-      id: 'online',
-      bgColorClass: 'bg-deep-blue',
-      icon: onlineIcon,
-      title: 'Online Education Programs',
-      description: 'Online education provides flexible learning opportunities, allowing students to acquire skills and degrees remotely.',
-      courses: ['BCA Online', 'BBA Online'],
-      footer: 'Only Online Programs'
-    },
+    
   ];
 
   const GlobalStyles = () => (

@@ -34,88 +34,82 @@ function ProgramOfferedPage() {
   // Content for each section
   const sectionContent = {
     "BCA-Programme": {
-      title: "Bachelor of Computer Applications (BCA)",
+      title: "BCA Programme Overview",
       description:
-        "In today’s rapidly advancing technological world, the demand for skilled IT professionals continues to grow exponentially. The Bachelor of Computer Applications (BCA) program is designed to meet this demand by building a strong academic and practical foundation for students aspiring to excel in the field of computer applications and information technology.The BCA curriculum emphasizes both theoretical understanding and hands-on experience, enabling students to gain in-depth knowledge of computing concepts and their practical applications. The program equips learners with the technical expertise and problem-solving skills needed to thrive in diverse IT roles and to achieve remarkable milestones in their professional careers.",
-
-
+        "Bachelor of Computer Applications (BCA) is a 3-year undergraduate degree program that focuses on computer applications and software development. The program provides a strong foundation in computer science, programming languages, database management, networking, and web technologies. Students gain practical skills through hands-on projects and industry exposure. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+      details: [
+        "3-year full-time undergraduate program with comprehensive curriculum covering all aspects of computer applications and modern software development methodologies",
+        "Semester system with theory and practical components, ensuring balanced learning approach with hands-on laboratory sessions and project work",
+        "Focus on programming, software development, and IT applications including emerging technologies like AI, Machine Learning, and Cloud Computing",
+        "Industry-relevant curriculum aligned with current technology trends and regularly updated based on industry feedback and requirements",
+        "Opportunities for internships and industrial training with leading IT companies, startups, and tech organizations to gain real-world experience",
+        "Strong placement support with dedicated placement cell, mock interviews, aptitude training, and partnerships with leading IT companies",
+        "State-of-the-art computer labs equipped with latest hardware and software tools for practical learning and project development",
+        "Regular workshops, seminars, and guest lectures by industry experts and successful alumni to bridge academia-industry gap",
+      ],
+      duration: "3 Years (6 Semesters)",
+      eligibility: "10+2 with Mathematics",
     },
     "BCA-Features": {
-      title: "Program Highlights",
-
+      title: "Key Features of BCA Programme",
+      description:
+        "Our BCA program is designed to create industry-ready professionals with comprehensive technical knowledge and practical skills. The program emphasizes hands-on learning, project-based education, and exposure to latest technologies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
       details: [
-        {
-          subtitle: "1. Comprehensive Curriculum",
-          points: [
-            "Core Subjects: Programming Languages (C, C++, Java, Python), Data Structures, Database Management Systems, Computer Networks, Operating Systems, Software Engineering",
-            "Mathematics Foundation: Discrete Mathematics, Probability, Statistics, and other analytical subjects",
-            "Web & Mobile Development: HTML, CSS, JavaScript, web technologies, and mobile application development",
-            "Networking & Security: Computer Networks, Data Communication, Cybersecurity, and Ethical Hacking",
-          ],
-        },
-        {
-          subtitle: "2. Practical Exposure",
-          points: [
-            "Lab Sessions: Extensive hands-on lab work to strengthen technical skills and reinforce theoretical concepts",
-            "Projects: Mini-projects and a final capstone project focused on solving real-world problems using the latest tools and technologies",
-           
-          ],
-        },
-        
+        "State-of-the-art computer labs with latest software and tools including IDEs, databases, development frameworks, and cloud computing platforms for comprehensive practical learning",
+        "Experienced faculty with industry and academic expertise, many with PhDs and certifications from leading tech companies and research institutions",
+        "Regular workshops, seminars, and guest lectures by industry experts, tech leaders, and successful alumni to provide insights into current industry trends",
+        "Project-based learning with real-world applications where students work on live projects, case studies, and collaborative team assignments",
+        "Training in emerging technologies: AI, Machine Learning, Data Science, Cloud Computing, Blockchain, IoT, and Cyber Security through specialized courses",
+        "Soft skills development and personality enhancement programs including communication skills, leadership training, time management, and professional etiquette",
+        "100% placement assistance with dedicated placement cell organizing campus recruitment drives, job fairs, and networking events with top recruiters",
+        "Certifications in industry-recognized technologies from Microsoft, Oracle, AWS, Google Cloud, Cisco, and other leading tech organizations",
+        "Coding competitions, hackathons, and tech fests to encourage innovation, creativity, and competitive programming skills among students",
+        "Industry partnerships and collaborations for internships, live projects, and research opportunities with leading IT companies and startups",
       ],
+      duration: "3 Years (6 Semesters)",
+      eligibility: "10+2 with Mathematics",
     },
     "BBA-Programme": {
       title: "Bachelor of Business Administration (BBA)",
       description:
         "The Bachelor of Business Administration (BBA) program is designed to equip students with a strong foundation in business principles and modern management practices. The curriculum blends four core disciplines—business, management, communication, and information systems—to provide a comprehensive understanding of today’s corporate environment.Through a balanced mix of theoretical knowledge and practical learning, the program prepares students to develop strategic thinking, leadership abilities, and effective decision-making skills. Upon completion, graduates are well-positioned to pursue diverse career opportunities and build successful professional pathways in the field of business management.",
 
-    },
-    "BBA-Features": {
-      title: "Program Highlights – Bachelor of Business Administration (BBA)",
-
+      subtitle: "1. Comprehensive Curriculum",
       details: [
-        {
-          subtitle: "1. Comprehensive Curriculum",
-          points: [
-            "Foundation courses in Business, Management, Marketing, Finance, and Human Resource Management",
-            "Integrated learning in Communication Skills and Information Systems",
-            "Curriculum aligned with contemporary industry practices and emerging business trends",
-          ],
-        },
-        {
-          subtitle: "2. Practical Learning Approach",
-          points: [
-            "Case studies, business simulations, group projects, and presentations",
-            "Industry-oriented assignments and real-world problem-solving activities",
-            "Hands-on exposure to business tools and software",
-          ],
-        },
-        {
-          subtitle: "3. Industry Interaction",
-          points: [
-            "Guest lectures and workshops conducted by industry experts",
-            "Industrial visits to companies and business institutions",
-            "Internship opportunities to gain practical corporate experience",
-          ],
-        },
-        {
-          subtitle: "4. Skill Development",
-          points: [
-            "Focus on leadership, teamwork, critical thinking, and decision-making",
-            "Training in communication, negotiation, and interpersonal skills",
-            "Emphasis on developing entrepreneurial mindset and managerial competencies",
-          ],
-        },
-        {
-          subtitle: "5. Career-Oriented Education",
-          points: [
-            "Guidance for career planning and professional development",
-            "Exposure to diverse job roles in management, marketing, finance, HR, and entrepreneurship",
-            "Strong foundation for higher studies like MBA, M.Com, or professional certifications",
-          ],
-        },
+
+        "Foundation courses in Business, Management, Marketing, Finance, and Human Resource Management",
+        "Integrated learning in Communication Skills and Information Systems",
+        "Curriculum aligned with contemporary industry practices and emerging business trends",
+
+      ],
+      subtitle: "2. Practical Learning Approach",
+      details: [
+
+        "Case studies, business simulations, group projects, and presentations",
+        "Industry-oriented assignments and real-world problem-solving activities",
+        "Hands-on exposure to business tools and software",
+
       ],
 
+    },
+    "BBA-Features": {
+      title: "Key Features of BBA Programme",
+      description:
+        "Our BBA program provides a perfect blend of theoretical knowledge and practical business skills. Students are prepared to face real-world business challenges through innovative teaching methods and industry exposure. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.",
+      details: [
+        "Modern infrastructure with smart classrooms equipped with audio-visual aids, business simulation labs, and digital learning resources for interactive education",
+        "Highly qualified faculty with corporate and academic experience from IIMs, leading B-schools, and industry veterans with practical business insights",
+        "Regular industrial visits to leading organizations including manufacturing units, corporate offices, banks, and retail chains for practical exposure",
+        "Summer internship programs with reputed companies providing hands-on experience in various business functions and real corporate work environment",
+        "Business plan competitions and entrepreneurship workshops encouraging innovation, startup culture, and business idea development among students",
+        "Soft skills training, personality development, and communication skills through dedicated modules, workshops, and one-on-one coaching sessions",
+        "Industry certifications in management tools and technologies including SAP, Tally, MS Office Suite, Google Analytics, and digital marketing tools",
+        "Active placement cell with excellent corporate connections organizing pre-placement talks, campus interviews, and recruitment drives with top companies",
+        "International study tour opportunities to business schools and corporate houses abroad for global exposure and cultural learning experiences",
+        "Alumni network support with mentorship programs, career guidance, and networking events connecting students with successful business professionals",
+      ],
+      duration: "3 Years (6 Semesters)",
+      eligibility: "10+2 from any stream",
     },
     "Financial Management": {
       title: "Financial Management (MBA)",
@@ -361,24 +355,38 @@ function ProgramOfferedPage() {
                     {/* Key Highlights Visible only for BBA and BCA */}
                     {(activeTab === "BBA" || activeTab === "BCA") && currentContent.details && (
                       <>
+                        <h5
+                          className="mt-4 mb-3"
+                          style={{
+                            fontWeight: 700,
+                            color: "#0a2240",
+                            fontSize: "1.25rem",
+                          }}
+                        >
+                          Key Highlights
+                        </h5>
 
-                        {currentContent.details.map((section, index) => (
-                          <div key={index} className="mb-3">
-                            <strong style={{ color: "#0a2240", fontSize: "1.1rem" }}>
-                              {section.subtitle}
-                            </strong>
-                            <ul style={{ ...interFont, paddingLeft: "1.5rem", marginTop: "0.5rem" }}>
-                              {section.points.map((pt, idx) => (
-                                <li key={idx} className="mb-1">
-                                  {pt}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
+                        <h6
+                          className="mt-4 mb-3"
+                          style={{
+                            fontWeight: 700,
+                            color: "#0a2240",
+                            fontSize: "1.25rem",
+                          }}
+                        >
+                          1. Comprehensive Curriculum
+                        </h6>
+
+
+                        <ul style={{ ...interFont, paddingLeft: "1.5rem" }}>
+                          {currentContent.details.map((feature, index) => (
+                            <li key={index} className="mb-2">
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
                       </>
                     )}
-
                   </div>
                 ) : (
                   <div>
