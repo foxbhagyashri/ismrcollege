@@ -59,6 +59,32 @@ const TopHeader = () => {
                 onClick={() => (window.location.href = "/Appltonline")}
                 className="btn btn-sm"
                 style={{
+                  backgroundColor: "",
+                  color: "#fff",
+                  border: "none",
+                }}
+              >
+                Blogs
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => (window.location.href = "/Appltonline")}
+                className="btn btn-sm"
+                style={{
+                  backgroundColor: "",
+                  color: "#fff",
+                  border: "none",
+                }}
+              >
+                Newsletter
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => (window.location.href = "/Appltonline")}
+                className="btn btn-sm"
+                style={{
                   backgroundColor: "#dcb413ff",
                   color: "#2c2626ff",
                   border: "none",
@@ -77,7 +103,7 @@ const TopHeader = () => {
                   border: "none",
                 }}
               >
-                Apply for BBA/ BCA
+                Apply for MBA
               </button>
             </li>
             <li>
@@ -90,9 +116,10 @@ const TopHeader = () => {
                   border: "none",
                 }}
               >
-                Apply for MBA
+                Apply for BBA/ BCA
               </button>
             </li>
+            
           </ul>
         </div>
       </div>

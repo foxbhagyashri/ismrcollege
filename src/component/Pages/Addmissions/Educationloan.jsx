@@ -80,7 +80,7 @@ export default function EducationLoad() {
                 textAlign: "justify",
               }}
             >
-              International School of Management & Research has tied up with HDFC and ICICI to help students avail education loans easily from a number of banks and NBFCs. The education loan for the students of International School of Management & Research is offer based on the credit history of the co-applicant and academic performance of the applicant.
+              International School of Management & Research has tied up with HDFC (Credila) and ICICI to help students avail education loans easily from a number of banks and NBFCs. The education loan for the students of International School of Management & Research is offer based on the credit history of the co-applicant and academic performance of the applicant.
             </p>
           </div>
           <div className="col-lg-5 d-flex justify-content-center">
@@ -199,7 +199,7 @@ export default function EducationLoad() {
                     }}
                   >
                     <i className="fas fa-info-circle me-2" style={{ color: "#0a2240" }}></i>
-                    HDFC & ICICI is a tech-enabled platform committed to making education loans more accessible, affordable and transparent. It provides a personalized rate of interest with the best terms and fastest response time.
+                    HDFC (Credila) & ICICI is a tech-enabled platform committed to making education loans more accessible, affordable and transparent. It provides a personalized rate of interest with the best terms and fastest response time.
                   </p>
                   <p
                     style={{
@@ -212,7 +212,7 @@ export default function EducationLoad() {
                     }}
                   >
                     <i className="fas fa-handshake me-2" style={{ color: "#FFC333" }}></i>
-                    Tie Up with HDFC and ICICI
+                    Tie Up with HDFC (Credila) and ICICI
                   </p>
                 </div>
               </div>
@@ -378,7 +378,7 @@ export default function EducationLoad() {
               <p style={{ fontSize: "16px", color: "#0a2240", marginBottom: "1.5rem" }}>
                 Contact our financial aid office for assistance
               </p>
-          <a href="tel:9923786079">   <button
+              <a href="tel:9923786079">   <button
                 className="btn fw-semibold"
                 style={{
                   padding: "12px 40px",
@@ -401,7 +401,7 @@ export default function EducationLoad() {
               >
                 <i className="fas fa-envelope me-2"></i>
                 Contact Us
-              </button></a> 
+              </button></a>
             </div>
           </div>
         </div>

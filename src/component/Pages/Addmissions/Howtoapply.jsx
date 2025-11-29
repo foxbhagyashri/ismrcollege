@@ -671,7 +671,7 @@ export default function HowToApply() {
                   {[
                     {
                       title: "1. Apply Online",
-                      desc: "Visit the official website, click on Apply Online, fill the institute portal form, and pay the ₹ 1105 registration fee.",
+                      desc: "Visit the official website, click on Apply Online, fill the institute portal form, and pay the ₹ 1100 registration fee.",
                     },
 
                     {

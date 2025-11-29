@@ -35,7 +35,7 @@ const whyIsmrFeatures = [
   { id: 1, title: "Best Institute in Western Region for Academics and Placements Excellence", icon: faAward },
   { id: 2, title: "Management & Leadership Development Programmes", icon: faUsers },
   { id: 3, title: "Indoor and Outdoor Recreational Activities", icon: faFutbol },
-  { id: 4, title: "Domestic and International Industrial Visits", icon: faPlane },
+
   { id: 5, title: "Education Loan Tie-up with Leading Banks", icon: faUniversity },
   { id: 6, title: "Accidental Insurance Coverage", icon: faShieldAlt },
   { id: 7, title: "Scholarships to Meritorious Students", icon: faGraduationCap },
@@ -162,7 +162,7 @@ function WhyISMRPage() {
             marginBottom: "1.5rem",
           }}
         >
-          TOP 25 REASONS TO BE AN ISMRIAN
+          TOP 24 REASONS TO BE AN ISMRIAN
         </h2>
         <p
           style={{
@@ -242,39 +242,7 @@ function WhyISMRPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-5 bg-white">
-        <div className="container text-center">
-          <div className="p-5 rounded-4 shadow-sm bg-light">
-            <h2
-              className="mb-3"
-              style={{
-                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                fontSize: "32px",
-                fontWeight: 700,
-                color: "#0a2240",
-              }}
-            >
-              Join ISMR And Transform Your Future
-            </h2>
-            <p
-              className="mb-0"
-              style={{
-                fontSize: "18px",
-                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                color: "#444",
-                lineHeight: "1.7",
-              }}
-            >
-              Experience a world-class management education that prepares you
-              for leadership roles in the global business landscape. Our
-              comprehensive programs, expert faculty, and industry connections
-              ensure that you graduate with the skills and confidence to excel
-              in your chosen career path.
-            </p>
-          </div>
-        </div>
-      </section>
+    
     </div>
   );
 }

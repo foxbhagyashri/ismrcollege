@@ -2,75 +2,6 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 
-const leadershipTeam = [
-  {
-    id: 1,
-    name: "Dr. Anil Kumar",
-    position: "Principal",
-    qualification: "PhD, M.Tech",
-    experience: "25 years",
-    email: "principal@institution.edu",
-    phone: "+91 99999 99999",
-    image:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&q=80&fm=jpg",
-  },
-  {
-    id: 2,
-    name: "Mrs. Sujata Rao",
-    position: "Vice Principal",
-    qualification: "M.Sc, B.Ed",
-    experience: "18 years",
-    email: "vp@institution.edu",
-    phone: "+91 88888 88888",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&q=80&fm=jpg",
-  },
-  {
-    id: 3,
-    name: "Dr. Rajesh Sharma",
-    position: "Dean of Academics",
-    qualification: "PhD, M.Phil",
-    experience: "22 years",
-    email: "dean@institution.edu",
-    phone: "+91 77777 77777",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&q=80&fm=jpg",
-  },
-  {
-    id: 4,
-    name: "Prof. Meera Patel",
-    position: "Head of Research",
-    qualification: "PhD, M.Tech",
-    experience: "20 years",
-    email: "research@institution.edu",
-    phone: "+91 66666 66666",
-    image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&q=80&fm=jpg",
-  },
-  {
-    id: 5,
-    name: "Mr. Vikram Singh",
-    position: "Director of Administration",
-    qualification: "MBA, B.Com",
-    experience: "15 years",
-    email: "admin@institution.edu",
-    phone: "+91 55555 55555",
-    image:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&q=80&fm=jpg",
-  },
-  {
-    id: 6,
-    name: "Dr. Priya Desai",
-    position: "Dean of Student Affairs",
-    qualification: "PhD, M.A.",
-    experience: "16 years",
-    email: "studentaffairs@institution.edu",
-    phone: "+91 44444 44444",
-    image:
-      "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&h=400&fit=crop&q=80&fm=jpg",
-  },
-];
-
 function Leadership() {
   return (
     <div className="font-poppins">
@@ -169,128 +100,294 @@ function Leadership() {
       </section>
 
 
-       {/*  */}
-         <div className="container pb-3">
-           <h2
-          style={{
-            fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-            fontSize: "32px",
-            fontWeight: 700,
-            color: "#0a2240",
-            marginTop: "3rem",
-             marginBottom: "1.5rem",
-          }}
-        >
-          Our Executive Board
-        </h2>
-        <p style={{ fontSize: "18px", color: "#444", lineHeight: "1.7", fontFamily: "'Inter', Arial, Helvetica, sans-serif", textAlign: "justify", textJustify: "inter-word" }}>
-          ISMR Pune is a hub of innovation, learning, and excellence. Our
-          mission is to combine <strong>science and spirituality</strong>
-          to create an environment that fosters holistic development. From
-          state-of-the-art infrastructure to experienced faculty, ISMR is
-          committed to nurturing future leaders in every field. Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Nesciunt enim corrupti
-          itaque odio eos odit iusto sequi provident repellendus aperiam et
-          fugit, voluptate, velit modi at cum quasi maxime voluptates. 
-        </p>
-        </div>
-       {/*  */}
+      {/*  */}
+      <div className="container pb-3">
+
+      </div>
+      {/*  */}
       {/* Leadership Cards */}
-      <section className="py-1 pt-4 bg-light">
+      <section className="py-1 pt-4">
         <div className="container">
-          <div className="row g-4">
-            {leadershipTeam.map((leader) => (
-              <div className="col-12 col-md-6 col-lg-4" key={leader.id}>
-                <div className="card h-100 border-0 shadow-sm" style={{ borderRadius: "16px", overflow: "hidden" }}>
-                  <div className="overflow-hidden position-relative">
-                    <img
-                      src={leader.image}
-                      alt={leader.name}
-                      className="w-100"
-                      style={{
-                        height: "320px",
-                        objectFit: "cover",
-                        filter: "grayscale(100%)",
-                        transition: "0.5s ease",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.filter = "grayscale(0%)";
-                        e.currentTarget.style.transform = "scale(1.05)";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.filter = "grayscale(100%)";
-                        e.currentTarget.style.transform = "scale(1)";
-                      }}
-                    />
-                  </div>
+          <div className="row g-4 mt-3">
 
-                  <div className="card-body text-center" style={{ padding: "1.25rem" }}>
-                    <h5 className="card-heading mb-1" style={{ fontSize: "20px" }}>{leader.name}</h5>
-                    <p className="text-danger fw-semibold mb-2" style={{ fontSize: "14px" }}>
-                      {leader.position}
-                    </p>
+            <div className="col-12 col-md-5 col-lg-5">
+              <img
+                src="../../../src/assets/Homeimg/cairman.png"
+                alt="Leadership Team"
+                className="img-fluid rounded"
+              />
+            </div>
+            <div className="col-12 col-md-7 col-lg-7">
+              <h2
+                style={{
+                  fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                  fontSize: "32px",
+                  fontWeight: 700,
+                  color: "#0a2240",
 
-                    <p className="mb-1" style={{ fontSize: "13px", color: "#666" }}>
-                      <strong className="text-secondary">Qualification:</strong>{" "}
-                      {leader.qualification}
-                    </p>
-                    <p className="mb-2" style={{ fontSize: "13px", color: "#666" }}>
-                      <strong className="text-secondary">Experience:</strong>{" "}
-                      {leader.experience}
-                    </p>
+                  marginBottom: "1.5rem",
+                }}
+              >
 
-                    <hr style={{ margin: "0.75rem 0" }} />
-                    <p className="small mb-2" style={{ fontSize: "13px", color: "#666" }}>
-                      <i className="bi bi-envelope me-2"></i>
-                      {leader.email}
-                    </p>
-                    
-                    <button
-                      className="btn btn-sm"
-                      style={{
-                        backgroundColor: "#002A5C",
-                        color: "#ffffffff",
-                        fontSize: "14px",
-                        padding: "6px 20px",
-                        borderRadius: "10px",
-                        fontWeight: 600,
-                        transition: "all 0.3s ease",
-                      }}
-                      onMouseEnter={(e) => {
-                    
-                        e.currentTarget.style.color = "#eaecefff";
-                      }}
-                      onMouseLeave={(e) => {
-                       
-                        e.currentTarget.style.color = "#ffffffff";
-                      }}
-                    >
-                      Read More
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
+                A Word From Chairman
+              </h2>
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>
+                We welcome ambitious students aspiring to make a difference in the world of work. We provide you with an environment that believes in the power of business to achieve new heights. Curiosity to explore more about you, others and the world we live in is a unique development that will be made in the ISMR B-School. We build the courage in you to define your vision and make it a reality. You are driven to inspire and empower others to achieve beyond expectations; this is the culture at ISMR B-School.
+              </p>
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>The challenges of the 21st century require leaders, who can adapt to rapidly changing environment, understand situations and find innovative solutions to problems, and then lead their organizations forward. To this end, we have designed our program around the core themes of entrepreneurship, leadership and consultancy. In this program, you will have the opportunity to work on real projects in organizations, both large and small, and thereby explore your potential and harness your skills.</p>
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>We aim to develop exceptional global leaders in a carefully selected learning community, diverse in background but sharing an international perspective and high aspirations. In a redesigned program that combines dialogue, personal attention, coaching and extensive leadership practices, our faculties and professional team guide the class through a dynamic mix of business fundamentals, self-development and real-world experiences.</p>
+
+
+              <h5><i>Jaikishan Bhutada</i></h5>
+              <h6>
+                Chairman</h6>
+
+            </div>
+
           </div>
+
+          <div className="row g-4 mt-5">
+
+
+            <div className="col-12 col-md-7 col-lg-7">
+              <h2
+                style={{
+                  fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                  fontSize: "32px",
+                  fontWeight: 700,
+                  color: "#0a2240",
+
+                  marginBottom: "1.5rem",
+                }}
+              >
+
+                A Word From Secretary
+              </h2>
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>
+                The only constant in this world is change. The ebb and flow of change is perennial in economies, industries and businesses. It is indeed a challenging task for managers to constantly adapt to these changes.
+              </p>
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>
+                In all these years that I have spent in the field of management education, I have seen wave after wave of changes that have assailed management education. We have not only gone under these waves, but we have also succeeded in riding many of them.
+              </p>
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>
+                Built on a culture of merit, integrity and ethics, we groom future managers through a comprehensive and contemporary curriculum supported by courses in ethics, international business and considerable industry exposure. Appreciation of societal issues is inculcated through various social action programs and a three-week project on ‘Socially Useful and Productive Activity’.
+              </p>
+
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>
+                On the whole, our endeavor is to develop managers who by dint of their capability and character can measure up to the diverse challenges of the world of business and industry. The world is increasingly becoming more connected and interdependent in the way such as the businesses operate today with a focus shifting on the emerging markets.
+              </p>
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>
+                Otherwise how does one explain Walmart’s decision to buy controlling stake in Flipkart, Beckshire Hathway’s decision to invest in Paytm and Softbank’s decision to invest in new age businesses. It clearly states that the business landscape is changing rapidly and means that the workforce of tomorrow is in for a big challenge, which is to not only learn but also re-learn and up-learn all through the course of their professional career.
+              </p>
+              <h5><i>Dr. Nilesh Bhutada</i></h5>
+              <h6>
+                Secretary</h6>
+
+
+            </div>
+
+
+
+            <div className="col-12 col-md-5 col-lg-5">
+              <img
+                src="../../../src/assets/Homeimg/Secretary.png"
+                alt="Leadership Team"
+                className="img-fluid rounded"
+              />
+            </div>
+
+          </div>
+
+          <div className="row g-4 mt-5">
+
+            <div className="col-12 col-md-5 col-lg-5">
+              <img
+                src="../../../src/assets/Homeimg/Director.png"
+                alt="Leadership Team"
+                className="img-fluid rounded"
+              />
+            </div>
+            <div className="col-12 col-md-7 col-lg-7">
+              <h2
+                style={{
+                  fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                  fontSize: "32px",
+                  fontWeight: 700,
+                  color: "#0a2240",
+              
+                  marginBottom: "1.5rem",
+                }}
+              >
+                A Word  From Director
+              </h2>
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>
+                Dear Students,
+              </p>
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>
+                Welcome to the dynamic world of management! As you embark on this transformative journey, you are stepping into a realm where innovation, leadership, and strategic thinking shape the future.
+              </p>
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>
+                Management is not just about handling business operations—it is about making impactful decisions, leading teams with vision, and adapting to the ever-changing global landscape. The challenges ahead will test your resilience, creativity, and ability to think beyond conventional boundaries.
+              </p>
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>
+                At our institution, we are committed to equip you with the skills, knowledge, and values needed to become exceptional leaders. Our curriculum is designed to foster critical thinking, ethical decision-making, and hands-on experience through practical learning and industry engagement.
+              </p>
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>
+                Success in management is not defined solely by financial growth but by the positive influence you have on people, businesses, and society. Cultivate a mindset of lifelong learning, embrace collaboration, and never hesitate to challenge the status quo.
+              </p>
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>
+                We are into a Volatile, Uncertain, Complex and Ambiguous (VUCA) world. Therefore, it is more challenging.
+              </p>
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>
+                Remember, you need to transform yourself from Ordinary to Legendary. We will help you in this transformation.
+              </p>
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>
+                Wishing you all the best for a promising and successful career ahead!
+              </p>
+              <h5>Warm regards,</h5>
+              <h5><i>Prof. (Dr.) Rupendra Gaikwad</i></h5>
+              <h6>
+                Director, ISMR</h6>
+
+
+            </div>
+
+          </div>
+
+
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-5 bg-white">
-        <div className="container text-center">
-          <div className="p-5 rounded-4 shadow-sm bg-light">
-            <h2 className="mb-3" style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif", fontSize: "32px", fontWeight: 700, color: "#0a2240" }}>
-              Leading with Vision and Excellence
-            </h2>
-            <p className="mb-0" style={{ fontSize: "18px", fontFamily: "'Inter', Arial, Helvetica, sans-serif", color: "#444", lineHeight: "1.7" }}>
-              Our leadership team brings together decades of experience in
-              academia, research, and administration. United by a shared
-              commitment to educational excellence, they guide our institution
-              toward becoming a world-class center of learning.
-            </p>
-          </div>
-        </div>
-      </section>
+
+
     </div>
   );
 }

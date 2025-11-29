@@ -397,7 +397,7 @@ export default function RefundPolicy() {
           <div className="panel" role="region" aria-labelledby="refund-heading">
             <h2 id="refund-heading">Refund Policy</h2>
             <p className="lead">
-              The refund policy for fees at International School of Management & Research is outlined below.
+            Our Refund Policy explains the terms and conditions under which students can request a fee refund. It provides clear guidelines on eligibility, required documents, timelines, and the refund process to ensure transparency and smooth handling of all refund requests.
             </p>
 
             <div className="section">
