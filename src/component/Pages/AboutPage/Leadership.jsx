@@ -1,6 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
+import director from "../../../assets/Homeimg/Director.png";
+import secretary from "../../../assets/Homeimg/Secretary.png";
+import cairman from "../../../assets/Homeimg/cairman.png";
 
 function Leadership() {
   return (
@@ -112,7 +115,7 @@ function Leadership() {
 
             <div className="col-12 col-md-5 col-lg-5">
               <img
-                src="../../../src/assets/Homeimg/cairman.png"
+                src={cairman}
                 alt="Leadership Team"
                 className="img-fluid rounded"
               />
@@ -254,7 +257,7 @@ function Leadership() {
 
             <div className="col-12 col-md-5 col-lg-5">
               <img
-                src="../../../src/assets/Homeimg/Secretary.png"
+                src={secretary}
                 alt="Leadership Team"
                 className="img-fluid rounded"
               />
@@ -266,7 +269,7 @@ function Leadership() {
 
             <div className="col-12 col-md-5 col-lg-5">
               <img
-                src="../../../src/assets/Homeimg/Director.png"
+                src={director}
                 alt="Leadership Team"
                 className="img-fluid rounded"
               />
