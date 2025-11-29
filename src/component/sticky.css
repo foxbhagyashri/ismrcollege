@@ -1,0 +1,43 @@
+.apply-now-sticky {
+    position: fixed;
+    top: 50%;
+    right: -40px;
+    transform: translateY(-50%);
+    z-index: 9999;
+    pointer-events: none; /* allow only the button clickable area */
+  }
+  
+  .apply-now-btn {
+    pointer-events: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #930512;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform .25s ease, background-color .15s ease;
+  }
+  
+  /* rotate text -90deg so it reads vertically along the side */
+  .apply-now-btn.rotated {
+    transform-origin: center;
+    transform: rotate(-90deg);
+    /* reduce width to avoid overflow when rotated */
+    white-space: nowrap;
+  }
+  
+  /* hover */
+  .apply-now-btn:hover {
+    background-color: #930512;
+    transform: rotate(-90deg) translateY(-2px);
+  }
+  
+  /* hide on small screens (optional) */
+  @media (max-width: 600px) {
+    .apply-now-sticky { display: block; }
+  }
+  

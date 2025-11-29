@@ -345,7 +345,7 @@ export default function FaqAndContactSection() {
 
         {/* RIGHT: CONTACT FORM */}
         <div className="contact-form">
-          <h2>Application Form</h2>
+          <h2>Enquiry Form</h2>
           <p>
             Fill the form and our admissions team will contact you within 2 working days.
           </p>
@@ -395,21 +395,21 @@ export default function FaqAndContactSection() {
               required
             >
               <option value="">Select Programme *</option>
-              <option value="bba">BBA</option>
-              <option value="bca">BCA</option>
-              <option value="mca">MCA</option>
+              <option value="BBA">BBA</option>
+              <option value="BCA">BCA</option>
+              <option value="MBA">MBA</option>
             </select>
 
             <textarea
               name="message"
-              placeholder="How can we help you?"
+              placeholder="Please write your query here in the open-ended box"
               value={formData.message}
               onChange={handleChange}
             ></textarea>
 
             <div className="btn-row">
               <button type="submit" className="btn-primary">
-                Send Enquiry
+               Submit
               </button>
               <button
                 type="button"

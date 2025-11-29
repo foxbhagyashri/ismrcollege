@@ -70,8 +70,7 @@ const ProgramsSection = () => {
       <div className="section-header">
         <h1 className="section-title">MBA Program Specialization</h1>
         <p className="section-subtitle">
-          Choose your path to excellence with our specialized MBA programs
-          designed for future leaders.
+          Choose your path to excellence with our specialized MBA programs, carefully designed to help you grow into a confident and successful future leader. Each program focuses on practical learning, industry-relevant skills, and real-world experience so you can build a strong foundation for your career.
         </p>
       </div>
 
@@ -79,9 +78,8 @@ const ProgramsSection = () => {
         {specializations.map((program, index) => (
           <div
             key={index}
-            className={`specialization-card ${
-              index % 2 === 0 ? "card-yellow" : "card-blue"
-            }`}
+            className={`specialization-card ${index % 2 === 0 ? "card-yellow" : "card-blue"
+              }`}
           >
             <div className="card-icon">
               <FontAwesomeIcon icon={program.icon} />
@@ -96,10 +94,10 @@ const ProgramsSection = () => {
             </p>
 
             <button
-             className="view-more-btn"
+              className="view-more-btn"
               onClick={() => handleReadMore(index)}
             >
-               <svg
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
@@ -114,7 +112,7 @@ const ProgramsSection = () => {
               {expandedCard === index ? "Read Less" : "Read More"}
             </button>
 
-           
+
           </div>
         ))}
       </div>

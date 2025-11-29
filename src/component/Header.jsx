@@ -74,7 +74,7 @@ const Header = () => {
   const navItems = (
     <ul
       className="navbar-nav mb-2 mb-lg-0"
-      // Removed inline style for margin, now handled by CSS media query
+    // Removed inline style for margin, now handled by CSS media query
     >
       {/* Home */}
       <li className="nav-item">
@@ -188,7 +188,7 @@ const Header = () => {
               Education Loan
             </Link>
           </li>
-          
+
           <li>
             <Link
               className="dropdown-item"
@@ -216,7 +216,7 @@ const Header = () => {
               Admission Contact
             </Link>
           </li>
-            <li>
+          <li>
             <Link
               className="dropdown-item"
               to="/Addmissions/Disclaimer"
@@ -299,6 +299,27 @@ const Header = () => {
             </Link>
           </li>
 
+          <li>
+            <Link
+              className="dropdown-item"
+              to="/Placementpage/PlacementRules"
+              onClick={handleDropdownItemClick}
+            >
+              Placement Rules & Regulations
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="dropdown-item"
+              to="/Placementpage/PlacementProcess"
+              onClick={handleDropdownItemClick}
+            >
+              Placement Process
+            </Link>
+          </li>
+
+
+
           {/* Cleaned up commented links */}
 
           <li>
@@ -362,7 +383,7 @@ const Header = () => {
               Student Facilities
             </Link>
           </li>
-          
+
           <li>
             <Link
               className="dropdown-item"
@@ -372,9 +393,9 @@ const Header = () => {
               Newsletters
             </Link>
           </li>
-  
+
         </ul>
-        
+
       </li>
 
       {/* Newsletter Dropdown
@@ -965,7 +986,7 @@ const Header = () => {
           >
             {navItems}
             {/* Mobile-specific Apply Now Button (inside the collapsed menu) */}
-            
+
           </div>
         </div>
       </nav>

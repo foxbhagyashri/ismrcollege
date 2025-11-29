@@ -44,6 +44,8 @@ import Admissioncontact from "./component/Pages/Addmissions/Admissioncontact";
 import Placementoverview from "./component/Pages/Placementpage/Placementoverview";
 import Ourplacement from "./component/Pages/Placementpage/Ourplacement";
 import Corporate from "./component/Pages/Placementpage/Corporate";
+import PlacementRules from "./component/Pages/Placementpage/PlacementRules";
+import PlacementProcess from "./component/Pages/Placementpage/PlacementProcess";
 // import
 // Studentcampus
 import Studentcampus from "./component/Pages/Life@compusPage/Studentcampus";
@@ -58,6 +60,7 @@ import Newsletter from "./component/Pages/NewsPage/Newsletter";
 // Contactus Page
 import Contactus from "./component/Pages/Contactus/Contactus";
 import FAQPage from "./component/Pages/Addmissions/more-faqs";
+import Sticky from "./component/sticky";
 
 function App() {
   return (
@@ -72,6 +75,7 @@ function App() {
           element={
             <>
               <Banner />
+              <Marquee />
               <CounterSection />
               <Banner2 />
               <ProgramsSection />
@@ -81,9 +85,9 @@ function App() {
               <StudentLife />
               <WhyChooseAdma />
               <Testimonials />
-                 <Marquee />
-              <LatestNews />
-           
+              <Sticky />
+              {/* <LatestNews /> */}
+
             </>
           }
         />
@@ -136,8 +140,15 @@ function App() {
         {/* more faqs */}
         <Route path="/Addmissions/more-faqs" element={<FAQPage />} />
 
+        {/* more PlacementRules */}
+        <Route path="/Placementpage/PlacementRules" element={<PlacementRules />} />
+
+        {/* more PlacementRules */}
+        <Route path="/Placementpage/PlacementProcess" element={<PlacementProcess />} />
+
+
       </Routes>
-         {/* <Faq /> */}
+      {/* <Faq /> */}
       <Footer />
       {/* <Contactus/> */}
     </Router>

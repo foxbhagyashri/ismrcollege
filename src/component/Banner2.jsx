@@ -46,14 +46,14 @@ const Banner = () => {
                       MBA : DTE College Code 6798 | BBA & BCA College Code 16301
                       <br /> Approved by AICTE, Ministry of Education, Govt of India.
                       <br />
-                      Affiliated to S.P. (Savitribai Phule) Pune University<br></br>
-                      National Assessment and Accreditation Council (NAAC) Accredited
+                      Affiliated to Savitribai Phule Pune University<br></br>
+                      Accredited to NAAC
                     </b>
                   </p>
                 </div>
                 <ul className="list-unstyled  d-flex align-items-center btn-list">
                   <li className="d-inline-block">
-                    <a className="default-btn" href="institute-overview.html">
+                    <a className="default-btn" href="Aboutpage/Aboutinstutue">
                       Institute Overview &nbsp;{" "}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +106,7 @@ const Banner = () => {
                   </li>
                   <li className="user-listtext">
                     <h2>
-                      <span className="counter">9300</span>+
+                      <span className="counter">3500</span>+
                     </h2>
                     <p className="subtext"> worldwide Students</p>
                   </li>

@@ -12,10 +12,10 @@ import "./CounterSection.css";
 
 const CounterSection = () => {
   const counters = [
-    { id: 1, end: 124, label: "Online Programs", icon: faLaptopCode },
-    { id: 2, end: 140, label: "Graduate Programs", icon: faUserGraduate },
-    { id: 3, end: 393, label: "Best Courses", icon: faBookOpen },
-    { id: 4, end: 865, label: "Pro Teachers", icon: faChalkboardTeacher },
+    { id: 1, end: 3500, label: "Student Pass", icon: faLaptopCode },
+    { id: 2, end: 3100, label: "Student Placed", icon: faUserGraduate },
+    { id: 3, end: 600, label: "Companies", icon: faBookOpen },
+    { id: 4, end: "12.6 LPA", label: "Highest Package", icon: faChalkboardTeacher, noCount: true },
   ];
 
   return (
@@ -31,7 +31,11 @@ const CounterSection = () => {
                   </div>
                   <div className="counter-inline">
                     <h3 className="counter-number">
-                      <CountUp end={item.end} duration={2} />+
+                      {item.noCount ? (
+                        item.end       // show directly, no counter, no +
+                      ) : (
+                        <CountUp end={item.end} duration={2} /> // animated counters
+                      )}
                     </h3>
                     <p className="counter-label">{item.label}</p>
                   </div>
