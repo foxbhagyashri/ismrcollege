@@ -461,30 +461,6 @@ const Header = () => {
 
 
           {/* Cleaned up commented links */}
-
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/Placementpage/Ourplacement"
-              onClick={handleDropdownItemClick}
-            >
-              Our Internship & Placement
-            </Link>
-          </li>
-
-          {/* Cleaned up commented links */}
-
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/Placementpage/Corporate"
-              onClick={handleDropdownItemClick}
-            >
-              Corporate & Student Testimonials
-            </Link>
-          </li>
-
-          {/* Cleaned up commented links */}
         </ul>
       </li>
 
