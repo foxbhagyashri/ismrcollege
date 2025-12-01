@@ -3,6 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BriefcaseFill } from "react-bootstrap-icons";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 
+
+
 function StudentCampusAndActivities() {
   const [activeSection, setActiveSection] = useState(
     "NATIONAL & INTERNATIONAL INDUSTRIAL VISIT"
@@ -36,7 +38,8 @@ function StudentCampusAndActivities() {
         >
           🌍 National & International Industrial Visits
         </h3>
-        <p
+
+        {/* <p
           className="campus-text"
           style={{
             ...interFont,
@@ -44,28 +47,89 @@ function StudentCampusAndActivities() {
             textAlign: "justify",
           }}
         >
-          Our students regularly participate in <strong>industrial visits</strong> 
-          to leading organizations across India and abroad. These visits bridge 
-          the gap between theoretical learning and real-world application, allowing 
-          students to understand modern technologies, management practices, and 
+          Our students regularly participate in <strong>industrial visits</strong>
+          to leading organizations across India and abroad. These visits bridge
+          the gap between theoretical learning and real-world application, allowing
+          students to understand modern technologies, management practices, and
           global business trends.
           <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea doloribus
-          optio, fugit repellendus ullam recusandae sunt animi, omnis commodi
-          vitae totam culpa delectus eum obcaecati est aut temporibus doloremque
-          ab?
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
-          beatae blanditiis, dolorum harum molestiae odio unde reprehenderit
-          quos iure corporis voluptas corrupti quisquam? Fuga debitis alias
-          minus dolore!
-        </p>
-        <ul style={{ ...interFont, paddingLeft: "1.5rem" }}>
-          <li>Exposure to global industry standards and innovation.</li>
-          <li>Interactions with industry professionals and experts.</li>
-          <li>Understanding practical processes, systems, and workflow.</li>
-        </ul>
+
+        </p> */}
+
+        {/* ===== Image Cards Row ===== */}
+        {/* ===== Image Cards Row ===== */}
+        <div className="row g-4 my-3">
+          <div className="col-md-6">
+            <div className="card shadow-sm h-100 border-0">
+              <img
+                src="/Industry Visit @ National Paints Abu Dhabi.jpg"
+                className="card-img-top"
+                alt="Industrial Visit"
+                style={{
+                  height: "220px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
+              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>National Paints, Abu Dhabi</h5>
+            </div>
+          </div>
+
+          <div className="col-md-6">
+            <div className="card shadow-sm h-100 border-0">
+              <img
+                src="/2-1.png"
+                className="card-img-top"
+                alt="Industrial Visit"
+                style={{
+                  height: "220px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
+              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Tata Steel, Dubai</h5>
+            </div>
+          </div>
+
+          <div className="col-md-6">
+            <div className="card shadow-sm h-100 border-0">
+              <img
+                src="/3-1.png"
+                className="card-img-top"
+                alt="Industrial Visit"
+                style={{
+                  height: "220px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
+              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Renishaw Metrologies India Ltd. Pune</h5>
+            </div>
+          </div>
+          <div className="col-md-6">
+            <div className="card shadow-sm h-100 border-0">
+              <img
+                src="/5-1.png"
+                className="card-img-top"
+                alt="Industrial Visit"
+                style={{
+                  height: "220px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
+              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Industrial Visit to Mapro Mahableshwar</h5>
+            </div>
+          </div>
+
+        </div>
+
+
+
       </div>
     ),
+
+    // ------- Other Sections --------
     "TRAINING & DEVELOPMENT": (
       <div>
         <h3
@@ -79,25 +143,80 @@ function StudentCampusAndActivities() {
         >
           🧠 Training & Development
         </h3>
-        <p
-          className="campus-text"
-          style={{
-            ...interFont,
-            maxWidth: "800px",
-            textAlign: "justify",
-          }}
-        >
-          The institute conducts comprehensive <strong>training and development programs</strong> 
-          to enhance students’ employability skills, focusing on communication, aptitude, 
-          technical proficiency, and personality development.
-        </p>
-        <ul style={{ ...interFont, paddingLeft: "1.5rem" }}>
-          <li>Soft skills and leadership workshops.</li>
-          <li>Technical and aptitude training sessions.</li>
-          <li>Industry-oriented certification programs.</li>
-        </ul>
+        {/* <p className="campus-text" style={{ ...interFont, maxWidth: "800px", textAlign: "justify" }}>
+          The institute conducts comprehensive <strong>training and development programs</strong>
+          to enhance students’ employability skills.
+        </p> */}
+
+        <div className="row g-4 my-3">
+          <div className="col-md-6">
+            <div className="card shadow-sm h-100 border-0">
+              <img
+                src="/4-1.png"
+                className="card-img-top"
+                alt="Industrial Visit"
+                style={{
+                  height: "220px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
+              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Team Building Activity</h5>
+            </div>
+          </div>
+
+          <div className="col-md-6">
+            <div className="card shadow-sm h-100 border-0">
+              <img
+                src="/5.png"
+                className="card-img-top"
+                alt="Industrial Visit"
+                style={{
+                  height: "220px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
+              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Yoga Meditation</h5>
+            </div>
+          </div>
+
+          <div className="col-md-6">
+            <div className="card shadow-sm h-100 border-0">
+              <img
+                src="/6.png"
+                className="card-img-top"
+                alt="Industrial Visit"
+                style={{
+                  height: "220px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
+              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Outbound Training Program</h5>
+            </div>
+          </div>
+          <div className="col-md-6">
+            <div className="card shadow-sm h-100 border-0">
+              <img
+                src="/activity-e1643704137253.jpg"
+                className="card-img-top"
+                alt="Industrial Visit"
+                style={{
+                  height: "220px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
+              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Sports Activity</h5>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     ),
+
     "ACADEMIC AWARD CEREMONY": (
       <div>
         <h3
@@ -111,24 +230,77 @@ function StudentCampusAndActivities() {
         >
           🏅 Academic Award Ceremony
         </h3>
-        <p
-          className="campus-text"
-          style={{
-            ...interFont,
-            maxWidth: "800px",
-            textAlign: "justify",
-          }}
-        >
-          The Academic Award Ceremony recognizes outstanding students for their 
-          <strong> excellence in academics, leadership, and extracurricular achievements.</strong>
-        </p>
-        <ul style={{ ...interFont, paddingLeft: "1.5rem" }}>
-          <li>Best performer awards across all departments.</li>
-          <li>Special recognition for research and innovation.</li>
-          <li>Guest lectures and keynote addresses by distinguished alumni.</li>
-        </ul>
+        {/* <p className="campus-text" style={{ ...interFont, maxWidth: "800px", textAlign: "justify" }}>
+          The Academic Award Ceremony recognizes outstanding students for their excellence.
+        </p> */}
+        <div className="row g-4 my-3">
+          <div className="col-md-6">
+            <div className="card shadow-sm h-100 border-0">
+              <img
+                src="/7.png"
+                className="card-img-top"
+                alt="Industrial Visit"
+                style={{
+                  height: "220px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
+              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Best Disciplined Award</h5>
+            </div>
+          </div>
+
+          <div className="col-md-6">
+            <div className="card shadow-sm h-100 border-0">
+              <img
+                src="/8.png"
+                className="card-img-top"
+                alt="Industrial Visit"
+                style={{
+                  height: "220px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
+              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Overall Award Distribution</h5>
+            </div>
+          </div>
+
+          <div className="col-md-6">
+            <div className="card shadow-sm h-100 border-0">
+              <img
+                src="/9.png"
+                className="card-img-top"
+                alt="Industrial Visit"
+                style={{
+                  height: "220px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
+              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Academic Award Ceremony Day</h5>
+            </div>
+          </div>
+          <div className="col-md-6">
+            <div className="card shadow-sm h-100 border-0">
+              <img
+                src="/7-1.png"
+                className="card-img-top"
+                alt="Industrial Visit"
+                style={{
+                  height: "220px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
+              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Top Merit Award</h5>
+            </div>
+          </div>
+
+        </div>
       </div>
     ),
+
     "DOMESTIC & INTERNATIONAL STUDY TOUR": (
       <div>
         <h3
@@ -142,24 +314,77 @@ function StudentCampusAndActivities() {
         >
           ✈️ Domestic & International Study Tours
         </h3>
-        <p
-          className="campus-text"
-          style={{
-            ...interFont,
-            maxWidth: "800px",
-            textAlign: "justify",
-          }}
-        >
-          Study tours offer an opportunity for students to learn beyond classrooms. 
-          These curated tours combine <strong>academic exposure with cultural learning</strong>.
-        </p>
-        <ul style={{ ...interFont, paddingLeft: "1.5rem" }}>
-          <li>Visits to universities and innovation centers worldwide.</li>
-          <li>Collaboration projects and joint learning experiences.</li>
-          <li>Immersive exposure to international business and culture.</li>
-        </ul>
+        {/* <p className="campus-text" style={{ ...interFont, maxWidth: "800px", textAlign: "justify" }}>
+          Study tours provide learning beyond classrooms.
+        </p> */}
+        <div className="row g-4 my-3">
+          <div className="col-md-6">
+            <div className="card shadow-sm h-100 border-0">
+              <img
+                src="/Students @ Ferrari World Abu Dabhi.jpg"
+                className="card-img-top"
+                alt="Industrial Visit"
+                style={{
+                  height: "220px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
+              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Ferrari World, Abu Dhabi</h5>
+            </div>
+          </div>
+
+          <div className="col-md-6">
+            <div className="card shadow-sm h-100 border-0">
+              <img
+                src="/Students @ Burj Al Arab Beach Dubai.jpg"
+                className="card-img-top"
+                alt="Industrial Visit"
+                style={{
+                  height: "220px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
+              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Burj-AI-Arab Beach, Dubai</h5>
+            </div>
+          </div>
+
+          <div className="col-md-6">
+            <div className="card shadow-sm h-100 border-0">
+              <img
+                src="/12.png"
+                className="card-img-top"
+                alt="Industrial Visit"
+                style={{
+                  height: "220px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
+              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Gujarat</h5>
+            </div>
+          </div>
+          <div className="col-md-6">
+            <div className="card shadow-sm h-100 border-0">
+              <img
+                src="/Picnic @ Mahableshwar .jpg"
+                className="card-img-top"
+                alt="Industrial Visit"
+                style={{
+                  height: "220px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
+              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Goa</h5>
+            </div>
+          </div>
+
+        </div>
       </div>
     ),
+
     "CULTURAL ACTIVITIES": (
       <div>
         <h3
@@ -173,70 +398,84 @@ function StudentCampusAndActivities() {
         >
           🎭 Cultural Activities
         </h3>
-        <p
-          className="campus-text"
-          style={{
-            ...interFont,
-            maxWidth: "800px",
-            textAlign: "justify",
-          }}
-        >
-          The vibrant cultural life at our campus encourages students to express 
-          themselves creatively. Annual festivals, talent shows, and cultural events 
-          foster <strong>teamwork, leadership, and community engagement.</strong>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolores ex enim nobis.
-        </p>
-        <ul style={{ ...interFont, paddingLeft: "1.5rem" }}>
-          <li>Annual cultural fest and intercollegiate competitions.</li>
-          <li>Drama, dance, music, and art performances.</li>
-          <li>Student clubs promoting diversity and creative freedom.</li>
-        </ul>
+        {/* <p className="campus-text" style={{ ...interFont, maxWidth: "800px", textAlign: "justify" }}>
+          The vibrant cultural life at our campus encourages creativity and teamwork.
+        </p> */}
+        <div className="row g-4 my-3">
+          <div className="col-md-6">
+            <div className="card shadow-sm h-100 border-0">
+              <img
+                src="/15.png"
+                className="card-img-top"
+                alt="Industrial Visit"
+                style={{
+                  height: "220px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
+              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Holi Celebration</h5>
+            </div>
+          </div>
+
+          <div className="col-md-6">
+            <div className="card shadow-sm h-100 border-0">
+              <img
+                src="/14.png"
+                className="card-img-top"
+                alt="Industrial Visit"
+                style={{
+                  height: "220px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
+              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Independence Day</h5>
+            </div>
+          </div>
+
+          <div className="col-md-6">
+            <div className="card shadow-sm h-100 border-0">
+              <img
+                src="/_DSC3779.jpg"
+                className="card-img-top"
+                alt="Industrial Visit"
+                style={{
+                  height: "220px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
+              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Fresher's Party</h5>
+            </div>
+          </div>
+          <div className="col-md-6">
+            <div className="card shadow-sm h-100 border-0">
+              <img
+                src="/4-4.png"
+                className="card-img-top"
+                alt="Industrial Visit"
+                style={{
+                  height: "220px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                }}
+              />
+              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Farewell Party</h5>
+            </div>
+          </div>
+
+        </div>
       </div>
     ),
   };
 
   return (
     <>
+      {/* ===== Responsive Styles ===== */}
       <style>{`
         @media (max-width: 768px) {
-          h1 {
-            font-size: 1.9rem !important;
-            line-height: 1.3;
-          }
-          .campus-text {
-            font-size: 14px !important;
-            line-height: 1.6 !important;
-            word-spacing: 0.3px !important;
-            letter-spacing: 0.2px !important;
-            text-align: left !important;
-          }
-          .container h1 span {
-            display: inline;
-            white-space: nowrap;
-          }
-          .p-md-5 {
-            padding: 1.5rem !important;
-          }
-          .p-4 {
-            padding: 1rem !important;
-          }
-          .col-md-4 {
-            margin-bottom: 20px !important;
-          }
-        }
-        @media (max-width: 576px) {
-          h1 {
-            font-size: 1.7rem !important;
-            text-align: center !important;
-          }
-          .campus-text {
-            font-size: 13px !important;
-            line-height: 1.5 !important;
-            text-align: justify !important;
-          }
-          .row.g-4 {
-            gap: 1.2rem !important;
-          }
+          .campus-text { font-size: 14px !important; }
         }
       `}</style>
 
@@ -258,38 +497,14 @@ function StudentCampusAndActivities() {
         ></div>
 
         <div className="container position-relative py-5">
-          <h1
-            className="mb-3"
-            style={{
-              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-              fontSize: "40px",
-              fontWeight: 700,
-              margin: 0,
-            }}
-          >
+          <h1 className="mb-3" style={{ fontSize: "40px", fontWeight: 700 }}>
             Student <span className="text-warning">Campus Life</span>
           </h1>
-          <p
-            className="mb-0"
-            style={{
-              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-              fontSize: "15px",
-              marginTop: "0.5rem",
-            }}
-          >
-            Campus • <span className="text-warning">Student Activities</span>
-          </p>
         </div>
       </section>
 
       {/* ===== Main Section ===== */}
-      <div
-        className="container-fluid py-5"
-        style={{
-          backgroundColor: "#f8f9fa",
-          fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-        }}
-      >
+      <div className="container-fluid py-5" style={{ backgroundColor: "#f8f9fa" }}>
         <div className="container">
           <h1
             className="mb-4 text-center text-md-start"
@@ -299,40 +514,26 @@ function StudentCampusAndActivities() {
               color: "#0a2240",
             }}
           >
-            <BriefcaseFill
-              className="me-2"
-              style={{ color: "#0a2240", verticalAlign: "middle" }}
-            />
-            Campus <span style={{ color: "#1a4d7a" }}>Life</span>
+            <BriefcaseFill className="me-2" style={{ color: "#0a2240" }} /> Campus
+            <span style={{ color: "#1a4d7a" }}> Life</span>
           </h1>
 
           <div className="row g-4 mt-2">
             {/* Left Navigation */}
             <div className="col-md-4 col-lg-3">
-              <div
-                className="shadow-sm bg-white rounded-3 p-3"
-                style={{
-                  borderLeft: "4px solid #0a2240",
-                  minHeight: "100%",
-                }}
-              >
+              <div className="shadow-sm bg-white rounded-3 p-3" style={{ borderLeft: "4px solid #0a2240" }}>
                 {navItems.map((item) => (
                   <div
                     key={item}
                     onClick={() => setActiveSection(item)}
-                    className={`p-3 mb-2 rounded ${
-                      activeSection === item ? "text-white" : "text-dark"
-                    }`}
+                    className={`p-3 mb-2 rounded ${activeSection === item ? "text-white" : "text-dark"
+                      }`}
                     style={{
                       fontWeight: 600,
                       fontSize: "15px",
                       cursor: "pointer",
-                      backgroundColor:
-                        activeSection === item ? "#0a2240" : "#f8f9fa",
-                      border:
-                        activeSection === item
-                          ? "2px solid #0a2240"
-                          : "1px solid #dee2e6",
+                      backgroundColor: activeSection === item ? "#0a2240" : "#f8f9fa",
+                      border: activeSection === item ? "2px solid #0a2240" : "1px solid #dee2e6",
                       transition: "all 0.25s ease",
                     }}
                   >

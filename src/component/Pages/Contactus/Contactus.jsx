@@ -15,29 +15,33 @@ function Contactus() {
 
   const contactData = [
     {
-      icon: "fa-graduation-cap",
-      title: "Careers",
-      email: "careers@ismrpune.edu.in",
+      icon: "fa-building",
+      title: "Admissions",
+      email: "admissions@ismrpune.edu.in",
       phones: ["+91 9923786079"],
     },
+
     {
       icon: "fa-user-graduate",
       title: "Academics",
       email: "academics@ismrpune.edu.in",
       phones: ["+91 9373513331"],
     },
-    {
-      icon: "fa-building",
-      title: "Admissions",
-      email: "admissions@ismrpune.edu.in",
-      phones: ["+91 9923786079"],
-    },
+     
     {
       icon: "fa-briefcase",
       title: "Placements",
       email: "placements@ismrpune.edu.in",
       phones: ["+91 9923786079"],
     },
+    {
+      icon: "fa-graduation-cap",
+      title: "Careers",
+      email: "careers@ismrpune.edu.in",
+      phones: ["+91 9923786079"],
+    },
+  
+ 
   ];
 
   return (

@@ -40,6 +40,11 @@ import Disclaimer from "./component/Pages/Addmissions/Disclaimer";
 import Refundpolicy from "./component/Pages/Addmissions/Refundpolicy";
 import Feesstructure from "./component/Pages/Addmissions/Feesstructure";
 import Admissioncontact from "./component/Pages/Addmissions/Admissioncontact";
+import Chairman from "./component/Pages/AboutPage/Chairman";
+import Director from "./component/Pages/AboutPage/Director";
+import Secretary from "./component/Pages/AboutPage/Secretary";
+
+
 // Placement
 import Placementoverview from "./component/Pages/Placementpage/Placementoverview";
 import Ourplacement from "./component/Pages/Placementpage/Ourplacement";
@@ -85,7 +90,7 @@ function App() {
               <StudentLife />
               <WhyChooseAdma />
               <Testimonials />
-              <Sticky />
+
               {/* <LatestNews /> */}
 
             </>
@@ -97,7 +102,9 @@ function App() {
         <Route path="/Aboutpage/Leadership" element={<Leadership />} />
         <Route path="/Aboutpage/Award" element={<Award />} />
         <Route path="/Aboutpage/Ismr" element={<Ismr />} />
-        {/* <Route path="/Aboutpage/Recognition" element={<Recognition />} /> */}
+        <Route path="/Aboutpage/Chairman" element={<Chairman />} />
+        <Route path="/Aboutpage/Director" element={<Director />} />
+        <Route path="/Aboutpage/Secretary" element={<Secretary />} />
 
         <Route
           path="/Addmissions/Eligibility-criteria"
@@ -147,10 +154,13 @@ function App() {
         <Route path="/Placementpage/PlacementProcess" element={<PlacementProcess />} />
 
 
+
       </Routes>
       {/* <Faq /> */}
       <Footer />
       {/* <Contactus/> */}
+
+      <Sticky />
     </Router>
   );
 }

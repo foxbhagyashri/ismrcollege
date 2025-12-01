@@ -107,15 +107,46 @@ const Header = () => {
               About Institute
             </Link>
           </li>
-          <li>
+          <li className="dropdown-submenu">
             <Link
               className="dropdown-item"
-              to="/Aboutpage/Leadership"
+              to="#"
               onClick={handleDropdownItemClick}
             >
               Leadership Team
             </Link>
+
+            <ul className="submenu">
+              <li>
+                <Link
+                  className="dropdown-item"
+                  to="AboutPage/Chairman"
+                  onClick={handleDropdownItemClick}
+                >
+                  Chairman Message
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="dropdown-item"
+                  to="AboutPage/Secretary"
+                  onClick={handleDropdownItemClick}
+                >
+                  Secretary Message
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="dropdown-item"
+                  to="AboutPage/Director"
+                  onClick={handleDropdownItemClick}
+                >
+                  Director Message
+                </Link>
+              </li>
+            </ul>
           </li>
+
           <li>
             <Link
               className="dropdown-item"
@@ -596,6 +627,41 @@ const Header = () => {
           font-family: 'Inter', Arial, Helvetica, sans-serif !important;
         }
           
+
+/* Parent li */
+.dropdown-submenu {
+  position: relative;
+}
+
+/* Submenu UL */
+.dropdown-submenu .submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;       /* Opens to the right side */
+  margin-left: 0px; 
+  background: #fff;
+  padding: 10px 0;
+  list-style: none;
+  min-width: 180px;
+  border: 1px solid #ddd;
+  z-index: 999;
+}
+
+/* Show on hover */
+.dropdown-submenu:hover .submenu {
+  display: block;
+}
+
+/* Optional styling */
+.submenu li a {
+  padding: 8px 16px;
+  display: block;
+  white-space: nowrap;
+}
+
+
+
         
         .custom-navbar .navbar-brand {
           position: relative;

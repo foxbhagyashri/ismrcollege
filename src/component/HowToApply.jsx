@@ -15,7 +15,7 @@ const HowToApply = () => {
                         <span className="apply-step">01</span>
                         <h3 className="apply-heading">Apply Online</h3>
                         <p className="apply-text">
-                            Visit the official website, click on Apply Online, fill the institute portal form, and pay the ₹ 1100 registration fee.
+                            Visit the official website, click on “Apply Online,” fill out the institute’s application form, and pay the registration fee of ₹1100.
                         </p>
                     </article>
 

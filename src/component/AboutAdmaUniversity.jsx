@@ -20,46 +20,48 @@ const AboutAdmaUniversity = () => {
       {/* Bottom Row */}
       <div className="about-bottom">
         <div className="logos-section">
+
           <div className="logo-card">
             {/* add specific class so we can style AICTE separately */}
-            <img src={AICTE} alt="AICTE Logo" className="logo-image aicte" />
-            <span>All India Council for Technical Education</span>
+            <a href="https://www.aicte.gov.in/" target="_blank">  <img src={AICTE} alt="AICTE Logo" className="logo-image aicte" /></a>
+            <a href="https://www.aicte.gov.in/" target="_blank"><span>All India Council for Technical Education</span></a>
+          </div>
+
+          <div className="logo-card">
+            <a href="https://dte.maharashtra.gov.in/home-en/" target="_blank">   <img src={DOTE} alt="DOTE Logo" className="logo-image" /></a>
+            <a href="https://dte.maharashtra.gov.in/home-en/" target="_blank">    <span>Directorate of Technical Education, Maharashtra</span></a>
           </div>
           <div className="logo-card">
-            <img src={DOTE} alt="DOTE Logo" className="logo-image" />
-            <span>Directorate of Technical Education, Maharashtra</span>
+            <a href="https://cetcell.mahacet.org/" target="_blank"> <img src={CET} alt="LOAN Logo" className="logo-image" /></a>
+            <a href="https://cetcell.mahacet.org/" target="_blank">  <span>CET Cell</span></a>
           </div>
           <div className="logo-card">
-            <img src={CET} alt="LOAN Logo" className="logo-image" />
-            <span>CET Cell</span>
+            <a href="https://www.unipune.ac.in/" target="_blank"> <img src={SPPU} alt="SPPU Logo" className="logo-image" /></a>
+            <a href="https://www.unipune.ac.in/" target="_blank"> <span>Savitribai Phule Pune University</span></a>
           </div>
-          <div className="logo-card">
-            <img src={SPPU} alt="SPPU Logo" className="logo-image" />
-            <span>Savitribai Phule Pune University</span>
-          </div>
-          
+
         </div>
       </div>
       <div className="about-bottom">
         <div className="logos-section">
           <div className="logo-card">
             {/* add specific class so we can style AICTE separately */}
-            <img src={AIMA} alt="AIMA Logo" className="logo-image aima" />
-            <span>All India Management Association</span>
+            <a href="https://www.aima.in/" target="_blank"> <img src={AIMA} alt="AIMA Logo" className="logo-image aima" /></a>
+            <a href="https://www.aima.in/" target="_blank">  <span>All India Management Association</span></a>
           </div>
           <div className="logo-card">
-            <img src={AIMS} alt="DOTE Logo" className="logo-image" />
-            <span>Association of Indian
-              Management Schools</span>
+            <a href="https://aims.org.in/" target="_blank"> <img src={AIMS} alt="DOTE Logo" className="logo-image" /></a>
+            <a href="https://aims.org.in/" target="_blank"> <span>Association of Indian
+              Management Schools</span></a>
           </div>
           <div className="logo-card">
-            <img src={AISE} alt="AISE Logo" className="logo-image" />
-            <span>All India Survey on
-              Higher Education</span>
+            <a href="https://aishe.gov.in/" target="_blank">  <img src={AISE} alt="AISE Logo" className="logo-image" /></a>
+            <a href="https://aishe.gov.in/" target="_blank">  <span>All India Survey on
+              Higher Education</span></a>
           </div>
           <div className="logo-card">
-            <img src={NAAC} alt="NAAC Logo" className="logo-image" />
-            <span>National Assessment and Accreditation Council</span>
+            <a href="http://naac.gov.in/index.php/en/" target="_blank"> <img src={NAAC} alt="NAAC Logo" className="logo-image" /></a>
+            <a href="http://naac.gov.in/index.php/en/" target="_blank">  <span>National Assessment and Accreditation Council</span></a>
           </div>
         </div>
       </div>

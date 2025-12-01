@@ -347,7 +347,7 @@ export default function FaqAndContactSection() {
         <div className="contact-form">
           <h2>Enquiry Form</h2>
           <p>
-            Fill the form and our admissions team will contact you within 2 working days.
+            Fill the form and our Admissions team will contact you at the earliest
           </p>
 
           <form onSubmit={handleSubmit}>
@@ -395,9 +395,10 @@ export default function FaqAndContactSection() {
               required
             >
               <option value="">Select Programme *</option>
+              <option value="MBA">MBA</option>
               <option value="BBA">BBA</option>
               <option value="BCA">BCA</option>
-              <option value="MBA">MBA</option>
+
             </select>
 
             <textarea
@@ -409,28 +410,28 @@ export default function FaqAndContactSection() {
 
             <div className="btn-row">
               <button type="submit" className="btn-primary">
-               Submit
+                Submit
               </button>
-              <button
+              {/* <button
                 type="button"
                 onClick={handleReset}
                 className="btn-secondary"
               >
                 Reset
-              </button>
+              </button> */}
             </div>
 
 
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-  <input
-    type="checkbox"
-    id="vehicle1"
-    name="vehicle1"
-    value="Bike"
-    style={{ transform: "scale(1.6)", accentColor: "#d32f2f", width: "100px"}} required // scale increases size
-  />
-  <label htmlFor="vehicle1">I authorize International School of Management and Research, Pune and its representatives to Call, SMS,RCS, Email or WhatsApp me about its programmers and offers. This consent overrides any registration for DNC / NDNC. </label>
-</div>
+              <input
+                type="checkbox"
+                id="vehicle1"
+                name="vehicle1"
+                value="Bike"
+                style={{ transform: "scale(1.6)", accentColor: "#d32f2f", width: "100px" }} required // scale increases size
+              />
+              <label htmlFor="vehicle1">I authorize International School of Management and Research, Pune and its representatives to Call, SMS,RCS, Email or WhatsApp me about its programmers and offers. This consent overrides any registration for DNC / NDNC. </label>
+            </div>
 
 
 

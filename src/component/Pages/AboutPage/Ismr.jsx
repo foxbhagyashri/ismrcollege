@@ -48,7 +48,7 @@ const whyIsmrFeatures = [
   { id: 13, title: "Medicare Facility during the duration of the Course", icon: faHospital },
   { id: 14, title: "Hostel & Mess Facilities for Boys and Girls", icon: faBed },
   { id: 15, title: "100% Placement Assistance Since Inception", icon: faBriefcase },
-  { id: 16, title: "Extra Activities", icon: faPuzzlePiece },
+  { id: 16, title: "Extra Curricular & Co-Curricular Activities", icon: faPuzzlePiece },
   { id: 17, title: "Dedicated and Experienced Faculties", icon: faUserTie },
   { id: 18, title: "Cultural Programme and Intra Collegiate Programme", icon: faMusic },
   { id: 19, title: "20 Acres Serene Campus", icon: faTree },

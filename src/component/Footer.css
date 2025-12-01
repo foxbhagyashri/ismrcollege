@@ -2,11 +2,12 @@
 
 .footer-map iframe {
   width: 100%;
-  height: 200px;
+  height: 310px;
   border-radius: 10px;
   border: 0;
 }
-.footer-map{
+
+.footer-map {
   border: 2px solid #a91b1f;
   border-radius: 10px;
 }
@@ -230,16 +231,16 @@
   /* 🌟 Academics + Quick Links side by side */
   .footer-section .row {
     display: flex;
- 
+
   }
 
   /* Target only those two columns */
-  .footer-section .row > .col-lg-2 {
+  .footer-section .row>.col-lg-2 {
     width: 100%;
   }
 
-  .footer-section .row > .col-lg-2:nth-of-type(2),
-  .footer-section .row > .col-lg-2:nth-of-type(3) {
+  .footer-section .row>.col-lg-2:nth-of-type(2),
+  .footer-section .row>.col-lg-2:nth-of-type(3) {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -252,22 +253,22 @@
       justify-content: center;
     }
 
-    .footer-section .row > .col-lg-2:nth-of-type(2),
-    .footer-section .row > .col-lg-2:nth-of-type(3) {
+    .footer-section .row>.col-lg-2:nth-of-type(2),
+    .footer-section .row>.col-lg-2:nth-of-type(3) {
       width: 50%;
       padding: 0 10px;
     }
 
     .footer-links {
-     text-align: left;
-     margin-left: 26px;
-     /* font-size: 4px !important; */
+      text-align: left;
+      margin-left: 26px;
+      /* font-size: 4px !important; */
 
     }
 
     .footer-links li {
       margin-bottom: 6px;
-      
+
     }
   }
 }

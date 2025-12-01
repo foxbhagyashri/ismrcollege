@@ -50,39 +50,31 @@ const Footer = () => {
           </Col>
 
 
-  {/* Quick Links */}
-  <Col lg={2} md={6} sm={12} className="mb-4">
+          {/* Quick Links */}
+          <Col lg={2} md={6} sm={12} className="mb-4">
             <h5 className="footer-title">Quick Links</h5>
             <ul className="footer-links">
               <li>
-                <a href="#">Student Activities</a>
+                <a href="#">Enquire Now</a>
               </li>
               <li>
-                <a href="#">Apply Form</a>
+                <a href="./Addmissions/Eligibility-criteria">Eligibility Criteria</a>
               </li>
               <li>
-                <a href="#">Schedule A Tour</a>
+                <a href="./Aboutpage/Ismr">Why ISMR?</a>
               </li>
               <li>
-                <a href="#">News & Blog</a>
+                <a href="./Addmissions/Howtoapply">List of Documents </a>
               </li>
               <li>
-                <a href="#">About ISMR</a>
+                <a href="./Addmissions/Disclaimer">Disclaimer </a>
               </li>
             </ul>
           </Col>
 
 
-          {/* Academics */}
-          <Col lg={4} md={4} sm={12} className="mb-4">
-            <h5 className="footer-title">Location</h5>
-            <div className="footer-map mt-3">
 
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3785.4852719774135!2d73.9687828737175!3d18.41626317235503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c058e8d9e15b%3A0x541eee74dbde91ba!2sISMR%20-%20MBA%20College%20Pune!5e0!3m2!1sen!2sin!4v1764314251873!5m2!1sen!2sin" width="600" height="200" style={{ border: 0, borderRadius: "10px" }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-          </Col>
 
-        
 
           {/* Contact Us + Map Section */}
           <Col lg={3} md={3} sm={12} className="mb-5">
@@ -104,6 +96,16 @@ const Footer = () => {
 
             </div>
           </Col>
+
+          {/* Academics */}
+          <Col lg={4} md={4} sm={12} className="mb-4">
+            {/* <h5 className="footer-title">Location</h5> */}
+            <div className="footer-map mt-0">
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3785.4852719774135!2d73.9687828737175!3d18.41626317235503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c058e8d9e15b%3A0x541eee74dbde91ba!2sISMR%20-%20MBA%20College%20Pune!5e0!3m2!1sen!2sin!4v1764314251873!5m2!1sen!2sin" width="600" height="400" style={{ border: 0, borderRadius: "10px" }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </Col>
+
 
         </Row>
       </Container>

@@ -3,6 +3,13 @@
   font-family: 'Inter', Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
+.logo-card a{
+  font-weight: 700;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    color: #002A5C;
+    text-decoration: none; /* removes underline */
+    color: inherit; /* keeps the text color same as parent */
+}
 
 /* Main container */
 .about-container {

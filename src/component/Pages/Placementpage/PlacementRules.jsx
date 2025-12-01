@@ -25,27 +25,36 @@ const PlacementRules = () => {
                     <h2 className="content-title">Placement Rules & Regulations</h2>
 
                     <p>
-                        1. Final year student who are passing out from the institute and are seeking employment should register for campus placement with their respective department.
+                        1. Final-year students seeking jobs must register for campus placements with their respective department.
                     </p>
                     <p>
-                        2. 90 percent attendance is compulsory for the student to be part of placement process otherwise; he / she is not allowed to participate
+                        2.	Minimum 90% attendance is compulsory to participate in the placement process.
                     </p>
                     <p>
-                        3. Student should have submitted all the assignments within the deadline and with no backlogs in the first three semester.
+                        3.	Students must submit all assignments on time and have no backlogs in the first three semesters.
                     </p>
                     <p>
-                        4. Students are advised to read the Announcement made through notice put up on notice board, go through the company website must inform to Training & Placement Department if interested appear for the same
+                        4.	Students should read all placement announcements, check company details on the website, and inform the Training & Placement Department if they wish to appear for a drive.
                     </p>
-                    <p>5.
-                        It is responsibility of the student to check Announcement /Notice/updated information shortlisted names etc. displayed on the noticed board of placement office /Department notice board student are expected to be on time as per the announcements.
+                    <p>5.	It is the student’s responsibility to regularly check all notices, updates, shortlisted names, etc., on the department and placement office notice boards, and report on time for all processes.
                     </p>
-                    <p>6. Failure to read the notice board /email will not be accepted as an excuse for not participating.</p>
-                    <p>7. Student not meeting the eligibility criteria mandatorily asked by the company would not be allowed to sit for the same</p>
-                    <p>8. Student are advice to be dressed in formals for every requirement drive and should carry a folder comprising of Multiple copies of resume Passport Size colored photographs Photocopy of all the certificate (10th 12th Graduation Mark Sheet and Certificate etc) College ID Card Govt ID & address proof – (Driving License, Passport, Pan Card, Aadhar Card, Voter id)</p>
-                    <p>9. Student should maintain discipline and show ethical & decent behaviour in every action they make during the placement process. if before any other student found violating the protocol set by the company or defaming the institute name would be debarred from the placement activities.</p>
-                    <p>10. Students who do not apply for three or more suitable job opportunities will be considered as not interested in placements and no further job opportunities will be provided to them.</p>
-                    <p>11. After applying for any job opportunity, if a student refuses to attend the interviews, then he/she will be debarred from the placement process.</p>
-                    <p>12. After getting selected in an interview if a candidate rejects the offer by the company, then he/she will be debarred from the placement process.</p>
+                    <p>6.	Missing updates due to not checking the notice board or email will not be accepted as an excuse.</p>
+                    <p>7.	Students who do not meet the eligibility criteria required by a company will not be allowed to appear for that placement drive.</p>
+                    <p>8.	Students must wear formal attire for every placement activity and carry a folder containing:</p>
+
+                    <ul>
+                        <li>	Multiple copies of their resume</li>
+                        <li>	Passport-size colour photographs</li>
+                        <li>   Photocopies of educational certificates (10th, 12th, Graduation)</li>
+                        <li>	College ID card</li>
+                        <li>	Government ID/address proof (Driving Licence, Passport, PAN, Aadhaar, Voter ID)</li>
+                    </ul>
+
+
+                    <p>9.	Students must maintain discipline, ethics, and respectful behaviour throughout the placement process. Any student found violating company protocols or bringing disrepute to the institute will be debarred.</p>
+                    <p>10.	Students who do not apply for three or more suitable job opportunities will be considered not interested, and no further opportunities will be provided.</p>
+                    <p>11.	After applying for a job, if a student fails to attend the interview, he/she will be debarred from the placement process.</p>
+                    <p>12.	If a selected student rejects the job offer, he/she will also be debarred from all further placement activities.</p>
 
 
 

@@ -8,51 +8,73 @@ function StudentFacilities() {
   const facilities = [
     {
       id: 1,
-      title: "Food Courts",
-      description:
-        "Catering to diverse tastes and dietary preferences, our food courts offer a wide variety of nutritious and flavourful meals.",
+      title: "Uniform kit",
+     
       image:
-        "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop",
+        "/uniformm.jpg",
     },
     {
       id: 2,
-      title: "Cafeterias",
-      description:
-        "Experience comfortable dining spaces with fresh, healthy options perfect for students and staff throughout the day.",
+      title: "Computer Lab",
+      
       image:
-        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop",
+        "/comp_lab.jpg",
     },
     {
       id: 3,
-      title: "Sports Facilities",
-      description:
-        "State-of-the-art sports infrastructure designed to promote fitness, teamwork, and athletic excellence among students.",
+      title: "SIP and Placement Activity",
+      
       image:
-        "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&h=600&fit=crop",
+        "/placement-1.jpg",
     },
     {
       id: 4,
-      title: "Library Services",
-      description:
-        "Extensive collection of books and digital resources providing quiet study spaces for academic excellence and research.",
+      title: "Foreign Study Tour",
+     
       image:
-        "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=800&h=600&fit=crop",
+        "/Industry Visit @ National Paints Abu Dhabi.jpg",
     },
     {
       id: 5,
-      title: "Laboratories",
-      description:
-        "Modern, well-equipped laboratories offering hands-on learning experiences in science, technology, and innovation.",
+      title: "Guest-Lectures/ Seminars/ Workshops",
+    
       image:
-        "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&h=600&fit=crop",
+        "/guest_lecture.jpg",
     },
     {
       id: 6,
-      title: "Recreation Areas",
-      description:
-        "Vibrant social spaces and recreational facilities designed for relaxation, entertainment, and community building.",
+      title: "Extra-curricular Activities",
+      
       image:
-        "https://images.unsplash.com/photo-1511882150382-421056c89033?w=800&h=600&fit=crop",
+        "/activity-e1643704137253.jpg",
+    },
+    {
+      id: 7,
+      title: "Library and Wi-Fi",
+    
+      image:
+        "/008.jpg",
+    },
+    {
+      id: 8,
+      title: "MDP Activities",
+     
+      image:
+        "/mdp.jpg",
+    },
+    {
+      id: 9,
+      title: "Out-Bound Training Program",
+     
+      image:
+        "/One-Day-Workshop-on-Team-Building-4.png",
+    },
+    {
+      id: 9,
+      title: "Industrial Visits",
+     
+      image:
+        "/Industry-Visit-to-Spark-Minda-1.png",
     },
   ];
 
@@ -115,16 +137,18 @@ function StudentFacilities() {
         }
         .facility-card {
           position: relative;
-          height: 580px;
+          height: 456px;
           border-radius: 12px;
           overflow: hidden;
           box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
           transition: all 0.3s ease;
           cursor: pointer;
+          border: 2px solid #ffc107;
         }
         .facility-card:hover {
           transform: translateY(-6px);
           box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+          border:none
         }
         .facility-image {
           position: absolute;
@@ -141,7 +165,7 @@ function StudentFacilities() {
           width: 100%;
           height: 52%;
           background-color: #f5f5f5;
-          padding: 40px;
+          padding: 25px;
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
@@ -153,7 +177,7 @@ function StudentFacilities() {
           height: 64%;
         }
         .facility-title {
-          font-size: 1.9rem;
+          font-size: 25px;
           font-weight: 700;
           margin-bottom: 14px;
           color: var(--text-dark);
@@ -292,12 +316,7 @@ function StudentFacilities() {
             Student <span style={{ color: "#1a4d7a" }}>Facilities</span>
           </h1>
           <p className="mt-2">
-            ISMR Pune provides exceptional facilities that enhance both academic
-            and student life experiences. Our well-maintained campus
-            infrastructure is designed to foster innovation, collaboration, and
-            holistic growth through accessible resources, recreation, and
-            convenience. Every facility is tailored to ensure comfort, safety,
-            and productivity for all our students.
+            ISMR B-School campus buildings are spacious with facilities that enable students to enjoy a successful academic and social life. The campus comprises of a library, laboratories, classrooms, and a cafeteria and administration and faculty offices. The facilities of our campus are described below.
           </p>
         </div>
       </section>
@@ -331,10 +350,10 @@ const FacilityCard = ({ data }) => {
       <div className="facility-overlay">
         <h2 className="facility-title">{data.title}</h2>
         <div className="facility-underline"></div>
-        <p className="facility-desc">{data.description}</p>
-        <button className="facility-btn">
+        {/* <p className="facility-desc">{data.description}</p> */}
+        {/* <button className="facility-btn">
           EXPLORE MORE <ArrowRight size={20} color="#002A5C" />
-        </button>
+        </button> */}
       </div>
       <img
         src={data.image}
