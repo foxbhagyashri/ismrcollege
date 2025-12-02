@@ -72,7 +72,7 @@ export default function DisclaimerPage() {
               textAlign: "center"
             }}
           >
-            DISCLAIMER FOR FEES
+            Disclaimer for Admissions
           </h2>
 
           {/* <p
@@ -152,7 +152,7 @@ export default function DisclaimerPage() {
                 fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               }}
             >
-              ⚠️ <strong>Important :</strong> All fees must be paid only to the official institute bank account through this link - 
+              ⚠️ <strong>Important :</strong> All fees must be paid only to the official institute bank account through this link -
               Do not pay fees to any individual or unofficial account.
             </p>
           </div>

@@ -132,7 +132,7 @@ function Leadership() {
                 }}
               >
 
-                A Word From Chairman
+                A Word From the Founder President
               </h2>
               <p style={{
                 fontSize: "16px",
@@ -143,7 +143,7 @@ function Leadership() {
                 textAlign: "justify",
                 textJustify: "inter-word",
               }}>
-                We welcome ambitious students aspiring to make a difference in the world of work. We provide you with an environment that believes in the power of business to achieve new heights. Curiosity to explore more about you, others and the world we live in is a unique development that will be made in the ISMR B-School. We build the courage in you to define your vision and make it a reality. You are driven to inspire and empower others to achieve beyond expectations; this is the culture at ISMR B-School.
+                We are happy to welcome students who want to grow and make a real impact in the world of business. At ISMR B-School, we provide an environment that encourages curiosity, confidence and self-discovery. Our focus is on helping you build the courage to set a clear vision for yourself and work towards achieving it. Inspiring and empowering others is part of our culture.
               </p>
               <p style={{
                 fontSize: "16px",
@@ -153,7 +153,7 @@ function Leadership() {
                 fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                 textAlign: "justify",
                 textJustify: "inter-word",
-              }}>The challenges of the 21st century require leaders, who can adapt to rapidly changing environment, understand situations and find innovative solutions to problems, and then lead their organizations forward. To this end, we have designed our program around the core themes of entrepreneurship, leadership and consultancy. In this program, you will have the opportunity to work on real projects in organizations, both large and small, and thereby explore your potential and harness your skills.</p>
+              }}>Today’s fast-changing world needs leaders who can think quickly, understand challenges and create innovative solutions. Keeping this in mind, our program is designed around entrepreneurship, leadership and consultancy. You will work on real projects with different types of organizations, giving you the chance to identify your strengths and develop practical skills.</p>
               <p style={{
                 fontSize: "16px",
                 color: "#444",
@@ -162,20 +162,20 @@ function Leadership() {
                 fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                 textAlign: "justify",
                 textJustify: "inter-word",
-              }}>We aim to develop exceptional global leaders in a carefully selected learning community, diverse in background but sharing an international perspective and high aspirations. In a redesigned program that combines dialogue, personal attention, coaching and extensive leadership practices, our faculties and professional team guide the class through a dynamic mix of business fundamentals, self-development and real-world experiences.</p>
+              }}>We aim to nurture global leaders who come from diverse backgrounds but share a common ambition to excel. Our updated program includes interactive learning, personal guidance, coaching and strong leadership training. With support from our faculty and professional team, you will experience a well-balanced mix of business knowledge, self-development and real-world exposure.</p>
 
 
               <h5><i>Jaikishan Bhutada</i></h5>
               <h6>
-                Chairman</h6>
+              Founder President</h6>
 
             </div>
 
           </div>
 
-      
 
-     
+
+
 
         </div>
       </section>

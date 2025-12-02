@@ -111,12 +111,12 @@ function Leadership() {
       {/* Leadership Cards */}
       <section className="py-1 pt-4">
         <div className="container">
-         
+
 
           <div className="row g-4 mt-5">
 
 
-          <div className="col-12 col-md-5 col-lg-5">
+            <div className="col-12 col-md-5 col-lg-5">
               <img
                 src={secretary}
                 alt="Leadership Team"
@@ -136,7 +136,7 @@ function Leadership() {
                 }}
               >
 
-                A Word From Secretary
+                A Word From the Secretary
               </h2>
               <p style={{
                 fontSize: "16px",
@@ -147,7 +147,7 @@ function Leadership() {
                 textAlign: "justify",
                 textJustify: "inter-word",
               }}>
-                The only constant in this world is change. The ebb and flow of change is perennial in economies, industries and businesses. It is indeed a challenging task for managers to constantly adapt to these changes.
+                Change is the only constant in today’s world. Economies, industries and businesses keep shifting, and managers must learn to adapt quickly. In my years in management education, I have seen many waves of change, and our institution has not only faced them but also grown stronger by adapting and evolving.
               </p>
               <p style={{
                 fontSize: "16px",
@@ -158,7 +158,7 @@ function Leadership() {
                 textAlign: "justify",
                 textJustify: "inter-word",
               }}>
-                In all these years that I have spent in the field of management education, I have seen wave after wave of changes that have assailed management education. We have not only gone under these waves, but we have also succeeded in riding many of them.
+                ISMR B-School is built on merit, integrity and ethics. Our curriculum is modern, practical and supported by courses in ethics, international business and strong industry exposure. We also encourage social awareness through various community activities and a three-week project on Socially Useful and Productive Work, helping students understand real societal needs.
               </p>
               <p style={{
                 fontSize: "16px",
@@ -169,31 +169,11 @@ function Leadership() {
                 textAlign: "justify",
                 textJustify: "inter-word",
               }}>
-                Built on a culture of merit, integrity and ethics, we groom future managers through a comprehensive and contemporary curriculum supported by courses in ethics, international business and considerable industry exposure. Appreciation of societal issues is inculcated through various social action programs and a three-week project on ‘Socially Useful and Productive Activity’.
+               Our aim is to develop capable and responsible managers who can meet the challenges of an interconnected, fast-changing global business environment. With global companies investing heavily in India’s new-age businesses, it is clear that the future demands professionals who continuously learn, re-learn and upgrade their skills throughout their careers.
               </p>
 
-              <p style={{
-                fontSize: "16px",
-                color: "#444",
-                lineHeight: "1.7",
-                marginTop: "10px",
-                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                textAlign: "justify",
-                textJustify: "inter-word",
-              }}>
-                On the whole, our endeavor is to develop managers who by dint of their capability and character can measure up to the diverse challenges of the world of business and industry. The world is increasingly becoming more connected and interdependent in the way such as the businesses operate today with a focus shifting on the emerging markets.
-              </p>
-              <p style={{
-                fontSize: "16px",
-                color: "#444",
-                lineHeight: "1.7",
-                marginTop: "10px",
-                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                textAlign: "justify",
-                textJustify: "inter-word",
-              }}>
-                Otherwise how does one explain Walmart’s decision to buy controlling stake in Flipkart, Beckshire Hathway’s decision to invest in Paytm and Softbank’s decision to invest in new age businesses. It clearly states that the business landscape is changing rapidly and means that the workforce of tomorrow is in for a big challenge, which is to not only learn but also re-learn and up-learn all through the course of their professional career.
-              </p>
+              
+              
               <h5><i>Dr. Nilesh Bhutada</i></h5>
               <h6>
                 Secretary</h6>
@@ -203,11 +183,11 @@ function Leadership() {
 
 
 
-           
+
 
           </div>
 
-      
+
 
         </div>
       </section>

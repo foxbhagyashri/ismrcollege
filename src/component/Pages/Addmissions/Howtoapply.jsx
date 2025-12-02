@@ -662,7 +662,7 @@ export default function HowToApply() {
 
             {tab === "steps" && (
               <div id="panel-steps" aria-labelledby="tab-steps">
-                <h2>Step-by-Step Application Process</h2>
+                <h2>Step-by-Step Admission Process</h2>
                 <p>
                   Follow these simple steps to complete your application
                   successfully:
@@ -671,23 +671,23 @@ export default function HowToApply() {
                   {[
                     {
                       title: "1. Apply Online",
-                      desc: "Visit the official website, click on “Apply Online,” fill out the institute’s application form, and pay the registration fee of ₹1100.",
+                      desc: "Visit the official website, click on “Apply Online,” fill out the institute’s application form, and pay the registration fee of ₹ 1100 /-.",
                     },
 
                     {
-                      title: "2. Counselling & Interview",
-                      desc: "Once the form is submitted, the admission cell initiates the counselling process followed by an interview session.",
+                      title: "2. Counselling & Telephonic Interview",
+                      desc: "Once the form is submitted, the admission cell initiates the counselling process followed by an telephonic interview session.",
                     },
 
 
                     {
                       title: "3. Seat Confirmation",
-                      desc: "After clearing counselling and interview, candidates must confirm their seat by paying ₹30,000 within four days of receiving the Admission Letter.",
+                      desc: "After the telephonic interview, candidates will receive the Admission Letter. Candidates must confirm their seat by paying Rs. 30,000/- within four of receiving the admission letter.",
                     },
 
                     {
                       title: "4. Provisional Admission",
-                      desc: "Upon payment, admission is provisionally confirmed subject to completing remaining formalities and submitting all required documents.",
+                      desc: "After the seat confirmation , your admission is provisionally, confirmed, subject to fulfilment of all the required documents.",
                     },
                   ].map((step, index) => (
                     <div key={index} className="step">
@@ -857,7 +857,7 @@ export default function HowToApply() {
               <div id="panel-fees" aria-labelledby="tab-fees">
                 <h2>Fees & Important Dates</h2>
                 <p>
-                  Application fee: <strong>₹ 1100</strong> (online). Fee waiver
+                  Application fee: <strong>₹ 1100 /-</strong> (online). Fee waiver
                   for eligible categories may apply. Payment can be made by clicking on this link.
 
                 </p>

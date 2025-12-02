@@ -7,7 +7,7 @@ export default function FAQPage() {
   const faqs = [
     {
       question: "What documents are required during admission?",
-      answer: "You need:  •	10th & 12th mark sheets , •	Graduation mark sheets (if applicable) , •	Entrance exam scorecard , •	ID & address proof , •	Passport-size photographs(Additional documents may be requested based on your profile.). For more details, please click on the link give - "
+      answer: `You need: • 10th & 12th mark sheets, • Graduation mark sheets (if applicable), • Entrance exam scorecard, • ID & address proof, • Passport-size photographs. For more details, please click on the given link – <a href="/Addmissions/Howtoapply" target="_blank" rel="noopener noreferrer">Click here</a>`
 
     },
 
@@ -93,7 +93,7 @@ export default function FAQPage() {
     },
     {
       question: "How can I contact ISMR for queries?",
-      answer: "You can reach us at: 📩admissions@ismrpune.edu.in , 📞 Institute phone number - 9923786079 Or visit the campus during working hours 9AM – 6 PM"
+      answer: "You can reach us at: 📩admissions@ismrpune.edu.in , 📞 Institute phone number - 9923786079 Or visit the campus during working hours 9 AM – 6 PM"
     },
   ];
 
@@ -182,9 +182,11 @@ export default function FAQPage() {
                 transition: "max-height 0.4s ease",
               }}
             >
-              <p style={{ marginTop: "10px", lineHeight: "1.6" }}>
-                {faq.answer}
-              </p>
+             <p
+  style={{ marginTop: "10px", lineHeight: "1.6" }}
+  dangerouslySetInnerHTML={{ __html: faq.answer }}
+></p>
+
             </div>
           </div>
         ))}

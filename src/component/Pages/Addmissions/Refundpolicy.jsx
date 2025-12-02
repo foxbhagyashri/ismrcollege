@@ -397,11 +397,11 @@ export default function RefundPolicy() {
           <div className="panel" role="region" aria-labelledby="refund-heading">
             <h2 id="refund-heading">Refund Policy</h2>
             <p className="lead">
-            Our Refund Policy explains the terms and conditions under which students can request a fee refund. It provides clear guidelines on eligibility, required documents, timelines, and the refund process to ensure transparency and smooth handling of all refund requests.
+              Our Refund Policy explains the terms and conditions under which students can request a fee refund. It provides clear guidelines on eligibility, required documents, timelines, and the refund process to ensure transparency and smooth handling of all refund requests.
             </p>
 
             <div className="section">
-              <h3>Refund Schedule - Table 1</h3>
+              <h3>Refund Schedule</h3>
               <table className="table" aria-describedby="refund-heading">
                 <thead>
                   <tr>
@@ -413,52 +413,20 @@ export default function RefundPolicy() {
                 <tbody>
                   <tr>
                     <td><strong>1.</strong></td>
-                    <td>Request Received before date of start of session.</td>
-                    <td>Entire fee less Rs.1000-2000/- Processing Fees</td>
+                    <td>Request Received before date of commencement of the course.</td>
+                    <td>Rs. 2000/- deducted as processing & admission counselling fees</td>
                   </tr>
+
                   <tr>
                     <td><strong>2.</strong></td>
-                    <td>Request received after commencement the course & seat could be filled by the Institute.</td>
-                    <td>Entire fees collected after a deduction of the processing fee of Rs.1000/- and proportionate deductions of monthly tuition fee and hostel rent.</td>
-                  </tr>
-                  <tr>
-                    <td><strong>3.</strong></td>
-                    <td>Request received after commencement the course & seat could not be filled.</td>
-                    <td>No Refund. Only Security Deposit (if any) will be refunded.</td>
+                    <td>Request received after commencement of the course.</td>
+                    <td>No Refund.</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <div className="section">
-              <h3>Refund Schedule - Table 2</h3>
-              <table className="table" aria-describedby="refund-heading">
-                <thead>
-                  <tr>
-                    <th>Sr. No.</th>
-                    <th>Situation</th>
-                    <th>Refund</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><strong>1.</strong></td>
-                    <td>On request received before the date of start of the academic session & seat could be filled by the Institute before the cut off date</td>
-                    <td>Entire fee less Rs.1000/-</td>
-                  </tr>
-                  <tr>
-                    <td><strong>2.</strong></td>
-                    <td>On request received on/ after the beginning of academic session & seat could be filled by the Institute before the cut off date.</td>
-                    <td>Entire fee less the seat Cancellation Charges on pro rata basis**</td>
-                  </tr>
-                  <tr>
-                    <td><strong>3.</strong></td>
-                    <td>On request received before/after the start of the academic session & seat could not be filled by the Institute.</td>
-                    <td>No refund (expect security deposit if any)</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+
 
             <div className="section">
               <h3>Important Notes</h3>
@@ -474,7 +442,7 @@ export default function RefundPolicy() {
                     <li>Your exact name as per your bank account, and
 
                     </li>
-                    <li>A scanned copy of the required supporting documents
+                    <li>A scanned copy of the cancel check
 
                     </li>
 
@@ -482,8 +450,8 @@ export default function RefundPolicy() {
 
                 </ul>
                 <p><b>Please note :
-                </b>Your request will be accepted only until the last date announced by CET Cell.
-                  After this date, no requests will be processed.
+                </b> Your request will be accepted only until the last date of CET Cell.
+                  After this date, no requests will be entertained under any circumstances.
                 </p>
               </div>
             </div>

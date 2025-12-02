@@ -15,7 +15,7 @@ const HowToApply = () => {
                         <span className="apply-step">01</span>
                         <h3 className="apply-heading">Apply Online</h3>
                         <p className="apply-text">
-                            Visit the official website, click on “Apply Online,” fill out the institute’s application form, and pay the registration fee of ₹1100.
+                            Visit the official website, click on “Apply Online,” fill out the institute’s application form, and pay the registration fee of ₹ 1100 /-.
                         </p>
                     </article>
 
@@ -33,7 +33,7 @@ const HowToApply = () => {
                         <span className="apply-step">03</span>
                         <h3 className="apply-heading">Seat Confirmation</h3>
                         <p className="apply-text">
-                            After clearing counselling and interview, candidates must confirm their seat by paying ₹30,000 within four days of receiving the Admission Letter.
+                            After clearing counselling and interview, candidates must confirm their seat by paying ₹ 30,000 /- within four days of receiving the Admission Letter.
                         </p>
                     </article>
 
