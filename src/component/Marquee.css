@@ -44,7 +44,9 @@
   /* display: inline-flex; */
   gap: 40px;
   white-space: nowrap;
-  animation: scroll 20s linear infinite;
+  animation: scroll 10s linear infinite !important;
+  will-change: transform;
+  /* smoother animation */
 }
 
 /* Each Announcement Item */
@@ -74,7 +76,7 @@
   }
 
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
     /* Previously -50% */
   }
 }

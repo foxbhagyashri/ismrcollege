@@ -37,7 +37,7 @@ export default function DisclaimerPage() {
               margin: 0,
             }}
           >
-            <span className="text-warning">Disclaimer</span>
+            <span className="text-warning">Disclaimer for Admissions</span>
           </h1>
           <p
             className="mb-0"
@@ -47,7 +47,7 @@ export default function DisclaimerPage() {
               marginTop: "0.5rem"
             }}
           >
-            Admissions • <span className="text-warning">Disclaimer</span>
+            Admissions • <span className="text-warning">Disclaimer for Admissions</span>
           </p>
         </div>
       </section>
@@ -116,7 +116,7 @@ export default function DisclaimerPage() {
           </p> */}
 
 
-          <p
+          {/* <p
             style={{
               fontSize: "16px",
               color: "#000",
@@ -129,6 +129,19 @@ export default function DisclaimerPage() {
             ISMR Pune has not authorized any person or third party to take admissions on its behalf.
             For any admission-related information or process, please contact the institute directly.
 
+          </p> */}
+
+          <p
+            style={{
+              fontSize: "16px",
+              color: "#000",
+              lineHeight: "1.8",
+              marginBottom: "1rem",
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              textAlign: "justify"
+            }}
+          >
+           Admission to the institution is subject to the rules, regulations, and policies in force at the time of admission. Submission of the application form does not guarantee admission. The institution reserves the right to accept or reject any application without assigning any reason. All information provided by the applicant must be accurate and complete; any false or misleading information may lead to cancellation of admission at any stage. The institution also reserves the right to modify academic policies at any time.
           </p>
 
 

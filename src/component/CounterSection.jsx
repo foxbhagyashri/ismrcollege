@@ -32,9 +32,9 @@ const CounterSection = () => {
                   <div className="counter-inline">
                     <h3 className="counter-number">
                       {item.noCount ? (
-                        item.end       // show directly, no counter, no +
+                        item.end
                       ) : (
-                        <CountUp end={item.end} duration={2} /> // animated counters
+                        <CountUp end={item.end} duration={2} separator="" suffix="+" />
                       )}
                     </h3>
                     <p className="counter-label">{item.label}</p>

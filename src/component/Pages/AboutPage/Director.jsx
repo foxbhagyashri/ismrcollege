@@ -111,7 +111,7 @@ function Leadership() {
       {/* Leadership Cards */}
       <section className="py-1 pt-4">
         <div className="container">
-      
+
 
 
           <div className="row g-4 mt-5">
@@ -130,7 +130,7 @@ function Leadership() {
                   fontSize: "32px",
                   fontWeight: 700,
                   color: "#0a2240",
-              
+
                   marginBottom: "1.5rem",
                 }}
               >
@@ -156,7 +156,7 @@ function Leadership() {
                 textAlign: "justify",
                 textJustify: "inter-word",
               }}>
-                Welcome to the dynamic world of management! As you embark on this transformative journey, you are stepping into a realm where innovation, leadership, and strategic thinking shape the future.
+                Welcome to the dynamic world of management !!! As you embark on this transformative journey, you are stepping into a realm where innovation, leadership, and strategic thinking shape the future.
               </p>
               <p style={{
                 fontSize: "16px",
@@ -224,7 +224,7 @@ function Leadership() {
               }}>
                 Wishing you all the best for a promising and successful career ahead!
               </p>
-              <h5>Warm regards,</h5>
+              {/* <h5>Warm regards,</h5> */}
               <h5><i>Prof. (Dr.) Rupendra Gaikwad</i></h5>
               <h6>
                 Director, ISMR</h6>

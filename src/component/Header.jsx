@@ -123,7 +123,7 @@ const Header = () => {
                   to="AboutPage/Chairman"
                   onClick={handleDropdownItemClick}
                 >
-                  Chairman Message
+                  Founder President  Message
                 </Link>
               </li>
               <li>
@@ -253,7 +253,16 @@ const Header = () => {
               to="/Addmissions/Disclaimer"
               onClick={handleDropdownItemClick}
             >
-              Disclaimer
+              Disclaimer for Admissions
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="dropdown-item"
+              to="/Addmissions/DisclaimerFeePayment"
+              onClick={handleDropdownItemClick}
+            >
+              Disclaimer for Fees Payment
             </Link>
           </li>
         </ul>

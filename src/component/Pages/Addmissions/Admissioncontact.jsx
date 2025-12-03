@@ -190,7 +190,7 @@ export default function AdmissionContact() {
                       fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                     }}
                   >
-                    9:30 AM - 5:30 PM
+                    9:00 AM - 6:00 PM
                   </strong>
                 </div>
 
@@ -276,7 +276,7 @@ export default function AdmissionContact() {
                   }}
                   onClick={() => setShowModal(true)}
                 >
-                  <span>📄</span> Download Admissions Brochure
+                  <span>📄</span> Download Brochure
                 </button>
               </div>
             </div>

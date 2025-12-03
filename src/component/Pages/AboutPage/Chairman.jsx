@@ -87,7 +87,7 @@ function Leadership() {
               margin: 0,
             }}
           >
-            Chairman  <span className="text-warning">Message</span>
+            Founder President  <span className="text-warning">Message</span>
           </h1>
           <p
             className="mb-0"
@@ -97,7 +97,7 @@ function Leadership() {
               marginTop: "0.5rem",
             }}
           >
-            About • <span className="text-warning">Chairman Message</span>
+            About • <span className="text-warning">Founder President</span>
           </p>
         </div>
       </section>
@@ -132,7 +132,7 @@ function Leadership() {
                 }}
               >
 
-                A Word From the Founder President
+                Message from Founder President
               </h2>
               <p style={{
                 fontSize: "16px",
@@ -143,7 +143,7 @@ function Leadership() {
                 textAlign: "justify",
                 textJustify: "inter-word",
               }}>
-                We are happy to welcome students who want to grow and make a real impact in the world of business. At ISMR B-School, we provide an environment that encourages curiosity, confidence and self-discovery. Our focus is on helping you build the courage to set a clear vision for yourself and work towards achieving it. Inspiring and empowering others is part of our culture.
+                We are delighted to welcome students who aspire to grow, lead and make a meaningful impact in the world of business. At ISMR B-School, we strive to create an environment that nurtures curiosity, builds confidence and encourages self-discovery. Our commitment is to help every student develop the clarity and courage needed to define their vision and work steadily toward achieving it. Inspiring and empowering others is woven into the very culture of our institution.
               </p>
               <p style={{
                 fontSize: "16px",
@@ -153,7 +153,8 @@ function Leadership() {
                 fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                 textAlign: "justify",
                 textJustify: "inter-word",
-              }}>Today’s fast-changing world needs leaders who can think quickly, understand challenges and create innovative solutions. Keeping this in mind, our program is designed around entrepreneurship, leadership and consultancy. You will work on real projects with different types of organizations, giving you the chance to identify your strengths and develop practical skills.</p>
+              }}>In today’s rapidly changing world, the demand for leaders who can think critically, respond swiftly and design innovative solutions has never been greater. With this in mind, our programs are thoughtfully crafted around the pillars of entrepreneurship, leadership and consultancy. Through hands-on projects and collaborations with diverse organizations, students gain invaluable opportunities to recognize their strengths and acquire practical, industry-relevant skills.
+              </p>
               <p style={{
                 fontSize: "16px",
                 color: "#444",
@@ -162,12 +163,23 @@ function Leadership() {
                 fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                 textAlign: "justify",
                 textJustify: "inter-word",
-              }}>We aim to nurture global leaders who come from diverse backgrounds but share a common ambition to excel. Our updated program includes interactive learning, personal guidance, coaching and strong leadership training. With support from our faculty and professional team, you will experience a well-balanced mix of business knowledge, self-development and real-world exposure.</p>
+              }}>At ISMR B-School, we are dedicated to shaping global leaders who come from varied backgrounds yet share a common ambition—to excel and contribute meaningfully to society. Our updated curriculum integrates interactive learning, personalized guidance, coaching and robust leadership development. Supported by our experienced faculty and professional team, students receive a balanced blend of business knowledge, personal growth and real-world exposure.</p>
+
+
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>We look forward to welcoming you to a journey of transformation, learning and leadership.</p>
 
 
               <h5><i>Jaikishan Bhutada</i></h5>
               <h6>
-              Founder President</h6>
+                Founder President</h6>
 
             </div>
 

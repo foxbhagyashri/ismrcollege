@@ -147,7 +147,7 @@ function Leadership() {
                 textAlign: "justify",
                 textJustify: "inter-word",
               }}>
-                Change is the only constant in today’s world. Economies, industries and businesses keep shifting, and managers must learn to adapt quickly. In my years in management education, I have seen many waves of change, and our institution has not only faced them but also grown stronger by adapting and evolving.
+                Change is the only constant in today’s world. As economies, industries and businesses continue to evolve, managers must be agile and prepared to adapt. Over my years in management education, I have witnessed many waves of transformation, and I am proud to say that ISMR B-School has not only faced these changes but has consistently emerged stronger by embracing innovation and growth.
               </p>
               <p style={{
                 fontSize: "16px",
@@ -158,7 +158,7 @@ function Leadership() {
                 textAlign: "justify",
                 textJustify: "inter-word",
               }}>
-                ISMR B-School is built on merit, integrity and ethics. Our curriculum is modern, practical and supported by courses in ethics, international business and strong industry exposure. We also encourage social awareness through various community activities and a three-week project on Socially Useful and Productive Work, helping students understand real societal needs.
+                At ISMR B-School, our foundation is built on merit, integrity and ethics. Our curriculum is contemporary, industry-relevant and enriched with courses in ethics, international business and hands-on corporate exposure. We nurture socially aware leaders through various community initiatives and a dedicated three-week Socially Useful and Productive Work (SUPW) project, enabling students to deeply understand real societal needs.
               </p>
               <p style={{
                 fontSize: "16px",
@@ -169,11 +169,11 @@ function Leadership() {
                 textAlign: "justify",
                 textJustify: "inter-word",
               }}>
-               Our aim is to develop capable and responsible managers who can meet the challenges of an interconnected, fast-changing global business environment. With global companies investing heavily in India’s new-age businesses, it is clear that the future demands professionals who continuously learn, re-learn and upgrade their skills throughout their careers.
+                Our mission is to develop competent, responsible and future-ready managers who can confidently navigate an interconnected and rapidly changing global business landscape. As global companies continue to invest in India’s new-age sectors, it is evident that the future belongs to professionals who are willing to learn, unlearn and continuously upskill throughout their careers.
               </p>
 
-              
-              
+
+
               <h5><i>Dr. Nilesh Bhutada</i></h5>
               <h6>
                 Secretary</h6>

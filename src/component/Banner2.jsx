@@ -47,7 +47,7 @@ const Banner = () => {
                       <br /> Approved by AICTE, Ministry of Education, Govt of India.
                       <br />
                       Affiliated to Savitribai Phule Pune University<br></br>
-                      Accredited to NAAC
+                      Accredited by NAAC
                     </b>
                   </p>
                 </div>
@@ -108,7 +108,7 @@ const Banner = () => {
                     <h2>
                       <span className="counter">3500</span>+
                     </h2>
-                    <p className="subtext"> worldwide Students</p>
+                    <p className="subtext"> Pan India Students</p>
                   </li>
                 </ul>
               </div>

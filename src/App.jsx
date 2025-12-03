@@ -66,6 +66,7 @@ import Newsletter from "./component/Pages/NewsPage/Newsletter";
 import Contactus from "./component/Pages/Contactus/Contactus";
 import FAQPage from "./component/Pages/Addmissions/more-faqs";
 import Sticky from "./component/sticky";
+import DisclaimerFeePayment from "./component/Pages/Addmissions/DisclaimerFeesPayment";
 
 function App() {
   return (
@@ -153,6 +154,8 @@ function App() {
         {/* more PlacementRules */}
         <Route path="/Placementpage/PlacementProcess" element={<PlacementProcess />} />
 
+        {/* more PlacementRules */}
+        <Route path="/Addmissions/DisclaimerFeePayment" element={<DisclaimerFeePayment />} />
 
 
       </Routes>

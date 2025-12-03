@@ -22,9 +22,9 @@ const HowToApply = () => {
                     <article className="apply-box">
                         <div className="apply-icon"><FaUserFriends /></div>
                         <span className="apply-step">02</span>
-                        <h3 className="apply-heading">Counselling & Interview</h3>
+                        <h3 className="apply-heading">Counselling & Telephonic Interview</h3>
                         <p className="apply-text">
-                            Once the form is submitted, the admission cell initiates the counselling process followed by an interview session.
+                            Once the form is submitted, the admission cell initiates the counselling process followed by an telephonic interview session.
                         </p>
                     </article>
 
@@ -33,7 +33,7 @@ const HowToApply = () => {
                         <span className="apply-step">03</span>
                         <h3 className="apply-heading">Seat Confirmation</h3>
                         <p className="apply-text">
-                            After clearing counselling and interview, candidates must confirm their seat by paying ₹ 30,000 /- within four days of receiving the Admission Letter.
+                            After the telephonic interview, selected candidates will receive the Admission Letter via email. To confirm their seat, you must pay Rs. 30,000/- within four days of receiving the Admission Letter.
                         </p>
                     </article>
 
@@ -42,7 +42,7 @@ const HowToApply = () => {
                         <span className="apply-step">04</span>
                         <h3 className="apply-heading"> Provisional Admission</h3>
                         <p className="apply-text">
-                            Upon payment, admission is provisionally confirmed subject to completing remaining formalities and submitting all required documents.
+                            After the seat confirmation , your admission is provisionally confirmed subject to fulfilment of all the required documents.
                         </p>
                     </article>
 

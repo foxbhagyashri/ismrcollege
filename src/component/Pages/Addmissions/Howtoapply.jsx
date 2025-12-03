@@ -1,8 +1,54 @@
 import React, { useState } from "react";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import Faq from "../../Faq";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function HowToApply() {
+
+
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    city: "",
+    message: "",
+    programme: "",
+  });
+  const [submitted, setSubmitted] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [captchaValue, setCaptchaValue] = useState(null);
+
+  const handleChange = (e) =>
+    setForm((s) => ({ ...s, [e.target.name]: e.target.value }));
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!captchaValue) {
+      alert("Please verify that you are not a robot!");
+      return;
+    }
+
+    // Trigger PDF download
+    // const link = document.createElement("a");
+    // link.href = brochurePdf;
+    // link.download = "Admissions-Brochure.pdf";
+    // document.body.appendChild(link);
+    // link.click();
+    // document.body.removeChild(link);
+
+    setShowModal(false);
+    setForm({ name: "", email: "", phone: "", city: "" });
+    setCaptchaValue(null);
+    setSubmitted(true);
+    setTimeout(() => setSubmitted(false), 3000);
+  };
+
+
+
+
+
+
   const [tab, setTab] = useState("overview");
 
   const [openIndex, setOpenIndex] = useState(null);
@@ -629,7 +675,7 @@ export default function HowToApply() {
       <div className="content-area">
         <div className="content-container">
           <div className="tabs" role="tablist" aria-label="Apply tabs">
-            {["overview", "steps", "documents", "fees"].map(
+            {["overview", "steps", "documents", "Important Dates for Admissions"].map(
               (tabName) => (
                 <button
                   key={tabName}
@@ -655,16 +701,17 @@ export default function HowToApply() {
                 </p>
                 <div className="cta-row">
                   <button className="btn-primary">Apply Now</button>
-                  <button className="btn-secondary">Download Brochure</button>
+                  <button className="btn-secondary" onClick={() => setShowModal(true)}>Download Brochure</button>
                 </div>
               </div>
             )}
+
 
             {tab === "steps" && (
               <div id="panel-steps" aria-labelledby="tab-steps">
                 <h2>Step-by-Step Admission Process</h2>
                 <p>
-                  Follow these simple steps to complete your application
+                  Follow these simple steps to complete your Admission
                   successfully:
                 </p>
                 <div className="step-list">
@@ -682,12 +729,12 @@ export default function HowToApply() {
 
                     {
                       title: "3. Seat Confirmation",
-                      desc: "After the telephonic interview, candidates will receive the Admission Letter. Candidates must confirm their seat by paying Rs. 30,000/- within four of receiving the admission letter.",
+                      desc: "After the telephonic interview, selected candidates will receive the Admission Letter via email. To confirm their seat, you must pay Rs. 30,000/- within four days of receiving the Admission Letter.",
                     },
 
                     {
                       title: "4. Provisional Admission",
-                      desc: "After the seat confirmation , your admission is provisionally, confirmed, subject to fulfilment of all the required documents.",
+                      desc: "After the seat confirmation , your admission is provisionally confirmed subject to fulfilment of all the required documents.",
                     },
                   ].map((step, index) => (
                     <div key={index} className="step">
@@ -853,9 +900,9 @@ export default function HowToApply() {
 
 
 
-            {tab === "fees" && (
+            {tab === "Important Dates for Admissions" && (
               <div id="panel-fees" aria-labelledby="tab-fees">
-                <h2>Fees & Important Dates</h2>
+                <h2>Important Dates for Admissions </h2>
                 <p>
                   Application fee: <strong>₹ 1100 /-</strong> (online). Fee waiver
                   for eligible categories may apply. Payment can be made by clicking on this link.
@@ -863,10 +910,10 @@ export default function HowToApply() {
                 </p>
                 <ul>
                   {[
-                    "Application opens: Nov 1, 2025",
+                    "Application opens: Dec 1, 2025",
                     "Application closes: August 15, 2026",
                     "Entrance test (where applicable): September 5, 2026",
-                    "Admission list announcement: September 25, 2026",
+                    
                     "Last date for fee payment: October 10, 2026",
                   ].map((item, index) => (
                     <li key={index}>
@@ -880,6 +927,115 @@ export default function HowToApply() {
           </div>
         </div>
       </div>
+
+
+      {/* -------- FORM MODAL -------- */}
+      {showModal && (
+        <div
+          className="modal-backdrop"
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0,0,0,0.6)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 9999,
+          }}
+        >
+          <div
+            className="modal-content rounded-3 p-4"
+            style={{
+              backgroundColor: "#fff",
+              maxWidth: "500px",
+              width: "90%",
+            }}
+          >
+            <h4 style={{ color: "#0a2240", marginBottom: "1rem" }}>
+              Fill the form to download brochure
+            </h4>
+
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                placeholder="Full Name"
+                required
+                className="form-control mb-3"
+              />
+              <input
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="Email"
+                required
+                className="form-control mb-3"
+              />
+              <input
+                type="tel"
+                name="phone"
+                value={form.phone}
+                onChange={handleChange}
+                placeholder="Phone"
+                required
+                className="form-control mb-3"
+              />
+              <input
+                type="text"
+                name="city"
+                value={form.city}
+                onChange={handleChange}
+                placeholder="City"
+                className="form-control mb-3"
+              />
+
+              {/* -------- RECAPTCHA -------- */}
+              <div className="mb-3">
+                <ReCAPTCHA
+                  sitekey="YOUR_SITE_KEY_HERE"
+                  onChange={(value) => setCaptchaValue(value)}
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="btn w-100"
+                style={{
+                  backgroundColor: "#0a2240",
+                  color: "#fff",
+                  padding: "12px",
+                  borderRadius: "8px",
+                  fontSize: "16px",
+                  fontWeight: "500",
+                }}
+              >
+                Submit & Download
+              </button>
+            </form>
+
+            <button
+              onClick={() => setShowModal(false)}
+              style={{
+                marginTop: "10px",
+                background: "transparent",
+                border: "none",
+                color: "#d95c5c",
+                cursor: "pointer",
+              }}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
+
       <Faq />
     </section>
   );
