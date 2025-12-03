@@ -675,7 +675,7 @@ export default function HowToApply() {
       <div className="content-area">
         <div className="content-container">
           <div className="tabs" role="tablist" aria-label="Apply tabs">
-            {["overview", "steps", "documents", "Important Dates for Admissions"].map(
+            {["overview", "steps", "documents", "Important Dates"].map(
               (tabName) => (
                 <button
                   key={tabName}
@@ -900,7 +900,7 @@ export default function HowToApply() {
 
 
 
-            {tab === "Important Dates for Admissions" && (
+            {tab === "Important Dates" && (
               <div id="panel-fees" aria-labelledby="tab-fees">
                 <h2>Important Dates for Admissions </h2>
                 <p>
@@ -910,11 +910,11 @@ export default function HowToApply() {
                 </p>
                 <ul>
                   {[
-                    "Application opens: Dec 1, 2025",
-                    "Application closes: August 15, 2026",
-                    "Entrance test (where applicable): September 5, 2026",
+                    "Application Open: Dec 1, 2025",
+                    "Application Close: 30 June 2026",
+                    "Eligible Entrance Exam: MAH-MBA CET/CMAT/CAT/MAT/XAT/ATMA/GMAT",
                     
-                    "Last date for fee payment: October 10, 2026",
+                    "Last Date for fee payment: 30 June 2026",
                   ].map((item, index) => (
                     <li key={index}>
                       <strong>{item.split(": ")[0]}:</strong>{" "}

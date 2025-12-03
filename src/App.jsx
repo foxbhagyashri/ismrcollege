@@ -67,6 +67,7 @@ import Contactus from "./component/Pages/Contactus/Contactus";
 import FAQPage from "./component/Pages/Addmissions/more-faqs";
 import Sticky from "./component/sticky";
 import DisclaimerFeePayment from "./component/Pages/Addmissions/DisclaimerFeesPayment";
+import Blogs from "./component/Blogs";
 
 function App() {
   return (
@@ -157,6 +158,8 @@ function App() {
         {/* more PlacementRules */}
         <Route path="/Addmissions/DisclaimerFeePayment" element={<DisclaimerFeePayment />} />
 
+        {/* more PlacementRules */}
+        <Route path="/Blogs" element={<Blogs />} />
 
       </Routes>
       {/* <Faq /> */}

@@ -30,7 +30,7 @@ const Testimonials = () => {
     },
     {
       id: 7,
-      name: "No Name",
+      name: "Ajay Choudhary",
       role: "Current ISMR Student",
       img: "./nonamee.png",
       text: "My first semester of MBA was a great learning experience. The case studies and interactive classes helped me understand how business concepts work in real situations. Group projects improved my communication and leadership skills. Overall, this semester gave me a strong foundation for my personal and professional growth.",

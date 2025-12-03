@@ -56,7 +56,7 @@ const TopHeader = () => {
           <ul className="list-unstyled d-flex gap-2 mb-0">
             <li>
               <button
-                onClick={() => (window.location.href = "/Appltonline")}
+                onClick={() => (window.location.href = "/Blogs")}
                 className="btn btn-sm"
                 style={{
                   backgroundColor: "",
@@ -119,7 +119,7 @@ const TopHeader = () => {
                 Apply for BBA/ BCA
               </button>
             </li>
-            
+
           </ul>
         </div>
       </div>

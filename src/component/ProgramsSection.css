@@ -1,273 +1,262 @@
-/* Global Font */
-.programs-section,
-.programs-section * {
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary-blue: #002A5C;
+  --secondary-blue: #003D7A;
+  --accent-gold: #FFB800;
+  --accent-yellow: #FFC333;
+  --dark-navy: #001433;
+  --text-dark: #1a1a1a;
+  --text-grey: #5a6c7d;
+  --bg-light: #f8f9fa;
+  --card-shadow: 0 15px 40px rgba(0, 42, 92, 0.12);
+  --card-shadow-hover: 0 25px 60px rgba(0, 42, 92, 0.2);
 }
 
-/* Section Styling */
 .programs-section {
-  background: #f8f9fa;
-  padding: 80px 8%; /* increased for side breathing room */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 90px 5%;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
 }
 
+.programs-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 195, 51, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* --- Header Section --- */
 .section-header {
   text-align: center;
-  margin-bottom: 60px;
-  max-width: 800px;
+  max-width: 900px;
+  margin: 0 auto 80px auto;
+  position: relative;
+  z-index: 1;
 }
 
 .section-title {
-  font-size: 42px;
-  font-weight: 700;
-  color: #0b214a;
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary-blue);
   margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+/* Enhanced underline decoration */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 5px;
+  background: linear-gradient(90deg, var(--accent-gold) 0%, var(--accent-yellow) 100%);
+  margin: 15px auto 0;
+  border-radius: 3px;
+  box-shadow: 0 4px 10px rgba(255, 184, 0, 0.3);
 }
 
 .section-subtitle {
-  font-size: 17px;
-  color: #6c757d;
-  line-height: 1.7;
-  max-width: 100%;
-  margin: 0 auto;
+  font-size: 1.15rem;
+  color: var(--text-grey);
+  line-height: 1.8;
+  font-weight: 400;
 }
 
-/* Grid Layout */
+/* --- The Grid Structure --- */
 .specializations-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* always 3 per row on large screens */
-  gap: 35px;
-  width: 100%;
-  max-width: 1400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centers the last row */
+  gap: 30px;
+  max-width: 1300px;
   margin: 0 auto;
-  align-items: stretch;
-  justify-items: center;
 }
 
-/* Card Styling */
+/* --- Card Design matching image --- */
 .specialization-card {
-  border-radius: 20px;
-  padding: 40px 30px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
+  position: relative;
+  
+  /* Layout: 4 columns on large screens (25% each) */
+  flex: 0 1 calc(25% - 30px);
+  max-width: 320px;
+  
+  /* Styling */
+  border-radius: 20px;
+  padding: 45px 35px 35px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
   min-height: 320px;
-  width: 100%;
 }
 
-/* Alternate Backgrounds */
-.specialization-card:nth-child(odd) {
-  background-color: #002A5C;
+/* Hover State */
+.specialization-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
 }
 
-.specialization-card:nth-child(even) {
-  background-color: #FFC333;
+/* Blue Cards */
+.card-theme-blue {
+  background: linear-gradient(135deg, #003366 0%, #00478F 100%);
 }
 
-/* Icon Styling */
+.card-theme-blue .card-title,
+.card-theme-blue .card-description {
+  color: #ffffff;
+}
+
+.card-theme-blue .view-more-btn {
+  background: #FFC333;
+  color: #002A5C;
+}
+
+.card-theme-blue .view-more-btn:hover {
+  background: #FFD700;
+  transform: translateY(-2px);
+}
+
+/* Yellow Cards */
+.card-theme-yellow {
+  background: linear-gradient(135deg, #FFB800 0%, #FFC333 100%);
+}
+
+.card-theme-yellow .card-title,
+.card-theme-yellow .card-description {
+  color: #002A5C;
+}
+
+.card-theme-yellow .view-more-btn {
+  background: #002A5C;
+  color: #ffffff;
+}
+
+.card-theme-yellow .view-more-btn:hover {
+  background: #001a3d;
+  transform: translateY(-2px);
+}
+
+/* --- Icon Styling --- */
 .card-icon {
-  width: 65px;
-  height: 65px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 20px;
-  font-size: 28px;
-  background: white;
+  font-size: 30px;
+  background: #ffffff;
   color: #C00D0D;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Text colors for contrast */
-.specialization-card:nth-child(odd) .card-title,
-.specialization-card:nth-child(odd) .card-description {
-  color: #ffffff;
-}
-
-.specialization-card:nth-child(even) .card-title,
-.specialization-card:nth-child(even) .card-description {
-  color: #002A5C;
-}
-
-/* Hover Effects */
-.specialization-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  margin: 0 auto 25px;
+  transition: all 0.3s ease;
 }
 
 .specialization-card:hover .card-icon {
-  transform: scale(1.2) rotate(5deg);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  transform: scale(1.1) rotate(5deg);
 }
 
-/* Card Title & Description */
+/* --- Card Content --- */
 .card-title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 10px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 15px;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
 }
 
 .card-description {
-  font-size: 15px;
+  font-size: 0.95rem;
   line-height: 1.6;
-  max-width: 280px;
-  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 25px;
+  flex-grow: 1;
 }
 
-/* View More Button */
+/* --- Button Styling --- */
 .view-more-btn {
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
   padding: 12px 28px;
   border: none;
-  border-radius: 30px;
-  font-size: 14px;
-  font-weight: 600;
+  border-radius: 25px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   cursor: pointer;
   transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-top: auto;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  align-self: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Button styles for odd cards (blue background) */
-.specialization-card:nth-child(odd) .view-more-btn {
-  background: #FFC333;
-  color: #002A5C;
-}
-
-.specialization-card:nth-child(odd) .view-more-btn:hover {
-  background: #ffffff;
-  color: #002A5C;
-  transform: translateX(5px);
-  box-shadow: 0 6px 20px rgba(255, 195, 51, 0.4);
-}
-
-/* Button styles for even cards (yellow background) */
-.specialization-card:nth-child(even) .view-more-btn {
-  background: #002A5C;
-  color: #ffffff;
-}
-
-.specialization-card:nth-child(even) .view-more-btn:hover {
-  background: #001a3d;
-  color: #FFC333;
-  transform: translateX(5px);
-  box-shadow: 0 6px 20px rgba(0, 42, 92, 0.4);
-}
-
-/* Button arrow animation */
 .view-more-btn svg {
   transition: transform 0.3s ease;
 }
 
 .view-more-btn:hover svg {
-  transform: translateX(4px);
+  transform: translateX(5px);
 }
 
-/* ===========================
-   RESPONSIVE DESIGN
-=========================== */
-
-/* Large Laptop */
-@media (max-width: 1400px) {
-  .programs-section {
-    padding: 70px 6%;
-  }
-
-  .specializations-grid {
-    gap: 30px;
-  }
+/* --- Responsive Design --- */
+@media (max-width: 1200px) {
+  .specialization-card { flex: 0 1 calc(33.333% - 24px); max-width: 360px; }
+  .section-title { font-size: 2.5rem; }
 }
 
-/* Tablet Landscape */
 @media (max-width: 1024px) {
-  .specializations-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-    gap: 25px;
-  }
-
-  .section-title {
-    font-size: 36px;
-  }
-
-  .card-icon {
-    width: 55px;
-    height: 55px;
-    font-size: 24px;
-  }
-
-  .programs-section {
-    padding: 70px 5%;
-  }
+  .specialization-card { flex: 0 1 calc(50% - 20px); max-width: 520px; }
 }
 
-/* Tablet Portrait & Mobile */
 @media (max-width: 768px) {
-  .specializations-grid {
-    grid-template-columns: 1fr; /* stack vertically */
-    gap: 25px;
-  }
+  .specialization-card { flex: 0 1 calc(100% - 20px); max-width: 100%; padding: 35px 25px 30px; }
+  .section-title { font-size: 2rem; }
+  .section-subtitle { font-size: 1rem; }
+}
 
-  .programs-section {
-    padding: 60px 8%;
-  }
+@media (max-width: 480px) {
+  .programs-section { padding: 60px 5%; }
+  .section-title { font-size: 1.75rem; }
+  .card-icon { width: 60px; height: 60px; font-size: 26px; }
+  .card-title { font-size: 1.1rem; }
+  .card-description { font-size: 0.9rem; }
+}
+.view-more-btn:hover {
+  background-color: #e9ecef;
+  gap: 12px; /* Expands space between text and arrow */
+}
 
-  .section-title {
-    font-size: 28px;
-  }
-
-  .card-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 22px;
-  }
-
-  .card-description {
-    font-size: 14px;
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .specialization-card {
+    flex: 0 1 calc(50% - 15px); /* 2 per row */
   }
 }
 
-/* Extra Small Mobile */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .programs-section {
-    padding: 50px 6%;
+    padding: 60px 5%;
   }
-
+  
+  .specialization-card {
+    flex: 0 1 100%; /* 1 per row */
+    margin-top: 40px;
+  }
+  
   .section-title {
-    font-size: 24px;
-  }
-
-  .card-title {
-    font-size: 1.1rem;
-  }
-
-  .card-icon {
-    width: 45px;
-    height: 45px;
-  }
-
-  .card-description {
-    font-size: 13px;
-  }
-
-  .view-more-btn {
-    padding: 10px 22px;
-    font-size: 13px;
+    font-size: 2rem;
   }
 }
