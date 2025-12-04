@@ -67,7 +67,7 @@ const Footer = () => {
                 <a href="/Addmissions/Howtoapply">List of Documents </a>
               </li>
               <li>
-                <a href="/Addmissions/Disclaimer">Disclaimer </a>
+                <a href="src/pages/Admissions/Disclaimer.jsx">Disclaimer </a>
               </li>
             </ul>
           </Col>
