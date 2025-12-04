@@ -58,16 +58,16 @@ const Footer = () => {
                 <a href="#">Enquire Now</a>
               </li>
               <li>
-                <a href="./Addmissions/Eligibility-criteria">Eligibility Criteria</a>
+                <a href="/Addmissions/Eligibility-criteria">Eligibility Criteria</a>
               </li>
               <li>
-                <a href="./Aboutpage/Ismr">Why ISMR?</a>
+                <a href="/Aboutpage/Ismr">Why ISMR?</a>
               </li>
               <li>
-                <a href="./Addmissions/Howtoapply">List of Documents </a>
+                <a href="/Addmissions/Howtoapply">List of Documents </a>
               </li>
               <li>
-                <a href="./Addmissions/Disclaimer">Disclaimer </a>
+                <a href="/Addmissions/Disclaimer">Disclaimer </a>
               </li>
             </ul>
           </Col>

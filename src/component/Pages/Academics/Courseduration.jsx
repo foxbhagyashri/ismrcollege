@@ -193,8 +193,8 @@ function Courseduration() {
       icon: undergraduateIcon,
       title: 'Undergraduate Programs',
       description: 'Undergraduate programs provide foundational knowledge and skills for entry-level careers in various fields.',
-      courses: ['BCA (Comp. Applications)', 'BBA (Business Admin.)'],
-      footer: 'Online + Onsite'
+      courses: [ 'BBA (Business Admin.)', 'BCA (Comp. Applications)'],
+     
     },
     {
       id: 'grad',
@@ -202,8 +202,8 @@ function Courseduration() {
       icon: graduateIcon,
       title: 'Post Graduate Programs',
       description: 'Graduate programs offer advanced specialization and research opportunities, deepening expertise in a chosen discipline.',
-      courses: ['MBA (Master of Business Admin.)', 'MCA (Comp. Applications)'],
-      footer: 'Online + Onsite'
+      courses: ['MBA (Master of Business Admin.)'],
+     
     },
     
   ];
@@ -304,10 +304,10 @@ function Courseduration() {
                     ))}
                   </ul>
 
-                  <div className={`program-footer ${program.bgColorClass}`}>
+                  {/* <div className={`program-footer ${program.bgColorClass}`}>
                     <FontAwesomeIcon icon={globeIcon} className="globe-icon" />
                     <span>{program.footer}</span>
-                  </div>
+                  </div> */}
                 </Card.Body>
               </Card>
             </Col>

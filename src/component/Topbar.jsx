@@ -82,7 +82,7 @@ const TopHeader = () => {
             </li>
             <li>
               <button
-                onClick={() => (window.location.href = "/Appltonline")}
+                onClick={() => (window.location.href = "https://fees.easebuzz.in/view/ISMR_Pune")}
                 className="btn btn-sm"
                 style={{
                   backgroundColor: "#dcb413ff",

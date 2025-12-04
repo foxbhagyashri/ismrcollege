@@ -11,54 +11,36 @@ import {
   faHandsHelping,
   faEye,
   faRocket,
-   faCircle,
-   faHandHoldingHeart 
+  faCircle,
+  faHandHoldingHeart
 } from "@fortawesome/free-solid-svg-icons";
 
 // ---------------- STAT COUNTER ----------------
 const StatCounter = ({ endValue, duration, suffix }) => {
   const [count, setCount] = useState(0);
-  const ref = useRef(null);
-  const hasAnimated = useRef(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated.current) {
-          hasAnimated.current = true;
-          let start = 0;
-          const increment = endValue / (duration / 50);
-          const timer = setInterval(() => {
-            start += increment;
-            if (start < endValue) setCount(Math.ceil(start));
-            else {
-              setCount(endValue);
-              clearInterval(timer);
-            }
-          }, 50);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.5 }
-    );
+    let start = 0;
+    const increment = endValue / (duration / 50);
 
-    if (ref.current) observer.observe(ref.current);
-    return () => ref.current && observer.unobserve(ref.current);
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= endValue) {
+        setCount(endValue);
+        clearInterval(timer);
+      } else {
+        setCount(start);
+      }
+    }, 50);
+
+    return () => clearInterval(timer);
   }, [endValue, duration]);
 
   return (
-    <div
-      style={{
-        fontSize: "2rem",
-        fontWeight: "700",
-        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-        lineHeight: "1",
-      }}
-      ref={ref}
-    >
-      {count.toLocaleString()}
+    <h2 style={{ fontSize: "2rem", fontWeight: 700 }}>
+      {Math.floor(count)}
       {suffix}
-    </div>
+    </h2>
   );
 };
 
@@ -232,12 +214,12 @@ const InstitutionStats = () => {
                 fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               }}
             >
-              <StatCounter endValue={150} duration={2000} suffix="+" />
+              <StatCounter endValue={3500} duration={2000} suffix="+" />
               <div
                 className="mt-2"
                 style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}
               >
-                Programmes
+                Students Passed
               </div>
             </div>
           </div>
@@ -257,12 +239,12 @@ const InstitutionStats = () => {
                 fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               }}
             >
-              <StatCounter endValue={12} duration={2000} suffix="+" />
+              <StatCounter endValue={3100} duration={2000} suffix="+" />
               <div
                 className="mt-2"
                 style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}
               >
-                Schools
+                Student Placed
               </div>
             </div>
           </div>
@@ -282,12 +264,12 @@ const InstitutionStats = () => {
                 fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               }}
             >
-              <StatCounter endValue={31} duration={2000} suffix="+" />
+              <StatCounter endValue={600} duration={2000} suffix="+" />
               <div
                 className="mt-2"
                 style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}
               >
-                Departments
+                Companies
               </div>
             </div>
           </div>
@@ -307,15 +289,17 @@ const InstitutionStats = () => {
                 fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               }}
             >
-              <StatCounter endValue={100000} duration={3000} suffix="+" />
+              <StatCounter endValue={12.6} duration={3000} />
+              <div className="mt-1">LPA</div>
               <div
                 className="mt-2"
                 style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}
               >
-                Alumni
+                Highest Package
               </div>
             </div>
           </div>
+
         </div>
       </div>
 
@@ -337,7 +321,7 @@ const InstitutionStats = () => {
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
             }}
           >
-            Our Vision, Mission, Goals And Core Values 
+            Our Vision, Mission, Goals And Core Values
           </h2>
 
           <div className="row g-4">
@@ -639,13 +623,13 @@ const InstitutionStats = () => {
                     <b>S -</b> Service
                   </li>
                   <li style={{ marginBottom: "12px" }}>
-                  <b>B -</b> Brilliance
+                    <b>B -</b> Brilliance
                   </li>
                   <li style={{ marginBottom: "12px" }}>
                     <b>E - </b> Excellence
                   </li>
                   <li style={{ marginBottom: "12px" }}>
-                   <b>S -</b> Sustainability
+                    <b>S -</b> Sustainability
                   </li>
                 </ul>
               </div>

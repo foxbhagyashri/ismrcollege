@@ -4,21 +4,21 @@ import allsectionbg from "../../../assets/allsectionbg.jpg";
 function Corporate() {
   const testimonials = [
     {
-      name: "Mr. Harshad Bhagwat",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
-      text: "When the young of this country awakes, they will show their presence in the politics and then situation of this country will change. I congratulate ISMR for its initiatives which are on the path of building a strong nation with a change.",
+      name: "Pooja Ravindra Bawane",
+      image: "/pooja.png",
+      text: "I, Pooja RavindraBawane, am an MBA First Semester student at ISMR College. The college provides a dynamic learning environment where we get to connect theory with practical learning. I really appreciate the regular internship opportunities, case study sessions, outdoor activities, and hands-on experiences. These activities help us understand real business situations and prepare us well for future challenges.",
       rating: 5
     },
     {
-      name: "Mr. Jwalant Pathak",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
-      text: "The private people can do inclusiveness and do cross-subsidy for the purposes of looking after the poor and the needy and a CSR also becomes the need of the hour. These are the ideas where I believe that youth will have to bring about the paradise and make the change.",
+      name: "Khushi Jitendra Bodile",
+      image: "/khushi.png",
+      text: "I am KhushiJitendraBodile, a First-Year MBA student at ISMR Pune. I would like to share my personal experience about my college. ISMR provides many facilities such as bus service, sports, games, and a gym for students. The college also organizes industrial visits and various programs for our overall development. All the faculty members are very friendly and supportive. I am truly grateful to be a student of ISMR.",
       rating: 5
     },
     {
-      name: "Mr. Krishnamurti Pillai",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop",
-      text: "Success and Satisfaction should be balanced. The secret of satisfaction is enjoying whatever you are doing. Vision, Power, Speed, Skill and Strategy will make India vibrant and youth should enjoy difficulty and handle problems.",
+      name: "Ajay Choudhary",
+      image: "/nonamee.png",
+      text: "My first semester of MBA was a great learning experience. The case studies and interactive classes helped me understand how business concepts work in real situations. Group projects improved my communication and leadership skills. Overall, this semester gave me a strong foundation for my personal and professional growth.",
       rating: 5
     },
     {

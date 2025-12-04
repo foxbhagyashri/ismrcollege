@@ -58,10 +58,10 @@ function ProgramOfferedPage() {
           points: [
             "Lab Sessions: Extensive hands-on lab work to strengthen technical skills and reinforce theoretical concepts",
             "Projects: Mini-projects and a final capstone project focused on solving real-world problems using the latest tools and technologies",
-           
+
           ],
         },
-        
+
       ],
     },
     "BBA-Programme": {
@@ -182,6 +182,7 @@ function ProgramOfferedPage() {
       return `${activeTab}-${activeSection}`;
     }
   };
+
 
   const currentContent = activeSection ? sectionContent[getContentKey()] : null;
 
@@ -354,6 +355,11 @@ function ProgramOfferedPage() {
                     >
                       {currentContent.description}
                     </p>
+
+
+
+
+
 
                     {/* Duration & Eligibility */}
 

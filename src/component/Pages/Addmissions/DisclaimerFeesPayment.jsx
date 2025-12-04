@@ -113,7 +113,7 @@ export default function DisclaimerFeePayment() {
                                 fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                             }}
                         >
-                            ⚠️ <strong>Important :</strong> All fee payments must be made online through the official Ease buzz link only.
+                            ⚠️ <strong>Important :</strong> All fee payments must be made online through the official Ease buzz link only. <a href="https://fees.easebuzz.in/view/ISMR_Pune" style={{ fontSize: "18px" }}>Pay Fee Online</a>
 
                         </p>
                     </div>

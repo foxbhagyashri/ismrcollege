@@ -431,6 +431,8 @@ export default function RefundPolicy() {
             <div className="section">
               <h3>Important Notes</h3>
               <div className="note">
+                <p><b>Fee Refund & Admission Cancellation Guidelines
+                </b></p>
                 <ul className="list">
                   <li>Fee Refund & Admission Cancellation Guidelines
                   </li>

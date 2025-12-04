@@ -14,7 +14,7 @@ const Testimonials = () => {
 
     {
       id: 5,
-      name: "Pooja RavindraBawane",
+      name: "Pooja Ravindra Bawane",
 
       img: "./pooja.png",
       text: "I, Pooja RavindraBawane, am an MBA First Semester student at ISMR College. The college provides a dynamic learning environment where we get to connect theory with practical learning. I really appreciate the regular internship opportunities, case study sessions, outdoor activities, and hands-on experiences. These activities help us understand real business situations and prepare us well for future challenges.",
@@ -38,7 +38,7 @@ const Testimonials = () => {
     },
     {
       id: 8,
-      name: "No name",
+      name: "Nikhil Gupta",
 
       img: "./noname02.png",
       text: "The first semester of my MBA helped me improve my planning and analytical skills, which is really useful for my career. It also strengthened my professional outlook and boosted my confidence in my leadership abilities. I’m excited for the rest of the program.",
