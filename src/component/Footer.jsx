@@ -56,10 +56,10 @@ const Footer = () => {
             <h5 className="footer-title">Quick Links</h5>
             <ul className="footer-links">
               <li><Link to="#">Enquire Now</Link></li>
-              <li><Link to="/Admissions/Eligibility-criteria">Eligibility Criteria</Link></li>
+              <li><Link to="/Addmissions/Eligibility-criteria">Eligibility Criteria</Link></li>
               <li><Link to="/Aboutpage/Ismr">Why ISMR?</Link></li>
-              <li><Link to="/Admissions/Howtoapply">List of Documents</Link></li>
-              <li><Link to="/Admissions/Disclaimer">Disclaimer</Link></li>
+              <li><Link to="/Addmissions/Howtoapply">List of Documents</Link></li>
+              <li><Link to="/Addmissions/Disclaimer">Disclaimer</Link></li>
             </ul>
           </Col>
 
