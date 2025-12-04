@@ -54,21 +54,11 @@ const Footer = () => {
           <Col lg={2} md={6} sm={12} className="mb-4">
             <h5 className="footer-title">Quick Links</h5>
             <ul className="footer-links">
-              <li>
-                <a href="#">Enquire Now</a>
-              </li>
-              <li>
-                <a href="/Addmissions/Eligibility-criteria">Eligibility Criteria</a>
-              </li>
-              <li>
-                <a href="/Aboutpage/Ismr">Why ISMR?</a>
-              </li>
-              <li>
-                <a href="/Addmissions/Howtoapply">List of Documents </a>
-              </li>
-              <li>
-                <a href="src/pages/Admissions/Disclaimer.jsx">Disclaimer </a>
-              </li>
+              <li><Link to="#">Enquire Now</Link></li>
+              <li><Link to="/Admissions/Eligibility-criteria">Eligibility Criteria</Link></li>
+              <li><Link to="/Aboutpage/Ismr">Why ISMR?</Link></li>
+              <li><Link to="/Admissions/Howtoapply">List of Documents</Link></li>
+              <li><Link to="/Admissions/Disclaimer">Disclaimer</Link></li>
             </ul>
           </Col>
 
