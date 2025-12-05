@@ -118,20 +118,20 @@ function ProgramOfferedPage() {
 
     },
     "Financial Management": {
-      title: "Financial Management (MBA)",
+      title: "Financial Management",
       description:
         "Financial Management is the strategic planning, organizing, directing, and controlling of financial activities to ensure optimal utilization of resources and maximize shareholder value. It revolves around key functions such as budgeting, forecasting, investment analysis, capital structure decisions, and working capital management. Sound financial management ensures liquidity, profitability, and solvency while aligning short-term actions with long-term objectives. In modern business environments, it also involves risk assessment, compliance with regulatory frameworks, and ethical financial practices. With digital transformation, tools like AI-driven analytics, blockchain, and fintech solutions have enhanced accuracy and decision-making speed. Financial managers now play a critical role in navigating uncertainties, allocating capital efficiently, and fostering sustainable growth. Moreover, integrating traditional Indian wisdom—such as value-based decision-making—with contemporary financial theory creates a more holistic approach, especially in mission-driven organizations. At its core, Financial Management is not just about numbers—it’s about enabling stability, resilience, and informed strategic choices in a complex economic landscape.",
 
 
     },
     "Marketing Management": {
-      title: "Marketing Management (MBA)",
+      title: "Marketing Management",
       description:
         "Marketing Management involves the strategic planning and execution of activities that promote products, services, or ideas to target audiences, ensuring alignment with organizational goals. It focuses on understanding consumer needs, creating value propositions, and fostering strong brand identities. Core elements include market research, segmentation, positioning, pricing strategies, and integrated communications across digital and traditional channels. In today’s competitive landscape, marketing is no longer a linear funnel but a dynamic engagement loop, where analytics, storytelling, and emotional intelligence drive customer loyalty. The rise of personalization, influencer ecosystems, and AI-driven tools has transformed how brands connect and evolve with their audiences. Effective marketing managers combine creativity with data-driven insights to anticipate trends, measure ROI, and adapt swiftly. When infused with Eastern philosophies—such as holistic understanding and long-term relationship building—marketing becomes a discipline of empathy and sustained impact. Ultimately, Marketing Management is the bridge between customer aspiration and meaningful business outcomes.",
 
     },
     "Human Resource Management": {
-      title: "Human Resource Management (MBA)",
+      title: "Human Resource Management",
       description:
         "Human Resource (HR) Management is the strategic and systematic approach to managing people within an organization to maximize their performance and well-being. It encompasses functions such as talent acquisition, training and development, performance appraisal, compensation, and employee relations. More than just administrative tasks, modern HR is a driver of organizational culture, leadership development, and workforce engagement. As businesses evolve in complexity, HR managers are required to be agile, emotionally intelligent, and tech-savvy—leveraging tools like HR analytics, AI-powered recruitment platforms, and hybrid workplace models. At the heart of HR lies the philosophy of aligning individual aspirations with organizational goals, creating a workplace that fosters trust, inclusion, and purpose. Drawing from Eastern traditions, principles like empathy, karma, and holistic well-being enrich the HR approach, promoting long-term employee satisfaction and organizational harmony. Ultimately, HR Management is not merely about managing headcount—it’s about cultivating human potential as a source of sustainable advantage.",
     },

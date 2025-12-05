@@ -131,6 +131,7 @@ export default function RefundPolicy() {
           text-align: left;
           font-weight: 700;
           font-size: 1rem;
+          text-align: center;
         }
         
         .table td {
@@ -436,7 +437,7 @@ export default function RefundPolicy() {
                 <ul className="list">
                   <li>Fee Refund & Admission Cancellation Guidelines
                   </li>
-                  <li>Refunds of fees will be processed on or after 15th November 2026.
+                  <li>Refunds of fees will be processed on or after 15th December 2026.
                   </li>
                   <li>For admission cancellation and refund requests, please send a detailed email to: <a href="mailto:admissions@ismrpune.edu.in"> admissions@ismrpune.edu.in</a></li>
                   <li>When submitting your request, ensure that you include the following:
@@ -446,7 +447,7 @@ export default function RefundPolicy() {
                     <li>Your exact name as per your bank account, and
 
                     </li>
-                    <li>A scanned copy of your cancelled cheque / bank pass book.
+                    <li>A scanned copy of your cancelled cheque / bank front page pass book.
 
                     </li>
 

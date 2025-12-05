@@ -47,7 +47,7 @@ const Travel = () => {
           </h1>
         
           {/* Optional: Add the "Read more" link if desired, though it wasn't in the provided static structure */}
-          <a href="#">Read more</a>
+          <a href="/Aboutpage/Aboutinstutue">Read more</a>
         </div>
       </div>
 

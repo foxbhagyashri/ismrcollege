@@ -91,7 +91,7 @@ section {
 /* Styling for the new .title structure */
 .content .title p {
    color: #f1f1ed;
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: 500;
   margin: 10px 0;
   line-height: 1.4;
@@ -106,12 +106,13 @@ section {
 
 /* Styling for the main institutional heading */
 .content .title h1 {
-  font-size: 4rem; /* Larger font size */
+  font-size: 47px; /* Larger font size */
   font-weight: 900;
   letter-spacing: 4px;
   line-height: 1.1; /* Tighter line height for the main heading */
   margin-bottom: 20px;
   text-transform: uppercase;
+  color: #FFC333;
 }
 
 /* Remove original span style since it's not used in h1 anymore */
