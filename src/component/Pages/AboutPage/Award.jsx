@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrophy } from "@fortawesome/free-solid-svg-icons";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
-import TrophyImg from "../../../assets/Trophyimg.png"; 
+import TrophyImg from "../../../assets/Trophyimg.png";
 function AwardsRankings() {
   const awards = [
     {
@@ -52,24 +52,34 @@ function AwardsRankings() {
 
   const rankings = [
     {
-      rank: "#1",
-      category: "State Rankings",
-      description: "Top University in Maharashtra",
+      
+      category: "Business School of the Year 2019",
+      description: "Awarded 'Business School of the Year 2019' by Media Partner THE ACADEMIC INSIGHTS.",
     },
     {
-      rank: "#15",
-      category: "National Rankings",
-      description: "Among Top Universities in India",
+   
+      category: "Top 10 Colleges and Institute in Maharashtra",
+      description: "Ranked 'Top 10 Colleges and Institute in Maharashtra' by Media Partner Higher Education Digest for the Year 2019.",
     },
     {
-      rank: "#250",
-      category: "Global Rankings",
-      description: "QS World University Rankings",
+    
+      category: "Ranked 20th in India by Higher Education",
+      description: "Ranked 20th in India by Higher Education Review Magazine beyond IIMS Top 100 B-School survey.",
     },
     {
-      rank: "B+",
-      category: "NAAC Accreditation",
-      description: "Highest Grade Accreditation",
+   
+      category: "Excellence in Students Placements for 2018",
+      description: "Awarded 'Excellence in Students Placements for 2018' by Education World-Wide India.",
+    },
+    {
+   
+      category: "Best Business School Award in 2017",
+      description: "Winner of 'Best Business School Award in 2017' by 24 MRC Award - For Excellence in Higher Education.",
+    },
+    {
+   
+      category: "Top Private Management Institute in Western India",
+      description: "Jagran Josh recognizing 'Top Private Management Institute in Western India'.",
     },
   ];
 
@@ -289,7 +299,7 @@ function AwardsRankings() {
                       lineHeight: "1.5",
                     }}
                   >
-                    	Ranked “Top 10 Colleges and Institutes in Maharashtra” by Media Partner Higher Education Digest for the year 2019.
+                    Ranked “Top 10 Colleges and Institutes in Maharashtra” by Media Partner Higher Education Digest for the year 2019.
                   </p>
                 </div>
               </div>
@@ -317,7 +327,7 @@ function AwardsRankings() {
                       lineHeight: "1.5",
                     }}
                   >
-                  Ranked 20th in India by “Higher Education Review Magazine” Beyond IIM’s Top 100 B-School survey.
+                    Ranked 20th in India by “Higher Education Review Magazine” Beyond IIM’s Top 100 B-School survey.
                   </p>
                 </div>
               </div>
@@ -410,7 +420,7 @@ function AwardsRankings() {
                       lineHeight: "1.5",
                     }}
                   >
-                 Winner of “Best Business School Award in 2017” by 24 MRC Award – For Excellence in Higher Education.
+                    Winner of “Best Business School Award in 2017” by 24 MRC Award – For Excellence in Higher Education.
                   </p>
                 </div>
               </div>
@@ -438,7 +448,7 @@ function AwardsRankings() {
                       lineHeight: "1.5",
                     }}
                   >
-                   Jagran Josh recognizing “Top Private Management Institute in Western India.”
+                    Jagran Josh recognizing “Top Private Management Institute in Western India.”
                   </p>
                 </div>
               </div>
@@ -476,60 +486,60 @@ function AwardsRankings() {
             management education, research, and placement opportunities.
           </p>
 
-    <div className="row g-4">
-      {rankings.map((ranking, index) => {
-        const isEven = index % 2 === 0;
-        const bgColor = isEven ? "#002A5C" : "#FFC333";
-        const textColor = isEven ? "#FFC333" : "#002A5C";
+          <div className="row g-4">
+            {rankings.map((ranking, index) => {
+              const isEven = index % 2 === 0;
+              const bgColor = isEven ? "#002A5C" : "#FFC333";
+              const textColor = isEven ? "#FFC333" : "#002A5C";
 
-        return (
-          <div className="col-12 col-md-6 col-lg-3" key={index}>
-            <div
-              className="p-3 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-center align-items-center"
-              style={{
-                backgroundColor: bgColor,
-                color: textColor,
-                transition: "0.3s ease",
-                minHeight: "180px",
-              }}
-            >
-              <div
-                className="fw-bold mb-2"
-                style={{
-                  fontSize: "1.5rem", // ↓ Smaller number font
-                  fontFamily: "Roboto, sans-serif",
-                }}
-              >
-                {ranking.rank}
-              </div>
+              return (
+                <div className="col-12 col-md-6 col-lg-3" key={index}>
+                  <div
+                    className="p-3 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-center align-items-center"
+                    style={{
+                      backgroundColor: bgColor,
+                      color: textColor,
+                      transition: "0.3s ease",
+                      minHeight: "180px",
+                    }}
+                  >
+                    <div
+                      className="fw-bold mb-2"
+                      style={{
+                        fontSize: "1.5rem", // ↓ Smaller number font
+                        fontFamily: "Roboto, sans-serif",
+                      }}
+                    >
+                      {ranking.rank}
+                    </div>
 
-              <h6
-                className="fw-semibold mb-1"
-                style={{
-                  fontSize: "1.4rem", // ↓ Smaller category text
-                  fontFamily: "Roboto, sans-serif",
-                }}
-              >
-                {ranking.category}
-              </h6>
+                    <h6
+                      className="fw-semibold mb-1"
+                      style={{
+                        fontSize: "1.4rem", // ↓ Smaller category text
+                        fontFamily: "Roboto, sans-serif",
+                      }}
+                    >
+                      {ranking.category}
+                    </h6>
 
-              <p
-                className="mb-0"
-                style={{
-                  fontSize: "1rem", // ↓ Smaller description
-                  lineHeight: "1.4",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
-                {ranking.description}
-              </p>
-            </div>
+                    <p
+                      className="mb-0"
+                      style={{
+                        fontSize: "1rem", // ↓ Smaller description
+                        lineHeight: "1.4",
+                        fontFamily: "Poppins, sans-serif",
+                      }}
+                    >
+                      {ranking.description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-        );
-      })}
-    </div>
-  </div>
-</section>
+        </div>
+      </section>
 
 
       {/* RECOGNITION SECTION */}
@@ -593,7 +603,7 @@ function AwardsRankings() {
       </section>
 
       {/* RANKINGS */}
-      
+
     </div>
   );
 }
