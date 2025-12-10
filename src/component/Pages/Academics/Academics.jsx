@@ -2,8 +2,50 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import { BookFill } from "react-bootstrap-icons";
+import { Button } from "bootstrap";
+import ReCAPTCHA from "react-google-recaptcha";
 
 function ProgramOfferedPage() {
+
+
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    city: "",
+    message: "",
+    programme: "",
+  });
+  const [submitted, setSubmitted] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [captchaValue, setCaptchaValue] = useState(null);
+
+  const handleChange = (e) =>
+    setForm((s) => ({ ...s, [e.target.name]: e.target.value }));
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!captchaValue) {
+      alert("Please verify that you are not a robot!");
+      return;
+    }
+
+    // Trigger PDF download
+    // const link = document.createElement("a");
+    // link.href = brochurePdf;
+    // link.download = "Admissions-Brochure.pdf";
+    // document.body.appendChild(link);
+    // link.click();
+    // document.body.removeChild(link);
+
+    setShowModal(false);
+    setForm({ name: "", email: "", phone: "", city: "" });
+    setCaptchaValue(null);
+    setSubmitted(true);
+    setTimeout(() => setSubmitted(false), 3000);
+  };
+
   const [activeTab, setActiveTab] = useState("MBA");
   const [activeSection, setActiveSection] = useState("");
 
@@ -122,8 +164,8 @@ function ProgramOfferedPage() {
       description:
         "Financial Management is the strategic planning, organizing, directing, and controlling of financial activities to ensure optimal utilization of resources and maximize shareholder value. It revolves around key functions such as budgeting, forecasting, investment analysis, capital structure decisions, and working capital management. Sound financial management ensures liquidity, profitability, and solvency while aligning short-term actions with long-term objectives. In modern business environments, it also involves risk assessment, compliance with regulatory frameworks, and ethical financial practices. With digital transformation, tools like AI-driven analytics, blockchain, and fintech solutions have enhanced accuracy and decision-making speed. Financial managers now play a critical role in navigating uncertainties, allocating capital efficiently, and fostering sustainable growth. Moreover, integrating traditional Indian wisdom—such as value-based decision-making—with contemporary financial theory creates a more holistic approach, especially in mission-driven organizations. At its core, Financial Management is not just about numbers—it’s about enabling stability, resilience, and informed strategic choices in a complex economic landscape.",
 
-
     },
+
     "Marketing Management": {
       title: "Marketing Management",
       description:
@@ -356,9 +398,135 @@ function ProgramOfferedPage() {
                       {currentContent.description}
                     </p>
 
+                    <div className="" style={{ textAlign: "right" }}>
+
+                      <button
+                        className="btn"
+                        style={{
+                          padding: "12px",
+                          backgroundColor: "#0a2240",
+                          color: "#fff",
+                          border: "none",
+                          borderRadius: "8px",
+                          fontSize: "16px",
+                          fontWeight: "500",
+                          fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        }}
+                        onClick={() => setShowModal(true)}
+                      >
+                        <span>📄</span> Download Syllabus
+                      </button>
+
+
+                    </div>
 
 
 
+                    {/* -------- FORM MODAL -------- */}
+                    {showModal && (
+                      <div
+                        className="modal-backdrop"
+                        style={{
+                          position: "fixed",
+                          top: 0,
+                          left: 0,
+                          width: "100%",
+                          height: "100%",
+                          backgroundColor: "rgba(0,0,0,0.6)",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          zIndex: 9999,
+                        }}
+                      >
+                        <div
+                          className="modal-content rounded-3 p-4"
+                          style={{
+                            backgroundColor: "#fff",
+                            maxWidth: "500px",
+                            width: "90%",
+                          }}
+                        >
+                          <h4 style={{ color: "#0a2240", marginBottom: "1rem" }}>
+                            Fill the form to download brochure
+                          </h4>
+
+                          <form onSubmit={handleSubmit}>
+                            <input
+                              type="text"
+                              name="name"
+                              value={form.name}
+                              onChange={handleChange}
+                              placeholder="Full Name"
+                              required
+                              className="form-control mb-3"
+                            />
+                            <input
+                              type="email"
+                              name="email"
+                              value={form.email}
+                              onChange={handleChange}
+                              placeholder="Email"
+                              required
+                              className="form-control mb-3"
+                            />
+                            <input
+                              type="tel"
+                              name="phone"
+                              value={form.phone}
+                              onChange={handleChange}
+                              placeholder="Phone"
+                              required
+                              className="form-control mb-3"
+                            />
+                            <input
+                              type="text"
+                              name="city"
+                              value={form.city}
+                              onChange={handleChange}
+                              placeholder="City"
+                              className="form-control mb-3"
+                            />
+
+                            {/* -------- RECAPTCHA -------- */}
+                            <div className="mb-3">
+                              <ReCAPTCHA
+                                sitekey="YOUR_SITE_KEY_HERE"
+                                onChange={(value) => setCaptchaValue(value)}
+                              />
+                            </div>
+
+                            <button
+                              type="submit"
+                              className="btn w-100"
+                              style={{
+                                backgroundColor: "#0a2240",
+                                color: "#fff",
+                                padding: "12px",
+                                borderRadius: "8px",
+                                fontSize: "16px",
+                                fontWeight: "500",
+                              }}
+                            >
+                              Submit & Download
+                            </button>
+                          </form>
+
+                          <button
+                            onClick={() => setShowModal(false)}
+                            style={{
+                              marginTop: "10px",
+                              background: "transparent",
+                              border: "none",
+                              color: "#d95c5c",
+                              cursor: "pointer",
+                            }}
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    )}
 
 
                     {/* Duration & Eligibility */}

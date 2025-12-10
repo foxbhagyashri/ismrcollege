@@ -144,7 +144,7 @@ const BlogPage = () => {
                 Education is evolving rapidly with technology, innovation, and new policies. Here's what the future looks like.
               </p>
               <div className="blog-footer d-flex justify-content-between align-items-center">
-              <a className="read-more" href="#">Read More →</a>
+              <a className="read-more" href="#">Marketing</a>
               <p className="pt-4"><b>Date : </b> 05 Dec 2025</p>
               </div>
             </div>
@@ -158,7 +158,7 @@ const BlogPage = () => {
                 Artificial Intelligence is transforming teaching methods, analytics, and the overall academic ecosystem.
               </p>
               <div className="blog-footer d-flex justify-content-between align-items-center">
-              <a className="read-more" href="#">Read More →</a>
+              <a className="read-more" href="#">Finance</a>
               <p className="pt-4"><b>Date : </b> 12 Nov 2025</p>
               </div>
             </div>
@@ -172,7 +172,7 @@ const BlogPage = () => {
                 Explore the most important skills every student must learn for future career success.
               </p>
               <div className="blog-footer d-flex justify-content-between align-items-center">
-              <a className="read-more" href="#">Read More →</a>
+              <a className="read-more" href="#">HR</a>
               <p className="pt-4"><b>Date : </b> 10 Nov 2025</p>
               </div>
             </div>
