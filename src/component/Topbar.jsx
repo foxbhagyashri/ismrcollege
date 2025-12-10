@@ -69,7 +69,7 @@ const TopHeader = () => {
             </li>
             <li>
               <button
-                onClick={() => (window.location.href = "/Appltonline")}
+                onClick={() => (window.location.href = "/NewsPage/Newsletter")}
                 className="btn btn-sm"
                 style={{
                   backgroundColor: "",

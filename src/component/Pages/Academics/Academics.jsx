@@ -4,7 +4,7 @@ import allsectionbg from "../../../assets/allsectionbg.jpg";
 import { BookFill } from "react-bootstrap-icons";
 
 function ProgramOfferedPage() {
-  const [activeTab, setActiveTab] = useState("BCA");
+  const [activeTab, setActiveTab] = useState("MBA");
   const [activeSection, setActiveSection] = useState("");
 
   const interFont = {

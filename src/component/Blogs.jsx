@@ -139,33 +139,42 @@ const BlogPage = () => {
           <div className="blog-card">
             <img className="blog-image" src="/14.png" alt="Blog 1" />
             <div className="blog-content">
-              <h3 className="blog-title">The Future of Education in India</h3>
+              <h3 className="blog-title">Marketing Management</h3>
               <p className="blog-desc">
                 Education is evolving rapidly with technology, innovation, and new policies. Here's what the future looks like.
               </p>
+              <div className="blog-footer d-flex justify-content-between align-items-center">
               <a className="read-more" href="#">Read More →</a>
+              <p className="pt-4"><b>Date : </b> 05 Dec 2025</p>
+              </div>
             </div>
           </div>
 
           <div className="blog-card">
             <img className="blog-image" src="/14.png" alt="Blog 2" />
             <div className="blog-content">
-              <h3 className="blog-title">How AI Is Transforming Colleges</h3>
+              <h3 className="blog-title">Financial Management</h3>
               <p className="blog-desc">
                 Artificial Intelligence is transforming teaching methods, analytics, and the overall academic ecosystem.
               </p>
+              <div className="blog-footer d-flex justify-content-between align-items-center">
               <a className="read-more" href="#">Read More →</a>
+              <p className="pt-4"><b>Date : </b> 12 Nov 2025</p>
+              </div>
             </div>
           </div>
 
           <div className="blog-card">
             <img className="blog-image" src="/14.png" alt="Blog 3" />
             <div className="blog-content">
-              <h3 className="blog-title">Top Skills Students Need in 2025</h3>
+              <h3 className="blog-title">Human Resource Management</h3>
               <p className="blog-desc">
                 Explore the most important skills every student must learn for future career success.
               </p>
+              <div className="blog-footer d-flex justify-content-between align-items-center">
               <a className="read-more" href="#">Read More →</a>
+              <p className="pt-4"><b>Date : </b> 10 Nov 2025</p>
+              </div>
             </div>
           </div>
 
