@@ -303,7 +303,7 @@ function Contactus() {
               margin: 0,
             }}
           >
-            Contact <span className="text-warning">Us</span>
+            Reach  <span className="text-warning">Us</span>
           </h1>
           <p
             className="mb-0"

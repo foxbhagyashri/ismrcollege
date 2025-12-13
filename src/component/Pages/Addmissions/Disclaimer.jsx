@@ -166,7 +166,7 @@ export default function DisclaimerPage() {
               }}
             >
               ⚠️ <strong>Important :</strong> All fees must be paid only to the official institute bank account through this link -
-              Do not pay fees to any individual or unofficial account. <a href="https://fees.easebuzz.in/view/ISMR_Pune" style={{fontSize:"18px"}}>Pay Fee Online</a>
+              Do not pay fees to any individual or unofficial account.
             </p>
           </div>
 

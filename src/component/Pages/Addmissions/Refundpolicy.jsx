@@ -414,7 +414,7 @@ export default function RefundPolicy() {
                 <tbody>
                   <tr>
                     <td><strong>1.</strong></td>
-                    <td>Request Received before date of commencement of the course.</td>
+                    <td>Request Received before the last date of CET Cell admission process.</td>
                     <td>Rs. 2000/- deducted as processing & admission counselling fees</td>
                   </tr>
 
@@ -432,8 +432,8 @@ export default function RefundPolicy() {
             <div className="section">
               <h3>Important Notes</h3>
               <div className="note">
-                <p><b>Fee Refund & Admission Cancellation Guidelines
-                </b></p>
+                {/* <p><b>Fee Refund & Admission Cancellation Guidelines
+                </b></p> */}
                 <ul className="list">
                   <li>Fee Refund & Admission Cancellation Guidelines
                   </li>

@@ -13,7 +13,24 @@ import Comp3 from "../../../assets/Homeimg/Comp3.png";
 import Comp4 from "../../../assets/Homeimg/Comp4.png";
 import Comp5 from "../../../assets/Homeimg/Comp5.png";
 import Comp6 from "../../../assets/Homeimg/Comp6.png";
-
+import Comp7 from "../../../assets/Homeimg/HDFC-Bank-logo.png";
+import Comp8 from "../../../assets/Homeimg/Outlook_Group_Logo.png";
+import Comp9 from "../../../assets/Homeimg/atos.png";
+import Comp10 from "../../../assets/Homeimg/Tech_Mahindra_New_Logo.svg.png";
+import Comp11 from "../../../assets/Homeimg/UBS_Logo.png";
+import Comp12 from "../../../assets/Homeimg/Reliance-Logo-2002-2010.png";
+import Comp13 from "../../../assets/Homeimg/Infosys_logo.svg.png";
+import Comp14 from "../../../assets/Homeimg/csb-bank-tenders-information-service.jpg";
+import Comp15 from "../../../assets/Homeimg/coive.png";
+import Comp16 from "../../../assets/Homeimg/Amdocs-2017-brand-mark.svg.png";
+import Comp17 from "../../../assets/Homeimg/allstate.png";
+import Comp18 from "../../../assets/Homeimg/birla.jpg";
+import Comp19 from "../../../assets/Homeimg/sharekhan.png";
+import Comp20 from "../../../assets/Homeimg/tata.png";
+import Comp21 from "../../../assets/Homeimg/xdbs.png";
+import Comp22 from "../../../assets/Homeimg/vitanaa.png";
+import Comp23 from "../../../assets/Homeimg/600db20da2900_XL_dynamics.jpg";
+import Comp24 from "../../../assets/Homeimg/x3yozluxpwkcfa5wicbf.jpg";
 // ---------------------------------------------------------------------
 // 2. Company Logos Array
 // ---------------------------------------------------------------------
@@ -24,12 +41,24 @@ const logos = [
   { name: "Company 4", src: Comp4 },
   { name: "Company 5", src: Comp5 },
   { name: "Company 6", src: Comp6 },
-  { name: "Company 1", src: Comp1 },
-  { name: "Company 2", src: Comp2 },
-  { name: "Company 3", src: Comp3 },
-  { name: "Company 4", src: Comp4 },
-  { name: "Company 5", src: Comp5 },
-  { name: "Company 6", src: Comp6 },
+  { name: "Company 7", src: Comp7 },
+  { name: "Company 8", src: Comp8 },
+  { name: "Company 9", src: Comp9 },
+  { name: "Company 10", src: Comp10 },
+  { name: "Company 11", src: Comp11 },
+  { name: "Company 12", src: Comp12 },
+  { name: "Company 13", src: Comp13 },
+  { name: "Company 14", src: Comp14 },
+  { name: "Company 15", src: Comp15 },
+  { name: "Company 16", src: Comp16 },
+  { name: "Company 17", src: Comp17 },
+  { name: "Company 18", src: Comp18 },
+  { name: "Company 19", src: Comp19 },
+  { name: "Company 20", src: Comp20 },
+  { name: "Company 21", src: Comp21 },
+  { name: "Company 22", src: Comp22 },
+  { name: "Company 23", src: Comp23 },
+  { name: "Company 24", src: Comp24 },
 ];
 
 const MARQUEE_SPEED_SECONDS = 15;
@@ -38,55 +67,9 @@ const ALUMNI_MARQUEE_SPEED_SECONDS = 40;
 // ---------------------------------------------------------------------
 // 3. Alumni Data
 // ---------------------------------------------------------------------
-const alumniTalks = [
-  {
-    name: "Vikram Sharma",
-    title: "Senior Developer at TechGlobal",
-    year: "Batch of 2018",
-    quote:
-      "The rigorous curriculum and hands-on projects at ISMR gave me the practical skills I needed to excel in my role. Highly recommend the placement cell's support!",
-    imageSrc:
-      "https://images.unsplash.com/photo-1560250097-fb3ac982b0f4?w=80&h=80&fit=crop",
-  },
-  {
-    name: "Priya Singh",
-    title: "Marketing Manager at MarketLead",
-    year: "Batch of 2020",
-    quote:
-      "ISMR's industry connections were invaluable. My internship directly converted into a full-time job thanks to the exposure and networking opportunities provided.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&h=80&fit=crop",
-  },
-  {
-    name: "Rajesh Kulkarni",
-    title: "Financial Analyst, FinCorp",
-    year: "Batch of 2017",
-    quote:
-      "The dedicated placement cell and career guidance ensured I landed my dream role right after graduation. Truly a career-defining experience.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=80&h=80&fit=crop",
-  },
-  {
-    name: "Sneha Reddy",
-    title: "HR Specialist, PeopleConnect",
-    year: "Batch of 2021",
-    quote:
-      "The blend of theory and practical training prepared me perfectly for the corporate environment, making the transition seamless and confident.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29329?w=80&h=80&fit=crop",
-  },
-  {
-    name: "Ajay Verma",
-    title: "Operations Head, Logistics Corp",
-    year: "Batch of 2016",
-    quote:
-      "The practical management skills I learned at ISMR were immediately applicable. The institute truly focuses on real-world competence.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?w=80&h=80&fit=crop",
-  },
-];
 
-const alumniMarqueeItems = [...alumniTalks, ...alumniTalks];
+
+
 
 // ---------------------------------------------------------------------
 // 4. Component
@@ -95,78 +78,7 @@ const Ourplacement = () => {
   const tabs = ["IT Companies", "Core Companies", "Service Sector"];
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
-  const AlumniTalkMarquee = () => (
-    <section className="py-5" style={{ backgroundColor: "#f8f9fa" }}>
-      <div className="container">
-        <h2
-          className="text-center mb-5"
-          style={{
-            fontSize: "2.5rem",
-            fontWeight: 700,
-            color: "#0a2240",
-            fontFamily: "Inter, Arial, Helvetica, sans-serif",
-          }}
-        >
-          <ChatSquareQuoteFill className="me-3" style={{ color: "#ffc107" }} />
-          <span style={{ color: "#ffc107" }}>Alumni Success </span> Stories
-        </h2>
 
-        <div
-          className="alumni-marquee-container"
-          style={{
-            overflow: "hidden",
-            whiteSpace: "nowrap",
-            padding: "20px 0",
-            position: "relative",
-            perspective: "1000px",
-          }}
-        >
-          <div className="alumni-marquee-animated">
-            {alumniMarqueeItems.map((alumnus, index) => (
-              <div key={index} className="alumni-card-3d">
-                <div className="d-flex align-items-center mb-3">
-                  <img
-                    src={alumnus.imageSrc}
-                    alt={alumnus.name}
-                    className="rounded-circle me-3"
-                    style={{
-                      width: "60px",
-                      height: "60px",
-                      objectFit: "cover",
-                      border: "3px solid #ffc107",
-                    }}
-                  />
-                  <div>
-                    <h5 className="mb-0 fw-bold" style={{ color: "#0a2240" }}>
-                      {alumnus.name}
-                    </h5>
-                    <p className="mb-0 small text-muted">{alumnus.title}</p>
-                  </div>
-                </div>
-
-                <div className="mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <StarFill
-                      key={i}
-                      style={{ color: "#ffc107", fontSize: "14px" }}
-                      className="me-1"
-                    />
-                  ))}
-                </div>
-
-                <blockquote className="blockquote mb-0">
-                  <p className="mb-0 fst-italic">"{alumnus.quote}"</p>
-                  <footer className="blockquote-footer mt-2">
-                    {alumnus.year}
-                  </footer>
-                </blockquote>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
 
   return (
     <>
@@ -235,12 +147,7 @@ const Ourplacement = () => {
                 textAlign: "justify",
               }}
             >
-              <strong>ISMR</strong> takes immense pride in its{" "}
-              <strong>consistent track record</strong> of successful placements,
-              with students securing positions in top companies across various
-              industries. Our focus on training, skill development, and career
-              guidance ensures <strong>excellent placement outcomes</strong>{" "}
-              year after year.
+              The stable base provided to ISMR B-School’s students means that the industry leaders look up to us to continue producing the proficient leaders of tomorrow. Mentioned below are some of the industry giants who visit our campus every year to choose students from our institute who can add value to their organization.
             </p>
           </Col>
         </Row>
@@ -251,9 +158,8 @@ const Ourplacement = () => {
             {tabs.map((tab) => (
               <button
                 key={tab}
-                className={`nav-link tab-link ${
-                  activeTab === tab ? "active" : ""
-                }`}
+                className={`nav-link tab-link ${activeTab === tab ? "active" : ""
+                  }`}
                 onClick={() => setActiveTab(tab)}
                 style={{
                   borderRadius: "8px",
@@ -321,34 +227,75 @@ const Ourplacement = () => {
         </div>
 
         {/* Logo Marquee */}
-        <section className="my-5">
-          <div
-            className="my-5 d-flex justify-content-center"
-            style={{
-              padding: "30px 0",
-              overflow: "hidden",
-              backgroundColor: "#f8f9fa",
-              borderTop: "1px solid #dee2e6",
-              borderBottom: "1px solid #dee2e6",
-            }}
-          >
-            <div className="logo-marquee-animated">
-              {logos.map((logo, index) => (
-                <div key={index} className="logo-box">
-                  <img src={logo.src} alt={logo.name} />
-                </div>
-              ))}
-            </div>
+        <section className="recruiters-section my-5">
+          <h2 className="text-center mb-4">OUR RECRUITERS</h2>
+
+          <div className="recruiters-grid container">
+            {logos.map((logo, index) => (
+              <div key={index} className="recruiter-box">
+                <img src={logo.src} alt={logo.name} />
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* Alumni Marquee */}
-        <AlumniTalkMarquee />
+
+
       </div>
 
       {/* ====== Extra CSS ====== */}
       <style>
         {`
+.recruiters-section {
+  background: #ffffff;
+  padding: 40px 0;
+}
+
+.recruiters-section h2 {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.recruiters-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 logos per row */
+  gap: 15px;
+}
+
+.recruiter-box {
+  border: 2px solid #e0e0e0;
+  padding: 20px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.recruiter-box img {
+  max-width: 100%;
+  max-height: 60px;
+  object-fit: contain;
+}
+
+.recruiter-box:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .recruiters-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .recruiters-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+        
           .tab-link:hover {
             background-color: rgba(10, 34, 64, 0.1);
             color: #0a2240 !important;

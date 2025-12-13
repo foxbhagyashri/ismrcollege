@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {
   FaFacebookF,
@@ -10,8 +10,53 @@ import {
 } from "react-icons/fa";
 import "./Footer.css";
 import { Link } from "react-router-dom";
+import ReCAPTCHA from "react-google-recaptcha";
+
 
 const Footer = () => {
+
+
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    city: "",
+    message: "",
+    program: "",
+  });
+
+  const [submitted, setSubmitted] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [captchaValue, setCaptchaValue] = useState(null);
+
+  const handleChange = (e) =>
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!captchaValue) {
+      alert("Please verify that you are not a robot!");
+      return;
+    }
+
+    setShowModal(false);
+    setForm({
+      name: "",
+      email: "",
+      phone: "",
+      city: "",
+      message: "",
+      program: "",
+    });
+    setCaptchaValue(null);
+    setSubmitted(true);
+
+    setTimeout(() => setSubmitted(false), 3000);
+  };
+
+
+
   return (
     <footer className="footer-section pt-5 pb-4">
       <Container>
@@ -55,16 +100,156 @@ const Footer = () => {
           <Col lg={2} md={6} sm={12} className="mb-4">
             <h5 className="footer-title">Quick Links</h5>
             <ul className="footer-links">
-              <li><Link to="#">Enquire Now</Link></li>
-              <li><Link to="/Addmissions/Eligibility-criteria">Eligibility Criteria</Link></li>
               <li><Link to="/Aboutpage/Ismr">Why ISMR?</Link></li>
-              <li><Link to="/Addmissions/Howtoapply">List of Documents</Link></li>
-              <li><Link to="/Addmissions/Disclaimer">Disclaimer</Link></li>
+              <li><Link to="Aboutpage/Award">Awards & Rankings</Link></li>
+              <li><Link to="/Addmissions/Eligibility-criteria">Eligibility Criteria</Link></li>
+              <li><Link to="/Addmissions/Howtoapply">How To Apply</Link></li>
+              <li><Link to="/Placementpage/PlacementProcess">Placement Process</Link></li>
+              <li><Link to="/Addmissions/Disclaimer">Disclaimer for Admissions</Link></li>
+              <li><Link to="/Addmissions/DisclaimerFeePayment">Disclaimer for Fees Payment</Link></li>
+              <li><button onClick={() => setShowModal(true)} style={{
+                marginTop: "10px",
+                background: "transparent",
+                border: "none",
+                color: "#555",
+                cursor: "pointer",
+              }}>Apply Now</button></li>
             </ul>
           </Col>
 
 
+          {/* -------- FORM MODAL -------- */}
+          {showModal && (
+            <div
+              className="modal-backdrop"
+              style={{
+                position: "fixed",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                backgroundColor: "rgba(0,0,0,0.6)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                zIndex: 9999,
+              }}
+            >
+              <div
+                className="modal-content rounded-3 p-4"
+                style={{
+                  backgroundColor: "#fff",
+                  maxWidth: "500px",
+                  width: "90%",
+                }}
+              >
+                <h4 style={{ color: "#0a2240", marginBottom: "1rem" }}>
+                  Fill the form
+                </h4>
 
+                <form onSubmit={handleSubmit}>
+                  <input
+                    type="text"
+                    name="name"
+                    value={form.name}
+                    onChange={handleChange}
+                    placeholder="Full Name"
+                    required
+                    className="form-control mb-3"
+                  />
+
+                  <input
+                    type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    placeholder="Email"
+                    required
+                    className="form-control mb-3"
+                  />
+
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={form.phone}
+                    onChange={handleChange}
+                    placeholder="Phone"
+                    required
+                    className="form-control mb-3"
+                  />
+
+                  <input
+                    type="text"
+                    name="city"
+                    value={form.city}
+                    onChange={handleChange}
+                    placeholder="City"
+                    className="form-control mb-3"
+                  />
+
+                  {/* PROGRAM SELECT FIXED */}
+                  <select
+                    name="program"
+                    value={form.program}
+                    onChange={handleChange}
+                    required
+                    className="form-control mb-3"
+                  >
+                    <option value="">Select Programme *</option>
+                    <option value="MBA">MBA</option>
+                    <option value="BBA">BBA</option>
+                    <option value="BCA">BCA</option>
+                  </select>
+
+                  {/* MESSAGE FIXED */}
+                  <textarea
+                    name="message"
+                    placeholder="Please write your query here"
+                    value={form.message}
+                    onChange={handleChange}
+                    className="form-control mb-3"
+                    rows="3"
+                  ></textarea>
+
+                  {/* -------- RECAPTCHA -------- */}
+                  <div className="mb-3">
+                    <ReCAPTCHA
+                      sitekey="YOUR_SITE_KEY_HERE"
+                      onChange={(value) => setCaptchaValue(value)}
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="btn w-100"
+                    style={{
+                      backgroundColor: "#0a2240",
+                      color: "#fff",
+                      padding: "12px",
+                      borderRadius: "8px",
+                      fontSize: "16px",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Submit
+                  </button>
+                </form>
+
+                <button
+                  onClick={() => setShowModal(false)}
+                  style={{
+                    marginTop: "10px",
+                    background: "transparent",
+                    border: "none",
+                    color: "#d95c5c",
+                    cursor: "pointer",
+                  }}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
 
 
           {/* Contact Us + Map Section */}

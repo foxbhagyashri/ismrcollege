@@ -292,7 +292,7 @@ function ProgramOfferedPage() {
             <BookFill className="me-3" style={{ color: "#0a2240" }} />
             Program <span style={{ color: "#1a4d7a" }}>Offered</span>
           </h1>
-          <p
+          {/* <p
             style={{
               fontSize: "18px",
               color: "#444",
@@ -309,7 +309,24 @@ function ProgramOfferedPage() {
             state-of-the-art infrastructure to experienced faculty, ISMR is
             committed to nurturing future leaders in every field. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus a ad rerum laboriosam. Porro tempora nostrum facere expedita culpa itaque rem ut, provident nemo eaque aspernatur dolor omnis assumenda.
 
+          </p> */}
+
+
+          <p
+            style={{
+              fontSize: "18px",
+              color: "#444",
+              lineHeight: "1.7",
+              textAlign: "justify",
+              textJustify: "inter-word",
+              marginBottom: "50px",
+              marginTop: "50px",
+            }}
+          >
+            ISMR, affiliated to Savitribai Phule Pune University, offers a comprehensive range of programs including MBA, BBA, and BCA which are approved by AICTE new Delhi. Our MBA program provides seven industry-oriented specializations.—The BBA and BCA programs are designed to build strong foundations in business management and computer applications, equipping students with essential skills for modern careers. With practical learning, expert faculty, and a career-focused approach, ISMR ensures holistic development and prepares students for success in the dynamic professional world.
           </p>
+
+
           {/* Tabs Section */}
           <div className="mb-5 pb-3">
             <div className="d-flex gap-3 border-bottom pb-2">
@@ -556,7 +573,7 @@ function ProgramOfferedPage() {
                   </div>
                 ) : (
                   <div>
-                    <div
+                    {/* <div
                       className="p-4 rounded-3 text-center"
                       style={{
                         background: "linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%)",
@@ -571,7 +588,7 @@ function ProgramOfferedPage() {
                         about our {activeTab} program offerings, curriculum, and features.
                       </p>
                       <BookFill size={40} style={{ opacity: 0.7 }} />
-                    </div>
+                    </div> */}
 
                     {/* Vision Section */}
                     <div className="mb-5 mt-5">
@@ -591,7 +608,7 @@ function ProgramOfferedPage() {
                             margin: 0,
                           }}
                         >
-                          🎯 Our Vision
+                          MBA Program
                         </h3>
                       </div>
                       <p
@@ -601,15 +618,22 @@ function ProgramOfferedPage() {
                           textAlign: "justify",
                         }}
                       >
-                        To be a center of excellence in {activeTab} education, fostering innovation,
-                        entrepreneurship, and leadership. We envision creating future-ready professionals
-                        who are equipped with cutting-edge knowledge, ethical values, and the ability to
-                        contribute meaningfully to society and industry. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        The MBA program at ISMR offers a two-year, industry-focused curriculum designed to develop professional and leadership skills. Students can choose their specializations from those prescribed by the affiliated university (SPPU).
                       </p>
+                      <ul>
+                        <li>Financial Management</li>
+                        <li>MarketingManagement</li>
+                        <li>Human Resource Management</li>
+                        <li>Operations & Supply Chain Management</li>
+                        <li>Business Analytics</li>
+                        <li>Agribusiness Management</li>
+                        <li>Pharma and Healthcare Management </li>
+                      </ul>
+                      <p style={{
+                        ...interFont,
+                        maxWidth: "900px",
+                        textAlign: "justify",
+                      }}>The program combines practical exposure, internships, expert faculty, and corporate interactions to prepare students for high-growth careers in the business world.</p>
                     </div>
 
                     {/* Mission Section */}
@@ -630,7 +654,7 @@ function ProgramOfferedPage() {
                             margin: 0,
                           }}
                         >
-                          🚀 Our Mission
+                          BBA Program
                         </h3>
                       </div>
 
@@ -642,27 +666,45 @@ function ProgramOfferedPage() {
                           marginBottom: "1rem",
                         }}
                       >
-                        Our mission is to provide world-class {activeTab} education that combines academic
-                        rigor with practical experience. We are committed to:
+                        The BBA program provides students with a strong foundation in management, entrepreneurship, and business administration. With a curriculum designed to build analytical, communication, and leadership skills, ISMR’s BBA program prepares students for career in marketing, finance, HR, and business operations, as well as for higher studies like MBA.
                       </p>
 
-                      <ul
+
+                    </div>
+
+                    <div className="mb-5">
+                      <div
+                        className="d-flex align-items-center mb-3"
                         style={{
-                          ...interFont,
-                          paddingLeft: "1.5rem",
-                          maxWidth: "900px",
-                          textAlign: "justify",
+                          borderLeft: "4px solid #0a2240",
+                          paddingLeft: "1rem",
                         }}
                       >
-                        <li className="mb-2">
-                          Delivering industry-relevant curriculum that prepares students for evolving
-                          career opportunities and challenges in the global marketplace.
-                        </li>
-                        <li className="mb-2">
-                          Providing state-of-the-art infrastructure, laboratories, and learning resources
-                          to facilitate comprehensive education and research activities.
-                        </li>
-                      </ul>
+                        <h3
+                          style={{
+                            ...interFont,
+                            fontWeight: 800,
+                            fontSize: "1.75rem",
+                            color: "#0a2240",
+                            margin: 0,
+                          }}
+                        >
+                          BCA Program
+                        </h3>
+                      </div>
+
+                      <p
+                        style={{
+                          ...interFont,
+                          maxWidth: "900px",
+                          textAlign: "justify",
+                          marginBottom: "1rem",
+                        }}
+                      >
+                        The BCA program focuses on computer science, software development, data handling, and IT applications. With hands-on training, coding skills, and practical project exposure, ISMR’s BCA program equips students for careers in IT, software development, data analysis, and emerging tech roles. It is the perfect pathway for students aiming for a future in the technology sector. Andprepare higher studies like MCA.
+                      </p>
+
+
                     </div>
                   </div>
                 )}

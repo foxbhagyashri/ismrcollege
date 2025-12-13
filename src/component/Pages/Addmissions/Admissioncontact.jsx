@@ -1,46 +1,101 @@
 import React, { useState } from "react";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import Faq from "../../Faq";
-import ReCAPTCHA from "react-google-recaptcha";
-//import brochurePdf from "../../../assets/Admissions-Brochure.pdf"; // Add your PDF in assets
+import axios from "axios";
+import brochurePdf from "../../../assets/demo.pdf"; // Add your PDF in assets
 
 export default function AdmissionContact() {
+
+  const [showModal, setShowModal] = useState(false);
+
   const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
     city: "",
-    message: "",
-    programme: "",
+    from: "Brochure Enquiry Form",
   });
-  const [submitted, setSubmitted] = useState(false);
-  const [showModal, setShowModal] = useState(false);
-  const [captchaValue, setCaptchaValue] = useState(null);
 
-  const handleChange = (e) =>
-    setForm((s) => ({ ...s, [e.target.name]: e.target.value }));
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [successMsg, setSuccessMsg] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  /* ================= VALIDATIONS ================= */
+  const validate = () => {
+    const newErrors = {};
 
-    if (!captchaValue) {
-      alert("Please verify that you are not a robot!");
-      return;
+    if (!form.name.trim()) {
+      newErrors.name = "Full name is required";
     }
 
-    // Trigger PDF download
-    // const link = document.createElement("a");
-    // link.href = brochurePdf;
-    // link.download = "Admissions-Brochure.pdf";
-    // document.body.appendChild(link);
-    // link.click();
-    // document.body.removeChild(link);
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(form.email)) {
+      newErrors.email = "Enter a valid email address";
+    }
 
-    setShowModal(false);
-    setForm({ name: "", email: "", phone: "", city: "" });
-    setCaptchaValue(null);
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    if (!/^\d{10}$/.test(form.phone)) {
+      newErrors.phone = "Phone number must be 10 digits";
+    }
+
+    if (!form.city.trim()) {
+      newErrors.city = "City is required";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  /* ================= INPUT HANDLER ================= */
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
+
+  /* ================= PDF DOWNLOAD ================= */
+  const downloadBrochure = () => {
+    const link = document.createElement("a");
+    link.href = brochurePdf;
+    link.download = "demo.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  /* ================= SUBMIT ================= */
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSuccessMsg("");
+
+    if (!validate()) return;
+
+    try {
+      setLoading(true);
+
+      const res = await axios.post(
+        "http://localhost:5000/api/send-brochuremail",
+        form,
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+      console.log(res);
+      if (res.data.success) {
+        setSuccessMsg("✅ Form submitted successfully!");
+        downloadBrochure();
+
+        setForm({
+          name: "",
+          email: "",
+          phone: "",
+          city: "",
+        });
+      }
+    } catch (error) {
+      console.error(error);
+      alert("❌ Failed to submit form. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -323,6 +378,7 @@ export default function AdmissionContact() {
                 required
                 className="form-control mb-3"
               />
+              {errors.name && <small className="text-danger">{errors.name}</small>}
               <input
                 type="email"
                 name="email"
@@ -332,15 +388,21 @@ export default function AdmissionContact() {
                 required
                 className="form-control mb-3"
               />
+              {errors.email && <small className="text-danger">{errors.email}</small>}
               <input
                 type="tel"
                 name="phone"
                 value={form.phone}
-                onChange={handleChange}
+                onChange={(e) => {
+                  const nums = e.target.value.replace(/[^0-9]/g, "");
+                  if (nums.length <= 10)
+                    setForm({ ...form, phone: nums });
+                }}
                 placeholder="Phone"
-                required
-                className="form-control mb-3"
+                className="form-control mb-2"
               />
+              {errors.phone && <small className="text-danger">{errors.phone}</small>}
+
               <input
                 type="text"
                 name="city"
@@ -350,27 +412,26 @@ export default function AdmissionContact() {
                 className="form-control mb-3"
               />
 
-              {/* -------- RECAPTCHA -------- */}
-              <div className="mb-3">
-                <ReCAPTCHA
-                  sitekey="YOUR_SITE_KEY_HERE"
-                  onChange={(value) => setCaptchaValue(value)}
-                />
-              </div>
+              {errors.city && (
+                <small className="text-danger">{errors.city}</small>
+              )}
+
+
+
+
 
               <button
                 type="submit"
-                className="btn w-100"
+                className="btn w-100 mt-3"
+                disabled={loading}
                 style={{
                   backgroundColor: "#0a2240",
                   color: "#fff",
                   padding: "12px",
                   borderRadius: "8px",
-                  fontSize: "16px",
-                  fontWeight: "500",
                 }}
               >
-                Submit & Download
+                {loading ? "Submitting..." : " Submit & Download"}
               </button>
             </form>
 
@@ -386,6 +447,10 @@ export default function AdmissionContact() {
             >
               Close
             </button>
+
+            {successMsg && (
+              <div className="alert alert-success mt-3">{successMsg}</div>
+            )}
           </div>
         </div>
       )}

@@ -229,7 +229,7 @@ const Header = () => {
               Refund Policy
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               className="dropdown-item"
               to="/Addmissions/Feesstructure"
@@ -237,7 +237,7 @@ const Header = () => {
             >
               Fees Structure
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
               className="dropdown-item"
@@ -374,7 +374,7 @@ const Header = () => {
 
           {/* Cleaned up commented links */}
 
-          <li>
+          {/* <li>
             <Link
               className="dropdown-item"
               to="/Placementpage/Corporate"
@@ -382,7 +382,7 @@ const Header = () => {
             >
               Corporate & Student Testimonials
             </Link>
-          </li>
+          </li> */}
 
           {/* Cleaned up commented links */}
         </ul>
@@ -571,7 +571,7 @@ const Header = () => {
         >
           NAAC
         </a>
-        <ul className={`dropdown-menu ${activeDropdown === 7 ? "show" : ""}`}>
+        {/* <ul className={`dropdown-menu ${activeDropdown === 7 ? "show" : ""}`}>
           <li>
             <a
               href="accreditation-certificate.html"
@@ -608,13 +608,13 @@ const Header = () => {
               IQAC
             </a>
           </li>
-        </ul>
+        </ul> */}
       </li>
 
       {/* Contact Us */}
       <li className="nav-item">
         <Link to="/Contactus" className="nav-link" onClick={handleNavLinkClick}>
-          Contact Us
+          Reach Us
         </Link>
       </li>
     </ul>

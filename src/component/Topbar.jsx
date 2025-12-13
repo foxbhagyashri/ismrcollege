@@ -8,6 +8,7 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import ApplyMba from "./ApplyMba";
 
 const TopHeader = () => {
   return (
@@ -67,7 +68,7 @@ const TopHeader = () => {
                 Blogs
               </button>
             </li>
-            <li>
+            {/* <li>
               <button
                 onClick={() => (window.location.href = "/NewsPage/Newsletter")}
                 className="btn btn-sm"
@@ -79,15 +80,16 @@ const TopHeader = () => {
               >
                 Newsletter
               </button>
-            </li>
+            </li> */}
             <li>
               <button
                 onClick={() => (window.location.href = "https://fees.easebuzz.in/view/ISMR_Pune")}
                 className="btn btn-sm"
                 style={{
-                  backgroundColor: "#dcb413ff",
+                  backgroundColor: "#ffc333",
                   color: "#2c2626ff",
                   border: "none",
+                  fontWeight: "600",
                 }}
               >
                 Pay Fees Online
@@ -95,12 +97,13 @@ const TopHeader = () => {
             </li>
             <li>
               <button
-                onClick={() => (window.location.href = "/register")}
+                onClick={() => (window.location.href = "/ApplyMba")}
                 className="btn btn-sm"
                 style={{
-                  backgroundColor: "#dcb413ff",
+                  backgroundColor: "#ffc333",
                   color: "#2c2626ff",
                   border: "none",
+                  fontWeight: "600",
                 }}
               >
                 Apply for MBA
@@ -108,15 +111,16 @@ const TopHeader = () => {
             </li>
             <li>
               <button
-                onClick={() => (window.location.href = "/register")}
+                onClick={() => (window.location.href = "/ApplyBba")}
                 className="btn btn-sm"
                 style={{
-                  backgroundColor: "#dcb413ff",
+                  backgroundColor: "#ffc333",
                   color: "#2c2626ff",
                   border: "none",
+                  fontWeight: "600",
                 }}
               >
-                Apply for BBA/ BCA
+                Apply for BBA / BCA
               </button>
             </li>
 

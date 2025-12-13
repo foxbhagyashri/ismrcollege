@@ -68,6 +68,8 @@ import FAQPage from "./component/Pages/Addmissions/more-faqs";
 import Sticky from "./component/sticky";
 import DisclaimerFeePayment from "./component/Pages/Addmissions/DisclaimerFeesPayment";
 import Blogs from "./component/Blogs";
+import ApplyMba from "./component/ApplyMba";
+import ApplyBba from "./component/ApplyBbaBca";
 
 function App() {
   return (
@@ -160,6 +162,8 @@ function App() {
 
         {/* more PlacementRules */}
         <Route path="/Blogs" element={<Blogs />} />
+        <Route path="/ApplyMba" element={<ApplyMba />} />
+        <Route path="/ApplyBba" element={<ApplyBba />} />
 
       </Routes>
       {/* <Faq /> */}

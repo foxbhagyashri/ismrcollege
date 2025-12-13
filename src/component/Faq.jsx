@@ -1,16 +1,85 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 export default function FaqAndContactSection() {
   const [faqQuery, setFaqQuery] = useState("");
   const [openIndex, setOpenIndex] = useState(null);
-  const [formData, setFormData] = useState({
+  const [form, setForm] = useState({
     name: "",
-    phone: "",
     email: "",
+    phone: "",
     city: "",
     program: "",
     message: "",
   });
+
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [successMsg, setSuccessMsg] = useState("");
+
+
+  /* ================= VALIDATIONS ================= */
+  const validate = () => {
+    const newErrors = {};
+
+    if (!form.name.trim()) newErrors.name = "Full name is required";
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(form.email))
+      newErrors.email = "Enter a valid email address";
+
+    if (form.phone.length !== 10)
+      newErrors.phone = "Phone number must be 10 digits";
+
+    if (!form.program)
+      newErrors.program = "Please select a programme";
+
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  /* ================= INPUT HANDLER ================= */
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
+
+  /* ================= SUBMIT ================= */
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSuccessMsg("");
+
+    if (!validate()) return;
+
+    try {
+      setLoading(true);
+
+      const res = await axios.post(
+        "http://localhost:5000/api/send-mail",
+        form,
+        { headers: { "Content-Type": "application/json" } }
+      );
+
+      if (res.data.success) {
+        setSuccessMsg("✅ Form submitted successfully!");
+        setForm({
+          name: "",
+          email: "",
+          phone: "",
+          city: "",
+          program: "",
+          message: "",
+        });
+      }
+    } catch (err) {
+      alert("❌ Failed to submit form. Try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+
 
   const faqs = [
     {
@@ -51,16 +120,10 @@ export default function FaqAndContactSection() {
 
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
 
-  const handleChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Thank you! Your enquiry has been submitted successfully.");
-  };
 
-  const handleReset = () =>
-    setFormData({ name: "", phone: "", email: "", city: "", program: "", message: "" });
+
+
 
   return (
     <section className="faq-contact-section">
@@ -350,76 +413,92 @@ export default function FaqAndContactSection() {
             Fill the form and our Admissions team will contact you at the earliest
           </p>
 
+
+
           <form onSubmit={handleSubmit}>
-            <div className="form-row">
-              <input
-                type="text"
-                name="name"
-                placeholder="Full Name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-              />
-            </div>
+            <input
+              type="text"
+              name="name"
+              value={form.name}
+              onChange={handleChange}
+              placeholder="Full Name"
+              className="form-control mb-2"
+            />
+            {errors.name && <small className="text-danger">{errors.name}</small>}
 
             <input
               type="email"
               name="email"
-              placeholder="Email Address"
-              value={formData.email}
+              value={form.email}
               onChange={handleChange}
-              required
+              placeholder="Email"
+              className="form-control mb-2"
             />
+            {errors.email && <small className="text-danger">{errors.email}</small>}
+
+            <input
+              type="tel"
+              name="phone"
+              value={form.phone}
+              onChange={(e) => {
+                const nums = e.target.value.replace(/[^0-9]/g, "");
+                if (nums.length <= 10)
+                  setForm({ ...form, phone: nums });
+              }}
+              placeholder="Phone"
+              className="form-control mb-2"
+            />
+            {errors.phone && <small className="text-danger">{errors.phone}</small>}
 
             <input
               type="text"
               name="city"
-              placeholder="City"
-              value={formData.city}
+              value={form.city}
               onChange={handleChange}
-              required
+              placeholder="City"
+              className="form-control mb-2"
             />
 
             <select
               name="program"
-              value={formData.program}
+              value={form.program}
               onChange={handleChange}
-              required
+              className="form-control mb-2"
             >
               <option value="">Select Programme *</option>
               <option value="MBA">MBA</option>
               <option value="BBA">BBA</option>
               <option value="BCA">BCA</option>
-
             </select>
+            {errors.program && (
+              <small className="text-danger">{errors.program}</small>
+            )}
 
             <textarea
               name="message"
-              placeholder="Please write your query here in the open-ended box"
-              value={formData.message}
+              rows="3"
+              value={form.message}
               onChange={handleChange}
-            ></textarea>
+              placeholder="Write your query"
+              className="form-control mb-2"
+            />
+            {errors.message && (
+              <small className="text-danger">{errors.message}</small>
+            )}
 
-            <div className="btn-row">
-              <button type="submit" className="btn-primary">
-                Submit
-              </button>
-              {/* <button
-                type="button"
-                onClick={handleReset}
-                className="btn-secondary"
-              >
-                Reset
-              </button> */}
-            </div>
+            <button
+              type="submit"
+              className="btn w-100 mt-3"
+              disabled={loading}
+              style={{
+                backgroundColor: "#0a2240",
+                color: "#fff",
+                padding: "12px",
+                borderRadius: "8px",
+              }}
+            >
+              {loading ? "Submitting..." : "Submit"}
+            </button>
 
 
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
@@ -433,12 +512,12 @@ export default function FaqAndContactSection() {
               <label htmlFor="vehicle1">I authorize International School of Management and Research, Pune and its representatives to Call, SMS,RCS, Email or WhatsApp me about its programmers and offers. This consent overrides any registration for DNC / NDNC. </label>
             </div>
 
-
-
-
-
-
+            {successMsg && (
+              <div className="alert alert-success mt-3">{successMsg}</div>
+            )}
           </form>
+
+
         </div>
       </div>
     </section>

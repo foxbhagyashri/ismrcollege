@@ -124,7 +124,7 @@ const BlogPage = () => {
 
         <div className="breadcrumb-content">
           <h1 className="breadcrumb-title">
-            Our <span>Blogs</span>
+             <span>Blogs</span>
           </h1>
           <p className="breadcrumb-path">
             Home • <span>Blogs</span>

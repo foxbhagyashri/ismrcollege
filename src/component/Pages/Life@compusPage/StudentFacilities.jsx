@@ -8,73 +8,89 @@ function StudentFacilities() {
   const facilities = [
     {
       id: 1,
-      title: "Uniform kit",
-     
+      title: "Dress Code",
+
       image:
         "/uniformm.jpg",
     },
     {
       id: 2,
       title: "Computer Lab",
-      
+
       image:
         "/comp_lab.jpg",
     },
-    {
-      id: 3,
-      title: "SIP and Placement Activity",
-      
-      image:
-        "/placement-1.jpg",
-    },
+    
     {
       id: 4,
       title: "Foreign Study Tour",
-     
+
       image:
         "/Industry Visit @ National Paints Abu Dhabi.jpg",
     },
     {
       id: 5,
-      title: "Guest-Lectures/ Seminars/ Workshops",
-    
+      title: "Guest Lectures / Seminars / Workshops",
+
       image:
         "/guest_lecture.jpg",
     },
     {
       id: 6,
-      title: "Extra-curricular Activities",
-      
+      title: "Sports Facilities",
+
       image:
         "/activity-e1643704137253.jpg",
     },
     {
       id: 7,
-      title: "Library and Wi-Fi",
-    
+      title: "Library & Wi-Fi",
+
       image:
         "/008.jpg",
     },
     {
       id: 8,
       title: "MDP Activities",
-     
-      image:
-        "/mdp.jpg",
-    },
-    {
-      id: 9,
-      title: "Out-Bound Training Program",
-     
+
       image:
         "/One-Day-Workshop-on-Team-Building-4.png",
     },
     {
       id: 9,
-      title: "Industrial Visits",
-     
+      title: "Out-Bound Training Program",
+
+      image:
+        "/IMG_6795.jpg",
+    },
+   
+    {
+      id: 10,
+      title: "Bus (Transport) Facility",
+
+      image:
+        "/009.jpg",
+    },
+    {
+      id: 11,
+      title: "Seminar Hall / Auditorium",
+
+      image:
+        "/017.jpg",
+    },
+    {
+      id: 12,
+      title: "Gym",
+
       image:
         "/Industry-Visit-to-Spark-Minda-1.png",
+    },
+    {
+      id: 13,
+      title: "Wi-Fi Enabled Campus",
+
+      image:
+        "/0004.jpg",
     },
   ];
 
