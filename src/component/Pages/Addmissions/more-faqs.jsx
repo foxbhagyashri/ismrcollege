@@ -6,34 +6,34 @@ export default function FAQPage() {
 
   const faqs = [
     {
-      question: "What documents are required during admission?",
-      answer: `You need: • 10th & 12th mark sheets, • Graduation mark sheets (if applicable), • Entrance exam scorecard, • ID & address proof, • Passport-size photographs. For more details, please click on the given link – <a href="/Addmissions/Howtoapply" target="_blank" rel="noopener noreferrer">Click here</a>`
+      question: "What documents are required during MBA admission?",
+      answer: `Documents Required :	10th & 12th mark sheets, Graduation mark sheets (all semesters), Entrance exam scorecard, Aadhaar Card, Passport-size photographs. For more details, For more details, please click on the link give – <a href="/Addmissions/Howtoapply" target="_blank" rel="noopener noreferrer">List of Document</a>`
 
     },
 
     {
       question: "How do I know my admission is confirmed?",
-      answer: "Your admission is confirmed only after: •	Submission of required documents , • Payment of the registration fee , • Receiving an official confirmation email from the institute."
+      answer: "Your admission is confirmed only after: Submission of required documents , Payment of the registration fee , Receiving an official confirmation email from the institute."
     },
     {
       question: "What are the fee payment options?",
-      answer: "You can pay fees through Debit Card, Credit Card, UPI etc."
+      answer: "You can pay fees through Debit Card, Credit Card, UPI, NetBanking etc."
     },
     {
       question: "Are scholarships available?",
-      answer: "Yes. ISMR offers merit-based scholarships based on entrance exam scores, academic performance, and special categories."
+      answer: "Yes. ISMR offers merit-based scholarships based on academic performance."
     },
     {
       question: "What about placements at ISMR?",
-      answer: "ISMR has a strong placement record with top companies visiting every year."
+      answer: "ISMR offers 100% Placement Assistance with top noch companies."
     },
     {
       question: "What companies visit ISMR for placements?",
-      answer: "Reputed companies from IT, BFSI, manufacturing, retail, consulting, FMCG, and analytics sectors regularly visit the campus."
+      answer: "Reputed companies like Bajaj Finserv, Syntel, Eureka Forbes, Bank of Maharashtra, Tech Mahindra, XDBS, EXL, Amdocs and many more regularly visit the campus."
     },
     {
       question: "Is internship/industry exposure provided?",
-      answer: "Yes. Students undergo On-Job-Training, workshops, corporate guest sessions, Field Project and industrial visits."
+      answer: "Yes. Students undergo On-Job-Training, workshops, corporate guest sessions, field project and industrial visits."
     },
     {
       question: "Are students required to complete internships?",
@@ -44,20 +44,16 @@ export default function FAQPage() {
       answer: "Yes. The institute provides full support with loan-related documents for easy processing through major banks."
     },
     {
-      question: "What is the campus environment like?",
-      answer: "The ISMR campus offers a modern, industry-oriented learning environment with classrooms, labs, seminar halls, library, recreational facilities etc."
-    },
-    {
       question: "What is syllabus of MBA?",
-      answer: "We follow the syllabus prescribed by SavitribaiPhule Pune University. It is according to NEP 2020 recommendations. For more details, please click on the given link."
+      answer: "We follow the syllabus prescribed by SavitribaiPhule Pune University."
     },
     {
       question: "Is there any value addition apart from the syllabus?",
-      answer: "Yes. We provide value added courses with certifications throughout 4 semesters"
+      answer: "Yes. We provide value added courses with certifications throughout the semesters."
     },
     {
       question: "Are MOOCs available?",
-      answer: "Yes. ISMR has recognized chapter on NPTEL for MOOCs."
+      answer: "Yes. ISMR has recognized chapter of NPTEL on SWAYAM platform for MOOCs."
     },
     {
       question: "What are the facilities in Library?",
@@ -73,7 +69,7 @@ export default function FAQPage() {
     },
     {
       question: "Does ISMR provide hostel facilities?",
-      answer: "Yes, separate and secured boys’ and girls’ hostel facilities are available with mess, Wi-Fi, and other essential amenities."
+      answer: "Yes, separate and secured boys’ and girls’ hostel facilities are available with mess, Wi-Fi, and other essential amenities outside the campus."
     },
     {
       question: "What are the sports facilities available in the campus?",
@@ -91,9 +87,10 @@ export default function FAQPage() {
       question: "Can I cancel my admission?",
       answer: "Yes. Admission cancellation and refund requests must be emailed to admissions@ismrpune.edu.in before the CET Cell deadline."
     },
+    
     {
       question: "How can I contact ISMR for queries?",
-      answer: "You can reach us at: 📩admissions@ismrpune.edu.in , 📞 Institute phone number - 9923786079 Or visit the campus during working hours 9 AM – 6 PM"
+      answer: "You can reach us at: 📩admissions@ismrpune.edu.in , 📞 Institute phone number - 9923786079 Or visit the campus during working hours 9 AM – 6 PM from Monday to Saturday"
     },
   ];
 
@@ -182,10 +179,10 @@ export default function FAQPage() {
                 transition: "max-height 0.4s ease",
               }}
             >
-             <p
-  style={{ marginTop: "10px", lineHeight: "1.6" }}
-  dangerouslySetInnerHTML={{ __html: faq.answer }}
-></p>
+              <p
+                style={{ marginTop: "10px", lineHeight: "1.6" }}
+                dangerouslySetInnerHTML={{ __html: faq.answer }}
+              ></p>
 
             </div>
           </div>

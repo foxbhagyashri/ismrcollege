@@ -59,7 +59,7 @@ const Sticky = () => {
             }}
           >
             <h4 style={{ color: "#0a2240", marginBottom: "1rem" }}>
-            Enquiry Form
+              Enquiry Form
             </h4>
             <ContactForm />
 

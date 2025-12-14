@@ -192,6 +192,100 @@ function Leadership() {
         </div>
       </section>
 
+      <section className="py-1 pt-4">
+        <div className="container">
+
+
+          <div className="row g-4 mt-5">
+
+
+
+            <div className="col-12 col-md-7 col-lg-7">
+              <h2
+                style={{
+                  fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                  fontSize: "32px",
+                  fontWeight: 700,
+                  color: "#0a2240",
+
+                  marginBottom: "1.5rem",
+                }}
+              >
+
+                Message from the Treasurer
+              </h2>
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>
+                Change remains the only constant in today’s dynamic economic and business environment. As industries, financial systems, and organizations continue to evolve, strong financial stewardship and adaptability have become essential. Through my professional journey in finance and management, I have observed multiple cycles of transformation, and I am proud that ISMR B-School has consistently demonstrated financial resilience, transparency, and strategic foresight during these changing times.
+              </p>
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>
+                At ISMR B-School, our financial governance is firmly rooted in accountability, integrity, and ethical practices. We ensure optimal utilization of resources while supporting a contemporary, industry-aligned academic framework. Financial planning at ISMR actively enables initiatives in ethics, international exposure, corporate engagement, and experiential learning—ensuring students benefit from a holistic and future-oriented education.
+              </p>
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>
+                Our commitment extends beyond numbers to responsible institutional growth and social impact. By supporting community-driven initiatives and the Socially Useful and Productive Work (SUPW) program, we reinforce our responsibility toward society while fostering socially conscious leadership among students.
+              </p>
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>
+                As India’s emerging sectors continue to attract global investment, the role of sound financial management becomes increasingly critical. ISMR remains committed to strengthening its financial foundation to support innovation, sustainability, and continuous upskilling—preparing students to thrive in an interconnected and rapidly evolving global business landscape.
+              </p>
+
+
+              <h5><i>Chetan Bhutada</i></h5>
+              <h6>
+                CA</h6>
+
+
+            </div>
+
+
+            <div className="col-12 col-md-5 col-lg-5">
+              <img
+                src={secretary}
+                alt="Leadership Team"
+                className="img-fluid rounded"
+              />
+            </div>
+
+
+
+
+
+          </div>
+
+
+
+        </div>
+      </section>
 
 
     </div>

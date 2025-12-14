@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 
 export default function FaqAndContactSection() {
+
+
+  const [showModal, setShowModal] = useState(false);
   const [faqQuery, setFaqQuery] = useState("");
   const [openIndex, setOpenIndex] = useState(null);
   const [form, setForm] = useState({
@@ -12,6 +15,7 @@ export default function FaqAndContactSection() {
     program: "",
     message: "",
   });
+
 
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
@@ -34,7 +38,6 @@ export default function FaqAndContactSection() {
     if (!form.program)
       newErrors.program = "Please select a programme";
 
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -45,16 +48,14 @@ export default function FaqAndContactSection() {
     setForm({ ...form, [name]: value });
   };
 
+
   /* ================= SUBMIT ================= */
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setSuccessMsg("");
-
     if (!validate()) return;
 
     try {
       setLoading(true);
-
       const res = await axios.post(
         "http://localhost:5000/api/send-mail",
         form,
@@ -72,45 +73,58 @@ export default function FaqAndContactSection() {
           message: "",
         });
       }
-    } catch (err) {
-      alert("❌ Failed to submit form. Try again.");
+    } catch {
+      alert("❌ Failed to submit form.");
     } finally {
       setLoading(false);
     }
   };
 
 
-
   const faqs = [
     {
       q: "What courses does ISMR Pune offer?",
-      a: "ISMR offers a full-time SPPU affiliated MBA, BBA & BCA program with specializations in Marketing, Finance, HR, Business Analytics, Operations & Supply Chain, Agri-Business Management & Pharma Health Care Management. ",
+      a: "ISMR offers a full-time SPPU Affiliated MBA, BBA & BCA program with specializations in Marketing, Finance, Human Resource, Business Analytics, Operations & Supply Chain, Agri-Business Management & Pharma Health Care Management.",
     },
     {
       q: "Is the MBA, BBA & BCA program at ISMR affiliated?",
-      a: "Yes. The MBA program is affiliated with SavitribaiPhule Pune University (SPPU).",
+      a: "Yes. The MBA, BBA, & BCA programs are affiliated with SavitribaiPhule Pune University (SPPU).",
     },
     {
       q: "Is the MBA, BBA & BCA program at ISMR approved?",
-      a: "Yes. The MBA program is approved by AICTE.",
+      a: "Yes. The MBA, BBA & BCA programs areapproved by AICTE, New Delhi.",
     },
     {
-      q: "What is the eligibility for admission to the MBA, BBA & BCA program?",
-      a: "You must be a graduate (minimum 50% marks) from any recognized university. Final-year students can also apply.",
+      q: "What is the eligibility Criteria for MBA Program?",
+      a: "Candidates with minimum 50% marks in graduation (45% for reserved categories) from any recognized university and with a valid score card in national-level entrance tests like with MAH-MBA CET/CMAT/CAT/MAT/XAT/ATMA/GMAT are eligible to apply (all such exams shall be treated at par) enabling the candidate to appear for selection Process directly.",
     },
     {
-      q: "Which entrance exams are accepted?",
-      a: "ISMR accepts CAT, MAT, CMAT, XAT, ATMA, MH-CET, or any other equivalent and valid national-level entrance exam score.",
+      q: "Which entrance exams are accepted for MBA Program ?",
+      a: "CAT, MAT, CMAT, XAT, ATMA, MH-CET, or any other equivalent and valid national-level entrance exam score are accepted.",
     },
     {
       q: "What is the campus environment like?",
-      a: "The ISMR campus offers a modern, industry-oriented learning environment with classrooms, labs, seminar halls, library, recreational facilities etc.",
+      a: "The ISMR campus offers a modern, industry-oriented learning environment with classrooms, labs, seminar hall, library, recreational facilities, conference room etc.",
     },
     {
-      q: "How do I apply for admission?",
-      a: "You can apply online through the ISMR website. Or click on the following link - ",
+      q: "How to apply for admission?",
+
+      a: (
+        <>
+          You can apply online only through the ISMR website. Or click on the following link
+          <br />
+          <button
+            className="btn btn-secondary mt-2"
+            onClick={() => setShowModal(true)}
+          >
+            Apply Now
+          </button>
+        </>
+      ),
     },
   ];
+
+
 
   const filtered = faqs.filter(
     (f) =>
@@ -123,9 +137,9 @@ export default function FaqAndContactSection() {
 
 
 
-
-
   return (
+
+
     <section className="faq-contact-section">
       <style>{`
 
@@ -404,6 +418,98 @@ export default function FaqAndContactSection() {
           </div>
 
           <a href="/Addmissions/more-faqs" class="default-btn">More FAQ's</a>
+
+
+
+
+          {/* -------- MODAL -------- */}
+          {showModal && (
+            <div
+              style={{
+                position: "fixed",
+                inset: 0,
+                background: "rgba(0,0,0,0.6)",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                zIndex: 9999,
+              }}
+            >
+              <div className="bg-white p-4 rounded" style={{ width: "90%", maxWidth: 500 }}>
+                <h4>Enquiry Form</h4>
+
+                <form onSubmit={handleSubmit}>
+                  <input
+                    name="name"
+                    placeholder="Name"
+                    value={form.name}
+                    onChange={handleChange}
+                    className="form-control mb-2"
+                  />
+
+                  <input
+                    name="email"
+                    placeholder="Email"
+                    value={form.email}
+                    onChange={handleChange}
+                    className="form-control mb-2"
+                  />
+
+                  <input
+                    name="phone"
+                    placeholder="Phone"
+                    value={form.phone}
+                    onChange={handleChange}
+                    maxLength="10"
+                    className="form-control mb-2"
+                  />
+                  <input
+                    name="city"
+                    placeholder="City"
+                    value={form.city}
+                    onChange={handleChange}
+                    className="form-control mb-2"
+                  />
+
+                  <select
+                    name="program"
+                    value={form.program}
+                    onChange={handleChange}
+                    className="form-control mb-2"
+                  >
+                    <option value="">Select Program</option>
+                    <option>MBA</option>
+                    <option>BBA</option>
+                    <option>BCA</option>
+                  </select>
+
+
+                  <textarea
+                    name="message"
+                    placeholder="Message"
+                    value={form.message}
+                    onChange={handleChange}
+                    className="form-control mb-2"
+                  />
+
+                  <button className="btn btn-primary" disabled={loading}>
+                    {loading ? "Submitting..." : "Submit"}
+                  </button>
+                </form>
+
+                {successMsg && <p className="text-success mt-2">{successMsg}</p>}
+
+                <button
+                  className="btn btn-link text-danger mt-2"
+                  onClick={() => setShowModal(false)}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
+
+
         </div>
 
         {/* RIGHT: CONTACT FORM */}
