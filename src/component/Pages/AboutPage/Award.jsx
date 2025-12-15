@@ -71,16 +71,7 @@ function AwardsRankings() {
       category: "Excellence in Students Placements for 2018",
       description: "Awarded 'Excellence in Students Placements for 2018' by Education World-Wide India.",
     },
-    {
-
-      category: "Best Business School Award in 2017",
-      description: "Winner of 'Best Business School Award in 2017' by 24 MRC Award - For Excellence in Higher Education.",
-    },
-    {
-
-      category: "Top Private Management Institute in Western India",
-      description: "Jagran Josh recognizing 'Top Private Management Institute in Western India'.",
-    },
+    
   ];
 
   const recognitions = [

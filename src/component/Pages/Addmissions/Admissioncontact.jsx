@@ -13,7 +13,7 @@ export default function AdmissionContact() {
     email: "",
     phone: "",
     city: "",
-    from: "Brochure Enquiry Form",
+    fromForm: "Brochure Enquiry Form",
   });
 
   const [errors, setErrors] = useState({});
@@ -72,7 +72,7 @@ export default function AdmissionContact() {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5000/api/send-brochuremail",
+        "http://localhost:5000/api/send-mail",
         form,
         {
           headers: { "Content-Type": "application/json" },

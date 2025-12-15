@@ -3,7 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import { BookFill } from "react-bootstrap-icons";
 import { Button } from "bootstrap";
-import ReCAPTCHA from "react-google-recaptcha";
+
+import axios from "axios";
+import brochurePdf from "../../../assets/demo.pdf"; // Add your PDF in assets
 
 function ProgramOfferedPage() {
 
@@ -13,42 +15,131 @@ function ProgramOfferedPage() {
     email: "",
     phone: "",
     city: "",
-    message: "",
-    programme: "",
+    fromForm: ""
   });
-  const [submitted, setSubmitted] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [captchaValue, setCaptchaValue] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({});
+
 
   const handleChange = (e) =>
     setForm((s) => ({ ...s, [e.target.name]: e.target.value }));
+  const syllabusMap = {
+    MBA: {
+      "Financial Management": brochurePdf,
+      "Marketing Management": brochurePdf,
+      "Human Resource Management": brochurePdf,
+      "Operations & Supply Chain Management": brochurePdf,
+      "Business Analytics": brochurePdf,
+      "Agribusiness Management": brochurePdf,
+      "Pharma Management": brochurePdf
+    },
+    BBA: {
+      Programme: brochurePdf,
+      Features: brochurePdf,
+    },
+    BCA: {
+      Programme: brochurePdf,
+      Features: brochurePdf,
+    },
+  };
+  const validateForm = () => {
+    const newErrors = {};
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (!captchaValue) {
-      alert("Please verify that you are not a robot!");
-      return;
+    // Name
+    if (!form.name.trim()) {
+      newErrors.name = "Name is required";
+    } else if (form.name.length < 3) {
+      newErrors.name = "Name must be at least 3 characters";
     }
 
-    // Trigger PDF download
-    // const link = document.createElement("a");
-    // link.href = brochurePdf;
-    // link.download = "Admissions-Brochure.pdf";
-    // document.body.appendChild(link);
-    // link.click();
-    // document.body.removeChild(link);
+    // Email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!form.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!emailRegex.test(form.email)) {
+      newErrors.email = "Enter a valid email";
+    }
 
-    setShowModal(false);
-    setForm({ name: "", email: "", phone: "", city: "" });
-    setCaptchaValue(null);
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    // Phone (India – 10 digits)
+    const phoneRegex = /^[6-9]\d{9}$/;
+    if (!form.phone.trim()) {
+      newErrors.phone = "Phone number is required";
+    } else if (!phoneRegex.test(form.phone)) {
+      newErrors.phone = "Enter valid 10 digit mobile number";
+    }
+
+    // City
+    if (!form.city.trim()) {
+      newErrors.city = "City is required";
+    }
+
+    // From which course PDF
+    if (!form.fromForm) {
+      newErrors.fromForm = "Course selection missing";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!validateForm()) return;
+
+    try {
+      setLoading(true);
+
+      const payload = {
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        city: form.city,
+        fromForm: form.fromForm,
+      };
+
+      const res = await axios.post(
+        "http://localhost:5000/api/send-mail",
+        payload,
+        { headers: { "Content-Type": "application/json" } }
+      );
+
+      if (res.data.success) {
+        const pdfUrl =
+          syllabusMap[activeTab]?.[activeSection] ||
+          syllabusMap[activeTab]?.Programme;
+
+        if (pdfUrl) {
+          const link = document.createElement("a");
+          link.href = pdfUrl;
+          link.download = `${form.fromForm}-Syllabus.pdf`;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        }
+
+        setShowModal(false);
+        setErrors({});
+
+        setForm({
+          name: "",
+          email: "",
+          phone: "",
+          city: "",
+          fromForm: "",
+        });
+
+      }
+    } catch (err) {
+      console.error(err);
+      alert("❌ Failed to submit form. Try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const [activeTab, setActiveTab] = useState("MBA");
   const [activeSection, setActiveSection] = useState("");
-
   const interFont = {
     fontFamily: "'Inter', Arial, Helvetica, sans-serif",
     fontSize: "16px",
@@ -72,6 +163,8 @@ function ProgramOfferedPage() {
       "Pharma Management",
     ],
   };
+
+
 
   // Content for each section
   const sectionContent = {
@@ -429,8 +522,14 @@ function ProgramOfferedPage() {
                           fontWeight: "500",
                           fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                         }}
-                        onClick={() => setShowModal(true)}
-                      >
+                        onClick={() => {
+                          setForm((prev) => ({
+                            ...prev,
+                            programme: activeTab,     // MBA / BBA / BCA
+                            fromForm: activeSection,      // 👈 course PDF downloaded
+                          }));
+                          setShowModal(true);
+                        }}>
                         <span>📄</span> Download Syllabus
                       </button>
 
@@ -465,7 +564,7 @@ function ProgramOfferedPage() {
                           }}
                         >
                           <h4 style={{ color: "#0a2240", marginBottom: "1rem" }}>
-                            Fill the form to download brochure
+                            Fill the form to download syllabus
                           </h4>
 
                           <form onSubmit={handleSubmit}>
@@ -478,6 +577,8 @@ function ProgramOfferedPage() {
                               required
                               className="form-control mb-3"
                             />
+                            {errors.name && <small className="text-danger">{errors.name}</small>}
+
                             <input
                               type="email"
                               name="email"
@@ -487,6 +588,8 @@ function ProgramOfferedPage() {
                               required
                               className="form-control mb-3"
                             />
+                            {errors.name && <small className="text-danger">{errors.name}</small>}
+
                             <input
                               type="tel"
                               name="phone"
@@ -496,6 +599,8 @@ function ProgramOfferedPage() {
                               required
                               className="form-control mb-3"
                             />
+                            {errors.phone && <small className="text-danger">{errors.phone}</small>}
+
                             <input
                               type="text"
                               name="city"
@@ -505,28 +610,25 @@ function ProgramOfferedPage() {
                               className="form-control mb-3"
                             />
 
-                            {/* -------- RECAPTCHA -------- */}
-                            <div className="mb-3">
-                              <ReCAPTCHA
-                                sitekey="YOUR_SITE_KEY_HERE"
-                                onChange={(value) => setCaptchaValue(value)}
-                              />
-                            </div>
+                            {errors.city && <small className="text-danger">{errors.city}</small>}
 
                             <button
                               type="submit"
                               className="btn w-100"
+                              disabled={loading}
                               style={{
-                                backgroundColor: "#0a2240",
+                                backgroundColor: loading ? "#999" : "#0a2240",
                                 color: "#fff",
                                 padding: "12px",
                                 borderRadius: "8px",
                                 fontSize: "16px",
                                 fontWeight: "500",
+                                cursor: loading ? "not-allowed" : "pointer",
                               }}
                             >
-                              Submit & Download
+                              {loading ? "Submitting..." : "Submit & Download"}
                             </button>
+
                           </form>
 
                           <button

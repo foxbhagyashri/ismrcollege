@@ -8,8 +8,8 @@ const ContactForm = () => {
         phone: "",
         city: "",
         program: "",
-        message: "",
-        from: "Enquiry Form",
+        message: "",    
+        fromForm: "Enquiry Form",
     });
 
     const [errors, setErrors] = useState({});
@@ -68,6 +68,7 @@ const ContactForm = () => {
                     city: "",
                     program: "",
                     message: "",
+                   
                 });
             }
         } catch (err) {
