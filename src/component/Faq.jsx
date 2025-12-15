@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import ContactForm from "./form/ContactForm";
 
 export default function FaqAndContactSection() {
 
@@ -438,64 +439,7 @@ export default function FaqAndContactSection() {
               <div className="bg-white p-4 rounded" style={{ width: "90%", maxWidth: 500 }}>
                 <h4>Enquiry Form</h4>
 
-                <form onSubmit={handleSubmit}>
-                  <input
-                    name="name"
-                    placeholder="Name"
-                    value={form.name}
-                    onChange={handleChange}
-                    className="form-control mb-2"
-                  />
-
-                  <input
-                    name="email"
-                    placeholder="Email"
-                    value={form.email}
-                    onChange={handleChange}
-                    className="form-control mb-2"
-                  />
-
-                  <input
-                    name="phone"
-                    placeholder="Phone"
-                    value={form.phone}
-                    onChange={handleChange}
-                    maxLength="10"
-                    className="form-control mb-2"
-                  />
-                  <input
-                    name="city"
-                    placeholder="City"
-                    value={form.city}
-                    onChange={handleChange}
-                    className="form-control mb-2"
-                  />
-
-                  <select
-                    name="program"
-                    value={form.program}
-                    onChange={handleChange}
-                    className="form-control mb-2"
-                  >
-                    <option value="">Select Program</option>
-                    <option>MBA</option>
-                    <option>BBA</option>
-                    <option>BCA</option>
-                  </select>
-
-
-                  <textarea
-                    name="message"
-                    placeholder="Message"
-                    value={form.message}
-                    onChange={handleChange}
-                    className="form-control mb-2"
-                  />
-
-                  <button className="btn btn-primary" disabled={loading}>
-                    {loading ? "Submitting..." : "Submit"}
-                  </button>
-                </form>
+                <ContactForm />
 
                 {successMsg && <p className="text-success mt-2">{successMsg}</p>}
 
