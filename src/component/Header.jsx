@@ -144,6 +144,15 @@ const Header = () => {
                   Director Message
                 </Link>
               </li>
+              <li>
+                <Link
+                  className="dropdown-item"
+                  to="AboutPage/Treasure"
+                  onClick={handleDropdownItemClick}
+                >
+                  Treasure  Message
+                </Link>
+              </li>
             </ul>
           </li>
 

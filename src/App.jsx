@@ -70,6 +70,7 @@ import DisclaimerFeePayment from "./component/Pages/Addmissions/DisclaimerFeesPa
 import Blogs from "./component/Blogs";
 import ApplyMba from "./component/ApplyMba";
 import ApplyBba from "./component/ApplyBbaBca";
+import Treasure from "./component/Pages/AboutPage/Treasure";
 
 function App() {
   return (
@@ -109,6 +110,7 @@ function App() {
         <Route path="/Aboutpage/Chairman" element={<Chairman />} />
         <Route path="/Aboutpage/Director" element={<Director />} />
         <Route path="/Aboutpage/Secretary" element={<Secretary />} />
+        <Route path="/Aboutpage/Treasure" element={<Treasure />} />
 
         <Route
           path="/Addmissions/Eligibility-criteria"
