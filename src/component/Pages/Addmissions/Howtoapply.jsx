@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import Faq from "../../Faq";
 import ReCAPTCHA from "react-google-recaptcha";
+import ContactForm from "../../form/ContactForm";
 
 export default function HowToApply() {
 
@@ -16,6 +17,7 @@ export default function HowToApply() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [showModall, setShowModall] = useState(false);
   const [captchaValue, setCaptchaValue] = useState(null);
 
   const handleChange = (e) =>
@@ -700,7 +702,7 @@ export default function HowToApply() {
                   Admission consideration is based on valid entrance exam scores (MAH-MBA CET/CMAT/CAT/MAT/XAT/ATMA/GMAT) and a minimum of 50% marks in graduation (45% for reserved categories), along with performance in the telephonic interview.
                 </p>
                 <div className="cta-row">
-                  <button className="btn-primary">Apply Now</button>
+                  <button className="btn-primary" aria-label="Apply Now" onClick={() => setShowModall(true)}>Apply Now</button>
                   <button className="btn-secondary" onClick={() => setShowModal(true)}>Download Brochure</button>
                 </div>
               </div>
@@ -913,7 +915,7 @@ export default function HowToApply() {
                     "Application Open: Dec 1, 2025",
                     "Application Close: 30 June 2026",
                     "Eligible Entrance Exam: MAH-MBA CET/CMAT/CAT/MAT/XAT/ATMA/GMAT",
-                    
+
                     "Last Date for fee payment: 30 June 2026",
                   ].map((item, index) => (
                     <li key={index}>
@@ -927,6 +929,58 @@ export default function HowToApply() {
           </div>
         </div>
       </div>
+
+
+
+      {/* -------- FORM MODAL -------- */}
+      {showModall && (
+        <div
+          className="modal-backdrop"
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0,0,0,0.6)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 9999,
+          }}
+        >
+          <div
+            className="modal-content rounded-3 p-4"
+            style={{
+              backgroundColor: "#fff",
+              maxWidth: "500px",
+              width: "90%",
+            }}
+          >
+            <h4 style={{ color: "#0a2240", marginBottom: "1rem" }}>
+              Enquiry Now
+            </h4>
+
+            <ContactForm />
+
+
+            <button
+              onClick={() => setShowModal(false)}
+              style={{
+                marginTop: "10px",
+                background: "transparent",
+                border: "none",
+                color: "#d95c5c",
+                cursor: "pointer",
+              }}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
+
 
 
       {/* -------- FORM MODAL -------- */}

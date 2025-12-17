@@ -138,21 +138,22 @@ const Header = () => {
               <li>
                 <Link
                   className="dropdown-item"
-                  to="AboutPage/Director"
-                  onClick={handleDropdownItemClick}
-                >
-                  Director Message
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="dropdown-item"
                   to="AboutPage/Treasure"
                   onClick={handleDropdownItemClick}
                 >
                   Treasure  Message
                 </Link>
               </li>
+              <li>
+                <Link
+                  className="dropdown-item"
+                  to="AboutPage/Director"
+                  onClick={handleDropdownItemClick}
+                >
+                  Director Message
+                </Link>
+              </li>
+
             </ul>
           </li>
 

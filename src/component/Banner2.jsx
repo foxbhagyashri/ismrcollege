@@ -1,6 +1,6 @@
 import React from "react";
 import "./Banner2.css";
-
+import { Link } from "react-router-dom";
 import { FaPlay, FaArrowRight } from "react-icons/fa";
 
 const Banner = () => {
@@ -53,7 +53,7 @@ const Banner = () => {
                 </div>
                 <ul className="list-unstyled  d-flex align-items-center btn-list">
                   <li className="d-inline-block">
-                    <a className="default-btn" href="Aboutpage/Aboutinstutue">
+                    <Link className="default-btn" to="Aboutpage/Aboutinstutue">
                       Institute Overview &nbsp;{" "}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +68,7 @@ const Banner = () => {
                           d="M1 8a.5.5 0 0 1 .5-.h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
                         />
                       </svg>
-                    </a>
+                    </Link>
                   </li>
                   {/* <li className="d-inline-block">
                     <ul className="list-unstyled d-flex align-items-center ps-0 mb-0 play-btn">

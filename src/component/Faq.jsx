@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import ContactForm from "./form/ContactForm";
+import { Link } from "react-router-dom";
+
 
 export default function FaqAndContactSection() {
 
@@ -418,7 +420,7 @@ export default function FaqAndContactSection() {
             )}
           </div>
 
-          <a href="/Addmissions/more-faqs" class="default-btn">More FAQ's</a>
+          <Link to="/Addmissions/more-faqs" class="default-btn">More FAQ's</Link>
 
 
 

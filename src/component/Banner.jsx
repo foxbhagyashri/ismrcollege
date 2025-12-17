@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Banner.css"; // Assuming the CSS file is named Banner.css
+import { Link } from "react-router-dom";
 
 const Travel = () => {
   const videos = [
@@ -38,16 +39,16 @@ const Travel = () => {
 
       {/* STATIC Text Content - RENDERED ONCE */}
       <div className="content active">
-        <div className="title"> 
-          <p>
-            Sri Balaji Education Society's 
+        <div className="title">
+          <p style={{ fontSize: "23px", textAlign: "center" }}>
+            Sri Balaji Education Society's
           </p>
           <h1>
             INTERNATIONAL SCHOOL OF<br /> MANAGEMENT AND RESEARCH
           </h1>
-        
+
           {/* Optional: Add the "Read more" link if desired, though it wasn't in the provided static structure */}
-          <a href="/Aboutpage/Aboutinstutue">Read more</a>
+          <Link to="/Aboutpage/Aboutinstutue">Read more</Link>
         </div>
       </div>
 

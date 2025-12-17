@@ -56,6 +56,7 @@ function StudentCampusAndActivities() {
 
         </p> */}
 
+
         {/* ===== Image Cards Row ===== */}
         {/* ===== Image Cards Row ===== */}
         <div className="row g-4 my-3">
@@ -66,7 +67,7 @@ function StudentCampusAndActivities() {
                 className="card-img-top"
                 alt="Industrial Visit"
                 style={{
-                  height: "220px",
+                  height: "300px",
                   objectFit: "cover",
                   borderRadius: "8px",
                 }}
@@ -82,7 +83,7 @@ function StudentCampusAndActivities() {
                 className="card-img-top"
                 alt="Industrial Visit"
                 style={{
-                  height: "220px",
+                  height: "300px",
                   objectFit: "cover",
                   borderRadius: "8px",
                 }}
@@ -98,7 +99,7 @@ function StudentCampusAndActivities() {
                 className="card-img-top"
                 alt="Industrial Visit"
                 style={{
-                  height: "220px",
+                  height: "300px",
                   objectFit: "cover",
                   borderRadius: "8px",
                 }}
@@ -113,7 +114,7 @@ function StudentCampusAndActivities() {
                 className="card-img-top"
                 alt="Industrial Visit"
                 style={{
-                  height: "220px",
+                  height: "300px",
                   objectFit: "cover",
                   borderRadius: "8px",
                 }}
@@ -156,7 +157,7 @@ function StudentCampusAndActivities() {
                 className="card-img-top"
                 alt="Industrial Visit"
                 style={{
-                  height: "220px",
+                  height: "300px",
                   objectFit: "cover",
                   borderRadius: "8px",
                 }}
@@ -172,7 +173,7 @@ function StudentCampusAndActivities() {
                 className="card-img-top"
                 alt="Industrial Visit"
                 style={{
-                  height: "220px",
+                  height: "300px",
                   objectFit: "cover",
                   borderRadius: "8px",
                 }}
@@ -188,7 +189,7 @@ function StudentCampusAndActivities() {
                 className="card-img-top"
                 alt="Industrial Visit"
                 style={{
-                  height: "220px",
+                  height: "300px",
                   objectFit: "cover",
                   borderRadius: "8px",
                 }}
@@ -203,7 +204,7 @@ function StudentCampusAndActivities() {
                 className="card-img-top"
                 alt="Industrial Visit"
                 style={{
-                  height: "220px",
+                  height: "300px",
                   objectFit: "cover",
                   borderRadius: "8px",
                 }}
@@ -241,7 +242,7 @@ function StudentCampusAndActivities() {
                 className="card-img-top"
                 alt="Industrial Visit"
                 style={{
-                  height: "220px",
+                  height: "300px",
                   objectFit: "cover",
                   borderRadius: "8px",
                 }}
@@ -257,7 +258,7 @@ function StudentCampusAndActivities() {
                 className="card-img-top"
                 alt="Industrial Visit"
                 style={{
-                  height: "220px",
+                  height: "300px",
                   objectFit: "cover",
                   borderRadius: "8px",
                 }}
@@ -273,7 +274,7 @@ function StudentCampusAndActivities() {
                 className="card-img-top"
                 alt="Industrial Visit"
                 style={{
-                  height: "220px",
+                  height: "300px",
                   objectFit: "cover",
                   borderRadius: "8px",
                 }}
@@ -288,7 +289,7 @@ function StudentCampusAndActivities() {
                 className="card-img-top"
                 alt="Industrial Visit"
                 style={{
-                  height: "220px",
+                  height: "300px",
                   objectFit: "cover",
                   borderRadius: "8px",
                 }}
@@ -325,7 +326,7 @@ function StudentCampusAndActivities() {
                 className="card-img-top"
                 alt="Industrial Visit"
                 style={{
-                  height: "220px",
+                  height: "300px",
                   objectFit: "cover",
                   borderRadius: "8px",
                 }}
@@ -341,7 +342,7 @@ function StudentCampusAndActivities() {
                 className="card-img-top"
                 alt="Industrial Visit"
                 style={{
-                  height: "220px",
+                  height: "300px",
                   objectFit: "cover",
                   borderRadius: "8px",
                 }}
@@ -357,7 +358,7 @@ function StudentCampusAndActivities() {
                 className="card-img-top"
                 alt="Industrial Visit"
                 style={{
-                  height: "220px",
+                  height: "300px",
                   objectFit: "cover",
                   borderRadius: "8px",
                 }}
@@ -372,7 +373,7 @@ function StudentCampusAndActivities() {
                 className="card-img-top"
                 alt="Industrial Visit"
                 style={{
-                  height: "220px",
+                  height: "300px",
                   objectFit: "cover",
                   borderRadius: "8px",
                 }}
@@ -409,7 +410,7 @@ function StudentCampusAndActivities() {
                 className="card-img-top"
                 alt="Industrial Visit"
                 style={{
-                  height: "220px",
+                  height: "300px",
                   objectFit: "cover",
                   borderRadius: "8px",
                 }}
@@ -425,7 +426,7 @@ function StudentCampusAndActivities() {
                 className="card-img-top"
                 alt="Industrial Visit"
                 style={{
-                  height: "220px",
+                  height: "300px",
                   objectFit: "cover",
                   borderRadius: "8px",
                 }}
@@ -441,7 +442,7 @@ function StudentCampusAndActivities() {
                 className="card-img-top"
                 alt="Industrial Visit"
                 style={{
-                  height: "220px",
+                  height: "300px",
                   objectFit: "cover",
                   borderRadius: "8px",
                 }}
@@ -456,7 +457,7 @@ function StudentCampusAndActivities() {
                 className="card-img-top"
                 alt="Industrial Visit"
                 style={{
-                  height: "220px",
+                  height: "300px",
                   objectFit: "cover",
                   borderRadius: "8px",
                 }}
@@ -477,6 +478,14 @@ function StudentCampusAndActivities() {
         @media (max-width: 768px) {
           .campus-text { font-size: 14px !important; }
         }
+          .card {
+  max-width: 420px;
+  margin: auto;
+}
+
+.card img {
+  height: 380px;
+}
       `}</style>
 
       {/* ===== Header Section ===== */}
@@ -545,7 +554,7 @@ function StudentCampusAndActivities() {
 
             {/* Right Content */}
             <div className="col-md-8 col-lg-9">
-              <div className="bg-white shadow-sm rounded-3 p-4 p-md-5">
+              <div className="bg-white shadow-sm rounded-3 p-2 p-md-2">
                 {contentMap[activeSection]}
               </div>
             </div>
