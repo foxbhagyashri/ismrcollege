@@ -68,12 +68,12 @@ const TopHeader = () => {
           <div className="top-header-right">
             <ul className="list-unstyled d-flex gap-2 mb-0">
               <li>
-                <button
-                  onClick={() => (window.location.href = "/Blogs")}
+                <Link to="/Blogs"
+
                   className="btn btn-sm text-white"
                 >
                   Blogs
-                </button>
+                </Link>
               </li>
 
               <li>
