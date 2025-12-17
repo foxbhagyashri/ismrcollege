@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./ProgramsSection.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 import {
   faChartLine,
   faSackDollar, // Better for Finance
@@ -86,7 +87,7 @@ const ProgramsSection = () => {
               </p>
             </div>
 
-            <a className="view-more-btn" href="/Academics/Academics">
+            <Link className="view-more-btn" to="/Academics/Academics">
               Read More
               <svg
                 width="16"
@@ -103,7 +104,7 @@ const ProgramsSection = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-            </a>
+            </Link>
 
           </div>
         ))}

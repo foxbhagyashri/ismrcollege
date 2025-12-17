@@ -76,6 +76,38 @@ const Testimonials = () => {
       text: "I am Pallavi Shikhare, and this program has truly made a positive impact on my life. It helped me gain valuable knowledge and practical skills while connecting with professionals from diverse backgrounds. The global exposure and networking opportunities were extremely beneficial. I now feel confident and well prepared to take on leadership challenges.",
       rating: 5,
     },
+    {
+      id: 13,
+      name: "Roshan Julme",
+
+      img: "./roshan.png",
+      text: "I am Roshan Julme, a Marketing student at the International School of Management and Research. My journey here has been very rewarding. The faculty’s guidance and practical examples helped me understand strategic marketing and brand management much better. The active learning environment at ISMR improved my skills and gave me the confidence to succeed in today’s competitive business world.",
+      rating: 5,
+    },
+    {
+      id: 14,
+      name: "Pranita Bhosale",
+
+      img: "./pranita.png",
+      text: "I am PranitaBhosale, and my journey at ISMR College has been both memorable and life-changing. The college gave me a good mix of strong academics and practical learning. The supportive faculty, interactive classes, and real-world exposure helped me develop important professional and personal skills. I am very thankful to ISMR for building my confidence and guiding me toward success. Being the topper of my batch is a proud moment for me, and it shows how much the institute supports and encourages every student.",
+      rating: 5,
+    },
+    {
+      id: 15,
+      name: "Raj Sakhiya",
+
+      img: "./raj.png",
+      text: "I am Raj Sakhiya, an MBA student at the International School of Management and Research.Studying here has been a great experience. The college helped me gain good knowledge and encouraged me to take part in activities that improved my overall personality.I am thankful to ISMR for giving me the chance to learn, grow, and create wonderful memories.",
+      rating: 5,
+    },
+    {
+      id: 16,
+      name: "Palak Rangari",
+
+      img: "./PalakRangari.png",
+      text: "I am Palak Rangari, and my journey at the International School of Management and Research (ISMR), Pune has been truly meaningful.These two years of my MBA helped me grow academically, professionally, and personally through practical learning and constant support from faculty.ISMR strengthened my foundation in Marketing by providing real-world exposure, leadership opportunities, and confidence beyond textbooks.I am deeply grateful for the guidance, experiences, and lifelong memories that shaped my true potential.",
+      rating: 5,
+    },
   ];
 
   const settings = {
@@ -211,7 +243,7 @@ const Testimonials = () => {
         .testimonial-card {
           width: 100%;
           max-width: 360px;
-          height: auto;
+          height:900px;
         }
         @media (max-width: 768px) {
           .testimonial-card {

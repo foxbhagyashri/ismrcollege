@@ -1,133 +1,172 @@
-import React from "react";
+import React, { useState } from "react";
 import "./TopHeader.css";
 import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-  FaPhoneAlt,
-  FaEnvelope,
-  FaMapMarkerAlt,
 } from "react-icons/fa";
-import ApplyMba from "./ApplyMba";
+import ContactForm from "./form/ContactForm";
 
 const TopHeader = () => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
-    <div className="top-header-area">
-      <div className="container-fluid d-flex justify-content-between align-items-center">
-        {/* Left Section - Contact Info */}
-        <div className="top-header-left">
-          <ul>
-            <li>
-              <a href="tel:+919923786079">
-                <i className="ri-phone-fill"></i> +91 9923786079
-              </a>
-            </li>
-            <li >
-              <a href="mailto:admissions@ismrpune.edu.in">
-                <i className="ri-mail-line " ></i> admissions@ismrpune.edu.in
-              </a>
-            </li>
-            <li><a
-              href="https://www.facebook.com/ismrcollegepune/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaFacebookF />
-            </a>
-            </li>
-            <li><a
-              href="https://www.instagram.com/ismrofficial/?hl=en"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaInstagram />
-            </a></li>
-            <li><a
-              href="https://www.linkedin.com/school/international-school-of-management-and-research-pune/?originalSubdomain=in"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedinIn />
-            </a></li>
-          </ul>
-        </div>
+    <>
+      <div className="top-header-area">
+        <div className="container-fluid d-flex justify-content-between align-items-center">
 
-        {/* Right Section - Buttons */}
-        <div className="top-header-right">
-          <ul className="list-unstyled d-flex gap-2 mb-0">
-            <li>
-              <button
-                onClick={() => (window.location.href = "/Blogs")}
-                className="btn btn-sm"
-                style={{
-                  backgroundColor: "",
-                  color: "#fff",
-                  border: "none",
-                }}
-              >
-                Blogs
-              </button>
-            </li>
-            {/* <li>
-              <button
-                onClick={() => (window.location.href = "/NewsPage/Newsletter")}
-                className="btn btn-sm"
-                style={{
-                  backgroundColor: "",
-                  color: "#fff",
-                  border: "none",
-                }}
-              >
-                Newsletter
-              </button>
-            </li> */}
-            <li>
-              <button
-                onClick={() => (window.location.href = "https://fees.easebuzz.in/view/ISMR_Pune")}
-                className="btn btn-sm"
-                style={{
-                  backgroundColor: "#ffc333",
-                  color: "#2c2626ff",
-                  border: "none",
-                  fontWeight: "600",
-                }}
-              >
-                Pay Fees Online
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => (window.location.href = "/ApplyMba")}
-                className="btn btn-sm"
-                style={{
-                  backgroundColor: "#ffc333",
-                  color: "#2c2626ff",
-                  border: "none",
-                  fontWeight: "600",
-                }}
-              >
-                Apply for MBA
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => (window.location.href = "/ApplyBba")}
-                className="btn btn-sm"
-                style={{
-                  backgroundColor: "#ffc333",
-                  color: "#2c2626ff",
-                  border: "none",
-                  fontWeight: "600",
-                }}
-              >
-                Apply for BBA / BCA
-              </button>
-            </li>
+          {/* Left Section */}
+          <div className="top-header-left">
+            <ul>
+              <li>
+                <a href="tel:+919923786079">
+                  <i className="ri-phone-fill"></i> +91 9923786079
+                </a>
+              </li>
 
-          </ul>
+              <li>
+                <a href="mailto:admissions@ismrpune.edu.in">
+                  <i className="ri-mail-line"></i> admissions@ismrpune.edu.in
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.facebook.com/ismrcollegepune/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaFacebookF />
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.instagram.com/ismrofficial/?hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagram />
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.linkedin.com/school/international-school-of-management-and-research-pune/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedinIn />
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Right Section */}
+          <div className="top-header-right">
+            <ul className="list-unstyled d-flex gap-2 mb-0">
+              <li>
+                <button
+                  onClick={() => (window.location.href = "/Blogs")}
+                  className="btn btn-sm text-white"
+                >
+                  Blogs
+                </button>
+              </li>
+
+              <li>
+                <button
+                  onClick={() =>
+                  (window.location.href =
+                    "https://fees.easebuzz.in/view/ISMR_Pune")
+                  }
+                  className="btn btn-sm"
+                  style={{
+                    backgroundColor: "#ffc333",
+                    color: "#2c2626ff",
+                    fontWeight: "600",
+                  }}
+                >
+                  Pay Fees Online
+                </button>
+              </li>
+
+              <li>
+                <button
+                  onClick={() => setShowModal(true)}
+                  className="btn btn-sm"
+                  style={{
+                    backgroundColor: "#ffc333",
+                    color: "#2c2626ff",
+                    fontWeight: "600",
+                  }}
+                >
+                  Apply for MBA
+                </button>
+              </li>
+
+              <li>
+                <button
+                  onClick={() => setShowModal(true)}
+                  className="btn btn-sm"
+                  style={{
+                    backgroundColor: "#ffc333",
+                    color: "#2c2626ff",
+                    fontWeight: "600",
+                  }}
+                >
+                  Apply for BBA / BCA
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+
+      {/* -------- MODAL -------- */}
+      {showModal && (
+        <div
+          className="modal-backdrop"
+          style={{
+            position: "fixed",
+            inset: 0,
+            backgroundColor: "rgba(0,0,0,0.6)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 9999,
+          }}
+        >
+          <div
+            className="modal-content rounded-3 p-4"
+            style={{
+              backgroundColor: "#fff",
+              maxWidth: "500px",
+              width: "90%",
+            }}
+          >
+            <h4 style={{ color: "#0a2240", marginBottom: "1rem" }}>
+              Enquiry Form
+            </h4>
+
+            <ContactForm />
+
+            <button
+              onClick={() => setShowModal(false)}
+              style={{
+                marginTop: "10px",
+                background: "transparent",
+                border: "none",
+                color: "#d95c5c",
+                cursor: "pointer",
+              }}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
