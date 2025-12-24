@@ -9,7 +9,7 @@ const StudentLife = () => {
     return (
         <section className="student-life">
             <Container>
-                <h2>We are playing campus video here.</h2>
+                <h2>Add Campus Tour</h2>
                 {/* <Row className="align-items-center">
                     <Col md={12} className="text-center mb-4 mb-md-0">
                         <video
@@ -26,6 +26,7 @@ const StudentLife = () => {
                         </video>
                     </Col>
                 </Row> */}
+                <h4 style={{textAlign:"center"}}>We are playing campus video here.</h4>
             </Container>
         </section>
     );
