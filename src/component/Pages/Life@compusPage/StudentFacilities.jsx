@@ -61,7 +61,7 @@ function StudentFacilities() {
       title: "Out-Bound Training Program",
 
       image:
-        "/IMG_6795.jpg",
+        "/outactivity.jpeg",
     },
 
     {
@@ -69,7 +69,7 @@ function StudentFacilities() {
       title: "Bus (Transport) Facility",
 
       image:
-        "/bus.jpg",
+        "/bustrasport.jpeg",
     },
     {
       id: 11,
@@ -83,7 +83,7 @@ function StudentFacilities() {
       title: "Gym",
 
       image:
-        "/Industry-Visit-to-Spark-Minda-1.png",
+        "/gym.jpeg",
     },
     {
       id: 13,

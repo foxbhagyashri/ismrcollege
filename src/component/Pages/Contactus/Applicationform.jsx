@@ -32,6 +32,7 @@ function Applicationform() {
         }
 
         setForm({ ...form, resume: file });
+        console.log("Selected file:", file);
     };
 
 
@@ -41,8 +42,9 @@ function Applicationform() {
         phone: "",
         city: "",
         program: "",
-        message: "",
-        fromForm: "Enquiry Form",
+        state: "",
+        resume: "",
+        fromForm: "Career application Form",
     });
 
     const [errors, setErrors] = useState({});
@@ -70,7 +72,7 @@ function Applicationform() {
         return Object.keys(newErrors).length === 0;
     };
 
-    /* ================= INPUT HANDLER ================= */
+    /* ================= INPUT HANDLER a================= */
     const handleChange = (e) => {
         const { name, value } = e.target;
         setForm({ ...form, [name]: value });
@@ -93,7 +95,7 @@ function Applicationform() {
             );
 
             if (res.data.success) {
-                setSuccessMsg("✅ Thank you for your enquiry at ISMR Pune. Our team will get back to you soon.");
+                setSuccessMsg("✅ Thank you for applying to ISMR. Your profile will be reviewed, and we will get back to you shortly.");
                 setForm({
                     name: "",
                     email: "",

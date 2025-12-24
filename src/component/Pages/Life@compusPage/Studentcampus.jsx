@@ -1,20 +1,76 @@
-import React, { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BriefcaseFill } from "react-bootstrap-icons";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 
+/* =================== 3 CARD SLIDER =================== */
+const ImageSlider = ({ title, images }) => {
+  const [index, setIndex] = useState(0);
+  const intervalRef = useRef(null);
+  const totalPages = Math.ceil(images.length / 3);
 
+  const startAuto = () => {
+    intervalRef.current = setInterval(() => {
+      setIndex((prev) => (prev + 1) % totalPages);
+    }, 4000);
+  };
 
+  const resetAuto = () => {
+    clearInterval(intervalRef.current);
+    startAuto();
+  };
+
+  useEffect(() => {
+    startAuto();
+    return () => clearInterval(intervalRef.current);
+  }, []);
+
+  const next = () => {
+    setIndex((prev) => (prev + 1) % totalPages);
+    resetAuto();
+  };
+
+  const prev = () => {
+    setIndex((prev) => (prev - 1 + totalPages) % totalPages);
+    resetAuto();
+  };
+
+  return (
+    <div className="slider-block">
+      <h6 className="text-center text-danger fw-semibold mb-3">{title}</h6>
+
+      <div className="multi-slider">
+        <button className="arrow left" onClick={prev}>❮</button>
+
+        <div className="slider-window">
+          <div
+            className="slider-track"
+            style={{ transform: `translateX(-${index * 100}%)` }}
+          >
+            {[...Array(totalPages)].map((_, page) => (
+              <div className="slide-page" key={page}>
+                {images.slice(page * 3, page * 3 + 3).map((img, i) => (
+                  <div className="img-card" key={i}>
+                    <img src={img} alt={title} />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <button className="arrow right" onClick={next}>❯</button>
+      </div>
+    </div>
+  );
+};
+
+/* =================== MAIN PAGE =================== */
 function StudentCampusAndActivities() {
   const [activeSection, setActiveSection] = useState(
     "NATIONAL & INTERNATIONAL INDUSTRIAL VISIT"
   );
-
-  const interFont = {
-    fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-    fontSize: "16px",
-    lineHeight: 1.7,
-  };
+  const [activeCultural, setActiveCultural] = useState("Holi");
 
   const navItems = [
     "NATIONAL & INTERNATIONAL INDUSTRIAL VISIT",
@@ -26,540 +82,232 @@ function StudentCampusAndActivities() {
 
   const contentMap = {
     "NATIONAL & INTERNATIONAL INDUSTRIAL VISIT": (
-      <div>
-        <h3
-          className="mb-3"
-          style={{
-            ...interFont,
-            fontWeight: 800,
-            fontSize: "1.75rem",
-            color: "#0a2240",
-          }}
-        >
-          🌍 National & International Industrial Visits
-        </h3>
+      <ImageSlider
+        title="Industrial Visits"
+        images={[
+          "/Industry Visit @ National Paints Abu Dhabi.jpg",
+          "/2-1.png",
+          "/3-1.png",
+          "/5-1.png",
 
-        {/* <p
-          className="campus-text"
-          style={{
-            ...interFont,
-            maxWidth: "800px",
-            textAlign: "justify",
-          }}
-        >
-          Our students regularly participate in <strong>industrial visits</strong>
-          to leading organizations across India and abroad. These visits bridge
-          the gap between theoretical learning and real-world application, allowing
-          students to understand modern technologies, management practices, and
-          global business trends.
-          <br />
-
-        </p> */}
-
-
-        {/* ===== Image Cards Row ===== */}
-        {/* ===== Image Cards Row ===== */}
-        <div className="row g-4 my-3">
-          <div className="col-md-6">
-            <div className="card shadow-sm h-100 border-0">
-              <img
-                src="/Industry Visit @ National Paints Abu Dhabi.jpg"
-                className="card-img-top"
-                alt="Industrial Visit"
-                style={{
-                  height: "300px",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                }}
-              />
-              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>National Paints, Abu Dhabi</h5>
-            </div>
-          </div>
-
-          <div className="col-md-6">
-            <div className="card shadow-sm h-100 border-0">
-              <img
-                src="/2-1.png"
-                className="card-img-top"
-                alt="Industrial Visit"
-                style={{
-                  height: "300px",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                }}
-              />
-              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Tata Steel, Dubai</h5>
-            </div>
-          </div>
-
-          <div className="col-md-6">
-            <div className="card shadow-sm h-100 border-0">
-              <img
-                src="/3-1.png"
-                className="card-img-top"
-                alt="Industrial Visit"
-                style={{
-                  height: "300px",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                }}
-              />
-              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Renishaw Metrologies India Ltd. Pune</h5>
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="card shadow-sm h-100 border-0">
-              <img
-                src="/5-1.png"
-                className="card-img-top"
-                alt="Industrial Visit"
-                style={{
-                  height: "300px",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                }}
-              />
-              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Industrial Visit to Mapro Mahableshwar</h5>
-            </div>
-          </div>
-
-        </div>
-
-
-
-      </div>
+        ]}
+      />
     ),
 
-    // ------- Other Sections --------
     "TRAINING & DEVELOPMENT": (
-      <div>
-        <h3
-          className="mb-3"
-          style={{
-            ...interFont,
-            fontWeight: 800,
-            fontSize: "1.75rem",
-            color: "#0a2240",
-          }}
-        >
-          🧠 Training & Development
-        </h3>
-        {/* <p className="campus-text" style={{ ...interFont, maxWidth: "800px", textAlign: "justify" }}>
-          The institute conducts comprehensive <strong>training and development programs</strong>
-          to enhance students’ employability skills.
-        </p> */}
-
-        <div className="row g-4 my-3">
-          <div className="col-md-6">
-            <div className="card shadow-sm h-100 border-0">
-              <img
-                src="/4-1.png"
-                className="card-img-top"
-                alt="Industrial Visit"
-                style={{
-                  height: "300px",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                }}
-              />
-              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Team Building Activity</h5>
-            </div>
-          </div>
-
-          <div className="col-md-6">
-            <div className="card shadow-sm h-100 border-0">
-              <img
-                src="/5.png"
-                className="card-img-top"
-                alt="Industrial Visit"
-                style={{
-                  height: "300px",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                }}
-              />
-              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Yoga Meditation</h5>
-            </div>
-          </div>
-
-          <div className="col-md-6">
-            <div className="card shadow-sm h-100 border-0">
-              <img
-                src="/6.png"
-                className="card-img-top"
-                alt="Industrial Visit"
-                style={{
-                  height: "300px",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                }}
-              />
-              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Outbound Training Program</h5>
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="card shadow-sm h-100 border-0">
-              <img
-                src="/activity-e1643704137253.jpg"
-                className="card-img-top"
-                alt="Industrial Visit"
-                style={{
-                  height: "300px",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                }}
-              />
-              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Sports Activity</h5>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
+      <ImageSlider
+        title="Training Programs"
+        images={["/4-1.png", "/5.png", "/6.png", "/activity-e1643704137253.jpg"]}
+      />
     ),
 
     "ACADEMIC AWARD CEREMONY": (
-      <div>
-        <h3
-          className="mb-3"
-          style={{
-            ...interFont,
-            fontWeight: 800,
-            fontSize: "1.75rem",
-            color: "#0a2240",
-          }}
-        >
-          🏅 Academic Award Ceremony
-        </h3>
-        {/* <p className="campus-text" style={{ ...interFont, maxWidth: "800px", textAlign: "justify" }}>
-          The Academic Award Ceremony recognizes outstanding students for their excellence.
-        </p> */}
-        <div className="row g-4 my-3">
-          <div className="col-md-6">
-            <div className="card shadow-sm h-100 border-0">
-              <img
-                src="/7.png"
-                className="card-img-top"
-                alt="Industrial Visit"
-                style={{
-                  height: "300px",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                }}
-              />
-              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Best Disciplined Award</h5>
-            </div>
-          </div>
-
-          <div className="col-md-6">
-            <div className="card shadow-sm h-100 border-0">
-              <img
-                src="/8.png"
-                className="card-img-top"
-                alt="Industrial Visit"
-                style={{
-                  height: "300px",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                }}
-              />
-              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Overall Award Distribution</h5>
-            </div>
-          </div>
-
-          <div className="col-md-6">
-            <div className="card shadow-sm h-100 border-0">
-              <img
-                src="/9.png"
-                className="card-img-top"
-                alt="Industrial Visit"
-                style={{
-                  height: "300px",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                }}
-              />
-              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Academic Award Ceremony Day</h5>
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="card shadow-sm h-100 border-0">
-              <img
-                src="/7-1.png"
-                className="card-img-top"
-                alt="Industrial Visit"
-                style={{
-                  height: "300px",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                }}
-              />
-              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Top Merit Award</h5>
-            </div>
-          </div>
-
-        </div>
-      </div>
+      <ImageSlider
+        title="Award Ceremony"
+        images={["/7.png", "/8.png", "/9.png", "/7-1.png"]}
+      />
     ),
 
     "DOMESTIC & INTERNATIONAL STUDY TOUR": (
-      <div>
-        <h3
-          className="mb-3"
-          style={{
-            ...interFont,
-            fontWeight: 800,
-            fontSize: "1.75rem",
-            color: "#0a2240",
-          }}
-        >
-          ✈️ Domestic & International Study Tours
-        </h3>
-        {/* <p className="campus-text" style={{ ...interFont, maxWidth: "800px", textAlign: "justify" }}>
-          Study tours provide learning beyond classrooms.
-        </p> */}
-        <div className="row g-4 my-3">
-          <div className="col-md-6">
-            <div className="card shadow-sm h-100 border-0">
-              <img
-                src="/Students @ Ferrari World Abu Dabhi.jpg"
-                className="card-img-top"
-                alt="Industrial Visit"
-                style={{
-                  height: "300px",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                }}
-              />
-              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Ferrari World, Abu Dhabi</h5>
-            </div>
-          </div>
-
-          <div className="col-md-6">
-            <div className="card shadow-sm h-100 border-0">
-              <img
-                src="/Students @ Burj Al Arab Beach Dubai.jpg"
-                className="card-img-top"
-                alt="Industrial Visit"
-                style={{
-                  height: "300px",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                }}
-              />
-              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Burj-AI-Arab Beach, Dubai</h5>
-            </div>
-          </div>
-
-          <div className="col-md-6">
-            <div className="card shadow-sm h-100 border-0">
-              <img
-                src="/12.png"
-                className="card-img-top"
-                alt="Industrial Visit"
-                style={{
-                  height: "300px",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                }}
-              />
-              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Gujarat</h5>
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="card shadow-sm h-100 border-0">
-              <img
-                src="/Picnic @ Mahableshwar .jpg"
-                className="card-img-top"
-                alt="Industrial Visit"
-                style={{
-                  height: "300px",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                }}
-              />
-              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Goa</h5>
-            </div>
-          </div>
-
-        </div>
-      </div>
+      <ImageSlider
+        title="Study Tours"
+        images={[
+          "/Students @ Ferrari World Abu Dabhi.jpg",
+          "/Students @ Burj Al Arab Beach Dubai.jpg",
+          "/12.png",
+          "/Picnic @ Mahableshwar .jpg",
+        ]}
+      />
     ),
 
     "CULTURAL ACTIVITIES": (
-      <div>
-        <h3
-          className="mb-3"
-          style={{
-            ...interFont,
-            fontWeight: 800,
-            fontSize: "1.75rem",
-            color: "#0a2240",
-          }}
-        >
-          🎭 Cultural Activities
-        </h3>
-        {/* <p className="campus-text" style={{ ...interFont, maxWidth: "800px", textAlign: "justify" }}>
-          The vibrant cultural life at our campus encourages creativity and teamwork.
-        </p> */}
-        <div className="row g-4 my-3">
-          <div className="col-md-6">
-            <div className="card shadow-sm h-100 border-0">
-              <img
-                src="/15.png"
-                className="card-img-top"
-                alt="Industrial Visit"
-                style={{
-                  height: "300px",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                }}
-              />
-              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Holi Celebration</h5>
-            </div>
-          </div>
-
-          <div className="col-md-6">
-            <div className="card shadow-sm h-100 border-0">
-              <img
-                src="/14.png"
-                className="card-img-top"
-                alt="Industrial Visit"
-                style={{
-                  height: "300px",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                }}
-              />
-              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Independence Day</h5>
-            </div>
-          </div>
-
-          <div className="col-md-6">
-            <div className="card shadow-sm h-100 border-0">
-              <img
-                src="/_DSC3779.jpg"
-                className="card-img-top"
-                alt="Industrial Visit"
-                style={{
-                  height: "300px",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                }}
-              />
-              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Fresher's Party</h5>
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="card shadow-sm h-100 border-0">
-              <img
-                src="/4-4.png"
-                className="card-img-top"
-                alt="Industrial Visit"
-                style={{
-                  height: "300px",
-                  objectFit: "cover",
-                  borderRadius: "8px",
-                }}
-              />
-              <h5 style={{ textAlign: "center", marginTop: "10px", color: "#b71c20" }}>Farewell Party</h5>
-            </div>
-          </div>
-
+      <>
+        <div className="sub-tabs mb-4">
+          {["Holi", "Ganpati", "Fresher Party", "Dahi Handi", "Garba Event", "Trekking", "Picnic"].map((item) => (
+            <button
+              key={item}
+              className={`btn ${activeCultural === item ? "btn-primary" : "btn-outline-primary"
+                }`}
+              onClick={() => setActiveCultural(item)}
+            >
+              {item}
+            </button>
+          ))}
         </div>
-      </div>
+
+        {activeCultural === "Holi" && (
+          <ImageSlider title="Holi Celebration" images={["/DSC05794.jpg", "/IMG_4282.jpg", "/IMG_4088.jpg", "/IMG_1702.jpg", "/IMG_1690.jpg"]} />
+        )}
+        {activeCultural === "Ganpati" && (
+          <ImageSlider title="Ganpati Festival" images={["/IMG_2270.jpg", "/DSC04202.jpg", "/DSC04135.jpg", "/DSC_0404.jpg", "/DSC_0096.jpg"]} />
+        )}
+        {activeCultural === "Fresher Party" && (
+          <ImageSlider title="Freshers Party" images={["/_DSC3779 (1).jpg", "/_DSC3913.jpg", "/_DSC3941 (1).jpg", "/_DSC3978.jpg", "/_DSC3769.jpg"]} />
+        )}
+        {activeCultural === "Dahi Handi" && (
+          <ImageSlider title="Dahi Handi" images={["/IMG_7279.jpg", "/DSC_0292.jpg", "/DSC_0230.jpg", "/DSC_0221.jpg", "/DSC_0175.jpg"]} />
+        )}
+        {activeCultural === "Garba Event" && (
+          <ImageSlider title="Garba Event" images={["/GarbhaCelbration.jpg", "/WhatsApp Image 2025-10-27 at 2.33.48 PM (1).jpeg", "/WhatsApp Image 2025-10-16 at 3.09.13 PM.jpeg", "/WhatsApp Image 2025-10-27 at 2.33.48 PM.jpeg", "/IMG_0032.jpg"]} />
+        )}
+        {activeCultural === "Trekking" && (
+          <ImageSlider title="Trekking" images={["/20160124_160248.jpg", "/IMG_6983.jpg", "/DSC_0376.jpg", "/DSC_0176.jpg"]} />
+        )}
+          {activeCultural === "Picnic" && (
+          <ImageSlider title="Picnic" images={["/Mahabaleshwar.jpeg", "/Venna lake.jpg", "/VennaLake.jpeg", "/Panchgani.jpg"]} />
+        )}
+      </>
     ),
   };
 
   return (
     <>
-      {/* ===== Responsive Styles ===== */}
       <style>{`
-        @media (max-width: 768px) {
-          .campus-text { font-size: 14px !important; }
+
+
+        .campus-tabs {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 12px;
+          margin-bottom: 30px;
         }
-          .card {
-  max-width: 420px;
-  margin: auto;
+        .campus-tab {
+          padding: 12px 18px;
+          border-radius: 30px;
+          background: #f1f3f5;
+          font-weight: 600;
+          cursor: pointer;
+        }
+        .campus-tab.active {
+          background: #0a2240;
+          color: white;
+        }
+        .sub-tabs {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+        }
+
+
+.multi-slider {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.card img {
-  height: 380px;
+.slider-window {
+  overflow: hidden;
+  width: 100%;
 }
+
+.slider-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide-page {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* EACH IMAGE CARD */
+.img-card {
+  width: 33.33%;
+  max-width: 360px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.img-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Arrows */
+.arrow {
+  background: #0a2240;
+  color: #fff;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow.left {
+  margin-right: 15px;
+}
+
+.arrow.right {
+  margin-left: 15px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 991px) {
+  .slide-page {
+    gap: 12px;
+  }
+
+  .img-card {
+    width: 48%;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 600px) {
+  .slide-page {
+    flex-direction: column;
+  }
+
+  .img-card {
+    width: 100%;
+  }
+
+  .img-card img {
+    height: 220px;
+  }
+}
+
+
       `}</style>
 
-      {/* ===== Header Section ===== */}
       <section
-        className="py-5 text-white text-center position-relative"
+        className="py-5 text-white text-center"
         style={{
-          background: "linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%)",
-          fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+          background: `linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%), url(${allsectionbg})`,
+          backgroundBlendMode: "overlay",
+          backgroundSize: "cover",
         }}
       >
-        <div
-          className="position-absolute top-0 end-0 w-100 h-100 opacity-25"
-          style={{
-            backgroundImage: `url(${allsectionbg})`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
-        ></div>
-
-        <div className="container position-relative py-5">
-          <h1 className="mb-3" style={{ fontSize: "40px", fontWeight: 700 }}>
-            Student <span className="text-warning">Campus Life</span>
-          </h1>
-        </div>
+        <h1 className="fw-bold">Student <span className="text-warning">Campus Life</span></h1>
       </section>
 
-      {/* ===== Main Section ===== */}
-      <div className="container-fluid py-5" style={{ backgroundColor: "#f8f9fa" }}>
-        <div className="container">
-          <h1
-            className="mb-4 text-center text-md-start"
-            style={{
-              fontSize: "30px",
-              fontWeight: 700,
-              color: "#0a2240",
-            }}
-          >
-            <BriefcaseFill className="me-2" style={{ color: "#0a2240" }} /> Campus
-            <span style={{ color: "#1a4d7a" }}> Life</span>
-          </h1>
+      <div className="container py-5">
+        <h3 className="text-center mb-4 fw-bold">
+          <BriefcaseFill /> Campus Life
+        </h3>
 
-          <div className="row g-4 mt-2">
-            {/* Left Navigation */}
-            <div className="col-md-4 col-lg-3">
-              <div className="shadow-sm bg-white rounded-3 p-3" style={{ borderLeft: "4px solid #0a2240" }}>
-                {navItems.map((item) => (
-                  <div
-                    key={item}
-                    onClick={() => setActiveSection(item)}
-                    className={`p-3 mb-2 rounded ${activeSection === item ? "text-white" : "text-dark"
-                      }`}
-                    style={{
-                      fontWeight: 600,
-                      fontSize: "15px",
-                      cursor: "pointer",
-                      backgroundColor: activeSection === item ? "#0a2240" : "#f8f9fa",
-                      border: activeSection === item ? "2px solid #0a2240" : "1px solid #dee2e6",
-                      transition: "all 0.25s ease",
-                    }}
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
+        <div className="campus-tabs">
+          {navItems.map((item) => (
+            <div
+              key={item}
+              className={`campus-tab ${activeSection === item ? "active" : ""}`}
+              onClick={() => setActiveSection(item)}
+            >
+              {item}
             </div>
-
-            {/* Right Content */}
-            <div className="col-md-8 col-lg-9">
-              <div className="bg-white shadow-sm rounded-3 p-2 p-md-2">
-                {contentMap[activeSection]}
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
+
+        {contentMap[activeSection]}
       </div>
     </>
   );
