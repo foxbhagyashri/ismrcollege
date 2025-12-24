@@ -40,14 +40,15 @@ const PlacementRules = () => {
                     </p>
                     <p>6.	Missing updates due to not checking the notice board or email will not be accepted as an excuse.</p>
                     <p>7.	Students who do not meet the eligibility criteria required by a company will not be allowed to appear for that placement drive.</p>
-                    <p>8.	Students must wear formal attire for every placement activity and carry a folder containing:</p>
+                    <p>8.	Students must wear college uniform only for every placement activity and carry a folder containing:</p>
 
                     <ul>
                         <li>	Multiple copies of their resume</li>
                         <li>	Passport-size colour photographs</li>
                         <li>   Photocopies of educational certificates (10th, 12th, Graduation)</li>
                         <li>	College ID card</li>
-                        <li>	Government ID/address proof (Driving Licence, Passport, PAN, Aadhaar, Voter ID)</li>
+                        <li>	Government ID/address proof any 1 (Driving Licence, Passport, PAN, Aadhaar, Voter ID)</li>
+                        <li>If a selected student rejects the job offer, he/she will be considered placed from our side and no further opportunity will be given to him/her.</li>
                     </ul>
 
 

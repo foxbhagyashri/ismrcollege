@@ -72,7 +72,7 @@ export default function AdmissionContact() {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5000/api/send-mail",
+        "https://api.ismrpune.edu.in/api/send-mail",
         form,
         {
           headers: { "Content-Type": "application/json" },

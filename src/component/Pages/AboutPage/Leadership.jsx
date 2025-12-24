@@ -143,7 +143,7 @@ function Leadership() {
                 textAlign: "justify",
                 textJustify: "inter-word",
               }}>
-                We welcome ambitious students aspiring to make a difference in the world of work. We provide you with an environment that believes in the power of business to achieve new heights. Curiosity to explore more about you, others and the world we live in is a unique development that will be made in the ISMR B-School. We build the courage in you to define your vision and make it a reality. You are driven to inspire and empower others to achieve beyond expectations; this is the culture at ISMR B-School.
+                We welcome ambitious students aspiring to make a difference in the world of work. We provide you with an environment that believes in the power of business to achieve new heights. Curiosity to explore more about you, others and the world we live in is a unique development that will be made in the ISMR. We build the courage in you to define your vision and make it a reality. You are driven to inspire and empower others to achieve beyond expectations; this is the culture at ISMR.
               </p>
               <p style={{
                 fontSize: "16px",
@@ -281,7 +281,7 @@ function Leadership() {
                   fontSize: "32px",
                   fontWeight: 700,
                   color: "#0a2240",
-              
+
                   marginBottom: "1.5rem",
                 }}
               >

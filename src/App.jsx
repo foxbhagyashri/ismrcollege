@@ -71,6 +71,8 @@ import Blogs from "./component/Blogs";
 import ApplyMba from "./component/ApplyMba";
 import ApplyBba from "./component/ApplyBbaBca";
 import Treasure from "./component/Pages/AboutPage/Treasure";
+import Applicationform from "./component/Pages/Contactus/Applicationform";
+import FAQBba from "./component/Pages/Addmissions/FaqBbaBca";
 
 function App() {
   return (
@@ -121,6 +123,7 @@ function App() {
         <Route path="/Addmissions/Disclaimer" element={<Disclaimer />} />
         <Route path="/Addmissions/Refundpolicy" element={<Refundpolicy />} />
         <Route path="/Addmissions/Feesstructure" element={<Feesstructure />} />
+        <Route path="/Addmissions/FaqBbaBca" element={<FAQBba />} />
         <Route
           path="/Addmissions/Admissioncontact"
           element={<Admissioncontact />}
@@ -149,6 +152,7 @@ function App() {
 
         {/* Contact us Page */}
         <Route path="/Contactus" element={<Contactus />} />
+        <Route path="/Applicationform" element={<Applicationform />} />
 
         {/* more faqs */}
         <Route path="/Addmissions/more-faqs" element={<FAQPage />} />

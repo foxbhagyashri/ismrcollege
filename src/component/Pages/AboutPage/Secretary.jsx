@@ -87,7 +87,7 @@ function Leadership() {
               margin: 0,
             }}
           >
-            Secretary <span className="text-warning">Message</span>
+            Message  <span className="text-warning">From Secretary</span>
           </h1>
           <p
             className="mb-0"
@@ -97,7 +97,7 @@ function Leadership() {
               marginTop: "0.5rem",
             }}
           >
-            About • <span className="text-warning">Secretary Message</span>
+            About • <span className="text-warning">Message From Secretary</span>
           </p>
         </div>
       </section>
@@ -125,7 +125,7 @@ function Leadership() {
             </div>
 
             <div className="col-12 col-md-7 col-lg-7">
-              <h2
+              {/* <h2
                 style={{
                   fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                   fontSize: "32px",
@@ -137,6 +137,19 @@ function Leadership() {
               >
 
                 A Word From the Secretary
+              </h2> */}
+              <h2
+                style={{
+                  fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                  fontSize: "32px",
+                  fontWeight: 700,
+                  color: "#0a2240",
+
+                  marginBottom: "1.5rem",
+                }}
+              >
+
+                Message From Secretary
               </h2>
               <p style={{
                 fontSize: "16px",
@@ -147,7 +160,7 @@ function Leadership() {
                 textAlign: "justify",
                 textJustify: "inter-word",
               }}>
-                Change is the only constant in today’s world. As economies, industries and businesses continue to evolve, managers must be agile and prepared to adapt. Over my years in management education, I have witnessed many waves of transformation, and I am proud to say that ISMR B-School has not only faced these changes but has consistently emerged stronger by embracing innovation and growth.
+                Change is the only constant in today’s world. As economies, industries and businesses continue to evolve, managers must be agile and prepared to adapt. Over my years in management education, I have witnessed many waves of transformation, and I am proud to say that ISMR has not only faced these changes but has consistently emerged stronger by embracing innovation and growth.
               </p>
               <p style={{
                 fontSize: "16px",
@@ -158,7 +171,7 @@ function Leadership() {
                 textAlign: "justify",
                 textJustify: "inter-word",
               }}>
-                At ISMR B-School, our foundation is built on merit, integrity and ethics. Our curriculum is contemporary, industry-relevant and enriched with courses in ethics, international business and hands-on corporate exposure. We nurture socially aware leaders through various community initiatives and a dedicated three-week Socially Useful and Productive Work (SUPW) project, enabling students to deeply understand real societal needs.
+                At ISMR, our foundation is built on merit, integrity and ethics. Our curriculum is contemporary, industry-relevant and enriched with courses in ethics, international business and hands-on corporate exposure. We nurture socially aware leaders through various community initiatives and a dedicated three-week Socially Useful and Productive Work (SUPW) project, enabling students to deeply understand real societal needs.
               </p>
               <p style={{
                 fontSize: "16px",
@@ -192,7 +205,7 @@ function Leadership() {
         </div>
       </section>
 
-   
+
 
 
     </div>

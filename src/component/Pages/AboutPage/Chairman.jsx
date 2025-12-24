@@ -143,7 +143,7 @@ function Leadership() {
                 textAlign: "justify",
                 textJustify: "inter-word",
               }}>
-                We are delighted to welcome students who aspire to grow, lead and make a meaningful impact in the world of business. At ISMR B-School, we strive to create an environment that nurtures curiosity, builds confidence and encourages self-discovery. Our commitment is to help every student develop the clarity and courage needed to define their vision and work steadily toward achieving it. Inspiring and empowering others is woven into the very culture of our institution.
+                We are delighted to welcome students who aspire to grow, lead and make a meaningful impact in the world of business. At ISMR, we strive to create an environment that nurtures curiosity, builds confidence and encourages self-discovery. Our commitment is to help every student develop the clarity and courage needed to define their vision and work steadily toward achieving it. Inspiring and empowering others is woven into the very culture of our institution.
               </p>
               <p style={{
                 fontSize: "16px",
@@ -163,7 +163,7 @@ function Leadership() {
                 fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                 textAlign: "justify",
                 textJustify: "inter-word",
-              }}>At ISMR B-School, we are dedicated to shaping global leaders who come from varied backgrounds yet share a common ambition—to excel and contribute meaningfully to society. Our updated curriculum integrates interactive learning, personalized guidance, coaching and robust leadership development. Supported by our experienced faculty and professional team, students receive a balanced blend of business knowledge, personal growth and real-world exposure.</p>
+              }}>At ISMR, we are dedicated to shaping global leaders who come from varied backgrounds yet share a common ambition—to excel and contribute meaningfully to society. Our updated curriculum integrates interactive learning, personalized guidance, coaching and robust leadership development. Supported by our experienced faculty and professional team, students receive a balanced blend of business knowledge, personal growth and real-world exposure.</p>
 
 
               <p style={{

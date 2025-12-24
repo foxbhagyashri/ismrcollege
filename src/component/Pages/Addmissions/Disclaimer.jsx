@@ -147,28 +147,7 @@ export default function DisclaimerPage() {
 
 
           {/* IMPORTANT NOTE BOX */}
-          <div
-            className="rounded-3 p-4"
-            style={{
-              borderLeft: "4px solid #d95c5c",
-              backgroundColor: "#FFEBEE",
-              border: "1px solid #FFCDD2"
-            }}
-          >
-            <p
-              style={{
-                fontSize: "16px",
-                color: "#c62828",
-                lineHeight: "1.7",
-                margin: 0,
-                fontWeight: "600",
-                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-              }}
-            >
-              ⚠️ <strong>Important :</strong> All fees must be paid only to the official institute bank account through this link -
-              Do not pay fees to any individual or unofficial account.
-            </p>
-          </div>
+         
 
 
 

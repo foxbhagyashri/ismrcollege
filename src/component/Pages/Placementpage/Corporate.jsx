@@ -79,36 +79,36 @@ function Corporate() {
       </section>
 
       {/* ====== Marquee Section ====== */}
-      <section 
+      <section
         className="py-5 bg-light position-relative overflow-hidden"
         style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}
       >
         <div className="container">
           <div className="row align-items-center mb-4 g-5">
             <div className="col-lg-4">
-              <h2 
-                className="fw-bold mb-4" 
-                style={{ 
-                  fontSize: "32px", 
+              <h2
+                className="fw-bold mb-4"
+                style={{
+                  fontSize: "32px",
                   color: "#0a2240",
                   fontFamily: "'Inter', Arial, Helvetica, sans-serif"
                 }}
               >
                 Must See<br />Testimonials
               </h2>
-              <p 
+              <p
                 className="text-muted mb-3"
-                style={{ 
+                style={{
                   fontSize: "16px",
                   fontFamily: "'Inter', Arial, Helvetica, sans-serif"
                 }}
               >
                 Discover what makes ISMR special by exploring testimonials from our esteemed corporate partners.
               </p>
-              <button 
+              <button
                 className="btn btn-danger rounded-pill px-4 py-2"
-                style={{ 
-                  fontSize: "14px", 
+                style={{
+                  fontSize: "14px",
                   fontWeight: 600,
                   fontFamily: "'Inter', Arial, Helvetica, sans-serif"
                 }}
@@ -146,7 +146,7 @@ function Corporate() {
                     }
                   `}
                 </style>
-                
+
                 <div className="marquee-container">
                   {[...testimonials, ...testimonials].map((testimonial, index) => (
                     <div
@@ -174,19 +174,19 @@ function Corporate() {
                           fontFamily: "'Inter', Arial, Helvetica, sans-serif"
                         }}
                       >
-                        <h5 
-                          className="mb-1 fw-bold" 
-                          style={{ 
+                        <h5
+                          className="mb-1 fw-bold"
+                          style={{
                             fontSize: "18px",
                             fontFamily: "'Inter', Arial, Helvetica, sans-serif"
                           }}
                         >
                           {testimonial.name}
                         </h5>
-                        <p 
-                          className="mb-0" 
-                          style={{ 
-                            fontSize: "12px", 
+                        <p
+                          className="mb-0"
+                          style={{
+                            fontSize: "12px",
                             opacity: 0.9,
                             fontFamily: "'Inter', Arial, Helvetica, sans-serif"
                           }}
@@ -204,32 +204,32 @@ function Corporate() {
       </section>
 
       {/* ====== Corporate Testimonials Section ====== */}
-      <section 
+      <section
         className="py-5 bg-white"
         style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}
       >
         <div className="container">
           <div className="text-center mb-5">
-            <h2 
-              className="fw-bold mb-3" 
-              style={{ 
-                fontSize: "36px", 
+            <h2
+              className="fw-bold mb-3"
+              style={{
+                fontSize: "36px",
                 color: "#0a2240",
                 fontFamily: "'Inter', Arial, Helvetica, sans-serif"
               }}
             >
-             Corporate Testimonials
+              Corporate Testimonials
             </h2>
-            <p 
+            <p
               className="text-muted mx-auto"
-              style={{ 
+              style={{
                 fontSize: "16px",
                 fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                 maxWidth: "800px"
               }}
             >
-              Read what our corporate partners have to say about their experience with ISMR B-School. 
-              We're proud to have helped over thousands of students emerge as world-class leaders globally. 
+              Read what our corporate partners have to say about their experience with ISMR.
+              We're proud to have helped over thousands of students emerge as world-class leaders globally.
               Let's hear it out from them.
             </p>
           </div>
@@ -237,7 +237,7 @@ function Corporate() {
           <div className="row g-4">
             {testimonials.slice(0, 3).map((testimonial, index) => (
               <div key={index} className="col-md-4">
-                <div 
+                <div
                   className="card h-100 border-0 shadow-sm"
                   style={{
                     borderRadius: "15px",
@@ -260,9 +260,9 @@ function Corporate() {
                         }}
                       />
                       <div>
-                        <h5 
-                          className="mb-1 fw-bold" 
-                          style={{ 
+                        <h5
+                          className="mb-1 fw-bold"
+                          style={{
                             fontSize: "16px",
                             fontFamily: "'Inter', Arial, Helvetica, sans-serif"
                           }}
@@ -276,10 +276,10 @@ function Corporate() {
                         </div>
                       </div>
                     </div>
-                    <p 
-                      className="text-muted" 
-                      style={{ 
-                        fontSize: "16px", 
+                    <p
+                      className="text-muted"
+                      style={{
+                        fontSize: "16px",
                         lineHeight: "1.6",
                         fontFamily: "'Inter', Arial, Helvetica, sans-serif"
                       }}
@@ -296,32 +296,32 @@ function Corporate() {
 
       {/* ====== Corporate Partners Section ====== */}
 
-        {/* ====== Corporate Testimonials Section ====== */}
-      <section 
+      {/* ====== Corporate Testimonials Section ====== */}
+      <section
         className="py-5 bg-white"
         style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}
       >
         <div className="container">
           <div className="text-center mb-5">
-            <h2 
-              className="fw-bold mb-3" 
-              style={{ 
-                fontSize: "36px", 
+            <h2
+              className="fw-bold mb-3"
+              style={{
+                fontSize: "36px",
                 color: "#0a2240",
                 fontFamily: "'Inter', Arial, Helvetica, sans-serif"
               }}
             >
               Students  Testimonials
             </h2>
-            <p 
+            <p
               className="text-muted mx-auto"
-              style={{ 
+              style={{
                 fontSize: "16px",
                 fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                 maxWidth: "800px"
               }}
             >
-              Hear directly from our students about their transformative experiences at ISMR B-School.
+              Hear directly from our students about their transformative experiences at ISMR.
               From academic excellence to personal growth, our students share how ISMR has shaped their futures.
             </p>
           </div>
@@ -329,7 +329,7 @@ function Corporate() {
           <div className="row g-4">
             {testimonials.slice(0, 3).map((testimonial, index) => (
               <div key={index} className="col-md-4">
-                <div 
+                <div
                   className="card h-100 border-0 shadow-sm"
                   style={{
                     borderRadius: "15px",
@@ -352,9 +352,9 @@ function Corporate() {
                         }}
                       />
                       <div>
-                        <h5 
-                          className="mb-1 fw-bold" 
-                          style={{ 
+                        <h5
+                          className="mb-1 fw-bold"
+                          style={{
                             fontSize: "16px",
                             fontFamily: "'Inter', Arial, Helvetica, sans-serif"
                           }}
@@ -368,10 +368,10 @@ function Corporate() {
                         </div>
                       </div>
                     </div>
-                    <p 
-                      className="text-muted" 
-                      style={{ 
-                        fontSize: "16px", 
+                    <p
+                      className="text-muted"
+                      style={{
+                        fontSize: "16px",
                         lineHeight: "1.6",
                         fontFamily: "'Inter', Arial, Helvetica, sans-serif"
                       }}

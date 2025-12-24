@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
+import { Link } from "react-router-dom";
 
 function Contactus() {
   const [email, setEmail] = useState("");
@@ -27,7 +28,7 @@ function Contactus() {
       email: "academics@ismrpune.edu.in",
       phones: ["+91 9373513331"],
     },
-     
+
     {
       icon: "fa-briefcase",
       title: "Placements",
@@ -40,8 +41,8 @@ function Contactus() {
       email: "careers@ismrpune.edu.in",
       phones: ["+91 9923786079"],
     },
-  
- 
+
+
   ];
 
   return (
@@ -351,17 +352,15 @@ function Contactus() {
         <div className="cta-section">
           <div className="row align-items-center">
             <div className="col-lg-8">
-              <h2>Are You Ready To Build Up Your Career</h2>
+              <h2>Build your career with ISMR. (Reach Us)</h2>
               <p>
-                We are proud of our alumni network, which spans across
-                industries and continents. Our graduates are equipped with
-                skills and values to excel and make a positive impact.
+                Apply now and become a part of our growing institution. Explore exciting career opportunities in academics, administration, and support services, and grow with a reputed educational organization.
               </p>
             </div>
             <div className="col-lg-4 text-lg-end text-center">
-              <button className="btn btn-custom btn-primary-custom">
+              <Link to="/Applicationform"> <button className="btn btn-custom btn-primary-custom">
                 Application Form <i className="fas fa-arrow-right ms-2"></i>
-              </button>
+              </button></Link>
             </div>
           </div>
         </div>

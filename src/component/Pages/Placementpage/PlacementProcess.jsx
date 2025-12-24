@@ -24,7 +24,7 @@ const PlacementProcess = () => {
                 <div className="content-container">
                     <h4 className="content-title"><b>Our Mission – “Placing You First”</b></h4>
 
-                    <h5 style={{ color: "#9b1b1e",  fontWeight: "600"}}>Core Activities of the Placement Cell</h5>
+                    <h5 style={{ color: "#9b1b1e", fontWeight: "600" }}>Core Activities of the Placement Cell</h5>
                     <ul>
                         <li>Identifying and approaching prospective companies for recruitment.</li>
                         <li>Planning the placement schedule and coordinating company visits.</li>
@@ -39,10 +39,10 @@ const PlacementProcess = () => {
                     </ul>
 
 
-                    <h4 style={{ color: "#9b1b1e",  fontWeight: "600"}}>Placement: A Key Focus Area at ISMR B-School</h4>
+                    <h4 style={{ color: "#9b1b1e", fontWeight: "600" }}>Placement: A Key Focus Area at ISMR</h4>
 
 
-                    <p>ISMR B-School gives high priority to placements. The institute has a dynamic Corporate Relations Management (CRM) team whose primary aim is to sharpen students’ skills, help them evaluate opportunities, and understand the decisions and knowledge needed to convert a job opportunity into a successful career step.</p>
+                    <p>ISMR gives high priority to placements. The institute has a dynamic Corporate Relations Management (CRM) team whose primary aim is to sharpen students’ skills, help them evaluate opportunities, and understand the decisions and knowledge needed to convert a job opportunity into a successful career step.</p>
 
 
                     <p>
@@ -57,11 +57,11 @@ const PlacementProcess = () => {
 
 
                     <p>
-                        ISMR B-School provides structured and rigorous training to enhance employability skills and ensure strong MBA placements across various industry sectors.
+                        ISMR provides structured and rigorous training to enhance employability skills and ensure strong MBA placements across various industry sectors.
                     </p>
 
 
-                    <h4 style={{ color: "#9b1b1e",  fontWeight: "600", marginBottom:"20px"}}>Roles and Activities of the CRM Department</h4>
+                    <h4 style={{ color: "#9b1b1e", fontWeight: "600", marginBottom: "20px" }}>Roles and Activities of the CRM Department</h4>
 
                     <h5><b>1. Industry Interface</b></h5>
 
@@ -90,8 +90,8 @@ const PlacementProcess = () => {
                     <ul>
                         <li>The campus placement process for final jobs begins from 15th December onwards.</li>
                     </ul>
-                    <h4 style={{ color: "#9b1b1e",  fontWeight: "600"}}>Acknowledgement</h4>
-                    <p>We at ISMR B-School express our sincere gratitude for the cooperation, guidance, and support extended by various corporate partners in both summer and final placements. Their valuable contribution has helped our institute grow and earn a place among the premier business schools in the country.</p>
+                    <h4 style={{ color: "#9b1b1e", fontWeight: "600" }}>Acknowledgement</h4>
+                    <p>We at ISMR express our sincere gratitude for the cooperation, guidance, and support extended by various corporate partners in both summer and final placements. Their valuable contribution has helped our institute grow and earn a place among the premier business schools in the country.</p>
 
                 </div>
             </div>

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import Faq from "../../Faq";
-import ReCAPTCHA from "react-google-recaptcha";
+
 import ContactForm from "../../form/ContactForm";
+import Howtoaplydownoadform from "../../form/Howtoaplydownoadform";
+import brochurePdf from "../../../assets/demo.pdf"; // Add your PDF in assets
 
 export default function HowToApply() {
 
@@ -18,7 +20,18 @@ export default function HowToApply() {
   const [submitted, setSubmitted] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [showModall, setShowModall] = useState(false);
-  const [captchaValue, setCaptchaValue] = useState(null);
+
+
+    const downloadBrochure = () => {
+      const link = document.createElement("a");
+      link.href = brochurePdf;
+      link.download = "demo.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    };
+  
+
 
   const handleChange = (e) =>
     setForm((s) => ({ ...s, [e.target.name]: e.target.value }));
@@ -26,22 +39,11 @@ export default function HowToApply() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!captchaValue) {
-      alert("Please verify that you are not a robot!");
-      return;
-    }
 
-    // Trigger PDF download
-    // const link = document.createElement("a");
-    // link.href = brochurePdf;
-    // link.download = "Admissions-Brochure.pdf";
-    // document.body.appendChild(link);
-    // link.click();
-    // document.body.removeChild(link);
 
     setShowModal(false);
     setForm({ name: "", email: "", phone: "", city: "" });
-    setCaptchaValue(null);
+
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 3000);
   };
@@ -916,7 +918,7 @@ export default function HowToApply() {
                     "Application Close: 30 June 2026",
                     "Eligible Entrance Exam: MAH-MBA CET/CMAT/CAT/MAT/XAT/ATMA/GMAT",
 
-                    "Last Date for fee payment: 30 June 2026",
+                    // "Last Date for fee payment: 30 June 2026",
                   ].map((item, index) => (
                     <li key={index}>
                       <strong>{item.split(": ")[0]}:</strong>{" "}
@@ -965,7 +967,7 @@ export default function HowToApply() {
 
 
             <button
-              onClick={() => setShowModal(false)}
+              onClick={() => setShowModall(false)}
               style={{
                 marginTop: "10px",
                 background: "transparent",
@@ -1012,66 +1014,7 @@ export default function HowToApply() {
               Fill the form to download brochure
             </h4>
 
-            <form onSubmit={handleSubmit}>
-              <input
-                type="text"
-                name="name"
-                value={form.name}
-                onChange={handleChange}
-                placeholder="Full Name"
-                required
-                className="form-control mb-3"
-              />
-              <input
-                type="email"
-                name="email"
-                value={form.email}
-                onChange={handleChange}
-                placeholder="Email"
-                required
-                className="form-control mb-3"
-              />
-              <input
-                type="tel"
-                name="phone"
-                value={form.phone}
-                onChange={handleChange}
-                placeholder="Phone"
-                required
-                className="form-control mb-3"
-              />
-              <input
-                type="text"
-                name="city"
-                value={form.city}
-                onChange={handleChange}
-                placeholder="City"
-                className="form-control mb-3"
-              />
-
-              {/* -------- RECAPTCHA -------- */}
-              <div className="mb-3">
-                <ReCAPTCHA
-                  sitekey="YOUR_SITE_KEY_HERE"
-                  onChange={(value) => setCaptchaValue(value)}
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="btn w-100"
-                style={{
-                  backgroundColor: "#0a2240",
-                  color: "#fff",
-                  padding: "12px",
-                  borderRadius: "8px",
-                  fontSize: "16px",
-                  fontWeight: "500",
-                }}
-              >
-                Submit & Download
-              </button>
-            </form>
+            <Howtoaplydownoadform />
 
             <button
               onClick={() => setShowModal(false)}

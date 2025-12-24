@@ -147,7 +147,7 @@ const Ourplacement = () => {
                 textAlign: "justify",
               }}
             >
-              The stable base provided to ISMR B-School’s students means that the industry leaders look up to us to continue producing the proficient leaders of tomorrow. Mentioned below are some of the industry giants who visit our campus every year to choose students from our institute who can add value to their organization.
+              The stable base provided to ISMR students means that the industry leaders look up to us to continue producing the proficient leaders of tomorrow. Mentioned below are some of the industry giants who visit our campus every year to choose students from our institute who can add value to their organization.
             </p>
           </Col>
         </Row>

@@ -1,16 +1,26 @@
 import React, { useState } from "react";
 import axios from "axios";
+import brochurePdf from "../../assets/demo.pdf";
 
-const ContactForm = () => {
+const Howtoaplydownoadform = () => {
     const [form, setForm] = useState({
         name: "",
         email: "",
         phone: "",
         city: "",
-        program: "",
-        message: "",
-        fromForm: "Enquiry Form",
     });
+
+
+    /* ================= PDF DOWNLOAD ================= */
+    const downloadBrochure = () => {
+        const link = document.createElement("a");
+        link.href = brochurePdf;
+        link.download = "demo.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
 
     const [errors, setErrors] = useState({});
     const [loading, setLoading] = useState(false);
@@ -20,18 +30,22 @@ const ContactForm = () => {
     const validate = () => {
         const newErrors = {};
 
-        if (!form.name.trim()) newErrors.name = "Full name is required";
+        if (!form.name.trim()) {
+            newErrors.name = "Full name is required";
+        }
 
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(form.email))
+        if (!emailRegex.test(form.email)) {
             newErrors.email = "Enter a valid email address";
+        }
 
-        if (form.phone.length !== 10)
+        if (!/^\d{10}$/.test(form.phone)) {
             newErrors.phone = "Phone number must be 10 digits";
+        }
 
-        if (!form.program)
-            newErrors.program = "Please select a programme";
-
+        if (!form.city.trim()) {
+            newErrors.city = "City is required";
+        }
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -40,7 +54,7 @@ const ContactForm = () => {
     /* ================= INPUT HANDLER ================= */
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setForm({ ...form, [name]: value });
+        setForm((prev) => ({ ...prev, [name]: value }));
     };
 
     /* ================= SUBMIT ================= */
@@ -56,28 +70,32 @@ const ContactForm = () => {
             const res = await axios.post(
                 "https://api.ismrpune.edu.in/api/send-mail",
                 form,
-                { headers: { "Content-Type": "application/json" } }
+                {
+                    headers: { "Content-Type": "application/json" },
+                }
             );
 
-            if (res.data.success) {
-                setSuccessMsg("✅ Thank you for your enquiry at ISMR Pune. Our team will get back to you soon.");
+            if (res.data?.success) {
+                setSuccessMsg(
+                    "✅ Thank you for downloading the brochure. For any further queries, kindly reach us."
+                );
+                downloadBrochure();
+
                 setForm({
                     name: "",
                     email: "",
                     phone: "",
                     city: "",
-                    program: "",
-                    message: "",
-
                 });
+
+                setErrors({});
             }
-        } catch (err) {
-            alert("❌ Failed to submit form. Try again.");
+        } catch (error) {
+            alert("❌ Failed to submit form. Please try again.");
         } finally {
             setLoading(false);
         }
     };
-
 
     return (
         <form onSubmit={handleSubmit}>
@@ -97,7 +115,7 @@ const ContactForm = () => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="Email"
-                className="form-control mb-2"
+                className="form-control mb-2 mt-2"
             />
             {errors.email && <small className="text-danger">{errors.email}</small>}
 
@@ -105,13 +123,10 @@ const ContactForm = () => {
                 type="tel"
                 name="phone"
                 value={form.phone}
-                onChange={(e) => {
-                    const nums = e.target.value.replace(/[^0-9]/g, "");
-                    if (nums.length <= 10)
-                        setForm({ ...form, phone: nums });
-                }}
+                onChange={handleChange}
                 placeholder="Phone"
-                className="form-control mb-2"
+                maxLength="10"
+                className="form-control mb-2 mt-2"
             />
             {errors.phone && <small className="text-danger">{errors.phone}</small>}
 
@@ -121,34 +136,12 @@ const ContactForm = () => {
                 value={form.city}
                 onChange={handleChange}
                 placeholder="City"
-                className="form-control mb-2"
+                className="form-control mb-3 mt-2"
             />
+            {errors.city && <small className="text-danger">{errors.city}</small>}
 
-            <select
-                name="program"
-                value={form.program}
-                onChange={handleChange}
-                className="form-control mb-2"
-            >
-                <option value="">Select Programme *</option>
-                <option value="MBA">MBA</option>
-                <option value="BBA">BBA</option>
-                <option value="BCA">BCA</option>
-            </select>
-            {errors.program && (
-                <small className="text-danger">{errors.program}</small>
-            )}
-
-            <textarea
-                name="message"
-                rows="3"
-                value={form.message}
-                onChange={handleChange}
-                placeholder="Write your query"
-                className="form-control mb-2"
-            />
-            {errors.message && (
-                <small className="text-danger">{errors.message}</small>
+            {successMsg && (
+                <div className="alert alert-success mt-3">{successMsg}</div>
             )}
 
             <button
@@ -160,16 +153,14 @@ const ContactForm = () => {
                     color: "#fff",
                     padding: "12px",
                     borderRadius: "8px",
+                    fontSize: "16px",
+                    fontWeight: "500",
                 }}
             >
-                {loading ? "Submitting..." : "Submit"}
+                {loading ? "Submitting..." : "Submit & Download"}
             </button>
-
-            {successMsg && (
-                <div className="alert alert-success mt-3">{successMsg}</div>
-            )}
         </form>
     );
 };
 
-export default ContactForm;
+export default Howtoaplydownoadform;

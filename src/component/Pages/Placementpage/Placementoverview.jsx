@@ -12,17 +12,17 @@ import allsectionbg from "../../../assets/allsectionbg.jpg";
 function EnhancedPlacementStatus() {
   const [activeYear, setActiveYear] = useState("2024-25 (ONGOING)");
   const academicYears = [
-    "2024-25 (ONGOING)",
+    "2025-26 (ONGOING)",
+    "2024-25",
     "2023-24",
-    "2022-23",
-    "2021-22",
-    "2020-21",
+    "2023-22",
+    
   ];
 
   const placementMetrics = {
-    highestPackage: "₹ 28 LPA",
-    averagePackage: "₹ 6.1 LPA",
-    placementPercentage: "95%",
+    highestPackage: "₹ 12 LPA",
+    averagePackage: "₹ 5.2-6.8 LPA",
+    placementPercentage: "92%",
   };
 
   return (
@@ -49,7 +49,7 @@ function EnhancedPlacementStatus() {
                 className="me-2 text-md-start text-md-start"
                 style={{ color: "#0a2240", verticalAlign: "middle" }}
               />
-              Placement <span style={{ color: "#1a4d7a" }}>Status</span>
+              Placement  <span style={{ color: "#1a4d7a" }}>Overview</span>
             </h1>
             <p
               className="placement-desc mx-auto mx-md-0 mt-5 text-md-start"
@@ -118,7 +118,7 @@ function EnhancedPlacementStatus() {
                   style={{ color: "#0a2240", fontSize: "1.4rem" }}
                 >
                   <CheckCircleFill className="me-2 text-primary" />
-                  Placement Status by Academic Year
+                  Placement Statistics  by Academic Year
                 </h4>
 
                 <Row className="g-3 justify-content-center">
@@ -288,51 +288,7 @@ function Placementoverview() {
       <EnhancedPlacementStatus />
 
       {/* ===== Placement Philosophy Section ===== */}
-      <section
-        className="py-5"
-        style={{
-          backgroundColor: "#fff",
-          fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-        }}
-      >
-        <div className="container">
-          <h1
-            className="mb-4 text-center text-md-start"
-            style={{
-              fontSize: "30px",
-              fontWeight: 700,
-              color: "#0a2240",
-            }}
-          >
-            <BriefcaseFill
-              className="me-2"
-              style={{ color: "#0a2240", verticalAlign: "middle" }}
-            />
-            Our <span style={{ color: "#1a4d7a" }}>Placement Philosophy</span>
-          </h1>
-
-         <p
-  className="placement-text mx-auto mx-md-0"
-  style={{
-    fontSize: "16px",
-    color: "#444",
-    lineHeight: 1.7,
-    textAlign: "justify",
-    padding: "10px 15px", // 👈 add padding (top-bottom, left-right)
-    marginTop: "10px",    // 👈 add top margin
-    marginBottom: "10px", // 👈 add bottom margin
-  }}
->
-  ISMR Pune’s placement philosophy revolves around holistic development,
-  technical excellence, and leadership readiness. Through
-  <strong> skill development workshops</strong>,
-  <strong> internships</strong>, and{" "}
-  <strong>corporate collaborations</strong>, ISMR ensures students are equipped
-  for modern corporate challenges.
-</p>
-
-        </div>
-      </section>
+      
     </>
   );
 }

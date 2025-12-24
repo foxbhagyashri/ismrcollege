@@ -420,7 +420,7 @@ export default function RefundPolicy() {
 
                   <tr>
                     <td><strong>2.</strong></td>
-                    <td>Request received after commencement of the course.</td>
+                    <td>Request received after the last date of CET Cell admission process.</td>
                     <td>No Refund.</td>
                   </tr>
                 </tbody>
@@ -435,8 +435,8 @@ export default function RefundPolicy() {
                 {/* <p><b>Fee Refund & Admission Cancellation Guidelines
                 </b></p> */}
                 <ul className="list">
-                  <li>Fee Refund & Admission Cancellation Guidelines
-                  </li>
+                  {/* <li>Fee Refund & Admission Cancellation Guidelines
+                  </li> */}
                   <li>Refunds of fees will be processed on or after 15th December 2026.
                   </li>
                   <li>For admission cancellation and refund requests, please send a detailed email to: <a href="mailto:admissions@ismrpune.edu.in"> admissions@ismrpune.edu.in</a></li>
@@ -444,7 +444,7 @@ export default function RefundPolicy() {
 
                   </li>
                   <ul className="list">
-                    <li>Your exact name as per your bank account, and
+                    <li>Your exact name as per your bank account.
 
                     </li>
                     <li>A scanned copy of your cancelled cheque / bank front page pass book.

@@ -75,6 +75,22 @@ const TopHeader = () => {
                   Blogs
                 </Link>
               </li>
+              <li className="notice-dropdown">
+                <Link
+                  to="#"
+                  className="btn btn-sm text-white flashy-notice"
+                >
+                  Notices ▾
+                </Link>
+
+                <ul className="notice-menu">
+                  <li><Link to="/notices/admissions">ADMISSIONS</Link></li>
+                  <li><Link to="/notices/academics">ACADEMICS</Link></li>
+                  <li><Link to="/notices/placements">PLACEMENTS</Link></li>
+                  <li><Link to="/notices/cultural">CULTURAL</Link></li>
+                </ul>
+              </li>
+
 
               <li>
                 <button

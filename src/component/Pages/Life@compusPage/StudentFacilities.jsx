@@ -20,7 +20,7 @@ function StudentFacilities() {
       image:
         "/comp_lab.jpg",
     },
-    
+
     {
       id: 4,
       title: "Foreign Study Tour",
@@ -63,13 +63,13 @@ function StudentFacilities() {
       image:
         "/IMG_6795.jpg",
     },
-   
+
     {
       id: 10,
       title: "Bus (Transport) Facility",
 
       image:
-        "/009.jpg",
+        "/bus.jpg",
     },
     {
       id: 11,
@@ -332,7 +332,7 @@ function StudentFacilities() {
             Student <span style={{ color: "#1a4d7a" }}>Facilities</span>
           </h1>
           <p className="mt-2">
-            ISMR B-School campus buildings are spacious with facilities that enable students to enjoy a successful academic and social life. The campus comprises of a library, laboratories, classrooms, and a cafeteria and administration and faculty offices. The facilities of our campus are described below.
+            ISMR offers a spacious campus with facilities designed to enhance both learning and campus life. The campus includes a well-equipped library, modern laboratories, classrooms, cafeteria, and dedicated administration and faculty offices. Our facilities are listed below.
           </p>
         </div>
       </section>

@@ -87,7 +87,7 @@ function Leadership() {
                             margin: 0,
                         }}
                     >
-                        Treasurer <span className="text-warning">Message</span>
+                        Message  <span className="text-warning">From Treasurer</span>
                     </h1>
                     <p
                         className="mb-0"
@@ -97,7 +97,7 @@ function Leadership() {
                             marginTop: "0.5rem",
                         }}
                     >
-                        About • <span className="text-warning">Treasurer Message</span>
+                        About • <span className="text-warning">Message From Treasurer</span>
                     </p>
                 </div>
             </section>
@@ -117,11 +117,11 @@ function Leadership() {
                     <div className="row g-4 mt-5">
 
                         <div className="col-12 col-md-5 col-lg-5">
-                            {/* <img
-                                src={secretary}
+                            <img
+                                src="/CA CHETAN BHUTADA.jpeg"
                                 alt="Leadership Team"
                                 className="img-fluid rounded"
-                            /> */}
+                            />
                         </div>
 
 
@@ -138,7 +138,7 @@ function Leadership() {
                                 }}
                             >
 
-                                Message from the Treasurer
+                                Message From Treasurer
                             </h2>
                             <p style={{
                                 fontSize: "16px",
@@ -149,7 +149,7 @@ function Leadership() {
                                 textAlign: "justify",
                                 textJustify: "inter-word",
                             }}>
-                                Change remains the only constant in today’s dynamic economic and business environment. As industries, financial systems, and organizations continue to evolve, strong financial stewardship and adaptability have become essential. Through my professional journey in finance and management, I have observed multiple cycles of transformation, and I am proud that ISMR B-School has consistently demonstrated financial resilience, transparency, and strategic foresight during these changing times.
+                                Change remains the only constant in today’s dynamic economic and business environment. As industries, financial systems, and organizations continue to evolve, strong financial stewardship and adaptability have become essential. Through my professional journey in finance and management, I have observed multiple cycles of transformation, and I am proud that ISMR has consistently demonstrated financial resilience, transparency, and strategic foresight during these changing times.
                             </p>
                             <p style={{
                                 fontSize: "16px",
@@ -160,7 +160,7 @@ function Leadership() {
                                 textAlign: "justify",
                                 textJustify: "inter-word",
                             }}>
-                                At ISMR B-School, our financial governance is firmly rooted in accountability, integrity, and ethical practices. We ensure optimal utilization of resources while supporting a contemporary, industry-aligned academic framework. Financial planning at ISMR actively enables initiatives in ethics, international exposure, corporate engagement, and experiential learning—ensuring students benefit from a holistic and future-oriented education.
+                                At ISMR, our financial governance is firmly rooted in accountability, integrity, and ethical practices. We ensure optimal utilization of resources while supporting a contemporary, industry-aligned academic framework. Financial planning at ISMR actively enables initiatives in ethics, international exposure, corporate engagement, and experiential learning—ensuring students benefit from a holistic and future-oriented education.
                             </p>
                             <p style={{
                                 fontSize: "16px",
@@ -186,9 +186,9 @@ function Leadership() {
                             </p>
 
 
-                            <h5><i>Chetan Bhutada</i></h5>
+                            <h5><i>CA Chetan Bhutada</i></h5>
                             <h6>
-                                CA</h6>
+                                TREASURER</h6>
 
 
                         </div>

@@ -132,7 +132,7 @@ const Header = () => {
                   to="AboutPage/Secretary"
                   onClick={handleDropdownItemClick}
                 >
-                  Secretary Message
+                  Message From Secretary
                 </Link>
               </li>
               <li>
@@ -141,7 +141,7 @@ const Header = () => {
                   to="AboutPage/Treasure"
                   onClick={handleDropdownItemClick}
                 >
-                  Treasure  Message
+                  Message From Treasurer
                 </Link>
               </li>
               <li>
@@ -150,7 +150,7 @@ const Header = () => {
                   to="AboutPage/Director"
                   onClick={handleDropdownItemClick}
                 >
-                  Director Message
+                  Message From Director
                 </Link>
               </li>
 
@@ -211,15 +211,15 @@ const Header = () => {
               How To Apply
             </Link>
           </li>
-          {/* <li>
+          <li>
             <Link
               className="dropdown-item"
-              to="/Addmissions/Eligibility-criteria" // Note: This link path is a duplicate
+              to="/Addmissions/FaqBbaBca" // Note: This link path is a duplicate
               onClick={handleDropdownItemClick}
             >
-              List Of Documents
+              FAQ's For BBA & BCA
             </Link>
-          </li> */}
+          </li>
           <li>
             <Link
               className="dropdown-item"
@@ -311,15 +311,15 @@ const Header = () => {
               Course Duration
             </Link>
           </li>
-          {/* <li>
+          <li>
             <Link
               className="dropdown-item"
-              to="/Academics/Courseduration"
+              to="/Academics/Library"
               onClick={handleDropdownItemClick}
             >
-              Student Corner
+              Library
             </Link>
-          </li> */}
+          </li>
 
           {/* Cleaned up commented links */}
         </ul>

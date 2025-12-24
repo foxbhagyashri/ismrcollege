@@ -64,14 +64,14 @@ function AwardsRankings() {
     {
 
       category: "Ranked 20th in India by Higher Education",
-      description: "Ranked 20th in India by Higher Education Review Magazine beyond IIMS Top 100 B-School survey.",
+      description: "Ranked 20th in India by Higher Education Review Magazine beyond IIMS Top 100 survey.",
     },
     {
 
       category: "Excellence in Students Placements for 2018",
       description: "Awarded 'Excellence in Students Placements for 2018' by Education World-Wide India.",
     },
-    
+
   ];
 
   const recognitions = [
@@ -318,7 +318,7 @@ function AwardsRankings() {
                       lineHeight: "1.5",
                     }}
                   >
-                    Ranked 20th in India by “Higher Education Review Magazine” Beyond IIM’s Top 100 B-School survey.
+                    Ranked 20th in India by “Higher Education Review Magazine” Beyond IIM’s Top 100  survey.
                   </p>
                 </div>
               </div>
@@ -534,64 +534,7 @@ function AwardsRankings() {
 
 
       {/* RECOGNITION SECTION */}
-      <section className="py-5 bg-light">
-        <div className="container">
-          <h2
-            style={{
-              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-              fontSize: "32px",
-              fontWeight: 700,
-              color: "#0a2240",
-              marginBottom: "1.5rem",
-            }}
-          >
-            Recognitions
-          </h2>
-          <p
-            style={{
-              fontSize: "18px",
-              color: "#444",
-              lineHeight: "1.7",
-              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-              textAlign: "justify",
-              textJustify: "inter-word",
-              marginBottom: "2rem",
-            }}
-          >
-            Honors and approvals that validate our excellence and standards in
-            management education and institutional development.
-          </p>
-          <div className="row g-4">
-            {recognitions.map((rec) => (
-              <div className="col-12 col-md-4" key={rec.id}>
-                <div className="p-4 bg-white shadow-sm rounded-4 h-100">
-                  <h5
-                    style={{
-                      fontSize: "20px",
-                      fontWeight: 700,
-                      color: "#0a2240",
-                      marginBottom: "0.5rem",
-                      fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                    }}
-                  >
-                    {rec.title}
-                  </h5>
-                  <p
-                    style={{
-                      fontSize: "16px",
-                      color: "#666",
-                      marginBottom: 0,
-                      fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                    }}
-                  >
-                    {rec.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* RANKINGS */}
 

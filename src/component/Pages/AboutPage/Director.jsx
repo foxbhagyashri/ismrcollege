@@ -87,7 +87,7 @@ function Leadership() {
               margin: 0,
             }}
           >
-            Director <span className="text-warning">Message</span>
+            Message <span className="text-warning">From Director </span>
           </h1>
           <p
             className="mb-0"
@@ -97,7 +97,7 @@ function Leadership() {
               marginTop: "0.5rem",
             }}
           >
-            About • <span className="text-warning">Director Message</span>
+            About • <span className="text-warning">Message From Director</span>
           </p>
         </div>
       </section>
@@ -134,7 +134,7 @@ function Leadership() {
                   marginBottom: "1.5rem",
                 }}
               >
-                A Word  From Director
+                Message From Director
               </h2>
               <p style={{
                 fontSize: "16px",

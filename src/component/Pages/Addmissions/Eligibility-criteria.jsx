@@ -3,7 +3,7 @@ import allsectionbg from "../../../assets/allsectionbg.jpg";
 import Faq from "../../Faq";
 
 export default function PrivacySection() {
-  const [filter, setFilter] = useState("graduation");
+  const [filter, setFilter] = useState("postgraduation");
 
   return (
     <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
@@ -55,53 +55,49 @@ export default function PrivacySection() {
         <div className="row justify-content-center mb-5">
           <div className="col-12">
             <div className="d-flex justify-content-center flex-wrap gap-3">
-             
-             
-            <button
-                className={`btn fw-semibold ${
-                  filter === "postgraduation" ? "" : "btn-outline-secondary"
-                }`}
+
+
+              <button
+                className={`btn fw-semibold ${filter === "postgraduation" ? "" : "btn-outline-secondary"
+                  }`}
                 onClick={() => setFilter("postgraduation")}
                 style={{
                   padding: "12px 24px",
                   backgroundColor:
                     filter === "postgraduation" ? "#0a2240" : "transparent",
                   color: filter === "postgraduation" ? "#fff" : "#0a2240",
-                  border: `2px solid ${
-                    filter === "postgraduation" ? "#0a2240" : "#0a2240"
-                  }`,
+                  border: `2px solid ${filter === "postgraduation" ? "#0a2240" : "#0a2240"
+                    }`,
                   borderRadius: "8px",
                   fontSize: "16px",
                   fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                   transition: "all 0.3s ease",
                 }}
               >
-               MBA
+                MBA
               </button>
-             
-             
+
+
               <button
-                className={`btn fw-semibold ${
-                  filter === "graduation" ? "" : "btn-outline-secondary"
-                }`}
+                className={`btn fw-semibold ${filter === "graduation" ? "" : "btn-outline-secondary"
+                  }`}
                 onClick={() => setFilter("graduation")}
                 style={{
                   padding: "12px 24px",
                   backgroundColor:
                     filter === "graduation" ? "#0a2240" : "transparent",
                   color: filter === "graduation" ? "#fff" : "#0a2240",
-                  border: `2px solid ${
-                    filter === "graduation" ? "#0a2240" : "#0a2240"
-                  }`,
+                  border: `2px solid ${filter === "graduation" ? "#0a2240" : "#0a2240"
+                    }`,
                   borderRadius: "8px",
                   fontSize: "16px",
                   fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                   transition: "all 0.3s ease",
                 }}
               >
-               BBA/ BCA
+                BBA & BCA
               </button>
-             
+
             </div>
           </div>
         </div>
@@ -144,7 +140,7 @@ export default function PrivacySection() {
                   >
                     Candidates with minimum 50% marks in 10+2 (H.S.C.) standard or its equivalent examination (45% for reserved categories) from any recognized Jr. college/Institute with a valid score card in entrance test of MAH-BCA/BBA/BMS/BBM-CET-2026 is eligible to apply. Enabling the candidate to appear for selection Process directly.
                   </p>
-                 
+
                   <p
                     style={{
                       fontSize: "16px",
@@ -154,9 +150,9 @@ export default function PrivacySection() {
                       fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                     }}
                   >
-                  Candidates with 60% at 10th and 12th standard or it’s equivalent examination, will be given preference
+                    Candidates with 60% at 10th and 12th standard or it’s equivalent examination, will be given preference
                   </p>
-               
+
                 </div>
               )}
 
@@ -174,7 +170,7 @@ export default function PrivacySection() {
                   >
                     ELIGIBILITY CRITERIA FOR MBA
                   </h2>
-                  
+
                   <p
                     style={{
                       fontSize: "16px",
@@ -186,7 +182,7 @@ export default function PrivacySection() {
                   >
                     Candidates with minimum 50% marks in graduation (45% for reserved categories) from any recognized university and with a valid score card in national-level entrance tests like with MAH-MBA CET/CMAT/CAT/MAT/XAT/ATMA/GMAT are eligible to apply (all such exams shall be treated at par) enabling the candidate to appear for selection Process directly.
                   </p>
-            
+
                   <p
                     style={{
                       fontSize: "16px",
@@ -196,7 +192,7 @@ export default function PrivacySection() {
                       fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                     }}
                   >
-                   Candidates appearing for final year degree examination up to July 2026 can also apply. Such candidates, whose final year degree results is not declared at the time of admission will be admitted provisionally and after submitting a bonafide certificate from the Head of the Institute stating that he/she is a regular student. The admission of such a candidate will be confirmed only if he/she provides a proof of passing the final year degree examination marksheet on or before 31st July 2026.
+                    Candidates appearing for final year degree examination up to July 2026 can also apply. Such candidates, whose final year degree results is not declared at the time of admission will be admitted provisionally and after submitting a bonafide certificate from the Head of the Institute stating that he/she is a regular student. The admission of such a candidate will be confirmed only if he/she provides a proof of passing the final year degree examination marksheet on or before 31st July 2026.
                   </p>
 
                   <p
@@ -208,10 +204,10 @@ export default function PrivacySection() {
                       fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                     }}
                   >
-                  Candidates with 60% throughout their academic career, will be given preference.
+                    Candidates with 60% throughout their academic career, will be given preference.
                   </p>
 
-            
+
                 </div>
               )}
 
@@ -292,51 +288,9 @@ export default function PrivacySection() {
                 </div>
               )}
 
-            
+
               {/* CONTACT CTA */}
-              <div
-                className="rounded-3 p-4 mt-4 text-center"
-                style={{
-                  backgroundColor: "#0a2240",
-                  color: "#fff",
-                }}
-              >
-                <h4
-                  style={{
-                    fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                    fontSize: "20px",
-                    fontWeight: "600",
-                    marginBottom: "1rem",
-                  }}
-                >
-                  Need Clarification on Eligibility?
-                </h4>
-                <p
-                  style={{
-                    fontSize: "16px",
-                    marginBottom: "1.5rem",
-                    fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                    opacity: "0.9",
-                  }}
-                >
-                  Contact our admissions team for personalized guidance on
-                  eligibility requirements.
-                </p>
-                <a href="tel:9923786079"
-                  className="btn fw-semibold"
-                  style={{
-                    padding: "10px 24px",
-                    backgroundColor: "#FFC333",
-                    color: "#0a2240",
-                    border: "none",
-                    borderRadius: "8px",
-                    fontSize: "16px",
-                    fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                  }}
-                >
-                  📞 Contact Admissions
-                </a>
-              </div>
+
             </div>
           </div>
         </div>
