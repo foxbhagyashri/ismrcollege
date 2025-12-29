@@ -275,6 +275,15 @@ const Header = () => {
               Disclaimer for Fees Payment
             </Link>
           </li>
+          <li>
+            <Link
+              className="dropdown-item"
+              to="/Addmissions/Feesstructure"
+              onClick={handleDropdownItemClick}
+            >
+             Fees Structure
+            </Link>
+          </li>
         </ul>
       </li>
       {/* Academics Dropdown */}
