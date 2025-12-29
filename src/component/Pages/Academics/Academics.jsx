@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import { BookFill } from "react-bootstrap-icons";
 import { Button } from "bootstrap";
+import { Link } from "react-router-dom";
 
 import axios from "axios";
 import brochurePdf from "../../../assets/demo.pdf"; // Add your PDF in assets
@@ -771,6 +772,18 @@ function ProgramOfferedPage() {
                         The BBA program provides students with a strong foundation in management, entrepreneurship, and business administration. With a curriculum designed to build analytical, communication, and leadership skills, ISMR’s BBA program prepares students for career in marketing, finance, HR, and business operations, as well as for higher studies like MBA.
                       </p>
 
+                      <Link
+                        to="/Addmissions/FaqBbaBca"
+                        className="btn btn-sm"
+                        style={{
+                          backgroundColor: "rgb(255, 195, 51)",
+                          color: "rgb(44, 38, 38)",
+                          fontWeight: "600", fontSize: "16px",
+                        }}
+                      >
+                        FAQ's For BBA & BCA
+                      </Link>
+
 
                     </div>
 
@@ -805,6 +818,17 @@ function ProgramOfferedPage() {
                       >
                         The BCA program focuses on computer science, software development, data handling, and IT applications. With hands-on training, coding skills, and practical project exposure, ISMR’s BCA program equips students for careers in IT, software development, data analysis, and emerging tech roles. It is the perfect pathway for students aiming for a future in the technology sector. Andprepare higher studies like MCA.
                       </p>
+                      <Link
+                        to="/Addmissions/FaqBbaBca"
+                        className="btn btn-sm"
+                        style={{
+                          backgroundColor: "rgb(255, 195, 51)",
+                          color: "rgb(44, 38, 38)",
+                          fontWeight: "600", fontSize: "16px",
+                        }}
+                      >
+                        FAQ's For BBA & BCA
+                      </Link>
 
 
                     </div>

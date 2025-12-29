@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import allsectionbg from "../../../assets/allsectionbg.jpg"; // update path based on your project
 import { Link } from "react-router-dom";
+import ContactForm from "../../form/ContactForm";
 
 export default function FAQBba() {
+
+
+
     const [openIndex, setOpenIndex] = useState(null);
+
 
 
     const [form, setForm] = useState({
@@ -46,19 +51,9 @@ export default function FAQBba() {
             answer: "The ISMR campus offers a modern, industry-oriented learning environment with classrooms, labs, seminar hall, library, recreational facilities, conference room etc."
         },
         {
+            id: "apply",
             question: "How to apply for admission?",
-            answer: (
-                <span>
-                    You can apply online only through the ISMR website. Or click on the following link -{" "}
-                    <button
-                        className="apply-now-btn rotated"
-                        aria-label="Apply Now"
-                        onClick={() => setShowModal(true)}
-                    >
-                        Apply Now
-                    </button>
-                </span>
-            ),
+            answer: "You can apply online only through the ISMR website. Or click on the following link-"
         },
         {
             question: "What documents are required during BBA/BCA admission?",
@@ -151,6 +146,28 @@ export default function FAQBba() {
         setOpenIndex(openIndex === index ? null : index);
     };
 
+    <style>{`
+       .apply-now-btnn {
+    background: #930512 !important;
+    border: none !important;
+    padding: 10px 18px !important;
+    border-radius: 9px !important;
+    color: white !important;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.apply-now-btnn:hover {
+    background: linear-gradient(90deg, #ffb347, #ff7a18) !important;
+    transform: rotate(0deg) !important;
+}
+
+
+        `}
+    </style>
+
+
+
     return (
         <>
 
@@ -241,10 +258,66 @@ export default function FAQBba() {
                                 dangerouslySetInnerHTML={{ __html: faq.answer }}
                             ></p>
 
+                            {/* Show button ONLY for Apply FAQ */}
+                            {faq.id === "apply" && (
+                                <button
+                                    className="apply-now-btnn"
+                                    onClick={() => setShowModal(true)}
+                                >
+                                    Apply Now
+                                </button>
+                            )}
+
+
+
+                            {/* -------- FORM MODAL -------- */}
+                            {showModal && (
+                                <div
+                                    className="modal-backdrop"
+                                    style={{
+                                        position: "fixed",
+                                        top: 0,
+                                        left: 0,
+                                        width: "100%",
+                                        height: "100%",
+                                        backgroundColor: "rgba(0,0,0,0.6)",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        zIndex: 9999,
+                                    }}
+                                >
+                                    <div
+                                        className="modal-content rounded-3 p-4"
+                                        style={{
+                                            backgroundColor: "#fff",
+                                            maxWidth: "500px",
+                                            width: "90%",
+                                        }}
+                                    >
+                                        <h4 style={{ color: "#0a2240", marginBottom: "1rem" }}>
+                                            Enquiry Form
+                                        </h4>
+                                        <ContactForm />
+
+                                        <button
+                                            onClick={() => setShowModal(false)}
+                                            style={{
+                                                marginTop: "10px",
+                                                background: "transparent",
+                                                border: "none",
+                                                color: "#d95c5c",
+                                                cursor: "pointer",
+                                            }}
+                                        >
+                                            Close
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     </div>
                 ))}
-
             </div>
         </>
     );

@@ -161,47 +161,37 @@
     }
 }
 
-/* Wrapper */
 .notice-dropdown {
     position: relative;
-    z-index: 1000;
 }
 
-/* Dropdown menu */
 .notice-menu {
     position: absolute;
-    top: 100%;              /* ⬇ opens below Notices */
-    left: 50%;
-    transform: translateX(-50%);
-    background: #ffffff;
-    min-width: 180px;
-    border-radius: 8px;
-    padding: 8px 0;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.25s ease;
+    top: 110%;
+    left: 0;
+    background: white;
+    display: flex;
+    gap: 40px;
+    /* padding: 15px 30px; */
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     z-index: 9999;
-  }
-  
-  /* Show dropdown on hover */
-  .notice-dropdown:hover .notice-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-  
-  /* Menu items */
-  .notice-menu li a {
-    display: block;
-    padding: 10px 16px;
-    color: #333;
-    font-weight: 500;
+    padding: 13px!important;
+}
+
+.notice-menu li a {
+    color: #222;
+    font-weight: 600;
     text-decoration: none;
-  }
-  
-  .notice-menu li a:hover {
-    background: #ff4b2b;
-    color: #fff;
-  }
-  
+}
+
+.notice-menu li a:hover {
+    color: #d11f2e;
+}
+
+.top-header-area,
+.header-area,
+.navbar,
+.navbar-nav {
+    overflow: visible !important;
+}

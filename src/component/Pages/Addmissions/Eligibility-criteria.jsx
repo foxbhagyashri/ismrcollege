@@ -127,7 +127,7 @@ export default function PrivacySection() {
                       marginBottom: "1rem",
                     }}
                   >
-                    ELIGIBILITY CRITERIA FOR BBA/BCA
+                    ELIGIBILITY CRITERIA FOR BBA & BCA
                   </h2>
                   <p
                     style={{

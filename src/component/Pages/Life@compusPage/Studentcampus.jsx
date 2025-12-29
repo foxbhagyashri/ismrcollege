@@ -89,6 +89,8 @@ function StudentCampusAndActivities() {
           "/2-1.png",
           "/3-1.png",
           "/5-1.png",
+          "/IMG_7331.jpg",
+          "/IMG_7389.jpg",
 
         ]}
       />
@@ -97,14 +99,14 @@ function StudentCampusAndActivities() {
     "TRAINING & DEVELOPMENT": (
       <ImageSlider
         title="Training Programs"
-        images={["/4-1.png", "/5.png", "/6.png", "/activity-e1643704137253.jpg"]}
+        images={["/4-1.png", "/5.png", "/6.png", "/activity-e1643704137253.jpg", "/IMG-20190311-WA0141.jpg", "/planting.jpg"]}
       />
     ),
 
     "ACADEMIC AWARD CEREMONY": (
       <ImageSlider
         title="Award Ceremony"
-        images={["/7.png", "/8.png", "/9.png", "/7-1.png"]}
+        images={["/7.png", "/8.png", "/9.png", "/7-1.png", "/IMG_6995.jpg", "/IMG_6939.jpg"]}
       />
     ),
 
@@ -116,6 +118,8 @@ function StudentCampusAndActivities() {
           "/Students @ Burj Al Arab Beach Dubai.jpg",
           "/12.png",
           "/Picnic @ Mahableshwar .jpg",
+          "/DSC05259.jpg",
+          "/Industrial Visit @ Bhushan Steel.jpg",
         ]}
       />
     ),
@@ -151,9 +155,9 @@ function StudentCampusAndActivities() {
           <ImageSlider title="Garba Event" images={["/GarbhaCelbration.jpg", "/WhatsApp Image 2025-10-27 at 2.33.48 PM (1).jpeg", "/WhatsApp Image 2025-10-16 at 3.09.13 PM.jpeg", "/WhatsApp Image 2025-10-27 at 2.33.48 PM.jpeg", "/IMG_0032.jpg"]} />
         )}
         {activeCultural === "Trekking" && (
-          <ImageSlider title="Trekking" images={["/20160124_160248.jpg", "/IMG_6983.jpg", "/DSC_0376.jpg", "/DSC_0176.jpg"]} />
+          <ImageSlider title="Trekking" images={["/20160124_160248.jpg", "/IMG_6983.jpg", "/DSC_0376.jpg", "/DSC_0176.jpg", "/DSC_0063.jpg"]} />
         )}
-          {activeCultural === "Picnic" && (
+        {activeCultural === "Picnic" && (
           <ImageSlider title="Picnic" images={["/Mahabaleshwar.jpeg", "/Venna lake.jpg", "/VennaLake.jpeg", "/Panchgani.jpg"]} />
         )}
       </>

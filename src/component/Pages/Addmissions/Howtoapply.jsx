@@ -4,7 +4,7 @@ import Faq from "../../Faq";
 
 import ContactForm from "../../form/ContactForm";
 import Howtoaplydownoadform from "../../form/Howtoaplydownoadform";
-import brochurePdf from "../../../assets/demo.pdf"; // Add your PDF in assets
+import brochurePdf from "/ISMR Catalogue - 2026.pdf"; // Add your PDF in assets
 
 export default function HowToApply() {
 
@@ -22,15 +22,15 @@ export default function HowToApply() {
   const [showModall, setShowModall] = useState(false);
 
 
-    const downloadBrochure = () => {
-      const link = document.createElement("a");
-      link.href = brochurePdf;
-      link.download = "demo.pdf";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    };
-  
+  const downloadBrochure = () => {
+    const link = document.createElement("a");
+    link.href = brochurePdf;
+    link.download = "ISMR Catalogue - 2026.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
 
 
   const handleChange = (e) =>

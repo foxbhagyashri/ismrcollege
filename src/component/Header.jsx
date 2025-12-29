@@ -123,7 +123,7 @@ const Header = () => {
                   to="AboutPage/Chairman"
                   onClick={handleDropdownItemClick}
                 >
-                  Founder President  Message
+                  Message From Founder President
                 </Link>
               </li>
               <li>
@@ -211,7 +211,7 @@ const Header = () => {
               How To Apply
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               className="dropdown-item"
               to="/Addmissions/FaqBbaBca" // Note: This link path is a duplicate
@@ -219,7 +219,7 @@ const Header = () => {
             >
               FAQ's For BBA & BCA
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
               className="dropdown-item"
