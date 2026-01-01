@@ -108,6 +108,7 @@ const Footer = () => {
               <li><Link to="/Placementpage/PlacementProcess">Placement Process</Link></li>
               <li><Link to="/Addmissions/Disclaimer">Disclaimer for Admissions</Link></li>
               <li><Link to="/Addmissions/DisclaimerFeePayment">Disclaimer for Fees Payment</Link></li>
+              <li><Link to="/Termsconditions">Terms & Conditions</Link></li>
               <li><button onClick={() => setShowModal(true)} style={{
                 marginTop: "10px",
                 background: "transparent",

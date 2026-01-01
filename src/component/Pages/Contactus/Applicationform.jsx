@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import { useState, useRef } from "react";
 import axios from "axios";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 
 function Applicationform() {
+    const fileRef = useRef(null);
+
     const [form, setForm] = useState({
         name: "",
         email: "",
@@ -35,13 +37,13 @@ function Applicationform() {
 
         if (!allowedTypes.includes(file.type)) {
             alert("Only JPG, PNG, PDF, and Word files are allowed.");
-            e.target.value = null;
+            e.target.value = "";
             return;
         }
 
         if (file.size > maxSize) {
             alert("File size must be less than 10 MB.");
-            e.target.value = null;
+            e.target.value = "";
             return;
         }
 
@@ -58,11 +60,14 @@ function Applicationform() {
         if (!emailRegex.test(form.email))
             newErrors.email = "Enter a valid email address";
 
-        if (form.phone.length !== 10)
-            newErrors.phone = "Phone number must be 10 digits";
+        if (!/^[0-9]{10}$/.test(form.phone))
+            newErrors.phone = "Enter a valid 10 digit phone number";
 
-        if (!form.program)
-            newErrors.program = "Please select a programme";
+        if (!form.position)
+            newErrors.position = "Please select a position";
+
+        if (!form.resume)
+            newErrors.resume = "Please upload your resume";
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -85,24 +90,26 @@ function Applicationform() {
             setLoading(true);
 
             const formData = new FormData();
-            formData.append("name", form.name);
-            formData.append("email", form.email);
-            formData.append("phone", form.phone);
+            formData.append("full_name", form.name);
+            formData.append("email_id", form.email);
+            formData.append("mobile", form.phone);
             formData.append("city", form.city);
             formData.append("state", form.state);
-            formData.append("program", form.program);
-            formData.append("fromForm", form.fromForm);
-
-            if (form.resume) {
-                formData.append("resume", form.resume);
-            }
+            formData.append("job_position", form.position);
+            formData.append("resume", form.resume);
+            formData.append("source", form.fromForm);
 
             const res = await axios.post(
-                "https://api.ismrpune.edu.in/api/send-mail/career",
+                "http://localhost:5000/api/send-mail/career",
                 formData,
-                { headers: { "Content-Type": "multipart/form-data" } }
+                {
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                    },
+                }
             );
 
+            console.log("Response:", res);
             if (res.data.success) {
                 setSuccessMsg(
                     "✅ Thank you for applying to ISMR. Your profile will be reviewed, and we will get back to you shortly."
@@ -114,15 +121,25 @@ function Applicationform() {
                     phone: "",
                     city: "",
                     state: "",
-                    program: "",
+                    position: "",
                     resume: null,
                     fromForm: "Career application Form",
                 });
+
+
+            } else {
+                alert("❌ Server rejected the form.");
             }
-        } catch (err) {
-            console.error(err);
-            alert("❌ Failed to submit form. Try again.");
-        } finally {
+        } catch (error) {
+            console.log(error);
+            console.error("Upload error:", error.response || error);
+
+            alert(
+                error.response?.data?.message ||
+                "❌ Server error. Please try again later."
+            );
+        }
+        finally {
             setLoading(false);
         }
     };
@@ -168,7 +185,7 @@ function Applicationform() {
                         >
                             <h2 className="mb-5">Application Form</h2>
 
-                            <form onSubmit={handleSubmit}>
+                            <form onSubmit={handleSubmit} encType="multipart/form-data">
                                 <input
                                     type="text"
                                     name="name"
@@ -229,7 +246,7 @@ function Applicationform() {
 
                                 <select
                                     name="position"
-                                    value={form.program}
+                                    value={form.position}
                                     onChange={handleChange}
                                     className="form-control mb-2"
                                 >
@@ -252,15 +269,14 @@ function Applicationform() {
                                     <option value="IT Technician">IT Technician</option>
                                     <option value="Clerk">Clerk</option>
                                 </select>
-                                {errors.program && (
-                                    <small className="text-danger">{errors.program}</small>
+                                {errors.position && (
+                                    <small className="text-danger">{errors.position}</small>
                                 )}
 
                                 <input
                                     type="file"
-                                    accept=".jpg,.jpeg,.png,.pdf,.doc,.docx"
-                                    onChange={handleFileChange}
-                                    className="form-control mb-2"
+                                    ref={fileRef}
+                                    onChange={handleFileChange} className="form-control mb-2"
                                 />
 
                                 <button
@@ -274,11 +290,10 @@ function Applicationform() {
                                         borderRadius: "8px",
                                     }}
                                 >
-                                    {loading ? "Submitting..." : "Submit"}
+                                    {loading ? "Submitting..." : "Apply Now"}
                                 </button>
-
                                 {successMsg && (
-                                    <div className="alert alert-success mt-3">
+                                    <div style={{ marginTop: 15, color: "green", fontWeight: "bold" }}>
                                         {successMsg}
                                     </div>
                                 )}

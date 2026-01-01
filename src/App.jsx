@@ -73,6 +73,7 @@ import ApplyBba from "./component/ApplyBbaBca";
 import Treasure from "./component/Pages/AboutPage/Treasure";
 import Applicationform from "./component/Pages/Contactus/Applicationform";
 import FAQBba from "./component/Pages/Addmissions/FaqBbaBca";
+import Termsconditions from "./component/Termsconditions";
 
 function App() {
   return (
@@ -170,6 +171,7 @@ function App() {
         <Route path="/Blogs" element={<Blogs />} />
         <Route path="/ApplyMba" element={<ApplyMba />} />
         <Route path="/ApplyBba" element={<ApplyBba />} />
+        <Route path="/Termsconditions" element={<Termsconditions />} />
 
       </Routes>
       {/* <Faq /> */}

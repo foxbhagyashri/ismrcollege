@@ -4,7 +4,7 @@ import Faq from "../../Faq";
 
 import ContactForm from "../../form/ContactForm";
 import Howtoaplydownoadform from "../../form/Howtoaplydownoadform";
-import brochurePdf from "/ISMR Catalogue - 2026.pdf"; // Add your PDF in assets
+import brochurePdf from "/ISMR-Catalogue.pdf"; // Add your PDF in assets
 
 export default function HowToApply() {
 
@@ -721,7 +721,7 @@ export default function HowToApply() {
                 <div className="step-list">
                   {[
                     {
-                      title: "1. Apply Online",
+                      title: "1. Apply Now",
                       desc: "Visit the official website, click on “Apply Online,” fill out the institute’s application form, and pay the registration fee of ₹ 1100 /-.",
                     },
 
@@ -733,8 +733,24 @@ export default function HowToApply() {
 
                     {
                       title: "3. Seat Confirmation",
-                      desc: "After the telephonic interview, selected candidates will receive the Admission Letter via email. To confirm their seat, you must pay Rs. 30,000/- within four days of receiving the Admission Letter.",
-                    },
+                      desc: (
+                        <>
+                          After the telephonic interview, selected candidates will receive the
+                          Admission Letter via email. To confirm their seat, you must pay Rs. 30,000/-
+                          within four days of receiving the Admission Letter. Please click on the
+                          given link to book your seat –{" "}
+                          <a
+                            href="https://forms.easebuzz.in/register/ISMR_Pune/ISMR_30k_2026-2028"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ color: "#0066cc", fontWeight: "600" }}
+                          >
+                            Click here
+                          </a>
+                        </>
+                      ),
+                    }
+                    ,
 
                     {
                       title: "4. Provisional Admission",
@@ -909,7 +925,7 @@ export default function HowToApply() {
                 <h2>Important Dates for Admissions </h2>
                 <p>
                   Application fee: <strong>₹ 1100 /-</strong> (online). Fee waiver
-                  for eligible categories may apply. Payment can be made by clicking on this link.
+                  for eligible categories may apply. Payment can be made by clicking on this link. <a href="https://forms.easebuzz.in/register/ISMR_Pune/ISMR_30k_2026-2028" target="_blank">Click Here</a>
 
                 </p>
                 <ul>

@@ -44,7 +44,7 @@ function StudentFacilities() {
     },
     {
       id: 7,
-      title: "Library & Wi-Fi",
+      title: "Library",
 
       image:
         "/008.jpg",

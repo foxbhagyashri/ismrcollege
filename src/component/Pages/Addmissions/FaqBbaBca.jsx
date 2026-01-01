@@ -57,7 +57,7 @@ export default function FAQBba() {
         },
         {
             question: "What documents are required during BBA/BCA admission?",
-            answer: "Documents Required : </br>  •	10th & 12th mark sheets,</br> •	Entrance exam scorecard,</br> •	Aadhaar Card, </br> •	Passport-size photographs </br> For more details, please click on the link give - <Link to='/Howtoapply' target='_blank'>List of Documents</Link>"
+            answer: "Documents Required : </br>  •	10th & 12th mark sheets,</br> •	Entrance exam scorecard,</br> •	Aadhaar Card, </br> • 10 Passport size photographs </br>"
         },
         {
             question: "How do I know my admission is confirmed?",

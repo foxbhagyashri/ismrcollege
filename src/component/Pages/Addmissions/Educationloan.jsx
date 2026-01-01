@@ -363,7 +363,7 @@ export default function EducationLoad() {
                 backgroundColor: "#FFC333",
               }}
             >
-              <h4
+              {/* <h4
                 style={{
                   fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                   fontSize: "24px",
@@ -374,9 +374,28 @@ export default function EducationLoad() {
               >
                 <i className="fas fa-phone-alt me-2"></i>
                 Need Help with Your Loan Application?
+              </h4> */}
+
+               <h4
+                style={{
+                  fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                  fontSize: "24px",
+                  fontWeight: "700",
+                  color: "#0a2240",
+                  marginBottom: "1rem",
+                }}
+              >
+              
+                Admissions
               </h4>
               <p style={{ fontSize: "16px", color: "#0a2240", marginBottom: "1.5rem" }}>
-                Contact our financial aid office for assistance
+
+                <i class='fas fa-envelope'></i>    admissions@ismrpune.edu.in
+              </p>
+              <p style={{ fontSize: "16px", color: "#0a2240", marginBottom: "1.5rem" }}>
+
+
+                <i className="fas fa-phone-alt me-2"></i>   +91 9923786079
               </p>
               <a href="tel:9923786079">   <button
                 className="btn fw-semibold"
