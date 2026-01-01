@@ -100,7 +100,7 @@ function Applicationform() {
             formData.append("source", form.fromForm);
 
             const res = await axios.post(
-                "http://localhost:5000/api/send-mail/career",
+                "https://api.ismrpune.edu.in/api/send-mail/career",
                 formData,
                 {
                     headers: {
