@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import brochurePdf from "../../assets/demo.pdf";
+import brochurePdf from "../../assets/ISMR Brochure 2026.pdf";
 
 const Howtoaplydownoadform = () => {
     const [form, setForm] = useState({
@@ -15,7 +15,7 @@ const Howtoaplydownoadform = () => {
     const downloadBrochure = () => {
         const link = document.createElement("a");
         link.href = brochurePdf;
-        link.download = "demo.pdf";
+        link.download = "ISMR Brochure 2026.pdf";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);

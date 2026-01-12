@@ -4,7 +4,7 @@ import Faq from "../../Faq";
 
 import ContactForm from "../../form/ContactForm";
 import Howtoaplydownoadform from "../../form/Howtoaplydownoadform";
-import brochurePdf from "/ISMR-Catalogue.pdf"; // Add your PDF in assets
+import brochurePdf from "/ISMR Brochure 2026.pdf"; // Add your PDF in assets
 
 export default function HowToApply() {
 

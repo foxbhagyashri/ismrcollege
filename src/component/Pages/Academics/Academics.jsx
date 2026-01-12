@@ -6,7 +6,7 @@ import { Button } from "bootstrap";
 import { Link } from "react-router-dom";
 
 import axios from "axios";
-import brochurePdf from "../../../assets/demo.pdf"; // Add your PDF in assets
+import brochurePdf from "../../../assets/ISMR Brochure 2026.pdf"; // Add your PDF in assets
 
 function ProgramOfferedPage() {
 

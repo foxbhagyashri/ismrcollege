@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import Faq from "../../Faq";
 import axios from "axios";
-import brochurePdf from "../../../assets/demo.pdf"; // Add your PDF in assets
+import brochurePdf from "../../../assets/ISMR Brochure 2026.pdf"; // Add your PDF in assets
 
 export default function AdmissionContact() {
 
@@ -55,7 +55,7 @@ export default function AdmissionContact() {
   const downloadBrochure = () => {
     const link = document.createElement("a");
     link.href = brochurePdf;
-    link.download = "demo.pdf";
+    link.download = "ISMR Brochure 2026.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
