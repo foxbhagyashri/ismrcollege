@@ -5,67 +5,54 @@ import Faq from "../../Faq";
 import ContactForm from "../../form/ContactForm";
 import Howtoaplydownoadform from "../../form/Howtoaplydownoadform";
 import brochurePdf from "/ISMR Brochure 2026.pdf"; // Add your PDF in assets
+import ISMRFormModal from "../../form/ISMRFormModal";
 
 export default function HowToApply() {
+    const [form, setForm] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        city: "",
+        message: "",
+        programme: "",
+    });
+    const [submitted, setSubmitted] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+    const [openModal, setOpenModal] = useState(false);
 
+    const downloadBrochure = () => {
+        const link = document.createElement("a");
+        link.href = brochurePdf;
+        link.download = "ISMR Catalogue - 2026.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
 
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    city: "",
-    message: "",
-    programme: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-  const [showModal, setShowModal] = useState(false);
-  const [showModall, setShowModall] = useState(false);
+    const handleChange = (e) =>
+        setForm((s) => ({ ...s, [e.target.name]: e.target.value }));
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
-  const downloadBrochure = () => {
-    const link = document.createElement("a");
-    link.href = brochurePdf;
-    link.download = "ISMR Catalogue - 2026.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+        setShowModal(false);
+        setForm({ name: "", email: "", phone: "", city: "" });
 
+        setSubmitted(true);
+        setTimeout(() => setSubmitted(false), 3000);
+    };
 
+    const [tab, setTab] = useState("overview");
 
-  const handleChange = (e) =>
-    setForm((s) => ({ ...s, [e.target.name]: e.target.value }));
+    const [openIndex, setOpenIndex] = useState(null);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+    const [selectedCategory, setSelectedCategory] = useState("OMS Students");
 
+    const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
 
-
-    setShowModal(false);
-    setForm({ name: "", email: "", phone: "", city: "" });
-
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
-  };
-
-
-
-
-
-
-  const [tab, setTab] = useState("overview");
-
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const [selectedCategory, setSelectedCategory] = useState("OMS Students");
-
-
-
-  const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
-
-  return (
-    <section className="apply-wrapper">
-      <style>{`
+    return (
+        <section className="apply-wrapper">
+            <style>{`
 
 .category-tabs {
   display: flex;
@@ -636,322 +623,779 @@ export default function HowToApply() {
         }
       `}</style>
 
-      <section
-        className="py-5 text-white text-center position-relative"
-        style={{
-          background: "linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%)",
-        }}
-      >
-        <div
-          className="position-absolute top-0 end-0 w-100 h-100 opacity-25"
-          style={{
-            backgroundImage: `url(${allsectionbg})`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
-        ></div>
+            <section
+                className="py-5 text-white text-center position-relative"
+                style={{
+                    background:
+                        "linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%)",
+                }}
+            >
+                <div
+                    className="position-absolute top-0 end-0 w-100 h-100 opacity-25"
+                    style={{
+                        backgroundImage: `url(${allsectionbg})`,
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
+                    }}
+                ></div>
 
-        <div className="container position-relative py-5">
-          <h1
-            className="mb-3"
-            style={{
-              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-              fontSize: "40px",
-              fontWeight: 700,
-              margin: 0,
-            }}
-          >
-            How To <span className="text-warning">Apply</span>
-          </h1>
-          <p
-            className="mb-0"
-            style={{
-              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-              fontSize: "15px",
-              marginTop: "0.5rem",
-            }}
-          >
-            Admissions • <span className="text-warning">How to Apply</span>
-          </p>
-        </div>
-      </section>
-
-      <div className="content-area">
-        <div className="content-container">
-          <div className="tabs" role="tablist" aria-label="Apply tabs">
-            {["overview", "steps", "documents", "Important Dates"].map(
-              (tabName) => (
-                <button
-                  key={tabName}
-                  className={`tab-btn ${tab === tabName ? "active" : ""}`}
-                  onClick={() => setTab(tabName)}
-                  role="tab"
-                  aria-selected={tab === tabName}
-                  id={`tab-${tabName}`}
-                >
-                  {tabName.charAt(0).toUpperCase() +
-                    tabName.slice(1).replace("-", " & ")}
-                </button>
-              )
-            )}
-          </div>
-
-          <div className="panel" role="region" aria-live="polite">
-            {tab === "overview" && (
-              <div id="panel-overview" aria-labelledby="tab-overview">
-                <h2>Quick Overview</h2>
-                <p>
-                  Admission consideration is based on valid entrance exam scores (MAH-MBA CET/CMAT/CAT/MAT/XAT/ATMA/GMAT) and a minimum of 50% marks in graduation (45% for reserved categories), along with performance in the telephonic interview.
-                </p>
-                <div className="cta-row">
-                  <button className="btn-primary" aria-label="Apply Now" onClick={() => setShowModall(true)}>Apply Now</button>
-                  <button className="btn-secondary" onClick={() => setShowModal(true)}>Download Brochure</button>
-                </div>
-              </div>
-            )}
-
-
-            {tab === "steps" && (
-              <div id="panel-steps" aria-labelledby="tab-steps">
-                <h2>Step-by-Step Admission Process</h2>
-                <p>
-                  Follow these simple steps to complete your Admission
-                  successfully:
-                </p>
-                <div className="step-list">
-                  {[
-                    {
-                      title: "1. Apply Now",
-                      desc: "Visit the official website, click on “Apply Online,” fill out the institute’s application form, and pay the registration fee of ₹ 1100 /-.",
-                    },
-
-                    {
-                      title: "2. Counselling & Telephonic Interview",
-                      desc: "Once the form is submitted, the admission cell initiates the counselling process followed by an telephonic interview session.",
-                    },
-
-
-                    {
-                      title: "3. Seat Confirmation",
-                      desc: (
-                        <>
-                          After the telephonic interview, selected candidates will receive the
-                          Admission Letter via email. To confirm their seat, you must pay Rs. 30,000/-
-                          within four days of receiving the Admission Letter. Please click on the
-                          given link to book your seat –{" "}
-                          <a
-                            href="https://forms.easebuzz.in/register/ISMR_Pune/ISMR_30k_2026-2028"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{ color: "#0066cc", fontWeight: "600" }}
-                          >
-                            Click here
-                          </a>
-                        </>
-                      ),
-                    }
-                    ,
-
-                    {
-                      title: "4. Provisional Admission",
-                      desc: "After the seat confirmation , your admission is provisionally confirmed subject to fulfilment of all the required documents.",
-                    },
-                  ].map((step, index) => (
-                    <div key={index} className="step">
-                      <h3>{step.title}</h3>
-                      <p>{step.desc}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {tab === "documents" && (
-              <div id="panel-documents" aria-labelledby="tab-documents">
-                <h2>Required Documents</h2>
-                <h5>(Documents required for MBA)</h5>
-                <p>
-                  List of Originals Documents to be Submitted at the time of Admission.
-                </p>
-
-                {/* Category Tabs */}
-                <div className="category-tabs">
-                  {[
-                    "OMS Students",
-                    "SC / ST Students",
-                    "OBC / SBC / VJNT / SEBC Students",
-                    "Open / General / EBC / EWS Students",
-                  ].map((category, index) => (
-                    <button
-                      key={index}
-                      className={`category-tab ${selectedCategory === category ? "active" : ""
-                        }`}
-                      onClick={() => setSelectedCategory(category)}
+                <div className="container position-relative py-5">
+                    <h1
+                        className="mb-3"
+                        style={{
+                            fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                            fontSize: "40px",
+                            fontWeight: 700,
+                            margin: 0,
+                        }}
                     >
-                      {category}
-                    </button>
-                  ))}
+                        How To <span className="text-warning">Apply</span>
+                    </h1>
+                    <p
+                        className="mb-0"
+                        style={{
+                            fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                            fontSize: "15px",
+                            marginTop: "0.5rem",
+                        }}
+                    >
+                        Admissions •{" "}
+                        <span className="text-warning">How to Apply</span>
+                    </p>
                 </div>
+            </section>
 
-                {/* Category-wise Documents List Format */}
-                <div className="doc-list">
-                  {selectedCategory === "OMS Students" && (
-                    <div className="doc-list">
-                      <ul>
-                        <li>	Valid Entrance Score Card – Colored Copy  <b>(Mandatory)</b></li>
-                        <li>	S.S.C. (Std. X<sup>th</sup>) Marksheet and certificate <b>(Mandatory)</b></li>
-                        <li>H.S.C. (Std. XIIth) or Diploma Marksheet and certificate <b>(Mandatory)</b></li>
-                        <li>All Semester Graduation Marksheet and certificate <b>(Mandatory)</b></li>
-                        <li>Leaving/Transfer Certificate <b>(Mandatory)</b></li>
-                        <li>	Domicile and Nationality Certificate <b>(Mandatory)</b></li>
-                        <li>Migration Certificate (Other than Home University) <b>(Mandatory)</b></li>
-                        <li>Copy of Aadhar Card <b>(Mandatory)</b></li>
-                        <li>Copy of Pan Card <b>(Mandatory)</b></li>
-                        <li>Passport Size Colour Photos (10 Copies) <b>(Mandatory)</b></li>
-                        <li>	Gap Certificate <b>(If Applicable)</b> <a href="/gap-certificate-english.pdf" target="_blank" style={{ textDecoration: "none", }}>Download PDF in English</a> / <a href="/gap-certificate-marathi.pdf" style={{ textDecoration: "none", }} target="_blank">Download PDF in Marathi</a></li>
-                      </ul>
-                      <h4>Note :-</h4>
-                      <ul>
-                        <li>All the above documents should be colour-scanned in the PDF format & to be emailed on admissions@ismrpune.edu.in</li>
-                        <li>For any documents related queries contact us on +91-9923786079 / +91-9158000595</li>
-                        <li>Last date of documents submission 31 july 2026 .</li>
-                      </ul>
-                    </div>
-                  )}
-
-                  {selectedCategory === "SC / ST Students" && (
-                    <div className="doc-list">
-                      <ul>
-                        <li>Valid Entrance Score Card – Colored Copy <b>(Mandatory)</b></li>
-                        <li>S.S.C. (Std. X<sup>th</sup>) Marksheet and certificate <b>(Mandatory)</b></li>
-                        <li>H.S.C. (Std. XIIth) or Diploma Marksheet and certificate <b>(Mandatory)</b></li>
-                        <li>All Semester Graduation Marksheet and certificate <b>(Mandatory)</b></li>
-                        <li>Leaving/Transfer Certificate <b>(Mandatory)</b></li>
-                        <li>Domicile and Nationality Certificate <b>(Mandatory)</b></li>
-                        <li>	Migration Certificate (Other than Home University) <b>(Mandatory)</b></li>
-                        <li>Income Certificate of Current Financial Year issued by Tahasildar / Sub Div. Officer/ Deputy Collector <b>(Mandatory)</b></li>
-                        <li>Copy of Aadhar Card <b>(Mandatory)</b></li>
-                        <li>	Copy of Pan Card <b>(Mandatory)</b></li>
-                        <li>	Passport Size Colour Photos (10 Copies) <b>(Mandatory)</b></li>
-                        <li>Gap Certificate <b>(If Applicable)</b> <a href="/gap-certificate-english.pdf" target="_blank" style={{ textDecoration: "none", }}>Download PDF in English</a> / <a href="/gap-certificate-marathi.pdf" style={{ textDecoration: "none", }} target="_blank">Download PDF in Marathi</a></li>
-                        <li>Caste Certificate <b>(Mandatory)</b></li>
-                        <li>	Caste Validity Certificate <b>(Mandatory)</b></li>
-                        <li>Linking of Aadhar Number to Bank Account <b>(Mandatory)</b></li>
-                        <li>	Students Nationalized Bank Account Details (First Page of Passbook) <b>(Mandatory)</b></li>
-                      </ul>
-                      <h4>Note :-</h4>
-                      <ul>
-                        <li>All the above documents should be colour-scanned in the PDF format & to be emailed on admissions@ismrpune.edu.in</li>
-                        <li>For any documents related queries contact us on +91-9923786079 / +91-9158000595</li>
-                        <li>Last date of documents submission 31 july 2026 .</li>
-                      </ul>
-                    </div>
-                  )}
-
-                  {selectedCategory === "OBC / SBC / VJNT / SEBC Students" && (
-                    <div className="doc-list">
-                      <ul>
-                        <li>Valid Entrance Score Card – Colored Copy <b>(Mandatory)</b></li>
-                        <li>S.S.C. (Std. X<sup>th</sup>) Marksheet and certificate <b>(Mandatory)</b></li>
-                        <li>H.S.C. (Std. XIIth) or Diploma Marksheet and certificate <b>(Mandatory)</b></li>
-                        <li>	All Semester Graduation Marksheet and certificate <b>(Mandatory)</b></li>
-                        <li>	Leaving/Transfer Certificate <b>(Mandatory)</b></li>
-                        <li>Domicile and Nationality Certificate <b>(Mandatory)</b></li>
-                        <li>	Migration Certificate (Other than Home University) <b>(Mandatory)</b></li>
-                        <li>	Income Certificate of Current Financial Year issued by Tahasildar / Sub Div. Officer/ Deputy Collector <b>(Mandatory)</b></li>
-                        <li>	Copy of Aadhar Card <b>(Mandatory)</b></li>
-                        <li>Copy of Pan Card <b>(Mandatory)</b></li>
-                        <li>Passport Size Colour Photos (10 Copies) <b>(Mandatory)</b></li>
-                        <li>Gap Certificate <b>(If Applicable)</b> <a href="/gap-certificate-english.pdf" target="_blank" style={{ textDecoration: "none", }}>Download PDF in English</a> / <a href="/gap-certificate-marathi.pdf" style={{ textDecoration: "none", }} target="_blank">Download PDF in Marathi</a></li>
-                        <li>Caste Certificate <b>(Mandatory)</b></li>
-                        <li>Caste Validity Certificate <b>(Mandatory)</b></li>
-                        <li>Non Creamy Layer certificate Valid till 2026 <b>(Mandatory)</b></li>
-                        <li>Linking of Aadhar Number to Bank Account <b>(Mandatory)</b></li>
-                        <li>	Students Nationalized Bank Account Details (First Page of Passbook) <b>(Mandatory)</b></li>
-                      </ul>
-
-                      <h4>Note :-</h4>
-                      <ul>
-                        <li>All the above documents should be colour-scanned in the PDF format & to be emailed on admissions@ismrpune.edu.in</li>
-                        <li>For any documents related queries contact us on +91-9923786079 / +91-9158000595</li>
-                        <li>Last date of documents submission 31 july 2026 .</li>
-                      </ul>
-                    </div>
-                  )}
-
-                  {selectedCategory === "Open / General / EBC / EWS Students" && (
-                    <div className="doc-list">
-                      <ul>
-                        <li>	Valid Entrance Score Card – Colored Copy <b>(Mandatory)</b></li>
-                        <li>	S.S.C. (Std. X<sup>th</sup>) Marksheet and certificate <b>(Mandatory)</b></li>
-                        <li>	H.S.C. (Std. XIIth) or Diploma Marksheet and certificate <b>(Mandatory)</b></li>
-                        <li>All Semester Graduation Marksheet and certificate <b>(Mandatory)</b></li>
-                        <li>Leaving/Transfer Certificate <b>(Mandatory)</b></li>
-                        <li>Domicile and Nationality Certificate <b>(Mandatory)</b></li>
-                        <li>	Migration Certificate (Other than Home University) <b>(Mandatory)</b></li>
-                        <li>	Income Certificate of Current Financial Year issued by Tahasildar / Sub Div. Officer/ Deputy Collector <b>(If Applicable)</b></li>
-                        <li>Copy of Aadhar Card <b>(Mandatory)</b></li>
-                        <li>	Copy of Pan Card <b>(Mandatory)</b></li>
-                        <li>Passport Size Colour Photos (10 Copies) <b>(Mandatory)</b></li>
-                        <li>Gap Certificate <b>(If Applicable)</b> <a href="/gap-certificate-english.pdf" target="_blank" style={{ textDecoration: "none", }}>Download PDF in English</a> / <a href="/gap-certificate-marathi.pdf" style={{ textDecoration: "none", }} target="_blank">Download PDF in Marathi</a></li>
-                      </ul>
-
-                      <h4>Note :-</h4>
-                      <ul>
-                        <li>All the above documents should be colour-scanned in the PDF format & to be emailed on admissions@ismrpune.edu.in</li>
-                        <li>For any documents related queries contact us on +91-9923786079 / +91-9158000595</li>
-                        <li>Eligibility Certificate for Economically Weaker Section is Mandatory for those who want to enroll their admission in EWS Category. </li>
-                        <li>Last date of documents submission 31 july 2026 .</li>
-                      </ul>
-                      <a
-                        href="/Eligibility-Certificate-for-Economically-Weaker-Section.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <strong>Annexure - A for EWS Eligibility Certificate</strong>
-                      </a>
-
+            <div className="content-area">
+                <div className="content-container">
+                    <div
+                        className="tabs"
+                        role="tablist"
+                        aria-label="Apply tabs"
+                    >
+                        {[
+                            "overview",
+                            "steps",
+                            "documents",
+                            "Important Dates",
+                        ].map((tabName) => (
+                            <button
+                                key={tabName}
+                                className={`tab-btn ${
+                                    tab === tabName ? "active" : ""
+                                }`}
+                                onClick={() => setTab(tabName)}
+                                role="tab"
+                                aria-selected={tab === tabName}
+                                id={`tab-${tabName}`}
+                            >
+                                {tabName.charAt(0).toUpperCase() +
+                                    tabName.slice(1).replace("-", " & ")}
+                            </button>
+                        ))}
                     </div>
 
-                  )}
+                    <div
+                        className="panel"
+                        role="region"
+                        aria-live="polite"
+                    >
+                        {tab === "overview" && (
+                            <div
+                                id="panel-overview"
+                                aria-labelledby="tab-overview"
+                            >
+                                <h2>Quick Overview</h2>
+                                <p>
+                                    Admission consideration is based on valid
+                                    entrance exam scores (MAH-MBA
+                                    CET/CMAT/CAT/MAT/XAT/ATMA/GMAT) and a
+                                    minimum of 50% marks in graduation (45% for
+                                    reserved categories), along with performance
+                                    in the telephonic interview.
+                                </p>
+                                <div className="cta-row">
+                                    <button
+                                        className="btn-primary"
+                                        aria-label="Apply Now"
+                                        onClick={() => setOpenModal(true)}
+                                    >
+                                        Apply Now
+                                    </button>
+                                    <button
+                                        className="btn-secondary"
+                                        onClick={() => setShowModal(true)}
+                                    >
+                                        Download Brochure
+                                    </button>
+                                </div>
+                            </div>
+                        )}
+
+                        {tab === "steps" && (
+                            <div
+                                id="panel-steps"
+                                aria-labelledby="tab-steps"
+                            >
+                                <h2>Step-by-Step Admission Process</h2>
+                                <p>
+                                    Follow these simple steps to complete your
+                                    Admission successfully:
+                                </p>
+                                <div className="step-list">
+                                    {[
+                                        {
+                                            title: "1. Apply Now",
+                                            desc: "Visit the official website, click on “Apply Online,” fill out the institute’s application form, and pay the registration fee of ₹ 1100 /-.",
+                                        },
+
+                                        {
+                                            title: "2. Counselling & Telephonic Interview",
+                                            desc: "Once the form is submitted, the admission cell initiates the counselling process followed by an telephonic interview session.",
+                                        },
+
+                                        {
+                                            title: "3. Seat Confirmation",
+                                            desc: (
+                                                <>
+                                                    After the telephonic
+                                                    interview, selected
+                                                    candidates will receive the
+                                                    Admission Letter via email.
+                                                    To confirm their seat, you
+                                                    must pay Rs. 30,000/- within
+                                                    four days of receiving the
+                                                    Admission Letter. Please
+                                                    click on the given link to
+                                                    book your seat –{" "}
+                                                    <a
+                                                        href="https://forms.easebuzz.in/register/ISMR_Pune/ISMR_30k_2026-2028"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        style={{
+                                                            color: "#0066cc",
+                                                            fontWeight: "600",
+                                                        }}
+                                                    >
+                                                        Click here
+                                                    </a>
+                                                </>
+                                            ),
+                                        },
+                                        {
+                                            title: "4. Provisional Admission",
+                                            desc: "After the seat confirmation , your admission is provisionally confirmed subject to fulfilment of all the required documents.",
+                                        },
+                                    ].map((step, index) => (
+                                        <div
+                                            key={index}
+                                            className="step"
+                                        >
+                                            <h3>{step.title}</h3>
+                                            <p>{step.desc}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {tab === "documents" && (
+                            <div
+                                id="panel-documents"
+                                aria-labelledby="tab-documents"
+                            >
+                                <h2>Required Documents</h2>
+                                <h5>(Documents required for MBA)</h5>
+                                <p>
+                                    List of Originals Documents to be Submitted
+                                    at the time of Admission.
+                                </p>
+
+                                {/* Category Tabs */}
+                                <div className="category-tabs">
+                                    {[
+                                        "OMS Students",
+                                        "SC / ST Students",
+                                        "OBC / SBC / VJNT / SEBC Students",
+                                        "Open / General / EBC / EWS Students",
+                                    ].map((category, index) => (
+                                        <button
+                                            key={index}
+                                            className={`category-tab ${
+                                                selectedCategory === category
+                                                    ? "active"
+                                                    : ""
+                                            }`}
+                                            onClick={() =>
+                                                setSelectedCategory(category)
+                                            }
+                                        >
+                                            {category}
+                                        </button>
+                                    ))}
+                                </div>
+
+                                {/* Category-wise Documents List Format */}
+                                <div className="doc-list">
+                                    {selectedCategory === "OMS Students" && (
+                                        <div className="doc-list">
+                                            <ul>
+                                                <li>
+                                                    {" "}
+                                                    Valid Entrance Score Card –
+                                                    Colored Copy{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    {" "}
+                                                    S.S.C. (Std. X<sup>th</sup>)
+                                                    Marksheet and certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    H.S.C. (Std. XIIth) or
+                                                    Diploma Marksheet and
+                                                    certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    All Semester Graduation
+                                                    Marksheet and certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    Leaving/Transfer Certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    {" "}
+                                                    Domicile and Nationality
+                                                    Certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    Migration Certificate (Other
+                                                    than Home University){" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    Copy of Aadhar Card{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    Copy of Pan Card{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    Passport Size Colour Photos
+                                                    (10 Copies){" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    {" "}
+                                                    Gap Certificate{" "}
+                                                    <b>(If Applicable)</b>{" "}
+                                                    <a
+                                                        href="/gap-certificate-english.pdf"
+                                                        target="_blank"
+                                                        style={{
+                                                            textDecoration:
+                                                                "none",
+                                                        }}
+                                                    >
+                                                        Download PDF in English
+                                                    </a>{" "}
+                                                    /{" "}
+                                                    <a
+                                                        href="/gap-certificate-marathi.pdf"
+                                                        style={{
+                                                            textDecoration:
+                                                                "none",
+                                                        }}
+                                                        target="_blank"
+                                                    >
+                                                        Download PDF in Marathi
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <h4>Note :-</h4>
+                                            <ul>
+                                                <li>
+                                                    All the above documents
+                                                    should be colour-scanned in
+                                                    the PDF format & to be
+                                                    emailed on
+                                                    admissions@ismrpune.edu.in
+                                                </li>
+                                                <li>
+                                                    For any documents related
+                                                    queries contact us on
+                                                    +91-9923786079 /
+                                                    +91-9158000595
+                                                </li>
+                                                <li>
+                                                    Last date of documents
+                                                    submission 31 july 2026 .
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    )}
+
+                                    {selectedCategory ===
+                                        "SC / ST Students" && (
+                                        <div className="doc-list">
+                                            <ul>
+                                                <li>
+                                                    Valid Entrance Score Card –
+                                                    Colored Copy{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    S.S.C. (Std. X<sup>th</sup>)
+                                                    Marksheet and certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    H.S.C. (Std. XIIth) or
+                                                    Diploma Marksheet and
+                                                    certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    All Semester Graduation
+                                                    Marksheet and certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    Leaving/Transfer Certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    Domicile and Nationality
+                                                    Certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    {" "}
+                                                    Migration Certificate (Other
+                                                    than Home University){" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    Income Certificate of
+                                                    Current Financial Year
+                                                    issued by Tahasildar / Sub
+                                                    Div. Officer/ Deputy
+                                                    Collector <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    Copy of Aadhar Card{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    {" "}
+                                                    Copy of Pan Card{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    {" "}
+                                                    Passport Size Colour Photos
+                                                    (10 Copies){" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    Gap Certificate{" "}
+                                                    <b>(If Applicable)</b>{" "}
+                                                    <a
+                                                        href="/gap-certificate-english.pdf"
+                                                        target="_blank"
+                                                        style={{
+                                                            textDecoration:
+                                                                "none",
+                                                        }}
+                                                    >
+                                                        Download PDF in English
+                                                    </a>{" "}
+                                                    /{" "}
+                                                    <a
+                                                        href="/gap-certificate-marathi.pdf"
+                                                        style={{
+                                                            textDecoration:
+                                                                "none",
+                                                        }}
+                                                        target="_blank"
+                                                    >
+                                                        Download PDF in Marathi
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    Caste Certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    {" "}
+                                                    Caste Validity Certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    Linking of Aadhar Number to
+                                                    Bank Account{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    {" "}
+                                                    Students Nationalized Bank
+                                                    Account Details (First Page
+                                                    of Passbook){" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                            </ul>
+                                            <h4>Note :-</h4>
+                                            <ul>
+                                                <li>
+                                                    All the above documents
+                                                    should be colour-scanned in
+                                                    the PDF format & to be
+                                                    emailed on
+                                                    admissions@ismrpune.edu.in
+                                                </li>
+                                                <li>
+                                                    For any documents related
+                                                    queries contact us on
+                                                    +91-9923786079 /
+                                                    +91-9158000595
+                                                </li>
+                                                <li>
+                                                    Last date of documents
+                                                    submission 31 july 2026 .
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    )}
+
+                                    {selectedCategory ===
+                                        "OBC / SBC / VJNT / SEBC Students" && (
+                                        <div className="doc-list">
+                                            <ul>
+                                                <li>
+                                                    Valid Entrance Score Card –
+                                                    Colored Copy{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    S.S.C. (Std. X<sup>th</sup>)
+                                                    Marksheet and certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    H.S.C. (Std. XIIth) or
+                                                    Diploma Marksheet and
+                                                    certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    {" "}
+                                                    All Semester Graduation
+                                                    Marksheet and certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    {" "}
+                                                    Leaving/Transfer Certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    Domicile and Nationality
+                                                    Certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    {" "}
+                                                    Migration Certificate (Other
+                                                    than Home University){" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    {" "}
+                                                    Income Certificate of
+                                                    Current Financial Year
+                                                    issued by Tahasildar / Sub
+                                                    Div. Officer/ Deputy
+                                                    Collector <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    {" "}
+                                                    Copy of Aadhar Card{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    Copy of Pan Card{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    Passport Size Colour Photos
+                                                    (10 Copies){" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    Gap Certificate{" "}
+                                                    <b>(If Applicable)</b>{" "}
+                                                    <a
+                                                        href="/gap-certificate-english.pdf"
+                                                        target="_blank"
+                                                        style={{
+                                                            textDecoration:
+                                                                "none",
+                                                        }}
+                                                    >
+                                                        Download PDF in English
+                                                    </a>{" "}
+                                                    /{" "}
+                                                    <a
+                                                        href="/gap-certificate-marathi.pdf"
+                                                        style={{
+                                                            textDecoration:
+                                                                "none",
+                                                        }}
+                                                        target="_blank"
+                                                    >
+                                                        Download PDF in Marathi
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    Caste Certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    Caste Validity Certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    Non Creamy Layer certificate
+                                                    Valid till 2026{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    Linking of Aadhar Number to
+                                                    Bank Account{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    {" "}
+                                                    Students Nationalized Bank
+                                                    Account Details (First Page
+                                                    of Passbook){" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                            </ul>
+
+                                            <h4>Note :-</h4>
+                                            <ul>
+                                                <li>
+                                                    All the above documents
+                                                    should be colour-scanned in
+                                                    the PDF format & to be
+                                                    emailed on
+                                                    admissions@ismrpune.edu.in
+                                                </li>
+                                                <li>
+                                                    For any documents related
+                                                    queries contact us on
+                                                    +91-9923786079 /
+                                                    +91-9158000595
+                                                </li>
+                                                <li>
+                                                    Last date of documents
+                                                    submission 31 july 2026 .
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    )}
+
+                                    {selectedCategory ===
+                                        "Open / General / EBC / EWS Students" && (
+                                        <div className="doc-list">
+                                            <ul>
+                                                <li>
+                                                    {" "}
+                                                    Valid Entrance Score Card –
+                                                    Colored Copy{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    {" "}
+                                                    S.S.C. (Std. X<sup>th</sup>)
+                                                    Marksheet and certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    {" "}
+                                                    H.S.C. (Std. XIIth) or
+                                                    Diploma Marksheet and
+                                                    certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    All Semester Graduation
+                                                    Marksheet and certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    Leaving/Transfer Certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    Domicile and Nationality
+                                                    Certificate{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    {" "}
+                                                    Migration Certificate (Other
+                                                    than Home University){" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    {" "}
+                                                    Income Certificate of
+                                                    Current Financial Year
+                                                    issued by Tahasildar / Sub
+                                                    Div. Officer/ Deputy
+                                                    Collector{" "}
+                                                    <b>(If Applicable)</b>
+                                                </li>
+                                                <li>
+                                                    Copy of Aadhar Card{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    {" "}
+                                                    Copy of Pan Card{" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    Passport Size Colour Photos
+                                                    (10 Copies){" "}
+                                                    <b>(Mandatory)</b>
+                                                </li>
+                                                <li>
+                                                    Gap Certificate{" "}
+                                                    <b>(If Applicable)</b>{" "}
+                                                    <a
+                                                        href="/gap-certificate-english.pdf"
+                                                        target="_blank"
+                                                        style={{
+                                                            textDecoration:
+                                                                "none",
+                                                        }}
+                                                    >
+                                                        Download PDF in English
+                                                    </a>{" "}
+                                                    /{" "}
+                                                    <a
+                                                        href="/gap-certificate-marathi.pdf"
+                                                        style={{
+                                                            textDecoration:
+                                                                "none",
+                                                        }}
+                                                        target="_blank"
+                                                    >
+                                                        Download PDF in Marathi
+                                                    </a>
+                                                </li>
+                                            </ul>
+
+                                            <h4>Note :-</h4>
+                                            <ul>
+                                                <li>
+                                                    All the above documents
+                                                    should be colour-scanned in
+                                                    the PDF format & to be
+                                                    emailed on
+                                                    admissions@ismrpune.edu.in
+                                                </li>
+                                                <li>
+                                                    For any documents related
+                                                    queries contact us on
+                                                    +91-9923786079 /
+                                                    +91-9158000595
+                                                </li>
+                                                <li>
+                                                    Eligibility Certificate for
+                                                    Economically Weaker Section
+                                                    is Mandatory for those who
+                                                    want to enroll their
+                                                    admission in EWS Category.{" "}
+                                                </li>
+                                                <li>
+                                                    Last date of documents
+                                                    submission 31 july 2026 .
+                                                </li>
+                                            </ul>
+                                            <a
+                                                href="/Eligibility-Certificate-for-Economically-Weaker-Section.pdf"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                <strong>
+                                                    Annexure - A for EWS
+                                                    Eligibility Certificate
+                                                </strong>
+                                            </a>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        )}
+
+                        {tab === "Important Dates" && (
+                            <div
+                                id="panel-fees"
+                                aria-labelledby="tab-fees"
+                            >
+                                <h2>Important Dates for Admissions </h2>
+                                <p>
+                                    Application fee: <strong>₹ 1100 /-</strong>{" "}
+                                    (online). Fee waiver for eligible categories
+                                    may apply. Payment can be made by clicking
+                                    on this link.{" "}
+                                    <a
+                                        href="https://forms.easebuzz.in/register/ISMR_Pune/ISMR_30k_2026-2028"
+                                        target="_blank"
+                                    >
+                                        Click Here
+                                    </a>
+                                </p>
+                                <ul>
+                                    {[
+                                        "Application Open: Dec 1, 2025",
+                                        "Application Close: 30 June 2026",
+                                        "Eligible Entrance Exam: MAH-MBA CET/CMAT/CAT/MAT/XAT/ATMA/GMAT",
+
+                                        // "Last Date for fee payment: 30 June 2026",
+                                    ].map((item, index) => (
+                                        <li key={index}>
+                                            <strong>
+                                                {item.split(": ")[0]}:
+                                            </strong>{" "}
+                                            {item.split(": ")[1]}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
+                    </div>
                 </div>
-              </div>
+            </div>
+
+            {/* -------- FORM MODAL -------- */}
+            {openModal && (
+                <ISMRFormModal
+                    open={openModal}
+                    onClose={() => setOpenModal(false)}
+                />
             )}
 
-
-
-            {tab === "Important Dates" && (
-              <div id="panel-fees" aria-labelledby="tab-fees">
-                <h2>Important Dates for Admissions </h2>
-                <p>
-                  Application fee: <strong>₹ 1100 /-</strong> (online). Fee waiver
-                  for eligible categories may apply. Payment can be made by clicking on this link. <a href="https://forms.easebuzz.in/register/ISMR_Pune/ISMR_30k_2026-2028" target="_blank">Click Here</a>
-
-                </p>
-                <ul>
-                  {[
-                    "Application Open: Dec 1, 2025",
-                    "Application Close: 30 June 2026",
-                    "Eligible Entrance Exam: MAH-MBA CET/CMAT/CAT/MAT/XAT/ATMA/GMAT",
-
-                    // "Last Date for fee payment: 30 June 2026",
-                  ].map((item, index) => (
-                    <li key={index}>
-                      <strong>{item.split(": ")[0]}:</strong>{" "}
-                      {item.split(": ")[1]}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-
-
-
-      {/* -------- FORM MODAL -------- */}
-      {showModall && (
+            {/* {showModall && (
         <div
           className="modal-backdrop"
           style={{
@@ -996,60 +1440,56 @@ export default function HowToApply() {
             </button>
           </div>
         </div>
-      )}
+      )} */}
 
+            {/* -------- FORM MODAL -------- */}
+            {showModal && (
+                <div
+                    className="modal-backdrop"
+                    style={{
+                        position: "fixed",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
+                        backgroundColor: "rgba(0,0,0,0.6)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        zIndex: 9999,
+                    }}
+                >
+                    <div
+                        className="modal-content rounded-3 p-4"
+                        style={{
+                            backgroundColor: "#fff",
+                            maxWidth: "500px",
+                            width: "90%",
+                        }}
+                    >
+                        <h4 style={{ color: "#0a2240", marginBottom: "1rem" }}>
+                            Fill the form to download brochure
+                        </h4>
 
+                        <Howtoaplydownoadform />
 
+                        <button
+                            onClick={() => setShowModal(false)}
+                            style={{
+                                marginTop: "10px",
+                                background: "transparent",
+                                border: "none",
+                                color: "#d95c5c",
+                                cursor: "pointer",
+                            }}
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            )}
 
-      {/* -------- FORM MODAL -------- */}
-      {showModal && (
-        <div
-          className="modal-backdrop"
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundColor: "rgba(0,0,0,0.6)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            zIndex: 9999,
-          }}
-        >
-          <div
-            className="modal-content rounded-3 p-4"
-            style={{
-              backgroundColor: "#fff",
-              maxWidth: "500px",
-              width: "90%",
-            }}
-          >
-            <h4 style={{ color: "#0a2240", marginBottom: "1rem" }}>
-              Fill the form to download brochure
-            </h4>
-
-            <Howtoaplydownoadform />
-
-            <button
-              onClick={() => setShowModal(false)}
-              style={{
-                marginTop: "10px",
-                background: "transparent",
-                border: "none",
-                color: "#d95c5c",
-                cursor: "pointer",
-              }}
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
-
-
-      <Faq />
-    </section>
-  );
+            <Faq />
+        </section>
+    );
 }

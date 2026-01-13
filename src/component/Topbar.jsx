@@ -1,151 +1,172 @@
 import React, { useState } from "react";
 import "./TopHeader.css";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import ContactForm from "./form/ContactForm";
 import { Link } from "react-router-dom";
-
+import ISMRFormModal from "./form/ISMRFormModal";
 
 const TopHeader = () => {
-  const [showModal, setShowModal] = useState(false);
-  const [open, setOpen] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+    const [open, setOpen] = useState(false);
 
-  return (
-    <>
-      <div className="top-header-area">
-        <div className="container-fluid d-flex justify-content-between align-items-center">
+    return (
+        <>
+            <div className="top-header-area">
+                <div className="container-fluid d-flex justify-content-between align-items-center">
+                    {/* Left Section */}
+                    <div className="top-header-left">
+                        <ul>
+                            <li>
+                                <a href="tel:+919923786079">
+                                    <i className="ri-phone-fill"></i> +91
+                                    9923786079
+                                </a>
+                            </li>
 
-          {/* Left Section */}
-          <div className="top-header-left">
-            <ul>
-              <li>
-                <a href="tel:+919923786079">
-                  <i className="ri-phone-fill"></i> +91 9923786079
-                </a>
-              </li>
+                            <li>
+                                <a href="mailto:admissions@ismrpune.edu.in">
+                                    <i className="ri-mail-line"></i>{" "}
+                                    admissions@ismrpune.edu.in
+                                </a>
+                            </li>
 
-              <li>
-                <a href="mailto:admissions@ismrpune.edu.in">
-                  <i className="ri-mail-line"></i> admissions@ismrpune.edu.in
-                </a>
-              </li>
+                            <li>
+                                <a
+                                    href="https://www.facebook.com/ismrcollegepune/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <FaFacebookF />
+                                </a>
+                            </li>
 
-              <li>
-                <a
-                  href="https://www.facebook.com/ismrcollegepune/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaFacebookF />
-                </a>
-              </li>
+                            <li>
+                                <a
+                                    href="https://www.instagram.com/ismrofficial/?hl=en"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <FaInstagram />
+                                </a>
+                            </li>
 
-              <li>
-                <a
-                  href="https://www.instagram.com/ismrofficial/?hl=en"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaInstagram />
-                </a>
-              </li>
+                            <li>
+                                <a
+                                    href="https://www.linkedin.com/school/international-school-of-management-and-research-pune/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <FaLinkedinIn />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-              <li>
-                <a
-                  href="https://www.linkedin.com/school/international-school-of-management-and-research-pune/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-            </ul>
-          </div>
+                    {/* Right Section */}
+                    <div className="top-header-right">
+                        <ul className="list-unstyled d-flex gap-2 mb-0">
+                            <li>
+                                <Link
+                                    to="/Blogs"
+                                    className="btn btn-sm text-white"
+                                >
+                                    Blogs
+                                </Link>
+                            </li>
+                            <li className="notice-dropdown">
+                                <Link
+                                    to="#"
+                                    className="btn btn-sm text-white flashy-notice"
+                                    onClick={() => setOpen(!open)}
+                                >
+                                    Notices ▾
+                                </Link>
 
-          {/* Right Section */}
-          <div className="top-header-right">
-            <ul className="list-unstyled d-flex gap-2 mb-0">
-              <li>
-                <Link to="/Blogs"
+                                {open && (
+                                    <ul className="notice-menu">
+                                        <li>
+                                            <Link to="/notices/admissions">
+                                                ADMISSIONS
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/notices/academics">
+                                                ACADEMICS
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/notices/placements">
+                                                PLACEMENTS
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/notices/cultural">
+                                                CULTURAL
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                )}
+                            </li>
 
-                  className="btn btn-sm text-white"
-                >
-                  Blogs
-                </Link>
-              </li>
-              <li className="notice-dropdown">
-                <Link
-                  to="#"
-                  className="btn btn-sm text-white flashy-notice" onClick={() => setOpen(!open)}
-                >
-                  Notices ▾
-                </Link>
+                            <li>
+                                <button
+                                    onClick={() =>
+                                        (window.location.href =
+                                            "https://fees.easebuzz.in/view/ISMR_Pune")
+                                    }
+                                    className="btn btn-sm"
+                                    style={{
+                                        backgroundColor: "#ffc333",
+                                        color: "#2c2626ff",
+                                        fontWeight: "600",
+                                    }}
+                                >
+                                    Pay Fees Online
+                                </button>
+                            </li>
 
-                {open && (
-                  <ul className="notice-menu">
-                    <li><Link to="/notices/admissions">ADMISSIONS</Link></li>
-                    <li><Link to="/notices/academics">ACADEMICS</Link></li>
-                    <li><Link to="/notices/placements">PLACEMENTS</Link></li>
-                    <li><Link to="/notices/cultural">CULTURAL</Link></li>
-                  </ul>
-                )}
-              </li>
+                            <li>
+                                <button
+                                    onClick={() => setShowModal(true)}
+                                    className="btn btn-sm"
+                                    style={{
+                                        backgroundColor: "#ffc333",
+                                        color: "#2c2626ff",
+                                        fontWeight: "600",
+                                    }}
+                                >
+                                    Apply for MBA
+                                </button>
+                            </li>
 
+                            <li>
+                                <button
+                                    onClick={() => setShowModal(true)}
+                                    className="btn btn-sm"
+                                    style={{
+                                        backgroundColor: "#ffc333",
+                                        color: "#2c2626ff",
+                                        fontWeight: "600",
+                                    }}
+                                >
+                                    Apply for BBA / BCA
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-              <li>
-                <button
-                  onClick={() =>
-                  (window.location.href =
-                    "https://fees.easebuzz.in/view/ISMR_Pune")
-                  }
-                  className="btn btn-sm"
-                  style={{
-                    backgroundColor: "#ffc333",
-                    color: "#2c2626ff",
-                    fontWeight: "600",
-                  }}
-                >
-                  Pay Fees Online
-                </button>
-              </li>
+            {/* -------- MODAL -------- */}
 
-              <li>
-                <button
-                  onClick={() => setShowModal(true)}
-                  className="btn btn-sm"
-                  style={{
-                    backgroundColor: "#ffc333",
-                    color: "#2c2626ff",
-                    fontWeight: "600",
-                  }}
-                >
-                  Apply for MBA
-                </button>
-              </li>
+            {showModal && (
+                <ISMRFormModal
+                    open={showModal}
+                    onClose={() => setShowModal(false)}
+                />
+            )}
 
-              <li>
-                <button
-                  onClick={() => setShowModal(true)}
-                  className="btn btn-sm"
-                  style={{
-                    backgroundColor: "#ffc333",
-                    color: "#2c2626ff",
-                    fontWeight: "600",
-                  }}
-                >
-                  Apply for BBA / BCA
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* -------- MODAL -------- */}
-      {showModal && (
+            {/* {showModal && (
         <div
           className="modal-backdrop"
           style={{
@@ -186,9 +207,9 @@ const TopHeader = () => {
             </button>
           </div>
         </div>
-      )}
-    </>
-  );
+      )} */}
+        </>
+    );
 };
 
 export default TopHeader;

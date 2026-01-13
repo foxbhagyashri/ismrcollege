@@ -2,39 +2,42 @@ import React, { useState } from "react";
 import "./sticky.css";
 import ContactForm from "./form/ContactForm";
 // import ReCAPTCHA from "react-google-recaptcha";
+import ISMRFormModal from "./form/ISMRFormModal";
 
 const Sticky = () => {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    city: "",
-    message: "",
-    program: "",
-  });
+    const [form, setForm] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        city: "",
+        message: "",
+        program: "",
+    });
 
+    const [showModal, setShowModal] = useState(false);
 
-  const [showModal, setShowModal] = useState(false);
+    return (
+        <div>
+            {/* Sticky Button */}
+            <div className="apply-now-sticky">
+                <button
+                    className="apply-now-btn rotated"
+                    aria-label="Apply Now"
+                    onClick={() => setShowModal(true)}
+                >
+                    Apply Now
+                </button>
+            </div>
 
+            {/* -------- FORM MODAL -------- */}
+            {showModal && (
+                <ISMRFormModal
+                    open={showModal}
+                    onClose={() => setShowModal(false)}
+                />
+            )}
 
-
-  return (
-    <div>
-      {/* Sticky Button */}
-      <div className="apply-now-sticky">
-        <button
-          className="apply-now-btn rotated"
-          aria-label="Apply Now"
-          onClick={() => setShowModal(true)}
-        >
-          Apply Now
-        </button>
-      </div>
-
-
-
-      {/* -------- FORM MODAL -------- */}
-      {showModal && (
+            {/* {showModal && (
         <div
           className="modal-backdrop"
           style={{
@@ -77,9 +80,9 @@ const Sticky = () => {
             </button>
           </div>
         </div>
-      )}
-    </div>
-  );
+      )} */}
+        </div>
+    );
 };
 
 export default Sticky;
