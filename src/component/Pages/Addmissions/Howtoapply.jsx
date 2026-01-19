@@ -680,9 +680,8 @@ export default function HowToApply() {
                         ].map((tabName) => (
                             <button
                                 key={tabName}
-                                className={`tab-btn ${
-                                    tab === tabName ? "active" : ""
-                                }`}
+                                className={`tab-btn ${tab === tabName ? "active" : ""
+                                    }`}
                                 onClick={() => setTab(tabName)}
                                 role="tab"
                                 aria-selected={tab === tabName}
@@ -820,11 +819,10 @@ export default function HowToApply() {
                                     ].map((category, index) => (
                                         <button
                                             key={index}
-                                            className={`category-tab ${
-                                                selectedCategory === category
-                                                    ? "active"
-                                                    : ""
-                                            }`}
+                                            className={`category-tab ${selectedCategory === category
+                                                ? "active"
+                                                : ""
+                                                }`}
                                             onClick={() =>
                                                 setSelectedCategory(category)
                                             }
@@ -886,6 +884,11 @@ export default function HowToApply() {
                                                     <b>(Mandatory)</b>
                                                 </li>
                                                 <li>
+                                                    Non-Creamy Layer Certificate Valid till 31 March 2027{" "}
+                                                    {/* <b>(Mandatory)</b> */}
+                                                </li>
+
+                                                <li>
                                                     Passport Size Colour Photos
                                                     (10 Copies){" "}
                                                     <b>(Mandatory)</b>
@@ -942,407 +945,434 @@ export default function HowToApply() {
 
                                     {selectedCategory ===
                                         "SC / ST Students" && (
-                                        <div className="doc-list">
-                                            <ul>
-                                                <li>
-                                                    Valid Entrance Score Card –
-                                                    Colored Copy{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    S.S.C. (Std. X<sup>th</sup>)
-                                                    Marksheet and certificate{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    H.S.C. (Std. XIIth) or
-                                                    Diploma Marksheet and
-                                                    certificate{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    All Semester Graduation
-                                                    Marksheet and certificate{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    Leaving/Transfer Certificate{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    Domicile and Nationality
-                                                    Certificate{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    {" "}
-                                                    Migration Certificate (Other
-                                                    than Home University){" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    Income Certificate of
-                                                    Current Financial Year
-                                                    issued by Tahasildar / Sub
-                                                    Div. Officer/ Deputy
-                                                    Collector <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    Copy of Aadhar Card{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    {" "}
-                                                    Copy of Pan Card{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    {" "}
-                                                    Passport Size Colour Photos
-                                                    (10 Copies){" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    Gap Certificate{" "}
-                                                    <b>(If Applicable)</b>{" "}
-                                                    <a
-                                                        href="/gap-certificate-english.pdf"
-                                                        target="_blank"
-                                                        style={{
-                                                            textDecoration:
-                                                                "none",
-                                                        }}
-                                                    >
-                                                        Download PDF in English
-                                                    </a>{" "}
-                                                    /{" "}
-                                                    <a
-                                                        href="/gap-certificate-marathi.pdf"
-                                                        style={{
-                                                            textDecoration:
-                                                                "none",
-                                                        }}
-                                                        target="_blank"
-                                                    >
-                                                        Download PDF in Marathi
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    Caste Certificate{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    {" "}
-                                                    Caste Validity Certificate{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    Linking of Aadhar Number to
-                                                    Bank Account{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    {" "}
-                                                    Students Nationalized Bank
-                                                    Account Details (First Page
-                                                    of Passbook){" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                            </ul>
-                                            <h4>Note :-</h4>
-                                            <ul>
-                                                <li>
-                                                    All the above documents
-                                                    should be colour-scanned in
-                                                    the PDF format & to be
-                                                    emailed on
-                                                    admissions@ismrpune.edu.in
-                                                </li>
-                                                <li>
-                                                    For any documents related
-                                                    queries contact us on
-                                                    +91-9923786079 /
-                                                    +91-9158000595
-                                                </li>
-                                                <li>
-                                                    Last date of documents
-                                                    submission 31 july 2026 .
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    )}
+                                            <div className="doc-list">
+                                                <ul>
+                                                    <li>
+                                                        Valid Entrance Score Card –
+                                                        Colored Copy{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        S.S.C. (Std. X<sup>th</sup>)
+                                                        Marksheet and certificate{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        H.S.C. (Std. XIIth) or
+                                                        Diploma Marksheet and
+                                                        certificate{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        All Semester Graduation
+                                                        Marksheet and certificate{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        Leaving/Transfer Certificate{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        Domicile and Nationality
+                                                        Certificate{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        {" "}
+                                                        Migration Certificate (Other
+                                                        than Home University){" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        Income Certificate of
+                                                        Current Financial Year
+                                                        issued by Tahasildar / Sub
+                                                        Div. Officer/ Deputy
+                                                        Collector <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        Copy of Aadhar Card{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        {" "}
+                                                        Copy of Pan Card{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        Non-Creamy Layer Certificate Valid till 31 March 2027{" "}
+                                                        {/* <b>(Mandatory)</b> */}
+                                                    </li>
+                                                    <li>
+                                                        {" "}
+                                                        Copy of Ration Card (Color Copy){" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        {" "}
+                                                        Passport Size Colour Photos
+                                                        (10 Copies){" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        Gap Certificate{" "}
+                                                        <b>(If Applicable)</b>{" "}
+                                                        <a
+                                                            href="/gap-certificate-english.pdf"
+                                                            target="_blank"
+                                                            style={{
+                                                                textDecoration:
+                                                                    "none",
+                                                            }}
+                                                        >
+                                                            Download PDF in English
+                                                        </a>{" "}
+                                                        /{" "}
+                                                        <a
+                                                            href="/gap-certificate-marathi.pdf"
+                                                            style={{
+                                                                textDecoration:
+                                                                    "none",
+                                                            }}
+                                                            target="_blank"
+                                                        >
+                                                            Download PDF in Marathi
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        Caste Certificate{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        {" "}
+                                                        Caste Validity Certificate{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        Linking of Aadhar Number to
+                                                        Bank Account{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        {" "}
+                                                        Students Nationalized Bank
+                                                        Account Details (First Page
+                                                        of Passbook){" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                </ul>
+                                                <h4>Note :-</h4>
+                                                <ul>
+                                                    <li>
+                                                        All the above documents
+                                                        should be colour-scanned in
+                                                        the PDF format & to be
+                                                        emailed on
+                                                        admissions@ismrpune.edu.in
+                                                    </li>
+                                                    <li>
+                                                        For any documents related
+                                                        queries contact us on
+                                                        +91-9923786079 /
+                                                        +91-9158000595
+                                                    </li>
+                                                    <li>
+                                                        Last date of documents
+                                                        submission 31 july 2026 .
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        )}
 
                                     {selectedCategory ===
                                         "OBC / SBC / VJNT / SEBC Students" && (
-                                        <div className="doc-list">
-                                            <ul>
-                                                <li>
-                                                    Valid Entrance Score Card –
-                                                    Colored Copy{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    S.S.C. (Std. X<sup>th</sup>)
-                                                    Marksheet and certificate{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    H.S.C. (Std. XIIth) or
-                                                    Diploma Marksheet and
-                                                    certificate{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    {" "}
-                                                    All Semester Graduation
-                                                    Marksheet and certificate{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    {" "}
-                                                    Leaving/Transfer Certificate{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    Domicile and Nationality
-                                                    Certificate{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    {" "}
-                                                    Migration Certificate (Other
-                                                    than Home University){" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    {" "}
-                                                    Income Certificate of
-                                                    Current Financial Year
-                                                    issued by Tahasildar / Sub
-                                                    Div. Officer/ Deputy
-                                                    Collector <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    {" "}
-                                                    Copy of Aadhar Card{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    Copy of Pan Card{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    Passport Size Colour Photos
-                                                    (10 Copies){" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    Gap Certificate{" "}
-                                                    <b>(If Applicable)</b>{" "}
-                                                    <a
-                                                        href="/gap-certificate-english.pdf"
-                                                        target="_blank"
-                                                        style={{
-                                                            textDecoration:
-                                                                "none",
-                                                        }}
-                                                    >
-                                                        Download PDF in English
-                                                    </a>{" "}
-                                                    /{" "}
-                                                    <a
-                                                        href="/gap-certificate-marathi.pdf"
-                                                        style={{
-                                                            textDecoration:
-                                                                "none",
-                                                        }}
-                                                        target="_blank"
-                                                    >
-                                                        Download PDF in Marathi
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    Caste Certificate{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    Caste Validity Certificate{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    Non Creamy Layer certificate
-                                                    Valid till 2026{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    Linking of Aadhar Number to
-                                                    Bank Account{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    {" "}
-                                                    Students Nationalized Bank
-                                                    Account Details (First Page
-                                                    of Passbook){" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                            </ul>
+                                            <div className="doc-list">
+                                                <ul>
+                                                    <li>
+                                                        Valid Entrance Score Card –
+                                                        Colored Copy{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        S.S.C. (Std. X<sup>th</sup>)
+                                                        Marksheet and certificate{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        H.S.C. (Std. XIIth) or
+                                                        Diploma Marksheet and
+                                                        certificate{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        {" "}
+                                                        All Semester Graduation
+                                                        Marksheet and certificate{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        {" "}
+                                                        Leaving/Transfer Certificate{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        Domicile and Nationality
+                                                        Certificate{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        {" "}
+                                                        Migration Certificate (Other
+                                                        than Home University){" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        {" "}
+                                                        Income Certificate of
+                                                        Current Financial Year
+                                                        issued by Tahasildar / Sub
+                                                        Div. Officer/ Deputy
+                                                        Collector <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        {" "}
+                                                        Copy of Aadhar Card{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        Copy of Pan Card{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        Non-Creamy Layer Certificate Valid till 31 March 2027{" "}
+                                                        {/* <b>(Mandatory)</b> */}
+                                                    </li>
+                                                    <li>
+                                                        {" "}
+                                                        Copy of Ration Card (Color Copy){" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        Passport Size Colour Photos
+                                                        (10 Copies){" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        Gap Certificate{" "}
+                                                        <b>(If Applicable)</b>{" "}
+                                                        <a
+                                                            href="/gap-certificate-english.pdf"
+                                                            target="_blank"
+                                                            style={{
+                                                                textDecoration:
+                                                                    "none",
+                                                            }}
+                                                        >
+                                                            Download PDF in English
+                                                        </a>{" "}
+                                                        /{" "}
+                                                        <a
+                                                            href="/gap-certificate-marathi.pdf"
+                                                            style={{
+                                                                textDecoration:
+                                                                    "none",
+                                                            }}
+                                                            target="_blank"
+                                                        >
+                                                            Download PDF in Marathi
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        Caste Certificate{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        Caste Validity Certificate{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        Non Creamy Layer certificate
+                                                        Valid till 2026{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        Linking of Aadhar Number to
+                                                        Bank Account{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        {" "}
+                                                        Students Nationalized Bank
+                                                        Account Details (First Page
+                                                        of Passbook){" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                </ul>
 
-                                            <h4>Note :-</h4>
-                                            <ul>
-                                                <li>
-                                                    All the above documents
-                                                    should be colour-scanned in
-                                                    the PDF format & to be
-                                                    emailed on
-                                                    admissions@ismrpune.edu.in
-                                                </li>
-                                                <li>
-                                                    For any documents related
-                                                    queries contact us on
-                                                    +91-9923786079 /
-                                                    +91-9158000595
-                                                </li>
-                                                <li>
-                                                    Last date of documents
-                                                    submission 31 july 2026 .
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    )}
+                                                <h4>Note :-</h4>
+                                                <ul>
+                                                    <li>
+                                                        All the above documents
+                                                        should be colour-scanned in
+                                                        the PDF format & to be
+                                                        emailed on
+                                                        admissions@ismrpune.edu.in
+                                                    </li>
+                                                    <li>
+                                                        For any documents related
+                                                        queries contact us on
+                                                        +91-9923786079 /
+                                                        +91-9158000595
+                                                    </li>
+                                                    <li>
+                                                        Last date of documents
+                                                        submission 31 july 2026 .
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        )}
 
                                     {selectedCategory ===
                                         "Open / General / EBC / EWS Students" && (
-                                        <div className="doc-list">
-                                            <ul>
-                                                <li>
-                                                    {" "}
-                                                    Valid Entrance Score Card –
-                                                    Colored Copy{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    {" "}
-                                                    S.S.C. (Std. X<sup>th</sup>)
-                                                    Marksheet and certificate{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    {" "}
-                                                    H.S.C. (Std. XIIth) or
-                                                    Diploma Marksheet and
-                                                    certificate{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    All Semester Graduation
-                                                    Marksheet and certificate{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    Leaving/Transfer Certificate{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    Domicile and Nationality
-                                                    Certificate{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    {" "}
-                                                    Migration Certificate (Other
-                                                    than Home University){" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    {" "}
-                                                    Income Certificate of
-                                                    Current Financial Year
-                                                    issued by Tahasildar / Sub
-                                                    Div. Officer/ Deputy
-                                                    Collector{" "}
-                                                    <b>(If Applicable)</b>
-                                                </li>
-                                                <li>
-                                                    Copy of Aadhar Card{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    {" "}
-                                                    Copy of Pan Card{" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    Passport Size Colour Photos
-                                                    (10 Copies){" "}
-                                                    <b>(Mandatory)</b>
-                                                </li>
-                                                <li>
-                                                    Gap Certificate{" "}
-                                                    <b>(If Applicable)</b>{" "}
-                                                    <a
-                                                        href="/gap-certificate-english.pdf"
-                                                        target="_blank"
-                                                        style={{
-                                                            textDecoration:
-                                                                "none",
-                                                        }}
-                                                    >
-                                                        Download PDF in English
-                                                    </a>{" "}
-                                                    /{" "}
-                                                    <a
-                                                        href="/gap-certificate-marathi.pdf"
-                                                        style={{
-                                                            textDecoration:
-                                                                "none",
-                                                        }}
-                                                        target="_blank"
-                                                    >
-                                                        Download PDF in Marathi
-                                                    </a>
-                                                </li>
-                                            </ul>
+                                            <div className="doc-list">
+                                                <ul>
+                                                    <li>
+                                                        {" "}
+                                                        Valid Entrance Score Card –
+                                                        Colored Copy{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        {" "}
+                                                        S.S.C. (Std. X<sup>th</sup>)
+                                                        Marksheet and certificate{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        {" "}
+                                                        H.S.C. (Std. XIIth) or
+                                                        Diploma Marksheet and
+                                                        certificate{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        All Semester Graduation
+                                                        Marksheet and certificate{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        Leaving/Transfer Certificate{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        Domicile and Nationality
+                                                        Certificate{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        {" "}
+                                                        Migration Certificate (Other
+                                                        than Home University){" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        {" "}
+                                                        Income Certificate of
+                                                        Current Financial Year
+                                                        issued by Tahasildar / Sub
+                                                        Div. Officer/ Deputy
+                                                        Collector{" "}
+                                                        <b>(If Applicable)</b>
+                                                    </li>
+                                                    <li>
+                                                        Copy of Aadhar Card{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        {" "}
+                                                        Copy of Pan Card{" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        Non-Creamy Layer Certificate Valid till 31 March 2027{" "}
+                                                        {/* <b>(Mandatory)</b> */}
+                                                    </li>
+                                                    <li>
+                                                        {" "}
+                                                        Copy of Ration Card (Color Copy){" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        Passport Size Colour Photos
+                                                        (10 Copies){" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                    <li>
+                                                        Gap Certificate{" "}
+                                                        <b>(If Applicable)</b>{" "}
+                                                        <a
+                                                            href="/gap-certificate-english.pdf"
+                                                            target="_blank"
+                                                            style={{
+                                                                textDecoration:
+                                                                    "none",
+                                                            }}
+                                                        >
+                                                            Download PDF in English
+                                                        </a>{" "}
+                                                        /{" "}
+                                                        <a
+                                                            href="/gap-certificate-marathi.pdf"
+                                                            style={{
+                                                                textDecoration:
+                                                                    "none",
+                                                            }}
+                                                            target="_blank"
+                                                        >
+                                                            Download PDF in Marathi
+                                                        </a>
+                                                    </li>
+                                                </ul>
 
-                                            <h4>Note :-</h4>
-                                            <ul>
-                                                <li>
-                                                    All the above documents
-                                                    should be colour-scanned in
-                                                    the PDF format & to be
-                                                    emailed on
-                                                    admissions@ismrpune.edu.in
-                                                </li>
-                                                <li>
-                                                    For any documents related
-                                                    queries contact us on
-                                                    +91-9923786079 /
-                                                    +91-9158000595
-                                                </li>
-                                                <li>
-                                                    Eligibility Certificate for
-                                                    Economically Weaker Section
-                                                    is Mandatory for those who
-                                                    want to enroll their
-                                                    admission in EWS Category.{" "}
-                                                </li>
-                                                <li>
-                                                    Last date of documents
-                                                    submission 31 july 2026 .
-                                                </li>
-                                            </ul>
-                                            <a
-                                                href="/Eligibility-Certificate-for-Economically-Weaker-Section.pdf"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                            >
-                                                <strong>
-                                                    Annexure - A for EWS
-                                                    Eligibility Certificate
-                                                </strong>
-                                            </a>
-                                        </div>
-                                    )}
+                                                <h4>Note :-</h4>
+                                                <ul>
+                                                    <li>
+                                                        All the above documents
+                                                        should be colour-scanned in
+                                                        the PDF format & to be
+                                                        emailed on
+                                                        admissions@ismrpune.edu.in
+                                                    </li>
+                                                    <li>
+                                                        For any documents related
+                                                        queries contact us on
+                                                        +91-9923786079 /
+                                                        +91-9158000595
+                                                    </li>
+                                                    <li>
+                                                        Eligibility Certificate for
+                                                        Economically Weaker Section
+                                                        is Mandatory for those who
+                                                        want to enroll their
+                                                        admission in EWS Category.{" "}
+                                                    </li>
+                                                    <li>
+                                                        Last date of documents
+                                                        submission 31 july 2026 .
+                                                    </li>
+                                                </ul>
+                                                <a
+                                                    href="/Eligibility-Certificate-for-Economically-Weaker-Section.pdf"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    <strong>
+                                                        Annexure - A for EWS
+                                                        Eligibility Certificate
+                                                    </strong>
+                                                </a>
+                                            </div>
+                                        )}
                                 </div>
                             </div>
                         )}

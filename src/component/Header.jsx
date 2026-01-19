@@ -239,15 +239,7 @@ const Header = () => {
               Refund Policy
             </Link>
           </li>
-          {/* <li>
-            <Link
-              className="dropdown-item"
-              to="/Addmissions/Feesstructure"
-              onClick={handleDropdownItemClick}
-            >
-              Fees Structure
-            </Link>
-          </li> */}
+         
           <li>
             <Link
               className="dropdown-item"
@@ -281,7 +273,16 @@ const Header = () => {
               to="/Addmissions/Feesstructure"
               onClick={handleDropdownItemClick}
             >
-             Fees Structure
+              Fees Structure
+            </Link>
+          </li>
+           <li>
+            <Link
+              className="dropdown-item"
+              to="/Addmissions/Listofdocuments"
+              onClick={handleDropdownItemClick}
+            >
+             List Of Documents
             </Link>
           </li>
         </ul>
@@ -320,7 +321,7 @@ const Header = () => {
               Course Duration
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               className="dropdown-item"
               to="/Academics/Library"
@@ -328,7 +329,7 @@ const Header = () => {
             >
               Library
             </Link>
-          </li>
+          </li> */}
 
           {/* Cleaned up commented links */}
         </ul>

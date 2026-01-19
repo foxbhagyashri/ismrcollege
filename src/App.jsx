@@ -74,6 +74,8 @@ import Treasure from "./component/Pages/AboutPage/Treasure";
 import Applicationform from "./component/Pages/Contactus/Applicationform";
 import FAQBba from "./component/Pages/Addmissions/FaqBbaBca";
 import Termsconditions from "./component/Termsconditions";
+import MarketingAcrossGenerations from "./component/blogs/Marketing-Across-Generations";
+import Listofdocument from "./component/Pages/Addmissions/Listofdocuments";
 
 function App() {
   return (
@@ -125,6 +127,7 @@ function App() {
         <Route path="/Addmissions/Refundpolicy" element={<Refundpolicy />} />
         <Route path="/Addmissions/Feesstructure" element={<Feesstructure />} />
         <Route path="/Addmissions/FaqBbaBca" element={<FAQBba />} />
+        <Route path="/Addmissions/Listofdocuments" element={<Listofdocument />} />
         <Route
           path="/Addmissions/Admissioncontact"
           element={<Admissioncontact />}
@@ -172,6 +175,9 @@ function App() {
         <Route path="/ApplyMba" element={<ApplyMba />} />
         <Route path="/ApplyBba" element={<ApplyBba />} />
         <Route path="/Termsconditions" element={<Termsconditions />} />
+
+
+        <Route path="/blogs/Marketing-Across-Generations" element={<MarketingAcrossGenerations />} />
 
       </Routes>
       {/* <Faq /> */}

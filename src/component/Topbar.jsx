@@ -94,7 +94,7 @@ const TopHeader = () => {
                                                 ACADEMICS
                                             </Link>
                                         </li>
-                                        <li>
+                                        {/* <li>
                                             <Link to="/notices/placements">
                                                 PLACEMENTS
                                             </Link>
@@ -103,16 +103,34 @@ const TopHeader = () => {
                                             <Link to="/notices/cultural">
                                                 CULTURAL
                                             </Link>
-                                        </li>
+                                        </li> */}
                                     </ul>
                                 )}
+                            </li>
+
+
+                            <li>
+                                <button
+                                    onClick={() =>
+                                    (window.location.href =
+                                        "https://cetcell.mahacet.org/")
+                                    }
+                                    className="btn btn-sm"
+                                    style={{
+                                        backgroundColor: "#ffc333",
+                                        color: "#2c2626ff",
+                                        fontWeight: "600",
+                                    }}
+                                >
+                                    Apply For MAH – CET
+                                </button>
                             </li>
 
                             <li>
                                 <button
                                     onClick={() =>
-                                        (window.location.href =
-                                            "https://fees.easebuzz.in/view/ISMR_Pune")
+                                    (window.location.href =
+                                        "https://fees.easebuzz.in/view/ISMR_Pune")
                                     }
                                     className="btn btn-sm"
                                     style={{

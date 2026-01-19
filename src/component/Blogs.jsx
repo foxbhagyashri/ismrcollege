@@ -117,6 +117,9 @@ const BlogPage = () => {
           .read-more:hover {
             text-decoration: underline;
           }
+            a{
+                text-decoration: none;
+                }
 
         `}</style>
 
@@ -124,7 +127,7 @@ const BlogPage = () => {
 
         <div className="breadcrumb-content">
           <h1 className="breadcrumb-title">
-             <span>Blogs</span>
+            <span>Blogs</span>
           </h1>
           <p className="breadcrumb-path">
             Home • <span>Blogs</span>
@@ -137,15 +140,15 @@ const BlogPage = () => {
         <div className="blog-grid">
 
           <div className="blog-card">
-            <img className="blog-image" src="/14.png" alt="Blog 1" />
+            <img className="blog-image" src="/Marketing-Across-Generations.jpg" alt="Blog 1" />
             <div className="blog-content">
-              <h3 className="blog-title">Marketing Management</h3>
-              <p className="blog-desc">
-                Education is evolving rapidly with technology, innovation, and new policies. Here's what the future looks like.
-              </p>
+              <a href="/blogs/Marketing-Across-Generations"> <h3 className="blog-title">Marketing Management</h3></a>
+              <a href="/blogs/Marketing-Across-Generations"> <p className="blog-desc">
+                Marketing Across Generations: How Brands Talk Differently to Baby Boomers, Gen Z & Gen Alpha
+              </p></a>
               <div className="blog-footer d-flex justify-content-between align-items-center">
-              <a className="read-more" href="#">Marketing</a>
-              <p className="pt-4"><b>Date : </b> 05 Dec 2025</p>
+                <a className="read-more" href="#">    By: Prof Sandeep D Chaudhary</a>
+                <p className="pt-4"><b>Date : </b> 14 January 2025</p>
               </div>
             </div>
           </div>
@@ -158,8 +161,8 @@ const BlogPage = () => {
                 Artificial Intelligence is transforming teaching methods, analytics, and the overall academic ecosystem.
               </p>
               <div className="blog-footer d-flex justify-content-between align-items-center">
-              <a className="read-more" href="#">Finance</a>
-              <p className="pt-4"><b>Date : </b> 12 Nov 2025</p>
+                <a className="read-more" href="#">Finance</a>
+                <p className="pt-4"><b>Date : </b> 12 Nov 2025</p>
               </div>
             </div>
           </div>
@@ -172,8 +175,8 @@ const BlogPage = () => {
                 Explore the most important skills every student must learn for future career success.
               </p>
               <div className="blog-footer d-flex justify-content-between align-items-center">
-              <a className="read-more" href="#">HR</a>
-              <p className="pt-4"><b>Date : </b> 10 Nov 2025</p>
+                <a className="read-more" href="#">HR</a>
+                <p className="pt-4"><b>Date : </b> 10 Nov 2025</p>
               </div>
             </div>
           </div>
