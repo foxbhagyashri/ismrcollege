@@ -76,6 +76,7 @@ import FAQBba from "./component/Pages/Addmissions/FaqBbaBca";
 import Termsconditions from "./component/Termsconditions";
 import MarketingAcrossGenerations from "./component/blogs/Marketing-Across-Generations";
 import Listofdocument from "./component/Pages/Addmissions/Listofdocuments";
+import AdmissionNote from "./component/Pages/notices/Admissions";
 
 function App() {
   return (
@@ -178,6 +179,10 @@ function App() {
 
 
         <Route path="/blogs/Marketing-Across-Generations" element={<MarketingAcrossGenerations />} />
+
+        {/* more PlacementRules */}
+        <Route path="/notices/Admissions" element={<AdmissionNote />} />
+
 
       </Routes>
       {/* <Faq /> */}

@@ -139,12 +139,13 @@
 }
 
 .flashy-notice {
-    background: linear-gradient(45deg, #ef1d4c, #e02200);
+    background: rgb(255, 195, 51);
     border-radius: 10px;
     padding: 6px 16px;
     font-weight: 600;
     animation: pulse 1.5s infinite;
     box-shadow: 0 0 12px rgba(255, 75, 43, 0.8);
+    color:#000;
 }
 
 @keyframes pulse {

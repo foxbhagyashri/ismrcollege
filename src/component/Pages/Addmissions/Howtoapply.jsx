@@ -883,11 +883,7 @@ export default function HowToApply() {
                                                     Copy of Pan Card{" "}
                                                     <b>(Mandatory)</b>
                                                 </li>
-                                                <li>
-                                                    Non-Creamy Layer Certificate Valid till 31 March 2027{" "}
-                                                    {/* <b>(Mandatory)</b> */}
-                                                </li>
-
+                                               
                                                 <li>
                                                     Passport Size Colour Photos
                                                     (10 Copies){" "}
@@ -999,10 +995,7 @@ export default function HowToApply() {
                                                         Copy of Pan Card{" "}
                                                         <b>(Mandatory)</b>
                                                     </li>
-                                                    <li>
-                                                        Non-Creamy Layer Certificate Valid till 31 March 2027{" "}
-                                                        {/* <b>(Mandatory)</b> */}
-                                                    </li>
+                                                    
                                                     <li>
                                                         {" "}
                                                         Copy of Ration Card (Color Copy){" "}
@@ -1143,10 +1136,7 @@ export default function HowToApply() {
                                                         Copy of Pan Card{" "}
                                                         <b>(Mandatory)</b>
                                                     </li>
-                                                    <li>
-                                                        Non-Creamy Layer Certificate Valid till 31 March 2027{" "}
-                                                        {/* <b>(Mandatory)</b> */}
-                                                    </li>
+                                                   
                                                     <li>
                                                         {" "}
                                                         Copy of Ration Card (Color Copy){" "}
@@ -1191,8 +1181,7 @@ export default function HowToApply() {
                                                         <b>(Mandatory)</b>
                                                     </li>
                                                     <li>
-                                                        Non Creamy Layer certificate
-                                                        Valid till 2026{" "}
+                                                        Non-Creamy Layer Certificate Valid till 31 March 2027{" "}
                                                         <b>(Mandatory)</b>
                                                     </li>
                                                     <li>
@@ -1293,13 +1282,14 @@ export default function HowToApply() {
                                                         Copy of Pan Card{" "}
                                                         <b>(Mandatory)</b>
                                                     </li>
-                                                    <li>
-                                                        Non-Creamy Layer Certificate Valid till 31 March 2027{" "}
-                                                        {/* <b>(Mandatory)</b> */}
-                                                    </li>
+                                                   
                                                     <li>
                                                         {" "}
                                                         Copy of Ration Card (Color Copy){" "}
+                                                        <b>(Mandatory)</b>
+                                                    </li>
+                                                     <li>
+                                                        Non-Creamy Layer Certificate Valid till 31 March 2027{" "}
                                                         <b>(Mandatory)</b>
                                                     </li>
                                                     <li>

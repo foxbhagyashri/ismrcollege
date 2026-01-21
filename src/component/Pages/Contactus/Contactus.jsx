@@ -352,7 +352,7 @@ function Contactus() {
         <div className="cta-section">
           <div className="row align-items-center">
             <div className="col-lg-8">
-              <h2>Build your career with ISMR. (Reach Us)</h2>
+              <h2>Build your career with ISMR.</h2>
               <p>
                 Apply now and become a part of our growing institution. Explore exciting career opportunities in academics, administration, and support services, and grow with a reputed educational organization.
               </p>
