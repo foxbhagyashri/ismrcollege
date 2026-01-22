@@ -45,7 +45,7 @@ const StatCounter = ({ endValue, duration, suffix }) => {
 };
 
 // ---------------- MAIN COMPONENT ----------------
-const MarketingAcrossGenerations = () => {
+const FutureInterfaceOfMarketing = () => {
     return (
         <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
             {/* -------- HEADER -------- */}
@@ -84,7 +84,7 @@ const MarketingAcrossGenerations = () => {
                             marginTop: "0.5rem",
                         }}
                     >
-                        Blog • <span className="text-warning">Marketing Across Generations</span>
+                        Blog • <span className="text-warning">Future Interface of Marketing</span>
                     </p>
                 </div>
             </section>
@@ -100,10 +100,10 @@ const MarketingAcrossGenerations = () => {
                         marginTop: "3rem",
                     }}
                 >
-                    Marketing Across Generations: How Brands Talk Differently to Baby Boomers, Gen Z & Gen Alpha
+                    Human-Like Technologies and Bionics: The Future Interface of Marketing
                 </h1>
 
-                <img src="/Marketing-Across-Generations.jpg" alt="Marketing Across Generations" />
+                <img src="/Bionics.png" alt="Future Interface of Marketing" />
 
 
 
@@ -118,9 +118,18 @@ const MarketingAcrossGenerations = () => {
                         textJustify: "inter-word",
                     }}
                 >
-                    Marketing is no longer a one-size-fits-all activity. In today’s hyper-connected world, consumers belong to different generations with distinct values, expectations, communication styles, and decision-making patterns. What convinces a Baby Boomer to trust a brand may completely fail with Gen Z—and might not even register with Gen Alpha.<br></br>
-                    This is why generational marketing has become a critical component of modern marketing strategy. Understanding <i>how brands talk differently to Baby Boomers, Gen Z, and Gen Alpha</i> is essential for marketers operating in the era of Marketing 5.0, where technology meets human-centric thinking.
+                    The world of marketing is no longer limited to creative advertisements, catchy taglines, or persuasive sales pitches. In the era of Marketing 5.0, technology is becoming increasingly human-like, reshaping how brands interact with consumers. From artificial intelligence and humanoid robots to bionics and emotion-sensing systems, marketing is entering a phase where machines don’t just communicate—they empathize, respond, and adapt like humans.
                 </p>
+                <p style={{
+                    fontSize: "16px",
+                    color: "#444",
+                    lineHeight: "1.7",
+                    marginTop: "1rem",
+                    fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                    textAlign: "justify",
+                    textJustify: "inter-word",
+                }}>At progressive management colleges like ISMR College, this transformation is becoming a vital part of MBA curriculum and management education, especially for students in Pune city, a growing hub of innovation, startups, and digital transformation.</p>
+
 
                 <h5
                     style={{
@@ -134,7 +143,7 @@ const MarketingAcrossGenerations = () => {
                         fontWeight: "600",
                     }}
                 >
-                    Why Generational Marketing Matters Today
+                    Understanding Human-Like Technologies and Bionics
                 </h5>
                 <p
                     style={{
@@ -147,20 +156,26 @@ const MarketingAcrossGenerations = () => {
                         textJustify: "inter-word",
                     }}
                 >
-                    Every generation is shaped by the social, economic, and technological environment it grows up in. These experiences influence:
+                    Human-like technologies refer to advanced systems designed to mimic human intelligence, emotions, behavior, and decision-making. These include:
                 </p>
                 <ul>
                     <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        <b>Buying behavior</b>
+                        <b>	Artificial Intelligence (AI)</b>
                     </li>
                     <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        <b>Media consumption habits</b>
+                        <b>Machine Learning (ML)</b>
                     </li>
                     <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        <b>Brand loyalty</b>
+                        <b>Natural Language Processing (NLP)</b>
                     </li>
                     <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        <b>Trust and skepticism toward advertising</b>
+                        <b>Emotion AI (Affective Computing)</b>
+                    </li>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        <b>Chatbots and Virtual Assistants</b>
+                    </li>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        <b>Robotics and Humanoid Interfaces</b>
                     </li>
                 </ul>
                 <p
@@ -174,165 +189,7 @@ const MarketingAcrossGenerations = () => {
                         textJustify: "inter-word",
                     }}
                 >
-                    In a digital-first economy, brands must carefully tailor their message, medium, and meaning to each generation. Failing to do so results in wasted marketing budgets and disconnected consumers.
-                </p>
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-                    }}
-                >
-                    Baby Boomers: Trust, Value, and Reliability
-                </p>
-
-                <h5
-                    style={{
-                        fontSize: "18px",
-                        color: "#00",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-                        fontWeight: "600",
-                    }}
-                >
-                    Who Are They?
-                </h5>
-
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-                    }}
-                >
-                    Baby Boomers were born roughly between 1946 and 1964. They grew up in a period of economic growth, industrial expansion, and traditional family structures.
-                </p>
-
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-                    }}
-                >
-                    How They Think as Consumers
-                </p>
-
-
-
-                <ul>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Prefer reliability over novelty
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Value brand reputation and trust
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Are relatively loyal once convinced
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Respond well to rational, information-rich communication
-                    </li>
-                </ul>
-
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-                    }}
-                >
-                    How Brands Talk to Baby Boomers
-                </p>
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-                        fontWeight: "600",
-                    }}
-                >
-                    Brands targeting Baby Boomers focus on:
-                </p>
-
-                <ul>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Product quality and durability
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Long-term value and savings
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Testimonials, guarantees, and credibility
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Traditional media such as TV, print, and email
-                    </li>
-                </ul>
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-
-                    }}
-                >
-                    For example, insurance, healthcare, banking, and FMCG brands often use emotional reassurance combined with logical benefits when addressing this segment.
-                </p>
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-
-                    }}
-                >
-                    Key Marketing Insight For Baby Boomers, marketing is about reducing risk and building trust.
-                </p>
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-
-                    }}
-                >
-                    Gen Z: Authenticity, Speed, and Social Identity
+                    Bionics, on the other hand, involves the integration of biological principles with technology—such as neural interfaces, sensory augmentation, and adaptive systems inspired by the human body and brain.In marketing, these technologies serve as the new interface between brands and consumers, replacing static communication with interactive, personalized, and emotionally intelligent experiences.
                 </p>
 
 
@@ -348,9 +205,196 @@ const MarketingAcrossGenerations = () => {
                         fontWeight: "600",
                     }}
                 >
-                    Who Are They?
+                    Why Marketing Needs Human-Like Technologies
                 </h5>
 
+                <p
+                    style={{
+                        fontSize: "16px",
+                        color: "#444",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+                    }}
+                >
+                    Modern consumers are digitally empowered, emotionally aware, and highly selective. Traditional mass marketing struggles to meet their expectations. Marketing 5.0 bridges this gap by combining technology with empathy.
+                </p>
+
+                <p
+                    style={{
+                        fontSize: "16px",
+                        color: "#444",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+                    }}
+                >
+                    Human-like technologies help brands to:
+                </p>
+
+
+
+                <ul>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        Understand consumer emotions and intent
+                    </li>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        Predict behavior rather than react to it
+                    </li>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        Offer hyper-personalized experiences
+                    </li>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        Create real-time, conversational engagement
+                    </li>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        Build trust through consistency and responsiveness
+                    </li>
+                </ul>
+
+                <p
+                    style={{
+                        fontSize: "16px",
+                        color: "#444",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+                    }}
+                >
+                    For MBA students at ISMR College, understanding this shift is crucial, as future marketing leaders must manage not just campaigns—but intelligent systems.
+                </p>
+                <p
+                    style={{
+                        fontSize: "18px",
+                        color: "#000",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+                        fontWeight: "600",
+                    }}
+                >
+                    Applications of Human-Like Technologies in Marketing
+                </p>
+                <p
+                    style={{
+                        fontSize: "16px",
+                        color: "#444",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+                    }}
+                >
+                    1. AI-Powered Conversational Marketing
+                </p>
+
+                <p
+                    style={{
+                        fontSize: "16px",
+                        color: "#444",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+                    }}
+                >
+                    Chatbots and voice assistants now simulate human conversation with remarkable accuracy. Brands use them for:
+                </p>
+
+                <ul>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        24/7 customer service
+                    </li>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        Product recommendations
+                    </li>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        Complaint resolution
+                    </li>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        Lead generation
+                    </li>
+                </ul>
+                <p
+                    style={{
+                        fontSize: "16px",
+                        color: "#444",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+
+                    }}
+                >
+                    Unlike earlier rule-based bots, today’s AI systems learn from interactions, tone, and context—making conversations feel natural.
+                </p>
+                <p
+                    style={{
+                        fontSize: "16px",
+                        color: "#444",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+
+                    }}
+                >
+                    2. Emotion AI and Neuromarketing
+                </p>
+                <p
+                    style={{
+                        fontSize: "16px",
+                        color: "#444",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+
+                    }}
+                >
+                    Emotion-sensing technologies analyze facial expressions, voice modulation, eye movement, and engagement levels to understand how consumers feel about ads, products, or experiences.
+                </p>
+
+
+                <h5
+                    style={{
+                        fontSize: "18px",
+                        color: "#00",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+                        fontWeight: "600",
+                    }}
+                >
+                    This allows marketers to:
+                </h5>
+                <ul>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        Test ad effectiveness emotionally
+                    </li>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        Personalize content based on mood
+                    </li>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        Design experiences that resonate psychologically
+                    </li>
+
+                </ul>
 
                 <p
                     style={{
@@ -364,8 +408,207 @@ const MarketingAcrossGenerations = () => {
 
                     }}
                 >
-                    Gen Z includes individuals born approximately between 1997 and 2012. They are true digital natives—raised with smartphones, social media, and instant access to information.
+                    Such concepts are increasingly discussed in management education to help students understand the science behind consumer behavior.
                 </p>
+
+                <p
+                    style={{
+                        fontSize: "16px",
+                        color: "#444",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+
+
+                    }}
+                >
+                    3. Bionics-Inspired Customer Interfaces
+                </p>
+                <p
+                    style={{
+                        fontSize: "16px",
+                        color: "#444",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+
+
+                    }}
+                >
+                    Bionic principles are influencing marketing interfaces such as:
+                </p>
+                <ul>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        Adaptive recommendation systems
+                    </li>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        Sensory feedback in AR/VR experiences
+                    </li>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        Brain-inspired decision engines
+                    </li>
+
+                </ul>
+
+
+
+                <p
+                    style={{
+                        fontSize: "16px",
+                        color: "#444",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+
+
+                    }}
+                >
+                    For example, recommendation engines now function like the human brain—learning preferences over time and adjusting suggestions accordingly.
+                </p>
+                <p
+                    style={{
+                        fontSize: "16px",
+                        color: "#444",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+
+
+                    }}
+                >
+                    4. Humanoid Robots in Retail and Services
+                </p>
+                <p
+                    style={{
+                        fontSize: "16px",
+                        color: "#444",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+
+
+                    }}
+                >
+                    Globally, brands are experimenting with humanoid robots as brand ambassadors, store assistants, and information guides. These robots can:
+                </p>
+                <ul>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        Greet customers
+                    </li>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        Answer queries
+                    </li>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        Guide product selection
+                    </li>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        Collect feedback
+                    </li>
+                </ul>
+
+                <p
+                    style={{
+                        fontSize: "16px",
+                        color: "#444",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+
+
+                    }}
+                >
+                    They offer consistency, patience, and personalization—qualities essential for customer experience in modern marketing.
+                </p>
+                <p
+                    style={{
+                        fontSize: "18px",
+                        color: "#444",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+                        fontWeight: "600",
+
+
+                    }}
+                >
+                    The Role of Marketing 5.0 and Industry 5.0
+                </p>
+
+                <p
+                    style={{
+                        fontSize: "16px",
+                        color: "#444",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+
+
+                    }}
+                >
+                    Marketing 5.0 aligns closely with Industry 5.0, where the focus shifts from automation to human–machine collaboration. Unlike Industry 4.0, which emphasized efficiency, Industry 5.0 emphasizes:
+                </p>
+
+
+                <ul>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        Human-centricity
+                    </li>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        Sustainability
+                    </li>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        Ethical technology use
+                    </li>
+
+                </ul>
+                <p
+                    style={{
+                        fontSize: "16px",
+                        color: "#444",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+
+
+                    }}
+                >
+                    For MBA students in Pune city, especially at forward-looking institutions like ISMR College, this means learning how to balance technology with human values.
+                </p>
+
+                <h5
+                    style={{
+                        fontSize: "18px",
+                        color: "#00",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+                        fontWeight: "600",
+
+                    }}
+                >
+                    Implications for MBA Students and Future Managers
+                </h5>
+
 
                 <p
                     style={{
@@ -380,24 +623,112 @@ const MarketingAcrossGenerations = () => {
 
                     }}
                 >
-                    How They Think as Consumers
+                    For students pursuing an MBA, human-like technologies are not just technical tools—they are strategic assets.
                 </p>
+                <p
+                    style={{
+                        fontSize: "16px",
+                        color: "#444",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+                        fontWeight: "600",
+
+                    }}
+                >
+                    Future-ready managers must:
+                </p>
+
+
                 <ul>
                     <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Highly skeptical of traditional advertising
+                        Understand how AI influences consumer decision-making
                     </li>
                     <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Value authenticity and transparency
+                        Design ethical and transparent marketing systems
                     </li>
                     <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Influenced by peers, creators, and communities
+                        Interpret data alongside emotional intelligence
                     </li>
                     <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Expect brands to take a stand on social issues
+                        Collaborate with tech teams and data scientists
+                    </li>
+                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
+                        Lead organizations where humans and machines work together
                     </li>
                 </ul>
+                <p
+                    style={{
+                        fontSize: "16px",
+                        color: "#444",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
 
-                <h5
+
+                    }}
+                >
+                    At a management college focused on experiential learning and industry relevance, these topics prepare students for leadership roles in marketing, consulting, product management, and digital strategy.
+                </p>
+
+
+                <p
+                    style={{
+                        fontSize: "18px",
+                        color: "#444",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+                        fontWeight: "600",
+
+
+                    }}
+                >
+                    The Road Ahead: Marketing with a Human Touch
+                </p>
+
+                <p
+                    style={{
+                        fontSize: "16px",
+                        color: "#444",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+
+
+
+                    }}
+                >
+                    The future of marketing lies not in replacing humans with machines, but in augmenting human creativity, empathy, and decision-making through technology. Human-like technologies and bionics represent the next interface—where brands don’t just talk to consumers, they understand them.
+                </p>
+
+                <p
+                    style={{
+                        fontSize: "16px",
+                        color: "#444",
+                        lineHeight: "1.7",
+                        marginTop: "1rem",
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        textAlign: "justify",
+                        textJustify: "inter-word",
+
+
+
+                    }}
+                >
+                    For institutions like ISMR College, integrating these concepts into MBA programs ensures that students graduate not just as marketers—but as human-centric tech leaders ready for the future of business.
+                </p>
+
+
+                <p
                     style={{
                         fontSize: "18px",
                         color: "#000",
@@ -408,70 +739,10 @@ const MarketingAcrossGenerations = () => {
                         textJustify: "inter-word",
                         fontWeight: "600",
 
-                    }}
-                >
-                    How Brands Talk to Gen Z
-                </h5>
-
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-                        fontWeight: "600",
 
                     }}
                 >
-                    Marketing communication for Gen Z is:
-                </p>
-                <ul>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Short, visual, and fast-paced
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Story-driven and emotion-rich
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Delivered through platforms like Instagram, YouTube, and short-form videos
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Often humorous, conversational, or purpose-driven
-                    </li>
-                </ul>
-
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-
-
-                    }}
-                >
-                    Brands speak with Gen Z, not at them. Memes, influencer collaborations, interactive content, and user-generated campaigns dominate this space.
-                </p>
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-
-
-                    }}
-                >
-                    Key Marketing InsightGen Z doesn’t want to be sold to—they want to relate, participate, and believe.
+                    Conclusion
                 </p>
 
                 <p
@@ -487,151 +758,7 @@ const MarketingAcrossGenerations = () => {
 
                     }}
                 >
-                    Gen Alpha: Experience, Immersion, and Interaction
-                </p>
-
-                <h5
-                    style={{
-                        fontSize: "18px",
-                        color: "#00",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-                        fontWeight: "600",
-
-                    }}
-                >
-                    Who Are They?
-                </h5>
-
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-
-
-                    }}
-                >
-                    Gen Alpha refers to those born after 2012. This generation is growing up with AI, voice assistants, AR/VR, and immersive digital experiences as a norm.
-                </p>
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-                        fontWeight: "600",
-
-                    }}
-                >
-                    How They Think as Consumers
-                </p>
-
-
-                <ul>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Highly visual and interactive learners
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Short attention spans but deep engagement with experiences
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Influenced strongly by parents and digital environments
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Expect instant gratification and personalization
-                    </li>
-                </ul>
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-
-
-                    }}
-                >
-                    Although Gen Alpha does not yet have direct purchasing power, they strongly influence family buying decisions and represent the future consumer market.
-                </p>
-
-
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-
-
-                    }}
-                >
-                    How Brands Talk to Gen Alpha
-                </p>
-
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-                        fontWeight: "600",
-
-
-                    }}
-                >
-                    Marketing to Gen Alpha focuses on:
-                </p>
-
-
-                <ul>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Gamification and interactivity
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        AR filters, immersive storytelling, and virtual environments
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Edutainment (education + entertainment)
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Visual-first, voice-enabled, and experience-driven communication
-                    </li>
-                </ul>
-
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-
-
-                    }}
-                >
-                    Brands are moving from “messages” to experiences when engaging with Gen Alpha.
+                    As marketing evolves into a more intelligent, immersive, and emotionally aware discipline, human-like technologies and bionics will define how brands connect with consumers. In this new era, success will belong to organizations—and managers—who can blend technology with humanity.
                 </p>
 
                 <p
@@ -647,240 +774,13 @@ const MarketingAcrossGenerations = () => {
 
                     }}
                 >
-                    Key Marketing Insight For Gen Alpha, marketing is not communication—it’s interaction.
-                </p>
-
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-
-
-                    }}
-                >
-                    Marketing 5.0 and the Generational Shift
-                </p>
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-
-
-                    }}
-                >
-                    Marketing 5.0 emphasizes technology for humanity. This philosophy is especially relevant when addressing multiple generations simultaneously.
-                </p>
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-                        fontWeight: "600",
-
-                    }}
-                >
-                    Modern brands use:
+                    In the classrooms of management colleges in Pune city, this future is already taking shape through progressive management education that prepares students to lead in the age of Marketing 5.0.
                 </p>
 
 
-                <ul>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        AI and data analytics to personalize messaging
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Predictive marketing to anticipate generational needs
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Omnichannel strategies to reach each generation on its preferred platform
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Human-centric storytelling to maintain emotional connection
-                    </li>
-                </ul>
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
 
 
-                    }}
-                >
-                    A single brand may run different campaigns for different generations—each aligned with the same core values but expressed in unique ways.
-                </p>
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
 
-
-                    }}
-                >
-                    Challenges in Multi-Generational Marketing
-                </p>
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-                        fontWeight: "600",
-
-
-                    }}
-                >
-                    Marketers today face several challenges:
-                </p>
-                <ul>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Balancing consistency with customization
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Avoiding stereotypes while segmenting generations
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Managing multiple platforms and communication styles
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Ensuring ethical use of data and personalization
-                    </li>
-                </ul>
-
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-
-
-                    }}
-                >
-                    The solution lies in deep consumer understanding combined with adaptive strategy.
-                </p>
-
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-
-
-                    }}
-                >
-                    What MBA Students and Future Marketers Should Learn
-                </p>
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-                        fontWeight: "600",
-
-
-                    }}
-                >
-                    For management students and aspiring marketers, generational marketing offers critical lessons:
-                </p>
-
-
-                <ul>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Consumers are not just age groups—they are mindsets
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Technology enables personalization, but empathy drives connection
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        Successful brands adapt their voice without losing identity
-                    </li>
-                    <li style={{ marginBottom: "8px", fontSize: "16px", color: "#444", lineHeight: "1.7" }}>
-                        The future marketer must be data-savvy, culturally aware, and emotionally intelligent
-                    </li>
-                </ul>
-
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-
-
-                    }}
-                >
-                    Understanding generational differences is no longer optional—it is a core marketing competency.
-                </p>
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-
-
-                    }}
-                >
-                    From the trust-seeking Baby Boomers to the authenticity-driven Gen Z and the experience-hungry Gen Alpha, marketing has become a dynamic conversation across generations. Brands that understand how to communicate differently—yet consistently—across these segments will build deeper relationships and long-term loyalty.
-                </p>
-                <p
-                    style={{
-                        fontSize: "16px",
-                        color: "#444",
-                        lineHeight: "1.7",
-                        marginTop: "1rem",
-                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                        textAlign: "justify",
-                        textJustify: "inter-word",
-
-
-                    }}
-                >
-                    In the evolving world of Marketing 5.0, success belongs to those who don’t just follow trends, but understand people—across time, technology, and transformation.
-                </p>
 
             </div>
 
@@ -890,4 +790,4 @@ const MarketingAcrossGenerations = () => {
     );
 };
 
-export default MarketingAcrossGenerations;
+export default FutureInterfaceOfMarketing;

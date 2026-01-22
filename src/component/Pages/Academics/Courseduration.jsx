@@ -274,7 +274,7 @@ function Courseduration() {
           mission is to combine <strong>science and spirituality</strong> to
           create an environment that fosters holistic development. From
           state-of-the-art infrastructure to experienced faculty, ISMR is
-          committed to nurturing future leaders in every field. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus a ad rerum laboriosam. Porro tempora nostrum facere expedita culpa itaque rem ut, provident nemo eaque aspernatur dolor omnis assumenda.
+          committed to nurturing future leaders in every field. 
 
         </p>
         <Row className="justify-content-center">

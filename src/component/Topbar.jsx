@@ -76,7 +76,7 @@ const TopHeader = () => {
                             <li className="notice-dropdown">
                                 <Link
                                     to="#"
-                                    className="btn btn-sm text-white flashy-notice"
+                                    className="btn btn-sm  flashy-notice"
                                     onClick={() => setOpen(!open)}
                                 >
                                     Notices ▾

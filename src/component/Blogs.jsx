@@ -1,11 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import allsectionbg from "../assets/allsectionbg.jpg";
 
 const BlogPage = () => {
   return (
     <section>
 
       {/* ⭐ BREADCRUMB SECTION (Matches Screenshot Style) */}
-      <section className="breadcrumb-wrapper">
+      <section className="breadcrumb-wrapper" style={{
+        backgroundImage: `url(${allsectionbg})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}>
 
         <style>{`
           /* -------------------- BREADCRUMB SECTION -------------------- */
@@ -125,7 +131,7 @@ const BlogPage = () => {
 
         <div className="breadcrumb-overlay"></div>
 
-        <div className="breadcrumb-content">
+        <div className="breadcrumb-content" >
           <h1 className="breadcrumb-title">
             <span>Blogs</span>
           </h1>
@@ -142,10 +148,10 @@ const BlogPage = () => {
           <div className="blog-card">
             <img className="blog-image" src="/Marketing-Across-Generations.jpg" alt="Blog 1" />
             <div className="blog-content">
-              <a href="/blogs/Marketing-Across-Generations"> <h3 className="blog-title">Marketing Management</h3></a>
-              <a href="/blogs/Marketing-Across-Generations"> <p className="blog-desc">
+              <Link to="/blogs/Marketing-Across-Generations"> <h3 className="blog-title">Marketing Management</h3></Link>
+              <Link to="/blogs/Marketing-Across-Generations"> <p className="blog-desc">
                 Marketing Across Generations: How Brands Talk Differently to Baby Boomers, Gen Z & Gen Alpha
-              </p></a>
+              </p></Link>
               <div className="blog-footer d-flex justify-content-between align-items-center">
                 <a className="read-more" href="#">    By: Prof Sandeep D Chaudhary</a>
                 <p className="pt-4"><b>Date : </b> 14 January 2025</p>
@@ -154,29 +160,29 @@ const BlogPage = () => {
           </div>
 
           <div className="blog-card">
-            <img className="blog-image" src="/14.png" alt="Blog 2" />
+            <img className="blog-image" src="/Bionics.png" alt="Blog 2" />
             <div className="blog-content">
-              <h3 className="blog-title">Financial Management</h3>
-              <p className="blog-desc">
-                Artificial Intelligence is transforming teaching methods, analytics, and the overall academic ecosystem.
-              </p>
+              <Link to="/blogs/Future-Interface-of-Marketing">  <h3 className="blog-title">The Future Interface of Marketing</h3></Link>
+              <Link to="/blogs/Future-Interface-of-Marketing">  <p className="blog-desc">
+                The world of marketing is no longer limited to creative advertisements, catchy taglines, or persuasive sales pitches
+              </p></Link>
               <div className="blog-footer d-flex justify-content-between align-items-center">
-                <a className="read-more" href="#">Finance</a>
-                <p className="pt-4"><b>Date : </b> 12 Nov 2025</p>
+                <a className="read-more" href="#">    By: Prof Sandeep D Chaudhary</a>
+                <p className="pt-4"><b>Date : </b> 14 January 2026</p>
               </div>
             </div>
           </div>
 
           <div className="blog-card">
-            <img className="blog-image" src="/14.png" alt="Blog 3" />
+            <img className="blog-image" src="/Predictivemarketing .jpg" alt="Blog 3" />
             <div className="blog-content">
-              <h3 className="blog-title">Human Resource Management</h3>
-              <p className="blog-desc">
-                Explore the most important skills every student must learn for future career success.
-              </p>
+              <Link to="/blogs/Predictive-Marketing-Explained"><h3 className="blog-title">Predictive Marketing Explained</h3></Link>
+              <Link to="/blogs/Predictive-Marketing-Explained"> <p className="blog-desc">
+                Predictive Marketing Explained: How Brands Anticipate What Customers Want Next
+              </p></Link>
               <div className="blog-footer d-flex justify-content-between align-items-center">
-                <a className="read-more" href="#">HR</a>
-                <p className="pt-4"><b>Date : </b> 10 Nov 2025</p>
+                <a className="read-more" href="#">By: Prof Sandeep D Chaudhary</a>
+                <p className="pt-4"><b>Date : </b>14 January 2025</p>
               </div>
             </div>
           </div>

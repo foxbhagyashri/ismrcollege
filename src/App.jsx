@@ -75,8 +75,11 @@ import Applicationform from "./component/Pages/Contactus/Applicationform";
 import FAQBba from "./component/Pages/Addmissions/FaqBbaBca";
 import Termsconditions from "./component/Termsconditions";
 import MarketingAcrossGenerations from "./component/blogs/Marketing-Across-Generations";
+import FutureInterfaceOfMarketing from "./component/blogs/Future-Interface-of-Marketing";
+import PredictiveMarketingExplained from "./component/blogs/Predictive-Marketing-Explained";
 import Listofdocument from "./component/Pages/Addmissions/Listofdocuments";
 import AdmissionNote from "./component/Pages/notices/Admissions";
+
 
 function App() {
   return (
@@ -179,6 +182,8 @@ function App() {
 
 
         <Route path="/blogs/Marketing-Across-Generations" element={<MarketingAcrossGenerations />} />
+        <Route path="/blogs/Future-Interface-of-Marketing" element={<FutureInterfaceOfMarketing />} />
+        <Route path="/blogs/Predictive-Marketing-Explained" element={<PredictiveMarketingExplained />} />
 
         {/* more PlacementRules */}
         <Route path="/notices/Admissions" element={<AdmissionNote />} />
