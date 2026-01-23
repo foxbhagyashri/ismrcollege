@@ -59,7 +59,7 @@ const ISMRFormModal = ({ open, onClose }) => {
                     await window._eeFormWidget.init(
                         "ismr",
                         "form-1",
-                        "ee-form-1"
+                        "ee-form-1",
                     );
                 }
             };
@@ -72,6 +72,35 @@ const ISMRFormModal = ({ open, onClose }) => {
             }
         }
     }, [open]);
+
+    useEffect(() => {
+        if (!open) return;
+
+        const clickHandler = (e) => {
+            const btn = e.target.closest("button");
+            if (!btn) return;
+
+            if (btn.innerText.trim() === "Register Now") {
+                // Let widget validation complete
+                setTimeout(() => {
+                    const hasErrors =
+                        document.querySelectorAll(
+                            ".ee-error, .ee-error-msg, .error, .invalid",
+                        ).length > 0;
+
+                    if (!hasErrors) {
+                        onClose(); // ✅ close modal
+                    }
+                }, 300);
+            }
+        };
+
+        document.addEventListener("click", clickHandler);
+
+        return () => {
+            document.removeEventListener("click", clickHandler);
+        };
+    }, [open, onClose]);
 
     if (!open) return null;
 
