@@ -73,7 +73,7 @@ const TopHeader = () => {
                                     Blogs
                                 </Link>
                             </li>
-                            <li className="notice-dropdown">
+                            {/* <li className="notice-dropdown">
                                 <Link
                                     to="#"
                                     className="btn btn-sm  flashy-notice"
@@ -94,19 +94,10 @@ const TopHeader = () => {
                                                 ACADEMICS
                                             </Link>
                                         </li>
-                                        {/* <li>
-                                            <Link to="/notices/placements">
-                                                PLACEMENTS
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/notices/cultural">
-                                                CULTURAL
-                                            </Link>
-                                        </li> */}
+                                        
                                     </ul>
                                 )}
-                            </li>
+                            </li> */}
 
 
                             <li>
