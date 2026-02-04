@@ -6,7 +6,7 @@ import { Button } from "bootstrap";
 import { Link } from "react-router-dom";
 
 import axios from "axios";
-import brochurePdf from "../../../assets/ISMR Brochure 2026.pdf"; // Add your PDF in assets
+import brochurePdf from "../../../assets/ISMR Brochure.pdf"; // Add your PDF in assets
 
 function ProgramOfferedPage() {
 
@@ -113,7 +113,7 @@ function ProgramOfferedPage() {
         if (pdfUrl) {
           const link = document.createElement("a");
           link.href = pdfUrl;
-          link.download = `${form.fromForm}-Syllabus.pdf`;
+          link.download = `${form.fromForm}-ISMR Brochure.pdf`;
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);

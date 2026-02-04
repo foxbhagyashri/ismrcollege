@@ -20,6 +20,7 @@ function Contactus() {
       title: "Admissions",
       email: "admissions@ismrpune.edu.in",
       phones: ["+91 9923786079"],
+      phone: ["+91 9158000595"],
     },
 
     {
@@ -27,6 +28,7 @@ function Contactus() {
       title: "Academics",
       email: "academics@ismrpune.edu.in",
       phones: ["+91 9373513331"],
+      phone: ["+91 9158000595"],
     },
 
     {
@@ -34,12 +36,14 @@ function Contactus() {
       title: "Placements",
       email: "placements@ismrpune.edu.in",
       phones: ["+91 9923786079"],
+      phone: ["+91 9158000595"],
     },
     {
       icon: "fa-graduation-cap",
       title: "Careers",
       email: "careers@ismrpune.edu.in",
       phones: ["+91 9923786079"],
+      phone: ["+91 9158000595"],
     },
 
 
@@ -337,6 +341,12 @@ function Contactus() {
                     <a href={`mailto:${contact.email}`}>{contact.email}</a>
                   </li>
                   {contact.phones.map((phone, idx) => (
+                    <li key={idx}>
+                      <i className="fas fa-phone"></i>
+                      <a href={`tel:${phone.replace(/\s/g, "")}`}>{phone}</a>
+                    </li>
+                  ))}
+                  {contact.phone.map((phone, idx) => (
                     <li key={idx}>
                       <i className="fas fa-phone"></i>
                       <a href={`tel:${phone.replace(/\s/g, "")}`}>{phone}</a>

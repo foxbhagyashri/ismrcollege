@@ -4,7 +4,7 @@ import Faq from "../../Faq";
 
 import ContactForm from "../../form/ContactForm";
 import Howtoaplydownoadform from "../../form/Howtoaplydownoadform";
-import brochurePdf from "/ISMR Brochure 2026.pdf"; // Add your PDF in assets
+import brochurePdf from "/ISMR Brochure.pdf"; // Add your PDF in assets
 import ISMRFormModal from "../../form/ISMRFormModal";
 
 export default function HowToApply() {
@@ -23,7 +23,7 @@ export default function HowToApply() {
     const downloadBrochure = () => {
         const link = document.createElement("a");
         link.href = brochurePdf;
-        link.download = "ISMR Catalogue - 2026.pdf";
+        link.download = "ISMR Brochure.pdf";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -883,7 +883,7 @@ export default function HowToApply() {
                                                     Copy of Pan Card{" "}
                                                     <b>(Mandatory)</b>
                                                 </li>
-                                               
+
                                                 <li>
                                                     Passport Size Colour Photos
                                                     (10 Copies){" "}
@@ -995,7 +995,7 @@ export default function HowToApply() {
                                                         Copy of Pan Card{" "}
                                                         <b>(Mandatory)</b>
                                                     </li>
-                                                    
+
                                                     <li>
                                                         {" "}
                                                         Copy of Ration Card (Color Copy){" "}
@@ -1136,7 +1136,7 @@ export default function HowToApply() {
                                                         Copy of Pan Card{" "}
                                                         <b>(Mandatory)</b>
                                                     </li>
-                                                   
+
                                                     <li>
                                                         {" "}
                                                         Copy of Ration Card (Color Copy){" "}
@@ -1282,13 +1282,13 @@ export default function HowToApply() {
                                                         Copy of Pan Card{" "}
                                                         <b>(Mandatory)</b>
                                                     </li>
-                                                   
+
                                                     <li>
                                                         {" "}
                                                         Copy of Ration Card (Color Copy){" "}
                                                         <b>(Mandatory)</b>
                                                     </li>
-                                                     <li>
+                                                    <li>
                                                         Non-Creamy Layer Certificate Valid till 31 March 2027{" "}
                                                         <b>(Mandatory)</b>
                                                     </li>
