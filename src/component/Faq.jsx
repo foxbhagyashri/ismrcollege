@@ -19,11 +19,18 @@ export default function FaqAndContactSection() {
     message: "",
   });
 
-
+  const [consent, setConsent] = useState(false);
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [successMsg, setSuccessMsg] = useState("");
 
+  /* ================= COURSE ID MAPPING ================= */
+  // ⚠ Replace IDs with actual IDs from ExtraaEdge sheet
+  const courseMapping = {
+    MBA: 1,
+    BBA: 2,
+    BCA: 3,
+  };
 
   /* ================= VALIDATIONS ================= */
   const validate = () => {
@@ -38,8 +45,13 @@ export default function FaqAndContactSection() {
     if (form.phone.length !== 10)
       newErrors.phone = "Phone number must be 10 digits";
 
+    if (!form.city.trim()) newErrors.city = "City is required";
+
     if (!form.program)
       newErrors.program = "Please select a programme";
+
+    if (!consent)
+      newErrors.consent = "You must accept the consent";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -51,21 +63,37 @@ export default function FaqAndContactSection() {
     setForm({ ...form, [name]: value });
   };
 
-
   /* ================= SUBMIT ================= */
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (!validate()) return;
 
     try {
       setLoading(true);
+
+      const payload = {
+        AuthToken: "ismr_02-01-2026",
+        Source: "ismr",
+        FirstName: form.name,
+        Email: form.email,
+        MobileNumber: form.phone,
+        LeadSource: 1, // Mandatory
+        Center: courseMapping[form.program], // Course ID
+        City: form.city,
+      };
+
       const res = await axios.post(
-        "https://api.ismrpune.edu.in/api/send-mail",
-        form,
-        { headers: { "Content-Type": "application/json" } }
+        "https://publisher.extraaedge.com/api/Webhook/addPublisherLead",
+        payload,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
       );
 
-      if (res.data.success) {
+      if (res.data) {
         setSuccessMsg("✅ Form submitted successfully!");
         setForm({
           name: "",
@@ -75,8 +103,11 @@ export default function FaqAndContactSection() {
           program: "",
           message: "",
         });
+        setConsent(false);
+        setErrors({});
       }
-    } catch {
+    } catch (error) {
+      console.error(error);
       alert("❌ Failed to submit form.");
     } finally {
       setLoading(false);
@@ -510,6 +541,7 @@ export default function FaqAndContactSection() {
               placeholder="City"
               className="form-control mb-2"
             />
+            {errors.city && <small className="text-danger">{errors.city}</small>}
 
             <select
               name="program"
@@ -534,8 +566,26 @@ export default function FaqAndContactSection() {
               placeholder="Write your query"
               className="form-control mb-2"
             />
-            {errors.message && (
-              <small className="text-danger">{errors.message}</small>
+
+            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+              <input
+                type="checkbox"
+                checked={consent}
+                onChange={(e) => setConsent(e.target.checked)}
+                style={{
+                  transform: "scale(1.4)",
+                  accentColor: "#d32f2f",
+                }}
+              />
+              <label>
+                I authorize International School of Management and Research, Pune and
+                its representatives to Call, SMS, RCS, Email or WhatsApp me about its
+                programmes and offers. This consent overrides any registration for
+                DNC / NDNC.
+              </label>
+            </div>
+            {errors.consent && (
+              <small className="text-danger">{errors.consent}</small>
             )}
 
             <button
@@ -552,23 +602,10 @@ export default function FaqAndContactSection() {
               {loading ? "Submitting..." : "Submit"}
             </button>
 
-
-            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-              <input
-                type="checkbox"
-                id="vehicle1"
-                name="vehicle1"
-                value="Bike"
-                style={{ transform: "scale(1.6)", accentColor: "#d32f2f", width: "100px" }} required // scale increases size
-              />
-              <label htmlFor="vehicle1">I authorize International School of Management and Research, Pune and its representatives to Call, SMS,RCS, Email or WhatsApp me about its programmers and offers. This consent overrides any registration for DNC / NDNC. </label>
-            </div>
-
             {successMsg && (
               <div className="alert alert-success mt-3">{successMsg}</div>
             )}
           </form>
-
 
         </div>
       </div>
