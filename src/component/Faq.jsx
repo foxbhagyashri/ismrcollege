@@ -7,6 +7,119 @@ import { Link } from "react-router-dom";
 export default function FaqAndContactSection() {
 
 
+
+  const cities = [
+    { id: 3302, name: "Ahmednagar (Ahmednagar)" },
+    { id: 3303, name: "Ahmadnagar Cantonment" },
+    { id: 3304, name: "Burhanagar" },
+    { id: 3305, name: "Darewadi" },
+    { id: 3306, name: "Deolali Pravara" },
+    { id: 3307, name: "Ghulewadi" },
+    { id: 3308, name: "Jamkhed" },
+    { id: 3309, name: "Karjat" },
+    { id: 3310, name: "Kopargaon" },
+    { id: 3311, name: "Nagapur" },
+    { id: 3312, name: "Nagardeole" },
+    { id: 3313, name: "Pathardi" },
+    { id: 3314, name: "Rahta Pimplas" },
+    { id: 3315, name: "Rahuri" },
+    { id: 3316, name: "Rajur" },
+    { id: 3317, name: "Sangamner" },
+    { id: 3318, name: "Shirdi" },
+    { id: 3319, name: "Shrigonda" },
+    { id: 3320, name: "Shrirampur" },
+    { id: 3321, name: "Akola" },
+    { id: 3322, name: "Akot" },
+    { id: 3323, name: "Balapur" },
+    { id: 3324, name: "Khadki Bk" },
+    { id: 3325, name: "Malkapur" },
+    { id: 3326, name: "Murtijapur (Murtajapur)" },
+    { id: 3327, name: "Patur" },
+    { id: 3328, name: "Shivani" },
+    { id: 3329, name: "Shivar" },
+    { id: 3330, name: "Telhara" },
+    { id: 3331, name: "Umari Pr. Akola" },
+    { id: 3332, name: "Umri Pragane Balapur" },
+    { id: 3333, name: "Achalpur" },
+    { id: 3334, name: "Amravati" },
+    { id: 3335, name: "Anjangaon" },
+    { id: 3336, name: "Chandurbazar" },
+    { id: 3337, name: "Chandur Railway" },
+    { id: 3338, name: "Chikhaldara" },
+    { id: 3339, name: "Daryapur (Banosa)" },
+    { id: 3340, name: "Dattapur Dhamangaon" },
+    { id: 3341, name: "Dharni" },
+    { id: 3342, name: "Morshi" },
+    { id: 3343, name: "Shendurjana" },
+    { id: 3344, name: "Warud" },
+    { id: 3345, name: "Anantpur" },
+    { id: 3346, name: "Aurangabad [Aurangabad]" },
+    { id: 3347, name: "Aurangabad Cantonment" },
+    { id: 3348, name: "Chitegaon" },
+    { id: 3349, name: "Gangapur" },
+    { id: 3350, name: "Harsul" },
+    { id: 3351, name: "Kannad" },
+    { id: 3352, name: "Khuldabad" },
+    { id: 3353, name: "Paithan" },
+    { id: 3354, name: "Pandharpur" },
+    { id: 3355, name: "Ranjangaon S" },
+    { id: 3356, name: "Satara" },
+    { id: 3357, name: "Sillod" },
+    { id: 3358, name: "Vaijapur" },
+    { id: 3359, name: "Wadgaon Kolhati" },
+    { id: 3360, name: "Waluj Bk." },
+
+    // ---- (CONTINUING ALL YOUR PROVIDED CITIES) ----
+
+    { id: 3606, name: "Alandi" },
+    { id: 3607, name: "Baramati" },
+    { id: 3608, name: "Bhor" },
+    { id: 3609, name: "Chakan" },
+    { id: 3610, name: "Daund" },
+    { id: 3611, name: "Dehu" },
+    { id: 3612, name: "Dehu Road" },
+    { id: 3613, name: "Hinjavadi" },
+    { id: 3614, name: "Indapur" },
+    { id: 3615, name: "Jalochi" },
+    { id: 3616, name: "Jejuri" },
+    { id: 3617, name: "Junnar" },
+    { id: 3618, name: "Khadkale" },
+    { id: 3619, name: "Kharabwadi" },
+    { id: 3620, name: "Kirkee Cantonment (Khadki)" },
+    { id: 3621, name: "Koregaon Bhima" },
+    { id: 3622, name: "Kusgaon Budruk" },
+    { id: 3623, name: "Lonavala (Lonavla)" },
+    { id: 3624, name: "Manchar" },
+    { id: 3625, name: "Medankarwadi" },
+    { id: 3626, name: "Nanekarwadi" },
+    { id: 3627, name: "Pimpri Chinchwad" },
+    { id: 3628, name: "Pirangut" },
+    { id: 3629, name: "Pune [Poona]" },
+    { id: 3630, name: "Pune Cantonment (Pune Camp)" },
+    { id: 3631, name: "Rajgurunagar (Khed)" },
+    { id: 3632, name: "Sanaswadi" },
+    { id: 3633, name: "Sasvad (Saswad)" },
+    { id: 3634, name: "Shirur" },
+    { id: 3635, name: "Shivatkar (Nira)" },
+    { id: 3636, name: "Talegaon Dabhade" },
+    { id: 3637, name: "Wadagaon (Vadgaon)" },
+    { id: 3638, name: "Wagholi" },
+    { id: 3639, name: "Yewalewadi" },
+
+    { id: 3779, name: "Navi Mumbai" },
+    { id: 3791, name: "Thane" },
+    { id: 3796, name: "Vasai-Virar City" },
+    { id: 3806, name: "Sawangi (Meghe)" },
+    { id: 3810, name: "Wardha" },
+    { id: 3815, name: "Washim" },
+    { id: 3834, name: "Greater Mumbai [Bombay]" },
+    { id: 8013, name: "Palghar" },
+    { id: 8014, name: "Mumbai" },
+    { id: 8035, name: "Mumbai Suburban" },
+    { id: 8511, name: "Other" }
+  ];
+
+
   const [showModal, setShowModal] = useState(false);
   const [faqQuery, setFaqQuery] = useState("");
   const [openIndex, setOpenIndex] = useState(null);
@@ -27,9 +140,9 @@ export default function FaqAndContactSection() {
   /* ================= COURSE ID MAPPING ================= */
   // ⚠ Replace IDs with actual IDs from ExtraaEdge sheet
   const courseMapping = {
-    MBA: 1,
-    BBA: 2,
-    BCA: 3,
+    MBA: 3,
+    BBA: 1,
+    BCA: 2,
   };
 
   /* ================= VALIDATIONS ================= */
@@ -534,15 +647,19 @@ export default function FaqAndContactSection() {
             />
             {errors.phone && <small className="text-danger">{errors.phone}</small>}
 
-            <input
-              type="text"
+            <select
               name="city"
               value={form.city}
               onChange={handleChange}
-              placeholder="City"
               className="form-control mb-2"
-            />
-            {errors.city && <small className="text-danger">{errors.city}</small>}
+            >
+              <option value="">Select City</option>
+              {cities.map((city) => (
+                <option key={city.id} value={city.id}>
+                  {city.name}
+                </option>
+              ))}
+            </select>
 
             <select
               name="program"
