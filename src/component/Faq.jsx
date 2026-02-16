@@ -78,7 +78,7 @@ export default function FaqAndContactSection() {
         FirstName: form.name,
         Email: form.email,
         MobileNumber: form.phone,
-        LeadSource: 1, // Mandatory
+        LeadSource: "Website", // Mandatory
         Center: courseMapping[form.program], // Course ID
         City: form.city,
       };
@@ -92,6 +92,7 @@ export default function FaqAndContactSection() {
           },
         }
       );
+      console.log("res is", res)
 
       if (res.data) {
         setSuccessMsg("✅ Form submitted successfully!");
@@ -107,13 +108,13 @@ export default function FaqAndContactSection() {
         setErrors({});
       }
     } catch (error) {
+      console.log("erroris", error)
       console.error(error);
       alert("❌ Failed to submit form.");
     } finally {
       setLoading(false);
     }
   };
-
 
   const faqs = [
     {
