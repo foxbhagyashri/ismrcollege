@@ -24,7 +24,7 @@ import LatestNews from "./component/LatestNews";
 import Placementmorque from "./component/Placementmorque";
 import Faq from "./component/Faq";
 
-// Slick Carousel CSS 
+// Slick Carousel CSS
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // About Page Components
@@ -44,7 +44,6 @@ import Chairman from "./component/Pages/AboutPage/Chairman";
 import Director from "./component/Pages/AboutPage/Director";
 import Secretary from "./component/Pages/AboutPage/Secretary";
 
-
 // Placement
 import Placementoverview from "./component/Pages/Placementpage/Placementoverview";
 import Ourplacement from "./component/Pages/Placementpage/Ourplacement";
@@ -55,7 +54,6 @@ import PlacementProcess from "./component/Pages/Placementpage/PlacementProcess";
 // Studentcampus
 import Studentcampus from "./component/Pages/Life@compusPage/Studentcampus";
 import StudentFacilities from "./component/Pages/Life@compusPage/StudentFacilities";
-
 
 //Academics
 import Academics from "./component/Pages/Academics/Academics";
@@ -79,124 +77,226 @@ import FutureInterfaceOfMarketing from "./component/blogs/Future-Interface-of-Ma
 import PredictiveMarketingExplained from "./component/blogs/Predictive-Marketing-Explained";
 import Listofdocument from "./component/Pages/Addmissions/Listofdocuments";
 import AdmissionNote from "./component/Pages/notices/Admissions";
-
+import ChatbotLoader from "./component/ChatbotLoader";
 
 function App() {
-  return (
-    <Router>
-      <Topbar />
-      <Header />
+    return (
+        <Router>
+            <ChatbotLoader />
+            <Topbar />
+            <Header />
 
-      <Routes>
-        {/* Home Page */}
-        <Route
-          path="/"
-          element={
-            <>
-              <Banner />
-              <Marquee />
-              <CounterSection />
-              <Banner2 />
-              <ProgramsSection />
-              <AboutAdmaUniversity />
-              <HowToApply />
-              <Placementmorque />
-              <StudentLife />
-              <WhyChooseAdma />
-              <Testimonials />
+            <Routes>
+                {/* Home Page */}
+                <Route
+                    path="/"
+                    element={
+                        <>
+                            <Banner />
+                            <Marquee />
+                            <CounterSection />
+                            <Banner2 />
+                            <ProgramsSection />
+                            <AboutAdmaUniversity />
+                            <HowToApply />
+                            <Placementmorque />
+                            <StudentLife />
+                            <WhyChooseAdma />
+                            <Testimonials />
 
-              {/* <LatestNews /> */}
+                            {/* <LatestNews /> */}
+                        </>
+                    }
+                />
 
-            </>
-          }
-        />
+                {/* About Page Routes */}
+                <Route
+                    path="/Aboutpage/Aboutinstutue"
+                    element={<Aboutinstutue />}
+                />
+                <Route
+                    path="/Aboutpage/Leadership"
+                    element={<Leadership />}
+                />
+                <Route
+                    path="/Aboutpage/Award"
+                    element={<Award />}
+                />
+                <Route
+                    path="/Aboutpage/Ismr"
+                    element={<Ismr />}
+                />
+                <Route
+                    path="/Aboutpage/Chairman"
+                    element={<Chairman />}
+                />
+                <Route
+                    path="/Aboutpage/Director"
+                    element={<Director />}
+                />
+                <Route
+                    path="/Aboutpage/Secretary"
+                    element={<Secretary />}
+                />
+                <Route
+                    path="/Aboutpage/Treasure"
+                    element={<Treasure />}
+                />
 
-        {/* About Page Routes */}
-        <Route path="/Aboutpage/Aboutinstutue" element={<Aboutinstutue />} />
-        <Route path="/Aboutpage/Leadership" element={<Leadership />} />
-        <Route path="/Aboutpage/Award" element={<Award />} />
-        <Route path="/Aboutpage/Ismr" element={<Ismr />} />
-        <Route path="/Aboutpage/Chairman" element={<Chairman />} />
-        <Route path="/Aboutpage/Director" element={<Director />} />
-        <Route path="/Aboutpage/Secretary" element={<Secretary />} />
-        <Route path="/Aboutpage/Treasure" element={<Treasure />} />
+                <Route
+                    path="/Addmissions/Eligibility-criteria"
+                    element={<Eligibilitycriteria />}
+                />
+                <Route
+                    path="/Addmissions/Howtoapply"
+                    element={<Howtoapply />}
+                />
+                <Route
+                    path="/Addmissions/Educationloan"
+                    element={<Educationloan />}
+                />
+                <Route
+                    path="/Addmissions/Disclaimer"
+                    element={<Disclaimer />}
+                />
+                <Route
+                    path="/Addmissions/Refundpolicy"
+                    element={<Refundpolicy />}
+                />
+                <Route
+                    path="/Addmissions/Feesstructure"
+                    element={<Feesstructure />}
+                />
+                <Route
+                    path="/Addmissions/FaqBbaBca"
+                    element={<FAQBba />}
+                />
+                <Route
+                    path="/Addmissions/Listofdocuments"
+                    element={<Listofdocument />}
+                />
+                <Route
+                    path="/Addmissions/Admissioncontact"
+                    element={<Admissioncontact />}
+                />
+                {/* Placement Page */}
+                <Route
+                    path="/Placementpage/Placementoverview"
+                    element={<Placementoverview />}
+                />
+                <Route
+                    path="/Placementpage/Ourplacement"
+                    element={<Ourplacement />}
+                />
+                <Route
+                    path="/Placementpage/Corporate"
+                    element={<Corporate />}
+                />
 
-        <Route
-          path="/Addmissions/Eligibility-criteria"
-          element={<Eligibilitycriteria />}
-        />
-        <Route path="/Addmissions/Howtoapply" element={<Howtoapply />} />
-        <Route path="/Addmissions/Educationloan" element={<Educationloan />} />
-        <Route path="/Addmissions/Disclaimer" element={<Disclaimer />} />
-        <Route path="/Addmissions/Refundpolicy" element={<Refundpolicy />} />
-        <Route path="/Addmissions/Feesstructure" element={<Feesstructure />} />
-        <Route path="/Addmissions/FaqBbaBca" element={<FAQBba />} />
-        <Route path="/Addmissions/Listofdocuments" element={<Listofdocument />} />
-        <Route
-          path="/Addmissions/Admissioncontact"
-          element={<Admissioncontact />}
-        />
-        {/* Placement Page */}
-        <Route
-          path="/Placementpage/Placementoverview"
-          element={<Placementoverview />}
-        />
-        <Route path="/Placementpage/Ourplacement" element={<Ourplacement />} />
-        <Route path="/Placementpage/Corporate" element={<Corporate />} />
+                {/* Student Life Page */}
+                <Route
+                    path="/Life@campus/Studentcampus"
+                    element={<Studentcampus />}
+                />
+                <Route
+                    path="/Life@campus/StudentFacilities"
+                    element={<StudentFacilities />}
+                />
 
-        {/* Student Life Page */}
-        <Route path="/Life@campus/Studentcampus" element={<Studentcampus />} />
-        <Route
-          path="/Life@campus/StudentFacilities"
-          element={<StudentFacilities />}
-        />
+                {/* Academics Page */}
+                <Route
+                    path="/Academics/Academics"
+                    element={<Academics />}
+                />
+                <Route
+                    path="/Academics/Courseduration"
+                    element={<Courseduration />}
+                />
 
-        {/* Academics Page */}
-        <Route path="/Academics/Academics" element={<Academics />} />
-        <Route path="/Academics/Courseduration" element={<Courseduration />} />
+                {/* Newsletter Page */}
+                <Route
+                    path="/NewsPage/Newsletter"
+                    element={<Newsletter />}
+                />
 
-        {/* Newsletter Page */}
-        <Route path="/NewsPage/Newsletter" element={<Newsletter />} />
+                {/* Contact us Page */}
+                <Route
+                    path="/Contactus"
+                    element={<Contactus />}
+                />
+                <Route
+                    path="/Applicationform"
+                    element={<Applicationform />}
+                />
 
-        {/* Contact us Page */}
-        <Route path="/Contactus" element={<Contactus />} />
-        <Route path="/Applicationform" element={<Applicationform />} />
+                {/* more faqs */}
+                <Route
+                    path="/Addmissions/more-faqs"
+                    element={<FAQPage />}
+                />
 
-        {/* more faqs */}
-        <Route path="/Addmissions/more-faqs" element={<FAQPage />} />
+                {/* more PlacementRules */}
+                <Route
+                    path="/Placementpage/PlacementRules"
+                    element={<PlacementRules />}
+                />
 
-        {/* more PlacementRules */}
-        <Route path="/Placementpage/PlacementRules" element={<PlacementRules />} />
+                {/* more PlacementRules */}
+                <Route
+                    path="/Placementpage/PlacementProcess"
+                    element={<PlacementProcess />}
+                />
 
-        {/* more PlacementRules */}
-        <Route path="/Placementpage/PlacementProcess" element={<PlacementProcess />} />
+                {/* more PlacementRules */}
+                <Route
+                    path="/Addmissions/DisclaimerFeePayment"
+                    element={<DisclaimerFeePayment />}
+                />
 
-        {/* more PlacementRules */}
-        <Route path="/Addmissions/DisclaimerFeePayment" element={<DisclaimerFeePayment />} />
+                {/* more PlacementRules */}
+                <Route
+                    path="/Blogs"
+                    element={<Blogs />}
+                />
+                <Route
+                    path="/ApplyMba"
+                    element={<ApplyMba />}
+                />
+                <Route
+                    path="/ApplyBba"
+                    element={<ApplyBba />}
+                />
+                <Route
+                    path="/Termsconditions"
+                    element={<Termsconditions />}
+                />
 
-        {/* more PlacementRules */}
-        <Route path="/Blogs" element={<Blogs />} />
-        <Route path="/ApplyMba" element={<ApplyMba />} />
-        <Route path="/ApplyBba" element={<ApplyBba />} />
-        <Route path="/Termsconditions" element={<Termsconditions />} />
+                <Route
+                    path="/blogs/Marketing-Across-Generations"
+                    element={<MarketingAcrossGenerations />}
+                />
+                <Route
+                    path="/blogs/Future-Interface-of-Marketing"
+                    element={<FutureInterfaceOfMarketing />}
+                />
+                <Route
+                    path="/blogs/Predictive-Marketing-Explained"
+                    element={<PredictiveMarketingExplained />}
+                />
 
+                {/* more PlacementRules */}
+                <Route
+                    path="/notices/Admissions"
+                    element={<AdmissionNote />}
+                />
+            </Routes>
+            {/* <Faq /> */}
+            <Footer />
+            {/* <Contactus/> */}
 
-        <Route path="/blogs/Marketing-Across-Generations" element={<MarketingAcrossGenerations />} />
-        <Route path="/blogs/Future-Interface-of-Marketing" element={<FutureInterfaceOfMarketing />} />
-        <Route path="/blogs/Predictive-Marketing-Explained" element={<PredictiveMarketingExplained />} />
-
-        {/* more PlacementRules */}
-        <Route path="/notices/Admissions" element={<AdmissionNote />} />
-
-
-      </Routes>
-      {/* <Faq /> */}
-      <Footer />
-      {/* <Contactus/> */}
-
-      <Sticky />
-    </Router>
-  );
+            <Sticky />
+        </Router>
+    );
 }
 
 export default App;
