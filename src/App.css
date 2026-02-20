@@ -34,10 +34,14 @@
 
 @media (max-width: 768px) {
 
-  .chatbot,
   [id*="chat"],
   [class*="chat"] {
-    z-index: 999999 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
     position: fixed !important;
+    right: 15px !important;
+    bottom: 15px !important;
+    z-index: 999999 !important;
   }
 }
