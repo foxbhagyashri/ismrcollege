@@ -2,6 +2,19 @@ import { useEffect } from "react";
 
 const ChatbotLoader = () => {
     useEffect(() => {
+        const interval = setInterval(() => {
+            const chatWindow = document.getElementById("__eechatWindow");
+            if (chatWindow) {
+                chatWindow.style.height = "100vh";
+                chatWindow.style.maxHeight = "100vh";
+                clearInterval(interval);
+            }
+        }, 500);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    useEffect(() => {
         if (document.getElementById("external-chatbot-script")) return;
 
         const script = document.createElement("script");
