@@ -32,16 +32,32 @@
   /* bold */
 }
 
-@media (max-width: 768px) {
 
-  [id*="chat"],
-  [class*="chat"] {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    position: fixed !important;
+/* Force chatbot visible on all devices */
+#_eedivChatMain {
+  position: fixed !important;
+  right: 15px !important;
+  bottom: 15px !important;
+  z-index: 999999 !important;
+}
+
+/* Ensure icon is visible */
+#__eechatIcon {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Ensure chat window appears above everything */
+#__eechatWindow {
+  z-index: 999999 !important;
+  max-height: 80vh !important;
+}
+
+/* Mobile specific fix */
+@media (max-width: 768px) {
+  #_eedivChatMain {
     right: 15px !important;
     bottom: 15px !important;
-    z-index: 999999 !important;
   }
 }
