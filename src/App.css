@@ -34,12 +34,20 @@
 
 
 /* Force chatbot visible on all devices */
+
+
 #_eedivChatMain {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+}
+
+/* #_eedivChatMain {
   position: fixed !important;
   right: 15px !important;
   bottom: 15px !important;
   z-index: 999999 !important;
-}
+} */
 
 /* Ensure icon is visible */
 #__eechatIcon {
@@ -49,9 +57,13 @@
 }
 
 /* Ensure chat window appears above everything */
-#__eechatWindow {
+/* #__eechatWindow {
   z-index: 999999 !important;
   max-height: 80vh !important;
+} */
+#__eechatWindow {
+  height: 100vh !important;
+  max-height: 100vh !important;
 }
 
 /* Mobile specific fix */
