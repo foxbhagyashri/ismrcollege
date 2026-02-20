@@ -31,3 +31,14 @@
   font-weight: 900;
   /* bold */
 }
+
+@media (max-width: 768px) {
+
+  .chatbot,
+  [id*="chat"],
+  [class*="chat"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
