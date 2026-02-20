@@ -37,8 +37,7 @@
   .chatbot,
   [id*="chat"],
   [class*="chat"] {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
+    z-index: 999999 !important;
+    position: fixed !important;
   }
 }
