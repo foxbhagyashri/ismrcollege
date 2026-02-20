@@ -36,11 +36,11 @@
 /* Force chatbot visible on all devices */
 
 
-#_eedivChatMain {
+/* #_eedivChatMain {
   position: fixed !important;
   bottom: 20px !important;
   right: 20px !important;
-}
+} */
 
 /* #_eedivChatMain {
   position: fixed !important;
@@ -50,26 +50,26 @@
 } */
 
 /* Ensure icon is visible */
-#__eechatIcon {
+/* #__eechatIcon {
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
-}
+} */
 
 /* Ensure chat window appears above everything */
 /* #__eechatWindow {
   z-index: 999999 !important;
   max-height: 80vh !important;
 } */
-#__eechatWindow {
+/* #__eechatWindow {
   height: 100vh !important;
   max-height: 100vh !important;
-}
+} */
 
 /* Mobile specific fix */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   #_eedivChatMain {
     right: 15px !important;
     bottom: 15px !important;
   }
-}
+} */
