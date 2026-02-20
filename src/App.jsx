@@ -82,7 +82,7 @@ import ChatbotLoader from "./component/ChatbotLoader";
 function App() {
     return (
         <Router>
-            {/* <ChatbotLoader /> */}
+            <ChatbotLoader />
             <Topbar />
             <Header />
 
