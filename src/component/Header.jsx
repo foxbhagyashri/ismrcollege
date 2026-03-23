@@ -144,7 +144,7 @@ const Header = () => {
                   Message From Treasurer
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   className="dropdown-item"
                   to="AboutPage/Director"
@@ -152,7 +152,7 @@ const Header = () => {
                 >
                   Message From Director
                 </Link>
-              </li>
+              </li> */}
 
             </ul>
           </li>
