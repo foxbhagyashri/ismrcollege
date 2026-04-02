@@ -3,7 +3,7 @@ import "./Banner.css"; // Assuming the CSS file is named Banner.css
 import { Link } from "react-router-dom";
 
 const Travel = () => {
-    const videos = ["mp.mp4", "mp1.mp4", "mp3.mp4", "mp4.mp4", "mp5.mp4"];
+    const videos = ["campus-video.mp4"];
 
     const [activeIndex, setActiveIndex] = useState(0);
 

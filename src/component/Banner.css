@@ -19,14 +19,16 @@ section {
   margin: 0;
   overflow: hidden;
 }
-.banner-wrap-content .title p{
-  font-size: 20px!important;
+
+.banner-wrap-content .title p {
+  font-size: 20px !important;
 }
+
 /* Home container */
 .home {
   position: relative;
   width: 100%;
-  height: 85vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -39,12 +41,10 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.45) 0%,
-    rgba(0, 0, 0, 0.55) 50%,
-    rgba(0, 0, 0, 0.65) 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.45) 0%,
+      rgba(0, 0, 0, 0.55) 50%,
+      rgba(0, 0, 0, 0.65) 100%);
   z-index: 2;
   pointer-events: none;
 }
@@ -68,10 +68,12 @@ section {
   position: relative;
   z-index: 3;
   color: #caca0b;
-  max-width: 1300px; /* Increased max-width for institution name */
+  max-width: 1300px;
+  /* Increased max-width for institution name */
   margin: 0 auto;
   padding: 0 20px;
-  display: block; /* Content is always displayed (static) */
+  display: block;
+  /* Content is always displayed (static) */
   text-align: center;
   animation: fadeIn 1s ease forwards;
 }
@@ -82,6 +84,7 @@ section {
     opacity: 0;
     transform: translateY(25px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -90,7 +93,7 @@ section {
 
 /* Styling for the new .title structure */
 .content .title p {
-   color: #f1f1ed;
+  color: #f1f1ed;
   font-size: 18px;
   font-weight: 500;
   margin: 10px 0;
@@ -106,10 +109,12 @@ section {
 
 /* Styling for the main institutional heading */
 .content .title h1 {
-  font-size: 47px; /* Larger font size */
+  font-size: 47px;
+  /* Larger font size */
   font-weight: 900;
   letter-spacing: 4px;
-  line-height: 1.1; /* Tighter line height for the main heading */
+  line-height: 1.1;
+  /* Tighter line height for the main heading */
   margin-bottom: 20px;
   text-transform: uppercase;
   color: #FFC333;
@@ -135,7 +140,8 @@ section {
   border-radius: 4px;
   text-decoration: none;
   transition: 0.3s ease;
-  margin-top: 25px; /* Add margin above the button */
+  margin-top: 25px;
+  /* Add margin above the button */
 }
 
 .content a:hover {
@@ -195,6 +201,7 @@ section {
   .content .title h1 {
     font-size: 3.5rem;
   }
+
   .content .title p {
     font-size: 1.1rem;
   }
@@ -204,20 +211,25 @@ section {
   .content {
     padding: 0 15px;
   }
+
   .content .title h1 {
     font-size: 2.8rem;
     letter-spacing: 2px;
   }
+
   .content .title p {
     font-size: 1rem;
   }
+
   .content .title p:nth-child(3) {
     font-size: 0.95rem;
   }
+
   .media_icon {
     right: 15px;
     bottom: 50px;
   }
+
   .slide-navigation {
     bottom: 20px;
   }
@@ -228,17 +240,21 @@ section {
     max-width: 90%;
     padding: 0 10px;
   }
+
   .content .title h1 {
     font-size: 2.2rem;
     line-height: 1.2;
   }
+
   .content .title p {
     font-size: 0.9rem;
   }
+
   .content a {
     padding: 10px 25px;
     font-size: 0.9rem;
   }
+
   .media_icon {
     flex-direction: row;
     justify-content: center;
@@ -246,7 +262,31 @@ section {
     left: 0;
     right: 0;
   }
+
   .media_icon a {
     margin: 0 10px;
   }
+}
+
+.video-slide {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.video-slide.active {
+  opacity: 1;
+}
+
+/* 🎯 THIS IS THE IMPORTANT PART */
+.video-slide iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.77vh;   /* ⭐ MAGIC NUMBER (16:9 ratio) */
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
