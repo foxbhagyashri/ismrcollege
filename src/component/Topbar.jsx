@@ -12,7 +12,7 @@ const TopHeader = () => {
     return (
         <>
             <div className="top-header-area">
-                <div className="container-fluid d-flex justify-content-between align-items-center">
+                <div className="container-fluid d-flex justify-content-between align-items-center top-header-container">
                     {/* Left Section */}
                     <div className="top-header-left">
                         <ul>

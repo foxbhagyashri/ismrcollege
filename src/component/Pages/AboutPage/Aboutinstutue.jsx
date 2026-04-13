@@ -467,7 +467,7 @@ const InstitutionStats = () => {
             </div>
 
             {/* OPERATING PHILOSOPHY CARD - FULL WIDTH */}
-            <div className="col-6">
+            <div className="col-12 col-md-6">
               <div
                 className="h-100 p-4"
                 style={{
@@ -555,7 +555,7 @@ const InstitutionStats = () => {
               </div>
             </div>
 
-            <div className="col-6">
+            <div className="col-12 col-md-6">
               <div
                 className="h-100 p-4"
                 style={{

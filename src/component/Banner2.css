@@ -171,8 +171,13 @@
 }
 
 @keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Responsive Styles */
@@ -182,19 +187,24 @@
   .banner-wrap-area {
     padding: 50px 40px;
   }
+
   .banner-wrap-content .title h1 {
     font-size: 36px;
   }
+
   .banner-wrap-image .image-2 {
     top: 120px;
   }
+
   .banner-wrap-image .middle-img {
     bottom: 30px;
     right: 30px;
   }
+
   .banner-wrap-image .middle-img img {
     width: 120px;
   }
+
   .rotating-img {
     width: 220px;
   }
@@ -205,40 +215,49 @@
   .banner-wrap-area {
     padding: 40px 30px;
   }
+
   .banner-wrap-content {
     padding-left: 0;
     text-align: center;
     margin-top: 30px;
   }
+
   .banner-wrap-content .title h1 {
     font-size: 32px;
   }
+
   .banner-wrap-content .title p:last-of-type {
     font-size: 15px;
   }
+
   .user-list {
     justify-content: center;
     margin-top: 30px;
   }
+
   .user-listtext {
     margin-left: 20px;
     width: auto;
   }
+
   .banner-wrap-image .image-2 {
     position: relative;
     top: 0;
     margin: 20px auto;
     width: 200px;
   }
+
   .banner-wrap-image .middle-img {
     position: relative;
     bottom: 0;
     right: 0;
     margin-top: 15px;
   }
+
   .banner-wrap-image .middle-img img {
     width: 100px;
   }
+
   .rotating-img {
     width: 200px;
   }
@@ -249,52 +268,66 @@
   .banner-wrap-area {
     padding: 30px 20px;
   }
+
   .banner-wrap-content .title h1 {
     font-size: 28px;
     line-height: 1.3;
   }
+
   .banner-wrap-content .title p {
     font-size: 14px;
   }
+
   .banner-wrap-content .title p:last-of-type {
     font-size: 14px;
     margin-bottom: 25px;
   }
+
   .default-btn {
     padding: 10px 12px;
     font-size: 15px;
   }
+
   .see {
     font-size: 14px;
   }
+
   .user-list {
     margin-top: 25px;
     flex-direction: row;
     justify-content: center;
   }
+
   .user-list .image img {
     width: 45px;
     height: 45px;
   }
+
   .user-listtext h2 {
     font-size: 20px;
   }
+
   .user-listtext {
     margin-left: 15px;
   }
+
   .btn-list {
     flex-direction: column;
     gap: 15px;
   }
+
   .btn-list li {
     margin: 5px 0;
   }
+
   .banner-wrap-image .image-2 {
     width: 180px;
   }
+
   .banner-wrap-image .middle-img img {
     width: 90px;
   }
+
   .rotating-img {
     width: 180px;
   }
@@ -305,49 +338,60 @@
   .banner-wrap-area {
     padding: 25px 15px;
   }
+
   .banner-wrap-content .title h1 {
     font-size: 24px;
   }
+
   .banner-wrap-content .title p {
     font-size: 13px;
     margin-bottom: 12px;
   }
+
   .banner-wrap-content .title p:last-of-type {
     font-size: 13px;
     margin-bottom: 20px;
   }
+
   .banner-wrap-content {
     margin-top: 20px;
   }
+
   .user-list {
     flex-direction: column;
     gap: 15px;
     text-align: center;
   }
+
   .user-listtext {
     margin-left: 0;
   }
+
   .user-list .image li {
     margin-right: -8px;
   }
+
   .user-list .image img {
     width: 40px;
     height: 40px;
   }
+
   .banner-wrap-image .image-2 {
     position: absolute;
-  width: 200px;
-  top: 66px;
-  left: -5px;
+    width: 200px;
+    top: 66px;
+    left: -5px;
   }
+
   .banner-wrap-image .middle-img img {
-      position: absolute;
-  bottom: 45px;
-  right: 29px;
-  z-index: 2;
-  width: 300px;
-  
+    position: absolute;
+    bottom: 45px;
+    right: 29px;
+    z-index: 2;
+    width: 300px;
+
   }
+
   .rotating-img {
     width: 160px;
   }
@@ -358,34 +402,43 @@
   .banner-wrap-content .title h1 {
     font-size: 22px;
   }
+
   .banner-wrap-content .title p,
   .banner-wrap-content .title p:last-of-type {
     font-size: 12px;
   }
+
   .banner-wrap-area {
     padding: 20px 10px;
   }
+
   .banner-wrap-image .image-2 {
     width: 140px;
   }
+
   .banner-wrap-image .middle-img img {
-    width: 70px;
+    width: 80px;
   }
+
   .content-shape img {
     right: 20px;
     bottom: 200px;
     width: 80px;
   }
+
   .default-btn {
     font-size: 14px;
     padding: 8px 10px;
   }
+
   .see {
     font-size: 13px;
   }
+
   .user-listtext h2 {
     font-size: 18px;
   }
+
   .rotating-img {
     width: 140px;
   }
@@ -396,42 +449,51 @@
   .banner-wrap-content .title h1 {
     font-size: 20px;
   }
+
   .banner-wrap-content .title p {
     font-size: 11px;
   }
+
   .user-list .image img {
     width: 35px;
     height: 35px;
   }
+
   .user-listtext h2 {
     font-size: 16px;
   }
+
   .user-listtext p {
     font-size: 11px;
   }
+
   .banner-wrap-image .image-2 {
     width: 120px;
   }
+
   .banner-wrap-image .middle-img img {
     width: 60px;
   }
+
   .rotating-img {
     width: 120px;
   }
 }
+
 .video-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
 }
 
 .video-container iframe {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none; /* disable click */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  /* disable click */
 }

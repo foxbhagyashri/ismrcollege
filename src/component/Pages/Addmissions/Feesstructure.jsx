@@ -4,7 +4,15 @@ import Faq from "../../Faq";
 
 export default function FeesStructure() {
 
-
+    <style>
+        {`
+    @media (max-width: 768px) {
+      .img-fluid {
+        max-width: 100% !important;
+      }
+    }
+  `}
+    </style>
 
 
     return (
@@ -76,20 +84,20 @@ export default function FeesStructure() {
                 </div>
 
                 <div
-  className="rounded-3 p-4 p-md-5 text-center"
-  style={{
-    backgroundColor: "#fff",
-    boxShadow: "0 8px 30px rgba(15,51,80,0.06)",
-    border: "1px solid rgba(0,0,0,0.05)"
-  }}
->
-  <img
-    src="/WhatsApp Image 2025-12-29 at 2.24.21 PM.jpeg"
-    alt="Fees Structure"
-    className="img-fluid mx-auto d-block"
-    style={{ maxWidth: "600px" }}   // normal width
-  />
-</div>
+                    className="rounded-3 p-4 p-md-5 text-center"
+                    style={{
+                        backgroundColor: "#fff",
+                        boxShadow: "0 8px 30px rgba(15,51,80,0.06)",
+                        border: "1px solid rgba(0,0,0,0.05)"
+                    }}
+                >
+                    <img
+                        src="/WhatsApp Image 2025-12-29 at 2.24.21 PM.jpeg"
+                        alt="Fees Structure"
+                        className="img-fluid mx-auto d-block"
+                    // normal width
+                    />
+                </div>
 
             </div>
             <Faq />

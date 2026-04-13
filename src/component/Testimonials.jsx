@@ -251,6 +251,25 @@ const Testimonials = () => {
             margin: auto;
           }
         }
+          @media (max-width: 768px) {
+  .testimonial-card {
+    margin: 0 10px;
+  }
+
+  .testimonial-card p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .testimonial-card h6 {
+    font-size: 16px;
+  }
+
+  .testimonial-card img {
+    height: 180px;
+    object-fit: cover;
+  }
+}
       `}</style>
     </section>
   );

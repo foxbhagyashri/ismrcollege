@@ -522,6 +522,45 @@ export default function FaqAndContactSection() {
             padding: 28px;
           }
         }
+
+
+
+.consent-wrapper {
+  display: flex;
+  align-items: flex-start; /* 👈 important for multiline */
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.consent-checkbox {
+  margin-top: 4px; /* 👈 aligns checkbox with text */
+  transform: scale(1.3);
+  accent-color: #d32f2f;
+  // flex-shrink: 0; /* 👈 prevents shrinking */
+}
+
+.consent-text {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* -------- MOBILE FIX -------- */
+@media (max-width: 768px) {
+  .consent-wrapper {
+    gap: 8px;
+  }
+
+  .consent-text {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .consent-checkbox {
+    transform: scale(1.2);
+  }
+}
+
       `}</style>
 
       <div className="faq-contact-container">
@@ -685,21 +724,18 @@ export default function FaqAndContactSection() {
               className="form-control mb-2"
             />
 
-            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <div className="consent-wrapper">
               <input
                 type="checkbox"
                 checked={consent}
                 onChange={(e) => setConsent(e.target.checked)}
-                style={{
-                  transform: "scale(1.4)",
-                  accentColor: "#d32f2f",
-                }}
+                className="consent-checkbox"
               />
-              <label>
-                I authorize International School of Management and Research, Pune and
-                its representatives to Call, SMS, RCS, Email or WhatsApp me about its
-                programmes and offers. This consent overrides any registration for
-                DNC / NDNC.
+
+              <label className="consent-text">
+                I authorize International School of Management and Research, Pune and its
+                representatives to Call, SMS, RCS, Email or WhatsApp me about its programmes
+                and offers. This consent overrides any registration for DNC / NDNC.
               </label>
             </div>
             {errors.consent && (

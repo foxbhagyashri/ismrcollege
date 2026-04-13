@@ -196,3 +196,45 @@
 .navbar-nav {
     overflow: visible !important;
 }
+
+
+/* ---------------- MOBILE ---------------- */
+@media (max-width: 768px) {
+
+  .top-header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 8px 10px;
+  }
+
+  /* LEFT SIDE STACK */
+  .top-header-left ul {
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  /* HIDE SOCIAL ICON TEXT CLUTTER */
+  .top-header-left li a {
+    font-size: 12px;
+  }
+
+  /* RIGHT SIDE STACK */
+  .top-header-right ul {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  /* BUTTONS SMALL */
+  .top-header-right .btn {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+
+  /* OPTIONAL: HIDE LESS IMPORTANT BUTTONS */
+  .top-header-right li:nth-child(2),
+  .top-header-right li:nth-child(3) {
+    display: none; /* hides some buttons */
+  }
+}

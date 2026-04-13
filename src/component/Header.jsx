@@ -72,6 +72,9 @@ const Header = () => {
   }, []);
 
   const navItems = (
+
+
+
     <ul
       className="navbar-nav mb-2 mb-lg-0"
     // Removed inline style for margin, now handled by CSS media query
@@ -108,54 +111,7 @@ const Header = () => {
             </Link>
           </li>
           <li className="dropdown-submenu">
-            <Link
-              className="dropdown-item"
-              to="#"
-              onClick={handleDropdownItemClick}
-            >
-              Leadership Team
-            </Link>
-
-            <ul className="submenu">
-              <li>
-                <Link
-                  className="dropdown-item"
-                  to="AboutPage/Chairman"
-                  onClick={handleDropdownItemClick}
-                >
-                  Message From Founder President
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="dropdown-item"
-                  to="AboutPage/Secretary"
-                  onClick={handleDropdownItemClick}
-                >
-                  Message From Secretary
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="dropdown-item"
-                  to="AboutPage/Treasure"
-                  onClick={handleDropdownItemClick}
-                >
-                  Message From Treasurer
-                </Link>
-              </li>
-              {/* <li>
-                <Link
-                  className="dropdown-item"
-                  to="AboutPage/Director"
-                  onClick={handleDropdownItemClick}
-                >
-                  Message From Director
-                </Link>
-              </li> */}
-
-            </ul>
-          </li>
+            <Link className="dropdown-item" to="#" onClick={handleDropdownItemClick} > Leadership Team </Link> <ul className="submenu"> <li> <Link className="dropdown-item" to="AboutPage/Chairman" onClick={handleDropdownItemClick} > Message From Founder President </Link> </li> <li> <Link className="dropdown-item" to="AboutPage/Secretary" onClick={handleDropdownItemClick} > Message From Secretary </Link> </li> <li> <Link className="dropdown-item" to="AboutPage/Treasure" onClick={handleDropdownItemClick} > Message From Treasurer </Link> </li> {/* <li> <Link className="dropdown-item" to="AboutPage/Director" onClick={handleDropdownItemClick} > Message From Director </Link> </li> */} </ul> </li>
 
           <li>
             <Link
@@ -239,7 +195,7 @@ const Header = () => {
               Refund Policy
             </Link>
           </li>
-         
+
           <li>
             <Link
               className="dropdown-item"
@@ -276,13 +232,13 @@ const Header = () => {
               Fees Structure
             </Link>
           </li>
-           <li>
+          <li>
             <Link
               className="dropdown-item"
               to="/Addmissions/Listofdocuments"
               onClick={handleDropdownItemClick}
             >
-             List Of Documents
+              List Of Documents
             </Link>
           </li>
         </ul>
@@ -1131,6 +1087,19 @@ const Header = () => {
             font-size: 15px;
           }
         }
+          /* MOBILE FIX */
+@media (max-width: 768px) {
+  .submenu {
+    background: #f5f5f5;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .submenu li a {
+    font-size: 14px;
+    color: #0a2240;
+  }
+}
       `}</style>
 
       <nav className="navbar navbar-expand-lg custom-navbar" ref={navbarRef}>
