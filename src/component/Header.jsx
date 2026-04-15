@@ -24,7 +24,7 @@ const Header = () => {
 
   const closeAll = () => {
     setActiveDropdown(null);
-      setActiveSubmenu(null); // ✅ ADD THIS
+    setActiveSubmenu(null); // ✅ ADD THIS
     setIsNavbarOpen(false);
 
     // Close Bootstrap navbar collapse
@@ -117,20 +117,20 @@ const Header = () => {
               About Institute
             </Link>
           </li>
-         <li className={`dropdown-submenu ${activeSubmenu === 0 ? "show" : ""}`}>
-  <a
-    href="#"
-    className="dropdown-item d-flex justify-content-between align-items-center"
-    onClick={(e) => {
-      e.preventDefault();
-      toggleSubmenu(0);
-    }}
-  >
-    Leadership Team
-    <span>›</span>
-  </a>
+          <li className={`dropdown-submenu ${activeSubmenu === 0 ? "show" : ""}`}>
+            <a
+              href="#"
+              className="dropdown-item d-flex justify-content-between align-items-center"
+              onClick={(e) => {
+                e.preventDefault();
+                toggleSubmenu(0);
+              }}
+            >
+              Leadership Team
+              <span>›</span>
+            </a>
 
-  <ul className={`submenu ${activeSubmenu === 0 ? "show" : ""}`}>
+            <ul className={`submenu ${activeSubmenu === 0 ? "show" : ""}`}>
               <li> <Link className="dropdown-item" to="AboutPage/Chairman" onClick={handleDropdownItemClick} > Message From Founder President </Link> </li> <li> <Link className="dropdown-item" to="AboutPage/Secretary" onClick={handleDropdownItemClick} > Message From Secretary </Link> </li> <li> <Link className="dropdown-item" to="AboutPage/Treasure" onClick={handleDropdownItemClick} > Message From Treasurer </Link> </li> {/* <li> <Link className="dropdown-item" to="AboutPage/Director" onClick={handleDropdownItemClick} > Message From Director </Link> </li> */} </ul> </li>
 
           <li>
