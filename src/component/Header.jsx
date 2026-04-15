@@ -131,7 +131,7 @@ const Header = () => {
             </a>
 
             <ul className={`submenu ${activeSubmenu === 0 ? "show" : ""}`}>
-              <li> <Link className="dropdown-item" to="AboutPage/Chairman" onClick={handleDropdownItemClick} > Message From Founder President </Link> </li> <li> <Link className="dropdown-item" to="AboutPage/Secretary" onClick={handleDropdownItemClick} > Message From Secretary </Link> </li> <li> <Link className="dropdown-item" to="AboutPage/Treasure" onClick={handleDropdownItemClick} > Message From Treasurer </Link> </li> {/* <li> <Link className="dropdown-item" to="AboutPage/Director" onClick={handleDropdownItemClick} > Message From Director </Link> </li> */} </ul> </li>
+              <li> <Link className="dropdown-item" to="/AboutPage/Chairman" onClick={handleDropdownItemClick} > Message From Founder President </Link> </li> <li> <Link className="dropdown-item" to="/AboutPage/Secretary" onClick={handleDropdownItemClick} > Message From Secretary </Link> </li> <li> <Link className="dropdown-item" to="/AboutPage/Treasure" onClick={handleDropdownItemClick} > Message From Treasurer </Link> </li> {/* <li> <Link className="dropdown-item" to="AboutPage/Director" onClick={handleDropdownItemClick} > Message From Director </Link> </li> */} </ul> </li>
 
           <li>
             <Link
@@ -401,13 +401,14 @@ const Header = () => {
         </a>
         <ul className={`dropdown-menu ${activeDropdown === 6 ? "show" : ""}`}>
           <li>
-            <Link
-              className="dropdown-item"
-              to="https://ccvis.barti.in/"
-              onClick={handleDropdownItemClick}
-            >
-              Apply For Caste Validity
-            </Link>
+            <a
+  className="dropdown-item"
+  href="https://ccvis.barti.in/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Apply For Caste Validity
+</a>
           </li>
 
           <li>

@@ -60,8 +60,8 @@ const AboutAdmaUniversity = () => {
               Higher Education</span></a>
           </div>
           <div className="logo-card">
-            <a href="http://naac.gov.in/index.php/en/" target="_blank"> <img src={NAAC} alt="NAAC Logo" className="logo-image" /></a>
-            <a href="http://naac.gov.in/index.php/en/" target="_blank">  <span>National Assessment and Accreditation Council</span></a>
+            <a href="https://naac.gov.in/index.php/en/" target="_blank"> <img src={NAAC} alt="NAAC Logo" className="logo-image" /></a>
+            <a href="https://naac.gov.in/index.php/en/" target="_blank">  <span>National Assessment and Accreditation Council</span></a>
           </div>
         </div>
       </div>

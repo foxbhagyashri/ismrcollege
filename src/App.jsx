@@ -63,7 +63,7 @@ import Newsletter from "./component/Pages/NewsPage/Newsletter";
 // Contactus Page
 import Contactus from "./component/Pages/Contactus/Contactus";
 import FAQPage from "./component/Pages/Addmissions/more-faqs";
-import Sticky from "./component/sticky";
+import Sticky from "./component/Sticky";
 import DisclaimerFeePayment from "./component/Pages/Addmissions/DisclaimerFeesPayment";
 import Blogs from "./component/Blogs";
 import ApplyMba from "./component/ApplyMba";
