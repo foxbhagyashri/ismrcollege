@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState(null);
   const navbarRef = useRef(null);
 
   const toggleDropdown = (index) => {
@@ -15,9 +16,15 @@ const Header = () => {
       setActiveDropdown(activeDropdown === index ? null : index);
     }
   };
+  const toggleSubmenu = (index) => {
+    if (window.innerWidth < 992) {
+      setActiveSubmenu(activeSubmenu === index ? null : index);
+    }
+  };
 
   const closeAll = () => {
     setActiveDropdown(null);
+      setActiveSubmenu(null); // ✅ ADD THIS
     setIsNavbarOpen(false);
 
     // Close Bootstrap navbar collapse
@@ -110,8 +117,21 @@ const Header = () => {
               About Institute
             </Link>
           </li>
-          <li className="dropdown-submenu">
-            <Link className="dropdown-item" to="#" onClick={handleDropdownItemClick} > Leadership Team </Link> <ul className="submenu"> <li> <Link className="dropdown-item" to="AboutPage/Chairman" onClick={handleDropdownItemClick} > Message From Founder President </Link> </li> <li> <Link className="dropdown-item" to="AboutPage/Secretary" onClick={handleDropdownItemClick} > Message From Secretary </Link> </li> <li> <Link className="dropdown-item" to="AboutPage/Treasure" onClick={handleDropdownItemClick} > Message From Treasurer </Link> </li> {/* <li> <Link className="dropdown-item" to="AboutPage/Director" onClick={handleDropdownItemClick} > Message From Director </Link> </li> */} </ul> </li>
+         <li className={`dropdown-submenu ${activeSubmenu === 0 ? "show" : ""}`}>
+  <a
+    href="#"
+    className="dropdown-item d-flex justify-content-between align-items-center"
+    onClick={(e) => {
+      e.preventDefault();
+      toggleSubmenu(0);
+    }}
+  >
+    Leadership Team
+    <span>›</span>
+  </a>
+
+  <ul className={`submenu ${activeSubmenu === 0 ? "show" : ""}`}>
+              <li> <Link className="dropdown-item" to="AboutPage/Chairman" onClick={handleDropdownItemClick} > Message From Founder President </Link> </li> <li> <Link className="dropdown-item" to="AboutPage/Secretary" onClick={handleDropdownItemClick} > Message From Secretary </Link> </li> <li> <Link className="dropdown-item" to="AboutPage/Treasure" onClick={handleDropdownItemClick} > Message From Treasurer </Link> </li> {/* <li> <Link className="dropdown-item" to="AboutPage/Director" onClick={handleDropdownItemClick} > Message From Director </Link> </li> */} </ul> </li>
 
           <li>
             <Link
@@ -618,13 +638,12 @@ const Header = () => {
   position: relative;
 }
 
-/* Submenu UL */
+/* Submenu default */
 .dropdown-submenu .submenu {
   display: none;
   position: absolute;
   top: 0;
-  left: 100%;       /* Opens to the right side */
-  margin-left: 0px; 
+  left: 100%;
   background: #fff;
   padding: 10px 0;
   list-style: none;
@@ -633,6 +652,36 @@ const Header = () => {
   z-index: 999;
 }
 
+/* Desktop hover */
+@media (min-width: 992px) {
+  .dropdown-submenu:hover .submenu {
+    display: block;
+  }
+}
+
+/* Mobile click support */
+@media (max-width: 991.98px) {
+  .dropdown-submenu .submenu {
+    position: static;
+    display: none;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-top: 5px;
+  }
+
+  .dropdown-submenu.show .submenu {
+    display: block;
+  }
+
+  .dropdown-submenu > a span {
+    transform: rotate(90deg);
+    transition: 0.3s;
+  }
+
+  .dropdown-submenu.show > a span {
+    transform: rotate(180deg);
+  }
+}
 /* Show on hover */
 .dropdown-submenu:hover .submenu {
   display: block;
