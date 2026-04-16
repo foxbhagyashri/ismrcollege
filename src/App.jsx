@@ -21,7 +21,7 @@ import CounterSection from "./component/CounterSection";
 import WhyChooseAdma from "./component/WhyChooseAdma";
 import Testimonials from "./component/Testimonials";
 import LatestNews from "./component/LatestNews";
-import Placementmorque from "./component/Placementmorque";
+// import Placementmorque from "./component/Placementmorque";
 import Faq from "./component/Faq";
 
 // Slick Carousel CSS
@@ -63,7 +63,7 @@ import Newsletter from "./component/Pages/NewsPage/Newsletter";
 // Contactus Page
 import Contactus from "./component/Pages/Contactus/Contactus";
 import FAQPage from "./component/Pages/Addmissions/more-faqs";
-import Sticky from "./component/Sticky.jsx";
+import Sticky from "./component/Sticky";
 import DisclaimerFeePayment from "./component/Pages/Addmissions/DisclaimerFeesPayment";
 import Blogs from "./component/Blogs";
 import ApplyMba from "./component/ApplyMba";
@@ -99,7 +99,7 @@ function App() {
                             <ProgramsSection />
                             <AboutAdmaUniversity />
                             <HowToApply />
-                            <Placementmorque />
+                            {/* <Placementmorque /> */}
                             <StudentLife />
                             <WhyChooseAdma />
                             <Testimonials />
