@@ -21,7 +21,7 @@ import CounterSection from "./component/CounterSection";
 import WhyChooseAdma from "./component/WhyChooseAdma";
 import Testimonials from "./component/Testimonials";
 import LatestNews from "./component/LatestNews";
-// import Placementmorque from "./component/Placementmorque";
+import Placementmorque from "./component/Placementmorque";
 import Faq from "./component/Faq";
 
 // Slick Carousel CSS
@@ -99,7 +99,7 @@ function App() {
                             <ProgramsSection />
                             <AboutAdmaUniversity />
                             <HowToApply />
-                            {/* <Placementmorque /> */}
+                            <Placementmorque />
                             <StudentLife />
                             <WhyChooseAdma />
                             <Testimonials />
