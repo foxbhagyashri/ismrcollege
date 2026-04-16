@@ -2,216 +2,244 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const [activeDropdown, setActiveDropdown] = useState(null);
-  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
-  const navbarRef = useRef(null);
+    const [activeDropdown, setActiveDropdown] = useState(null);
+    const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+    const [activeSubmenu, setActiveSubmenu] = useState(null);
+    const navbarRef = useRef(null);
 
-  const toggleDropdown = (index) => {
-    // Only toggle if the navbar is open (mobile view) or if on desktop
-    if (window.innerWidth < 992) {
-      setActiveDropdown(activeDropdown === index ? null : index);
-    } else {
-      // For desktop, simply toggle the dropdown on click
-      setActiveDropdown(activeDropdown === index ? null : index);
-    }
-  };
+    const toggleDropdown = (index) => {
+        // Only toggle if the navbar is open (mobile view) or if on desktop
+        if (window.innerWidth < 992) {
+            setActiveDropdown(activeDropdown === index ? null : index);
+        } else {
+            // For desktop, simply toggle the dropdown on click
+            setActiveDropdown(activeDropdown === index ? null : index);
+        }
+    };
+    const toggleSubmenu = (index) => {
+        if (window.innerWidth < 992) {
+            setActiveSubmenu(activeSubmenu === index ? null : index);
+        }
+    };
 
-  const closeAll = () => {
-    setActiveDropdown(null);
-    setIsNavbarOpen(false);
-
-    // Close Bootstrap navbar collapse
-    const navbarCollapse = document.getElementById("navbarNav");
-    if (navbarCollapse && navbarCollapse.classList.contains("show")) {
-      navbarCollapse.classList.remove("show");
-    }
-  };
-
-  const handleNavLinkClick = () => {
-    closeAll();
-  };
-
-  const handleDropdownItemClick = () => {
-    closeAll();
-  };
-
-  const toggleNavbar = () => {
-    setIsNavbarOpen(!isNavbarOpen);
-    if (!isNavbarOpen) {
-      setActiveDropdown(null); // Close any open dropdown when opening the navbar
-    }
-  };
-
-  // Close dropdowns when clicking outside (Desktop only)
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (window.innerWidth >= 992 && navbarRef.current && !navbarRef.current.contains(event.target)) {
+    const closeAll = () => {
         setActiveDropdown(null);
-      }
+        setActiveSubmenu(null); // ✅ ADD THIS
+        setIsNavbarOpen(false);
+
+        // Close Bootstrap navbar collapse
+        const navbarCollapse = document.getElementById("navbarNav");
+        if (navbarCollapse && navbarCollapse.classList.contains("show")) {
+            navbarCollapse.classList.remove("show");
+        }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
-  // Close dropdowns when window is resized to mobile
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 992) {
-        setActiveDropdown(null);
-      }
+    const handleNavLinkClick = () => {
+        closeAll();
     };
 
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
+    const handleDropdownItemClick = () => {
+        closeAll();
     };
-  }, []);
 
-  const navItems = (
-    <ul
-      className="navbar-nav mb-2 mb-lg-0"
-    // Removed inline style for margin, now handled by CSS media query
-    >
-      {/* Home */}
-      <li className="nav-item">
-        <Link className="nav-link" to="/" onClick={handleNavLinkClick}>
-          Home
-        </Link>
-      </li>
+    const toggleNavbar = () => {
+        setIsNavbarOpen(!isNavbarOpen);
+        if (!isNavbarOpen) {
+            setActiveDropdown(null); // Close any open dropdown when opening the navbar
+        }
+    };
 
-      {/* About Dropdown */}
-      <li className={`nav-item dropdown ${activeDropdown === 0 ? "show" : ""}`}>
-        <a
-          href="#"
-          className="nav-link dropdown-toggle"
-          role="button"
-          onClick={(e) => {
-            e.preventDefault();
-            toggleDropdown(0);
-          }}
-          aria-expanded={activeDropdown === 0}
+    // Close dropdowns when clicking outside (Desktop only)
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (
+                window.innerWidth >= 992 &&
+                navbarRef.current &&
+                !navbarRef.current.contains(event.target)
+            ) {
+                setActiveDropdown(null);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
+    // Close dropdowns when window is resized to mobile
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 992) {
+                setActiveDropdown(null);
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
+    const navItems = (
+        <ul
+            className="navbar-nav mb-2 mb-lg-0"
+            // Removed inline style for margin, now handled by CSS media query
         >
-          About
-        </a>
-        <ul className={`dropdown-menu ${activeDropdown === 0 ? "show" : ""}`}>
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/Aboutpage/Aboutinstutue"
-              onClick={handleDropdownItemClick}
-            >
-              About Institute
-            </Link>
-          </li>
-          <li className="dropdown-submenu">
-            <Link
-              className="dropdown-item"
-              to="#"
-              onClick={handleDropdownItemClick}
-            >
-              Leadership Team
-            </Link>
-
-            <ul className="submenu">
-              <li>
+            {/* Home */}
+            <li className="nav-item">
                 <Link
-                  className="dropdown-item"
-                  to="AboutPage/Chairman"
-                  onClick={handleDropdownItemClick}
+                    className="nav-link"
+                    to="/"
+                    onClick={handleNavLinkClick}
                 >
-                  Message From Founder President
+                    Home
                 </Link>
-              </li>
-              <li>
-                <Link
-                  className="dropdown-item"
-                  to="AboutPage/Secretary"
-                  onClick={handleDropdownItemClick}
-                >
-                  Message From Secretary
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="dropdown-item"
-                  to="AboutPage/Treasure"
-                  onClick={handleDropdownItemClick}
-                >
-                  Message From Treasurer
-                </Link>
-              </li>
-              {/* <li>
-                <Link
-                  className="dropdown-item"
-                  to="AboutPage/Director"
-                  onClick={handleDropdownItemClick}
-                >
-                  Message From Director
-                </Link>
-              </li> */}
+            </li>
 
-            </ul>
-          </li>
+            {/* About Dropdown */}
+            <li
+                className={`nav-item dropdown ${activeDropdown === 0 ? "show" : ""}`}
+            >
+                <a
+                    href="#"
+                    className="nav-link dropdown-toggle"
+                    role="button"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        toggleDropdown(0);
+                    }}
+                    aria-expanded={activeDropdown === 0}
+                >
+                    About
+                </a>
+                <ul
+                    className={`dropdown-menu ${activeDropdown === 0 ? "show" : ""}`}
+                >
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="/Aboutpage/Aboutinstutue"
+                            onClick={handleDropdownItemClick}
+                        >
+                            About Institute
+                        </Link>
+                    </li>
+                    <li
+                        className={`dropdown-submenu ${activeSubmenu === 0 ? "show" : ""}`}
+                    >
+                        <a
+                            href="#"
+                            className="dropdown-item d-flex justify-content-between align-items-center"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                toggleSubmenu(0);
+                            }}
+                        >
+                            Leadership Team
+                            <span>›</span>
+                        </a>
 
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/Aboutpage/Ismr"
-              onClick={handleDropdownItemClick}
-            >
-              Why ISMR?
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/Aboutpage/Award"
-              onClick={handleDropdownItemClick}
-            >
-              Awards & Ranking
-            </Link>
-          </li>
-        </ul>
-      </li>
+                        <ul
+                            className={`submenu ${activeSubmenu === 0 ? "show" : ""}`}
+                        >
+                            <li>
+                                {" "}
+                                <Link
+                                    className="dropdown-item"
+                                    to="/AboutPage/Chairman"
+                                    onClick={handleDropdownItemClick}
+                                >
+                                    {" "}
+                                    Message From Founder President{" "}
+                                </Link>{" "}
+                            </li>{" "}
+                            <li>
+                                {" "}
+                                <Link
+                                    className="dropdown-item"
+                                    to="/AboutPage/Secretary"
+                                    onClick={handleDropdownItemClick}
+                                >
+                                    {" "}
+                                    Message From Secretary{" "}
+                                </Link>{" "}
+                            </li>{" "}
+                            <li>
+                                {" "}
+                                <Link
+                                    className="dropdown-item"
+                                    to="/AboutPage/Treasure"
+                                    onClick={handleDropdownItemClick}
+                                >
+                                    {" "}
+                                    Message From Treasurer{" "}
+                                </Link>{" "}
+                            </li>{" "}
+                            {/* <li> <Link className="dropdown-item" to="AboutPage/Director" onClick={handleDropdownItemClick} > Message From Director </Link> </li> */}{" "}
+                        </ul>
+                    </li>
 
-      {/* Admissions Dropdown */}
-      <li className={`nav-item dropdown ${activeDropdown === 1 ? "show" : ""}`}>
-        <a
-          href="#"
-          className="nav-link dropdown-toggle"
-          role="button"
-          onClick={(e) => {
-            e.preventDefault();
-            toggleDropdown(1);
-          }}
-          aria-expanded={activeDropdown === 1}
-        >
-          Admissions
-        </a>
-        <ul className={`dropdown-menu ${activeDropdown === 1 ? "show" : ""}`}>
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/Addmissions/Eligibility-criteria"
-              onClick={handleDropdownItemClick}
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="/Aboutpage/Ismr"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Why ISMR?
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="/Aboutpage/Award"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Awards & Ranking
+                        </Link>
+                    </li>
+                </ul>
+            </li>
+
+            {/* Admissions Dropdown */}
+            <li
+                className={`nav-item dropdown ${activeDropdown === 1 ? "show" : ""}`}
             >
-              Eligibility Criteria
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/Addmissions/Howtoapply"
-              onClick={handleDropdownItemClick}
-            >
-              How To Apply
-            </Link>
-          </li>
-          {/* <li>
+                <a
+                    href="#"
+                    className="nav-link dropdown-toggle"
+                    role="button"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        toggleDropdown(1);
+                    }}
+                    aria-expanded={activeDropdown === 1}
+                >
+                    Admissions
+                </a>
+                <ul
+                    className={`dropdown-menu ${activeDropdown === 1 ? "show" : ""}`}
+                >
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="/Addmissions/Eligibility-criteria"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Eligibility Criteria
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="/Addmissions/Howtoapply"
+                            onClick={handleDropdownItemClick}
+                        >
+                            How To Apply
+                        </Link>
+                    </li>
+                    {/* <li>
             <Link
               className="dropdown-item"
               to="/Addmissions/FaqBbaBca" // Note: This link path is a duplicate
@@ -220,108 +248,112 @@ const Header = () => {
               FAQ's For BBA & BCA
             </Link>
           </li> */}
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/Addmissions/Educationloan"
-              onClick={handleDropdownItemClick}
-            >
-              Education Loan
-            </Link>
-          </li>
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="/Addmissions/Educationloan"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Education Loan
+                        </Link>
+                    </li>
 
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/Addmissions/Refundpolicy"
-              onClick={handleDropdownItemClick}
-            >
-              Refund Policy
-            </Link>
-          </li>
-         
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/Addmissions/Admissioncontact"
-              onClick={handleDropdownItemClick}
-            >
-              Admission Contact
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/Addmissions/Disclaimer"
-              onClick={handleDropdownItemClick}
-            >
-              Disclaimer for Admissions
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/Addmissions/DisclaimerFeePayment"
-              onClick={handleDropdownItemClick}
-            >
-              Disclaimer for Fees Payment
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/Addmissions/Feesstructure"
-              onClick={handleDropdownItemClick}
-            >
-              Fees Structure
-            </Link>
-          </li>
-           <li>
-            <Link
-              className="dropdown-item"
-              to="/Addmissions/Listofdocuments"
-              onClick={handleDropdownItemClick}
-            >
-             List Of Documents
-            </Link>
-          </li>
-        </ul>
-      </li>
-      {/* Academics Dropdown */}
-      <li className={`nav-item dropdown ${activeDropdown === 4 ? "show" : ""}`}>
-        <a
-          href="#"
-          className="nav-link dropdown-toggle"
-          role="button"
-          onClick={(e) => {
-            e.preventDefault();
-            toggleDropdown(4);
-          }}
-          aria-expanded={activeDropdown === 4}
-        >
-          Academics
-        </a>
-        <ul className={`dropdown-menu ${activeDropdown === 4 ? "show" : ""}`}>
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/Academics/Academics"
-              onClick={handleDropdownItemClick}
-            >
-              Academics
-            </Link>
-          </li>
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="/Addmissions/Refundpolicy"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Refund Policy
+                        </Link>
+                    </li>
 
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/Academics/Courseduration"
-              onClick={handleDropdownItemClick}
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="/Addmissions/Admissioncontact"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Admission Contact
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="/Addmissions/Disclaimer"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Disclaimer for Admissions
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="/Addmissions/DisclaimerFeePayment"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Disclaimer for Fees Payment
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="/Addmissions/Feesstructure"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Fees Structure
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="/Addmissions/Listofdocuments"
+                            onClick={handleDropdownItemClick}
+                        >
+                            List Of Documents
+                        </Link>
+                    </li>
+                </ul>
+            </li>
+            {/* Academics Dropdown */}
+            <li
+                className={`nav-item dropdown ${activeDropdown === 4 ? "show" : ""}`}
             >
-              Course Duration
-            </Link>
-          </li>
-          {/* <li>
+                <a
+                    href="#"
+                    className="nav-link dropdown-toggle"
+                    role="button"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        toggleDropdown(4);
+                    }}
+                    aria-expanded={activeDropdown === 4}
+                >
+                    Academics
+                </a>
+                <ul
+                    className={`dropdown-menu ${activeDropdown === 4 ? "show" : ""}`}
+                >
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="/Academics/Academics"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Academics
+                        </Link>
+                    </li>
+
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="/Academics/Courseduration"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Course Duration
+                        </Link>
+                    </li>
+                    {/* <li>
             <Link
               className="dropdown-item"
               to="/Academics/Library"
@@ -331,70 +363,72 @@ const Header = () => {
             </Link>
           </li> */}
 
-          {/* Cleaned up commented links */}
-        </ul>
-      </li>
-      {/* Placement Dropdown */}
-      <li className={`nav-item dropdown ${activeDropdown === 2 ? "show" : ""}`}>
-        <a
-          href="#"
-          className="nav-link dropdown-toggle"
-          role="button"
-          onClick={(e) => {
-            e.preventDefault();
-            toggleDropdown(2);
-          }}
-          aria-expanded={activeDropdown === 2}
-        >
-          Placement
-        </a>
-        <ul className={`dropdown-menu ${activeDropdown === 2 ? "show" : ""}`}>
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/Placementpage/Placementoverview"
-              onClick={handleDropdownItemClick}
+                    {/* Cleaned up commented links */}
+                </ul>
+            </li>
+            {/* Placement Dropdown */}
+            <li
+                className={`nav-item dropdown ${activeDropdown === 2 ? "show" : ""}`}
             >
-              Placement Overview
-            </Link>
-          </li>
+                <a
+                    href="#"
+                    className="nav-link dropdown-toggle"
+                    role="button"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        toggleDropdown(2);
+                    }}
+                    aria-expanded={activeDropdown === 2}
+                >
+                    Placement
+                </a>
+                <ul
+                    className={`dropdown-menu ${activeDropdown === 2 ? "show" : ""}`}
+                >
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="/Placementpage/Placementoverview"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Placement Overview
+                        </Link>
+                    </li>
 
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/Placementpage/PlacementRules"
-              onClick={handleDropdownItemClick}
-            >
-              Placement Rules & Regulations
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/Placementpage/PlacementProcess"
-              onClick={handleDropdownItemClick}
-            >
-              Placement Process
-            </Link>
-          </li>
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="/Placementpage/PlacementRules"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Placement Rules & Regulations
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="/Placementpage/PlacementProcess"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Placement Process
+                        </Link>
+                    </li>
 
+                    {/* Cleaned up commented links */}
 
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="/Placementpage/Ourplacement"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Our Internship & Placement
+                        </Link>
+                    </li>
 
-          {/* Cleaned up commented links */}
+                    {/* Cleaned up commented links */}
 
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/Placementpage/Ourplacement"
-              onClick={handleDropdownItemClick}
-            >
-              Our Internship & Placement
-            </Link>
-          </li>
-
-          {/* Cleaned up commented links */}
-
-          {/* <li>
+                    {/* <li>
             <Link
               className="dropdown-item"
               to="/Placementpage/Corporate"
@@ -404,194 +438,196 @@ const Header = () => {
             </Link>
           </li> */}
 
-          {/* Cleaned up commented links */}
-        </ul>
-      </li>
+                    {/* Cleaned up commented links */}
+                </ul>
+            </li>
 
-
-      {/* Student Corner */}
-      <li className={`nav-item dropdown ${activeDropdown === 6 ? "show" : ""}`}>
-        <a
-          href="#"
-          className="nav-link dropdown-toggle"
-          role="button"
-          onClick={(e) => {
-            e.preventDefault();
-            toggleDropdown(6);
-          }}
-          aria-expanded={activeDropdown === 6}
-        >
-          Student Corner
-        </a>
-        <ul className={`dropdown-menu ${activeDropdown === 6 ? "show" : ""}`}>
-          <li>
-            <Link
-              className="dropdown-item"
-              to="https://ccvis.barti.in/"
-              onClick={handleDropdownItemClick}
+            {/* Student Corner */}
+            <li
+                className={`nav-item dropdown ${activeDropdown === 6 ? "show" : ""}`}
             >
-              Apply For Caste Validity
-            </Link>
-          </li>
+                <a
+                    href="#"
+                    className="nav-link dropdown-toggle"
+                    role="button"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        toggleDropdown(6);
+                    }}
+                    aria-expanded={activeDropdown === 6}
+                >
+                    Student Corner
+                </a>
+                <ul
+                    className={`dropdown-menu ${activeDropdown === 6 ? "show" : ""}`}
+                >
+                    <li>
+                        <a
+                            className="dropdown-item"
+                            href="https://ccvis.barti.in/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Apply For Caste Validity
+                        </a>
+                    </li>
 
-          <li>
-            <Link
-              className="dropdown-item"
-              to="https://cetcell.mahacet.org/"
-              onClick={handleDropdownItemClick}
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="https://cetcell.mahacet.org/"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Apply For MAH-CET Form
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="https://mahadbt.maharashtra.gov.in/Login/Login"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Apply For EBC & Scholarship Form
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="https://atmaaims.com/"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Apply For ATMA Entrance Exam Form
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="https://mat.aima.in/?utm_source=collegedunia&utm_medium=text11&utm_campaign=online"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Apply For MAT Entrance Exam Form
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="https://cmat.nta.nic.in/"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Apply For CMAT Entrance Exam Form
+                        </Link>
+                    </li>
+
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="https://exam.unipune.ac.in/Pages/ExamFormsOnline.html"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Apply For MBA Exam Form
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="https://ndl.iitkgp.ac.in/"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Apply For National Digital Library (NDL)
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="https://www.delnet.in/"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Apply For DELNET
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="https://swayam.gov.in/"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Apply For SWAYAM
+                        </Link>
+                    </li>
+
+                    {/* Cleaned up commented links */}
+                </ul>
+            </li>
+
+            {/* Life @ Campus Dropdown */}
+            <li
+                className={`nav-item dropdown ${activeDropdown === 3 ? "show" : ""}`}
             >
-              Apply For MAH-CET Form
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="dropdown-item"
-              to="https://mahadbt.maharashtra.gov.in/Login/Login"
-              onClick={handleDropdownItemClick}
+                <a
+                    href="#"
+                    className="nav-link dropdown-toggle"
+                    role="button"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        toggleDropdown(3);
+                    }}
+                    aria-expanded={activeDropdown === 3}
+                >
+                    Life @ Campus
+                </a>
+                <ul
+                    className={`dropdown-menu ${activeDropdown === 3 ? "show" : ""}`}
+                >
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="/Life@campus/Studentcampus"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Student Campus life
+                        </Link>
+                    </li>
+                    {/* Cleaned up commented links */}
+
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="/Life@campus/StudentFacilities"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Student Facilities
+                        </Link>
+                    </li>
+
+                    <li>
+                        <Link
+                            className="dropdown-item"
+                            to="/NewsPage/Newsletter"
+                            onClick={handleDropdownItemClick}
+                        >
+                            Newsletters
+                        </Link>
+                    </li>
+                </ul>
+            </li>
+
+            {/* NAAC Dropdown */}
+            <li
+                className={`nav-item dropdown ${activeDropdown === 7 ? "show" : ""}`}
             >
-              Apply For EBC & Scholarship Form
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="dropdown-item"
-              to="https://atmaaims.com/"
-              onClick={handleDropdownItemClick}
-            >
-              Apply For ATMA Entrance Exam Form
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="dropdown-item"
-              to="https://mat.aima.in/?utm_source=collegedunia&utm_medium=text11&utm_campaign=online"
-              onClick={handleDropdownItemClick}
-            >
-              Apply For MAT Entrance Exam Form
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="dropdown-item"
-              to="https://cmat.nta.nic.in/"
-              onClick={handleDropdownItemClick}
-            >
-              Apply For CMAT Entrance Exam Form
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              className="dropdown-item"
-              to="https://exam.unipune.ac.in/Pages/ExamFormsOnline.html"
-              onClick={handleDropdownItemClick}
-            >
-              Apply For MBA Exam Form
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="dropdown-item"
-              to="https://ndl.iitkgp.ac.in/"
-              onClick={handleDropdownItemClick}
-            >
-              Apply For National Digital Library (NDL)
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="dropdown-item"
-              to="https://www.delnet.in/"
-              onClick={handleDropdownItemClick}
-            >
-              Apply For DELNET
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="dropdown-item"
-              to="https://swayam.gov.in/"
-              onClick={handleDropdownItemClick}
-            >
-              Apply For SWAYAM
-            </Link>
-          </li>
-
-
-
-
-          {/* Cleaned up commented links */}
-        </ul>
-      </li>
-
-
-      {/* Life @ Campus Dropdown */}
-      <li className={`nav-item dropdown ${activeDropdown === 3 ? "show" : ""}`}>
-        <a
-          href="#"
-          className="nav-link dropdown-toggle"
-          role="button"
-          onClick={(e) => {
-            e.preventDefault();
-            toggleDropdown(3);
-          }}
-          aria-expanded={activeDropdown === 3}
-        >
-          Life @ Campus
-        </a>
-        <ul className={`dropdown-menu ${activeDropdown === 3 ? "show" : ""}`}>
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/Life@campus/Studentcampus"
-              onClick={handleDropdownItemClick}
-            >
-              Student Campus life
-            </Link>
-          </li>
-          {/* Cleaned up commented links */}
-
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/Life@campus/StudentFacilities"
-              onClick={handleDropdownItemClick}
-            >
-              Student Facilities
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/NewsPage/Newsletter"
-              onClick={handleDropdownItemClick}
-            >
-              Newsletters
-            </Link>
-          </li>
-
-        </ul>
-
-      </li>
-
-
-
-      {/* NAAC Dropdown */}
-      <li className={`nav-item dropdown ${activeDropdown === 7 ? "show" : ""}`}>
-        <a
-          href="#"
-          className="nav-link dropdown-toggle"
-          role="button"
-          onClick={(e) => {
-            e.preventDefault();
-            toggleDropdown(7);
-          }}
-          aria-expanded={activeDropdown === 7}
-        >
-          NAAC
-        </a>
-        {/* <ul className={`dropdown-menu ${activeDropdown === 7 ? "show" : ""}`}>
+                <a
+                    href="#"
+                    className="nav-link dropdown-toggle"
+                    role="button"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        toggleDropdown(7);
+                    }}
+                    aria-expanded={activeDropdown === 7}
+                >
+                    NAAC
+                </a>
+                {/* <ul className={`dropdown-menu ${activeDropdown === 7 ? "show" : ""}`}>
           <li>
             <a
               href="accreditation-certificate.html"
@@ -629,20 +665,24 @@ const Header = () => {
             </a>
           </li>
         </ul> */}
-      </li>
+            </li>
 
-      {/* Contact Us */}
-      <li className="nav-item">
-        <Link to="/Contactus" className="nav-link" onClick={handleNavLinkClick}>
-          Reach Us
-        </Link>
-      </li>
-    </ul>
-  );
+            {/* Contact Us */}
+            <li className="nav-item">
+                <Link
+                    to="/Contactus"
+                    className="nav-link"
+                    onClick={handleNavLinkClick}
+                >
+                    Reach Us
+                </Link>
+            </li>
+        </ul>
+    );
 
-  return (
-    <>
-      <style>{`
+    return (
+        <>
+            <style>{`
         /* Custom Navbar Styling */
         .custom-navbar {
           background-color: #002a5c !important;
@@ -662,13 +702,12 @@ const Header = () => {
   position: relative;
 }
 
-/* Submenu UL */
+/* Submenu default */
 .dropdown-submenu .submenu {
   display: none;
   position: absolute;
   top: 0;
-  left: 100%;       /* Opens to the right side */
-  margin-left: 0px; 
+  left: 100%;
   background: #fff;
   padding: 10px 0;
   list-style: none;
@@ -677,10 +716,40 @@ const Header = () => {
   z-index: 999;
 }
 
-/* Show on hover */
-.dropdown-submenu:hover .submenu {
-  display: block;
+/* Desktop hover */
+@media (min-width: 992px) {
+  // .dropdown-submenu:hover .submenu {
+  //   display: block;
+  // }
 }
+
+/* Mobile click support */
+@media (max-width: 991.98px) {
+  .dropdown-submenu .submenu {
+    position: static;
+    display: none;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-top: 5px;
+  }
+
+  .dropdown-submenu.show .submenu {
+    display: block;
+  }
+
+  .dropdown-submenu > a span {
+    transform: rotate(90deg);
+    transition: 0.3s;
+  }
+
+  .dropdown-submenu.show > a span {
+    transform: rotate(180deg);
+  }
+}
+/* Show on hover */
+// .dropdown-submenu:hover .submenu {
+//   display: block;
+// }
 
 /* Optional styling */
 .submenu li a {
@@ -1131,54 +1200,75 @@ const Header = () => {
             font-size: 15px;
           }
         }
+          /* MOBILE FIX */
+@media (max-width: 768px) {
+  .submenu {
+    background: #f5f5f5;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .submenu li a {
+    font-size: 14px;
+    color: #0a2240;
+  }
+}
       `}</style>
 
-      <nav className="navbar navbar-expand-lg custom-navbar" ref={navbarRef}>
-        <div className="container-fluid">
-          {/* Logo */}
-          <a href="/" className="navbar-brand">
-            <img src="/ISMR logo_page-0001.jpg" alt="Institute Logo" />
-          </a>
-
-          {/* Apply Button - Mobile Top */}
-          <div className="d-lg-none ms-auto me-2">
-            <a
-              href="admission.html"
-              className="apply-btn d-none d-sm-inline-flex"
-              onClick={handleNavLinkClick}
+            <nav
+                className="navbar navbar-expand-lg custom-navbar"
+                ref={navbarRef}
             >
-              Apply Now
-              <i className="bx bx-right-arrow-alt"></i>
-            </a>
-          </div>
+                <div className="container-fluid">
+                    {/* Logo */}
+                    <a
+                        href="/"
+                        className="navbar-brand"
+                    >
+                        <img
+                            src="/ISMR logo_page-0001.jpg"
+                            alt="Institute Logo"
+                        />
+                    </a>
 
-          {/* Mobile Toggler */}
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded={isNavbarOpen}
-            aria-label="Toggle navigation"
-            onClick={toggleNavbar}
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+                    {/* Apply Button - Mobile Top */}
+                    <div className="d-lg-none ms-auto me-2">
+                        <a
+                            href="admission.html"
+                            className="apply-btn d-none d-sm-inline-flex"
+                            onClick={handleNavLinkClick}
+                        >
+                            Apply Now
+                            <i className="bx bx-right-arrow-alt"></i>
+                        </a>
+                    </div>
 
-          {/* Desktop & Mobile Navigation */}
-          <div
-            className={`collapse navbar-collapse ${isNavbarOpen ? "show" : ""}`}
-            id="navbarNav"
-          >
-            {navItems}
-            {/* Mobile-specific Apply Now Button (inside the collapsed menu) */}
+                    {/* Mobile Toggler */}
+                    <button
+                        className="navbar-toggler"
+                        type="button"
+                        // data-bs-toggle="collapse"
+                        // data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded={isNavbarOpen}
+                        aria-label="Toggle navigation"
+                        onClick={toggleNavbar}
+                    >
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
 
-          </div>
-        </div>
-      </nav>
-    </>
-  );
+                    {/* Desktop & Mobile Navigation */}
+                    <div
+                        className={`collapse navbar-collapse ${isNavbarOpen ? "show" : ""}`}
+                        id="navbarNav"
+                    >
+                        {navItems}
+                        {/* Mobile-specific Apply Now Button (inside the collapsed menu) */}
+                    </div>
+                </div>
+            </nav>
+        </>
+    );
 };
 
 export default Header;
