@@ -117,7 +117,7 @@ const Header = () => {
               About Institute
             </Link>
           </li>
-          {/* <li className={`dropdown-submenu ${activeSubmenu === 0 ? "show" : ""}`}>
+          <li className={`dropdown-submenu ${activeSubmenu === 0 ? "show" : ""}`}>
             <a
               href="#"
               className="dropdown-item d-flex justify-content-between align-items-center"
@@ -131,8 +131,8 @@ const Header = () => {
             </a>
 
             <ul className={`submenu ${activeSubmenu === 0 ? "show" : ""}`}>
-              <li> <Link className="dropdown-item" to="/AboutPage/Chairman" onClick={handleDropdownItemClick} > Message From Founder President </Link> </li> <li> <Link className="dropdown-item" to="/AboutPage/Secretary" onClick={handleDropdownItemClick} > Message From Secretary </Link> </li> <li> <Link className="dropdown-item" to="/AboutPage/Treasure" onClick={handleDropdownItemClick} > Message From Treasurer </Link> </li>  </ul>
-          </li> */}
+              <li> <Link className="dropdown-item" to="/AboutPage/Chairman" onClick={handleDropdownItemClick} > Message From Founder President </Link> </li> <li> <Link className="dropdown-item" to="/AboutPage/Secretary" onClick={handleDropdownItemClick} > Message From Secretary </Link> </li> <li> <Link className="dropdown-item" to="/AboutPage/Treasure" onClick={handleDropdownItemClick} > Message From Treasurer </Link> </li> {/* <li> <Link className="dropdown-item" to="AboutPage/Director" onClick={handleDropdownItemClick} > Message From Director </Link> </li> */} </ul>
+          </li>
 
           <li>
             <Link
