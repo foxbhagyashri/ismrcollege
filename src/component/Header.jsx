@@ -656,9 +656,9 @@ const Header = () => {
 
 /* Desktop hover */
 @media (min-width: 992px) {
-  .dropdown-submenu:hover .submenu {
-    display: block;
-  }
+  // .dropdown-submenu:hover .submenu {
+  //   display: block;
+  // }
 }
 
 /* Mobile click support */
@@ -685,9 +685,9 @@ const Header = () => {
   }
 }
 /* Show on hover */
-.dropdown-submenu:hover .submenu {
-  display: block;
-}
+// .dropdown-submenu:hover .submenu {
+//   display: block;
+// }
 
 /* Optional styling */
 .submenu li a {
@@ -1176,8 +1176,8 @@ const Header = () => {
           <button
             className="navbar-toggler"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
+            // data-bs-toggle="collapse"
+            // data-bs-target="#navbarNav"
             aria-controls="navbarNav"
             aria-expanded={isNavbarOpen}
             aria-label="Toggle navigation"

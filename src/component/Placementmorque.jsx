@@ -17,9 +17,9 @@ const PartnersMarquee = () => {
 
   return (
     <section className="partners-section">
-
+  <div className="section-header">
       <h1 className="section-title text-center">Our Recruiting Partners</h1>
-
+</div>
       <div className="partners-container">
         <div className="partners-content">
           {repeatedLogos.map((logo, index) => (

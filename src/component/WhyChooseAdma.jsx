@@ -59,7 +59,9 @@ const WhyChooseAdma = () => {
       <Container>
         <Row className="justify-content-center">
           <Col lg={10}>
-            <h2 className="section-title text-center mb-5">Why Choose ISMR?</h2>
+            <div className="section-header">
+              <h2 className="section-title text-center mb-5">Why Choose ISMR?</h2>
+            </div>
             <div className="why-list">
               {features.map((item, index) => {
                 const IconComponent = item.icon;
