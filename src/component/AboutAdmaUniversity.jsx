@@ -14,9 +14,9 @@ const AboutAdmaUniversity = () => {
   return (
     <section className="about-container">
       {/* Top Row */}
-
-      <h1 className="section-title text-center">Affiliation and Accreditations</h1>
-
+<div className="section-header">
+      <h1 className="section-title">Affiliation and Accreditations</h1>
+</div>
       {/* Bottom Row */}
       <div className="about-bottom">
         <div className="logos-section">

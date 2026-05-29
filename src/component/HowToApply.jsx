@@ -6,8 +6,9 @@ const HowToApply = () => {
     return (
         <section className="apply-section">
             <div className="apply-inner">
-                <h1 className="section-title mb-5 text-center">How To Apply</h1>
-
+                <div className="section-header">
+                    <h1 className="section-title mb-5 text-center">How To Apply</h1>
+                </div>
                 <div className="apply-container">
 
                     <article className="apply-box">

@@ -16,7 +16,7 @@ const Testimonials = () => {
       id: 5,
       name: "Pooja Ravindra Bawane",
 
-      img: "./pooja.png",
+      img: "./pooja_hd.png",
       text: "I am Pooja Ravindra Bawane, an MBA First Semester student at ISMR College. The college provides a dynamic learning environment that effectively connects theory with practical learning. I appreciate the regular internship opportunities, case study sessions, outdoor activities, and hands-on experiences offered. These activities help us understand real business situations and prepare us for future challenges.",
       rating: 5,
     },
@@ -24,7 +24,7 @@ const Testimonials = () => {
       id: 6,
       name: "Khushi Jitendra Bodile",
       // role: "ISMR Alumni",
-      img: "./khushi.png",
+      img: "./khushi_hd.png",
       text: "I am Khushi Jitendra Bodile, a First-Year MBA student at ISMR Pune. ISMR provides excellent facilities such as bus service, sports, games, and a gym for students. The college also organizes industrial visits and various programs that support our overall development. The faculty members are friendly and supportive, and I am truly grateful to be a part of ISMR.",
       rating: 5,
     },
@@ -32,7 +32,7 @@ const Testimonials = () => {
       id: 7,
       name: "Ajay Choudhary",
 
-      img: "./nonamee.png",
+      img: "./nonamee_hd.png",
       text: "My first semester of MBA was a valuable and enriching learning experience. Case studies and interactive classes helped me understand how business concepts apply in real-life situations. Group projects enhanced my communication and leadership skills. Overall, this semester provided a strong foundation for my personal and professional growth.",
       rating: 5,
     },
@@ -40,7 +40,7 @@ const Testimonials = () => {
       id: 8,
       name: "Nikhil Gupta",
 
-      img: "./noname02.png",
+      img: "./noname02_hd.png",
       text: "The first semester of my MBA helped me enhance my planning and analytical skills, which are essential for my career growth. It strengthened my professional outlook and improved my ability to think strategically. This experience also boosted my confidence in my leadership skills. I am excited and motivated for the rest of the MBA program.",
       rating: 5,
     },
@@ -48,7 +48,7 @@ const Testimonials = () => {
       id: 9,
       name: "Ipsita Haldkar",
 
-      img: "./ipshita.png",
+      img: "./ipshita_hd.png",
       text: "This program helped me develop strong analytical and strategic thinking skills essential for leadership. The support and guidance from the faculty provided valuable insights into industry practices. I also had the opportunity to build a strong professional network that opened new doors for growth. Overall, the program boosted my confidence and significantly enhanced my abilities.",
       rating: 5,
     },
@@ -72,7 +72,7 @@ const Testimonials = () => {
       id: 12,
       name: "Pallavi Shikhare",
 
-      img: "./pallavi.png",
+      img: "./pallavi_hd.png",
       text: "I am Pallavi Shikhare, and this program has truly made a positive impact on my life. It helped me gain valuable knowledge and practical skills while connecting with professionals from diverse backgrounds. The global exposure and networking opportunities were extremely beneficial. I now feel confident and well prepared to take on leadership challenges.",
       rating: 5,
     },
