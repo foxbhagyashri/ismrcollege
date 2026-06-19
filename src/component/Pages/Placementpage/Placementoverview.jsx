@@ -1,6 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, Card, ListGroup, Button } from "react-bootstrap";
+import {
+  PieChart,
+  Pie,
+  Cell,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
 import {
   CheckCircleFill,
   BriefcaseFill,
@@ -9,15 +16,117 @@ import {
 } from "react-bootstrap-icons";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 
+
+
+const placementData = {
+  2023: [
+    { name: "Finance", value: 30 },
+    { name: "Marketing", value: 24 },
+    { name: "HRM", value: 18 },
+    { name: "BA", value: 10 },
+    { name: "OSCM", value: 8 },
+    { name: "Pharma", value: 6 },
+    { name: "Agri Business", value: 4 },
+  ],
+  2024: [
+    { name: "Finance", value: 29 },
+    { name: "Marketing", value: 25 },
+    { name: "HRM", value: 18 },
+    { name: "BA", value: 11 },
+    { name: "OSCM", value: 8 },
+    { name: "Pharma", value: 5 },
+    { name: "Agri Business", value: 4 },
+  ],
+  2025: [
+    { name: "Finance", value: 28 },
+    { name: "Marketing", value: 25 },
+    { name: "HRM", value: 19 },
+    { name: "BA", value: 12 },
+    { name: "OSCM", value: 8 },
+    { name: "Pharma", value: 5 },
+    { name: "Agri Business", value: 3 },
+  ],
+  2026: [
+    { name: "Finance", value: 27 },
+    { name: "Marketing", value: 26 },
+    { name: "HRM", value: 20 },
+    { name: "BA", value: 12 },
+    { name: "OSCM", value: 8 },
+    { name: "Pharma", value: 4 },
+    { name: "Agri Business", value: 3 },
+  ],
+};
+
+const academicYears = [
+  "2025-26 (ONGOING)",
+  "2024-25",
+  "2023-24",
+  "2023-22",
+];
+
+// Map each academic-year tag to the data-year key used above.
+const yearKeyMap = {
+  "2025-26 (ONGOING)": 2026,
+  "2024-25": 2025,
+  "2023-24": 2024,
+  "2023-22": 2023,
+};
+
+const SLICE_COLORS = [
+  "#0a2240", // navy
+  "#1d4e89", // mid blue
+  "#3e7cb1", // sky blue
+  "#85c7de", // pale teal
+  "#d4a843", // gold
+  "#c46a3b", // terracotta
+  "#7c9070", // sage
+];
+
+// ---- Custom label on slice ---------------------------------------------
+const RADIAN = Math.PI / 180;
+const renderSliceLabel = ({
+  cx,
+  cy,
+  midAngle,
+  innerRadius,
+  outerRadius,
+  percent,
+  name,
+}) => {
+  const radius = innerRadius + (outerRadius - innerRadius) * 0.62;
+  const x = cx + radius * Math.cos(-midAngle * RADIAN);
+  const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+  return (
+    <text
+      x={x}
+      y={y}
+      textAnchor="middle"
+      dominantBaseline="central"
+      style={{
+        fontSize: 11,
+        fontWeight: 600,
+        fill: "#ffffff",
+        pointerEvents: "none",
+      }}
+    >
+      <tspan x={x} dy="-0.3em">
+        {name}
+      </tspan>
+      <tspan x={x} dy="1.2em">
+        {`${Math.round(percent * 100)}%`}
+      </tspan>
+    </text>
+  );
+};
+
+
+
 function EnhancedPlacementStatus() {
-  const [activeYear, setActiveYear] = useState("2024-25 (ONGOING)");
-  const academicYears = [
-    "2025-26 (ONGOING)",
-    "2024-25",
-    "2023-24",
-    "2023-22",
-    
-  ];
+  const [activeYear, setActiveYear] = useState("2025-26 (ONGOING)");
+
+  const dataYear = yearKeyMap[activeYear];
+  const chartData = useMemo(() => placementData[dataYear] || [], [dataYear]);
 
   const placementMetrics = {
     highestPackage: "₹ 12 LPA",
@@ -42,7 +151,7 @@ function EnhancedPlacementStatus() {
                 fontSize: "2.4rem",
                 fontWeight: 700,
                 color: "#0a2240",
-               
+
               }}
             >
               <BriefcaseFill
@@ -57,7 +166,7 @@ function EnhancedPlacementStatus() {
                 fontSize: "16px",
                 color: "#444",
                 lineHeight: "1.7",
-                maxWidth:"auto",
+                maxWidth: "auto",
                 textAlign: "justify",
               }}
             >
@@ -85,7 +194,7 @@ function EnhancedPlacementStatus() {
                     style={{ color: "#0a2240", fontSize: "1.4rem" }}
                   >
                     <GraphUp className="me-2" />
-                    Placement Highlights
+                    Placement Records Since Inception
                   </h4>
 
                   <ListGroup variant="flush">
@@ -104,7 +213,7 @@ function EnhancedPlacementStatus() {
                   </ListGroup>
                 </div>
 
-              
+
               </Card.Body>
             </Card>
           </Col>
@@ -118,42 +227,215 @@ function EnhancedPlacementStatus() {
                   style={{ color: "#0a2240", fontSize: "1.4rem" }}
                 >
                   <CheckCircleFill className="me-2 text-primary" />
-                  Placement Statistics  by Academic Year
+                  Placement Statistics by Specialization-wise
                 </h4>
 
-                <Row className="g-3 justify-content-center">
-                  {academicYears.map((year) => (
-                    <Col
-                      md={4}
-                      sm={6}
-                      xs={6}
-                      key={year}
-                      className="d-flex justify-content-center"
-                    >
-                      <div
-                        onClick={() => setActiveYear(year)}
-                        className={`text-center p-3 rounded border year-box w-100 ${
-                          activeYear === year ? "active" : ""
-                        }`}
-                      >
-                        <span className="year-text">{year}</span>
-                      </div>
-                    </Col>
-                  ))}
-                </Row>
-
-                <div className="mt-auto text-center pt-3">
-                  <p
+                <div
+                  style={{
+                    fontFamily:
+                      "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+                    background: "#f7f8fa",
+                    padding: "32px 20px",
+                    minHeight: "100%",
+                  }}
+                >
+                  <div
                     style={{
-                      color: "#0a2240",
-                      fontWeight: 600,
-                      fontSize: "15px",
-                      wordBreak: "break-word",
+                      maxWidth: 1100,
+                      margin: "0 auto",
+                      display: "flex",
+                      // flexWrap: "wrap",
+                      gap: 28,
+                      alignItems: "stretch",
                     }}
                   >
-                    Currently Viewing:{" "}
-                    <span className="font-size-32 fw-small">{activeYear}</span>
-                  </p>
+                    {/* ---------------- LEFT: Year selector ---------------- */}
+                    <div
+                      style={{
+                        flex: "1 1 300px",
+                        background: "#ffffff",
+                        borderRadius: 16,
+                        border: "1px solid #e6e8ec",
+                        padding: "28px 24px",
+                        display: "flex",
+                        flexDirection: "column",
+                        boxShadow: "0 2px 10px rgba(10,34,64,0.05)",
+                      }}
+                    >
+                      <h2
+                        style={{
+                          color: "#0a2240",
+                          fontSize: 18,
+                          fontWeight: 700,
+                          margin: "0 0 20px",
+                          letterSpacing: 0.2,
+                        }}
+                      >
+                        Academic Year
+                      </h2>
+
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: 12,
+                        }}
+                      >
+                        {academicYears.map((year) => {
+                          const isActive = activeYear === year;
+                          return (
+                            <div
+                              key={year}
+                              onClick={() => setActiveYear(year)}
+                              role="button"
+                              tabIndex={0}
+                              onKeyDown={(e) => {
+                                if (e.key === "Enter" || e.key === " ") setActiveYear(year);
+                              }}
+                              style={{
+                                cursor: "pointer",
+                                textAlign: "center",
+                                padding: "14px 16px",
+                                borderRadius: 10,
+                                border: isActive
+                                  ? "1.5px solid #0a2240"
+                                  : "1.5px solid #e2e5ea",
+                                background: isActive ? "#0a2240" : "#fafbfc",
+                                color: isActive ? "#ffffff" : "#0a2240",
+                                fontWeight: 600,
+                                fontSize: 14.5,
+                                transition: "all 0.18s ease",
+                              }}
+                            >
+                              {year}
+                            </div>
+                          );
+                        })}
+                      </div>
+
+                      <div
+                        style={{
+                          marginTop: "auto",
+                          paddingTop: 22,
+                          textAlign: "center",
+                          borderTop: "1px solid #eef0f3",
+                          marginTop: 24,
+                        }}
+                      >
+                        <p
+                          style={{
+                            color: "#0a2240",
+                            fontWeight: 600,
+                            fontSize: 14,
+                            margin: 0,
+                            wordBreak: "break-word",
+                          }}
+                        >
+                          Currently Viewing
+                        </p>
+                        <span
+                          style={{
+                            display: "inline-block",
+                            marginTop: 6,
+                            fontSize: 20,
+                            fontWeight: 700,
+                            color: "#0a2240",
+                          }}
+                        >
+                          {activeYear}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* ---------------- RIGHT: Pie chart ---------------- */}
+                    <div
+                      style={{
+                        flex: "2 1 480px",
+                        background: "#ffffff",
+                        borderRadius: 16,
+                        border: "1px solid #e6e8ec",
+                        padding: "28px 24px",
+                        boxShadow: "0 2px 10px rgba(10,34,64,0.05)",
+                      }}
+                    >
+                      <h2
+                        style={{
+                          color: "#0a2240",
+                          fontSize: 18,
+                          fontWeight: 700,
+                          margin: "0 0 4px",
+                        }}
+                      >
+                        Specialisation-wise Placement (%)
+                      </h2>
+                      <p style={{ color: "#6b7280", fontSize: 13, margin: "0 0 8px" }}>
+                        Showing data for {dataYear}
+                      </p>
+
+                      <div style={{ width: "100%", height: 380 }}>
+                        <ResponsiveContainer width="100%" height="100%">
+                          <PieChart>
+                            <Pie
+                              data={chartData}
+                              dataKey="value"
+                              nameKey="name"
+                              cx="50%"
+                              cy="50%"
+                              outerRadius={150}
+                              labelLine={false}
+                              label={renderSliceLabel}
+                              isAnimationActive={true}
+                            >
+                              {chartData.map((entry, index) => (
+                                <Cell
+                                  key={entry.name}
+                                  fill={SLICE_COLORS[index % SLICE_COLORS.length]}
+                                  stroke="#ffffff"
+                                  strokeWidth={2}
+                                />
+                              ))}
+                            </Pie>
+                            <Tooltip formatter={(value, name) => [`${value}%`, name]} />
+                          </PieChart>
+                        </ResponsiveContainer>
+                      </div>
+
+                      {/* Legend */}
+                      <div
+                        style={{
+                          display: "flex",
+                          flexWrap: "wrap",
+                          gap: "10px 18px",
+                          justifyContent: "center",
+                          marginTop: 8,
+                        }}
+                      >
+                        {chartData.map((entry, index) => (
+                          <div
+                            key={entry.name}
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              gap: 6,
+                              fontSize: 12.5,
+                              color: "#374151",
+                            }}
+                          >
+                            <span
+                              style={{
+                                width: 10,
+                                height: 10,
+                                borderRadius: 3,
+                                background: SLICE_COLORS[index % SLICE_COLORS.length],
+                                display: "inline-block",
+                              }}
+                            />
+                            {entry.name}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </Card.Body>
             </Card>
@@ -288,7 +570,7 @@ function Placementoverview() {
       <EnhancedPlacementStatus />
 
       {/* ===== Placement Philosophy Section ===== */}
-      
+
     </>
   );
 }

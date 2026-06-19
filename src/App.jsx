@@ -102,7 +102,7 @@ function App() {
                             <Placementmorque />
                             <StudentLife />
                             <WhyChooseAdma />
-                            <Testimonials />
+                            {/* <Testimonials /> */}
 
                             {/* <LatestNews /> */}
                         </>
