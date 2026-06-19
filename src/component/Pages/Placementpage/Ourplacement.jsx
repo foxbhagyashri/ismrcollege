@@ -31,6 +31,34 @@ import Comp21 from "../../../assets/Homeimg/xdbs.png";
 import Comp22 from "../../../assets/Homeimg/vitanaa.png";
 import Comp23 from "../../../assets/Homeimg/600db20da2900_XL_dynamics.jpg";
 import Comp24 from "../../../assets/Homeimg/x3yozluxpwkcfa5wicbf.jpg";
+import Comp25 from "../../../assets/Homeimg/nestle.png";
+import Comp26 from "../../../assets/Homeimg/cipla.jpg";
+import Comp27 from "../../../assets/Homeimg/allstate.png";
+import Comp28 from "../../../assets/Homeimg/Amazon-India-Logo-PNG-HD.webp";
+import Comp29 from "../../../assets/Homeimg/Berger-Paints-Logo-Vector_logoshape.png";
+import Comp30 from "../../../assets/Homeimg/BNY_Mellon.png";
+import Comp31 from "../../../assets/Homeimg/Deloitte-Logo.jpg";
+import Comp32 from "../../../assets/Homeimg/DHL_Supply_Chain_logo.png";
+import Comp33 from "../../../assets/Homeimg/EY_logo_2019.png";
+import Comp34 from "../../../assets/Homeimg/ICICI-Bank-Logo.jpg";
+import Comp35 from "../../../assets/Homeimg/Hyundai-logo-cover-min.jpeg";
+import Comp36 from "../../../assets/Homeimg/Infosys_logo.svg.png";
+import Comp37 from "../../../assets/Homeimg/KPMG_blue_logo.svg.png";
+import Comp38 from "../../../assets/Homeimg/pwc_logo.png";
+import Comp39 from "../../../assets/Homeimg/Tata_Consultancy_Services_old_logo.svg.png";
+import Comp40 from "../../../assets/Homeimg/The_Lupin_Logo.svg.png";
+import Comp41 from "../../../assets/Homeimg/peter-england-ghee-bazaar-nandurbar-men-readymade-garment-retailers-s0ngoso8a2.avif";
+import Comp42 from "../../../assets/Homeimg/UPL_official_logo.svg.png";
+import Comp43 from "../../../assets/Homeimg/Wipro_Primary_Logo_Color_RGB.svg.png";
+import Comp44 from "../../../assets/Homeimg/godrej-boyce-to-create-efficient-warehouses-by-digitally-enabling-operations.jpg";
+import Comp45 from "../../../assets/Homeimg/coromandel-international-logo-png_seeklogo-387040.png";
+import Comp46 from "../../../assets/Homeimg/wns.png";
+import Comp47 from "../../../assets/Homeimg/maxion.png";
+import Comp48 from "../../../assets/Homeimg/britania.png";
+import Comp49 from "../../../assets/Homeimg/sunpharma.png";
+import Comp50 from "../../../assets/Homeimg/bayer.png";
+import Comp51 from "../../../assets/Homeimg/northen-trust.png";
+
 // ---------------------------------------------------------------------
 // 2. Company Logos Array
 // ---------------------------------------------------------------------
@@ -59,6 +87,33 @@ const logos = [
   { name: "Company 22", src: Comp22 },
   { name: "Company 23", src: Comp23 },
   { name: "Company 24", src: Comp24 },
+  { name: "Company 25", src: Comp25 },
+  { name: "Company 26", src: Comp26 },
+  { name: "Company 27", src: Comp27 },
+  { name: "Company 28", src: Comp28 },
+  { name: "Company 29", src: Comp29 },
+  { name: "Company 30", src: Comp30 },
+  { name: "Company 31", src: Comp31 },
+  { name: "Company 32", src: Comp32 },
+  { name: "Company 33", src: Comp33 },
+  { name: "Company 34", src: Comp34 },
+  { name: "Company 35", src: Comp35 },
+  { name: "Company 36", src: Comp36 },
+  { name: "Company 37", src: Comp37 },
+  { name: "Company 38", src: Comp38 },
+  { name: "Company 39", src: Comp39 },
+  { name: "Company 40", src: Comp40 },
+  { name: "Company 41", src: Comp41 },
+  { name: "Company 42", src: Comp42 },
+  { name: "Company 43", src: Comp43 },
+  { name: "Company 44", src: Comp44 },
+  { name: "Company 45", src: Comp45 },
+  { name: "Company 46", src: Comp46 },
+  { name: "Company 47", src: Comp47 },
+  { name: "Company 48", src: Comp48 },
+  { name: "Company 49", src: Comp49 },
+  { name: "Company 50", src: Comp50 },
+  { name: "Company 51", src: Comp51 },
 ];
 
 const MARQUEE_SPEED_SECONDS = 15;
@@ -130,14 +185,14 @@ const Ourplacement = () => {
             <h1
               className="mb-4"
               style={{
-                fontSize: "2.5rem",
+                fontSize: "1.5rem",
                 fontWeight: 700,
                 color: "#0a2240",
                 fontFamily: "Inter, Arial, Helvetica, sans-serif",
               }}
             >
               <BriefcaseFill className="me-3" style={{ color: "#0a2240" }} />
-              Internship and <span style={{ color: "#1a4d7a" }}>Placement</span>
+              Field  <span style={{ color: "#1a4d7a" }}>Projects</span>
             </h1>
             <p
               style={{
@@ -147,84 +202,63 @@ const Ourplacement = () => {
                 textAlign: "justify",
               }}
             >
-              The stable base provided to ISMR students means that the industry leaders look up to us to continue producing the proficient leaders of tomorrow. Mentioned below are some of the industry giants who visit our campus every year to choose students from our institute who can add value to their organization.
+              Field Projects are an important component of the MBA curriculum that provide students with practical exposure to real business situations. Through 120 hours dedicated to industry-oriented assignments, market surveys, and organizational studies, students apply management concepts to solve business challenges while developing analytical, problem-solving, and decision-making skills.
+            </p>
+
+
+
+            <h1
+              className="mb-4"
+              style={{
+                fontSize: "1.5rem",
+                fontWeight: 700,
+                color: "#0a2240",
+                fontFamily: "Inter, Arial, Helvetica, sans-serif",
+              }}
+            >
+              <BriefcaseFill className="me-3" style={{ color: "#0a2240" }} />
+              On-the-Job   <span style={{ color: "#1a4d7a" }}>Training (OJT)</span>
+            </h1>
+            <p
+              style={{
+                fontSize: "1.1rem",
+                color: "#444",
+                lineHeight: "1.7",
+                textAlign: "justify",
+              }}
+            >
+              The 12-week On-the-Job Training (OJT) program enables students to gain hands-on industry experience in their chosen specialization. Working on live projects under industry and faculty guidance helps students understand organizational practices, enhance professional skills, and improve career readiness. Outstanding performance may also lead to Pre-Placement Offers (PPOs).
+            </p>
+
+            <h1
+              className="mb-4"
+              style={{
+                fontSize: "1.5rem",
+                fontWeight: 700,
+                color: "#0a2240",
+                fontFamily: "Inter, Arial, Helvetica, sans-serif",
+              }}
+            >
+              <BriefcaseFill className="me-3" style={{ color: "#0a2240" }} />
+              Research   <span style={{ color: "#1a4d7a" }}>Projects</span>
+            </h1>
+            <p
+              style={{
+                fontSize: "1.1rem",
+                color: "#444",
+                lineHeight: "1.7",
+                textAlign: "justify",
+              }}
+            >
+              Research Projects encourage students to explore contemporary business issues through systematic research and data analysis. By identifying business problems and developing practical recommendations, students strengthen their critical thinking, research aptitude, and evidence-based decision-making skills.
             </p>
           </Col>
         </Row>
 
         {/* Tabs */}
-        <div className="d-flex justify-content-center mb-5">
-          <div className="nav nav-tabs border-0 bg-light rounded-3 p-2">
-            {tabs.map((tab) => (
-              <button
-                key={tab}
-                className={`nav-link tab-link ${activeTab === tab ? "active" : ""
-                  }`}
-                onClick={() => setActiveTab(tab)}
-                style={{
-                  borderRadius: "8px",
-                  margin: "0 0.25rem",
-                  fontWeight: 600,
-                  color: activeTab === tab ? "#fff" : "#000",
-                  backgroundColor:
-                    activeTab === tab ? "#0a2240" : "transparent",
-                  border: "none",
-                  transition: "all 0.3s ease",
-                }}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
-        </div>
+
 
         {/* Company Logos Grid */}
-        <div className="row align-items-center">
-          <div className="col-12 col-lg-5 mb-5 mb-lg-0 text-center text-lg-start">
-            <h2
-              className="fw-bold mb-4"
-              style={{
-                fontSize: "2.5rem",
-                color: "#0A193E",
-              }}
-            >
-              {activeTab.replace("IT ", "")}
-            </h2>
-            <p style={{ fontSize: "1.1rem", color: "#0A193E" }}>
-              At ISMR, we are proud to collaborate with leading IT, Service, and
-              Core companies, giving our students valuable placement
-              opportunities that help them step confidently into their
-              professional careers.
-            </p>
-          </div>
-
-          <div className="col-12 col-lg-7">
-            <div className="row g-3 g-md-4 justify-content-center">
-              {logos.slice(0, 6).map((company, index) => (
-                <div key={index} className="col-6 col-md-4 d-flex">
-                  <div
-                    className="w-100 d-flex justify-content-center align-items-center bg-white"
-                    style={{
-                      borderRadius: "8px",
-                      boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
-                      height: "120px",
-                    }}
-                  >
-                    <img
-                      src={company.src}
-                      alt={company.name}
-                      style={{
-                        maxWidth: "80%",
-                        maxHeight: "70px",
-                        objectFit: "contain",
-                      }}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
 
         {/* Logo Marquee */}
         <section className="recruiters-section my-5">

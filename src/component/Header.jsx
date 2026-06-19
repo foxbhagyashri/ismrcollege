@@ -656,9 +656,9 @@ const Header = () => {
 
 /* Desktop hover */
 @media (min-width: 992px) {
-  // .dropdown-submenu:hover .submenu {
-  //   display: block;
-  // }
+  .dropdown-submenu:hover .submenu {
+    display: block;
+  }
 }
 
 /* Mobile click support */
