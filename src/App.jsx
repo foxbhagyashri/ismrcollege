@@ -78,6 +78,9 @@ import PredictiveMarketingExplained from "./component/blogs/Predictive-Marketing
 import Listofdocument from "./component/Pages/Addmissions/Listofdocuments";
 import AdmissionNote from "./component/Pages/notices/Admissions";
 import ChatbotLoader from "./component/ChatbotLoader";
+import OperationSupplyChainManagement from "./component/Pages/Programs/MBA-in-Operations-and-Supply-Chain-Management-Programme"
+import MBAMarketingManagement from "./component/Pages/Programs/MBA-Marketing-management"
+
 
 function App() {
     return (
@@ -289,6 +292,16 @@ function App() {
                     path="/notices/Admissions"
                     element={<AdmissionNote />}
                 />
+
+                <Route
+                    path="/Programs/MBA-in-Operations-and-Supply-Chain-Management-Programme"
+                    element={<OperationSupplyChainManagement />}
+                />
+                <Route
+                    path="/Programs/MBA-Marketing-management"
+                    element={<MBAMarketingManagement />}
+                />
+
             </Routes>
             {/* <Faq /> */}
             <Footer />
