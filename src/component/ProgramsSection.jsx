@@ -26,7 +26,7 @@ const ProgramsSection = () => {
       description:
         "Financial Management is the strategic planning, organizing, directing, and controlling of financial activities to ensure optimal utilization of resources and maximize shareholder value.",
       icon: faSackDollar,
-      link: "/Programs/MBA-Financial-Management",
+      link: "/Programs/MBA-in-Finance-Management-in-Pune",
     },
     {
       title: "Human Resource Management",
@@ -54,14 +54,14 @@ const ProgramsSection = () => {
       description:
         "Pharma and Healthcare Management is a multidisciplinary field focused on streamlining medical services and pharmaceutical operations for improved patient outcomes and organizational efficiency.",
       icon: faNotesMedical,
-      link: "/Programs/MBA-Pharma-and-Healthcare-Management",
+      link: "/Programs/MBA-Pharma-Colleges-in-Pune",
     },
     {
       title: "Agribusiness Management",
       description:
         "Agribusiness Management refers to the professional oversight of agricultural enterprises across the value chain—from farm production to processing, distribution, and marketing.",
       icon: faTractor,
-      link: "/Programs/MBA-Agribusiness-Management",
+      link: "/Programs/MBA-in-Agribusiness-Management-College-in-Pune",
     },
   ];
 
@@ -79,9 +79,8 @@ const ProgramsSection = () => {
         {specializations.map((program, index) => (
           <div
             key={index}
-            className={`specialization-card ${
-              index % 2 === 0 ? "card-theme-blue" : "card-theme-yellow"
-            }`}
+            className={`specialization-card ${index % 2 === 0 ? "card-theme-blue" : "card-theme-yellow"
+              }`}
           >
             <div className="card-icon">
               <FontAwesomeIcon icon={program.icon} />
