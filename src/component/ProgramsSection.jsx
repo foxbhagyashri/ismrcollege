@@ -33,7 +33,7 @@ const ProgramsSection = () => {
       description:
         "Human Resource (HR) Management is the strategic and systematic approach to managing people within an organization to maximize their performance and well-being.",
       icon: faUsersLine,
-      link: "/Programs/MBA-Human-Resource-Management",
+      link: "/Programs/MBA-HR-Colleges-in-Pune",
     },
     {
       title: "Business Analytics",

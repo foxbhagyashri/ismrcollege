@@ -83,6 +83,8 @@ import MBAMarketingManagement from "./component/Pages/Programs/MBA-Marketing-man
 import MBAFinanceManagement from "./component/Pages/Programs/MBA-in-Finance-Management-in-Pune"
 import MBAAgribusinessManagement from "./component/Pages/Programs/MBA-in-Agribusiness-Management-College-in-Pune"
 import MBAPharmaCollegesInPune from "./component/Pages/Programs/MBA-Pharma-Colleges-in-Pune"
+import MBAHRCollegesInPune from "./component/Pages/Programs/MBA-HR-Colleges-in-Pune"
+
 
 function App() {
     return (
@@ -314,6 +316,10 @@ function App() {
                 <Route
                     path="/Programs/MBA-Pharma-Colleges-in-Pune"
                     element={<MBAPharmaCollegesInPune />}
+                />
+                <Route
+                    path="/Programs/MBA-HR-Colleges-in-Pune"
+                    element={<MBAHRCollegesInPune />}
                 />
 
 
