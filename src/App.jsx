@@ -78,6 +78,13 @@ import PredictiveMarketingExplained from "./component/blogs/Predictive-Marketing
 import Listofdocument from "./component/Pages/Addmissions/Listofdocuments";
 import AdmissionNote from "./component/Pages/notices/Admissions";
 import ChatbotLoader from "./component/ChatbotLoader";
+import OperationSupplyChainManagement from "./component/Pages/Programs/MBA-in-Operations-and-Supply-Chain-Management-Programme"
+import MBAMarketingManagement from "./component/Pages/Programs/MBA-Marketing-management"
+import MBAFinanceManagement from "./component/Pages/Programs/MBA-in-Finance-Management-in-Pune"
+import MBAAgribusinessManagement from "./component/Pages/Programs/MBA-in-Agribusiness-Management-College-in-Pune"
+import MBAPharmaCollegesInPune from "./component/Pages/Programs/MBA-Pharma-Colleges-in-Pune"
+import MBAHRCollegesInPune from "./component/Pages/Programs/MBA-HR-Colleges-in-Pune"
+
 
 function App() {
     return (
@@ -289,6 +296,33 @@ function App() {
                     path="/notices/Admissions"
                     element={<AdmissionNote />}
                 />
+
+                <Route
+                    path="/Programs/MBA-in-Operations-and-Supply-Chain-Management-Programme"
+                    element={<OperationSupplyChainManagement />}
+                />
+                <Route
+                    path="/Programs/MBA-Marketing-management"
+                    element={<MBAMarketingManagement />}
+                />
+                <Route
+                    path="/Programs/MBA-in-Finance-Management-in-Pune"
+                    element={<MBAFinanceManagement />}
+                />
+                <Route
+                    path="/Programs/MBA-in-Agribusiness-Management-College-in-Pune"
+                    element={<MBAAgribusinessManagement />}
+                />
+                <Route
+                    path="/Programs/MBA-Pharma-Colleges-in-Pune"
+                    element={<MBAPharmaCollegesInPune />}
+                />
+                <Route
+                    path="/Programs/MBA-HR-Colleges-in-Pune"
+                    element={<MBAHRCollegesInPune />}
+                />
+
+
             </Routes>
             {/* <Faq /> */}
             <Footer />

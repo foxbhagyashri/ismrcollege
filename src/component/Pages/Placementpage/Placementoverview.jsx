@@ -58,19 +58,20 @@ const placementData = {
 };
 
 const academicYears = [
-  "2025-26 (ONGOING)",
-  "2024-25",
-  "2023-24",
-  "2023-22",
+  "2026 (ONGOING)",
+  "2025",
+  "2024",
+  "2023",
 ];
 
-// Map each academic-year tag to the data-year key used above.
+// Map each year to the data-year key
 const yearKeyMap = {
-  "2025-26 (ONGOING)": 2026,
-  "2024-25": 2025,
-  "2023-24": 2024,
-  "2023-22": 2023,
+  "2026 (ONGOING)": 2026,
+  "2025": 2025,
+  "2024": 2024,
+  "2023": 2023,
 };
+
 
 const SLICE_COLORS = [
   "#0a2240", // navy
@@ -123,10 +124,13 @@ const renderSliceLabel = ({
 
 
 function EnhancedPlacementStatus() {
-  const [activeYear, setActiveYear] = useState("2025-26 (ONGOING)");
+  const [activeYear, setActiveYear] = useState("2026 (ONGOING)");
 
   const dataYear = yearKeyMap[activeYear];
-  const chartData = useMemo(() => placementData[dataYear] || [], [dataYear]);
+  const chartData = useMemo(
+    () => placementData[dataYear] || [],
+    [dataYear]
+  );
 
   const placementMetrics = {
     highestPackage: "₹ 12 LPA",
