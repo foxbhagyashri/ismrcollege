@@ -79,7 +79,7 @@ import Listofdocument from "./component/Pages/Addmissions/Listofdocuments";
 import AdmissionNote from "./component/Pages/notices/Admissions";
 import ChatbotLoader from "./component/ChatbotLoader";
 import OperationSupplyChainManagement from "./component/Pages/Programs/MBA-in-Operations-and-Supply-Chain-Management-Programme"
-import MBAMarketingManagement from "./component/Pages/Programs/MBA-Marketing-management"
+import MBAMarketingManagement from "./component/Pages/Programs/MBA-Marketing-management-in-pune"
 import MBAFinanceManagement from "./component/Pages/Programs/MBA-in-Finance-Management-in-Pune"
 import MBAAgribusinessManagement from "./component/Pages/Programs/MBA-in-Agribusiness-Management-College-in-Pune"
 import MBAPharmaCollegesInPune from "./component/Pages/Programs/MBA-Pharma-Colleges-in-Pune"
@@ -302,7 +302,7 @@ function App() {
                     element={<OperationSupplyChainManagement />}
                 />
                 <Route
-                    path="/Programs/MBA-Marketing-management"
+                    path="/Programs/MBA-Marketing-management-in-pune"
                     element={<MBAMarketingManagement />}
                 />
                 <Route

@@ -15,16 +15,16 @@ import {
 const ProgramsSection = () => {
   const specializations = [
     {
-      title: "Marketing Management",
+      title: "MBA in Marketing Management",
       description:
-        "Marketing Management involves the strategic planning and execution of activities that promote products, services, or ideas to target audiences, ensuring alignment with organizational goals.",
+        "The MBA in Marketing Management at ISMR Pune is a 2-year, SPPU-affiliated program under NEP 2020.",
       icon: faChartLine,
-      link: "/Programs/MBA-Marketing-Management",
+      link: "/Programs/MBA-Marketing-management-in-pune",
     },
     {
-      title: "Financial Management",
+      title: "MBA in Finance Management",
       description:
-        "Financial Management is the strategic planning, organizing, directing, and controlling of financial activities to ensure optimal utilization of resources and maximize shareholder value.",
+        "MBA in Finance Management in Pune at ISMR is a 2-year full-time postgraduate programme affiliated with Savitribai Phule Pune University (SPPU) and approved by AICTE.",
       icon: faSackDollar,
       link: "/Programs/MBA-in-Finance-Management-in-Pune",
     },
