@@ -1060,17 +1060,17 @@ export default function ISMRLanding() {
                 ></div>
 
                 <div className="container position-relative py-5">
-                    <h1
+                    <span
                         className="mb-3"
                         style={{
                             fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                            fontSize: "40px",
+                            fontSize: "30px",
                             fontWeight: 700,
                             margin: 0,
                         }}
                     >
                         MBA in Finance  <span className="text-warning">Management</span>
-                    </h1>
+                    </span>
                     <p
                         className="mb-0"
                         style={{
@@ -1087,7 +1087,7 @@ export default function ISMRLanding() {
 
 
             <section className="marketing-section">
-                <div className="">
+                <div className="content-container">
                     <div className="panel">
                         <h1>MBA in Finance Management in Pune: Skills, Placements &amp; Career Outcomes</h1>
 
@@ -1145,7 +1145,7 @@ export default function ISMRLanding() {
                         </div>
                     </div>
 
-                    <div className="panel">
+                    <div className="panel mt-4">
                         <h2>Why Most MBA Finance Students Don't Become Analysts</h2>
 
                         <p className="intro-text">
@@ -1199,7 +1199,7 @@ export default function ISMRLanding() {
 
 
             <section className="marketing-section">
-                <div className="">
+                <div className="content-container">
 
                     {/* FAQ Panel */}
                     <div className="panel">
@@ -1241,7 +1241,7 @@ export default function ISMRLanding() {
                     </div>
 
                     {/* Top Recruiters Panel */}
-                    <div className="panel">
+                    <div className="panel mt-4">
                         <h2>Top Recruiters at ISMR Pune (2025)</h2>
 
                         <div className="comparison-table-wrap">
@@ -1283,7 +1283,7 @@ export default function ISMRLanding() {
                     </div>
 
                     {/* Salary Panel */}
-                    <div className="panel">
+                    <div className="panel mt-4">
                         <h2>Salary After Completion of MBA Finance at ISMR Pune — What to Expect</h2>
 
                         <p className="intro-text">
@@ -1343,7 +1343,7 @@ export default function ISMRLanding() {
             </section>
 
             <section className="marketing-section">
-                <div className="">
+                <div className="content-container">
 
                     {/* Job Roles Panel */}
                     <div className="panel">
@@ -1368,7 +1368,7 @@ export default function ISMRLanding() {
                     </div>
 
                     {/* Analyst vs Backend Panel */}
-                    <div className="panel">
+                    <div className="panel mt-4">
                         <h2>Analyst vs Backend Roles — Understanding the Difference</h2>
 
                         <p className="intro-text">
@@ -1424,7 +1424,7 @@ export default function ISMRLanding() {
                     </div>
 
                     {/* Course Structure Panel */}
-                    <div className="panel">
+                    <div className="panel mt-4">
                         <h2>MBA in Finance Management Course Structure at ISMR Pune</h2>
 
                         <h3 className="sub-heading">What is the MBA Finance Course in Pune offered by ISMR?</h3>
@@ -1539,7 +1539,7 @@ export default function ISMRLanding() {
 
 
             <section className="marketing-section">
-                <div className="">
+                <div className="content-container">
 
                     {/* Admission Process Panel */}
                     <div className="panel">
@@ -1611,7 +1611,7 @@ export default function ISMRLanding() {
                     </div>
 
                     {/* Fees & ROI Panel */}
-                    <div className="panel">
+                    <div className="panel mt-4">
                         <h2>MBA Finance Fees at ISMR Pune — and the ROI Perspective</h2>
 
                         <h3 className="sub-heading">What are the MBA Finance fees at ISMR Pune?</h3>
@@ -1673,7 +1673,7 @@ export default function ISMRLanding() {
                     </div>
 
                     {/* Syllabus Panel */}
-                    <div className="panel">
+                    <div className="panel mt-4">
                         <h2>MBA Finance Syllabus Pune (SPPU-Aligned)</h2>
 
                         <p className="intro-text">Semester-wise subject map:</p>
@@ -1843,7 +1843,7 @@ export default function ISMRLanding() {
                     </div>
 
                     {/* Why Pune / Why ISMR Panel */}
-                    <div className="panel">
+                    <div className="panel mt-4">
                         <h2>Why Pursue an MBA in Finance in Pune?</h2>
 
                         <p className="intro-text">
@@ -1876,7 +1876,7 @@ export default function ISMRLanding() {
                     </div>
 
                     {/* Gap / Response Panel */}
-                    <div className="panel">
+                    <div className="panel mt-4">
                         <h2>Why MBA Finance Students Don't Reach Their Potential — And How ISMR Addresses It</h2>
 
                         <div className="comparison-table-wrap">
@@ -1914,7 +1914,7 @@ export default function ISMRLanding() {
                     </div>
 
                     {/* Final CTA Panel */}
-                    <div className="panel final-cta-panel">
+                    <div className="panel final-cta-panel mt-4">
                         <h2>Take the Next Step — MBA Finance Admission 2026 at ISMR Pune</h2>
 
                         <p className="intro-text" style={{ color: "white" }}>

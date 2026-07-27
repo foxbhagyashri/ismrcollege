@@ -9,85 +9,85 @@ import ISMRFormModal from "../../form/ISMRFormModal";
 
 export default function ISMRMarketingLanding() {
 
-    const [openFaq, setOpenFaq] = useState(0); // first item open by default
+  const [openFaq, setOpenFaq] = useState(0); // first item open by default
 
-    const toggleFaq = (index) => {
-        setOpenFaq(openFaq === index ? null : index);
-    };
-
-
-    const marketingFaqs = [
-        {
-            q: "What is the MBA in Marketing Management in Pune at ISMR?",
-            a: (
-                <ul>
-                    <li>
-                        The MBA in Marketing Management in Pune at ISMR follows the
-                        syllabus prescribed by Savitribai Phule Pune University and is
-                        structured under the National Education Policy 2020 with a
-                        credit-based system.
-                    </li>
-                    <li>
-                        It combines academic learning with practical exposure to prepare
-                        students for real marketing roles.
-                    </li>
-                </ul>
-            ),
-        },
-        {
-            q: "What subjects are covered in this MBA Marketing program in Pune?",
-            a: (
-                <>
-                    <p>The program includes a mix of core business and marketing-focused subjects:</p>
-                    <ul>
-                        <li>MBA marketing subjects in Pune: consumer behaviour, branding, digital marketing</li>
-                        <li>Research components: field projects and business research</li>
-                        <li>Internship integrated into the curriculum</li>
-                    </ul>
-                </>
-            ),
-        },
-        {
-            q: "How does ISMR provide practical learning in MBA Marketing?",
-            a: (
-                <>
-                    <p>The MBA Marketing program in Pune at ISMR focuses on hands-on learning through:</p>
-                    <ul>
-                        <li>Live marketing assignments</li>
-                        <li>Case-based learning using real business scenarios</li>
-                        <li>Campaign planning and execution exposure</li>
-                        <li>Internship-based learning</li>
-                    </ul>
-                    <p>This ensures students develop job-ready marketing skills, not just theoretical knowledge.</p>
-                </>
-            ),
-        },
-        {
-            q: "Are the MBA Marketing course fees in Pune worth it at ISMR?",
-            a: (
-                <>
-                    <p>
-                        When evaluating MBA Marketing course fees in Pune, students should
-                        look beyond brand value and focus on outcomes:
-                    </p>
-                    <ul>
-                        <li>Placement opportunities</li>
-                        <li>Skill development</li>
-                        <li>Internship exposure</li>
-                    </ul>
-                    <p>
-                        At ISMR, the focus is on ensuring that your investment leads to
-                        real employability and career growth, not just degree completion.
-                    </p>
-                </>
-            ),
-        },
-    ];
+  const toggleFaq = (index) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
 
 
-    return (
-        <section className="apply-wrapper">
-            <style>{`
+  const marketingFaqs = [
+    {
+      q: "What is the MBA in Marketing Management in Pune at ISMR?",
+      a: (
+        <ul>
+          <li>
+            The MBA in Marketing Management in Pune at ISMR follows the
+            syllabus prescribed by Savitribai Phule Pune University and is
+            structured under the National Education Policy 2020 with a
+            credit-based system.
+          </li>
+          <li>
+            It combines academic learning with practical exposure to prepare
+            students for real marketing roles.
+          </li>
+        </ul>
+      ),
+    },
+    {
+      q: "What subjects are covered in this MBA Marketing program in Pune?",
+      a: (
+        <>
+          <p>The program includes a mix of core business and marketing-focused subjects:</p>
+          <ul>
+            <li>MBA marketing subjects in Pune: consumer behaviour, branding, digital marketing</li>
+            <li>Research components: field projects and business research</li>
+            <li>Internship integrated into the curriculum</li>
+          </ul>
+        </>
+      ),
+    },
+    {
+      q: "How does ISMR provide practical learning in MBA Marketing?",
+      a: (
+        <>
+          <p>The MBA Marketing program in Pune at ISMR focuses on hands-on learning through:</p>
+          <ul>
+            <li>Live marketing assignments</li>
+            <li>Case-based learning using real business scenarios</li>
+            <li>Campaign planning and execution exposure</li>
+            <li>Internship-based learning</li>
+          </ul>
+          <p>This ensures students develop job-ready marketing skills, not just theoretical knowledge.</p>
+        </>
+      ),
+    },
+    {
+      q: "Are the MBA Marketing course fees in Pune worth it at ISMR?",
+      a: (
+        <>
+          <p>
+            When evaluating MBA Marketing course fees in Pune, students should
+            look beyond brand value and focus on outcomes:
+          </p>
+          <ul>
+            <li>Placement opportunities</li>
+            <li>Skill development</li>
+            <li>Internship exposure</li>
+          </ul>
+          <p>
+            At ISMR, the focus is on ensuring that your investment leads to
+            real employability and career growth, not just degree completion.
+          </p>
+        </>
+      ),
+    },
+  ];
+
+
+  return (
+    <section className="apply-wrapper">
+      <style>{`
 
 .category-tabs {
   display: flex;
@@ -918,471 +918,471 @@ export default function ISMRMarketingLanding() {
 }
       `}</style>
 
-            <section
-                className="py-5 text-white text-center position-relative"
-                style={{
-                    background:
-                        "linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%)",
-                }}
-            >
-                <div
-                    className="position-absolute top-0 end-0 w-100 h-100 opacity-25"
-                    style={{
-                        backgroundImage: `url(${allsectionbg})`,
-                        backgroundPosition: "center",
-                        backgroundSize: "cover",
-                    }}
-                ></div>
+      <section
+        className="py-5 text-white text-center position-relative"
+        style={{
+          background:
+            "linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%)",
+        }}
+      >
+        <div
+          className="position-absolute top-0 end-0 w-100 h-100 opacity-25"
+          style={{
+            backgroundImage: `url(${allsectionbg})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        ></div>
 
-                <div className="container position-relative py-5">
-                    <h1
-                        className="mb-3"
-                        style={{
-                            fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                            fontSize: "40px",
-                            fontWeight: 700,
-                            margin: 0,
-                        }}
+        <div className="container position-relative py-5">
+          <span
+            className="mb-3"
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "30px",
+              fontWeight: 700,
+              margin: 0,
+            }}
+          >
+            MBA in Marketing <span className="text-warning">Management</span>
+          </span>
+          <p
+            className="mb-0"
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "15px",
+              marginTop: "0.5rem",
+            }}
+          >
+            Courses •{" "}
+            <span className="text-warning">MBA in Marketing Management</span>
+          </p>
+        </div>
+      </section>
+
+
+      <section className="marketing-section">
+        <div className="content-container">
+          <div className="panel">
+            <h1>MBA in Marketing Management in Pune at ISMR – Admission 2026, Fees, Syllabus & Placements</h1>
+
+            <p style={{ color: "#0f3350", fontWeight: 700, marginBottom: "16px" }}>
+              Build a Job-Ready Marketing Career with Practical Industry Exposure
+            </p>
+
+            <p className="intro-text">
+              This MBA program at ISMR focuses on real-world marketing skills through hands-on learning, not just classroom theory.
+            </p>
+
+            <ul className="highlight-list">
+              <li>Internships integrated into the curriculum</li>
+              <li>Live campaign execution</li>
+              <li>Industry-aligned training modules</li>
+            </ul>
+
+            <p className="intro-text">
+              Ideal for students planning MBA Marketing admission in Pune for 2026 and looking for better ROI.
+            </p>
+
+            <a href="/Contactus" className="default-btn">Get Admission Guidance</a>
+          </div>
+
+          <div className="panel mt-4">
+            <h2>Why Students Choose ISMR Over Other MBA Marketing Colleges in Pune</h2>
+
+            <p className="intro-text">
+              Pune has over 100 colleges offering an MBA with a marketing specialisation. The difference between them is not always visible in a brochure — it shows up in how the program is structured and what students are doing before final placements.
+            </p>
+
+            <div className="comparison-table-wrap">
+              <table className="comparison-table">
+                <thead>
+                  <tr>
+                    <th>Parameter</th>
+                    <th>Most Pune MBA Colleges</th>
+                    <th>ISMR</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Learning approach</td>
+                    <td>Theory-heavy curriculum</td>
+                    <td className="highlight-cell">Execution-based — live campaigns, real assignments</td>
+                  </tr>
+                  <tr>
+                    <td>Internship structure</td>
+                    <td>End-of-program, often unstructured</td>
+                    <td className="highlight-cell">Integrated into the curriculum from early semesters</td>
+                  </tr>
+                  <tr>
+                    <td>Geographic career exposure</td>
+                    <td>Primarily Pune-city opportunities</td>
+                    <td className="highlight-cell">Dual exposure — Pune startup ecosystem</td>
+                  </tr>
+                  <tr>
+                    <td>University affiliation</td>
+                    <td>Varies — autonomous or affiliated</td>
+                    <td className="highlight-cell">SPPU-affiliated, NEP 2020 compliant, AICTE approved</td>
+                  </tr>
+                  <tr>
+                    <td>Marketing placement rate</td>
+                    <td>Not publicly disclosed by most colleges</td>
+                    <td className="highlight-cell">92% — 2024–25 batch, highest among all ISMR specialisations</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p className="comparison-note">
+              ISMR is among the Top MBA colleges in Pune. It is a focused institute where marketing as a specialisation consistently outperforms other streams in placement outcomes — and where the program structure is built for students who want a job, not just a degree.
+
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="marketing-section">
+        <div className="content-container">
+          <div className="panel">
+            <h2>MBA Marketing Program FAQs</h2>
+
+            <div className="accordion">
+              {marketingFaqs.map((item, index) => (
+                <div className="acc-item" key={index}>
+                  <button
+                    className="acc-btn"
+                    onClick={() => toggleFaq(index)}
+                  >
+                    <span className="acc-q">{item.q}</span>
+                    <svg
+                      className="chev"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      style={{
+                        transform: openFaq === index ? "rotate(180deg)" : "rotate(0deg)",
+                      }}
                     >
-                        MBA in Marketing <span className="text-warning">Management</span>
-                    </h1>
-                    <p
-                        className="mb-0"
-                        style={{
-                            fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                            fontSize: "15px",
-                            marginTop: "0.5rem",
-                        }}
-                    >
-                        Courses •{" "}
-                        <span className="text-warning">MBA in Marketing Management</span>
-                    </p>
+                      <path
+                        d="M5 7.5L10 12.5L15 7.5"
+                        stroke="#0f3350"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <div className={`acc-body doc-list ${openFaq === index ? "" : "closed"}`}>
+                    {item.a}
+                  </div>
                 </div>
-            </section>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section className="marketing-section">
+        <div className="content-container">
 
-            <section className="marketing-section">
-                <div className="">
-                    <div className="panel">
-                        <h1>MBA in Marketing Management in Pune at ISMR – Admission 2026, Fees, Syllabus & Placements</h1>
+          {/* Placement Outcomes Panel */}
+          <div className="panel">
+            <h2>Why ISMR Ranks Among the Top MBA Marketing Colleges in Pune for Placement Outcomes?</h2>
 
-                        <p style={{ color: "#0f3350", fontWeight: 700, marginBottom: "16px" }}>
-                            Build a Job-Ready Marketing Career with Practical Industry Exposure
-                        </p>
+            <h3 className="sub-heading">MBA Marketing Placements at ISMR Pune — 2024–25 Data</h3>
 
-                        <p className="intro-text">
-                            This MBA program at ISMR focuses on real-world marketing skills through hands-on learning, not just classroom theory.
-                        </p>
+            <p className="intro-text">
+              A common concern students have is: "Will I actually get placed after the MBA?"
+            </p>
 
-                        <ul className="highlight-list">
-                            <li>Internships integrated into the curriculum</li>
-                            <li>Live campaign execution</li>
-                            <li>Industry-aligned training modules</li>
-                        </ul>
+            <div className="stat-highlight">
+              <div className="stat-number">92%</div>
+              <div className="stat-text">
+                of MBA Marketing students from the 2024–25 batch were placed —
+                the highest placement rate across all MBA specialisations at ISMR.
+              </div>
+            </div>
 
-                        <p className="intro-text">
-                            Ideal for students planning MBA Marketing admission in Pune for 2026 and looking for better ROI.
-                        </p>
+            <p className="intro-text">
+              This is not a blanket "placement assistance" claim. It reflects
+              students securing roles in branding, sales, digital marketing, and
+              B2B marketing across national-level companies.
+            </p>
 
-                        <a href="/Contactus" className="default-btn">Get Admission Guidance</a>
-                    </div>
+            <h3 className="sub-heading">Where MBA Marketing Graduates from ISMR Get Placed</h3>
 
-                    <div className="panel">
-                        <h2>Why Students Choose ISMR Over Other MBA Marketing Colleges in Pune</h2>
+            <div className="comparison-table-wrap">
+              <table className="comparison-table">
+                <thead>
+                  <tr>
+                    <th>Company Category</th>
+                    <th>Top Recruiters</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>FMCG &amp; Consumer Brands</td>
+                    <td>Hindustan Unilever, ITC, Nestlé India, Dabur, Marico, Britannia, P&amp;G, Godrej Consumer Products, Tata Consumer Products</td>
+                  </tr>
+                  <tr>
+                    <td>Retail &amp; E-commerce</td>
+                    <td>Reliance Retail, Amazon, Flipkart</td>
+                  </tr>
+                  <tr>
+                    <td>Beverages</td>
+                    <td>Coca-Cola India, PepsiCo India</td>
+                  </tr>
+                  <tr>
+                    <td>Paints &amp; Coatings</td>
+                    <td>Asian Paints</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
-                        <p className="intro-text">
-                            Pune has over 100 colleges offering an MBA with a marketing specialisation. The difference between them is not always visible in a brochure — it shows up in how the program is structured and what students are doing before final placements.
-                        </p>
+            <h3 className="sub-heading">How ISMR Strengthens Placement Outcomes</h3>
 
-                        <div className="comparison-table-wrap">
-                            <table className="comparison-table">
-                                <thead>
-                                    <tr>
-                                        <th>Parameter</th>
-                                        <th>Most Pune MBA Colleges</th>
-                                        <th>ISMR</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Learning approach</td>
-                                        <td>Theory-heavy curriculum</td>
-                                        <td className="highlight-cell">Execution-based — live campaigns, real assignments</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Internship structure</td>
-                                        <td>End-of-program, often unstructured</td>
-                                        <td className="highlight-cell">Integrated into the curriculum from early semesters</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Geographic career exposure</td>
-                                        <td>Primarily Pune-city opportunities</td>
-                                        <td className="highlight-cell">Dual exposure — Pune startup ecosystem</td>
-                                    </tr>
-                                    <tr>
-                                        <td>University affiliation</td>
-                                        <td>Varies — autonomous or affiliated</td>
-                                        <td className="highlight-cell">SPPU-affiliated, NEP 2020 compliant, AICTE approved</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Marketing placement rate</td>
-                                        <td>Not publicly disclosed by most colleges</td>
-                                        <td className="highlight-cell">92% — 2024–25 batch, highest among all ISMR specialisations</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+            <div className="comparison-table-wrap">
+              <table className="comparison-table">
+                <thead>
+                  <tr>
+                    <th>Focus Area</th>
+                    <th>What It Means for You</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Internship-Driven Learning</td>
+                    <td>You gain hands-on experience before final placements, reducing the fresher gap</td>
+                  </tr>
+                  <tr>
+                    <td>Skill-Based Training</td>
+                    <td>You learn skills aligned with real roles like digital marketing, sales, and branding</td>
+                  </tr>
+                  <tr>
+                    <td>Continuous Preparation</td>
+                    <td>You are trained for interviews, communication, and job expectations throughout the program</td>
+                  </tr>
+                  <tr>
+                    <td>Multi-Industry Exposure</td>
+                    <td>You get access to opportunities across startups, agencies, and industrial sectors</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
 
-                        <p className="comparison-note">
-                            ISMR is among the Top MBA colleges in Pune. It is a focused institute where marketing as a specialisation consistently outperforms other streams in placement outcomes — and where the program structure is built for students who want a job, not just a degree.
+          {/* Roles & Salary Panel */}
+          <div className="panel mt-4">
+            <h2>MBA Marketing Placements at ISMR — What Roles and Salaries to Expect</h2>
 
-                        </p>
-                    </div>
-                </div>
-            </section>
-            <section className="marketing-section">
-                <div className="">
-                    <div className="panel">
-                        <h2>MBA Marketing Program FAQs</h2>
+            <p className="intro-text">
+              After completing an MBA in Marketing, your career path depends on the
+              roles you choose and the skills you build, not just the degree itself.
+              Understanding what each role involves helps you make better career decisions.
+            </p>
 
-                        <div className="accordion">
-                            {marketingFaqs.map((item, index) => (
-                                <div className="acc-item" key={index}>
-                                    <button
-                                        className="acc-btn"
-                                        onClick={() => toggleFaq(index)}
-                                    >
-                                        <span className="acc-q">{item.q}</span>
-                                        <svg
-                                            className="chev"
-                                            width="20"
-                                            height="20"
-                                            viewBox="0 0 20 20"
-                                            fill="none"
-                                            style={{
-                                                transform: openFaq === index ? "rotate(180deg)" : "rotate(0deg)",
-                                            }}
-                                        >
-                                            <path
-                                                d="M5 7.5L10 12.5L15 7.5"
-                                                stroke="#0f3350"
-                                                strokeWidth="2"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                            />
-                                        </svg>
-                                    </button>
-                                    <div className={`acc-body doc-list ${openFaq === index ? "" : "closed"}`}>
-                                        {item.a}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <h3 className="sub-heading">Key Roles You Can Explore</h3>
 
-            <section className="marketing-section">
-                <div className="">
+            <div className="comparison-table-wrap">
+              <table className="comparison-table">
+                <thead>
+                  <tr>
+                    <th>Role</th>
+                    <th>What You Will Do</th>
+                    <th>Salary Range</th>
+                    <th>Career Growth</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Digital Marketing Executive</td>
+                    <td>Handle SEO, paid ads, social media campaigns, and performance tracking</td>
+                    <td className="salary-cell">₹3–6 LPA</td>
+                    <td className="growth-arrow">Performance Marketing Manager<span className="arrow-icon">→</span>Digital Head</td>
+                  </tr>
+                  <tr>
+                    <td>Sales Manager</td>
+                    <td>Focus on revenue generation, client acquisition, and managing sales teams</td>
+                    <td className="salary-cell">₹4–7 LPA + incentives</td>
+                    <td className="growth-arrow">Regional Manager<span className="arrow-icon">→</span>Business Head</td>
+                  </tr>
+                  <tr>
+                    <td>Brand Manager</td>
+                    <td>Work on brand positioning, campaign planning, and customer perception</td>
+                    <td className="salary-cell">₹5–8 LPA</td>
+                    <td className="growth-arrow">Senior Brand Manager<span className="arrow-icon">→</span>Marketing Director</td>
+                  </tr>
+                  <tr>
+                    <td>Market Research Analyst</td>
+                    <td>Analyze customer data, market trends, and competitor strategies</td>
+                    <td className="salary-cell">₹3–6 LPA</td>
+                    <td className="growth-arrow">Senior Analyst<span className="arrow-icon">→</span>Strategy Consultant</td>
+                  </tr>
+                  <tr>
+                    <td>Product Marketing Executive</td>
+                    <td>Work on product positioning, go-to-market strategies, and launches</td>
+                    <td className="salary-cell">₹4–7 LPA</td>
+                    <td className="growth-arrow">Product Marketing Manager<span className="arrow-icon">→</span>Product Head</td>
+                  </tr>
+                  <tr>
+                    <td>Social Media Manager</td>
+                    <td>Manage brand presence, content strategy, and audience engagement</td>
+                    <td className="salary-cell">₹3–5 LPA</td>
+                    <td className="growth-arrow">Social Media Lead<span className="arrow-icon">→</span>Digital Marketing Manager</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
 
-                    {/* Placement Outcomes Panel */}
-                    <div className="panel">
-                        <h2>Why ISMR Ranks Among the Top MBA Marketing Colleges in Pune for Placement Outcomes?</h2>
-
-                        <h3 className="sub-heading">MBA Marketing Placements at ISMR Pune — 2024–25 Data</h3>
-
-                        <p className="intro-text">
-                            A common concern students have is: "Will I actually get placed after the MBA?"
-                        </p>
-
-                        <div className="stat-highlight">
-                            <div className="stat-number">92%</div>
-                            <div className="stat-text">
-                                of MBA Marketing students from the 2024–25 batch were placed —
-                                the highest placement rate across all MBA specialisations at ISMR.
-                            </div>
-                        </div>
-
-                        <p className="intro-text">
-                            This is not a blanket "placement assistance" claim. It reflects
-                            students securing roles in branding, sales, digital marketing, and
-                            B2B marketing across national-level companies.
-                        </p>
-
-                        <h3 className="sub-heading">Where MBA Marketing Graduates from ISMR Get Placed</h3>
-
-                        <div className="comparison-table-wrap">
-                            <table className="comparison-table">
-                                <thead>
-                                    <tr>
-                                        <th>Company Category</th>
-                                        <th>Top Recruiters</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>FMCG &amp; Consumer Brands</td>
-                                        <td>Hindustan Unilever, ITC, Nestlé India, Dabur, Marico, Britannia, P&amp;G, Godrej Consumer Products, Tata Consumer Products</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Retail &amp; E-commerce</td>
-                                        <td>Reliance Retail, Amazon, Flipkart</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Beverages</td>
-                                        <td>Coca-Cola India, PepsiCo India</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Paints &amp; Coatings</td>
-                                        <td>Asian Paints</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <h3 className="sub-heading">How ISMR Strengthens Placement Outcomes</h3>
-
-                        <div className="comparison-table-wrap">
-                            <table className="comparison-table">
-                                <thead>
-                                    <tr>
-                                        <th>Focus Area</th>
-                                        <th>What It Means for You</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Internship-Driven Learning</td>
-                                        <td>You gain hands-on experience before final placements, reducing the fresher gap</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Skill-Based Training</td>
-                                        <td>You learn skills aligned with real roles like digital marketing, sales, and branding</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Continuous Preparation</td>
-                                        <td>You are trained for interviews, communication, and job expectations throughout the program</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Multi-Industry Exposure</td>
-                                        <td>You get access to opportunities across startups, agencies, and industrial sectors</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    {/* Roles & Salary Panel */}
-                    <div className="panel">
-                        <h2>MBA Marketing Placements at ISMR — What Roles and Salaries to Expect</h2>
-
-                        <p className="intro-text">
-                            After completing an MBA in Marketing, your career path depends on the
-                            roles you choose and the skills you build, not just the degree itself.
-                            Understanding what each role involves helps you make better career decisions.
-                        </p>
-
-                        <h3 className="sub-heading">Key Roles You Can Explore</h3>
-
-                        <div className="comparison-table-wrap">
-                            <table className="comparison-table">
-                                <thead>
-                                    <tr>
-                                        <th>Role</th>
-                                        <th>What You Will Do</th>
-                                        <th>Salary Range</th>
-                                        <th>Career Growth</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Digital Marketing Executive</td>
-                                        <td>Handle SEO, paid ads, social media campaigns, and performance tracking</td>
-                                        <td className="salary-cell">₹3–6 LPA</td>
-                                        <td className="growth-arrow">Performance Marketing Manager<span className="arrow-icon">→</span>Digital Head</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Sales Manager</td>
-                                        <td>Focus on revenue generation, client acquisition, and managing sales teams</td>
-                                        <td className="salary-cell">₹4–7 LPA + incentives</td>
-                                        <td className="growth-arrow">Regional Manager<span className="arrow-icon">→</span>Business Head</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Brand Manager</td>
-                                        <td>Work on brand positioning, campaign planning, and customer perception</td>
-                                        <td className="salary-cell">₹5–8 LPA</td>
-                                        <td className="growth-arrow">Senior Brand Manager<span className="arrow-icon">→</span>Marketing Director</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Market Research Analyst</td>
-                                        <td>Analyze customer data, market trends, and competitor strategies</td>
-                                        <td className="salary-cell">₹3–6 LPA</td>
-                                        <td className="growth-arrow">Senior Analyst<span className="arrow-icon">→</span>Strategy Consultant</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Product Marketing Executive</td>
-                                        <td>Work on product positioning, go-to-market strategies, and launches</td>
-                                        <td className="salary-cell">₹4–7 LPA</td>
-                                        <td className="growth-arrow">Product Marketing Manager<span className="arrow-icon">→</span>Product Head</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Social Media Manager</td>
-                                        <td>Manage brand presence, content strategy, and audience engagement</td>
-                                        <td className="salary-cell">₹3–5 LPA</td>
-                                        <td className="growth-arrow">Social Media Lead<span className="arrow-icon">→</span>Digital Marketing Manager</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
+        </div>
+      </section>
 
 
 
-            <section className="marketing-section">
-                <div className="">
+      <section className="marketing-section">
+        <div className="content-container">
 
-                    {/* Industry Opportunities Panel */}
-                    <div className="panel">
-                        <h2>Industry Opportunities in Pune</h2>
+          {/* Industry Opportunities Panel */}
+          <div className="panel">
+            <h2>Industry Opportunities in Pune</h2>
 
-                        <ul className="opportunity-list">
-                            <li>Strong demand in IT companies, startups, and digital agencies</li>
-                            <li>Growing opportunities in FMCG, retail, and D2C brands</li>
-                            <li>Stable roles in the industrial and B2B sectors across Pune</li>
-                        </ul>
+            <ul className="opportunity-list">
+              <li>Strong demand in IT companies, startups, and digital agencies</li>
+              <li>Growing opportunities in FMCG, retail, and D2C brands</li>
+              <li>Stable roles in the industrial and B2B sectors across Pune</li>
+            </ul>
 
-                        <h3 className="sub-heading">What Actually Determines Your Career Growth</h3>
+            <h3 className="sub-heading">What Actually Determines Your Career Growth</h3>
 
-                        <p className="intro-text">
-                            Your career after an MBA in Marketing is influenced by:
-                        </p>
+            <p className="intro-text">
+              Your career after an MBA in Marketing is influenced by:
+            </p>
 
-                        <ul className="factor-list">
-                            <li><strong>Internship experience</strong> – Practical exposure to real work environments</li>
-                            <li><strong>Skill development</strong> – Tools, analytics, campaign execution</li>
-                            <li><strong>Industry exposure</strong> – Understanding different business models and markets</li>
-                        </ul>
+            <ul className="factor-list">
+              <li><strong>Internship experience</strong> – Practical exposure to real work environments</li>
+              <li><strong>Skill development</strong> – Tools, analytics, campaign execution</li>
+              <li><strong>Industry exposure</strong> – Understanding different business models and markets</li>
+            </ul>
 
-                        <p className="intro-text">
-                            Focusing on these factors helps you move faster from entry-level
-                            roles to managerial and leadership positions.
-                        </p>
-                    </div>
+            <p className="intro-text">
+              Focusing on these factors helps you move faster from entry-level
+              roles to managerial and leadership positions.
+            </p>
+          </div>
 
-                    {/* Who Should Choose ISMR Panel */}
-                    <div className="panel">
-                        <h2>Who Should Choose ISMR?</h2>
+          {/* Who Should Choose ISMR Panel */}
+          <div className="panel mt-4">
+            <h2>Who Should Choose ISMR?</h2>
 
-                        <p className="intro-text">
-                            ISMR is ideal for students seeking a career-focused MBA with
-                            practical exposure, long-term growth, and strong ROI.
-                        </p>
+            <p className="intro-text">
+              ISMR is ideal for students seeking a career-focused MBA with
+              practical exposure, long-term growth, and strong ROI.
+            </p>
 
-                        <ul className="fit-list">
-                            <li className="yes">You want a career in marketing, not just an MBA degree</li>
-                            <li className="yes">You want to build a long-term career, not just secure a job</li>
-                            <li className="yes">You prefer practical exposure over theory-heavy learning</li>
-                            <li className="yes">You are targeting placements in Pune</li>
-                            <li className="yes">You are looking for ROI-focused education</li>
-                            <li className="no">Not ideal if you only want a degree without focusing on outcomes</li>
-                        </ul>
-                    </div>
+            <ul className="fit-list">
+              <li className="yes">You want a career in marketing, not just an MBA degree</li>
+              <li className="yes">You want to build a long-term career, not just secure a job</li>
+              <li className="yes">You prefer practical exposure over theory-heavy learning</li>
+              <li className="yes">You are targeting placements in Pune</li>
+              <li className="yes">You are looking for ROI-focused education</li>
+              <li className="no">Not ideal if you only want a degree without focusing on outcomes</li>
+            </ul>
+          </div>
 
-                    {/* Eligibility & Admission Process Panel */}
-                    <div className="panel">
-                        <h2>MBA Marketing Admission 2026 Pune — ISMR Eligibility &amp; Process</h2>
+          {/* Eligibility & Admission Process Panel */}
+          <div className="panel mt-4">
+            <h2>MBA Marketing Admission 2026 Pune — ISMR Eligibility &amp; Process</h2>
 
-                        <p className="intro-text">
-                            The following are the admission process details and eligibility criteria.
-                        </p>
+            <p className="intro-text">
+              The following are the admission process details and eligibility criteria.
+            </p>
 
-                        <h3 className="sub-heading">Eligibility Criteria</h3>
+            <h3 className="sub-heading">Eligibility Criteria</h3>
 
-                        <div className="comparison-table-wrap">
-                            <table className="comparison-table">
-                                <thead>
-                                    <tr>
-                                        <th>Parameter</th>
-                                        <th>Requirement</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Minimum Qualification</td>
-                                        <td>Graduate in any discipline from a recognised university</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Minimum Marks</td>
-                                        <td>50% aggregate (45% for reserved category candidates)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Entrance Exam Accepted</td>
-                                        <td>MAH-MBA/MMS CET / CAT / MAT / CMAT / ATMA / XAT</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Affiliation</td>
-                                        <td>SPPU-affiliated — admission follows DTE Maharashtra norms</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+            <div className="comparison-table-wrap">
+              <table className="comparison-table">
+                <thead>
+                  <tr>
+                    <th>Parameter</th>
+                    <th>Requirement</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Minimum Qualification</td>
+                    <td>Graduate in any discipline from a recognised university</td>
+                  </tr>
+                  <tr>
+                    <td>Minimum Marks</td>
+                    <td>50% aggregate (45% for reserved category candidates)</td>
+                  </tr>
+                  <tr>
+                    <td>Entrance Exam Accepted</td>
+                    <td>MAH-MBA/MMS CET / CAT / MAT / CMAT / ATMA / XAT</td>
+                  </tr>
+                  <tr>
+                    <td>Affiliation</td>
+                    <td>SPPU-affiliated — admission follows DTE Maharashtra norms</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
-                        <p className="intro-text" style={{ marginTop: "20px" }}>
-                            Final-year graduation students are eligible to apply provisionally.
-                        </p>
+            <p className="intro-text" style={{ marginTop: "20px" }}>
+              Final-year graduation students are eligible to apply provisionally.
+            </p>
 
-                        <h3 className="sub-heading">Admission Process</h3>
+            <h3 className="sub-heading">Admission Process</h3>
 
-                        <div className="step-list">
-                            <div className="step">
-                                <h3>1. Profile Evaluation (Foundation Step)</h3>
-                                <p>
-                                    ISMR evaluates your academic background, entrance exam score,
-                                    and career goals to ensure your eligibility and clarify your
-                                    goals before admission.
-                                </p>
-                            </div>
-                            <div className="step">
-                                <h3>2. Eligibility-Based Selection Process</h3>
-                                <p>
-                                    Admission is based on alignment between your profile and the
-                                    program's requirements — ensuring that students enter with
-                                    clear expectations.
-                                </p>
-                            </div>
-                            <div className="step">
-                                <h3>3. Application &amp; Documentation Support</h3>
-                                <p>
-                                    ISMR ensures your MBA Marketing Admission 2026 Pune process is
-                                    complete and error-free.
-                                </p>
-                            </div>
-                            <div className="step">
-                                <h3>4. Final Admission &amp; Seat Confirmation</h3>
-                                <p>
-                                    Admission is confirmed through eligibility verification,
-                                    interaction (if applicable), and fee submission.
-                                </p>
-                            </div>
-                        </div>
+            <div className="step-list">
+              <div className="step">
+                <h3>1. Profile Evaluation (Foundation Step)</h3>
+                <p>
+                  ISMR evaluates your academic background, entrance exam score,
+                  and career goals to ensure your eligibility and clarify your
+                  goals before admission.
+                </p>
+              </div>
+              <div className="step">
+                <h3>2. Eligibility-Based Selection Process</h3>
+                <p>
+                  Admission is based on alignment between your profile and the
+                  program's requirements — ensuring that students enter with
+                  clear expectations.
+                </p>
+              </div>
+              <div className="step">
+                <h3>3. Application &amp; Documentation Support</h3>
+                <p>
+                  ISMR ensures your MBA Marketing Admission 2026 Pune process is
+                  complete and error-free.
+                </p>
+              </div>
+              <div className="step">
+                <h3>4. Final Admission &amp; Seat Confirmation</h3>
+                <p>
+                  Admission is confirmed through eligibility verification,
+                  interaction (if applicable), and fee submission.
+                </p>
+              </div>
+            </div>
 
-                        <div className="admission-note">
-                            <p>
-                                MBA Marketing Admission 2026 at ISMR in Pune is limited due to a
-                                fixed intake capacity.
-                            </p>
-                            <button className="btn-primary">Speak with the ISMR Admission Team Today</button>
-                        </div>
-                    </div>
+            <div className="admission-note">
+              <p>
+                MBA Marketing Admission 2026 at ISMR in Pune is limited due to a
+                fixed intake capacity.
+              </p>
+              <button className="btn-primary">Speak with the ISMR Admission Team Today</button>
+            </div>
+          </div>
 
-                </div>
-            </section>
+        </div>
+      </section>
 
 
-            <Faq />
-        </section>
-    );
+      <Faq />
+    </section>
+  );
 }

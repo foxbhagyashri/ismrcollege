@@ -29,11 +29,11 @@ const ProgramsSection = () => {
       link: "/Programs/MBA-in-Finance-Management-in-Pune",
     },
     {
-      title: "Human Resource Management",
+      title: "MBA in Human Resource Management",
       description:
-        "Human Resource (HR) Management is the strategic and systematic approach to managing people within an organization to maximize their performance and well-being.",
+        "The MBA in Human Resource Management at ISMR is offered by an AICTE-approved MBA HR College in Pune, designed to prepare students for careers in recruitment, HR operations, talent management, and strategic human resources. ",
       icon: faUsersLine,
-      link: "/Programs/MBA-HR-Colleges-in-Pune",
+      link: "/Programs/MBA-HR-Management-in-Pune",
     },
     {
       title: "Business Analytics",
@@ -43,23 +43,23 @@ const ProgramsSection = () => {
       link: "/Programs/MBA-Business-Analytics",
     },
     {
-      title: "Operations and Supply Chain Management",
+      title: "MBA in Operations and Supply Chain Management",
       description:
-        "Operations and Supply Chain Management (OSCM) is a vital discipline within business strategy that focuses on the efficient transformation of resources into high-quality goods and services.",
+        "Operations and supply chain management involves planning procurement, manufacturing, inventory, logistics, and product delivery to improve business efficiency.",
       icon: faTruckFast,
-      link: "/Programs/MBA-in-Operations-and-Supply-Chain-Management-Programme",
+      link: "/Programs/MBA-in-Operations-and-Supply-Chain-Management-Programme-in-pune",
     },
     {
-      title: "Pharma and Healthcare Management",
+      title: "MBA in Pharma & Healthcare Management",
       description:
-        "Pharma and Healthcare Management is a multidisciplinary field focused on streamlining medical services and pharmaceutical operations for improved patient outcomes and organizational efficiency.",
+        "An MBA in Pharma & Healthcare Management in Pune prepares science, pharmacy, and allied health graduates, as well as working professionals in hospitals and pharma companies, to move into leadership roles across one of India's fastest-growing industries. ",
       icon: faNotesMedical,
-      link: "/Programs/MBA-Pharma-Colleges-in-Pune",
+      link: "/Programs/MBA-in-Pharma-Healthcare-Management-in-Pune",
     },
     {
-      title: "Agribusiness Management",
+      title: "MBA in Agribusiness Management",
       description:
-        "Agribusiness Management refers to the professional oversight of agricultural enterprises across the value chain—from farm production to processing, distribution, and marketing.",
+        "MBA in Agribusiness Management in Pune is a two-year postgraduate program that combines agricultural science with business management, supply chain operations, rural finance, commodity markets, and strategic decision-making.",
       icon: faTractor,
       link: "/Programs/MBA-in-Agribusiness-Management-College-in-Pune",
     },

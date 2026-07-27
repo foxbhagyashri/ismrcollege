@@ -1,1193 +1,1442 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import allsectionbg from "../../../assets/allsectionbg.jpg";
+import Faq from "../../Faq";
 
-const NAV_LINKS = ["Program", "Curriculum", "Eligibility", "Careers", "Admissions", "FAQs"];
+import ContactForm from "../../form/ContactForm";
+import Howtoaplydownoadform from "../../form/Howtoaplydownoadform";
+import brochurePdf from "/ISMR Brochure.pdf"; // Add your PDF in assets
+import ISMRFormModal from "../../form/ISMRFormModal";
 
-const OUTCOMES = [
-    { icon: "🎓", title: "Day-One Ready", desc: "Transition from graduate to industry-certified specialist in global logistics and lean operations." },
-    { icon: "💻", title: "Master Enterprise Tech", desc: "Gain hands-on mastery of SAP, Oracle, and advanced inventory simulation platforms." },
-    { icon: "📈", title: "Command Leadership Roles", desc: "Qualify for tracks like Supply Chain Analyst, Logistics Manager, and Procurement Specialist." },
-    { icon: "🚀", title: "Hassle-Free Admissions", desc: "Step-by-step guidance from entrance test counseling to final enrollment." },
-];
+export default function MBAAgribusinessManagement() {
 
-const SUBJECTS = [
-    { title: "Supply Chain Strategy & Global Logistics", desc: "International trade barriers, customs compliance, and cross-border risk management." },
-    { title: "Logistics & Warehouse Management", desc: "Multimodal transport networks, distribution physics, and automated warehousing layouts." },
-    { title: "Procurement & Vendor Management", desc: "Strategic sourcing models and sustainable, cost-effective supplier networks." },
-    { title: "Lean, Six Sigma & Demand Forecasting", desc: "Eliminate operational waste, improve quality control, and predict consumer demand through data." },
-    { title: "ERP Systems & Inventory Control", desc: "Software literacy in SAP/Oracle with JIT and real-time inventory models." },
-];
+  const [openFaq, setOpenFaq] = useState(0); // first item open by default
 
-const WHO_PROFILES = [
-    { label: "Fresh Graduates", icon: "🎯", desc: "No prior experience required. From engineering, commerce, science, or arts — ISMR bridges the gap to a corporate launchpad." },
-    { label: "Working Professionals", icon: "🏭", desc: "Already in operations or manufacturing? Gain strategic credentials to break the growth ceiling into senior roles." },
-    { label: "BFSI / Retail / E-Commerce", icon: "🛒", desc: "Lead cross-functional projects and optimize multi-city delivery routes and tech-enabled fulfillment centers." },
-    { label: "Tech & ERP Aspirants", icon: "🖥️", desc: "Prepare for specialized roles in cloud-based inventory tracking and software implementation." },
-    { label: "Entrepreneurs", icon: "💡", desc: "Use Lean and Six Sigma to eliminate waste and negotiate smarter vendor contracts in your own business." },
-];
-
-const CAREERS = [
-    { role: "Supply Chain Manager", responsibility: "Governs complete product movement from raw materials to final consumers.", relevance: "Procurement protocols, international shipping, lean inventory systems." },
-    { role: "Operations Manager", responsibility: "Shop-floor orchestration, capacity planning, and resource allocation.", relevance: "Engineering methodologies to eliminate waste and boost output quality." },
-    { role: "Logistics & Distribution Manager", responsibility: "Designs multimodal shipping networks and supervises fulfillment facilities.", relevance: "Fleet utilization, automated sorting, cutting delivery times." },
-    { role: "Procurement & Vendor Manager", responsibility: "Analyzes global supplier markets and executes commercial agreements.", relevance: "Reduces material costs through data-driven negotiation." },
-    { role: "Demand Forecasting Analyst", responsibility: "Anticipates market patterns to avoid overproduction or shortages.", relevance: "Designs mathematical data models reviewing retail patterns." },
-    { role: "ERP Implementation Analyst", responsibility: "Configures cloud platforms and software modules for companies.", relevance: "Automates inventory tracking in SAP or Oracle environments." },
-];
-
-const STEPS = [
-    { step: "01", title: "Apply Online", desc: "Complete the digital form in under 15 minutes. Pay a registration fee of ₹1,100 to initiate your candidate file." },
-    { step: "02", title: "Counselling Interview", desc: "Connect with an academic counselor via telephonic interview to align your entrance scores and career goals." },
-    { step: "03", title: "Seat Confirmation", desc: "Receive your official Admission Letter. Submit a processing fee of ₹30,000 within four days to lock your seat." },
-    { step: "04", title: "Provisional Admission", desc: "Your seat is formally registered. Submit transcripts and entrance scorecards as guided by the ISMR team." },
-];
-
-const FAQS = [
-    { q: "What is an MBA in Operations and Supply Chain Management?", a: "A specialized two-year postgraduate degree focused on making production and distribution lines as efficient as possible — covering raw material sourcing, automated warehousing, and international transportation networks." },
-    { q: "Who can apply?", a: "Any graduate with a bachelor's degree in any stream from a recognized university with a minimum of 50% marks (45% for reserved categories), plus valid MAH-MBA CET, CAT, or CMAT scores." },
-    { q: "What is the duration of the course?", a: "Two academic years split into four comprehensive semesters — the first year covers management fundamentals; the second dives into advanced operations, ERP systems, and field projects." },
-    { q: "Is ISMR AICTE-approved?", a: "Yes. ISMR holds complete statutory approvals from AICTE and DTE Maharashtra, and is affiliated with Savitribai Phule Pune University (SPPU)." },
-    { q: "What is the typical starting salary?", a: "ISMR graduates typically secure entry-level packages ranging from ₹4.5 LPA to ₹7.5 LPA across Pune's automotive, logistics, and e-commerce sectors." },
-    { q: "What are the program fees?", a: "The complete two-year program typically costs between ₹4.5 Lakhs to ₹5.5 Lakhs, covering academics, software training, and placement services. Contact the finance desk for exact figures." },
-];
-
-const WHY = [
-    { icon: "🏛️", title: "AICTE & SPPU Credibility", desc: "Formally approved by AICTE and DTE, affiliated with Savitribai Phule Pune University." },
-    { icon: "🔧", title: "Tech-Driven Curriculum", desc: "Interactive case studies and hands-on SAP/Oracle modules — no textbook-only approach." },
-    { icon: "🤝", title: "Active Placement Cell", desc: "Direct connections with Pune's industrial ecosystem for proactive placement support." },
-    { icon: "👩‍🏫", title: "Domain-Expert Faculty", desc: "Management scholars combined with visiting supply chain directors from industry." },
-    { icon: "📍", title: "Strategic Location", desc: "Positioned inside the Pune and PCMC manufacturing corridors for plant visits and networking." },
-    { icon: "💰", title: "Financial Transparency", desc: "Complete clarity on fees with no hidden costs. Education loan guidance available." },
-];
-
-// ── Style objects ──────────────────────────────────────────────
-const styles = {
-    page: {
-        fontFamily: "sans-serif",
-        color: "#1e293b",
-        backgroundColor: "#ffffff",
-        scrollBehavior: "smooth",
-    },
-
-    // HERO
-    hero: {
-        position: "relative",
-        overflow: "hidden",
-        background: "linear-gradient(135deg, #0f172a 0%, #172554 50%, #164e63 100%)",
-        color: "#ffffff",
-    },
-    heroBgGrid: {
-        position: "absolute",
-        inset: 0,
-        opacity: 0.1,
-        backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
-        backgroundSize: "40px 40px",
-    },
-    heroInner: {
-        position: "relative",
-        maxWidth: "80rem",
-        margin: "0 auto",
-        padding: "5rem 1.5rem 6rem",
-    },
-    heroContent: {
-        maxWidth: "48rem",
-    },
-    heroBadge: {
-        display: "inline-block",
-        backgroundColor: "rgba(34,211,238,0.2)",
-        border: "1px solid rgba(34,211,238,0.4)",
-        color: "#67e8f9",
-        fontSize: "0.7rem",
-        fontWeight: 600,
-        padding: "0.25rem 0.75rem",
-        borderRadius: "9999px",
-        marginBottom: "1.5rem",
-        letterSpacing: "0.15em",
-        textTransform: "uppercase",
-    },
-    heroH1: {
-        fontSize: "clamp(2.2rem, 5vw, 3.75rem)",
-        fontWeight: 900,
-        lineHeight: 1.15,
-        marginBottom: "1.5rem",
-    },
-    heroGradientText: {
-        background: "linear-gradient(to right, #67e8f9, #93c5fd)",
-        WebkitBackgroundClip: "text",
-        WebkitTextFillColor: "transparent",
-        backgroundClip: "text",
-    },
-    heroSubtitle: {
-        color: "#cbd5e1",
-        fontSize: "1.1rem",
-        lineHeight: 1.7,
-        marginBottom: "2.5rem",
-        maxWidth: "42rem",
-    },
-    heroCtas: {
-        display: "flex",
-        flexWrap: "wrap",
-        gap: "1rem",
-        marginBottom: "3rem",
-    },
-    ctaPrimary: {
-        backgroundColor: "#22d3ee",
-        color: "#0f172a",
-        fontWeight: 900,
-        padding: "0.75rem 1.5rem",
-        borderRadius: "0.75rem",
-        textDecoration: "none",
-        fontSize: "1rem",
-        transition: "background-color 0.2s",
-        display: "inline-block",
-    },
-    ctaSecondary: {
-        border: "1px solid rgba(255,255,255,0.3)",
-        color: "#ffffff",
-        fontWeight: 600,
-        padding: "0.75rem 1.5rem",
-        borderRadius: "0.75rem",
-        textDecoration: "none",
-        fontSize: "1rem",
-        transition: "background-color 0.2s",
-        display: "inline-block",
-    },
-    statsGrid: {
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))",
-        gap: "1rem",
-    },
-    statCard: {
-        backgroundColor: "rgba(255,255,255,0.1)",
-        backdropFilter: "blur(8px)",
-        borderRadius: "0.75rem",
-        padding: "1rem",
-        border: "1px solid rgba(255,255,255,0.1)",
-    },
-    statVal: {
-        fontSize: "1.5rem",
-        fontWeight: 900,
-        color: "#67e8f9",
-    },
-    statLabel: {
-        color: "#94a3b8",
-        fontSize: "0.7rem",
-        marginTop: "0.25rem",
-    },
-
-    // SECTIONS
-    sectionWhite: {
-        padding: "5rem 0",
-        backgroundColor: "#ffffff",
-    },
-    sectionSlate: {
-        padding: "5rem 0",
-        backgroundColor: "#f8fafc",
-    },
-    container: {
-        maxWidth: "80rem",
-        margin: "0 auto",
-        padding: "0 1.5rem",
-    },
-    sectionHeader: {
-        textAlign: "center",
-        marginBottom: "3.5rem",
-    },
-    eyebrow: {
-        color: "#1d4ed8",
-        fontWeight: 700,
-        fontSize: "0.75rem",
-        letterSpacing: "0.15em",
-        textTransform: "uppercase",
-    },
-    sectionH2: {
-        fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
-        fontWeight: 900,
-        marginTop: "0.5rem",
-        color: "#0f172a",
-    },
-    sectionSubtitle: {
-        color: "#64748b",
-        marginTop: "0.75rem",
-        maxWidth: "36rem",
-        margin: "0.75rem auto 0",
-    },
-
-    // OUTCOMES GRID
-    outcomesGrid: {
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-        gap: "1.5rem",
-    },
-    outcomeCard: {
-        padding: "1.5rem",
-        borderRadius: "1rem",
-        border: "1px solid #f1f5f9",
-        backgroundColor: "#ffffff",
-        transition: "border-color 0.3s, box-shadow 0.3s",
-    },
-    outcomeIcon: {
-        fontSize: "1.75rem",
-        marginBottom: "1rem",
-    },
-    outcomeTitle: {
-        fontWeight: 900,
-        color: "#0f172a",
-        fontSize: "1.1rem",
-        marginBottom: "0.5rem",
-    },
-    outcomeDesc: {
-        color: "#64748b",
-        fontSize: "0.875rem",
-        lineHeight: 1.6,
-    },
-
-    // WHO GRID
-    whoGrid: {
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-        gap: "1.5rem",
-    },
-    whoCard: {
-        backgroundColor: "#ffffff",
-        borderRadius: "1rem",
-        padding: "1.5rem",
-        border: "1px solid #f1f5f9",
-    },
-    whoIcon: { fontSize: "1.75rem" },
-    whoTitle: {
-        fontWeight: 900,
-        color: "#0f172a",
-        fontSize: "1.1rem",
-        marginTop: "0.75rem",
-        marginBottom: "0.5rem",
-    },
-    whoDesc: {
-        color: "#64748b",
-        fontSize: "0.875rem",
-        lineHeight: 1.6,
-    },
-
-    // CURRICULUM
-    curriculumGrid: {
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        gap: "4rem",
-        alignItems: "center",
-    },
-    curriculumLeft: {},
-    subjectList: {
-        display: "flex",
-        flexDirection: "column",
-        gap: "1rem",
-        marginTop: "2rem",
-    },
-    subjectItem: {
-        display: "flex",
-        gap: "1rem",
-        padding: "1rem",
-        borderRadius: "0.75rem",
-        backgroundColor: "#eff6ff",
-        transition: "background-color 0.2s",
-    },
-    subjectDot: {
-        width: "0.5rem",
-        height: "0.5rem",
-        borderRadius: "50%",
-        backgroundColor: "#1d4ed8",
-        marginTop: "0.5rem",
-        flexShrink: 0,
-    },
-    subjectTitle: {
-        fontWeight: 700,
-        color: "#0f172a",
-        fontSize: "0.875rem",
-    },
-    subjectDesc: {
-        color: "#64748b",
-        fontSize: "0.875rem",
-        marginTop: "0.25rem",
-    },
-    curriculumRight: {
-        display: "flex",
-        flexDirection: "column",
-        gap: "1.25rem",
-    },
-    learningCard: {
-        background: "linear-gradient(135deg, #1d4ed8, #0891b2)",
-        color: "#ffffff",
-        padding: "2rem",
-        borderRadius: "1rem",
-    },
-    learningCardTitle: {
-        fontWeight: 900,
-        fontSize: "1.2rem",
-        marginBottom: "1rem",
-    },
-    methodList: {
-        display: "flex",
-        flexDirection: "column",
-        gap: "1rem",
-    },
-    methodItem: {
-        display: "flex",
-        gap: "0.75rem",
-    },
-    methodIcon: { fontSize: "1.5rem" },
-    methodTitle: { fontWeight: 700, fontSize: "0.875rem" },
-    methodDesc: { color: "#bfdbfe", fontSize: "0.875rem", marginTop: "0.125rem" },
-    erpCard: {
-        backgroundColor: "#0f172a",
-        color: "#ffffff",
-        padding: "1.5rem",
-        borderRadius: "1rem",
-        display: "flex",
-        alignItems: "center",
-        gap: "1rem",
-    },
-    erpIcon: { fontSize: "2.5rem" },
-    erpTitle: { fontWeight: 900 },
-    erpDesc: { color: "#94a3b8", fontSize: "0.875rem", marginTop: "0.25rem" },
-
-    // ELIGIBILITY
-    eligibilityGrid: {
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-        gap: "1.5rem",
-        maxWidth: "48rem",
-        margin: "0 auto",
-    },
-    eligCard: {
-        backgroundColor: "#ffffff",
-        padding: "2rem",
-        borderRadius: "1rem",
-        border: "1px solid #f1f5f9",
-        boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
-    },
-    eligIcon: {
-        width: "3rem",
-        height: "3rem",
-        borderRadius: "0.75rem",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        fontSize: "1.5rem",
-        marginBottom: "1.25rem",
-    },
-    eligIconBlue: { backgroundColor: "#dbeafe" },
-    eligIconCyan: { backgroundColor: "#cffafe" },
-    eligTitle: {
-        fontWeight: 900,
-        color: "#0f172a",
-        fontSize: "1.1rem",
-        marginBottom: "0.75rem",
-    },
-    eligDesc: {
-        color: "#64748b",
-        fontSize: "0.875rem",
-        lineHeight: 1.6,
-    },
-    tagRow: {
-        display: "flex",
-        gap: "0.5rem",
-        flexWrap: "wrap",
-        marginTop: "1rem",
-    },
-    tag: {
-        backgroundColor: "#eff6ff",
-        color: "#1d4ed8",
-        fontSize: "0.75rem",
-        fontWeight: 700,
-        padding: "0.25rem 0.75rem",
-        borderRadius: "9999px",
-        border: "1px solid #bfdbfe",
-    },
-
-    // CAREERS TABLE
-    tableWrapper: {
-        overflowX: "auto",
-        borderRadius: "1rem",
-        border: "1px solid #f1f5f9",
-        boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
-    },
-    table: {
-        width: "100%",
-        fontSize: "0.875rem",
-        borderCollapse: "collapse",
-    },
-    thead: {
-        backgroundColor: "#0f172a",
-        color: "#ffffff",
-    },
-    th: {
-        textAlign: "left",
-        padding: "1rem 1.5rem",
-        fontWeight: 700,
-    },
-    tdRole: {
-        padding: "1rem 1.5rem",
-        fontWeight: 700,
-        color: "#1d4ed8",
-        whiteSpace: "nowrap",
-    },
-    tdBody: {
-        padding: "1rem 1.5rem",
-        color: "#475569",
-    },
-    tdMuted: {
-        padding: "1rem 1.5rem",
-        color: "#64748b",
-    },
-    trEven: { backgroundColor: "#ffffff" },
-    trOdd: { backgroundColor: "#f8fafc" },
-    industryRow: {
-        marginTop: "2.5rem",
-        textAlign: "center",
-    },
-    industryLabel: {
-        color: "#64748b",
-        fontSize: "0.875rem",
-        fontWeight: 600,
-        marginBottom: "1rem",
-    },
-    industryTags: {
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "center",
-        gap: "0.75rem",
-    },
-    industryTag: {
-        backgroundColor: "#0f172a",
-        color: "#ffffff",
-        fontSize: "0.75rem",
-        fontWeight: 600,
-        padding: "0.5rem 1rem",
-        borderRadius: "9999px",
-    },
-
-    // ADMISSIONS
-    admissionsSection: {
-        padding: "5rem 0",
-        background: "linear-gradient(135deg, #1d4ed8 0%, #0891b2 100%)",
-        color: "#ffffff",
-    },
-    admissionsBadge: {
-        display: "inline-block",
-        backgroundColor: "rgba(255,255,255,0.2)",
-        color: "#ffffff",
-        fontSize: "0.7rem",
-        fontWeight: 700,
-        padding: "0.25rem 0.75rem",
-        borderRadius: "9999px",
-        marginBottom: "1rem",
-        letterSpacing: "0.15em",
-        textTransform: "uppercase",
-    },
-    admissionsSubtitle: {
-        color: "#bfdbfe",
-        marginTop: "0.75rem",
-    },
-    stepsGrid: {
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-        gap: "1.5rem",
-    },
-    stepCard: {
-        backgroundColor: "rgba(255,255,255,0.15)",
-        backdropFilter: "blur(8px)",
-        border: "1px solid rgba(255,255,255,0.2)",
-        borderRadius: "1rem",
-        padding: "1.5rem",
-        transition: "background-color 0.2s",
-    },
-    stepNum: {
-        fontSize: "3rem",
-        fontWeight: 900,
-        color: "rgba(255,255,255,0.3)",
-        lineHeight: 1,
-        marginBottom: "0.75rem",
-    },
-    stepTitle: {
-        fontWeight: 900,
-        fontSize: "1.1rem",
-        marginBottom: "0.5rem",
-    },
-    stepDesc: {
-        color: "#bfdbfe",
-        fontSize: "0.875rem",
-        lineHeight: 1.6,
-    },
-    ctaBox: {
-        display: "inline-block",
-        backgroundColor: "#ffffff",
-        color: "#1e3a8a",
-        borderRadius: "1rem",
-        padding: "1.5rem 2rem",
-        boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
-        maxWidth: "28rem",
-        marginTop: "3rem",
-        textAlign: "center",
-    },
-    ctaBoxTitle: {
-        fontWeight: 900,
-        fontSize: "1.1rem",
-        marginBottom: "0.5rem",
-    },
-    ctaBoxSubtitle: {
-        color: "#64748b",
-        fontSize: "0.875rem",
-        marginBottom: "1.25rem",
-    },
-    ctaBoxBtns: {
-        display: "flex",
-        flexWrap: "wrap",
-        gap: "0.75rem",
-        justifyContent: "center",
-    },
-    callBtn: {
-        backgroundColor: "#1d4ed8",
-        color: "#ffffff",
-        fontWeight: 700,
-        padding: "0.625rem 1.25rem",
-        borderRadius: "0.75rem",
-        fontSize: "0.875rem",
-        textDecoration: "none",
-        display: "inline-block",
-    },
-    emailBtn: {
-        border: "1px solid #bfdbfe",
-        color: "#1d4ed8",
-        fontWeight: 700,
-        padding: "0.625rem 1.25rem",
-        borderRadius: "0.75rem",
-        fontSize: "0.875rem",
-        textDecoration: "none",
-        display: "inline-block",
-    },
-
-    // WHY
-    whyGrid: {
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-        gap: "1.5rem",
-    },
-    whyCard: {
-        display: "flex",
-        gap: "1rem",
-        padding: "1.5rem",
-        borderRadius: "1rem",
-        border: "1px solid #f1f5f9",
-        transition: "border-color 0.2s, box-shadow 0.2s",
-    },
-    whyIcon: { fontSize: "1.75rem", flexShrink: 0 },
-    whyTitle: {
-        fontWeight: 900,
-        color: "#0f172a",
-        marginBottom: "0.25rem",
-    },
-    whyDesc: {
-        color: "#64748b",
-        fontSize: "0.875rem",
-        lineHeight: 1.6,
-    },
-
-    // FAQS
-    faqsInner: {
-        maxWidth: "48rem",
-        margin: "0 auto",
-        padding: "0 1.5rem",
-    },
-    faqList: {
-        display: "flex",
-        flexDirection: "column",
-        gap: "0.75rem",
-    },
-    faqItem: {
-        backgroundColor: "#ffffff",
-        borderRadius: "1rem",
-        border: "1px solid #f1f5f9",
-        overflow: "hidden",
-    },
-    faqBtn: {
-        width: "100%",
-        textAlign: "left",
-        padding: "1.25rem 1.5rem",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        fontWeight: 700,
-        color: "#0f172a",
-        background: "none",
-        border: "none",
-        cursor: "pointer",
-        transition: "background-color 0.2s",
-    },
-    faqQ: {
-        fontSize: "0.875rem",
-        paddingRight: "1rem",
-    },
-    faqIcon: {
-        color: "#1d4ed8",
-        fontSize: "1.25rem",
-        flexShrink: 0,
-    },
-    faqAnswer: {
-        padding: "0 1.5rem 1.25rem",
-        color: "#64748b",
-        fontSize: "0.875rem",
-        lineHeight: 1.7,
-        borderTop: "1px solid #f1f5f9",
-        paddingTop: "1rem",
-    },
-
-    // FOOTER CTA
-    footerCta: {
-        padding: "4rem 0",
-        backgroundColor: "#0f172a",
-        color: "#ffffff",
-        textAlign: "center",
-    },
-    footerH2: {
-        fontSize: "1.875rem",
-        fontWeight: 900,
-        marginBottom: "1rem",
-    },
-    footerSubtitle: {
-        color: "#94a3b8",
-        marginBottom: "2rem",
-    },
-    footerBtn: {
-        display: "inline-block",
-        backgroundColor: "#22d3ee",
-        color: "#0f172a",
-        fontWeight: 900,
-        padding: "1rem 2rem",
-        borderRadius: "0.75rem",
-        textDecoration: "none",
-        fontSize: "1rem",
-        transition: "background-color 0.2s",
-    },
-    footerNote: {
-        color: "#475569",
-        fontSize: "0.75rem",
-        marginTop: "1.5rem",
-    },
-};
-
-export default function ISMRLanding() {
-    const [openFaq, setOpenFaq] = useState(null);
-
-    return (
-        <div style={styles.page}>
-            {/* ── HERO ── */}
-            <section id="program" style={styles.hero}>
-                <div style={styles.heroBgGrid} />
-                <div style={styles.heroInner}>
-                    <div style={{ display: "flex", gap: "2.5rem", alignItems: "flex-start", flexWrap: "wrap", marginBottom: "3rem" }}>
-                        {/* Left Column */}
-                        <div style={{ ...styles.heroContent, flex: "1 1 480px" }}>
-                            <span style={styles.heroBadge}>SPPU Affiliated · AICTE Approved</span>
-                            <h1 style={styles.heroH1}>
-                                Searching for the Right<br />
-                                <span style={styles.heroGradientText}>MBA in Agribusiness Management College in Pune?</span>{" "}
-                                Your Answer Starts Here
-                            </h1>
-
-                            <p style={{ color: "#cbd5e1", fontSize: "0.95rem", lineHeight: 1.75, marginBottom: "1.25rem" }}>
-                                India's agriculture sector is evolving fast — from traditional farming into organised supply chains, commodity markets, food processing industries, and agri-tech ventures.
-                            </p>
-                            <p style={{ color: "#cbd5e1", fontSize: "0.95rem", lineHeight: 1.75, marginBottom: "1.75rem" }}>
-                                ISMR prepares you to lead at every level of this transformation through SPPU-affiliated academics, industry-integrated learning, and faculty that brings real agri-business experience into every classroom.
-                            </p>
-
-                            {/* Counselling Note */}
-                            <div style={{ backgroundColor: "rgba(34,211,238,0.1)", border: "1px solid rgba(34,211,238,0.25)", borderRadius: "0.875rem", padding: "1rem 1.25rem", marginBottom: "1.75rem" }}>
-                                <p style={{ fontSize: "0.875rem", color: "#ffffff", fontWeight: 700, marginBottom: "0.2rem" }}>Book a Free Counselling Session</p>
-                                <p style={{ fontSize: "0.825rem", color: "#94a3b8", lineHeight: 1.6 }}>Get your questions answered before you commit to anything.</p>
-                            </div>
-
-                            {/* CTA Buttons */}
-                            <div style={styles.heroCtas}>
-                                <a href="#admissions" style={styles.ctaPrimary}>Book a Free Counselling Session →</a>
-                                <a href="#curriculum" style={styles.ctaSecondary}>Explore Curriculum</a>
-                            </div>
-                        </div>
-
-                        {/* Right Column: Program Snapshot Table */}
-                        <div style={{ flex: "1 1 380px", maxWidth: "480px", backgroundColor: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: "1rem", overflow: "hidden", backdropFilter: "blur(8px)" }}>
-                            <div style={{ padding: "1rem 1.25rem", borderBottom: "1px solid rgba(255,255,255,0.12)" }}>
-                                <p style={{ fontWeight: 800, fontSize: "1rem", color: "#ffffff" }}>
-                                    Program Snapshot: MBA in Agribusiness Management
-                                </p>
-                            </div>
-                            <table style={{ width: "100%", borderCollapse: "collapse" }}>
-                                <tbody>
-                                    {[
-                                        { label: "Duration", value: "2 Years / 4 Semesters" },
-                                        { label: "Affiliation", value: "Savitribai Phule Pune University (SPPU)" },
-                                        { label: "Approval", value: "AICTE / DTE / AIMS" },
-                                        { label: "Learning Format", value: "Case Studies, Field Visits, Live Projects" },
-                                    ].map((row, i, arr) => (
-                                        <tr key={row.label} style={{ borderBottom: i === arr.length - 1 ? "none" : "1px solid rgba(255,255,255,0.08)" }}>
-                                            <td style={{ padding: "0.75rem 1.25rem", fontSize: "0.8rem", fontWeight: 700, color: "#67e8f9", whiteSpace: "nowrap", verticalAlign: "top" }}>
-                                                {row.label}
-                                            </td>
-                                            <td style={{ padding: "0.75rem 1.25rem", fontSize: "0.8rem", color: "#e2e8f0", lineHeight: 1.5 }}>
-                                                {row.value}
-                                            </td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    {/* What Makes ISMR Top */}
-                    <div style={{ backgroundColor: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "1rem", padding: "1.75rem 2rem", backdropFilter: "blur(8px)" }}>
-                        <h2 style={{ fontWeight: 900, fontSize: "1.25rem", color: "#ffffff", marginBottom: "0.75rem" }}>
-                            What Makes ISMR One of the Top MBA in Agribusiness Colleges in Pune?
-                        </h2>
-                        <p style={{ color: "#cbd5e1", fontSize: "0.9rem", lineHeight: 1.75, marginBottom: "1rem" }}>
-                            Agribusiness Management is where agricultural knowledge meets business leadership. The program covers the full agri-value chain: farm economics, supply chains, commodity markets, rural finance, food processing, and sustainability policy.
-                        </p>
-                        <p style={{ color: "#94a3b8", fontSize: "0.875rem", lineHeight: 1.75 }}>
-                            Learning goes beyond the classroom. Students visit agricultural mandis, food processing units, and rural cooperatives, grounding theory in real operational environments before graduation.
-                        </p>
-                    </div>
-                </div>
-                <svg style={{ position: "absolute", bottom: 0, width: "100%", display: "block" }} viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 60L1440 60L1440 0C1200 50 960 60 720 40C480 20 240 0 0 20L0 60Z" fill="white" />
-                </svg>
-            </section>
-
-            {/* ── UNDERSTANDING THE PROGRAMME ── */}
-            <section style={{ padding: "5rem 0", backgroundColor: "#ffffff" }}>
-                <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem" }}>
-
-                    {/* Header */}
-                    <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
-                        <span style={{ color: "#1d4ed8", fontWeight: 700, fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase" }}>Curriculum</span>
-                        <h2 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: 900, marginTop: "0.5rem", color: "#0f172a" }}>Core Subjects at a Glance</h2>
-                        <p style={{ color: "#64748b", marginTop: "0.75rem", maxWidth: "48rem", margin: "0.75rem auto 0", fontSize: "0.95rem", lineHeight: 1.7 }}>
-                            Eight focus areas that span the complete agri-business value chain — from farm gate to market, finance to policy.
-                        </p>
-                    </div>
-
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "1.5rem" }}>
-                        {[
-                            {
-                                num: "01",
-                                icon: "🚚",
-                                title: "Agri-Supply Chain & Logistics",
-                                desc: "Learn how produce moves from farm gate to end consumer, covering procurement, cold chain infrastructure, warehousing, and last-mile distribution. Focus is on reducing post-harvest losses and improving margin realisation.",
-                            },
-                            {
-                                num: "02",
-                                icon: "🌾",
-                                title: "Agricultural Marketing & Trade",
-                                desc: "Understand commodity branding, mandi-to-retail transitions, export documentation, and international agri-trade policy. Build market linkage strategies that deliver real value to producers.",
-                            },
-                            {
-                                num: "03",
-                                icon: "🏦",
-                                title: "Rural Finance & Microfinance",
-                                desc: "Study NABARD credit programmes, Kisan Credit Card structures, SHG models, and MFI lending frameworks. Learn to assess farm enterprise viability and design rural financial products for smallholder farmers.",
-                            },
-                            {
-                                num: "04",
-                                icon: "📈",
-                                title: "Commodity Markets & Risk Management",
-                                desc: "Develop working knowledge of NCDEX and MCX exchanges, futures and options in agri-commodities, and enterprise-level hedging strategies to manage the price volatility inherent in agricultural business.",
-                            },
-                            {
-                                num: "05",
-                                icon: "🏭",
-                                title: "Food Processing & Value Chain Management",
-                                desc: "Explore how raw produce becomes consumer-ready products — with focus on FSSAI compliance, value addition economics, food safety systems, and retail integration in India's growing food processing sector.",
-                            },
-                            {
-                                num: "06",
-                                icon: "📜",
-                                title: "Agri-Policy, Regulation & Sustainability",
-                                desc: "Examine APMC structures, MSP mechanisms, contract farming regulations, and FPO frameworks. Understand how climate-smart agriculture and global sustainability mandates are reshaping agri-business strategy.",
-                            },
-                            {
-                                num: "07",
-                                icon: "🌱",
-                                title: "Farm Business Management",
-                                desc: "Apply core management principles — financial planning, operational efficiency, cash flow management — directly to farm enterprises. Build business plans suited to both smallholder contexts and commercial farming operations.",
-                            },
-                            {
-                                num: "08",
-                                icon: "🚀",
-                                title: "Agri-Entrepreneurship & Startup Ecosystem",
-                                desc: "Explore FPO structures, agri-tech incubators, and government startup schemes. Identify unmet market opportunities and develop pitch-ready agri-business concepts capable of attracting institutional funding.",
-                            },
-                        ].map((item, i) => (
-                            <div key={i} style={{ backgroundColor: "#f8fafc", borderRadius: "1.25rem", border: "1px solid #e2e8f0", padding: "1.75rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-                                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                                    <div style={{ width: "2.75rem", height: "2.75rem", borderRadius: "0.75rem", backgroundColor: "#dbeafe", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.25rem", flexShrink: 0 }}>
-                                        {item.icon}
-                                    </div>
-                                    <span style={{ fontSize: "0.75rem", fontWeight: 800, color: "#94a3b8", letterSpacing: "0.1em" }}>{item.num}</span>
-                                </div>
-                                <p style={{ fontWeight: 800, fontSize: "1rem", color: "#0f172a", margin: 0, lineHeight: 1.35 }}>{item.title}</p>
-                                <hr style={{ border: "none", borderTop: "0.5px solid #e2e8f0", margin: 0 }} />
-                                <p style={{ color: "#64748b", fontSize: "0.85rem", lineHeight: 1.7, margin: 0 }}>{item.desc}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-
-            {/* ── ELIGIBILITY & ADMISSIONS ── */}
-            <section style={{ padding: "5rem 0", backgroundColor: "#f8fafc" }}>
-                <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem" }}>
-
-                    {/* Header */}
-                    <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
-                        <span style={{ color: "#1d4ed8", fontWeight: 700, fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase" }}>Admissions 2026</span>
-                        <h2 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: 900, marginTop: "0.5rem", color: "#0f172a" }}>Eligibility & Admissions Criteria</h2>
-                        <p style={{ color: "#64748b", marginTop: "0.75rem", maxWidth: "42rem", margin: "0.75rem auto 0", fontSize: "0.95rem", lineHeight: 1.6 }}>
-                            What you need to qualify for the MBA in Agribusiness Management at ISMR Pune.
-                        </p>
-                    </div>
-
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "1.5rem", maxWidth: "72rem", margin: "0 auto 1.5rem" }}>
-
-                        {/* Academic Qualification */}
-                        <div style={{ backgroundColor: "#ffffff", borderRadius: "1.25rem", border: "1px solid #e2e8f0", overflow: "hidden" }}>
-                            <div style={{ background: "linear-gradient(135deg, #1d4ed8, #0891b2)", padding: "1.75rem" }}>
-                                <div style={{ width: "2.75rem", height: "2.75rem", borderRadius: "0.75rem", backgroundColor: "rgba(255,255,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.25rem", marginBottom: "1rem" }}>🎓</div>
-                                <h3 style={{ fontWeight: 900, fontSize: "1.1rem", color: "#ffffff", marginBottom: "0.4rem" }}>Academic Qualification</h3>
-                                <p style={{ color: "#bfdbfe", fontSize: "0.825rem", lineHeight: 1.5 }}>Bachelor's degree in any stream from a recognised university.</p>
-                            </div>
-                            <div style={{ padding: "1.25rem 1.5rem", display: "flex", flexDirection: "column", gap: "0.7rem" }}>
-                                {[
-                                    "Bachelor's degree in any stream from a recognised university",
-                                    "Priority for: Agriculture, Horticulture, Food Technology, Dairy, Veterinary, Fisheries graduates",
-                                    "Commerce, Science & Engineering graduates fully eligible",
-                                ].map((item, i) => (
-                                    <div key={i} style={{ display: "flex", gap: "0.6rem", alignItems: "flex-start" }}>
-                                        <span style={{ color: "#2563eb", fontWeight: 800, fontSize: "0.85rem" }}>✓</span>
-                                        <p style={{ fontSize: "0.825rem", color: "#475569", lineHeight: 1.6, margin: 0 }}>{item}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Minimum Marks */}
-                        <div style={{ backgroundColor: "#ffffff", borderRadius: "1.25rem", border: "1px solid #e2e8f0", overflow: "hidden" }}>
-                            <div style={{ backgroundColor: "#0f172a", padding: "1.75rem" }}>
-                                <div style={{ width: "2.75rem", height: "2.75rem", borderRadius: "0.75rem", backgroundColor: "rgba(34,211,238,0.15)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.25rem", marginBottom: "1rem" }}>📊</div>
-                                <h3 style={{ fontWeight: 900, fontSize: "1.1rem", color: "#ffffff", marginBottom: "0.4rem" }}>Minimum Marks</h3>
-                                <p style={{ color: "#94a3b8", fontSize: "0.825rem", lineHeight: 1.5 }}>Aggregate marks required at undergraduate level.</p>
-                            </div>
-                            <div style={{ padding: "1.5rem", display: "flex", flexDirection: "column", gap: "0.875rem" }}>
-                                <div style={{ display: "flex", gap: "1rem", alignItems: "center", backgroundColor: "#f8fafc", borderRadius: "0.875rem", padding: "1rem 1.25rem", border: "1px solid #e2e8f0" }}>
-                                    <div style={{ textAlign: "center", minWidth: "3.5rem" }}>
-                                        <p style={{ fontSize: "1.75rem", fontWeight: 900, color: "#1d4ed8", lineHeight: 1 }}>50%</p>
-                                        <p style={{ fontSize: "0.65rem", color: "#94a3b8", fontWeight: 600, marginTop: "0.15rem" }}>General</p>
-                                    </div>
-                                    <div style={{ width: "1px", height: "2.5rem", backgroundColor: "#e2e8f0", flexShrink: 0 }} />
-                                    <p style={{ color: "#475569", fontSize: "0.825rem", lineHeight: 1.5 }}>Minimum aggregate marks required for general category candidates</p>
-                                </div>
-                                <div style={{ display: "flex", gap: "1rem", alignItems: "center", backgroundColor: "#eff6ff", borderRadius: "0.875rem", padding: "1rem 1.25rem", border: "1px solid #bfdbfe" }}>
-                                    <div style={{ textAlign: "center", minWidth: "3.5rem" }}>
-                                        <p style={{ fontSize: "1.75rem", fontWeight: 900, color: "#0891b2", lineHeight: 1 }}>45%</p>
-                                        <p style={{ fontSize: "0.65rem", color: "#94a3b8", fontWeight: 600, marginTop: "0.15rem" }}>SC/ST/OBC/PwD</p>
-                                    </div>
-                                    <div style={{ width: "1px", height: "2.5rem", backgroundColor: "#bfdbfe", flexShrink: 0 }} />
-                                    <p style={{ color: "#475569", fontSize: "0.825rem", lineHeight: 1.5 }}>Minimum aggregate marks as per Maharashtra state norms</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "1.5rem", maxWidth: "72rem", margin: "0 auto 3rem" }}>
-
-                        {/* Entrance Exams */}
-                        <div style={{ backgroundColor: "#ffffff", borderRadius: "1.25rem", border: "1px solid #e2e8f0", padding: "1.75rem" }}>
-                            <p style={{ fontWeight: 900, fontSize: "1rem", color: "#0f172a", marginBottom: "1rem" }}>Entrance Exams Accepted</p>
-                            <div style={{ display: "flex", flexDirection: "column", gap: "0.7rem" }}>
-                                {[
-                                    "MAH-MBA CET (mandatory for Maharashtra domicile — CAP Round)",
-                                    "CAT / CMAT / ATMA / MAT (also accepted)",
-                                ].map((item, i) => (
-                                    <div key={i} style={{ display: "flex", gap: "0.6rem", alignItems: "flex-start" }}>
-                                        <span style={{ color: "#2563eb", fontWeight: 800, fontSize: "0.85rem" }}>✓</span>
-                                        <p style={{ fontSize: "0.825rem", color: "#475569", lineHeight: 1.6, margin: 0 }}>{item}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Work Experience */}
-                        <div style={{ backgroundColor: "#ffffff", borderRadius: "1.25rem", border: "1px solid #e2e8f0", padding: "1.75rem" }}>
-                            <p style={{ fontWeight: 900, fontSize: "1rem", color: "#0f172a", marginBottom: "1rem" }}>Work Experience</p>
-                            <div style={{ display: "flex", flexDirection: "column", gap: "0.7rem" }}>
-                                {[
-                                    "Not mandatory",
-                                    "Relevant experience in agri-inputs, rural banking, food processing, or agri-tech is an advantage during selection",
-                                ].map((item, i) => (
-                                    <div key={i} style={{ display: "flex", gap: "0.6rem", alignItems: "flex-start" }}>
-                                        <span style={{ color: "#2563eb", fontWeight: 800, fontSize: "0.85rem" }}>✓</span>
-                                        <p style={{ fontSize: "0.825rem", color: "#475569", lineHeight: 1.6, margin: 0 }}>{item}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                    </div>
-
-                    {/* How ISMR Supports Admission */}
-                    <div style={{ backgroundColor: "#0f172a", borderRadius: "1.25rem", padding: "2rem", maxWidth: "72rem", margin: "0 auto" }}>
-                        <p style={{ color: "#67e8f9", fontWeight: 800, fontSize: "0.75rem", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.75rem" }}>Admissions Support</p>
-                        <h3 style={{ color: "#ffffff", fontWeight: 900, fontSize: "1.25rem", marginBottom: "0.75rem" }}>How ISMR Supports Your Admission</h3>
-                        <p style={{ color: "#cbd5e1", fontSize: "0.875rem", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-                            The DTE Maharashtra CAP Round process — CET registration, document verification, preference filling, and seat acceptance — can be complex for first-time applicants. ISMR's admissions counseling team provides:
-                        </p>
-                        <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", marginBottom: "1.5rem" }}>
-                            {[
-                                "Entrance exam identification and registration guidance",
-                                "Eligibility documentation support",
-                                "Error-free enrollment support",
-                            ].map((item, i) => (
-                                <div key={i} style={{ display: "flex", gap: "0.875rem", alignItems: "flex-start", backgroundColor: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "0.875rem", padding: "0.9rem 1.1rem" }}>
-                                    <span style={{ fontSize: "1rem", flexShrink: 0 }}>✅</span>
-                                    <p style={{ color: "#e2e8f0", fontSize: "0.85rem", lineHeight: 1.6, margin: 0 }}>{item}</p>
-                                </div>
-                            ))}
-                        </div>
-                        <p style={{ color: "#94a3b8", fontSize: "0.85rem", lineHeight: 1.7, marginBottom: "0.9rem" }}>
-                            As one of the Best MBA Agribusiness Management Colleges in Pune 2026, ISMR ensures that eligible students receive the guidance and support needed to complete their admission journey smoothly and confidently.
-                        </p>
-                        <p style={{ color: "#94a3b8", fontSize: "0.85rem", lineHeight: 1.7 }}>
-                            With SPPU affiliation, AICTE approval, industry-focused learning, and dedicated admission assistance, ISMR helps students move from admission confusion to career clarity — one guided step at a time.
-                        </p>
-                    </div>
-
-                </div>
-            </section>
-
-            {/* ── WHO SHOULD PURSUE ── */}
-            <section id="curriculum" style={{ backgroundColor: "#fff", padding: "5rem 0" }}>
-                <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 2rem" }}>
-                    <span style={{ display: "inline-block", fontSize: 13, fontWeight: 500, color: "#2563eb", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "0.75rem" }}>
-                        Who Should Pursue This Course?
-                    </span>
-                    <h2 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: 900, marginTop: "0.5rem", color: "#0f172a" }}>
-                        Is the Agribusiness Management Course<br />in Pune Right for You?
-                    </h2>
-                    <p style={{ fontSize: 16, color: "#64748b", lineHeight: 1.7, marginBottom: "2.5rem", maxWidth: 700 }}>
-                        Not every MBA is built for every ambition. This program is specifically designed for students and professionals who want to operate at the intersection of agriculture and business leadership. Here's who benefits most:
-                    </p>
-
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(310px, 1fr))", gap: "1.25rem", marginBottom: "4rem" }}>
-                        {[
-                            {
-                                icon: "🌿",
-                                tag: "Agriculture & Science Graduates",
-                                title: "Your technical foundation, now with a business layer",
-                                hook: "Priority hire for agri-input firms, consulting, and trading houses.",
-                                desc: "Your technical foundation is your biggest advantage — this program adds the business strategy layer on top of it. You graduate as the rare professional who understands both crop science and corporate decision-making, making you a priority hire for agri-input firms, consulting companies, and commodity trading houses.",
-                            },
-                            {
-                                icon: "💼",
-                                tag: "Commerce & Business Graduates",
-                                title: "Sector-specific grounding a general MBA can't give you",
-                                hook: "Crack agri-commodity markets and rural supply chains.",
-                                desc: "Financial literacy alone isn't enough to crack agri-commodity markets or rural supply chains. This program gives you the sector-specific grounding — APMC trade structures, commodity pricing mechanics, agri-supply chain logic — that no general MBA covers.",
-                            },
-                            {
-                                icon: "🏭",
-                                tag: "Working Professionals in Agri, Seed, Fertilizer & FMCG",
-                                title: "Break the ceiling without formal credentials",
-                                hook: "Every module applies to your current role and your next one.",
-                                desc: "Already working in the sector but hitting a ceiling without formal management credentials? This curriculum addresses the strategic and operational challenges you face daily — making every module immediately applicable to your current role and your next one.",
-                            },
-                            {
-                                icon: "🌾",
-                                tag: "Rural Economy & Development Professionals",
-                                title: "Sharpen financial analysis and policy understanding",
-                                hook: "Design interventions with real, measurable rural impact.",
-                                desc: "If your work touches NABARD programmes, FPOs, rural cooperatives, or microfinance institutions — this program sharpens both the financial analysis and policy understanding you need to design interventions that create real, measurable rural impact.",
-                            },
-                            {
-                                icon: "🚜",
-                                tag: "Agri-Entrepreneurs & Family Farm Business Members",
-                                title: "Replace guesswork with a scalable framework",
-                                hook: "Data-driven planning and market linkage strategies.",
-                                desc: "Running or inheriting a farm enterprise, agri-input dealership, or rural processing unit? This program replaces guesswork with a framework that covers data-driven planning, enterprise financial management, and market linkage strategies that help traditional agri-businesses scale confidently.",
-                            },
-                        ].map((p, i) => (
-                            <div key={i} style={{ background: "#fff", border: "0.5px solid #e2e8f0", borderRadius: 12, padding: "1.5rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-                                <div style={{ display: "flex", alignItems: "flex-start", gap: "1rem" }}>
-                                    <div style={{ width: 42, height: 42, borderRadius: 10, background: "#eff6ff", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                                        <span style={{ fontSize: 20 }}>{p.icon}</span>
-                                    </div>
-                                    <div>
-                                        <span style={{ fontSize: 11, fontWeight: 500, letterSpacing: "0.06em", textTransform: "uppercase", color: "#2563eb", background: "#eff6ff", borderRadius: 6, padding: "3px 9px", display: "inline-block", marginBottom: "0.25rem" }}>
-                                            {p.tag}
-                                        </span>
-                                        <p style={{ fontSize: 16, fontWeight: 700, color: "#0f172a", margin: 0, lineHeight: 1.3 }}>{p.title}</p>
-                                    </div>
-                                </div>
-                                <hr style={{ border: "none", borderTop: "0.5px solid #e2e8f0", margin: 0 }} />
-                                <p style={{ fontSize: 13, fontWeight: 500, color: "#2563eb", margin: 0 }}>{p.hook}</p>
-                                <p style={{ fontSize: 14, color: "#64748b", lineHeight: 1.65, margin: 0 }}>{p.desc}</p>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Benefits */}
-                    <span style={{ display: "inline-block", fontSize: 13, fontWeight: 500, color: "#2563eb", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "0.75rem" }}>
-                        Benefits of Pursuing an MBA in Agribusiness Management
-                    </span>
-                    <h2 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: 900, marginTop: "0.5rem", marginBottom: "0.75rem", color: "#0f172a" }}>
-                        Why ISMR MBA Agribusiness Pune Delivers More Than a General Management Degree
-                    </h2>
-                    <p style={{ fontSize: 16, color: "#64748b", lineHeight: 1.7, marginBottom: "2.5rem", maxWidth: 760 }}>
-                        Choosing a specialised MBA over a general one is a strategic career decision. Here is what students gain specifically from the Agribusiness Management course in Pune at ISMR — and why it translates into a measurable professional advantage:
-                    </p>
-
-                    <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
-                        {[
-                            {
-                                num: "01",
-                                icon: "📈",
-                                title: "Entering a Sector With Structural Long-Term Demand",
-                                desc: "Agriculture is one of India's largest economic contributors, yet organised management talent within the sector remains significantly scarce relative to its scale. This gap creates sustained hiring demand across commodity firms, food processing companies, agri-tech ventures, and rural financial institutions for precisely the kind of professional this program produces.",
-                            },
-                            {
-                                num: "02",
-                                icon: "🎯",
-                                title: "Career Advantage Over General MBA Graduates",
-                                desc: "A general MBA graduate entering agri-sector roles lacks contextual fluency — commodity price cycles, mandi regulation, and rural credit infrastructure are invisible to them. ISMR MBA Agribusiness Pune graduates enter as specialists, translating directly into faster role progression and access to opportunities that generalist candidates cannot compete for.",
-                            },
-                            {
-                                num: "03",
-                                icon: "🛠️",
-                                title: "Hands-On Exposure to Industry Tools and Platforms",
-                                desc: "Students work with tools actively deployed across the industry — ERP systems used in food processing operations, GIS-based crop mapping tools in precision agriculture, and commodity risk models applied on NCDEX and MCX. This operational fluency is what separates ISMR graduates from candidates with only classroom training.",
-                            },
-                            {
-                                num: "04",
-                                icon: "🔀",
-                                title: "Cross-Sector Career Applicability",
-                                desc: "This degree opens doors well beyond traditional agriculture; graduates move into FMCG supply chains, agri-tech startups, cooperative banking, commodity brokerage, rural microfinance, export-import firms, and international development organisations. Few management specialisations offer this breadth of sectoral mobility.",
-                            },
-                            {
-                                num: "05",
-                                icon: "⚖️",
-                                title: "A Rare Combination of Technical and Strategic Competence",
-                                desc: "Most business professionals lack domain knowledge in agriculture. Most agricultural professionals lack strategic business skills. This program builds both — simultaneously. Employers across agri-input firms, food processing conglomerates, and rural development institutions actively seek this combination because it remains genuinely rare.",
-                            },
-                            {
-                                num: "06",
-                                icon: "📍",
-                                title: "Location Advantage Within Maharashtra's Agri-Industrial Corridors",
-                                desc: "Studying the MBA Agribusiness fees Pune 2026 investment pays off through proximity — Nashik's export belts, Sangli's processing clusters, Kolhapur's cooperative sugar industry, and Pune's agri-tech ecosystem are all accessible for internships, live projects, and recruiter engagement during the program itself.",
-                            },
-                        ].map((b, i) => (
-                            <div key={i} style={{ display: "flex", gap: "1.25rem", alignItems: "flex-start", background: i % 2 === 0 ? "#f8fafc" : "#fff", border: "0.5px solid #e2e8f0", borderRadius: 12, padding: "1.5rem 1.75rem" }}>
-                                <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem", flexShrink: 0 }}>
-                                    <div style={{ width: 46, height: 46, borderRadius: 10, background: "#eff6ff", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                                        <span style={{ fontSize: 21 }}>{b.icon}</span>
-                                    </div>
-                                    <span style={{ fontSize: 11, fontWeight: 800, color: "#94a3b8", letterSpacing: "0.08em" }}>{b.num}</span>
-                                </div>
-                                <div>
-                                    <h3 style={{ fontSize: 16.5, fontWeight: 800, color: "#0f172a", margin: "0 0 0.4rem", lineHeight: 1.35 }}>{b.title}</h3>
-                                    <p style={{ fontSize: 14, color: "#64748b", lineHeight: 1.7, margin: 0 }}>{b.desc}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-
-            {/* ── STRATEGIC MARKET BENEFITS ── */}
-            <section id="benefits" style={{ backgroundColor: "#f8fafc", padding: "5rem 0" }}>
-                <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 2rem" }}>
-
-                    <div style={{ textAlign: "center", marginBottom: "3rem" }}>
-                        <span style={{ display: "inline-block", fontSize: 13, fontWeight: 500, color: "#2563eb", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "0.75rem" }}>
-                            FAQs
-                        </span>
-                        <h2 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: 900, marginTop: "0.5rem", color: "#0f172a" }}>
-                            Frequently Asked Questions
-                        </h2>
-                        <p style={{ fontSize: 16, color: "#64748b", lineHeight: 1.7, maxWidth: 620, margin: "0 auto" }}>
-                            MBA Agribusiness Management at ISMR Pune — common questions answered.
-                        </p>
-                    </div>
-
-                    <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-                        {[
-                            {
-                                q: "What is an MBA in Agribusiness Management?",
-                                a: "The MBA in Agribusiness Management is a two-year postgraduate program that integrates agricultural science with business disciplines — including supply chain management, commodity markets, rural finance, and agri-policy. It prepares graduates to manage and lead across India's food production, processing, and distribution sectors at both operational and strategic levels.",
-                            },
-                            {
-                                q: "Who can apply for an MBA in Agribusiness Management in Pune?",
-                                a: "The program is open to graduates from any stream — Agriculture, Science, Commerce, or Engineering — holding a minimum of 50% aggregate marks from a recognised university. Applicants must also hold a valid score from an accepted entrance exam such as MAH-MBA CET, CAT, CMAT, ATMA, or MAT.",
-                            },
-                            {
-                                q: "What is the duration of the MBA Agribusiness Management course?",
-                                a: "The Agribusiness Management course in Pune at ISMR is a two-year full-time program structured across four semesters. Each semester progressively builds on the previous one, moving from foundational agri-economics and supply chain principles to advanced topics in commodity risk management, sustainability strategy, and agri-entrepreneurship.",
-                            },
-                            {
-                                q: "Is MBA Agribusiness Management suitable for non-agriculture graduates?",
-                                a: "Yes. Commerce, Science, and Engineering graduates are fully eligible and regularly pursue this program to build a specialised career in agri-trade, food processing, rural finance, or commodity markets. The curriculum is structured to develop an agricultural context from the ground up for students without prior agri-science backgrounds.",
-                            },
-                            {
-                                q: "Is ISMR AICTE-approved for MBA Agribusiness Management?",
-                                a: "Yes. ISMR holds full AICTE approval and is affiliated with Savitribai Phule Pune University (SPPU). It also holds DTE and AIMS recognition, ensuring the degree meets all statutory requirements for employment, government recruitment, and further academic pursuits.",
-                            },
-                            {
-                                q: "What is the scope of MBA Agribusiness Management in India?",
-                                a: "Agribusiness management professionals are in active demand across commodity exchanges, food processing companies, agri-tech startups, rural finance institutions, FMCG supply chains, and government development agencies. India's organised agri-economy continues to expand, and the shortage of trained management professionals within the sector makes this one of the more stable and opportunity-rich specialisations available today.",
-                            },
-                            {
-                                q: "What are the MBA Agribusiness Fees at ISMR Pune for 2026?",
-                                a: "For accurate and current MBA Agribusiness fees Pune 2026 information, we recommend contacting ISMR's admissions office directly or downloading the program brochure, as fee structures are subject to annual revision and may vary based on category, scholarship eligibility, or government-regulated fee norms under the DTE Maharashtra framework.",
-                            },
-                            {
-                                q: "How does ISMR's SPPU affiliation benefit MBA Agribusiness students?",
-                                a: "SPPU affiliation ensures that the degree awarded by ISMR carries full university recognition accepted by employers, public sector institutions, and postgraduate programs across India. It also means the curriculum, examination standards, and academic processes are governed by one of Maharashtra's most established and respected university frameworks, adding credibility to every credential ISMR graduates hold.",
-                            },
-                        ].map((item, i) => (
-                            <div key={i} style={{ background: "#fff", border: "0.5px solid #e2e8f0", borderRadius: 12, padding: "1.5rem 1.75rem" }}>
-                                <div style={{ display: "flex", gap: "0.9rem", alignItems: "flex-start", marginBottom: "0.6rem" }}>
-                                    <span style={{ fontSize: 13, fontWeight: 800, color: "#2563eb", background: "#eff6ff", borderRadius: 8, padding: "0.3rem 0.6rem", flexShrink: 0 }}>
-                                        Q{i + 1}
-                                    </span>
-                                    <p style={{ fontSize: 16, fontWeight: 800, color: "#0f172a", margin: 0, lineHeight: 1.4 }}>{item.q}</p>
-                                </div>
-                                <p style={{ fontSize: 14, color: "#64748b", lineHeight: 1.75, margin: 0, paddingLeft: "2.5rem" }}>{item.a}</p>
-                            </div>
-                        ))}
-                    </div>
-
-                </div>
-            </section>
+  const toggleFaq = (index) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
 
 
 
-            {/* ── WHY ISMR ── */}
+  const scmFaqs = [
+    {
+      q: "What is an MBA in Agribusiness Management?",
+      a: "The MBA in Agribusiness Management is a two-year postgraduate program that integrates agricultural science with business disciplines, including supply chain management, commodity markets, rural finance, food processing, and agri-policy. The program prepares graduates for leadership roles across agribusiness, agri-tech, food processing, rural banking, commodity trading, and agricultural supply chains. ",
+    },
+    {
+      q: "Who can apply for an MBA in Agribusiness Management in Pune? ",
+      a: "The program is open to graduates from any stream — Agriculture, Science, Commerce, or Engineering — holding a minimum of 50% aggregate marks from a recognised university.Applicants must also hold a valid score from an accepted entrance exam such as MAH-MBA CET, CAT, CMAT, ATMA, or MAT.",
+    },
+    {
+      q: "What is the duration of the MBA Agribusiness Management course?",
+      a: "The Agribusiness Management course in Pune at ISMR is a two-year full-time program structured across four semesters.Each semester progressively builds on the previous one, moving from foundational agri-economics and supply chain principles to advanced topics in commodity risk management, sustainability strategy, and agri-entrepreneurship.",
+    },
+    {
+      q: "Is MBA Agribusiness Management suitable for non-agriculture graduates?",
+      a: "Yes. Commerce, Science, and Engineering graduates are fully eligible and regularly pursue this program to build a specialised career in agri-trade, food processing, rural finance, or commodity markets.The curriculum is structured to develop an agricultural context from the ground up for students without prior agri-science backgrounds.",
+    },
+    {
+      q: "Is ISMR AICTE-approved for MBA Agribusiness Management?",
+      a: "Yes. ISMR holds full AICTE approval and is affiliated with Savitribai Phule Pune University (SPPU). It also holds DTE and AIMS recognition, ensuring the degree meets all statutory requirements for employment, government recruitment, and further academic pursuits.",
+    },
+    {
+      q: "What is the scope of MBA Agribusiness Management in India? ",
+      a: "Agribusiness management professionals are in active demand across commodity exchanges, food processing companies, agri-tech startups, and rural finance institutions.FMCG supply chains and government development agencies. India's organised agri-economy continues to expand, and the shortage of trained management professionals within the sector makes this one of the more stable and opportunity-rich specialisations available today.",
+    },
+    {
+      q: "What are the MBA Agribusiness Fees at ISMR Pune for 2026?",
+      a: "For accurate and current MBA Agribusiness fees Pune 2026 information, we recommend contacting ISMR's admissions office directly or downloading the program brochure, as fee structures are subject to annual revision and may vary based on category, scholarship eligibility, or government-regulated fee norms under the DTE Maharashtra framework.",
+    },
+    {
+      q: "How does an SPPU-affiliated MBA in Agribusiness Management benefit students at ISMR?",
+      a: "SPPU affiliation ensures that the degree awarded by ISMR carries full university recognition accepted by employers, public sector institutions, and postgraduate programs across India.It also means the curriculum, examination standards, and academic processes are governed by one of Maharashtra's most established and respected university frameworks, adding credibility to every credential ISMR graduates hold.",
+    },
 
-            {/* ── FOOTER CTA ── */}
-            <section style={styles.footerCta}>
-                <div style={{ maxWidth: "40rem", margin: "0 auto", padding: "0 1.5rem" }}>
-                    <h2 style={styles.footerH2}>Shape Global Business Infrastructure</h2>
-                    <p style={styles.footerSubtitle}>Seats for MBA SCM Pune 2026 are limited. Secure yours with a single step — our counselors handle the rest.</p>
-                    <a href="#admissions" style={styles.footerBtn}>Start Your Application →</a>
-                    <p style={styles.footerNote}>ISMR Pune · AICTE Approved · SPPU Affiliated · DTE Maharashtra Recognized</p>
-                </div>
-            </section>
+  ];
+
+  return (
+    <section className="apply-wrapper">
+      <style>{`
+
+  .sector-note {
+  margin-top: 20px;
+  font-size: 1.05rem;
+  color: #444;
+  font-style: italic;
+}
+
+.salary-range-cell {
+  font-weight: 700;
+  color: #0f3350;
+  white-space: nowrap;
+}          
+
+.category-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.category-tab {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #f7f7f7;
+  cursor: pointer;
+}
+
+.category-tab.active {
+  background: #FFC333;
+  color: #000;
+  font-weight: 600;
+}
+  .doc-list ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.doc-list li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+
+
+
+        .apply-wrapper {
+          font-family: 'Inter', Arial, Helvetica, sans-serif;
+          color: #111;
+          background: #f8f9fa;
+        }
+        
+        /* Hero Section */
+        .hero {
+          position: relative;
+          display: flex;
+          align-items: center;
+          min-height: 280px;
+          background: #0f3350;
+          color: #fff;
+          padding: 50px 0;
+          overflow: hidden;
+        }
+        
+        .hero-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 40px;
+          width: 100%;
+        }
+        
+        .hero .library-bg {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(0deg, rgba(6,40,68,0.7), rgba(6,40,68,0.7));
+          background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&h=800&fit=crop');
+          background-size: cover;
+          background-position: center;
+          z-index: 0;
+        }
+        
+        .hero-inner {
+          position: relative;
+          z-index: 2;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          gap: 40px;
+        }
+        
+        .hero-left {
+          flex: 1;
+          max-width: 60%;
+        }
+        
+        .hero-left h1 {
+          font-size: 3.5rem;
+          margin: 0 0 12px;
+          font-weight: 800;
+          line-height: 1.1;
+        }
+        
+        .breadcrumb {
+          color: #ffd27b;
+          margin-top: 8px;
+          display: flex;
+          gap: 12px;
+          align-items: center;
+          font-size: 1rem;
+          font-weight: 500;
+        }
+        
+        .breadcrumb a {
+          color: #ffd27b;
+          text-decoration: none;
+          font-weight: 600;
+          transition: opacity 0.3s ease;
+        }
+        
+        .breadcrumb a:hover {
+          opacity: 0.8;
+        }
+        
+        .hero-left p {
+          margin-top: 20px;
+          font-size: 1.2rem;
+          line-height: 1.6;
+          opacity: 0.9;
+          max-width: 600px;
+        }
+        
+        .hero-right {
+          flex: 0 0 380px;
+          display: flex;
+          justify-content: flex-end;
+        }
+        
+        .photo-card {
+          width: 100%;
+          max-width: 380px;
+          height: 220px;
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+          background: #fff;
+          transition: transform 0.3s ease;
+        }
+        
+        .photo-card:hover {
+          transform: translateY(-5px);
+        }
+        
+        .photo-card img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        
+        /* Content Area */
+        .content-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 40px;
+        }
+        
+        .content-area {
+          padding: 60px 0;
+          background: #fff;
+        }
+        
+        .tabs {
+          display: flex;
+          gap: 16px;
+          flex-wrap: wrap;
+          margin-bottom: 40px;
+          justify-content: center;
+        }
+        
+        .tab-btn {
+          padding: 16px 32px;
+          border-radius: 12px;
+          border: 2px solid transparent;
+          background: #ffc333;
+          cursor: pointer;
+          font-weight: 700;
+          font-size: 1.1rem;
+          transition: all 0.3s ease;
+          color: #0f3350;
+        }
+        
+        .tab-btn:hover {
+          background: #ffb310;
+          transform: translateY(-2px);
+          box-shadow: 0 8px 20px rgba(255, 179, 16, 0.3);
+        }
+        
+        .tab-btn.active {
+          background: #0f3350;
+          color: #fff;
+          border-color: #0f3350;
+          box-shadow: 0 8px 25px rgba(15, 51, 80, 0.2);
+          transform: translateY(-2px);
+        }
+        
+        .panel {
+          background: #f7f9fb;
+          padding: 40px;
+          border-radius: 16px;
+          box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+          border: 1px solid rgba(15,51,80,0.1);
+        }
+        
+        /* Overview Tab */
+        .panel h2 {
+          margin: 0 0 20px;
+          font-size: 2.0rem;
+          font-weight: 700;
+          color: #0f3350;
+          line-height: 1.2;
+        }
+          .panel h1 {
+          margin: 0 0 20px;
+          font-size: 2.2rem;
+          font-weight: 700;
+          color: #0f3350;
+          line-height: 1.2;
+        }
+        
+        .panel p {
+          font-size: 1.1rem;
+          line-height: 1.7;
+          color: #444;
+          margin-bottom: 24px;
+        }
+        
+        .cta-row {
+          display: flex;
+          gap: 20px;
+          margin-top: 30px;
+        }
+        
+        .btn-primary {
+          background: #ff3a4e;
+          color: #fff;
+          padding: 16px 32px;
+          border-radius: 10px;
+          border: none;
+          cursor: pointer;
+          font-weight: 700;
+          font-size: 1.1rem;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 15px rgba(255, 58, 78, 0.3);
+        }
+        
+        .btn-primary:hover {
+          background: #e03547;
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(255, 58, 78, 0.4);
+        }
+        
+        .btn-secondary {
+          background: #fff;
+          border: 2px solid #0f3350;
+          color: #0f3350;
+          padding: 16px 32px;
+          border-radius: 10px;
+          cursor: pointer;
+          font-weight: 700;
+          font-size: 1.1rem;
+          transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+          background: #0f3350;
+          color: #fff;
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(15, 51, 80, 0.2);
+        }
+        
+        /* Steps Tab */
+        .step-list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 24px;
+          margin-top: 30px;
+        }
+        
+        .step {
+          background: #fff;
+          padding: 24px;
+          border-radius: 12px;
+          box-shadow: 0 4px 20px rgba(15,51,80,0.08);
+          transition: all 0.3s ease;
+          border-left: 4px solid #0f3350;
+        }
+        
+        .step:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 30px rgba(15,51,80,0.15);
+        }
+        
+        .step h3 {
+          margin: 0 0 12px;
+          font-size: 1.3rem;
+          font-weight: 700;
+          color: #0f3350;
+        }
+        
+        .step p {
+          margin: 0;
+          font-size: 1rem;
+          color: #555;
+          line-height: 1.6;
+        }
+        
+        /* Documents Tab */
+        .doc-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+          margin-top: 30px;
+        }
+        
+        .doc {
+          background: #fff;
+          padding: 20px;
+          border-radius: 10px;
+          border: 2px dashed rgba(15,51,80,0.2);
+          text-align: center;
+          font-weight: 600;
+          color: #0f3350;
+          transition: all 0.3s ease;
+          font-size: 1rem;
+        }
+        
+        .doc:hover {
+          background: #f0f7ff;
+          border-color: #0f3350;
+          transform: translateY(-3px);
+          box-shadow: 0 6px 20px rgba(15,51,80,0.1);
+        }
+        
+        /* Fees Tab */
+        .panel ul {
+          margin: 20px 0;
+          padding-left: 24px;
+        }
+        
+        .panel li {
+          font-size: 1.1rem;
+          line-height: 1.7;
+          color: #444;
+          margin-bottom: 12px;
+        }
+        
+        .panel strong {
+          color: #0f3350;
+          font-weight: 700;
+        }
+        
+        /* FAQ Tab */
+        .faq-wrap {
+          display: flex;
+          gap: 40px;
+          align-items: flex-start;
+          margin-top: 30px;
+        }
+        
+        .faq-main {
+          flex: 1;
+        }
+        
+        .faq-search {
+          display: flex;
+          gap: 16px;
+          align-items: center;
+          background: #fff;
+          padding: 16px 20px;
+          border-radius: 12px;
+          border: 2px solid rgba(15,51,80,0.1);
+          box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+          margin-bottom: 24px;
+        }
+        
+        .faq-search input {
+          border: 0;
+          outline: none;
+          font-size: 1.1rem;
+          width: 100%;
+          background: transparent;
+        }
+        
+        .faq-search input::placeholder {
+          color: #999;
+        }
+        
+        .faq-meta {
+          width: 320px;
+          background: #fff;
+          padding: 24px;
+          border-radius: 12px;
+          box-shadow: 0 6px 25px rgba(15,51,80,0.08);
+          border: 1px solid rgba(15,51,80,0.1);
+        }
+        
+        .faq-meta h4 {
+          margin: 0 0 16px;
+          font-size: 1.3rem;
+          font-weight: 700;
+          color: #0f3350;
+        }
+        
+        .faq-meta p {
+          margin: 0 0 16px;
+          font-size: 1rem;
+          color: #555;
+          line-height: 1.6;
+        }
+        
+        .faq-meta a {
+          color: #0f3350;
+          text-decoration: none;
+          font-weight: 600;
+          transition: color 0.3s ease;
+        }
+        
+        .faq-meta a:hover {
+          color: #ff3a4e;
+        }
+        
+        .faq-meta ul {
+          margin: 0;
+          padding-left: 20px;
+        }
+        
+        .faq-meta li {
+          margin-bottom: 8px;
+          font-size: 1rem;
+        }
+        
+        .accordion {
+          margin-top: 0;
+        }
+        
+        .acc-item {
+          background: #fff;
+          border-radius: 12px;
+          margin-bottom: 16px;
+          overflow: hidden;
+          border: 2px solid rgba(15,51,80,0.1);
+          transition: all 0.3s ease;
+        }
+        
+        .acc-item:hover {
+          border-color: #0f3350;
+          box-shadow: 0 4px 15px rgba(15,51,80,0.1);
+        }
+        
+        .acc-btn {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          padding: 20px 24px;
+          cursor: pointer;
+          background: linear-gradient(180deg, #fff, #fbfdff);
+          border: 0;
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: #0f3350;
+          transition: all 0.3s ease;
+        }
+        
+        .acc-btn:hover {
+          background: linear-gradient(180deg, #f8faff, #f5f9ff);
+        }
+        
+        .acc-q {
+          display: flex;
+          gap: 16px;
+          align-items: center;
+        }
+        
+        .acc-q svg {
+          flex-shrink: 0;
+        }
+        
+        .acc-body {
+          padding: 0 24px 24px 24px;
+          color: #444;
+          font-size: 1rem;
+          line-height: 1.7;
+          transition: all 0.3s ease;
+        }
+        
+        .acc-body.closed {
+          display: none;
+        }
+        
+        .chev {
+          transition: transform 0.3s ease;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+          .hero-inner {
+            flex-direction: column;
+            text-align: center;
+            gap: 30px;
+          }
+          
+          .hero-left {
+            max-width: 100%;
+          }
+          
+          .hero-right {
+            justify-content: center;
+            width: 100%;
+          }
+          
+          .step-list {
+            grid-template-columns: 1fr;
+          }
+          
+          .doc-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+          
+          .faq-wrap {
+            flex-direction: column;
+          }
+          
+          .faq-meta {
+            width: 100%;
+          }
+        }
+        
+        @media (max-width: 768px) {
+          .hero-container,
+          .content-container {
+            padding: 0 24px;
+          }
+          
+          .hero-left h1 {
+            font-size: 2.5rem;
+          }
+          
+          .tabs {
+            flex-direction: column;
+            align-items: center;
+          }
+          
+          .tab-btn {
+            width: 100%;
+            max-width: 280px;
+          }
+          
+          .panel {
+            padding: 30px 24px;
+          }
+          
+          .cta-row {
+            flex-direction: column;
+          }
+          
+          .doc-grid {
+            grid-template-columns: 1fr;
+          }
+          
+          .faq-search {
+            padding: 14px 18px;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .hero-left h1 {
+            font-size: 2rem;
+          }
+          
+          .hero-left p {
+            font-size: 1rem;
+          }
+          
+          .panel h2 {
+            font-size: 1.8rem;
+          }
+        }
+
+        .marketing-section {
+  padding: 30px 0;
+  background: #fff;
+}
+
+.marketing-section .panel {
+  margin-bottom: 0px;
+}
+
+.marketing-section .intro-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.highlight-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.highlight-list li {
+  background: #f7f9fb;
+  border-left: 4px solid #ffc333;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #0f3350;
+  font-size: 1rem;
+}
+
+.comparison-table-wrap {
+  overflow-x: auto;
+  margin-top: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  min-width: 700px;
+}
+
+.comparison-table th {
+  background: #0f3350;
+  color: #fff;
+  text-align: left;
+  padding: 16px 20px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.comparison-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(15,51,80,0.1);
+  font-size: 0.98rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table td:first-child {
+  font-weight: 700;
+  color: #0f3350;
+}
+
+.comparison-table td.highlight-cell {
+  background: #fff8e6;
+  font-weight: 600;
+  color: #0f3350;
+}
+
+.comparison-note {
+  margin-top: 24px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .highlight-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stat-highlight {
+  background: linear-gradient(135deg, #0f3350, #1a4d7a);
+  color: #fff;
+  padding: 28px 32px;
+  border-radius: 12px;
+  margin: 24px 0;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.stat-highlight .stat-number {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #ffc333;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.stat-highlight .stat-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  flex: 1;
+  min-width: 220px;
+}
+
+.growth-arrow {
+  color: #0f3350;
+  font-weight: 600;
+}
+
+.growth-arrow .arrow-icon {
+  color: #ff3a4e;
+  margin: 0 6px;
+}
+
+.salary-cell {
+  font-weight: 700;
+  color: #0f3350;
+  white-space: nowrap;
+}
+
+.sub-heading {
+  color: #0f3350;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 32px 0 16px;
+}
+
+.sub-heading:first-child {
+  margin-top: 0;
+}
+  .opportunity-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.opportunity-list li {
+  position: relative;
+  padding: 14px 20px 14px 44px;
+  background: #f7f9fb;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.opportunity-list li::before {
+  content: "📍";
+  position: absolute;
+  left: 16px;
+  top: 13px;
+  font-size: 1rem;
+}
+
+.factor-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.factor-list li {
+  padding: 16px 20px;
+  border-left: 4px solid #0f3350;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(15,51,80,0.06);
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 14px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.factor-list li strong {
+  color: #0f3350;
+}
+
+.fit-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+}
+
+.fit-list li {
+  position: relative;
+  padding: 12px 16px 12px 40px;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.fit-list li.yes::before {
+  content: "✓";
+  position: absolute;
+  left: 8px;
+  top: 10px;
+  color: #1a9c4a;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.fit-list li.no {
+  background: #fff4f4;
+  border-radius: 8px;
+  color: #7a2020;
+}
+
+.fit-list li.no::before {
+  content: "✕";
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  color: #ff3a4e;
+  font-weight: 800;
+}
+
+.admission-note {
+  margin-top: 30px;
+  padding: 24px 28px;
+  background: #0f3350;
+  color: #fff;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.admission-note p {
+  color: #fff;
+  font-size: 1.15rem;
+  margin: 0 0 16px;
+}
+
+.admission-note .btn-primary {
+  display: inline-block;
+}
+
+.role-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.role-list li {
+  padding: 14px 20px;
+  background: #f7f9fb;
+  border-left: 4px solid #0f3350;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.role-list li strong {
+  color: #0f3350;
+}
+
+.analyst-col {
+  background: #fff8e6 !important;
+  font-weight: 600;
+}
+
+.semester-block {
+  margin-bottom: 24px;
+  padding: 20px 24px;
+  background: #f7f9fb;
+  border-radius: 10px;
+  border-left: 4px solid #ffc333;
+}
+
+.semester-block h4 {
+  color: #0f3350;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.semester-block p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.year-heading {
+  color: #0f3350;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 32px 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(15,51,80,0.1);
+}
+
+.year-heading:first-of-type {
+  margin-top: 0;
+}
+.subject-skill-cell {
+  color: #0f3350;
+  font-weight: 600;
+}
+
+.reason-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.reason-list li {
+  position: relative;
+  padding: 12px 20px 12px 30px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.reason-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #1a9c4a;
+  font-weight: 800;
+}
+
+.brochure-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 16px 32px;
+  background: #ffc333;
+  color: #0f3350;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.brochure-btn:hover {
+  background: #ffb310;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 179, 16, 0.3);
+}
+
+.final-cta-panel {
+  text-align: center;
+  background: linear-gradient(135deg, #0f3350, #1a4d7a);
+  color: #fff;
+}
+
+.final-cta-panel h2 {
+  color: #fff;
+}
+
+.final-cta-panel p {
+  color: #d9e6f2;
+}
+
+      `}</style>
+
+      <section
+        className="py-5 text-white text-center position-relative"
+        style={{
+          background:
+            "linear-gradient(135deg, #0a2240 0%, #1a4d7a 100%)",
+        }}
+      >
+        <div
+          className="position-absolute top-0 end-0 w-100 h-100 opacity-25"
+          style={{
+            backgroundImage: `url(${allsectionbg})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        ></div>
+
+        <div className="container position-relative py-5">
+          <span
+            className="mb-3"
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "30px",
+              fontWeight: 700,
+              margin: 0,
+            }}
+          >
+            MBA in Agribusiness  <span className="text-warning">Management</span>
+          </span>
+          <p
+            className="mb-0"
+            style={{
+              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+              fontSize: "15px",
+              marginTop: "0.5rem",
+            }}
+          >
+            Courses •{" "}
+            <span className="text-warning">MBA in Agribusiness Management</span>
+          </p>
         </div>
-    );
+      </section>
+
+
+      <section className="marketing-section">
+        <div className="content-container">
+          <div className="panel">
+            <h1>Searching for the Right MBA in Agribusiness Management College in Pune? Your Answer Starts Here</h1>
+
+            <p className="intro-text">
+              India's agriculture sector is evolving fast — from traditional farming into organised supply chains, commodity markets, food processing industries, and agri-tech ventures.
+            </p>
+
+            <p className="intro-text">
+              ISMR prepares you to lead at every level of this transformation through an SPPU-affiliated academic framework, industry-integrated learning, and experienced faculty that brings real agri-business experience into every classroom.
+            </p>
+
+            <a href="/Contactus" className="default-btn">
+              Book a Free Counselling Session →
+            </a>
+            <p className="intro-text small-note">
+              Get your questions answered before you commit to anything.
+            </p>
+          </div>
+
+          <div className="panel mt-4">
+            <h2>Why Choose ISMR for an MBA in Agribusiness Management in Pune?</h2>
+
+            <ul className="gap-list">
+              <li>AICTE Approved</li>
+              <li>SPPU Affiliated</li>
+              <li>DTE & AIMS Recognised</li>
+              <li>Industry-Oriented Curriculum</li>
+              <li>Field Visits & Live Projects</li>
+              <li>Practical Value-Chain Exposure</li>
+            </ul>
+
+            <p className="intro-text">
+              ISMR offers an AICTE-approved MBA in Agribusiness Management in Pune with an industry-oriented curriculum, SPPU affiliation, field visits, live projects, and practical exposure designed to prepare students for leadership roles across the agribusiness value chain.
+            </p>
+          </div>
+
+          <div className="panel mt-4">
+            <h2>Program Snapshot</h2>
+
+            <table className="snapshot-table">
+              <thead>
+                <tr>
+                  <th>Detail</th>
+                  <th>Information</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Duration</td>
+                  <td>2 Years / 4 Semesters</td>
+                </tr>
+                <tr>
+                  <td>Affiliation</td>
+                  <td>Savitribai Phule Pune University (SPPU)</td>
+                </tr>
+                <tr>
+                  <td>Approval</td>
+                  <td>AICTE / DTE / AIMS</td>
+                </tr>
+                <tr>
+                  <td>Learning Format</td>
+                  <td>Case Studies, Field Visits, Live Projects</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p className="intro-text">
+              Learning goes beyond the classroom. Students visit agricultural mandis, food processing units, and rural cooperatives, grounding theory in real operational environments before graduation.
+            </p>
+
+            <a href="/Contactus" className="default-btn">
+              Get the Full Programme Details →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="marketing-section">
+        <div className="content-container">
+
+          {/* Core Subjects Panel */}
+          <div className="panel">
+            <h2>Core Subjects at a Glance</h2>
+
+            <h3 style={{ fontSize: "20px" }}>1. Agri-Supply Chain & Logistics</h3>
+            <p className="intro-text">
+              Learn how produce moves from farm gate to end consumer, covering procurement, cold chain infrastructure, warehousing, and last-mile distribution. Focus is on reducing post-harvest losses and improving margin realisation.
+            </p>
+
+            <h3 style={{ fontSize: "20px" }}>2. Agricultural Marketing & Trade</h3>
+            <p className="intro-text">
+              Understand commodity branding, mandi-to-retail transitions, export documentation, and international agri-trade policy. Build market linkage strategies that deliver real value to producers.
+            </p>
+
+            <h3 style={{ fontSize: "20px" }}>3. Rural Finance & Microfinance</h3>
+            <p className="intro-text">
+              Study NABARD credit programmes, Kisan Credit Card structures, SHG models, and MFI lending frameworks. Learn to assess farm enterprise viability and design rural financial products for smallholder farmers.
+            </p>
+
+            <h3 style={{ fontSize: "20px" }}>4. Commodity Markets & Risk Management</h3>
+            <p className="intro-text">
+              Develop working knowledge of NCDEX and MCX exchanges, futures and options in agri-commodities, and enterprise-level hedging strategies to manage the price volatility inherent in agricultural business.
+            </p>
+
+            <h3 style={{ fontSize: "20px" }}>5. Food Processing & Value Chain Management</h3>
+            <p className="intro-text">
+              Explore how raw produce becomes consumer-ready products — with focus on FSSAI compliance, value addition economics, food safety systems, and retail integration in India's growing food processing sector.
+            </p>
+
+            <h3 style={{ fontSize: "20px" }}>6. Agri-Policy, Regulation & Sustainability</h3>
+            <p className="intro-text">
+              Examine APMC structures, MSP mechanisms, contract farming regulations, and FPO frameworks. Understand how climate-smart agriculture and global sustainability mandates are reshaping agri-business strategy.
+            </p>
+
+            <h3 style={{ fontSize: "20px" }}>7. Farm Business Management</h3>
+            <p className="intro-text">
+              Apply core management principles — financial planning, operational efficiency, cash flow management — directly to farm enterprises. Build business plans suited to both smallholder contexts and commercial farming operations.
+            </p>
+
+            <h3 style={{ fontSize: "20px" }}>8. Agri-Entrepreneurship & Startup Ecosystem</h3>
+            <p className="intro-text">
+              Explore FPO structures, agri-tech incubators, and government startup schemes. Identify unmet market opportunities and develop pitch-ready agri-business concepts capable of attracting institutional funding.
+            </p>
+          </div>
+
+          {/* Eligibility & Admissions Criteria Panel */}
+          <div className="panel mt-4">
+            <h2>Eligibility & Admissions Criteria</h2>
+
+            <h3 style={{ fontSize: "20px" }}>Academic Qualification</h3>
+            <ul className="gap-list">
+              <li>Bachelor's degree in any stream from a recognised university</li>
+              <li>Priority for: Agriculture, Horticulture, Food Technology, Dairy, Veterinary, Fisheries graduates</li>
+              <li>Commerce, Science & Engineering graduates fully eligible</li>
+            </ul>
+
+            <h3 style={{ fontSize: "20px" }}>Minimum Marks</h3>
+            <ul className="gap-list">
+              <li>General category: 50% aggregate at undergraduate level</li>
+              <li>SC / ST / OBC / PwD: 45% aggregate (as per Maharashtra state norms)</li>
+            </ul>
+
+            <h3 style={{ fontSize: "20px" }}>Entrance Exams Accepted</h3>
+            <ul className="gap-list">
+              <li>MAH-MBA CET (mandatory for Maharashtra domicile — CAP Round)</li>
+              <li>CAT / CMAT / ATMA / MAT (also accepted)</li>
+            </ul>
+
+            <h3 style={{ fontSize: "20px" }}>Work Experience</h3>
+            <ul className="gap-list">
+              <li>Not mandatory</li>
+              <li>Relevant experience in agri-inputs, rural banking, food processing, or agri-tech is an advantage during selection</li>
+            </ul>
+          </div>
+
+          {/* Admissions Support Panel */}
+          <div className="panel mt-4">
+            <h2>How ISMR Supports Your Admission</h2>
+
+            <p className="intro-text">
+              The DTE Maharashtra CAP Round process — CET registration, document verification, preference filling, and seat acceptance — can be complex for first-time applicants.
+            </p>
+
+            <p className="intro-text">
+              ISMR's admissions counseling team provides:
+            </p>
+
+            <ul className="gap-list">
+              <li>✅ Entrance exam identification and registration guidance</li>
+              <li>✅ Eligibility documentation support</li>
+              <li>✅ Error-free enrollment support</li>
+            </ul>
+
+            <p className="intro-text">
+              Students seeking MBA in Agribusiness Management admission in Pune for the 2026 academic session receive end-to-end support from ISMR's admissions counselling team, including entrance exam guidance, eligibility verification, documentation assistance, and enrolment support.
+            </p>
+
+            <p className="intro-text">
+              With SPPU affiliation, AICTE approval, industry-focused learning, and dedicated admission assistance, ISMR helps students move from admission confusion to career clarity — one guided step at a time.
+            </p>
+          </div>
+
+        </div>
+      </section>
+      <section className="marketing-section">
+        <div className="content-container">
+
+          {/* Who Should Pursue Panel */}
+          <div className="panel">
+            <h2>Who Should Pursue This Course?</h2>
+
+            <p className="intro-text" style={{ fontWeight: 700, color: "#0f3350" }}>
+              Is the Agribusiness Management Course in Pune Right for You?
+            </p>
+
+            <p className="intro-text">
+              Not every MBA is built for every ambition. This program is specifically designed for students and professionals who want to operate at the intersection of agriculture and business leadership. Here's who benefits most:
+            </p>
+
+            <h3 style={{ fontSize: "20px" }}>Agriculture & Science Graduates</h3>
+            <p className="intro-text">
+              Your technical foundation is your biggest advantage — this program adds the business strategy layer on top of it.
+            </p>
+            <p className="intro-text">
+              You graduate as the rare professional who understands both crop science and corporate decision-making, making you a priority hire for agri-input firms, consulting companies, and commodity trading houses.
+            </p>
+
+            <h3 style={{ fontSize: "20px" }}>Commerce & Business Graduates</h3>
+            <p className="intro-text">
+              Financial literacy alone isn't enough to crack agri-commodity markets or rural supply chains.
+            </p>
+            <p className="intro-text">
+              This program gives you the sector-specific grounding — APMC trade structures, commodity pricing mechanics, agri-supply chain logic that no general MBA covers.
+            </p>
+
+            <h3 style={{ fontSize: "20px" }}>Working Professionals in Agri, Seed, Fertilizer & FMCG Firms</h3>
+            <p className="intro-text">
+              Already working in the sector but hitting a ceiling without formal management credentials?
+            </p>
+            <p className="intro-text">
+              This curriculum addresses the strategic and operational challenges you face daily — making every module immediately applicable to your current role and your next one.
+            </p>
+
+            <h3 style={{ fontSize: "20px" }}>Rural Economy & Development Professionals</h3>
+            <p className="intro-text">
+              If your work touches NABARD programmes, FPOs, rural cooperatives, or microfinance institutions — this program sharpens both the financial analysis and policy understanding you need to design interventions that create real, measurable rural impact.
+            </p>
+
+            <h3 style={{ fontSize: "20px" }}>Agri-Entrepreneurs & Family Farm Business Members</h3>
+            <p className="intro-text">
+              Running or inheriting a farm enterprise, agri-input dealership, or rural processing unit?
+            </p>
+            <p className="intro-text">
+              This program replaces guesswork with a framework that covers data-driven planning, enterprise financial management, and market linkage strategies that help traditional agri-businesses scale confidently.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+
+      <section className="marketing-section">
+        <div className="content-container">
+
+          {/* Benefits Panel */}
+          <div className="panel">
+            <h2>Benefits of Pursuing an MBA in Agribusiness Management</h2>
+
+            <p className="intro-text" style={{ fontWeight: 700, color: "#0f3350" }}>
+              Career Advantages of Pursuing MBA in Agribusiness Management at ISMR
+            </p>
+
+            <p className="intro-text">
+              Choosing the right Agribusiness Management specialization in Pune is only the first step. Selecting an institute that combines academic excellence with industry exposure is equally important.
+            </p>
+
+            <p className="intro-text">
+              ISMR's MBA in Agribusiness Management in Pune combines academic excellence, practical learning, and industry engagement to prepare students for careers across agribusiness, food processing, agri-tech, commodity markets, and rural development.
+            </p>
+
+            <p className="intro-text" style={{ fontWeight: 700, color: "#0f3350" }}>
+              1. Entering a Sector With Structural Long-Term Demand:
+            </p>
+            <p className="intro-text">
+              Agriculture is one of India's largest economic contributors, yet organised management talent within the sector remains significantly scarce relative to its scale.
+            </p>
+            <p className="intro-text">
+              This gap creates sustained hiring demand across commodity firms, food processing companies, agri-tech ventures, and rural financial institutions for precisely the kind of professional this program produces.
+            </p>
+
+            <p className="intro-text" style={{ fontWeight: 700, color: "#0f3350" }}>
+              2. Career Advantage Over General MBA Graduates:
+            </p>
+            <p className="intro-text">
+              A general MBA graduate entering agri-sector roles lacks contextual fluency — commodity price cycles, mandi regulation, and rural credit infrastructure are invisible to them.
+            </p>
+            <p className="intro-text">
+              ISMR MBA Agribusiness Pune graduates enter as specialists, translating directly into faster role progression and access to opportunities that generalist candidates cannot compete for.
+            </p>
+
+            <p className="intro-text" style={{ fontWeight: 700, color: "#0f3350" }}>
+              3. Hands-On Exposure to Industry Tools and Platforms:
+            </p>
+            <p className="intro-text">
+              Students work with tools actively deployed across the industry, including ERP systems used in food processing operations, GIS-based crop mapping tools for precision agriculture, and commodity risk models used on NCDEX and MCX.
+            </p>
+            <p className="intro-text">
+              This operational fluency is what separates ISMR graduates from candidates with only classroom training.
+            </p>
+
+            <p className="intro-text" style={{ fontWeight: 700, color: "#0f3350" }}>
+              4. Cross-Sector Career Applicability:
+            </p>
+            <p className="intro-text">
+              This degree opens doors well beyond traditional agriculture; graduates move into FMCG supply chains, agri-tech startups, cooperative banking, commodity brokerage, rural microfinance, export-import firms, and international development organisations.
+            </p>
+            <p className="intro-text">
+              Few management specialisations offer this breadth of sectoral mobility.
+            </p>
+
+            <p className="intro-text" style={{ fontWeight: 700, color: "#0f3350" }}>
+              5. A Rare Combination of Technical and Strategic Competence:
+            </p>
+            <p className="intro-text">
+              Most business professionals lack domain knowledge in agriculture. Most agricultural professionals lack strategic business skills.
+            </p>
+            <p className="intro-text">
+              This program builds both — simultaneously. Employers across agri-input firms, food processing conglomerates, and rural development institutions actively seek this combination because it remains genuinely rare.
+            </p>
+
+            <p className="intro-text" style={{ fontWeight: 700, color: "#0f3350" }}>
+              6. Location Advantage Within Maharashtra's Agri-Industrial Corridors:
+            </p>
+            <p className="intro-text">
+              Studying in Pune provides access to Maharashtra's major agri-industrial corridors, including Nashik's horticulture and export clusters, Sangli's food processing ecosystem, Kolhapur's cooperative sector, and Pune's growing agri-tech industry.
+            </p>
+            <p className="intro-text">
+              This proximity creates valuable opportunities for internships, field visits, live projects, and industry interaction throughout the program.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <div className="content-container">
+        <div className="panel">
+
+          <h2>Frequently Asked Questions — MBA Agribusiness Management at ISMR Pune
+          </h2>
+
+          <div className="accordion">
+            {scmFaqs.map((item, index) => (
+              <div className="acc-item" key={index}>
+                <button
+                  className="acc-btn"
+                  onClick={() => toggleFaq(index)}
+                >
+                  <span className="acc-q">{item.q}</span>
+                  <svg
+                    className="chev"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    style={{
+                      transform: openFaq === index ? "rotate(180deg)" : "rotate(0deg)",
+                    }}
+                  >
+                    <path
+                      d="M5 7.5L10 12.5L15 7.5"
+                      stroke="#0f3350"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+                <div className={`acc-body doc-list ${openFaq === index ? "" : "closed"}`}>
+                  {item.a}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <Faq />
+    </section>
+  );
 }

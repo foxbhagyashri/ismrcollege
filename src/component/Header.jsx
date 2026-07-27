@@ -298,15 +298,15 @@ const Header = () => {
               Course Duration
             </Link>
           </li>
-          {/* <li>
+          <li>
             <Link
               className="dropdown-item"
-              to="/Academics/Library"
+              to="/Academics/MBA-Program"
               onClick={handleDropdownItemClick}
             >
-              Library
+              MBA Program
             </Link>
-          </li> */}
+          </li>
 
           {/* Cleaned up commented links */}
         </ul>

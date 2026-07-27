@@ -78,13 +78,15 @@ import PredictiveMarketingExplained from "./component/blogs/Predictive-Marketing
 import Listofdocument from "./component/Pages/Addmissions/Listofdocuments";
 import AdmissionNote from "./component/Pages/notices/Admissions";
 import ChatbotLoader from "./component/ChatbotLoader";
-import OperationSupplyChainManagement from "./component/Pages/Programs/MBA-in-Operations-and-Supply-Chain-Management-Programme"
+import OperationSupplyChainManagement from "./component/Pages/Programs/MBA-in-Operations-and-Supply-Chain-Management-Programme-in-pune"
 import MBAMarketingManagement from "./component/Pages/Programs/MBA-Marketing-management-in-pune"
 import MBAFinanceManagement from "./component/Pages/Programs/MBA-in-Finance-Management-in-Pune"
 import MBAAgribusinessManagement from "./component/Pages/Programs/MBA-in-Agribusiness-Management-College-in-Pune"
-import MBAPharmaCollegesInPune from "./component/Pages/Programs/MBA-Pharma-Colleges-in-Pune"
-import MBAHRCollegesInPune from "./component/Pages/Programs/MBA-HR-Colleges-in-Pune"
-
+import MBAPharmaCollegesInPune from "./component/Pages/Programs/MBA-in-Pharma-Healthcare-Management-in-Pune"
+import MBAHRCollegesInPune from "./component/Pages/Programs/MBA-HR-Management-in-Pune"
+import MbaProgramPage from "./component/Pages/Academics/MBA-Program"
+import BBACourse from "./component/Pages/Programs/BBA-Programme-in-Pune";
+import BCACourse from "./component/Pages/Programs/BCA-Programme-inn-Pune";
 
 function App() {
     return (
@@ -220,6 +222,11 @@ function App() {
                     element={<Courseduration />}
                 />
 
+                <Route
+                    path="/Academics/MBA-Program"
+                    element={<MbaProgramPage />}
+                />
+
                 {/* Newsletter Page */}
                 <Route
                     path="/NewsPage/Newsletter"
@@ -298,7 +305,7 @@ function App() {
                 />
 
                 <Route
-                    path="/Programs/MBA-in-Operations-and-Supply-Chain-Management-Programme"
+                    path="/Programs/MBA-in-Operations-and-Supply-Chain-Management-Programme-in-pune"
                     element={<OperationSupplyChainManagement />}
                 />
                 <Route
@@ -314,12 +321,22 @@ function App() {
                     element={<MBAAgribusinessManagement />}
                 />
                 <Route
-                    path="/Programs/MBA-Pharma-Colleges-in-Pune"
+                    path="/Programs/MBA-in-Pharma-Healthcare-Management-in-Pune"
                     element={<MBAPharmaCollegesInPune />}
                 />
                 <Route
-                    path="/Programs/MBA-HR-Colleges-in-Pune"
+                    path="/Programs/MBA-HR-Management-in-Pune"
                     element={<MBAHRCollegesInPune />}
+                />
+
+                <Route
+                    path="/Programs/BBA-Programme-in-Pune"
+                    element={<BBACourse />}
+                />
+
+                    <Route
+                    path="/Programs/BCA-Programme-inn-Pune"
+                    element={<BCACourse />}
                 />
 
 
