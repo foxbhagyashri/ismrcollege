@@ -290,14 +290,14 @@ export default function ISMRLanding() {
         /* Overview Tab */
         .panel h2 {
           margin: 0 0 20px;
-          font-size: 2.0rem;
+          font-size: 15px;
           font-weight: 700;
           color: #0f3350;
           line-height: 1.2;
         }
           .panel h1 {
           margin: 0 0 20px;
-          font-size: 2.2rem;
+          font-size: 20px;
           font-weight: 700;
           color: #0f3350;
           line-height: 1.2;
@@ -659,7 +659,7 @@ export default function ISMRLanding() {
           }
           
           .panel h2 {
-            font-size: 1.8rem;
+            font-size: 15px;
           }
         }
 
@@ -802,7 +802,7 @@ export default function ISMRLanding() {
 
 .sub-heading {
   color: #0f3350;
-  font-size: 1.3rem;
+  font-size: 13px;
   font-weight: 700;
   margin: 32px 0 16px;
 }
@@ -966,7 +966,7 @@ export default function ISMRLanding() {
 
 .year-heading {
   color: #0f3350;
-  font-size: 1.5rem;
+  font-size: 13px;
   font-weight: 700;
   margin: 32px 0 16px;
   padding-bottom: 10px;
