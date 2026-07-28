@@ -1120,13 +1120,13 @@ export default function ISMRLanding() {
                                         <td>Total Fee</td>
                                         <td>Approx. ₹4 lakh (₹2 lakh/year)</td>
                                     </tr>
-                                    <tr>
+                                    {/* <tr>
                                         <td>Highest Package</td>
                                         <td className="highlight-cell">₹12 LPA (2025)</td>
-                                    </tr>
+                                    </tr> */}
                                     <tr>
                                         <td>Average Package</td>
-                                        <td className="highlight-cell">₹5.2–6.8 LPA (2025)</td>
+                                        <td className="highlight-cell">₹4.0–6.8 LPA (since inception)</td>
                                     </tr>
                                     <tr>
                                         <td>Placement Rate</td>
@@ -1304,35 +1304,35 @@ export default function ISMRLanding() {
                                 <tbody>
                                     <tr>
                                         <td>Financial Analyst</td>
-                                        <td className="salary-range-cell">₹4–8 LPA</td>
+                                        <td className="salary-range-cell">₹4–8 LPA <span style={{ color: "red" }}>*</span></td>
                                         <td>Decision support, data interpretation</td>
                                     </tr>
                                     <tr>
                                         <td>Investment Analyst</td>
-                                        <td className="salary-range-cell">₹6–12 LPA</td>
+                                        <td className="salary-range-cell">₹6–12 LPA <span style={{ color: "red" }}>*</span></td>
                                         <td>Valuation, research, portfolio assessment</td>
                                     </tr>
                                     <tr>
                                         <td>Corporate Finance</td>
-                                        <td className="salary-range-cell">₹4–7 LPA</td>
+                                        <td className="salary-range-cell">₹4–7 LPA <span style={{ color: "red" }}>*</span></td>
                                         <td>Budgeting, forecasting, planning</td>
                                     </tr>
                                     <tr>
                                         <td>MIS / Reporting Analyst</td>
-                                        <td className="salary-range-cell">₹3.5–6 LPA</td>
+                                        <td className="salary-range-cell">₹3.5–6 LPA <span style={{ color: "red" }}>*</span></td>
                                         <td>Excel-heavy, dashboard management</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
 
-                        <p className="intro-text" style={{ marginTop: "20px" }}>
+                        {/* <p className="intro-text" style={{ marginTop: "20px" }}>
                             Not all graduates reach ₹6–12 LPA immediately. These roles require
                             strong data handling skills, business interpretation ability, and
                             preparation that most students begin too late.
-                        </p>
+                        </p> */}
 
-                        <p className="intro-text" style={{ fontWeight: 700, color: "#0f3350" }}>
+                        <p className="intro-text mt-4" style={{ fontWeight: 700, color: "#0f3350" }}>
                             ISMR's Finance specialisation trains students specifically on the
                             skills that determine which salary bracket they enter — not just
                             which concepts they know.
@@ -1393,7 +1393,7 @@ export default function ISMRLanding() {
                                     </tr>
                                     <tr>
                                         <td>Salary Range</td>
-                                        <td className="analyst-col">₹4–12 LPA</td>
+                                        <td className="analyst-col">₹4–7 LPA</td>
                                         <td>₹2.5–4 LPA</td>
                                     </tr>
                                     <tr>
