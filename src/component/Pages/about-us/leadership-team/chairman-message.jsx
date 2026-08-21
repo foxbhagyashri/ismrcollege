@@ -1,9 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import allsectionbg from "../../../assets/allsectionbg.jpg";
-import director from "../../../assets/Homeimg/Director.png";
-import secretary from "../../../assets/Homeimg/Secretary.png";
-import cairman from "../../../assets/Homeimg/cairman.png";
+import allsectionbg from "../../../../assets/allsectionbg.jpg";
+import director from "../../../../assets/Homeimg/Director.png";
+import secretary from "../../../../assets/Homeimg/Secretary.png";
+import cairman from "../../../../assets/Homeimg/cairman.png";
 
 function Leadership() {
   return (
@@ -87,7 +87,7 @@ function Leadership() {
               margin: 0,
             }}
           >
-            Message  <span className="text-warning">From Secretary</span>
+            Founder President  <span className="text-warning">Message</span>
           </h1>
           <p
             className="mb-0"
@@ -97,7 +97,7 @@ function Leadership() {
               marginTop: "0.5rem",
             }}
           >
-            About • <span className="text-warning">Message From Secretary</span>
+            About • <span className="text-warning">Founder President</span>
           </p>
         </div>
       </section>
@@ -111,33 +111,16 @@ function Leadership() {
       {/* Leadership Cards */}
       <section className="py-1 pt-4">
         <div className="container">
-
-
-          <div className="row g-4 mt-5">
-
+          <div className="row g-4 mt-3">
 
             <div className="col-12 col-md-5 col-lg-5">
               <img
-                src={secretary}
+                src={cairman}
                 alt="Leadership Team"
                 className="img-fluid rounded"
               />
             </div>
-
             <div className="col-12 col-md-7 col-lg-7">
-              {/* <h2
-                style={{
-                  fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                  fontSize: "32px",
-                  fontWeight: 700,
-                  color: "#0a2240",
-
-                  marginBottom: "1.5rem",
-                }}
-              >
-
-                A Word From the Secretary
-              </h2> */}
               <h2
                 style={{
                   fontFamily: "'Inter', Arial, Helvetica, sans-serif",
@@ -149,7 +132,7 @@ function Leadership() {
                 }}
               >
 
-                Message From Secretary
+                Message from Founder President
               </h2>
               <p style={{
                 fontSize: "16px",
@@ -160,7 +143,7 @@ function Leadership() {
                 textAlign: "justify",
                 textJustify: "inter-word",
               }}>
-                Change is the only constant in today’s world. As economies, industries and businesses continue to evolve, managers must be agile and prepared to adapt. Over my years in management education, I have witnessed many waves of transformation, and I am proud to say that ISMR has not only faced these changes but has consistently emerged stronger by embracing innovation and growth.
+                We are delighted to welcome students who aspire to grow, lead and make a meaningful impact in the world of business. At ISMR, we strive to create an environment that nurtures curiosity, builds confidence and encourages self-discovery. Our commitment is to help every student develop the clarity and courage needed to define their vision and work steadily toward achieving it. Inspiring and empowering others is woven into the very culture of our institution.
               </p>
               <p style={{
                 fontSize: "16px",
@@ -170,8 +153,7 @@ function Leadership() {
                 fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                 textAlign: "justify",
                 textJustify: "inter-word",
-              }}>
-                At ISMR, our foundation is built on merit, integrity and ethics. Our curriculum is contemporary, industry-relevant and enriched with courses in ethics, international business and hands-on corporate exposure. We nurture socially aware leaders through various community initiatives and a dedicated three-week Socially Useful and Productive Work (SUPW) project, enabling students to deeply understand real societal needs.
+              }}>In today’s rapidly changing world, the demand for leaders who can think critically, respond swiftly and design innovative solutions has never been greater. With this in mind, our programs are thoughtfully crafted around the pillars of entrepreneurship, leadership and consultancy. Through hands-on projects and collaborations with diverse organizations, students gain invaluable opportunities to recognize their strengths and acquire practical, industry-relevant skills.
               </p>
               <p style={{
                 fontSize: "16px",
@@ -181,30 +163,34 @@ function Leadership() {
                 fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                 textAlign: "justify",
                 textJustify: "inter-word",
-              }}>
-                Our mission is to develop competent, responsible and future-ready managers who can confidently navigate an interconnected and rapidly changing global business landscape. As global companies continue to invest in India’s new-age sectors, it is evident that the future belongs to professionals who are willing to learn, unlearn and continuously upskill throughout their careers.
-              </p>
+              }}>At ISMR, we are dedicated to shaping global leaders who come from varied backgrounds yet share a common ambition—to excel and contribute meaningfully to society. Our updated curriculum integrates interactive learning, personalized guidance, coaching and robust leadership development. Supported by our experienced faculty and professional team, students receive a balanced blend of business knowledge, personal growth and real-world exposure.</p>
 
 
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>We look forward to welcoming you to a journey of transformation, learning and leadership.</p>
 
-              <h5><i>Dr. Nilesh Bhutada</i></h5>
+
+              <h5><i>Jaikishan Bhutada</i></h5>
               <h6>
-                Secretary</h6>
-
+                Founder President</h6>
 
             </div>
-
-
-
-
 
           </div>
 
 
 
+
+
         </div>
       </section>
-
 
 
 

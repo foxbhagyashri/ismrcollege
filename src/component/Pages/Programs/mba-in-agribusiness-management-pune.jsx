@@ -16,7 +16,7 @@ import cognizantLogo from "../../../assets/Homeimg/Cognizant-Logo.png";
 import learningRoutesLogo from "../../../assets/Homeimg/Comp1.png";
 
 
-export default function MBAPharmaCollegesInPune() {
+export default function MBAAgribusinessManagement() {
 
   const [openFaq, setOpenFaq] = useState(0); // first item open by default
 
@@ -1040,11 +1040,10 @@ font-size:14px;
 .final-cta-panel p {
   color: #d9e6f2;
 }
-    h1{
+  h1{
       font-size: 20px;
     font-weight: 700;
   }
-
       `}</style>
 
       <section
@@ -1073,7 +1072,7 @@ font-size:14px;
               margin: 0,
             }}
           >
-            MBA in Pharma & Healthcare  <span className="text-warning">Management</span>
+            MBA in Agribusiness  <span className="text-warning">Management</span>
           </span>
           <p
             className="mb-0"
@@ -1084,7 +1083,7 @@ font-size:14px;
             }}
           >
             Courses •{" "}
-            <span className="text-warning">MBA in Pharma & Healthcare  Management</span>
+            <span className="text-warning">MBA in Agribusiness  Management</span>
           </p>
         </div>
       </section>
@@ -1093,94 +1092,24 @@ font-size:14px;
       <section className="marketing-section">
         <div className="content-container">
         <div className=" hero-panel">
-            <span className="eyebrow">ISMR PUNE · MBA PHARMA &amp; HEALTHCARE MANAGEMENT</span>
-            <h1>Build a Career in Pharma &amp; Healthcare Management with Real Placement Outcomes</h1>
+            <span className="eyebrow">ISMR PUNE · AGRI BUSINESS MANAGEMENT</span>
+            <h1>Lead India's Agri-Business Transformation with ISMR</h1>
 
             <div className="two-col-layout">
               <div className="overview-col mt-4">
-                <h2>What is the MBA Pharma &amp; Healthcare Management Course in Pune?</h2>
-
-                <ul className="method-list method-list--styled">
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    AICTE Approved
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    SPPU Affiliated
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    DTE &amp; AIMS Recognised
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Sector-Specific Curriculum
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Pune–PCMC Industry Network
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Dedicated Placement Cell
-                  </li>
-                </ul>
-
+                <h2>What is the Agri Business Management Course in Pune?</h2>
                 <p className="intro-text">
-                  ISMR's programme combines a rigorous, sector-specific
-                  curriculum with live industry exposure, preparing
-                  graduates for leadership roles across the pharma,
-                  hospital, and healthcare sectors.
+                  India's agriculture sector is evolving fast — from
+                  traditional farming into organised supply chains,
+                  commodity markets, food processing industries, and
+                  agri-tech ventures.
                 </p>
                 <p className="intro-text">
-                  For students evaluating an MBA in Pharma &amp; Healthcare
-                  Management, ISMR offers end-to-end admissions support so
-                  that paperwork and deadlines never stand between you and
-                  your next step.
-                </p>
-                <p className="intro-text">
-                  We will walk you through the complete cost, payment
-                  schedule, and what you get at every stage of the
-                  programme.
-                </p>
-                <p className="intro-text">
-                  ISMR's MBA in Pharma &amp; Healthcare Management is an
-                  SPPU-affiliated degree that carries full national academic
-                  validity. AICTE approval and SPPU affiliation ensure the
-                  qualification is recognised by employers, government
-                  bodies, and higher education institutions across India.
-                </p>
-                <p className="intro-text">
-                  ISMR provides a complete fee breakdown upfront with no
-                  hidden charges or shifting admission criteria. Counselling
-                  sessions are designed to give students an honest
-                  assessment of fit, not just to convert inquiries into
-                  admissions.
+                  ISMR prepares you to lead at every level of this
+                  transformation through an SPPU-affiliated academic
+                  framework, industry-integrated learning, and experienced
+                  faculty that brings real agri-business experience into
+                  every classroom.
                 </p>
               </div>
 
@@ -1194,12 +1123,22 @@ font-size:14px;
                       </svg>
                     </span>
                     <div>
-                      <h2 className="facts-title text-white">Quick Facts</h2>
-                      <span className="facts-subtitle">MBA in Pharma &amp; Healthcare Management, ISMR Pune</span>
+                      {/* <h2 className="facts-title text-white">Quick Facts</h2> */}
+                      <span className="facts-subtitle">Program Snapshot, ISMR Pune</span>
                     </div>
                   </div>
 
                   <ul className="facts-list">
+                    <li className="facts-row">
+                      <span className="facts-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                          <path d="M6 10v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                        </svg>
+                      </span>
+                      <span className="facts-label">Specialisation</span>
+                      <span className="facts-value">Agri Business Management (ABM)</span>
+                    </li>
                     <li className="facts-row">
                       <span className="facts-icon">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1209,16 +1148,6 @@ font-size:14px;
                       </span>
                       <span className="facts-label">Duration</span>
                       <span className="facts-value">2 Years / 4 Semesters</span>
-                    </li>
-                    <li className="facts-row">
-                      <span className="facts-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" />
-                          <path d="M3 9h18M9 9v11" stroke="currentColor" strokeWidth="1.8" />
-                        </svg>
-                      </span>
-                      <span className="facts-label">Mode</span>
-                      <span className="facts-value">Full-Time</span>
                     </li>
                     <li className="facts-row">
                       <span className="facts-icon">
@@ -1237,18 +1166,18 @@ font-size:14px;
                           <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </span>
-                      <span className="facts-label">Approvals</span>
+                      <span className="facts-label">Approval</span>
                       <span className="facts-value">AICTE</span>
                     </li>
                     <li className="facts-row">
                       <span className="facts-icon">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M7 3h7l4 4v14H7z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                          <path d="M9.5 12h5M9.5 15.5h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                          <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" />
+                          <path d="M3 9h18M9 9v11" stroke="currentColor" strokeWidth="1.8" />
                         </svg>
                       </span>
-                      <span className="facts-label">Entrance Accepted</span>
-                      <span className="facts-value">MAH-MBA CET / CAT / CMAT / ATMA / XAT / MAT</span>
+                      <span className="facts-label">Learning Format</span>
+                      <span className="facts-value">Case Studies, Field Visits, Live Projects</span>
                     </li>
                     <li className="facts-row">
                       <span className="facts-icon">
@@ -1257,14 +1186,26 @@ font-size:14px;
                           <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
                         </svg>
                       </span>
-                      <span className="facts-label">Recognitions</span>
-                      <span className="facts-value">DTE &amp; AIMS Recognised</span>
+                      <span className="facts-label">NAAC</span>
+                      <span className="facts-value">Accredited Institute</span>
+                    </li>
+                    <li className="facts-row">
+                      <span className="facts-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="9" cy="7" r="3" stroke="currentColor" strokeWidth="1.8" />
+                          <path d="M2 20c0-3 3-5.5 7-5.5s7 2.5 7 5.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                          <circle cx="17" cy="8" r="2.3" stroke="currentColor" strokeWidth="1.8" />
+                          <path d="M16.5 14.5c2.5 0.4 4.5 2.3 4.5 4.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                        </svg>
+                      </span>
+                      <span className="facts-label">Intake</span>
+                      <span className="facts-value">120</span>
                     </li>
                   </ul>
                 </div>
                 <div className="cta-row">
+                  <a className="default-btn" href="#admissions">Speak with Admissions</a>
                   <a className="default-btn" href="#apply">Apply Now 2026</a>
-                  <a className="default-btn" href="#fees">Get a Complete Cost Breakdown</a>
                 </div>
               </div>
             </div>
@@ -1611,120 +1552,90 @@ font-size:14px;
         <div className="content-container">
 
           {/* FAQ Panel */}
-         <div className=" diff-panel">
-            <span className="eyebrow">CURRICULUM &amp; CAREER OPPORTUNITIES</span>
-            <h2>Curriculum &amp; Career Opportunities</h2>
+          <div className=" diff-panel">
+            <span className="eyebrow">CURRICULUM &amp; SKILL DEVELOPMENT</span>
+            <h2>MBA HR Syllabus &amp; What You Learn</h2>
 
             <div className="diff-layout">
               <div className="diff-left">
-                <h3 className="diff-col-title">Semester-Wise Syllabus</h3>
+                <h3 className="diff-col-title">MBA HRM Syllabus — Semester-Wise Breakdown</h3>
 
                 <div className="tool-table-wrap">
                   <div className="tool-row tool-row--head">
                     <span>Semester</span>
-                    <span>Focus Area</span>
-                    <span>Key Subjects Covered</span>
+                    <span>Key MBA HRM Papers</span>
                   </div>
 
                   <div className="tool-row">
-                    <span className="tool-name">Semester I</span>
-                    <span className="tool-applied">Management Foundations</span>
+                    <span className="tool-name">
+                      <span className="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
+                          <path d="M12 7v5l3.5 2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                        </svg>
+                      </span>
+                      Semester 1
+                    </span>
                     <span className="tool-applied">
-                      Managerial Accounting, Organisational Behaviour,
-                      Business Analytics, Marketing Management Fundamentals,
-                      Economic Analysis, Decision Science, Management
-                      Fundamentals
+                      Principles of Management, Organizational Behavior,
+                      Managerial Economics, Accounting for Managers, Business
+                      Communication, Quantitative Techniques
                     </span>
                   </div>
 
                   <div className="tool-row">
-                    <span className="tool-name">Semester II</span>
-                    <span className="tool-applied">Business Management &amp; Research</span>
+                    <span className="tool-name">
+                      <span className="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
+                          <path d="M12 7v5l3.5 2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                        </svg>
+                      </span>
+                      Semester 2
+                    </span>
                     <span className="tool-applied">
-                      Marketing Management, Financial Management, Human
-                      Resource Management, Operations &amp; Supply Chain
-                      Management, Legal Aspects of Business, Business
-                      Research Methods
+                      Human Resource Management, Marketing Management,
+                      Financial Management, Operations Management, Business
+                      Research Methods, Management Information Systems
                     </span>
                   </div>
 
                   <div className="tool-row">
-                    <span className="tool-name">Semester III</span>
-                    <span className="tool-applied">Pharma &amp; Healthcare Specialisation</span>
+                    <span className="tool-name">
+                      <span className="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
+                          <path d="M12 7v5l3.5 2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                        </svg>
+                      </span>
+                      Semester 3
+                    </span>
                     <span className="tool-applied">
-                      Fundamentals of Pharma &amp; Healthcare Management,
-                      Pharmaceutical Marketing Management, Healthcare
-                      Management, Pharmaceutical Supply Chain Management,
-                      Pharmaceutical Production Management, Health Insurance
+                      Recruitment and Selection, Training and Development,
+                      Performance Management, Compensation Management, Labor
+                      Laws, Industrial Relations
                     </span>
                   </div>
 
                   <div className="tool-row">
-                    <span className="tool-name">Semester IV</span>
-                    <span className="tool-applied">Advanced Pharma &amp; Regulatory Management</span>
+                    <span className="tool-name">
+                      <span className="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
+                          <path d="M12 7v5l3.5 2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                        </svg>
+                      </span>
+                      Semester 4
+                    </span>
                     <span className="tool-applied">
-                      Regulatory Laws in the Indian Pharmaceutical &amp;
-                      Healthcare Industry, Regulatory Affairs, Clinical Data
-                      Management, International Pharma Marketing, Medical
-                      Devices &amp; Diagnostics Marketing, Quality Assurance
-                      &amp; Quality Control, Healthcare Analytics
+                      Strategic Human Resource Management, Talent Management,
+                      Employee Engagement, Leadership and Change Management,
+                      HR Analytics, Project Work/Internship
                     </span>
                   </div>
                 </div>
 
-                <h3 className="diff-col-title">Key Subjects (Topic-Wise)</h3>
-                <div className="tool-table-wrap">
-                  <div className="tool-row tool-row--head">
-                    <span>Subject Area</span>
-                    <span>Focus</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">Pharmaceutical Marketing Management</span>
-                    <span className="tool-applied">Product strategy, brand management, MR operations</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">Hospital Administration</span>
-                    <span className="tool-applied">Hospital systems, patient flow, resource planning</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">Drug Regulatory Affairs</span>
-                    <span className="tool-applied">CDSCO compliance, dossier preparation, licensing</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">Healthcare Operations &amp; Quality Management</span>
-                    <span className="tool-applied">NABH standards, process efficiency, and audits</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">Clinical Research Management</span>
-                    <span className="tool-applied">Trial design, ICH-GCP guidelines, ethics</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">Pharmacovigilance</span>
-                    <span className="tool-applied">Adverse event reporting, drug safety monitoring</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">Health Economics</span>
-                    <span className="tool-applied">Pricing models, insurance, health policy</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">Supply Chain in Pharma</span>
-                    <span className="tool-applied">Cold chain, distribution, vendor management</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">Medical Devices Management</span>
-                    <span className="tool-applied">Regulatory framework, market access</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">ERP in Healthcare</span>
-                    <span className="tool-applied">SAP/Oracle applications in hospital and pharma settings</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">Biostatistics</span>
-                    <span className="tool-applied">Data interpretation, clinical trial analysis</span>
-                  </div>
-                </div>
-
-                <h3 className="diff-col-title">Skills You Will Develop</h3>
+                <h3 className="diff-col-title mt-3">Practical Components</h3>
                 <ul className="method-list method-list--styled">
                   <li>
                     <span className="method-icon">
@@ -1732,12 +1643,7 @@ font-size:14px;
                         <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
-                    <strong>Technical &amp; Domain Skills:</strong> Regulatory
-                    documentation and dossier preparation, pharmaceutical
-                    sales planning, market access strategy, clinical trial
-                    coordination, healthcare analytics, hospital operations
-                    management, GMP and NABH compliance, pharmacovigilance
-                    reporting, and EHR system navigation.
+                    Summer Internship
                   </li>
                   <li>
                     <span className="method-icon">
@@ -1745,146 +1651,267 @@ font-size:14px;
                         <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
-                    <strong>Managerial &amp; Leadership Skills:</strong>
-                    Strategic planning, cross-functional team leadership,
-                    business communication, vendor and stakeholder
-                    negotiation, financial analysis, and project management
-                    within regulated healthcare environments.
+                    Case Studies
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Industry Projects
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    HR Workshops
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Seminars
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Research Assignments
                   </li>
                 </ul>
 
-                <p className="intro-text">
-                  Students pursuing an MBA in Pharmaceutical Management at
-                  ISMR in Pune benefit from a structured curriculum that
-                  builds expertise for careers in pharmaceutical companies,
-                  hospital networks, CROs, and regulatory organisations. It's
-                  backed by an MBA in Pharma &amp; Healthcare Management
-                  degree awarded under Savitribai Phule Pune University
-                  (SPPU) affiliation, recognised across the sector.
-                </p>
+                <h3 className="diff-col-title mt-4">Skill Development Focus</h3>
+                <ul className="method-list method-list--styled">
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Communication
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Leadership
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Negotiation
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Conflict Resolution
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Team Management
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Strategic Decision-Making
+                  </li>
+                </ul>
               </div>
 
-              <div className="diff-right">
-                <h3 className="diff-col-title">Roles You Can Explore</h3>
+          <div className="diff-right">
+                <h3 className="diff-col-title">Core Subjects &amp; Industry Tools</h3>
+                <p className="intro-text intro-text--strong">Core Subjects at a Glance</p>
 
-                <div className="tool-table-wrap">
-                  <div className="tool-row tool-row--head">
-                    <span>Role</span>
-                    <span>Industry</span>
-                    <span>Core Responsibilities</span>
+                <div className="app-card">
+                  <div className="app-row">
+                    <span className="app-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="8" width="14" height="9" rx="1.5" stroke="currentColor" strokeWidth="1.8" />
+                        <path d="M17 11h3l1.5 2.5V17H17" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                        <circle cx="7.5" cy="18.5" r="1.5" stroke="currentColor" strokeWidth="1.8" />
+                        <circle cx="17.5" cy="18.5" r="1.5" stroke="currentColor" strokeWidth="1.8" />
+                      </svg>
+                    </span>
+                    <div className="app-text">
+                      <span className="app-skill">1. Agri-Supply Chain &amp; Logistics</span>
+                      <span className="app-task">
+                        Learn how produce moves from farm gate to end
+                        consumer, covering procurement, cold chain
+                        infrastructure, warehousing, and last-mile
+                        distribution. Focus is on reducing post-harvest
+                        losses and improving margin realisation.
+                      </span>
+                    </div>
                   </div>
 
-                  <div className="tool-row">
-                    <span className="tool-name">Pharmaceutical Brand Manager</span>
-                    <span className="tool-applied">Pharma MNCs, Generic Companies</span>
-                    <span className="tool-applied">
-                      Product marketing strategy, medical affairs
-                      coordination, sales force enablement
+                  <div className="app-row">
+                    <span className="app-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 19h16M7 19V9M12 19V5M17 19v7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
                     </span>
+                    <div className="app-text">
+                      <span className="app-skill">2. Agricultural Marketing &amp; Trade</span>
+                      <span className="app-task">
+                        Understand commodity branding, mandi-to-retail
+                        transitions, export documentation, and
+                        international agri-trade policy. Build market
+                        linkage strategies that deliver real value to
+                        producers.
+                      </span>
+                    </div>
                   </div>
 
-                  <div className="tool-row">
-                    <span className="tool-name">Hospital Administrator / Operations Manager</span>
-                    <span className="tool-applied">Corporate &amp; Multi-Specialty Hospitals</span>
-                    <span className="tool-applied">
-                      Patient flow management, NABH compliance, resource and
-                      vendor oversight
+                  <div className="app-row">
+                    <span className="app-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 15l5-5 4 4 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M14 7h6v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
                     </span>
+                    <div className="app-text">
+                      <span className="app-skill">3. Rural Finance &amp; Microfinance</span>
+                      <span className="app-task">
+                        Study NABARD credit programmes, Kisan Credit Card
+                        structures, SHG models, and MFI lending frameworks.
+                        Learn to assess farm enterprise viability and design
+                        rural financial products for smallholder farmers.
+                      </span>
+                    </div>
                   </div>
 
-                  <div className="tool-row">
-                    <span className="tool-name">Regulatory Affairs Manager</span>
-                    <span className="tool-applied">Pharma, Biotech, Medical Devices</span>
-                    <span className="tool-applied">
-                      CDSCO dossier submissions, product licensing,
-                      pharmacovigilance reporting
+                  <div className="app-row">
+                    <span className="app-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
+                        <path d="M8.5 12.5l2.3 2.3 4.7-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
                     </span>
+                    <div className="app-text">
+                      <span className="app-skill">4. Commodity Markets &amp; Risk Management</span>
+                      <span className="app-task">
+                        Develop working knowledge of NCDEX and MCX
+                        exchanges, futures and options in agri-commodities,
+                        and enterprise-level hedging strategies to manage
+                        the price volatility inherent in agricultural
+                        business.
+                      </span>
+                    </div>
                   </div>
 
-                  <div className="tool-row">
-                    <span className="tool-name">Clinical Research Coordinator / Manager</span>
-                    <span className="tool-applied">CROs, Hospitals, Pharma R&amp;D</span>
-                    <span className="tool-applied">
-                      Trial site management, ICH-GCP compliance, patient
-                      recruitment, data oversight
+                  <div className="app-row">
+                    <span className="app-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
                     </span>
+                    <div className="app-text">
+                      <span className="app-skill">5. Food Processing &amp; Value Chain Management</span>
+                      <span className="app-task">
+                        Explore how raw produce becomes consumer-ready
+                        products — with focus on FSSAI compliance, value
+                        addition economics, food safety systems, and retail
+                        integration in India's growing food processing
+                        sector.
+                      </span>
+                    </div>
                   </div>
 
-                  <div className="tool-row">
-                    <span className="tool-name">Healthcare Consultant</span>
-                    <span className="tool-applied">Consulting Firms, Health-Tech</span>
-                    <span className="tool-applied">
-                      Operational efficiency, accreditation advisory, market
-                      entry strategy
+                  <div className="app-row">
+                    <span className="app-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 3h7l4 4v14H7z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                        <path d="M9.5 12h5M9.5 15.5h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                      </svg>
                     </span>
+                    <div className="app-text">
+                      <span className="app-skill">6. Agri-Policy, Regulation &amp; Sustainability</span>
+                      <span className="app-task">
+                        Examine APMC structures, MSP mechanisms, contract
+                        farming regulations, and FPO frameworks. Understand
+                        how climate-smart agriculture and global
+                        sustainability mandates are reshaping agri-business
+                        strategy.
+                      </span>
+                    </div>
                   </div>
 
-                  <div className="tool-row">
-                    <span className="tool-name">Medical Sales &amp; Key Account Manager</span>
-                    <span className="tool-applied">Pharma, Medical Devices</span>
-                    <span className="tool-applied">
-                      Institutional account planning, tender management,
-                      clinical stakeholder selling
+                  <div className="app-row">
+                    <span className="app-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" />
+                        <path d="M3 9h18M9 9v11" stroke="currentColor" strokeWidth="1.8" />
+                      </svg>
                     </span>
+                    <div className="app-text">
+                      <span className="app-skill">7. Farm Business Management</span>
+                      <span className="app-task">
+                        Apply core management principles — financial
+                        planning, operational efficiency, cash flow
+                        management — directly to farm enterprises. Build
+                        business plans suited to both smallholder contexts
+                        and commercial farming operations.
+                      </span>
+                    </div>
                   </div>
 
-                  <div className="tool-row">
-                    <span className="tool-name">Health Insurance &amp; TPA Manager</span>
-                    <span className="tool-applied">Insurance Companies, TPAs</span>
-                    <span className="tool-applied">
-                      Claims processing, provider network management, policy
-                      compliance
+                  <div className="app-row">
+                    <span className="app-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
+                        <path d="M12 7v5l3.5 2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                      </svg>
                     </span>
+                    <div className="app-text">
+                      <span className="app-skill">8. Agri-Entrepreneurship &amp; Startup Ecosystem</span>
+                      <span className="app-task">
+                        Explore FPO structures, agri-tech incubators, and
+                        government startup schemes. Identify unmet market
+                        opportunities and develop pitch-ready agri-business
+                        concepts capable of attracting institutional
+                        funding.
+                      </span>
+                    </div>
                   </div>
                 </div>
 
-                <h3 className="diff-col-title">Career Progression Paths</h3>
-                <div className="tool-table-wrap">
-                  <div className="tool-row tool-row--head">
-                    <span>Career Path</span>
-                    <span>Typical Progression</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">Pharma Sales &amp; Marketing</span>
-                    <span className="tool-applied">
-                      Medical Representative → Area Sales Manager → Regional
-                      Manager → Business Unit Head → Marketing Director
-                    </span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">Regulatory Affairs</span>
-                    <span className="tool-applied">
-                      Regulatory Affairs Executive → Senior Executive →
-                      Regulatory Affairs Manager → Head of Regulatory
-                      Affairs → Director – Regulatory &amp; Medical Affairs
-                    </span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">Hospital Administration</span>
-                    <span className="tool-applied">
-                      Administrative Executive → Department Coordinator →
-                      Operations Manager → General Manager – Operations →
-                      Chief Operating Officer (COO)
-                    </span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">Clinical Research</span>
-                    <span className="tool-applied">
-                      Clinical Research Coordinator → Senior Clinical
-                      Research Coordinator (CRC) → Clinical Research Manager
-                      → Project Director → Vice President – Clinical
-                      Operations
-                    </span>
-                  </div>
-                </div>
-
+                <h3 className="diff-col-title">Applied Tools</h3>
+                <p className="intro-text">
+                  Students work with tools actively deployed across the
+                  industry, including ERP systems used in food processing
+                  operations, GIS-based crop mapping tools for precision
+                  agriculture, and commodity risk models used on NCDEX and
+                  MCX. This operational fluency is what separates ISMR
+                  graduates from candidates with only classroom training.
+                </p>
                 <p className="intro-text diff-closing">
-                  Note: Career progression varies depending on the
-                  organisation, individual performance, experience, and the
-                  specific pharmaceutical or healthcare sector. Structured
-                  career growth opportunities are commonly available in
-                  pharmaceutical companies, corporate hospitals, CROs, and
-                  healthcare organisations.
+                  Learning goes beyond the classroom. Students visit
+                  agricultural mandis, food processing units, and rural
+                  cooperatives, grounding theory in real operational
+                  environments before graduation.
                 </p>
 
                 <a href="/Contactus" className="default-btn diff-cta">
@@ -2101,494 +2128,418 @@ font-size:14px;
             `}</style>
 
           {/* Top Recruiters Panel */}
-       <div className="panel diff-panel">
-            <span className="eyebrow">FEES &amp; ADMISSION</span>
-            <h2>Program Fees &amp; Admission Process</h2>
+        <div className="panel diff-panel">
+            <span className="eyebrow">ELIGIBILITY &amp; ADMISSION SUPPORT</span>
+            <h2>Eligibility &amp; Admission Support</h2>
 
             <div className="diff-layout">
               <div className="diff-left">
-                <h3 className="diff-col-title">Fee Approach</h3>
-                <p className="intro-text">
-                  Choosing a Pharma MBA in Pune involves evaluating factors
-                  such as programme fees, placement outcomes, and long-term
-                  return on investment. MBA in Pharma &amp; Healthcare
-                  Management Pune Fees are structured to remain accessible.
-                </p>
-                <p className="intro-text">
-                  ISMR provides a complete fee breakdown upfront with no
-                  hidden charges or shifting admission criteria. Counselling
-                  sessions are designed to give students an honest
-                  assessment of fit, not just to convert inquiries into
-                  admissions.
-                </p>
+                <h3 className="diff-col-title">Eligibility Criteria</h3>
 
-                <h3 className="diff-col-title">Eligibility</h3>
-                <p className="intro-text">
-                  Graduates from any discipline are eligible — including
-                  final-year students applying provisionally. SC/ST
-                  candidates are eligible as per SPPU and DTE reserved
-                  category norms. A valid MAH-MBA CET, CAT, or CMAT score is
-                  required alongside the graduation certificate, entrance
-                  scorecard, identity proof, and category certificate if
-                  applicable.
-                </p>
-
-                <h3 className="diff-col-title">Admission Process — Step by Step</h3>
-                <div className="app-card">
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="8" r="3.2" stroke="currentColor" strokeWidth="1.8" />
-                        <path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">1. Apply Online</span>
-                      <span className="app-task">
-                        Applications are submitted through ISMR's online
-                        portal with a non-refundable application fee of
-                        ₹1,100/-. The process is designed to be completed
-                        quickly, and the portal remains open across
-                        admission cycles. Students are advised to apply
-                        early, given limited seat availability.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <p className="intro-text intro-text--strong">Academic Qualification</p>
+                <ul className="method-list method-list--styled">
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
-                    <div className="app-text">
-                      <span className="app-skill">2. Counselling &amp; Telephonic Interview</span>
-                      <span className="app-task">
-                        Following application review, shortlisted candidates
-                        are contacted for a telephonic counselling session.
-                        This is not a stress interview; it is a structured
-                        conversation to understand the student's academic
-                        background, sector interest, and career goals, and
-                        to confirm that the programme is the right fit
-                        before a seat is offered.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 3h7l4 4v14H7z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                        <path d="M9.5 12h5M9.5 15.5h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                    Bachelor's degree in any stream from a recognised university
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
-                    <div className="app-text">
-                      <span className="app-skill">3. Seat Confirmation</span>
-                      <span className="app-task">
-                        Selected candidates receive an official offer letter
-                        within 4 working days. A seat retention fee of
-                        ₹30,000/- is required to confirm the seat, after
-                        which the admission is held securely until the next
-                        documentation stage.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                    Priority for: Agriculture, Horticulture, Food Technology, Dairy, Veterinary, Fisheries graduates
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
-                    <div className="app-text">
-                      <span className="app-skill">4. Provisional Admission</span>
-                      <span className="app-task">
-                        Once the seat is confirmed, students are guided
-                        through documentation requirements including
-                        academic marksheets, entrance score certificates,
-                        identity proof, and SPPU eligibility verification.
-                        ISMR's admissions team provides a complete checklist
-                        and assists with any document-related queries to
-                        ensure a smooth transition to provisional
-                        enrollment.
-                      </span>
-                    </div>
-                  </div>
-                </div>
+                    Commerce, Science &amp; Engineering graduates fully eligible
+                  </li>
+                </ul>
+
+                <p className="intro-text intro-text--strong">Minimum Marks</p>
+                <ul className="method-list method-list--styled">
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    General category: 50% aggregate at undergraduate level
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    SC / ST / OBC / PwD: 45% aggregate (as per Maharashtra state norms)
+                  </li>
+                </ul>
+
+                <p className="intro-text intro-text--strong">Entrance Exams Accepted</p>
+                <ul className="method-list method-list--styled">
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    MAH-MBA CET (mandatory for Maharashtra domicile — CAP Round)
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    CAT / CMAT / ATMA / MAT (also accepted)
+                  </li>
+                </ul>
+
+                <p className="intro-text intro-text--strong">Work Experience</p>
+                <ul className="method-list method-list--styled">
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Not mandatory
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Relevant experience in agri-inputs, rural banking, food processing, or agri-tech is an advantage during selection
+                  </li>
+                </ul>
+              </div>
+
+              <div className="diff-right">
+                <h3 className="diff-col-title">ISMR Enrolment Support</h3>
+
+                <p className="intro-text">
+                  The DTE Maharashtra CAP Round process — CET registration,
+                  document verification, preference filling, and seat
+                  acceptance — can be complex for first-time applicants.
+                </p>
+
+                <p className="intro-text intro-text--strong">
+                  ISMR's admissions counseling team provides:
+                </p>
+                <ul className="method-list method-list--styled">
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Entrance exam identification and registration guidance
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Eligibility documentation support
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Error-free enrollment support
+                  </li>
+                </ul>
+
+                <p className="intro-text">
+                  Students seeking MBA in Agribusiness Management admission
+                  in Pune for the 2026 academic session receive end-to-end
+                  support from ISMR's admissions counselling team, including
+                  entrance exam guidance, eligibility verification,
+                  documentation assistance, and enrolment support.
+                </p>
+
+                <p className="intro-text diff-closing">
+                  With SPPU affiliation, AICTE approval, industry-focused
+                  learning, and dedicated admission assistance, ISMR helps
+                  students move from admission confusion to career clarity —
+                  one guided step at a time.
+                </p>
 
                 <a href="/Contactus" className="default-btn diff-cta">
                   Apply Now →
                 </a>
-              </div>
-
-              <div className="diff-right">
-                <h3 className="diff-col-title">Industry Collaborations &amp; Top Recruiters</h3>
-                <p className="intro-text">
-                  Graduates are hired across pharma MNCs, corporate hospital
-                  chains, CROs, diagnostic networks, health-tech startups,
-                  medical device firms, insurance companies, and public
-                  health agencies.
-                </p>
-
-                <div className="tool-table-wrap">
-                  <div className="tool-row tool-row--head">
-                    <span>Sr. No.</span>
-                    <span>Recruiting Partner</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">1</span>
-                    <span className="tool-applied">Sun Pharmaceutical Industries</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">2</span>
-                    <span className="tool-applied">Cipla</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">3</span>
-                    <span className="tool-applied">Dr. Reddy's Laboratories</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">4</span>
-                    <span className="tool-applied">Lupin</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">5</span>
-                    <span className="tool-applied">Glenmark Pharmaceuticals</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">6</span>
-                    <span className="tool-applied">Alkem Laboratories</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">7</span>
-                    <span className="tool-applied">Torrent Pharmaceuticals</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">8</span>
-                    <span className="tool-applied">Zydus Lifesciences</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">9</span>
-                    <span className="tool-applied">Abbott India</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">10</span>
-                    <span className="tool-applied">Pfizer India</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">11</span>
-                    <span className="tool-applied">Sanofi India</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">12</span>
-                    <span className="tool-applied">Novartis India</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">13</span>
-                    <span className="tool-applied">GSK Pharmaceuticals</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">14</span>
-                    <span className="tool-applied">Mankind Pharma</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">15</span>
-                    <span className="tool-applied">Biocon</span>
-                  </div>
-                </div>
-
-                <div className="app-card">
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Cross-Sector Mobility</span>
-                      <span className="app-task">
-                        This degree opens doors across pharma MNCs,
-                        multi-specialty hospital chains, contract research
-                        organisations, health-tech startups, and insurance
-                        and TPA companies. Few MBA specialisations offer
-                        this breadth of industry options within a single
-                        sector ecosystem.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Dedicated Placement &amp; Corporate Relations</span>
-                      <span className="app-task">
-                        ISMR maintains targeted placement connects with
-                        pharma companies, hospital chains, CROs, and
-                        health-tech firms — not a generic placement cell.
-                        Students benefit from sector-specific recruitment
-                        drives, industry mentors, and role-aligned placement
-                        preparation.
-                      </span>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
 
-      <div className="panel diff-panel mt-4">
-            <span className="eyebrow">PLACEMENTS &amp; INDUSTRY EXPOSURE</span>
-            <h2>Placements &amp; Industry Exposure</h2>
+          <div className="panel diff-panel mt-4">
+            <span className="eyebrow">WHO SHOULD PURSUE THIS COURSE</span>
+            <h2>Who Should Pursue This Course</h2>
 
             <p className="intro-text">
-              India's pharma and healthcare sectors collectively employ
-              millions and continue to expand through domestic consumption
-              growth, medical tourism, and export-led manufacturing.
-              Pursuing this specialisation at ISMR offers distinct,
-              quantifiable advantages.
+              Not every MBA is built for every ambition. This program is
+              specifically designed for students and professionals who want
+              to operate at the intersection of agriculture and business
+              leadership. Here's who benefits most:
             </p>
 
-            <h3 className="diff-col-title">Key Stats</h3>
-            <div className="stat-strip">
-              <div className="stat-block">
-                <span className="stat-icon stat-icon--gold">
+            <div className="app-card">
+              <div className="app-row">
+                <span className="app-icon">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
-                    <path d="M8.5 12.5l2.3 2.3 4.7-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <circle cx="12" cy="8" r="3.2" stroke="currentColor" strokeWidth="1.8" />
+                    <path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
                   </svg>
                 </span>
-                <div>
-                  <span className="stat-number">85%</span>
-                  <span className="stat-label">
-                    Placement Rate — reflects consistent recruiter demand
-                    across pharma, hospital, and CRO sectors
+                <div className="app-text">
+                  <span className="app-skill">Agriculture &amp; Science Graduates</span>
+                  <span className="app-task">
+                    Your technical foundation is your biggest advantage —
+                    this program adds the business strategy layer on top of
+                    it. You graduate as the rare professional who
+                    understands both crop science and corporate
+                    decision-making, making you a priority hire for
+                    agri-input firms, consulting companies, and commodity
+                    trading houses.
                   </span>
                 </div>
               </div>
 
-              <div className="stat-block">
-                <span className="stat-icon stat-icon--gold">
+              <div className="app-row">
+                <span className="app-icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 19h16M7 19V9M12 19V5M17 19v7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <div className="app-text">
+                  <span className="app-skill">Commerce &amp; Business Graduates</span>
+                  <span className="app-task">
+                    Financial literacy alone isn't enough to crack
+                    agri-commodity markets or rural supply chains. This
+                    program gives you the sector-specific grounding — APMC
+                    trade structures, commodity pricing mechanics,
+                    agri-supply chain logic that no general MBA covers.
+                  </span>
+                </div>
+              </div>
+
+              <div className="app-row">
+                <span className="app-icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" />
+                    <path d="M3 9h18M9 9v11" stroke="currentColor" strokeWidth="1.8" />
+                  </svg>
+                </span>
+                <div className="app-text">
+                  <span className="app-skill">Working Professionals in Agri, Seed, Fertilizer &amp; FMCG Firms</span>
+                  <span className="app-task">
+                    Already working in the sector but hitting a ceiling
+                    without formal management credentials? This curriculum
+                    addresses the strategic and operational challenges you
+                    face daily — making every module immediately applicable
+                    to your current role and your next one.
+                  </span>
+                </div>
+              </div>
+
+              <div className="app-row">
+                <span className="app-icon">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 15l5-5 4 4 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M14 7h6v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </span>
-                <div>
-                  <span className="stat-number">₹3–5 LPA</span>
-                  <span className="stat-label">
-                    Typical Starting Package — pharma marketing, regulatory
-                    affairs, hospital administration roles
+                <div className="app-text">
+                  <span className="app-skill">Rural Economy &amp; Development Professionals</span>
+                  <span className="app-task">
+                    If your work touches NABARD programmes, FPOs, rural
+                    cooperatives, or microfinance institutions — this
+                    program sharpens both the financial analysis and policy
+                    understanding you need to design interventions that
+                    create real, measurable rural impact.
                   </span>
                 </div>
               </div>
 
-              <div className="stat-block">
-                <span className="stat-icon stat-icon--gold">
+              <div className="app-row">
+                <span className="app-icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                    <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <div className="app-text">
+                  <span className="app-skill">Agri-Entrepreneurs &amp; Family Farm Business Members</span>
+                  <span className="app-task">
+                    Running or inheriting a farm enterprise, agri-input
+                    dealership, or rural processing unit? This program
+                    replaces guesswork with a framework that covers
+                    data-driven planning, enterprise financial management,
+                    and market linkage strategies that help traditional
+                    agri-businesses scale confidently.
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <a href="/Contactus" className="default-btn diff-cta">
+              Apply Now →
+            </a>
+          </div>
+
+        <div className="panel diff-panel mt-3">
+            <span className="eyebrow">PROGRAM BENEFITS &amp; LOCATION ADVANTAGE</span>
+            <h2>Program Benefits &amp; Location Advantage</h2>
+
+            <h3 className="diff-col-title">Career Benefits</h3>
+            <div className="app-card">
+              <div className="app-row">
+                <span className="app-icon">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 15l5-5 4 4 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M14 7h6v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </span>
-                <div>
-                  <span className="stat-number">₹5–7 LPA</span>
-                  <span className="stat-label">
-                    Premium Placements — leading pharmaceutical companies
-                    and hospital groups
+                <div className="app-text">
+                  <span className="app-skill">1. Entering a Sector With Structural Long-Term Demand</span>
+                  <span className="app-task">
+                    Agriculture is one of India's largest economic
+                    contributors, yet organised management talent within
+                    the sector remains significantly scarce relative to its
+                    scale. This gap creates sustained hiring demand across
+                    commodity firms, food processing companies, agri-tech
+                    ventures, and rural financial institutions for
+                    precisely the kind of professional this program
+                    produces.
+                  </span>
+                </div>
+              </div>
+
+              <div className="app-row">
+                <span className="app-icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
+                    <path d="M8.5 12.5l2.3 2.3 4.7-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <div className="app-text">
+                  <span className="app-skill">2. Career Advantage Over General MBA Graduates</span>
+                  <span className="app-task">
+                    A general MBA graduate entering agri-sector roles lacks
+                    contextual fluency — commodity price cycles, mandi
+                    regulation, and rural credit infrastructure are
+                    invisible to them. ISMR MBA Agribusiness Pune graduates
+                    enter as specialists, translating directly into faster
+                    role progression and access to opportunities that
+                    generalist candidates cannot compete for.
+                  </span>
+                </div>
+              </div>
+
+              <div className="app-row">
+                <span className="app-icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                    <path d="M6 10v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <div className="app-text">
+                  <span className="app-skill">3. Cross-Sector Career Applicability</span>
+                  <span className="app-task">
+                    This degree opens doors well beyond traditional
+                    agriculture; graduates move into FMCG supply chains,
+                    agri-tech startups, cooperative banking, commodity
+                    brokerage, rural microfinance, export-import firms, and
+                    international development organisations. Few
+                    management specialisations offer this breadth of
+                    sectoral mobility.
+                  </span>
+                </div>
+              </div>
+
+              <div className="app-row">
+                <span className="app-icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                    <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <div className="app-text">
+                  <span className="app-skill">4. A Rare Combination of Technical and Strategic Competence</span>
+                  <span className="app-task">
+                    Most business professionals lack domain knowledge in
+                    agriculture. Most agricultural professionals lack
+                    strategic business skills. This program builds both —
+                    simultaneously. Employers across agri-input firms, food
+                    processing conglomerates, and rural development
+                    institutions actively seek this combination because it
+                    remains genuinely rare.
                   </span>
                 </div>
               </div>
             </div>
 
-            <div className="diff-layout mt-3">
-              <div className="diff-left">
-                <h3 className="diff-col-title">Sector Scale &amp; Hiring Demand</h3>
-                <p className="intro-text">
-                  India's pharma and healthcare sectors collectively employ
-                  millions and continue to expand through domestic
-                  consumption growth, medical tourism, and export-led
-                  manufacturing. Graduates from this specialisation enter a
-                  hiring market where domain-qualified managers are actively
-                  sought by pharma MNCs, hospital chains, and CROs across
-                  India and internationally.
-                </p>
+            {/*
+              RELOCATED: Point 3 from the original "Benefits" list
+              ("Hands-On Exposure to Industry Tools and Platforms") has
+              been moved to Section 4 — Core Subjects & Industry Tools,
+              where the flow calls for applied-tools content. The list
+              above has been renumbered accordingly.
+            */}
 
-                <h3 className="diff-col-title">Exposure Highlights</h3>
-                <div className="app-card">
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Beyond the Classroom</span>
-                      <span className="app-task">
-                        Learning goes beyond the classroom through industry
-                        case studies, GMP and NABH regulatory simulations,
-                        pharma plant visits, and hospital immersions.
-                      </span>
-                    </div>
-                  </div>
+            <h3 className="diff-col-title">Location Advantage</h3>
+            <p className="intro-text diff-closing">
+              Studying in Pune provides access to Maharashtra's major
+              agri-industrial corridors, including Nashik's horticulture
+              and export clusters, Sangli's food processing ecosystem,
+              Kolhapur's cooperative sector, and Pune's growing agri-tech
+              industry. This proximity creates valuable opportunities for
+              internships, field visits, live projects, and industry
+              interaction throughout the program.
+            </p>
 
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Regulatory &amp; Digital Health Exposure</span>
-                      <span className="app-task">
-                        Subjects covering Drug Regulatory Affairs, ERP in
-                        Healthcare, and healthcare operations prepare
-                        graduates for roles that are increasingly shaped by
-                        EHR systems, telemedicine platforms, and
-                        AI-assisted diagnostics. These are not future
-                        skills; they are current hiring requirements at
-                        progressive healthcare organisations.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <a href="/Contactus" className="default-btn diff-cta">
+              Apply Now →
+            </a>
+          </div>
 
-              <div className="diff-right">
-                <h3 className="diff-col-title">Who Should Pursue This Course</h3>
-                <p className="intro-text">
-                  Students exploring this specialisation often come from
-                  diverse academic and professional backgrounds, but share
-                  one common goal: building a long-term career in the
-                  pharmaceutical and healthcare industry through management
-                  expertise and industry exposure. This specialization is
-                  designed for students and professionals who want to grow
-                  within the pharmaceutical and healthcare sector while
-                  developing strong leadership, operational, and strategic
-                  management capabilities.
-                </p>
+          <div className="panel diff-panel mt-4">
+            <span className="eyebrow">INDUSTRY COLLABORATIONS &amp; RECRUITERS</span>
+            <h2>Industry Collaborations &amp; Recruiters</h2>
 
-                <div className="app-card">
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="8" r="3.2" stroke="currentColor" strokeWidth="1.8" />
-                        <path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Science, Pharmacy &amp; Allied Healthcare Graduates</span>
-                      <span className="app-task">
-                        Students from B.Pharm, B.Sc., BAMS, BDS, BHMS,
-                        Biotechnology, and allied healthcare backgrounds
-                        often experience limited career progression in
-                        purely clinical or laboratory-based roles. This
-                        curriculum helps them transition into career
-                        opportunities in pharma marketing, regulatory
-                        affairs, pharmacovigilance, clinical research, and
-                        healthcare operations while continuing to build upon
-                        their scientific foundation.
-                      </span>
-                    </div>
-                  </div>
+            <p className="intro-text">
+              Agribusiness management professionals are in active demand
+              across commodity exchanges, food processing companies,
+              agri-tech startups, and rural finance institutions, FMCG
+              supply chains, and government development agencies. India's
+              organised agri-economy continues to expand, and the shortage
+              of trained management professionals within the sector makes
+              this one of the more stable and opportunity-rich
+              specialisations available today.
+            </p>
 
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 19h16M7 19V9M12 19V5M17 19v7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Working Professionals in Pharma or Hospital Settings</span>
-                      <span className="app-task">
-                        Medical representatives, clinical coordinators, QA
-                        executives, and hospital professionals with
-                        practical sector experience can use this MBA to move
-                        into higher managerial responsibilities. ISMR helps
-                        working professionals strengthen business
-                        decision-making, operational understanding, and
-                        strategic management capabilities that field
-                        experience alone may not fully develop.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" />
-                        <path d="M3 9h18M9 9v11" stroke="currentColor" strokeWidth="1.8" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Commerce and Management Graduates Interested in Healthcare</span>
-                      <span className="app-task">
-                        BCom and BBA graduates who understand business
-                        fundamentals but want to enter the rapidly growing
-                        pharmaceutical and healthcare sector gain valuable
-                        domain-specific exposure through this programme. The
-                        curriculum introduces students to pharmaceutical
-                        operations, healthcare systems, compliance
-                        structures, and regulated healthcare environments.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 3h7l4 4v14H7z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                        <path d="M9.5 12h5M9.5 15.5h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Aspiring Hospital Administrators and Healthcare Managers</span>
-                      <span className="app-task">
-                        For students considering a Hospital and Healthcare
-                        Management MBA, this programme provides practical
-                        exposure to hospital administration, healthcare
-                        operations, patient service management, and
-                        healthcare quality systems within medical and
-                        pharmaceutical environments. This track develops
-                        practical skills in patient care workflows, facility
-                        logistics, resource allocation, and healthcare
-                        quality compliance standards such as NABH.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Entrepreneurs and Family Business Members in Healthcare</span>
-                      <span className="app-task">
-                        Individuals involved in pharmaceutical distribution,
-                        diagnostic centres, healthcare services, medical
-                        retail, or family-run healthcare businesses can use
-                        this MBA to professionalise operations. The
-                        programme delivers practical methods to strengthen
-                        compliance systems, optimise inventory logistics,
-                        and modernise established healthcare businesses
-                        through stronger managerial systems and
-                        industry-focused knowledge.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <a href="/Contactus" className="default-btn diff-cta">
-                  Apply Now →
-                </a>
-              </div>
-            </div>
+            {/*
+              CONTENT GAP: Unlike the Marketing and Pharma page docs, this
+              content doc never names specific recruiting companies — only
+              sector categories. The paragraph above (from FAQ answer 6) is
+              the closest available copy. Actual recruiter names/logos
+              still need to be sourced from the client before this section
+              can go live.
+            */}
           </div>
           <style jsx>{`
                 .gap-panel {
@@ -2723,13 +2674,13 @@ font-size:14px;
             `}</style>
 
           {/* Salary Panel */}
-          <div className="PROGRAM OUTCOMES & LEARNING FORMAT curr-panel mt-4">
-            <span className="eyebrow">PROGRAM OUTCOMES &amp; LEARNING FORMAT</span>
-            <h2>Program Outcomes &amp; Learning Format</h2>
+          <div className="panel curr-panel mt-4">
+            <span className="eyebrow">FEES &amp; ADMISSION</span>
+            <h2>Admission Process &amp; Eligibility</h2>
 
             <div className="curr-layout">
               <div className="curr-left">
-                <h3 className="curr-col-title">Program Outcomes: What You Will Achieve</h3>
+                <h3 className="curr-col-title">Eligibility</h3>
 
                 <div className="app-card">
                   <div className="app-row">
@@ -2740,45 +2691,11 @@ font-size:14px;
                       </svg>
                     </span>
                     <div className="app-text">
-                      <span className="app-skill">Graduate as a Day-One Ready Specialist</span>
+                      <span className="app-skill">A graduation in any discipline from a recognised university</span>
                       <span className="app-task">
-                        Transition from a general graduate to an
-                        industry-ready professional certified in global
-                        logistics and lean operations.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" />
-                        <path d="M3 9h18M9 9v11" stroke="currentColor" strokeWidth="1.8" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Master Top Enterprise Tech</span>
-                      <span className="app-task">
-                        Gain immediate career leverage by mastering corporate
-                        operations tools, including SAP, Oracle, and
-                        advanced inventory simulations.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Command Leadership Roles</span>
-                      <span className="app-task">
-                        Qualify directly for high-growth corporate tracks
-                        like Supply Chain Analyst, Logistics Manager, and
-                        Procurement Specialist.
+                        Students from commerce, science, or arts backgrounds
+                        can apply, making MBA HR a flexible career option
+                        across academic streams.
                       </span>
                     </div>
                   </div>
@@ -2791,114 +2708,33 @@ font-size:14px;
                       </svg>
                     </span>
                     <div className="app-text">
-                      <span className="app-skill">Secure Hassle-Free Admissions</span>
+                      <span className="app-skill">Entrance exam qualification (MAH-CET / CAT / CMAT / ATMA / MAT / XAT)</span>
                       <span className="app-task">
-                        Navigate your entry smoothly with step-by-step
-                        guidance, from management entrance test counseling
-                        to final enrollment.
+                        These scores are used to assess aptitude and form
+                        the base for shortlisting candidates for further
+                        evaluation.
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="app-row">
+                    <span className="app-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    <div className="app-text">
+                      <span className="app-skill">Basic communication and career intent evaluation</span>
+                      <span className="app-task">
+                        Since HR is a people-centric role, institutes assess
+                        communication ability and clarity of career goals
+                        during the selection process.
                       </span>
                     </div>
                   </div>
                 </div>
 
-                <p className="curr-closing">
-                  Have specific questions regarding the MBA SCM Admission in
-                  Pune 2026 criteria, accepted cutoff scores, or seat
-                  reservation timelines? Get in touch today for personalized
-                  counseling.
-                </p>
-
-                <h3 className="curr-col-title">Understanding the Programme</h3>
-                <p className="intro-text">
-                  Operations and supply chain management involves planning
-                  procurement, manufacturing, inventory, logistics, and
-                  product delivery to improve business efficiency.
-                </p>
-                <p className="intro-text">
-                  This specialized discipline balances day-to-day
-                  operational efficiency with long-term strategic planning,
-                  teaching students how to transform raw materials into
-                  finished products and deliver them globally with maximum
-                  speed and minimal cost.
-                </p>
-                <p className="intro-text">
-                  As one of the SPPU-affiliated MBA in Supply Chain colleges
-                  in Pune, ISMR offers a curriculum structured over 2 years
-                  and 4 comprehensive semesters in a full-time format,
-                  progressing from management fundamentals to advanced
-                  global logistics architecture.
-                </p>
-
-                <a href="/Contactus" className="default-btn curr-cta">
-                  Apply Now →
-                </a>
-              </div>
-
-              <div className="curr-right">
-                <h3 className="curr-col-title">The Learning Format at ISMR</h3>
-                <p className="intro-text">
-                  To ensure you graduate with practical, actionable skills,
-                  our pedagogy utilizes active, industry-integrated learning
-                  methods:
-                </p>
-
-                <div className="app-card">
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Simulations &amp; Case Studies</span>
-                      <span className="app-task">
-                        Analyze real-world disruptions such as global
-                        shipping bottlenecks or sudden demand surges using
-                        interactive software to practice real-time risk
-                        mitigation.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Live Industry Projects</span>
-                      <span className="app-task">
-                        Partner with corporate brands across Pune's
-                        manufacturing belts to solve actual operational
-                        challenges on active shop floors.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Classroom Instruction</span>
-                      <span className="app-task">
-                        Master core management models delivered by
-                        experienced, university-vetted faculty and visiting
-                        supply chain veterans.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <h3 className="curr-col-title">Key Subjects &amp; Enterprise Tools</h3>
-                <h4 className="curr-col-subtitle">Core Modules</h4>
-                <p className="intro-text">
-                  ISMR's curriculum is meticulously designed to cover every
-                  touchpoint of the modern product lifecycle:
-                </p>
+                <h3 className="curr-col-title">Admission Overview</h3>
                 <ul className="method-list method-list--styled">
                   <li>
                     <span className="method-icon">
@@ -2906,9 +2742,7 @@ font-size:14px;
                         <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
-                    Supply Chain Strategy &amp; Global Logistics —
-                    international trade barriers, customs compliance,
-                    cross-border risk management
+                    Entrance exam-based selection — MAH-CET, CAT, or CMAT scores are considered
                   </li>
                   <li>
                     <span className="method-icon">
@@ -2916,9 +2750,97 @@ font-size:14px;
                         <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
-                    Logistics &amp; Warehouse Management — multimodal
-                    transport networks, distribution planning, automated
-                    warehousing layouts
+                    Counselling and interview evaluation — ensures alignment with HR career path
+                  </li>
+                </ul>
+              </div>
+
+              <div className="curr-right">
+                <h3 className="curr-col-title">Admission Process — Step by Step</h3>
+
+                <div className="app-card">
+                  <div className="app-row">
+                    <span className="app-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="8" r="3.2" stroke="currentColor" strokeWidth="1.8" />
+                        <path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                      </svg>
+                    </span>
+                    <div className="app-text">
+                      <span className="app-skill">1. Apply Online</span>
+                      <span className="app-task">
+                        Visit the official website, click on "Apply Online,"
+                        fill out the application form, and pay the ₹1,100
+                        registration fee. This step officially registers
+                        your application and begins the admission evaluation
+                        process.
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="app-row">
+                    <span className="app-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    <div className="app-text">
+                      <span className="app-skill">2. Counselling &amp; Telephonic Interview</span>
+                      <span className="app-task">
+                        The admissions team guides the program and evaluates
+                        your career intent. A telephonic interview is
+                        conducted to assess communication skills and
+                        readiness.
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="app-row">
+                    <span className="app-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 3h7l4 4v14H7z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                        <path d="M9.5 12h5M9.5 15.5h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                      </svg>
+                    </span>
+                    <div className="app-text">
+                      <span className="app-skill">3. Seat Confirmation</span>
+                      <span className="app-task">
+                        Selected candidates receive an admission letter via
+                        email. A payment of ₹30,000 must be made within four
+                        days to confirm the seat.
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="app-row">
+                    <span className="app-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    <div className="app-text">
+                      <span className="app-skill">4. Provisional Admission</span>
+                      <span className="app-task">
+                        Admission is provisionally confirmed after seat
+                        confirmation. Final admission depends on document
+                        verification and eligibility fulfilment.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <h3 className="curr-col-title">Important Admission Insight</h3>
+                <ul className="method-list method-list--styled">
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Seats are allotted strictly on a first-confirmation
+                    basis — many students lose admission despite selection
+                    due to delayed confirmation
                   </li>
                   <li>
                     <span className="method-icon">
@@ -2926,38 +2848,19 @@ font-size:14px;
                         <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
-                    Procurement &amp; Vendor Management — strategic sourcing
-                    models, sustainable supplier networks
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Lean, Six Sigma &amp; Demand Forecasting — waste
-                    elimination, quality control, data-driven demand
-                    prediction
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    ERP Systems &amp; Inventory Control — SAP/Oracle
-                    literacy, Just-In-Time (JIT) inventory models
+                    Admissions are time-sensitive — early applicants have
+                    better chances of securing seats
                   </li>
                 </ul>
 
-                <h4 className="curr-col-subtitle">Tech Exposure</h4>
-                <p className="intro-text">
-                  Employers look for candidates who can contribute
-                  immediately without lengthy training cycles. Students gain
-                  hands-on experience with industry-standard systems like
-                  SAP and Oracle, alongside practical exposure to Lean and
-                  Six Sigma frameworks.
+                <p className="curr-closing">
+                  MBA HR Admission 2026 at ISMR in Pune is limited due to a
+                  fixed intake capacity.
                 </p>
+
+                <a href="/Contactus" className="default-btn curr-cta">
+                  Apply Now →
+                </a>
               </div>
             </div>
           </div>
@@ -3852,222 +3755,6 @@ font-size:14px;
                     margin-top: 10px;
                 }
             `}</style>
-
-
-            <div className=" faq-panel">
-              <span className="eyebrow">FREQUENTLY ASKED QUESTIONS</span>
-              <h2>MBA Operations &amp; Supply Chain Management — FAQs</h2>
-
-              <div className="diff-layout">
-                <div className="diff-left">
-                  <h3 className="diff-col-title">Still Have Questions?</h3>
-                  <p className="intro-text">
-                    Get quick, clear answers on eligibility, duration,
-                    approvals, placements, and salary expectations for the MBA
-                    in Operations &amp; Supply Chain Management at ISMR Pune.
-                  </p>
-
-                  <div className="app-card">
-                    <div className="app-row">
-                      <span className="app-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                          <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </span>
-                      <div className="app-text">
-                        <span className="app-skill">AICTE &amp; DTE Approved</span>
-                        <span className="app-task">
-                          SPPU-affiliated programme with full statutory
-                          approvals, ensuring nationwide degree validity.
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="app-row">
-                      <span className="app-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
-                          <path d="M8.5 12.5l2.3 2.3 4.7-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </span>
-                      <div className="app-text">
-                        <span className="app-skill">85% Placement Rate</span>
-                        <span className="app-task">
-                          Recruiters include Amazon, Flipkart, DHL, Maersk,
-                          Tata Motors, and 10+ other core industry partners.
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="app-row">
-                      <span className="app-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="12" cy="8" r="3.2" stroke="currentColor" strokeWidth="1.8" />
-                          <path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                        </svg>
-                      </span>
-                      <div className="app-text">
-                        <span className="app-skill">Open to All Streams</span>
-                        <span className="app-task">
-                          Graduates from any discipline, including working
-                          professionals, are eligible to apply.
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <p className="intro-text diff-closing">
-                    Didn't find your answer? Our counselors are just a call
-                    away.
-                  </p>
-
-                  <a href="/Contactus" className="default-btn diff-cta">
-                    Talk to a Counselor →
-                  </a>
-                </div>
-
-                <div className="diff-right">
-                  <div className="accordion">
-                    <details className="accordion-item">
-                      <summary>What is an MBA in Operations and Supply Chain Management in Pune?</summary>
-                      <p>
-                        An MBA in Operations and Supply Chain Management in
-                        Pune is a specialized two-year postgraduate degree
-                        centered on making business production and
-                        distribution lines as efficient as possible. The
-                        program trains students to manage raw material
-                        sourcing, organize automated warehousing layouts, and
-                        coordinate international transportation networks. It
-                        blends traditional corporate leadership principles
-                        with modern analytical tools to prepare graduates for
-                        high-level management roles.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>Who can apply for an MBA in Supply Chain Management in Pune?</summary>
-                      <p>
-                        Any graduate holding a bachelor's degree in any stream
-                        from a recognized university with a minimum aggregate
-                        of 50% marks (45% for reserved categories) is fully
-                        eligible to apply. Additionally, candidates must
-                        possess a valid scorecard from state or national
-                        management entrance examinations like MAH-MBA CET,
-                        CAT, or CMAT. This ensures every student admitted to
-                        the programme meets the academic rigour that ISMR and
-                        Savitribai Phule Pune University demand.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>What is the duration of the MBA Operations and Supply Chain Management course?</summary>
-                      <p>
-                        The program spans a fixed duration of two academic
-                        years, which are systematically split into four
-                        comprehensive semesters. The first year focuses on
-                        building foundational management capabilities, while
-                        the second year dives deeply into advanced
-                        operations, ERP systems, and field-based industry
-                        projects. This full-time learning track ensures a
-                        complete transition from classroom theory to
-                        practical corporate readiness.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>Is an MBA in SCM suitable for working professionals?</summary>
-                      <p>
-                        Yes, this management track is exceptionally rewarding
-                        for working professionals currently employed in
-                        manufacturing units, logistics companies, or backend
-                        retail roles. The corporate frameworks, lean
-                        strategies, and software insights taught in the
-                        program provide the strategic domain authority needed
-                        to step away from daily frontline execution. It gives
-                        experienced individuals the formal credentials
-                        required to clear senior internal promotions.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>Is ISMR AICTE-approved for an MBA in Supply Chain Management?</summary>
-                      <p>
-                        Yes, ISMR holds complete statutory approvals from the
-                        All India Council for Technical Education (AICTE) and
-                        the Directorate of Technical Education (DTE),
-                        Maharashtra. The program is formally affiliated with
-                        Savitribai Phule Pune University (SPPU), guaranteeing
-                        that your postgraduate degree follows strict
-                        educational quality controls. This gives your
-                        qualification global validity across both corporate
-                        hiring boards and higher academic institutions.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>What is the scope of MBA Supply Chain Management in Pune?</summary>
-                      <p>
-                        The professional scope is exceptionally broad due to
-                        Pune's status as a booming automotive, manufacturing,
-                        and IT center. Graduates can step straight into
-                        diverse corporate tracks such as procurement
-                        logistics, inventory forecasting, warehouse
-                        automation, and strategic global sourcing. Because
-                        corporate profitability relies directly on lean
-                        operations, our graduates enjoy consistent, long-term
-                        demand across multiple industries.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>What is the typical MBA Supply Chain Management salary in Pune for fresh graduates?</summary>
-                      <p>
-                        ISMR graduates typically secure entry-level packages
-                        ranging between INR 4.5 Lakhs to INR 7.5 Lakhs per
-                        annum, with placements across Pune's automotive,
-                        logistics, and e-commerce sectors. Your final
-                        compensation depends heavily on your performance
-                        during interviews, your academic track record, and
-                        the recruiting company. As you gain hands-on
-                        experience managing large-scale global networks, your
-                        earning potential increases rapidly.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>Which companies recruit MBA graduates in Operations and Supply Chain Management from ISMR?</summary>
-                      <p>
-                        The MBA in Operations and Supply Chain Management
-                        programme at ISMR has an 85% placement rate, with
-                        recruiters including Amazon, Flipkart, DHL, Blue Dart,
-                        FedEx, Maersk, Reliance Industries, Tata Motors,
-                        Mahindra &amp; Mahindra, Maruti Suzuki, Bosch, Larsen
-                        &amp; Toubro, Asian Paints, Adani Logistics, and TVS
-                        Supply Chain Solutions.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>What is the difference between an MBA in Operations and Supply Chain Management and an MBA in Logistics Management?</summary>
-                      <p>
-                        MBA in Operations and Supply Chain Management covers
-                        the full scope of procurement, production, inventory,
-                        and distribution across an organization, while MBA in
-                        Logistics Management in Pune focuses more
-                        specifically on transportation, warehousing, and
-                        distribution execution. ISMR's Operations and Supply
-                        Chain Management programme includes logistics as one
-                        of several core modules, giving graduates broader
-                        managerial exposure across the entire supply chain
-                        rather than logistics alone.
-                      </p>
-                    </details>
-                  </div>
-                </div>
-              </div>
-            </div>
-
 
 
             <div className="">

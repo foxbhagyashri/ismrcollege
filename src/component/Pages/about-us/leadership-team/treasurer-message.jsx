@@ -1,9 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import allsectionbg from "../../../assets/allsectionbg.jpg";
-import director from "../../../assets/Homeimg/Director.png";
-import secretary from "../../../assets/Homeimg/Secretary.png";
-import cairman from "../../../assets/Homeimg/cairman.png";
+import allsectionbg from "../../../../assets/allsectionbg.jpg";
+import director from "../../../../assets/Homeimg/Director.png";
+import secretary from "../../../../assets/Homeimg/Secretary.png";
+import cairman from "../../../../assets/Homeimg/cairman.png";
 
 function Leadership() {
     return (

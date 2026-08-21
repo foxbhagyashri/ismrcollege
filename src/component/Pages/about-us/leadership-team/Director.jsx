@@ -1,9 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import allsectionbg from "../../../assets/allsectionbg.jpg";
-import director from "../../../assets/Homeimg/Director.png";
-import secretary from "../../../assets/Homeimg/Secretary.png";
-import cairman from "../../../assets/Homeimg/cairman.png";
+import allsectionbg from "../../../../assets/allsectionbg.jpg";
+import director from "../../../../assets/Homeimg/Director.png";
+import secretary from "../../../../assets/Homeimg/Secretary.png";
+import cairman from "../../../../assets/Homeimg/cairman.png";
 
 function Leadership() {
   return (
@@ -87,7 +87,7 @@ function Leadership() {
               margin: 0,
             }}
           >
-            Founder President  <span className="text-warning">Message</span>
+            Message <span className="text-warning">From Director </span>
           </h1>
           <p
             className="mb-0"
@@ -97,7 +97,7 @@ function Leadership() {
               marginTop: "0.5rem",
             }}
           >
-            About • <span className="text-warning">Founder President</span>
+            About • <span className="text-warning">Message From Director</span>
           </p>
         </div>
       </section>
@@ -111,11 +111,14 @@ function Leadership() {
       {/* Leadership Cards */}
       <section className="py-1 pt-4">
         <div className="container">
-          <div className="row g-4 mt-3">
+
+
+
+          <div className="row g-4 mt-5">
 
             <div className="col-12 col-md-5 col-lg-5">
               <img
-                src={cairman}
+                src={director}
                 alt="Leadership Team"
                 className="img-fluid rounded"
               />
@@ -131,8 +134,7 @@ function Leadership() {
                   marginBottom: "1.5rem",
                 }}
               >
-
-                Message from Founder President
+                Message From Director
               </h2>
               <p style={{
                 fontSize: "16px",
@@ -143,7 +145,7 @@ function Leadership() {
                 textAlign: "justify",
                 textJustify: "inter-word",
               }}>
-                We are delighted to welcome students who aspire to grow, lead and make a meaningful impact in the world of business. At ISMR, we strive to create an environment that nurtures curiosity, builds confidence and encourages self-discovery. Our commitment is to help every student develop the clarity and courage needed to define their vision and work steadily toward achieving it. Inspiring and empowering others is woven into the very culture of our institution.
+                Dear Students,
               </p>
               <p style={{
                 fontSize: "16px",
@@ -153,7 +155,8 @@ function Leadership() {
                 fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                 textAlign: "justify",
                 textJustify: "inter-word",
-              }}>In today’s rapidly changing world, the demand for leaders who can think critically, respond swiftly and design innovative solutions has never been greater. With this in mind, our programs are thoughtfully crafted around the pillars of entrepreneurship, leadership and consultancy. Through hands-on projects and collaborations with diverse organizations, students gain invaluable opportunities to recognize their strengths and acquire practical, industry-relevant skills.
+              }}>
+                Welcome to the dynamic world of management !!! As you embark on this transformative journey, you are stepping into a realm where innovation, leadership, and strategic thinking shape the future.
               </p>
               <p style={{
                 fontSize: "16px",
@@ -163,9 +166,9 @@ function Leadership() {
                 fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                 textAlign: "justify",
                 textJustify: "inter-word",
-              }}>At ISMR, we are dedicated to shaping global leaders who come from varied backgrounds yet share a common ambition—to excel and contribute meaningfully to society. Our updated curriculum integrates interactive learning, personalized guidance, coaching and robust leadership development. Supported by our experienced faculty and professional team, students receive a balanced blend of business knowledge, personal growth and real-world exposure.</p>
-
-
+              }}>
+                Management is not just about handling business operations—it is about making impactful decisions, leading teams with vision, and adapting to the ever-changing global landscape. The challenges ahead will test your resilience, creativity, and ability to think beyond conventional boundaries.
+              </p>
               <p style={{
                 fontSize: "16px",
                 color: "#444",
@@ -174,19 +177,62 @@ function Leadership() {
                 fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                 textAlign: "justify",
                 textJustify: "inter-word",
-              }}>We look forward to welcoming you to a journey of transformation, learning and leadership.</p>
-
-
-              <h5><i>Jaikishan Bhutada</i></h5>
+              }}>
+                At our institution, we are committed to equip you with the skills, knowledge, and values needed to become exceptional leaders. Our curriculum is designed to foster critical thinking, ethical decision-making, and hands-on experience through practical learning and industry engagement.
+              </p>
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>
+                Success in management is not defined solely by financial growth but by the positive influence you have on people, businesses, and society. Cultivate a mindset of lifelong learning, embrace collaboration, and never hesitate to challenge the status quo.
+              </p>
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>
+                We are into a Volatile, Uncertain, Complex and Ambiguous (VUCA) world. Therefore, it is more challenging.
+              </p>
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>
+                Remember, you need to transform yourself from Ordinary to Legendary. We will help you in this transformation.
+              </p>
+              <p style={{
+                fontSize: "16px",
+                color: "#444",
+                lineHeight: "1.7",
+                marginTop: "10px",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}>
+                Wishing you all the best for a promising and successful career ahead!
+              </p>
+              {/* <h5>Warm regards,</h5> */}
+              <h5><i>Prof. (Dr.) Rupendra Gaikwad</i></h5>
               <h6>
-                Founder President</h6>
+                Director, ISMR</h6>
+
 
             </div>
 
           </div>
-
-
-
 
 
         </div>

@@ -28,63 +28,63 @@ import Faq from "./component/Faq";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // About Page Components
-import Aboutinstutue from "./component/Pages/AboutPage/Aboutinstutue";
-import Leadership from "./component/Pages/AboutPage/Leadership";
-import Award from "./component/Pages/AboutPage/Award";
-import Ismr from "./component/Pages/AboutPage/Ismr";
-import Recognition from "./component/Pages/AboutPage/Recognition";
-import Eligibilitycriteria from "./component/Pages/Addmissions/Eligibility-criteria";
-import Howtoapply from "./component/Pages/Addmissions/Howtoapply";
-import Educationloan from "./component/Pages/Addmissions/Educationloan";
-import Disclaimer from "./component/Pages/Addmissions/Disclaimer";
-import Refundpolicy from "./component/Pages/Addmissions/Refundpolicy";
-import Feesstructure from "./component/Pages/Addmissions/Feesstructure";
-import Admissioncontact from "./component/Pages/Addmissions/Admissioncontact";
-import Chairman from "./component/Pages/AboutPage/Chairman";
-import Director from "./component/Pages/AboutPage/Director";
-import Secretary from "./component/Pages/AboutPage/Secretary";
+import Aboutinstutue from "./component/Pages/about-us/about-us";
+import Leadership from "./component/Pages/about-us/Leadership";
+import Award from "./component/Pages/about-us/awards-and-rankings";
+import Ismr from "./component/Pages/about-us/why-ismr";
+import Recognition from "./component/Pages/about-us/Recognition";
+import Eligibilitycriteria from "./component/Pages/admissions/eligibility-criteria";
+import Howtoapply from "./component/Pages/admissions/how-to-apply";
+import Educationloan from "./component/Pages/admissions/education-loan";
+import Disclaimer from "./component/Pages/admissions/disclaimer";
+import Refundpolicy from "./component/Pages/admissions/refund-policy";
+import Feesstructure from "./component/Pages/admissions/fee-structure";
+import Admissioncontact from "./component/Pages/admissions/contact";
+import Chairman from "./component/Pages/about-us/leadership-team/chairman-message";
+import Director from "./component/Pages/about-us/leadership-team/Director";
+import Secretary from "./component/Pages/about-us/leadership-team/secretary-message";
 
 // Placement
-import Placementoverview from "./component/Pages/Placementpage/Placementoverview";
-import Ourplacement from "./component/Pages/Placementpage/Ourplacement";
-import Corporate from "./component/Pages/Placementpage/Corporate";
-import PlacementRules from "./component/Pages/Placementpage/PlacementRules";
-import PlacementProcess from "./component/Pages/Placementpage/PlacementProcess";
+import Placementoverview from "./component/Pages/placements/placements";
+import Ourplacement from "./component/Pages/placements/internships-and-placements";
+import Corporate from "./component/Pages/placements/Corporate";
+import PlacementRules from "./component/Pages/placements/rules-and-regulations";
+import PlacementProcess from "./component/Pages/placements/process";
 // import
 // Studentcampus
-import Studentcampus from "./component/Pages/Life@compusPage/Studentcampus";
-import StudentFacilities from "./component/Pages/Life@compusPage/StudentFacilities";
+import Studentcampus from "./component/Pages/campus-life/student-life";
+import StudentFacilities from "./component/Pages/campus-life/StudentFacilities";
 
 //Academics
-import Academics from "./component/Pages/Academics/Academics";
-import Courseduration from "./component/Pages/Academics/Courseduration";
+import Academics from "./component/Pages/academics/programs-offered";
+import Courseduration from "./component/Pages/academics/programs";
 // newsletter
-import Newsletter from "./component/Pages/NewsPage/Newsletter";
+import Newsletter from "./component/Pages/campus-life/newsletter";
 // Contactus Page
-import Contactus from "./component/Pages/Contactus/Contactus";
-import FAQPage from "./component/Pages/Addmissions/more-faqs";
+import Contactus from "./component/Pages/Contactus/contact-us";
+import FAQPage from "./component/Pages/admissions/more-faqs";
 import Sticky from "./component/sticky";
-import DisclaimerFeePayment from "./component/Pages/Addmissions/DisclaimerFeesPayment";
+import DisclaimerFeePayment from "./component/Pages/admissions/fee-disclaimer";
 import Blogs from "./component/Blogs";
 import ApplyMba from "./component/ApplyMba";
 import ApplyBba from "./component/ApplyBbaBca";
-import Treasure from "./component/Pages/AboutPage/Treasure";
+import Treasure from "./component/Pages/about-us/leadership-team/treasurer-message";
 import Applicationform from "./component/Pages/Contactus/Applicationform";
-import FAQBba from "./component/Pages/Addmissions/FaqBbaBca";
+import FAQBba from "./component/Pages/admissions/FaqBbaBca";
 import Termsconditions from "./component/Termsconditions";
 import MarketingAcrossGenerations from "./component/blogs/Marketing-Across-Generations";
 import FutureInterfaceOfMarketing from "./component/blogs/Future-Interface-of-Marketing";
 import PredictiveMarketingExplained from "./component/blogs/Predictive-Marketing-Explained";
-import Listofdocument from "./component/Pages/Addmissions/Listofdocuments";
+import Listofdocument from "./component/Pages/admissions/required-documents";
 import AdmissionNote from "./component/Pages/notices/Admissions";
 import ChatbotLoader from "./component/ChatbotLoader";
-import OperationSupplyChainManagement from "./component/Pages/Programs/MBA-in-Operations-and-Supply-Chain-Management-Programme-in-pune"
-import MBAMarketingManagement from "./component/Pages/Programs/MBA-Marketing-management-in-pune"
-import MBAFinanceManagement from "./component/Pages/Programs/MBA-in-Finance-Management-in-Pune"
-import MBAAgribusinessManagement from "./component/Pages/Programs/MBA-in-Agribusiness-Management-College-in-Pune"
-import MBAPharmaCollegesInPune from "./component/Pages/Programs/MBA-in-Pharma-Healthcare-Management-in-Pune"
-import MBAHRCollegesInPune from "./component/Pages/Programs/MBA-HR-Management-in-Pune"
-import MbaProgramPage from "./component/Pages/Academics/MBA-Program"
+import OperationSupplyChainManagement from "./component/Pages/Programs/mba-in-operations-and-supply-chain-management-in-pune"
+import MBAMarketingManagement from "./component/Pages/Programs/mba-in-marketing-management-in-pune"
+import MBAFinanceManagement from "./component/Pages/Programs/mba-in-finance-management-in-pune"
+import MBAAgribusinessManagement from "./component/Pages/Programs/mba-in-agribusiness-management-pune"
+import MBAPharmaCollegesInPune from "./component/Pages/Programs/mba-in-pharma-healthcare-management-in-pune"
+import MBAHRCollegesInPune from "./component/Pages/Programs/mba-hr-college-in-pune"
+import MbaProgramPage from "./component/Pages/academics/MBA-Program"
 import BBACourse from "./component/Pages/Programs/BBA-Programme-in-Pune";
 import BCACourse from "./component/Pages/Programs/BCA-Programme-inn-Pune";
 
@@ -120,122 +120,122 @@ function App() {
 
                 {/* About Page Routes */}
                 <Route
-                    path="/Aboutpage/Aboutinstutue"
+                    path="/about-us/about-us"
                     element={<Aboutinstutue />}
                 />
                 <Route
-                    path="/Aboutpage/Leadership"
+                    path="/about-us/Leadership"
                     element={<Leadership />}
                 />
                 <Route
-                    path="/Aboutpage/Award"
+                    path="/about-us/awards-and-rankings"
                     element={<Award />}
                 />
                 <Route
-                    path="/Aboutpage/Ismr"
+                    path="/about-us/why-ismr"
                     element={<Ismr />}
                 />
                 <Route
-                    path="/Aboutpage/Chairman"
+                    path="/about-us/leadership-team/Chairman"
                     element={<Chairman />}
                 />
                 <Route
-                    path="/Aboutpage/Director"
+                    path="/about-us/leadership-team/Director"
                     element={<Director />}
                 />
                 <Route
-                    path="/Aboutpage/Secretary"
+                    path="/about-us/leadership-team/Secretary"
                     element={<Secretary />}
                 />
                 <Route
-                    path="/Aboutpage/Treasure"
+                    path="/about-us/leadership-team/Treasure"
                     element={<Treasure />}
                 />
 
                 <Route
-                    path="/Addmissions/Eligibility-criteria"
+                    path="/admissions/eligibility-criteria"
                     element={<Eligibilitycriteria />}
                 />
                 <Route
-                    path="/Addmissions/Howtoapply"
+                    path="/admissions/how-to-apply"
                     element={<Howtoapply />}
                 />
                 <Route
-                    path="/Addmissions/Educationloan"
+                    path="/admissions/education-loan"
                     element={<Educationloan />}
                 />
                 <Route
-                    path="/Addmissions/Disclaimer"
+                    path="/admissions/disclaimer"
                     element={<Disclaimer />}
                 />
                 <Route
-                    path="/Addmissions/Refundpolicy"
+                    path="/admissions/refund-policy"
                     element={<Refundpolicy />}
                 />
                 <Route
-                    path="/Addmissions/Feesstructure"
+                    path="/admissions/fee-structure"
                     element={<Feesstructure />}
                 />
                 <Route
-                    path="/Addmissions/FaqBbaBca"
+                    path="/admissions/FaqBbaBca"
                     element={<FAQBba />}
                 />
                 <Route
-                    path="/Addmissions/Listofdocuments"
+                    path="/admissions/required-documents"
                     element={<Listofdocument />}
                 />
                 <Route
-                    path="/Addmissions/Admissioncontact"
+                    path="/admissions/contact"
                     element={<Admissioncontact />}
                 />
                 {/* Placement Page */}
                 <Route
-                    path="/Placementpage/Placementoverview"
+                    path="/placements/placements"
                     element={<Placementoverview />}
                 />
                 <Route
-                    path="/Placementpage/Ourplacement"
+                    path="/placements/internships-and-placements"
                     element={<Ourplacement />}
                 />
                 <Route
-                    path="/Placementpage/Corporate"
+                    path="/placements/Corporate"
                     element={<Corporate />}
                 />
 
                 {/* Student Life Page */}
                 <Route
-                    path="/Life@campus/Studentcampus"
+                    path="/campus-life/student-life"
                     element={<Studentcampus />}
                 />
                 <Route
-                    path="/Life@campus/StudentFacilities"
+                    path="/campus-life/student-facilities/"
                     element={<StudentFacilities />}
                 />
 
                 {/* Academics Page */}
                 <Route
-                    path="/Academics/Academics"
+                    path="/Academics/programs-offered"
                     element={<Academics />}
                 />
                 <Route
-                    path="/Academics/Courseduration"
+                    path="/Academics/programs"
                     element={<Courseduration />}
                 />
 
                 <Route
-                    path="/Academics/MBA-Program"
+                    path="/academics/MBA-Program"
                     element={<MbaProgramPage />}
                 />
 
                 {/* Newsletter Page */}
                 <Route
-                    path="/NewsPage/Newsletter"
+                    path="/campus-life/newsletter"
                     element={<Newsletter />}
                 />
 
                 {/* Contact us Page */}
                 <Route
-                    path="/Contactus"
+                    path="/contact-us"
                     element={<Contactus />}
                 />
                 <Route
@@ -251,19 +251,19 @@ function App() {
 
                 {/* more PlacementRules */}
                 <Route
-                    path="/Placementpage/PlacementRules"
+                    path="/placements/rules-and-regulations"
                     element={<PlacementRules />}
                 />
 
                 {/* more PlacementRules */}
                 <Route
-                    path="/Placementpage/PlacementProcess"
+                    path="/placements/process"
                     element={<PlacementProcess />}
                 />
 
                 {/* more PlacementRules */}
                 <Route
-                    path="/Addmissions/DisclaimerFeePayment"
+                    path="/admissions/fee-disclaimer"
                     element={<DisclaimerFeePayment />}
                 />
 
@@ -305,27 +305,27 @@ function App() {
                 />
 
                 <Route
-                    path="/Programs/MBA-in-Operations-and-Supply-Chain-Management-Programme-in-pune"
+                    path="/Programs/mba-in-operations-and-supply-chain-management-in-pune"
                     element={<OperationSupplyChainManagement />}
                 />
                 <Route
-                    path="/Programs/MBA-Marketing-management-in-pune"
+                    path="/Programs/mba-in-marketing-management-in-pune"
                     element={<MBAMarketingManagement />}
                 />
                 <Route
-                    path="/Programs/MBA-in-Finance-Management-in-Pune"
+                    path="/Programs/mba-in-finance-management-in-pune"
                     element={<MBAFinanceManagement />}
                 />
                 <Route
-                    path="/Programs/MBA-in-Agribusiness-Management-College-in-Pune"
+                    path="/Programs/mba-in-agribusiness-management-pune"
                     element={<MBAAgribusinessManagement />}
                 />
                 <Route
-                    path="/Programs/MBA-in-Pharma-Healthcare-Management-in-Pune"
+                    path="/Programs/mba-in-pharma-healthcare-management-in-pune"
                     element={<MBAPharmaCollegesInPune />}
                 />
                 <Route
-                    path="/Programs/MBA-HR-Management-in-Pune"
+                    path="/Programs/mba-hr-college-in-pune"
                     element={<MBAHRCollegesInPune />}
                 />
 
@@ -334,10 +334,17 @@ function App() {
                     element={<BBACourse />}
                 />
 
-                    <Route
+                <Route
                     path="/Programs/BCA-Programme-inn-Pune"
                     element={<BCACourse />}
                 />
+
+
+
+                {/* <Route
+                    path="/blog/uses-of-ai-in-business-analytics"
+                    element={<Navigate to="/programs/mba-in-business-analytics-pune" replace />}
+                /> */}
 
 
             </Routes>

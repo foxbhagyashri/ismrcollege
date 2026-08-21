@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
-import { Link } from "react-router-dom";
+
 import axios from "axios";
 import brochurePdf from "../../../assets/ISMR Brochure.pdf"; // Add your PDF in assets
 
@@ -66,6 +67,19 @@ function MbaProgramPage() {
     };
 
     const specializations = Object.keys(syllabusMap);
+
+
+    const navigate = useNavigate();
+
+    const specializationRoutes = {
+        "Financial Management": "/Programs/mba-in-finance-management-in-pune",
+        "Marketing Management": "/Programs/mba-in-marketing-management-in-pune",
+        "Human Resource Management": "/Programs/mba-hr-college-in-pune",
+        "Operations & Supply Chain Management": "/Programs/mba-in-operations-and-supply-chain-management-in-pune",
+        "Business Analytics": "/mba/mba-in-business-analytics-pune",
+        "Agribusiness Management": "/Programs/mba-in-agribusiness-management-pune",
+        "Pharma Management": "/Programs/mba-in-pharma-healthcare-management-in-pune",
+    };
 
     const validateForm = () => {
         const newErrors = {};
@@ -318,6 +332,10 @@ function MbaProgramPage() {
         @media (max-width: 767px) {
           .mba-fact + .mba-fact { border-left: none; border-top: 1px dashed #cfd8e3; }
         }
+          h1{
+      font-size: 20px;
+    font-weight: 700;
+  }
       `}</style>
 
             {/* ===== HERO ===== */}
@@ -549,9 +567,9 @@ function MbaProgramPage() {
                                             <button
                                                 type="button"
                                                 className="mba-readmore-btn mb-3"
-                                                onClick={() => setShowFullDescription((v) => !v)}
+                                                onClick={() => navigate(specializationRoutes[activeSection])}
                                             >
-                                                {showFullDescription ? "Show Less" : "Read More"}
+                                                Read More
                                             </button>
                                         )}
 

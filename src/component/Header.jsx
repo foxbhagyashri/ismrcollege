@@ -111,7 +111,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/Aboutpage/Aboutinstutue"
+              to="/about-us/about-us"
               onClick={handleDropdownItemClick}
             >
               About Institute
@@ -131,13 +131,13 @@ const Header = () => {
             </a>
 
             <ul className={`submenu ${activeSubmenu === 0 ? "show" : ""}`}>
-              <li> <Link className="dropdown-item" to="/AboutPage/Chairman" onClick={handleDropdownItemClick} > Message From Founder President </Link> </li> <li> <Link className="dropdown-item" to="/AboutPage/Secretary" onClick={handleDropdownItemClick} > Message From Secretary </Link> </li> <li> <Link className="dropdown-item" to="/AboutPage/Treasure" onClick={handleDropdownItemClick} > Message From Treasurer </Link> </li> {/* <li> <Link className="dropdown-item" to="AboutPage/Director" onClick={handleDropdownItemClick} > Message From Director </Link> </li> */} </ul>
+              <li> <Link className="dropdown-item" to="/about-us/leadership-team/Chairman" onClick={handleDropdownItemClick} > Message From Founder President </Link> </li> <li> <Link className="dropdown-item" to="/about-us/leadership-team/Secretary" onClick={handleDropdownItemClick} > Message From Secretary </Link> </li> <li> <Link className="dropdown-item" to="/about-us/leadership-team/Treasure" onClick={handleDropdownItemClick} > Message From Treasurer </Link> </li> {/* <li> <Link className="dropdown-item" to="AboutPage/Director" onClick={handleDropdownItemClick} > Message From Director </Link> </li> */} </ul>
           </li>
 
           <li>
             <Link
               className="dropdown-item"
-              to="/Aboutpage/Ismr"
+              to="/about-us/why-ismr"
               onClick={handleDropdownItemClick}
             >
               Why ISMR?
@@ -146,7 +146,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/Aboutpage/Award"
+              to="/about-us/awards-and-rankings"
               onClick={handleDropdownItemClick}
             >
               Awards & Ranking
@@ -173,7 +173,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/Addmissions/Eligibility-criteria"
+              to="/admissions/eligibility-criteria"
               onClick={handleDropdownItemClick}
             >
               Eligibility Criteria
@@ -182,7 +182,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/Addmissions/Howtoapply"
+              to="/admissions/how-to-apply"
               onClick={handleDropdownItemClick}
             >
               How To Apply
@@ -200,7 +200,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/Addmissions/Educationloan"
+              to="/admissions/education-loan"
               onClick={handleDropdownItemClick}
             >
               Education Loan
@@ -210,7 +210,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/Addmissions/Refundpolicy"
+              to="/admissions/refund-policy"
               onClick={handleDropdownItemClick}
             >
               Refund Policy
@@ -220,7 +220,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/Addmissions/Admissioncontact"
+              to="/admissions/contact"
               onClick={handleDropdownItemClick}
             >
               Admission Contact
@@ -229,7 +229,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/Addmissions/Disclaimer"
+              to="/admissions/disclaimer"
               onClick={handleDropdownItemClick}
             >
               Disclaimer for Admissions
@@ -238,7 +238,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/Addmissions/DisclaimerFeePayment"
+              to="/admissions/fee-disclaimer"
               onClick={handleDropdownItemClick}
             >
               Disclaimer for Fees Payment
@@ -247,7 +247,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/Addmissions/Feesstructure"
+              to="/admissions/fee-structure"
               onClick={handleDropdownItemClick}
             >
               Fees Structure
@@ -256,7 +256,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/Addmissions/Listofdocuments"
+              to="/admissions/required-documents"
               onClick={handleDropdownItemClick}
             >
               List Of Documents
@@ -282,7 +282,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/Academics/Academics"
+              to="/academics/programs-offered"
               onClick={handleDropdownItemClick}
             >
               Academics
@@ -292,7 +292,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/Academics/Courseduration"
+              to="/academics/programs"
               onClick={handleDropdownItemClick}
             >
               Course Duration
@@ -329,7 +329,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/Placementpage/Placementoverview"
+              to="/placements/placements"
               onClick={handleDropdownItemClick}
             >
               Placement Overview
@@ -339,7 +339,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/Placementpage/PlacementRules"
+              to="/placements/rules-and-regulations"
               onClick={handleDropdownItemClick}
             >
               Placement Rules & Regulations
@@ -348,7 +348,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/Placementpage/PlacementProcess"
+              to="/placements/process"
               onClick={handleDropdownItemClick}
             >
               Placement Process
@@ -362,7 +362,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/Placementpage/Ourplacement"
+              to="/placements/internships-and-placements"
               onClick={handleDropdownItemClick}
             >
               Our Internship & Placement
@@ -521,7 +521,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/Life@campus/Studentcampus"
+              to="/campus-life/student-life"
               onClick={handleDropdownItemClick}
             >
               Student Campus life
@@ -532,7 +532,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/Life@campus/StudentFacilities"
+              to="/campus-life/student-facilities/"
               onClick={handleDropdownItemClick}
             >
               Student Facilities
@@ -542,7 +542,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/NewsPage/Newsletter"
+              to="/campus-life/newsletter"
               onClick={handleDropdownItemClick}
             >
               Newsletters
@@ -611,7 +611,7 @@ const Header = () => {
 
       {/* Contact Us */}
       <li className="nav-item">
-        <Link to="/Contactus" className="nav-link" onClick={handleNavLinkClick}>
+        <Link to="/contact-us" className="nav-link" onClick={handleNavLinkClick}>
           Reach Us
         </Link>
       </li>
