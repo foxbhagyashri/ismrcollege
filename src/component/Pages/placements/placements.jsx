@@ -323,7 +323,6 @@ function EnhancedPlacementStatus() {
                           paddingTop: 22,
                           textAlign: "center",
                           borderTop: "1px solid #eef0f3",
-                          marginTop: 24,
                         }}
                       >
                         <p
