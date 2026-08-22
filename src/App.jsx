@@ -56,7 +56,7 @@ import Studentcampus from "./component/Pages/campus-life/student-life";
 import StudentFacilities from "./component/Pages/campus-life/StudentFacilities";
 
 //Academics
-import Programoffered from "./component/Pages/academics/programs-offered";
+import ProgramOfferedPage from "./component/Pages/academics/programs-offered";
 import Courseduration from "./component/Pages/academics/programs";
 // newsletter
 import Newsletter from "./component/Pages/campus-life/newsletter";
@@ -215,7 +215,7 @@ function App() {
                 {/* Academics Page */}
                 <Route
                     path="/Academics/programs-offered"
-                    element={<Programoffered />}
+                    element={<ProgramOfferedPage />}
                 />
                 <Route
                     path="/Academics/programs"
