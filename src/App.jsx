@@ -63,7 +63,7 @@ import Newsletter from "./component/Pages/campus-life/newsletter";
 // Contactus Page
 import Contactus from "./component/Pages/Contactus/contact-us";
 import FAQPage from "./component/Pages/admissions/more-faqs";
-import Sticky from "./component/sticky";
+import Sticky from "./component/Sticky";
 import DisclaimerFeePayment from "./component/Pages/admissions/fee-disclaimer";
 import Blogs from "./component/Blogs";
 import ApplyMba from "./component/ApplyMba";
