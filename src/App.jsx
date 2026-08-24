@@ -78,15 +78,15 @@ import PredictiveMarketingExplained from "./component/blogs/Predictive-Marketing
 import Listofdocument from "./component/Pages/admissions/required-documents";
 import AdmissionNote from "./component/Pages/notices/Admissions";
 import ChatbotLoader from "./component/ChatbotLoader";
-import OperationSupplyChainManagement from "./component/Pages/Programs/mba-in-operations-and-supply-chain-management-in-pune"
-import MBAMarketingManagement from "./component/Pages/Programs/mba-in-marketing-management-in-pune"
-import MBAFinanceManagement from "./component/Pages/Programs/mba-in-finance-management-in-pune"
-import MBAAgribusinessManagement from "./component/Pages/Programs/mba-in-agribusiness-management-pune"
-import MBAPharmaCollegesInPune from "./component/Pages/Programs/mba-in-pharma-healthcare-management-in-pune"
-import MBAHRCollegesInPune from "./component/Pages/Programs/mba-hr-college-in-pune"
+import OperationSupplyChainManagement from "./component/Pages/programs/Mba-in-operations-and-supply-chain-management-in-pune"
+import MBAMarketingManagement from "./component/Pages/programs/Mba-in-marketing-management-in-pune"
+import MBAFinanceManagement from "./component/Pages/programs/Mba-in-finance-management-in-pune"
+import MBAAgribusinessManagement from "./component/Pages/programs/Mba-in-agribusiness-management-pune"
+import MBAPharmaCollegesInPune from "./component/Pages/programs/Mba-in-pharma-healthcare-management-in-pune"
+import MBAHRCollegesInPune from "./component/Pages/programs/Mba-hr-college-in-pune"
 import MbaProgramPage from "./component/Pages/academics/MBA-Program"
-import BBACourse from "./component/Pages/Programs/BBA-Programme-in-Pune";
-import BCACourse from "./component/Pages/Programs/BCA-Programme-inn-Pune";
+import BBACourse from "./component/Pages/programs/BBA-Programme-in-Pune";
+import BCACourse from "./component/Pages/programs/BCA-Programme-inn-Pune";
 
 function App() {
     return (
