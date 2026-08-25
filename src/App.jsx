@@ -28,65 +28,65 @@ import Faq from "./component/Faq";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // About Page Components
-import Aboutinstutue from "./component/Pages/about-us/about-us";
-import Leadership from "./component/Pages/about-us/Leadership";
-import Award from "./component/Pages/about-us/awards-and-rankings";
-import Ismr from "./component/Pages/about-us/why-ismr";
-import Recognition from "./component/Pages/about-us/Recognition";
-import Eligibilitycriteria from "./component/Pages/admissions/eligibility-criteria";
-import Howtoapply from "./component/Pages/admissions/how-to-apply";
-import Educationloan from "./component/Pages/admissions/education-loan";
-import Disclaimer from "./component/Pages/admissions/disclaimer";
-import Refundpolicy from "./component/Pages/admissions/refund-policy";
-import Feesstructure from "./component/Pages/admissions/fee-structure";
-import Admissioncontact from "./component/Pages/admissions/contact";
-import Chairman from "./component/Pages/about-us/leadership-team/chairman-message";
-import Director from "./component/Pages/about-us/leadership-team/Director";
-import Secretary from "./component/Pages/about-us/leadership-team/secretary-message";
+import Aboutinstutue from "./component/pages/about-us/about-us";
+import Leadership from "./component/pages/about-us/Leadership";
+import Award from "./component/pages/about-us/awards-and-rankings";
+import Ismr from "./component/pages/about-us/why-ismr";
+import Recognition from "./component/pages/about-us/Recognition";
+import Eligibilitycriteria from "./component/pages/admissions/eligibility-criteria";
+import Howtoapply from "./component/pages/admissions/how-to-apply";
+import Educationloan from "./component/pages/admissions/education-loan";
+import Disclaimer from "./component/pages/admissions/disclaimer";
+import Refundpolicy from "./component/pages/admissions/refund-policy";
+import Feesstructure from "./component/pages/admissions/fee-structure";
+import Admissioncontact from "./component/pages/admissions/contact";
+import Chairman from "./component/pages/about-us/leadership-team/chairman-message";
+import Director from "./component/pages/about-us/leadership-team/Director";
+import Secretary from "./component/pages/about-us/leadership-team/secretary-message";
 
 // Placement
-import Placementoverview from "./component/Pages/placements/placements";
-import Ourplacement from "./component/Pages/placements/internships-and-placements";
-import Corporate from "./component/Pages/placements/Corporate";
-import PlacementRules from "./component/Pages/placements/rules-and-regulations";
-import PlacementProcess from "./component/Pages/placements/process";
+import Placementoverview from "./component/pages/placements/placements";
+import Ourplacement from "./component/pages/placements/internships-and-placements";
+import Corporate from "./component/pages/placements/Corporate";
+import PlacementRules from "./component/pages/placements/rules-and-regulations";
+import PlacementProcess from "./component/pages/placements/process";
 // import
 // Studentcampus
-import Studentcampus from "./component/Pages/campus-life/student-life";
-import StudentFacilities from "./component/Pages/campus-life/StudentFacilities";
+import Studentcampus from "./component/pages/campus-life/student-life";
+import StudentFacilities from "./component/pages/campus-life/StudentFacilities";
 
 //Academics
-import ProgramOfferedPage from "./component/Pages/academics/programs-offered";
-import Courseduration from "./component/Pages/academics/programs";
+import ProgramOfferedPage from "./component/pages/academics/programs-offered";
+import Courseduration from "./component/pages/academics/programs";
 // newsletter
-import Newsletter from "./component/Pages/campus-life/newsletter";
+import Newsletter from "./component/pages/campus-life/newsletter";
 // Contactus Page
-import Contactus from "./component/Pages/Contactus/contact-us";
-import FAQPage from "./component/Pages/admissions/more-faqs";
+import Contactus from "./component/pages/Contactus/contact-us";
+import FAQPage from "./component/pages/admissions/more-faqs";
 import Sticky from "./component/Sticky";
-import DisclaimerFeePayment from "./component/Pages/admissions/fee-disclaimer";
+import DisclaimerFeePayment from "./component/pages/admissions/fee-disclaimer";
 import Blogs from "./component/Blogs";
 import ApplyMba from "./component/ApplyMba";
 import ApplyBba from "./component/ApplyBbaBca";
-import Treasure from "./component/Pages/about-us/leadership-team/treasurer-message";
-import Applicationform from "./component/Pages/Contactus/Applicationform";
-import FAQBba from "./component/Pages/admissions/FaqBbaBca";
+import Treasure from "./component/pages/about-us/leadership-team/treasurer-message";
+import Applicationform from "./component/pages/Contactus/Applicationform";
+import FAQBba from "./component/pages/admissions/FaqBbaBca";
 import Termsconditions from "./component/Termsconditions";
 import MarketingAcrossGenerations from "./component/blogs/Marketing-Across-Generations";
 import FutureInterfaceOfMarketing from "./component/blogs/Future-Interface-of-Marketing";
 import PredictiveMarketingExplained from "./component/blogs/Predictive-Marketing-Explained";
-import Listofdocument from "./component/Pages/admissions/required-documents";
-import AdmissionNote from "./component/Pages/notices/Admissions";
+import Listofdocument from "./component/pages/admissions/required-documents";
+import AdmissionNote from "./component/pages/notices/Admissions";
 import ChatbotLoader from "./component/ChatbotLoader";
-import OperationSupplyChainManagement from "./component/Pages/programs/Mba-in-operations-and-supply-chain-management-in-pune"
-import MBAMarketingManagement from "./component/Pages/programs/Mba-in-marketing-management-in-pune"
-import MBAFinanceManagement from "./component/Pages/programs/Mba-in-finance-management-in-pune"
-import MBAAgribusinessManagement from "./component/Pages/programs/Mba-in-agribusiness-management-pune"
-import MBAPharmaCollegesInPune from "./component/Pages/programs/Mba-in-pharma-healthcare-management-in-pune"
-import MBAHRCollegesInPune from "./component/Pages/programs/Mba-hr-college-in-pune"
-import MbaProgramPage from "./component/Pages/academics/MBA-Program"
-import BBACourse from "./component/Pages/programs/BBA-Programme-in-Pune";
-import BCACourse from "./component/Pages/programs/BCA-Programme-inn-Pune";
+import OperationSupplyChainManagement from "./component/pages/programs/Mba-in-operations-and-supply-chain-management-in-pune"
+import MBAMarketingManagement from "./component/pages/programs/Mba-in-marketing-management-in-pune"
+import MBAFinanceManagement from "./component/pages/programs/Mba-in-finance-management-in-pune"
+import MBAAgribusinessManagement from "./component/pages/programs/Mba-in-agribusiness-management-pune"
+import MBAPharmaCollegesInPune from "./component/pages/programs/Mba-in-pharma-healthcare-management-in-pune"
+import MBAHRCollegesInPune from "./component/pages/programs/Mba-hr-college-in-pune"
+import MbaProgramPage from "./component/pages/academics/MBA-Program"
+import BBACourse from "./component/pages/programs/BBA-Programme-in-Pune";
+import BCACourse from "./component/pages/programs/BCA-Programme-inn-Pune";
 
 function App() {
     return (

@@ -1,0 +1,83 @@
+/* ------------------ BANNER ------------------ */
+.placement-banner {
+    width: 100%;
+    height: 270px;
+    background-image: url("../../../assets/allsectionbg.jpg"); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .placement-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgb(0 36 79 / 73%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .placement-title {
+    font-size: 46px;
+    color: #fff;
+    font-weight: 700;
+  }
+  
+  .placement-title span {
+    color: #ffcc00;
+  }
+  
+  .placement-breadcrumb {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #e6e6e6;
+  }
+  
+  /* ------------------ BREADCRUMB BAR ------------------ */
+  .breadcrumb-bar {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+  }
+  
+  .breadcrumb-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .breadcrumb-text {
+    color: #555;
+    font-size: 15px;
+  }
+  
+  /* ------------------ BODY SECTION ------------------ */
+  .content-section {
+    padding: 40px 0;
+    background: #f7f9fc;
+  }
+  
+  .content-container {
+    width: 90%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .content-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #00244f;
+  }
+  
+  .content-container p {
+    font-size: 17px;
+    color: #444;
+    margin-bottom: 12px;
+  }
+  
