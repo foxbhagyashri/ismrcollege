@@ -32,30 +32,65 @@ export default function MBAPharmaCollegesInPune() {
 
   const faqs = [
     {
-      q: "What is the MBA Finance course in Pune offered by ISMR?",
-      a: "This MBA Finance course in Pune focuses on practical financial decision-making and real-world applications. MBA Finance at ISMR Pune is a 2-year, 4-semester programme. The syllabus is aligned with Savitribai Phule Pune University (SPPU) and supplemented by ISMR's practical application layer covering Excel, financial modelling, and case-based learning."
+      q: "What is an MBA in Pharma and Healthcare Management?",
+      a: "It is a two-year postgraduate management programme designed to train graduates for leadership roles across the pharmaceutical, hospital, and healthcare sectors. The curriculum combines core management subjects with sector specific disciplines such as regulatory affairs, pharmacovigilance, clinical research, and hospital operations."
     },
     {
-      q: "What are the MBA Finance fees at ISMR Pune?",
-      a: "MBA Finance fees at ISMR Pune are approximately ₹2 lakh per year, totalling approximately ₹4 lakh for the complete 2-year programme."
+      q: "What is the eligibility for an MBA in Pharma & Healthcare Management?",
+      a: "Graduates from any stream — B.Pharm, B.Sc., BAMS, BDS, BHMS, BCom, BBA, and others with a minimum of 50% marks are eligible to apply. A valid MAH-MBA CET, CAT, or CMAT score is also required for admission. "
     },
     {
-      q: "What is the MBA Finance eligibility in Pune at ISMR?",
-      a: "Bachelor's degree (minimum 3 years after 10+2) from a recognised university, minimum 50% aggregate marks (45% for reserved category candidates from Maharashtra), final-year graduation students eligible with a certificate from their institution, and a valid score in any accepted entrance exam."
+      q: "What is the duration of the MBA in Pharma & Healthcare Management at ISMR?",
+      a: "The programme is two years full-time, structured across four semesters. Each semester progressively builds on management fundamentals, sector specialisation, and live industry exposure."
     },
     {
-      q: "Why do students fail in MBA Finance placements?",
-      a: "Most candidates can calculate outputs but cannot interpret them into business decisions. Case rounds test this directly — candidates who prepare only on concepts, not interpretation, fail this stage consistently."
+      q: "Is an MBA in Pharmaceutical Healthcare Management suitable for working professionals? ",
+      a: "Yes — ISMR actively admits working professionals from hospital administration, pharma sales, QA, and clinical coordination backgrounds. The programme is structured to build on existing sector experience and fast-track candidates into senior managerial roles. "
     },
     {
-      q: "Are education loans available for MBA Finance at ISMR Pune?",
-      a: "Yes. Students can avail of education loans through SBI and other nationalised banks. Scholarship assistance is also available through the Maharashtra government for eligible candidates."
+      q: "Is ISMR AICTE-approved and SPPU-affiliated for MBA Pharma programmes? ",
+      a: "Yes. ISMR holds AICTE approval along with DTE and AIMS recognition and is affiliated with Savitribai Phule Pune University. The degree carries full national academic and professional validity. "
     },
     {
-      q: "Is there a separate eligibility requirement to sit for placement/analyst rounds?",
-      a: "All enrolled MBA Finance students are eligible for placement participation; there is no separate academic cutoff for placement rounds beyond regular programme requirements. What determines analyst-track vs backend-track outcomes is preparation, not eligibility — students who complete the dataset-based Excel training, case-analysis practice, and mock placement rounds are better positioned for analyst-round selection.",
-      note: "⚠ CONTENT NEEDED: Draft answer above is written to be directionally safe (no invented cutoffs, attendance %, or backlog rules) but is NOT confirmed ISMR policy — if ISMR does have a formal placement-eligibility criterion (e.g. attendance %, no active backlogs), this answer must be replaced with the real one before publishing."
-    }
+      q: "What is the scope of MBA Pharma and Healthcare Management in Pune?",
+      a: "Graduates can pursue roles across pharmaceutical companies, corporate hospitals, CROs, diagnostic networks, health-tech startups, medical device firms, and insurance organisations. Pune's pharma and healthcare industry concentration further strengthens local placement and networking opportunities. ",
+
+    },
+    {
+      q: "What salary can I expect after an MBA in Pharma & Healthcare Management?",
+      a: "Fresh graduates entering pharma marketing, regulatory affairs, or hospital administration commonly start between ₹3–5 LPA, while those placed with leading pharmaceutical companies or hospital groups may receive offers in the ₹5–7 LPA range. Salaries scale with experience, specialisation, and the type of organisation — pharma MNCs and corporate hospital chains generally offer stronger early-career growth. ",
+
+    },
+    {
+      q: "What are the fees for MBA Pharma Healthcare Management at ISMR Pune?",
+      a: "MBA Pharma Healthcare Management Pune Fees at ISMR are structured to be accessible and are communicated transparently at the time of counselling with no hidden charges. Contact the admissions team directly or request a brochure for the complete and current fee breakdown.  ",
+
+    },
+    {
+      q: " Is an MBA in Pharma & Healthcare Management worth it? ",
+      a: "For science, pharmacy, or allied health graduates, this MBA provides the management layer that clinical roles alone cannot offer. Combined with Pune's pharma and healthcare industry presence, it is one of the stronger sector-specific career investments available to science graduates in Maharashtra. ",
+
+    },
+    {
+      q: "  Can B.Sc. and B.Pharm students apply? ",
+      a: "Yes. B.Sc. and B.Pharm graduates are among the most common applicants for this specialisation and benefit directly from the regulatory, pharmacovigilance, and clinical research modules in the curriculum. ",
+
+    },
+    {
+      q: "  Is an MBA in Pharma & Healthcare Management better than M.Pharm?",
+      a: "They serve different career directions. M.Pharm develops advanced pharmaceutical science expertise suited to research and academic roles. An MBA in Pharma & Healthcare Management develops management capabilities suited to leadership roles in pharma companies, hospital administration, and regulatory affairs. The MBA is the stronger route for students whose goal is a management career rather than a research one.  ",
+
+    },
+    {
+      q: "  Is mathematics compulsory for this MBA?",
+      a: "No. Subjects like Biostatistics and Health Economics are taught with a management and interpretation focus, not advanced quantitative methods.  ",
+
+    },
+    {
+      q: "What is the scope of an MBA in Pharma & Healthcare Management?",
+      a: "Graduates can build careers across pharmaceutical manufacturing, hospital administration, regulatory affairs, clinical research, medical devices, health insurance, and health-tech — domestically and in international regulated markets. Pune's industry concentration strengthens both local placement and long-term networking opportunities.",
+
+    },
   ];
 
   const handleChange = (field) => (e) => {
@@ -1092,7 +1127,7 @@ font-size:14px;
 
       <section className="marketing-section">
         <div className="content-container">
-        <div className=" hero-panel">
+          <div className=" hero-panel">
             <span className="eyebrow">ISMR PUNE · MBA PHARMA &amp; HEALTHCARE MANAGEMENT</span>
             <h1>Build a Career in Pharma &amp; Healthcare Management with Real Placement Outcomes</h1>
 
@@ -1262,10 +1297,10 @@ font-size:14px;
                     </li>
                   </ul>
                 </div>
-                <div className="cta-row">
+                {/* <div className="cta-row">
                   <a className="default-btn" href="#apply">Apply Now 2026</a>
                   <a className="default-btn" href="#fees">Get a Complete Cost Breakdown</a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -1611,7 +1646,7 @@ font-size:14px;
         <div className="content-container">
 
           {/* FAQ Panel */}
-         <div className=" diff-panel">
+          <div className=" diff-panel">
             <span className="eyebrow">CURRICULUM &amp; CAREER OPPORTUNITIES</span>
             <h2>Curriculum &amp; Career Opportunities</h2>
 
@@ -1672,7 +1707,7 @@ font-size:14px;
                   </div>
                 </div>
 
-                <h3 className="diff-col-title">Key Subjects (Topic-Wise)</h3>
+                <h3 className="diff-col-title mt-4">Key Subjects (Topic-Wise)</h3>
                 <div className="tool-table-wrap">
                   <div className="tool-row tool-row--head">
                     <span>Subject Area</span>
@@ -1724,7 +1759,7 @@ font-size:14px;
                   </div>
                 </div>
 
-                <h3 className="diff-col-title">Skills You Will Develop</h3>
+                <h3 className="diff-col-title mt-4">Skills You Will Develop</h3>
                 <ul className="method-list method-list--styled">
                   <li>
                     <span className="method-icon">
@@ -1753,7 +1788,7 @@ font-size:14px;
                   </li>
                 </ul>
 
-                <p className="intro-text">
+                <p className="intro-text mt-4">
                   Students pursuing an MBA in Pharmaceutical Management at
                   ISMR in Pune benefit from a structured curriculum that
                   builds expertise for careers in pharmaceutical companies,
@@ -1838,7 +1873,7 @@ font-size:14px;
                   </div>
                 </div>
 
-                <h3 className="diff-col-title">Career Progression Paths</h3>
+                <h3 className="diff-col-title mt-4">Career Progression Paths</h3>
                 <div className="tool-table-wrap">
                   <div className="tool-row tool-row--head">
                     <span>Career Path</span>
@@ -1878,7 +1913,7 @@ font-size:14px;
                   </div>
                 </div>
 
-                <p className="intro-text diff-closing">
+                <p className="intro-text diff-closing mt-4">
                   Note: Career progression varies depending on the
                   organisation, individual performance, experience, and the
                   specific pharmaceutical or healthcare sector. Structured
@@ -1887,9 +1922,9 @@ font-size:14px;
                   healthcare organisations.
                 </p>
 
-                <a href="/Contactus" className="default-btn diff-cta">
+                {/* <a href="/Contactus" className="default-btn diff-cta">
                   Apply Now →
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -2101,7 +2136,7 @@ font-size:14px;
             `}</style>
 
           {/* Top Recruiters Panel */}
-       <div className="panel diff-panel">
+          <div className="panel diff-panel">
             <span className="eyebrow">FEES &amp; ADMISSION</span>
             <h2>Program Fees &amp; Admission Process</h2>
 
@@ -2217,9 +2252,9 @@ font-size:14px;
                   </div>
                 </div>
 
-                <a href="/Contactus" className="default-btn diff-cta">
+                {/* <a href="/Contactus" className="default-btn diff-cta">
                   Apply Now →
-                </a>
+                </a> */}
               </div>
 
               <div className="diff-right">
@@ -2341,7 +2376,7 @@ font-size:14px;
             </div>
           </div>
 
-      <div className="panel diff-panel mt-4">
+          <div className="panel diff-panel mt-4">
             <span className="eyebrow">PLACEMENTS &amp; INDUSTRY EXPOSURE</span>
             <h2>Placements &amp; Industry Exposure</h2>
 
@@ -2584,9 +2619,9 @@ font-size:14px;
                   </div>
                 </div>
 
-                <a href="/Contactus" className="default-btn diff-cta">
+                {/* <a href="/Contactus" className="default-btn diff-cta">
                   Apply Now →
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -2829,9 +2864,9 @@ font-size:14px;
                   global logistics architecture.
                 </p>
 
-                <a href="/Contactus" className="default-btn curr-cta">
+                {/* <a href="/Contactus" className="default-btn curr-cta">
                   Apply Now →
-                </a>
+                </a> */}
               </div>
 
               <div className="curr-right">
@@ -2950,7 +2985,7 @@ font-size:14px;
                   </li>
                 </ul>
 
-                <h4 className="curr-col-subtitle">Tech Exposure</h4>
+                <h4 className="curr-col-subtitle mt-4">Tech Exposure</h4>
                 <p className="intro-text">
                   Employers look for candidates who can contribute
                   immediately without lengthy training cycles. Students gain
@@ -3703,7 +3738,7 @@ font-size:14px;
           <>
             <style>{`
                 .gt-wrap {
-                    display: grid;
+                    // display: grid;
                     grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
                     gap: 28px;
                     align-items: start;
@@ -3854,223 +3889,47 @@ font-size:14px;
             `}</style>
 
 
-            <div className=" faq-panel">
-              <span className="eyebrow">FREQUENTLY ASKED QUESTIONS</span>
-              <h2>MBA Operations &amp; Supply Chain Management — FAQs</h2>
+            <div className="gt-wrap">
 
-              <div className="diff-layout">
-                <div className="diff-left">
-                  <h3 className="diff-col-title">Still Have Questions?</h3>
-                  <p className="intro-text">
-                    Get quick, clear answers on eligibility, duration,
-                    approvals, placements, and salary expectations for the MBA
-                    in Operations &amp; Supply Chain Management at ISMR Pune.
-                  </p>
+              {/* LEFT: Get in Touch / Admission Form */}
+              {/* <div className="gt-card">
+                                <h2> Take the Next Step — MBA Finance Admission 2026</h2>
 
-                  <div className="app-card">
-                    <div className="app-row">
-                      <span className="app-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                          <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </span>
-                      <div className="app-text">
-                        <span className="app-skill">AICTE &amp; DTE Approved</span>
-                        <span className="app-task">
-                          SPPU-affiliated programme with full statutory
-                          approvals, ensuring nationwide degree validity.
-                        </span>
+                                <ISMRFormModal></ISMRFormModal>
+
+                            </div> */}
+
+              {/* RIGHT: FAQ Accordion */}
+              <div className="gt-card">
+                <h2>13. Frequently Asked Questions</h2>
+
+                {faqs.map((item, idx) => (
+                  <div className="gt-acc-item" key={idx}>
+                    <button
+                      className="gt-acc-question"
+                      type="button"
+                      onClick={() => setOpenIndex(openIndex === idx ? -1 : idx)}
+                    >
+                      <span>{item.q}</span>
+                      <span className="gt-acc-icon">{openIndex === idx ? "−" : "+"}</span>
+                    </button>
+                    {openIndex === idx && (
+                      <div className="gt-acc-answer">
+                        {item.a}
+                        {item.note && <div className="gt-acc-note">{item.note}</div>}
                       </div>
-                    </div>
-
-                    <div className="app-row">
-                      <span className="app-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
-                          <path d="M8.5 12.5l2.3 2.3 4.7-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </span>
-                      <div className="app-text">
-                        <span className="app-skill">85% Placement Rate</span>
-                        <span className="app-task">
-                          Recruiters include Amazon, Flipkart, DHL, Maersk,
-                          Tata Motors, and 10+ other core industry partners.
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="app-row">
-                      <span className="app-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="12" cy="8" r="3.2" stroke="currentColor" strokeWidth="1.8" />
-                          <path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                        </svg>
-                      </span>
-                      <div className="app-text">
-                        <span className="app-skill">Open to All Streams</span>
-                        <span className="app-task">
-                          Graduates from any discipline, including working
-                          professionals, are eligible to apply.
-                        </span>
-                      </div>
-                    </div>
+                    )}
                   </div>
-
-                  <p className="intro-text diff-closing">
-                    Didn't find your answer? Our counselors are just a call
-                    away.
-                  </p>
-
-                  <a href="/Contactus" className="default-btn diff-cta">
-                    Talk to a Counselor →
-                  </a>
-                </div>
-
-                <div className="diff-right">
-                  <div className="accordion">
-                    <details className="accordion-item">
-                      <summary>What is an MBA in Operations and Supply Chain Management in Pune?</summary>
-                      <p>
-                        An MBA in Operations and Supply Chain Management in
-                        Pune is a specialized two-year postgraduate degree
-                        centered on making business production and
-                        distribution lines as efficient as possible. The
-                        program trains students to manage raw material
-                        sourcing, organize automated warehousing layouts, and
-                        coordinate international transportation networks. It
-                        blends traditional corporate leadership principles
-                        with modern analytical tools to prepare graduates for
-                        high-level management roles.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>Who can apply for an MBA in Supply Chain Management in Pune?</summary>
-                      <p>
-                        Any graduate holding a bachelor's degree in any stream
-                        from a recognized university with a minimum aggregate
-                        of 50% marks (45% for reserved categories) is fully
-                        eligible to apply. Additionally, candidates must
-                        possess a valid scorecard from state or national
-                        management entrance examinations like MAH-MBA CET,
-                        CAT, or CMAT. This ensures every student admitted to
-                        the programme meets the academic rigour that ISMR and
-                        Savitribai Phule Pune University demand.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>What is the duration of the MBA Operations and Supply Chain Management course?</summary>
-                      <p>
-                        The program spans a fixed duration of two academic
-                        years, which are systematically split into four
-                        comprehensive semesters. The first year focuses on
-                        building foundational management capabilities, while
-                        the second year dives deeply into advanced
-                        operations, ERP systems, and field-based industry
-                        projects. This full-time learning track ensures a
-                        complete transition from classroom theory to
-                        practical corporate readiness.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>Is an MBA in SCM suitable for working professionals?</summary>
-                      <p>
-                        Yes, this management track is exceptionally rewarding
-                        for working professionals currently employed in
-                        manufacturing units, logistics companies, or backend
-                        retail roles. The corporate frameworks, lean
-                        strategies, and software insights taught in the
-                        program provide the strategic domain authority needed
-                        to step away from daily frontline execution. It gives
-                        experienced individuals the formal credentials
-                        required to clear senior internal promotions.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>Is ISMR AICTE-approved for an MBA in Supply Chain Management?</summary>
-                      <p>
-                        Yes, ISMR holds complete statutory approvals from the
-                        All India Council for Technical Education (AICTE) and
-                        the Directorate of Technical Education (DTE),
-                        Maharashtra. The program is formally affiliated with
-                        Savitribai Phule Pune University (SPPU), guaranteeing
-                        that your postgraduate degree follows strict
-                        educational quality controls. This gives your
-                        qualification global validity across both corporate
-                        hiring boards and higher academic institutions.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>What is the scope of MBA Supply Chain Management in Pune?</summary>
-                      <p>
-                        The professional scope is exceptionally broad due to
-                        Pune's status as a booming automotive, manufacturing,
-                        and IT center. Graduates can step straight into
-                        diverse corporate tracks such as procurement
-                        logistics, inventory forecasting, warehouse
-                        automation, and strategic global sourcing. Because
-                        corporate profitability relies directly on lean
-                        operations, our graduates enjoy consistent, long-term
-                        demand across multiple industries.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>What is the typical MBA Supply Chain Management salary in Pune for fresh graduates?</summary>
-                      <p>
-                        ISMR graduates typically secure entry-level packages
-                        ranging between INR 4.5 Lakhs to INR 7.5 Lakhs per
-                        annum, with placements across Pune's automotive,
-                        logistics, and e-commerce sectors. Your final
-                        compensation depends heavily on your performance
-                        during interviews, your academic track record, and
-                        the recruiting company. As you gain hands-on
-                        experience managing large-scale global networks, your
-                        earning potential increases rapidly.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>Which companies recruit MBA graduates in Operations and Supply Chain Management from ISMR?</summary>
-                      <p>
-                        The MBA in Operations and Supply Chain Management
-                        programme at ISMR has an 85% placement rate, with
-                        recruiters including Amazon, Flipkart, DHL, Blue Dart,
-                        FedEx, Maersk, Reliance Industries, Tata Motors,
-                        Mahindra &amp; Mahindra, Maruti Suzuki, Bosch, Larsen
-                        &amp; Toubro, Asian Paints, Adani Logistics, and TVS
-                        Supply Chain Solutions.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>What is the difference between an MBA in Operations and Supply Chain Management and an MBA in Logistics Management?</summary>
-                      <p>
-                        MBA in Operations and Supply Chain Management covers
-                        the full scope of procurement, production, inventory,
-                        and distribution across an organization, while MBA in
-                        Logistics Management in Pune focuses more
-                        specifically on transportation, warehousing, and
-                        distribution execution. ISMR's Operations and Supply
-                        Chain Management programme includes logistics as one
-                        of several core modules, giving graduates broader
-                        managerial exposure across the entire supply chain
-                        rather than logistics alone.
-                      </p>
-                    </details>
-                  </div>
-                </div>
+                ))}
               </div>
+
             </div>
 
 
 
-            <div className="">
+
+
+            <div className="pb-4">
               <div className="">
                 <marquee direction="left" behavior="alternate" scrollamount="6">
                   <div className="logo-marquee-item">

@@ -1177,10 +1177,10 @@ font-size:14px;
                     </li>
                   </ul>
                 </div>
-                <div className="cta-row">
+                {/* <div className="cta-row">
                   <a className="default-btn" href="#apply">Apply Now 2026</a>
                   <a className="default-btn" href="#fees">Get a Complete Cost Breakdown</a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -1611,7 +1611,7 @@ font-size:14px;
                   </div>
                 </div>
 
-                <h3 className="diff-col-title mt-3">Key Subjects &amp; Enterprise Tools</h3>
+                <h3 className="diff-col-title mt-4">Key Subjects &amp; Enterprise Tools</h3>
                 <h4 className="diff-col-subtitle">Core Modules</h4>
                 <p className="intro-text">
                   ISMR's curriculum is meticulously designed to cover every
@@ -1872,7 +1872,7 @@ font-size:14px;
                   </div>
                 </div>
 
-                <h3 className="diff-col-title">Before vs After ISMR Training</h3>
+                <h3 className="diff-col-title mt-4">Before vs After ISMR Training</h3>
                 <div className="tool-table-wrap">
                   <div className="tool-row tool-row--head">
                     <span>Before MBA OSCM</span>
@@ -1896,9 +1896,9 @@ font-size:14px;
                   </div>
                 </div>
 
-                <a href="/Contactus" className="default-btn diff-cta">
+                {/* <a href="/Contactus" className="default-btn diff-cta">
                   Apply Now →
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -2223,7 +2223,7 @@ font-size:14px;
               <div className="diff-right">
                 <h3 className="diff-col-title">Eligibility &amp; Target Profiles</h3>
 
-                <h4 className="diff-col-subtitle">Academic Criteria</h4>
+                <h4 className="diff-col-subtitle mb-4">Academic Criteria</h4>
                 <ul className="method-list method-list--styled">
                   <li>
                     <span className="method-icon">
@@ -2247,7 +2247,7 @@ font-size:14px;
                   </li>
                 </ul>
 
-                <h4 className="diff-col-subtitle mt-3">Target Profiles</h4>
+                <h4 className="diff-col-subtitle mt-3 mb-4">Target Profiles</h4>
                 <div className="app-card">
                   <div className="app-row">
                     <span className="app-icon">
@@ -2352,9 +2352,9 @@ font-size:14px;
                   </div>
                 </div>
 
-                <a href="/Contactus" className="default-btn diff-cta">
+                {/* <a href="/Contactus" className="default-btn diff-cta">
                   Apply Now →
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -2423,7 +2423,7 @@ font-size:14px;
 
             <div className="diff-layout mt-3">
               <div className="diff-left">
-                <h3 className="diff-col-title">Strategic Market Benefits</h3>
+                <h3 className="diff-col-title mt-3">Strategic Market Benefits</h3>
                 <div className="app-card">
                   <div className="app-row">
                     <span className="app-icon">
@@ -2604,7 +2604,7 @@ font-size:14px;
                   </div>
                 </div>
 
-                <p className="intro-text diff-closing">
+                <p className="intro-text diff-closing mt-3">
                   This is why ISMR is counted among the leading MBA SCM
                   colleges in Pune for placement outcomes.
                 </p>
@@ -2853,9 +2853,9 @@ font-size:14px;
                   global logistics architecture.
                 </p>
 
-                <a href="/Contactus" className="default-btn curr-cta">
+                {/* <a href="/Contactus" className="default-btn curr-cta">
                   Apply Now →
-                </a>
+                </a> */}
               </div>
 
               <div className="curr-right">
@@ -2974,7 +2974,7 @@ font-size:14px;
                   </li>
                 </ul>
 
-                <h4 className="curr-col-subtitle">Tech Exposure</h4>
+                <h4 className="curr-col-subtitle mt-4">Tech Exposure</h4>
                 <p className="intro-text">
                   Employers look for candidates who can contribute
                   immediately without lengthy training cycles. Students gain
@@ -3875,6 +3875,115 @@ font-size:14px;
                     line-height: 1.55;
                     margin-top: 10px;
                 }
+                    /* FAQ Accordion Styles */
+
+.diff-right {
+  width: 100%;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: inherit;
+}
+
+.accordion-item {
+  border: 1px solid #e2e6ee;
+  border-radius: 10px;
+  background-color: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(15, 34, 79, 0.06);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.accordion-item:hover {
+  border-color: #c7d2f0;
+  box-shadow: 0 4px 10px rgba(15, 34, 79, 0.08);
+}
+
+.accordion-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 48px 18px 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #0f224f;
+  position: relative;
+  background-color: #f7f9fd;
+  transition: background-color 0.2s ease;
+}
+
+.accordion-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-item summary::marker {
+  content: "";
+}
+
+/* Custom arrow icon */
+.accordion-item summary::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #0f224f;
+  border-bottom: 2px solid #0f224f;
+  transform: translateY(-65%) rotate(45deg);
+  transition: transform 0.25s ease;
+}
+
+.accordion-item[open] summary::after {
+  transform: translateY(-35%) rotate(-135deg);
+}
+
+.accordion-item[open] summary {
+  background-color: #eef2fc;
+  border-bottom: 1px solid #e2e6ee;
+}
+
+.accordion-item summary:hover {
+  background-color: #eef2fc;
+}
+
+.accordion-item p {
+  margin: 0;
+  padding: 18px 20px 20px 20px;
+  color: #495168;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+/* Smooth open/close animation */
+.accordion-item[open] > p {
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .accordion-item summary {
+    font-size: 0.9rem;
+    padding: 14px 40px 14px 16px;
+  }
+  .accordion-item p {
+    font-size: 0.88rem;
+    padding: 14px 16px 16px 16px;
+  }
+}
             `}</style>
 
 
@@ -3946,7 +4055,7 @@ font-size:14px;
                     away.
                   </p>
 
-                  <a href="/Contactus" className="default-btn diff-cta">
+                  <a href="tel:9923786079" className="default-btn diff-cta">
                     Talk to a Counselor →
                   </a>
                 </div>
@@ -4094,7 +4203,7 @@ font-size:14px;
 
 
 
-            <div className="">
+            <div className="mt-4 mb-4 pb-4">
               <div className="">
                 <marquee direction="left" behavior="alternate" scrollamount="6">
                   <div className="logo-marquee-item">

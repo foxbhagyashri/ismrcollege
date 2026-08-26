@@ -1192,10 +1192,10 @@ font-size:14px;
 
 
                 </div>
-                <div className="cta-row">
+                {/* <div className="cta-row">
                   <a className="default-btn" href="tel:9923786079">Speak with Admissions</a>
                   <a className="default-btn" href="/contact-us">Apply Now 2026</a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -1603,9 +1603,9 @@ font-size:14px;
                   students who want a job, not just a degree.
                 </p>
 
-                <a href="/contact-us" className="default-btn diff-cta">
+                {/* <a href="/contact-us" className="default-btn diff-cta">
                   Apply Now →
-                </a>
+                </a> */}
               </div>
 
               <div className="diff-right">
@@ -1938,7 +1938,7 @@ font-size:14px;
                   </li>
                 </ul>
 
-                <p className="intro-text intro-text--strong">
+                <p className="intro-text intro-text--strong mt-4">
                   How does ISMR provide practical learning in MBA Marketing?
                 </p>
                 <p className="intro-text">
@@ -2042,7 +2042,7 @@ font-size:14px;
                   </div>
                 </div>
 
-                <p className="intro-text intro-text--strong">Industry Opportunities in Pune</p>
+                <p className="intro-text intro-text--strong mt-3">Industry Opportunities in Pune</p>
                 <ul className="method-list method-list--styled">
                   <li>
                     <span className="method-icon">
@@ -2070,7 +2070,7 @@ font-size:14px;
                   </li>
                 </ul>
 
-                <p className="intro-text intro-text--strong">What Actually Determines Your Career Growth</p>
+                <p className="intro-text intro-text--strong mt-4">What Actually Determines Your Career Growth</p>
                 <p className="intro-text">Your career after an MBA in Marketing is influenced by:</p>
                 <ul className="method-list method-list--styled">
                   <li>
@@ -2277,7 +2277,7 @@ font-size:14px;
               </li>
             </ul>
 
-            <p className="intro-text">
+            <p className="intro-text mt-3">
               At ISMR, the focus is on ensuring that your investment leads to
               real employability and career growth, not just degree
               completion.
@@ -2398,9 +2398,9 @@ font-size:14px;
                   to a fixed intake capacity.
                 </p>
 
-                <a href="/Contactus" className="default-btn curr-cta">
+                {/* <a href="/Contactus" className="default-btn curr-cta">
                   Apply Now →
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -2409,7 +2409,7 @@ font-size:14px;
             <span className="eyebrow">INDUSTRY COLLABORATIONS</span>
             <h2>Industry Collaborations &amp; Top Recruiters</h2>
 
-            <h3 className="curr-subhead">Where MBA Marketing Graduates from ISMR Get Placed</h3>
+            <h3 className="curr-subhead mt-4">Where MBA Marketing Graduates from ISMR Get Placed</h3>
 
             <div className="tool-table-wrap">
               <div className="tool-row tool-row--head">

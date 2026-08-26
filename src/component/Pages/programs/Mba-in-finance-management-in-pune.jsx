@@ -54,7 +54,7 @@ export default function ISMRLanding() {
         {
             q: "Is there a separate eligibility requirement to sit for placement/analyst rounds?",
             a: "All enrolled MBA Finance students are eligible for placement participation; there is no separate academic cutoff for placement rounds beyond regular programme requirements. What determines analyst-track vs backend-track outcomes is preparation, not eligibility — students who complete the dataset-based Excel training, case-analysis practice, and mock placement rounds are better positioned for analyst-round selection.",
-            note: "⚠ CONTENT NEEDED: Draft answer above is written to be directionally safe (no invented cutoffs, attendance %, or backlog rules) but is NOT confirmed ISMR policy — if ISMR does have a formal placement-eligibility criterion (e.g. attendance %, no active backlogs), this answer must be replaced with the real one before publishing."
+          
         }
     ];
 
@@ -2453,9 +2453,9 @@ font-size:14px;
                                     not just which concepts they know.
                                 </p>
 
-                                <a href="/Contactus" className="default-btn curr-cta">
+                                {/* <a href="/Contactus" className="default-btn curr-cta">
                                     Evaluate your placement readiness — speak to an ISMR counsellor →
-                                </a>
+                                </a> */}
                             </div>
                         </div>
                     </div>
@@ -2954,14 +2954,7 @@ font-size:14px;
                                     of analyst-track placements.
                                 </p>
 
-                                <div className="ar-content-note">
-                                    ⚠ CONTENT NEEDED: Fee wording standardized here and in the Section 2
-                                    Quick Facts table to '~₹4 lakh total (~₹2 lakh/year), subject to
-                                    final FRA approval' — reconciling the earlier 'As per FRA' vs
-                                    '₹2 lakh/year' mismatch. Confirm with ISMR/finance team that the
-                                    ₹2L/yr figure is safe to publish ahead of formal FRA sign-off; if
-                                    not, revert both instances to 'As per FRA' only.
-                                </div>
+                               
 
                                 <div className="ar-subhead">What is the admission process at ISMR Pune?</div>
                                 <div className="ar-steps">
@@ -3494,16 +3487,16 @@ font-size:14px;
                                     learned in the classroom to an industry-live problem statement.
                                 </p>
 
-                                <h3>Industry Partners</h3>
-                                <p className="plc-partner-note">[LIST TO BE CONFIRMED]</p>
+                                {/* <h3>Industry Partners</h3>
+                                <p className="plc-partner-note">[LIST TO BE CONFIRMED]</p> */}
 
-                                <div className="plc-content-note">
+                                {/* <div className="plc-content-note">
                                     ⚠ CONTENT NEEDED: Structure/timing copy above is a draft template,
                                     not confirmed ISMR policy — the bracketed duration and any claims
                                     about mentorship/role types need sign-off from ISMR before
                                     publishing. Partner names and logos still need to be sourced; none
                                     are invented here.
-                                </div>
+                                </div> */}
                             </div>
 
                         </div>

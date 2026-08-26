@@ -14,7 +14,7 @@ import Banner from "./component/Banner";
 import Banner2 from "./component/Banner2";
 import Marquee from "./component/Marquee";
 import AboutAdmaUniversity from "./component/AboutAdmaUniversity";
-import ProgramsSection from "./component/ProgramsSection";
+import programsSection from "./component/programsSection";
 import HowToApply from "./component/HowToApply";
 import StudentLife from "./component/StudentLife";
 import CounterSection from "./component/CounterSection";
@@ -105,7 +105,7 @@ function App() {
                             <Marquee />
                             <CounterSection />
                             <Banner2 />
-                            <ProgramsSection />
+                            <programsSection />
                             <AboutAdmaUniversity />
                             <HowToApply />
                             <Placementmorque />
@@ -305,37 +305,37 @@ function App() {
                 />
 
                 <Route
-                    path="/Programs/mba-in-operations-and-supply-chain-management-in-pune"
+                    path="/programs/mba-in-operations-and-supply-chain-management-in-pune"
                     element={<OperationSupplyChainManagement />}
                 />
                 <Route
-                    path="/Programs/mba-in-marketing-management-in-pune"
+                    path="/programs/mba-in-marketing-management-in-pune"
                     element={<MBAMarketingManagement />}
                 />
                 <Route
-                    path="/Programs/mba-in-finance-management-in-pune"
+                    path="/programs/mba-in-finance-management-in-pune"
                     element={<MBAFinanceManagement />}
                 />
                 <Route
-                    path="/Programs/mba-in-agribusiness-management-pune"
+                    path="/programs/mba-in-agribusiness-management-pune"
                     element={<MBAAgribusinessManagement />}
                 />
                 <Route
-                    path="/Programs/mba-in-pharma-healthcare-management-in-pune"
+                    path="/programs/mba-in-pharma-healthcare-management-in-pune"
                     element={<MBAPharmaCollegesInPune />}
                 />
                 <Route
-                    path="/Programs/mba-hr-college-in-pune"
+                    path="/programs/mba-hr-college-in-pune"
                     element={<MBAHRCollegesInPune />}
                 />
 
                 <Route
-                    path="/Programs/BBA-Programme-in-Pune"
+                    path="/programs/BBA-Programme-in-Pune"
                     element={<BBACourse />}
                 />
 
                 <Route
-                    path="/Programs/BCA-Programme-inn-Pune"
+                    path="/programs/BCA-Programme-inn-Pune"
                     element={<BCACourse />}
                 />
 

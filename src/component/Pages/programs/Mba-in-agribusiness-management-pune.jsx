@@ -32,29 +32,39 @@ export default function MBAAgribusinessManagement() {
 
   const faqs = [
     {
-      q: "What is the MBA Finance course in Pune offered by ISMR?",
-      a: "This MBA Finance course in Pune focuses on practical financial decision-making and real-world applications. MBA Finance at ISMR Pune is a 2-year, 4-semester programme. The syllabus is aligned with Savitribai Phule Pune University (SPPU) and supplemented by ISMR's practical application layer covering Excel, financial modelling, and case-based learning."
+      q: "What is an MBA in Agribusiness Management?",
+      a: "The MBA in Agribusiness Management is a two-year postgraduate program that integrates agricultural science with business disciplines, including supply chain management, commodity markets, rural finance, food processing, and agri-policy. The program prepares graduates for leadership roles across agribusiness, agri-tech, food processing,rural banking, commodity trading, and agricultural supply chains."
     },
     {
-      q: "What are the MBA Finance fees at ISMR Pune?",
-      a: "MBA Finance fees at ISMR Pune are approximately ₹2 lakh per year, totalling approximately ₹4 lakh for the complete 2-year programme."
+      q: "Who can apply for an MBA in Agribusiness Management in Pune?",
+      a: "The program is open to graduates from any stream — Agriculture, Science, Commerce, or Engineering — holding a minimum of 50% aggregate marks from a recognised university. Applicants must also hold a valid score from an accepted entrance exam such as MAH-MBA CET, CAT, CMAT, ATMA, or MAT."
     },
     {
-      q: "What is the MBA Finance eligibility in Pune at ISMR?",
-      a: "Bachelor's degree (minimum 3 years after 10+2) from a recognised university, minimum 50% aggregate marks (45% for reserved category candidates from Maharashtra), final-year graduation students eligible with a certificate from their institution, and a valid score in any accepted entrance exam."
+      q: "What is the duration of the MBA Agribusiness Management course?",
+      a: "The Agribusiness Management course in Pune at ISMR is a two-year full-time program structured across four semesters. Each semester progressively builds on the previous one, moving from foundational agri-economics and supply chain principles to advanced topics in commodity risk management, sustainability strategy, and agrientrepreneurship."
     },
     {
-      q: "Why do students fail in MBA Finance placements?",
-      a: "Most candidates can calculate outputs but cannot interpret them into business decisions. Case rounds test this directly — candidates who prepare only on concepts, not interpretation, fail this stage consistently."
+      q: "Is MBA Agribusiness Management suitable for non-agriculture graduates?",
+      a: "Yes. Commerce, Science, and Engineering graduates are fully eligible and regularly pursue this program to build a specialised career in agri-trade, food processing, rural finance, or commodity markets. The curriculum is structured to develop an agricultural context from the ground up for students without prior agri-science backgrounds."
     },
     {
-      q: "Are education loans available for MBA Finance at ISMR Pune?",
-      a: "Yes. Students can avail of education loans through SBI and other nationalised banks. Scholarship assistance is also available through the Maharashtra government for eligible candidates."
+      q: "Is ISMR AICTE-approved for MBA Agribusiness Management?",
+      a: "Yes. ISMR holds full AICTE approval and is affiliated with Savitribai Phule Pune University (SPPU). It also holds DTE and AIMS recognition, ensuring the degree meets all statutory requirements for employment, government recruitment, and further academic pursuits."
     },
     {
-      q: "Is there a separate eligibility requirement to sit for placement/analyst rounds?",
-      a: "All enrolled MBA Finance students are eligible for placement participation; there is no separate academic cutoff for placement rounds beyond regular programme requirements. What determines analyst-track vs backend-track outcomes is preparation, not eligibility — students who complete the dataset-based Excel training, case-analysis practice, and mock placement rounds are better positioned for analyst-round selection.",
-      note: "⚠ CONTENT NEEDED: Draft answer above is written to be directionally safe (no invented cutoffs, attendance %, or backlog rules) but is NOT confirmed ISMR policy — if ISMR does have a formal placement-eligibility criterion (e.g. attendance %, no active backlogs), this answer must be replaced with the real one before publishing."
+      q: "What is the scope of MBA Agribusiness Management in India?",
+      a: "Agribusiness management professionals are in active demand across commodity exchanges, food processing companies, agri-tech startups, and rural finance institutions, FMCG supply chains, and government development agencies. India's organised agri-economy continues to expand, and the shortage of trained management professionals within the sector makes this one of the more stable and opportunity-rich specialisations available today",
+
+    },
+    {
+      q: "What are the MBA Agribusiness Fees at ISMR Pune for 2026?",
+      a: "For accurate and current MBA Agribusiness fees Pune 2026 information, we recommend contacting ISMR's admissions office directly or downloading the program brochure, as fee structures are subject to annual revision and may vary based on category, scholarship eligibility, or government-regulated fee norms under the DTE Maharashtra framework.",
+
+    },
+    {
+      q: "How does an SPPU-affiliated MBA in Agribusiness Management benefit students at ISMR?",
+      a: "SPPU affiliation ensures that the degree awarded by ISMR carries full university recognition accepted by employers, public sector institutions, and postgraduate programs across India. It also means the curriculum, examination standards, and academic processes are governed by one of Maharashtra's most established and respected university frameworks, adding credibility to every credential ISMR graduates hold.",
+
     }
   ];
 
@@ -1091,7 +1101,7 @@ font-size:14px;
 
       <section className="marketing-section">
         <div className="content-container">
-        <div className=" hero-panel">
+          <div className=" hero-panel">
             <span className="eyebrow">ISMR PUNE · AGRI BUSINESS MANAGEMENT</span>
             <h1>Lead India's Agri-Business Transformation with ISMR</h1>
 
@@ -1203,10 +1213,10 @@ font-size:14px;
                     </li>
                   </ul>
                 </div>
-                <div className="cta-row">
+                {/* <div className="cta-row">
                   <a className="default-btn" href="#admissions">Speak with Admissions</a>
                   <a className="default-btn" href="#apply">Apply Now 2026</a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -1558,12 +1568,12 @@ font-size:14px;
 
             <div className="diff-layout">
               <div className="diff-left">
-                <h3 className="diff-col-title">MBA HRM Syllabus — Semester-Wise Breakdown</h3>
+                <h3 className="diff-col-title">MBA Agri Syllabus — Semester-Wise Breakdown</h3>
 
-                <div className="tool-table-wrap">
+               <div className="tool-table-wrap">
                   <div className="tool-row tool-row--head">
                     <span>Semester</span>
-                    <span>Key MBA HRM Papers</span>
+                    <span>Key MBA Agribusiness Papers</span>
                   </div>
 
                   <div className="tool-row">
@@ -1594,9 +1604,9 @@ font-size:14px;
                       Semester 2
                     </span>
                     <span className="tool-applied">
-                      Human Resource Management, Marketing Management,
-                      Financial Management, Operations Management, Business
-                      Research Methods, Management Information Systems
+                      Agricultural Economics, Marketing Management, Financial
+                      Management, Farm Management, Business Research Methods,
+                      Management Information Systems
                     </span>
                   </div>
 
@@ -1611,9 +1621,9 @@ font-size:14px;
                       Semester 3
                     </span>
                     <span className="tool-applied">
-                      Recruitment and Selection, Training and Development,
-                      Performance Management, Compensation Management, Labor
-                      Laws, Industrial Relations
+                      Agribusiness Marketing, Agricultural Finance, Supply
+                      Chain Management in Agribusiness, Agri-Input Marketing,
+                      Rural Marketing, Food Processing and Agro-Industries
                     </span>
                   </div>
 
@@ -1628,9 +1638,10 @@ font-size:14px;
                       Semester 4
                     </span>
                     <span className="tool-applied">
-                      Strategic Human Resource Management, Talent Management,
-                      Employee Engagement, Leadership and Change Management,
-                      HR Analytics, Project Work/Internship
+                      Agricultural Policy and Trade, International Agribusiness,
+                      Commodity Markets and Trading, Agripreneurship
+                      Development, Agri-Business Analytics, Project
+                      Work/Internship
                     </span>
                   </div>
                 </div>
@@ -1740,7 +1751,7 @@ font-size:14px;
                 </ul>
               </div>
 
-          <div className="diff-right">
+              <div className="diff-right">
                 <h3 className="diff-col-title">Core Subjects &amp; Industry Tools</h3>
                 <p className="intro-text intro-text--strong">Core Subjects at a Glance</p>
 
@@ -1914,9 +1925,9 @@ font-size:14px;
                   environments before graduation.
                 </p>
 
-                <a href="/Contactus" className="default-btn diff-cta">
+                {/* <a href="/Contactus" className="default-btn diff-cta">
                   Apply Now →
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -2128,7 +2139,7 @@ font-size:14px;
             `}</style>
 
           {/* Top Recruiters Panel */}
-        <div className="panel diff-panel">
+          <div className="panel diff-panel">
             <span className="eyebrow">ELIGIBILITY &amp; ADMISSION SUPPORT</span>
             <h2>Eligibility &amp; Admission Support</h2>
 
@@ -2136,7 +2147,7 @@ font-size:14px;
               <div className="diff-left">
                 <h3 className="diff-col-title">Eligibility Criteria</h3>
 
-                <p className="intro-text intro-text--strong">Academic Qualification</p>
+                <p className="intro-text intro-text--strong"><b>Academic Qualification</b></p>
                 <ul className="method-list method-list--styled">
                   <li>
                     <span className="method-icon">
@@ -2164,7 +2175,7 @@ font-size:14px;
                   </li>
                 </ul>
 
-                <p className="intro-text intro-text--strong">Minimum Marks</p>
+                <p className="intro-text intro-text--strong mt-3"><b>Minimum Marks</b></p>
                 <ul className="method-list method-list--styled">
                   <li>
                     <span className="method-icon">
@@ -2184,7 +2195,7 @@ font-size:14px;
                   </li>
                 </ul>
 
-                <p className="intro-text intro-text--strong">Entrance Exams Accepted</p>
+                <p className="intro-text intro-text--strong mt-3"><b>Entrance Exams Accepted</b></p>
                 <ul className="method-list method-list--styled">
                   <li>
                     <span className="method-icon">
@@ -2204,7 +2215,7 @@ font-size:14px;
                   </li>
                 </ul>
 
-                <p className="intro-text intro-text--strong">Work Experience</p>
+                <p className="intro-text intro-text--strong mt-3"><b>Work Experience</b></p>
                 <ul className="method-list method-list--styled">
                   <li>
                     <span className="method-icon">
@@ -2264,7 +2275,7 @@ font-size:14px;
                   </li>
                 </ul>
 
-                <p className="intro-text">
+                <p className="intro-text mt-3">
                   Students seeking MBA in Agribusiness Management admission
                   in Pune for the 2026 academic session receive end-to-end
                   support from ISMR's admissions counselling team, including
@@ -2279,9 +2290,9 @@ font-size:14px;
                   one guided step at a time.
                 </p>
 
-                <a href="/Contactus" className="default-btn diff-cta">
+                {/* <a href="/Contactus" className="default-btn diff-cta">
                   Apply Now →
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -2396,12 +2407,12 @@ font-size:14px;
               </div>
             </div>
 
-            <a href="/Contactus" className="default-btn diff-cta">
+            {/* <a href="/Contactus" className="default-btn diff-cta">
               Apply Now →
-            </a>
+            </a> */}
           </div>
 
-        <div className="panel diff-panel mt-3">
+          <div className="panel diff-panel mt-3">
             <span className="eyebrow">PROGRAM BENEFITS &amp; LOCATION ADVANTAGE</span>
             <h2>Program Benefits &amp; Location Advantage</h2>
 
@@ -2512,9 +2523,9 @@ font-size:14px;
               interaction throughout the program.
             </p>
 
-            <a href="/Contactus" className="default-btn diff-cta">
+            {/* <a href="/Contactus" className="default-btn diff-cta">
               Apply Now →
-            </a>
+            </a> */}
           </div>
 
           <div className="panel diff-panel mt-4">
@@ -2674,197 +2685,41 @@ font-size:14px;
             `}</style>
 
           {/* Salary Panel */}
-          <div className="panel curr-panel mt-4">
-            <span className="eyebrow">FEES &amp; ADMISSION</span>
-            <h2>Admission Process &amp; Eligibility</h2>
+          <div className="gt-wrap">
 
-            <div className="curr-layout">
-              <div className="curr-left">
-                <h3 className="curr-col-title">Eligibility</h3>
+            {/* LEFT: Get in Touch / Admission Form */}
+            {/* <div className="gt-card">
+                                <h2> Take the Next Step — MBA Finance Admission 2026</h2>
 
-                <div className="app-card">
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="8" r="3.2" stroke="currentColor" strokeWidth="1.8" />
-                        <path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">A graduation in any discipline from a recognised university</span>
-                      <span className="app-task">
-                        Students from commerce, science, or arts backgrounds
-                        can apply, making MBA HR a flexible career option
-                        across academic streams.
-                      </span>
+                                <ISMRFormModal></ISMRFormModal>
+
+                            </div> */}
+
+            {/* RIGHT: FAQ Accordion */}
+            <div className="gt-card">
+              <h2>13. Frequently Asked Questions</h2>
+
+              {faqs.map((item, idx) => (
+                <div className="gt-acc-item" key={idx}>
+                  <button
+                    className="gt-acc-question"
+                    type="button"
+                    onClick={() => setOpenIndex(openIndex === idx ? -1 : idx)}
+                  >
+                    <span>{item.q}</span>
+                    <span className="gt-acc-icon">{openIndex === idx ? "−" : "+"}</span>
+                  </button>
+                  {openIndex === idx && (
+                    <div className="gt-acc-answer">
+                      {item.a}
+                      {item.note && <div className="gt-acc-note">{item.note}</div>}
                     </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 3h7l4 4v14H7z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                        <path d="M9.5 12h5M9.5 15.5h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Entrance exam qualification (MAH-CET / CAT / CMAT / ATMA / MAT / XAT)</span>
-                      <span className="app-task">
-                        These scores are used to assess aptitude and form
-                        the base for shortlisting candidates for further
-                        evaluation.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Basic communication and career intent evaluation</span>
-                      <span className="app-task">
-                        Since HR is a people-centric role, institutes assess
-                        communication ability and clarity of career goals
-                        during the selection process.
-                      </span>
-                    </div>
-                  </div>
+                  )}
                 </div>
-
-                <h3 className="curr-col-title">Admission Overview</h3>
-                <ul className="method-list method-list--styled">
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Entrance exam-based selection — MAH-CET, CAT, or CMAT scores are considered
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Counselling and interview evaluation — ensures alignment with HR career path
-                  </li>
-                </ul>
-              </div>
-
-              <div className="curr-right">
-                <h3 className="curr-col-title">Admission Process — Step by Step</h3>
-
-                <div className="app-card">
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="8" r="3.2" stroke="currentColor" strokeWidth="1.8" />
-                        <path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">1. Apply Online</span>
-                      <span className="app-task">
-                        Visit the official website, click on "Apply Online,"
-                        fill out the application form, and pay the ₹1,100
-                        registration fee. This step officially registers
-                        your application and begins the admission evaluation
-                        process.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">2. Counselling &amp; Telephonic Interview</span>
-                      <span className="app-task">
-                        The admissions team guides the program and evaluates
-                        your career intent. A telephonic interview is
-                        conducted to assess communication skills and
-                        readiness.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 3h7l4 4v14H7z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                        <path d="M9.5 12h5M9.5 15.5h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">3. Seat Confirmation</span>
-                      <span className="app-task">
-                        Selected candidates receive an admission letter via
-                        email. A payment of ₹30,000 must be made within four
-                        days to confirm the seat.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">4. Provisional Admission</span>
-                      <span className="app-task">
-                        Admission is provisionally confirmed after seat
-                        confirmation. Final admission depends on document
-                        verification and eligibility fulfilment.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <h3 className="curr-col-title">Important Admission Insight</h3>
-                <ul className="method-list method-list--styled">
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Seats are allotted strictly on a first-confirmation
-                    basis — many students lose admission despite selection
-                    due to delayed confirmation
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Admissions are time-sensitive — early applicants have
-                    better chances of securing seats
-                  </li>
-                </ul>
-
-                <p className="curr-closing">
-                  MBA HR Admission 2026 at ISMR in Pune is limited due to a
-                  fixed intake capacity.
-                </p>
-
-                <a href="/Contactus" className="default-btn curr-cta">
-                  Apply Now →
-                </a>
-              </div>
+              ))}
             </div>
-          </div>
 
+          </div>
 
 
 
@@ -3606,7 +3461,7 @@ font-size:14px;
           <>
             <style>{`
                 .gt-wrap {
-                    display: grid;
+                    // display: grid;
                     grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
                     gap: 28px;
                     align-items: start;
@@ -3757,7 +3612,7 @@ font-size:14px;
             `}</style>
 
 
-            <div className="">
+            <div className="pb-4 pt-3">
               <div className="">
                 <marquee direction="left" behavior="alternate" scrollamount="6">
                   <div className="logo-marquee-item">

@@ -1223,7 +1223,7 @@ font-size:14px;
                 </div>
                 <div className="cta-row">
                   <a className="default-btn" href="tel:9923786079">Check Your Eligibility for MBA HR Admission 2026 in Pune</a>
-                  <a className="default-btn" href="/contact-us">Limited seats open for MBA HR Admission 2026 in Pune</a>
+                  {/* <a className="default-btn" href="/contact-us">Limited seats open for MBA HR Admission 2026 in Pune</a> */}
                 </div>
               </div>
             </div>
@@ -1871,9 +1871,9 @@ font-size:14px;
                   </div>
                 </div>
 
-                <a href="/contact-us" className="default-btn diff-cta">
+                {/* <a href="/contact-us" className="default-btn diff-cta">
                   Apply Now →
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -2214,9 +2214,9 @@ font-size:14px;
                   </div>
                 </div>
 
-                <a href="/contact-us" className="default-btn diff-cta">
+                {/* <a href="/contact-us" className="default-btn diff-cta">
                   Apply Now →
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -2295,7 +2295,7 @@ font-size:14px;
 
             <div className="diff-layout">
               <div className="diff-left">
-                <h3 className="diff-col-title mt-3">Top Recruiters at ISMR</h3>
+                <h3 className="diff-col-title mt-4">Top Recruiters at ISMR</h3>
                 <ul className="method-list method-list--styled">
                   <li>
                     <span className="method-icon">
@@ -2330,7 +2330,7 @@ font-size:14px;
                   </li>
                 </ul>
 
-                <h3 className="diff-col-title mt-3">Why ISMR's Placement System Works</h3>
+                <h3 className="diff-col-title mt-4">Why ISMR's Placement System Works</h3>
                 <div className="app-card">
                   <div className="app-row">
                     <span className="app-icon">
@@ -2383,7 +2383,7 @@ font-size:14px;
               </div>
 
               <div className="diff-right">
-                <h3 className="diff-col-title mt-3">Top MBA HR Colleges in Pune — How ISMR Compares</h3>
+                <h3 className="diff-col-title mt-4">Top MBA HR Colleges in Pune — How ISMR Compares</h3>
                 <div className="app-card">
                   <div className="app-row">
                     <span className="app-icon">
@@ -2433,10 +2433,10 @@ font-size:14px;
                     </div>
                   </div>
                 </div>
-                <p className="intro-text diff-closing">
+                {/* <p className="intro-text diff-closing">
                   This is why ISMR is counted among the Top MBA HR Colleges
                   in Pune.
-                </p>
+                </p> */}
 
                 <h3 className="diff-col-title">Best MBA HR Colleges in Pune for Placements — Why ISMR Stands Out</h3>
                 <div className="app-card">
@@ -2804,14 +2804,14 @@ font-size:14px;
                   </li>
                 </ul>
 
-                <p className="curr-closing">
+                <p className="curr-closing mt-3">
                   MBA HR Admission 2026 at ISMR in Pune is limited due to a
                   fixed intake capacity.
                 </p>
 
-                <a href="/Contactus" className="default-btn curr-cta">
+                {/* <a href="/Contactus" className="default-btn curr-cta">
                   Apply Now →
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
