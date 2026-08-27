@@ -14,7 +14,7 @@ import Banner from "./component/Banner";
 import Banner2 from "./component/Banner2";
 import Marquee from "./component/Marquee";
 import AboutAdmaUniversity from "./component/AboutAdmaUniversity";
-import programsSection from "./component/programsSection";
+import ProgramsSection from "./component/ProgramsSection";
 import HowToApply from "./component/HowToApply";
 import StudentLife from "./component/StudentLife";
 import CounterSection from "./component/CounterSection";
@@ -105,7 +105,7 @@ function App() {
                             <Marquee />
                             <CounterSection />
                             <Banner2 />
-                            <programsSection />
+                            <ProgramsSection />
                             <AboutAdmaUniversity />
                             <HowToApply />
                             <Placementmorque />
