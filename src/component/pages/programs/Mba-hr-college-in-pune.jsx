@@ -1076,7 +1076,7 @@ font-size:14px;
               margin: 0,
             }}
           >
-            MBA in Marketing  <span className="text-warning">Management</span>
+            MBA in Human Resource  <span className="text-warning">Management</span>
           </span>
           <p
             className="mb-0"
