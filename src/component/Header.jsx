@@ -289,7 +289,7 @@ const Header = () => {
             </Link>
           </li>
 
-          <li>
+          {/* <li>
             <Link
               className="dropdown-item"
               to="/academics/programs"
@@ -297,7 +297,7 @@ const Header = () => {
             >
               Course Duration
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
               className="dropdown-item"
