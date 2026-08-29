@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import allsectionbg from "../assets/allsectionbg.jpg";
+import SEO from "./SEO";
 
 
 export default function ApplyBba() {
@@ -40,6 +41,11 @@ export default function ApplyBba() {
 
     return (
         <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
+            <SEO
+                title="Apply for BBA & BCA 2026 | Application Form | ISMR Pune"
+                description="Apply online for SPPU-affiliated BBA and BCA undergraduate courses at ISMR Pune. Direct counselling and enrollment guidance."
+                canonical="https://ismrpune.edu.in/admissions/how-to-apply/"
+            />
 
             {/* -------- HEADER SECTION -------- */}
             <section

@@ -29,7 +29,9 @@ import {
   faMountain,
   faLightbulb,
   faBus,
+  faBookOpen,
 } from "@fortawesome/free-solid-svg-icons";
+import SEO from "../../SEO";
 
 const whyIsmrFeatures = [
   { id: 1, title: "Best Institute in Western Region for Academics and Placements Excellence", icon: faAward },
@@ -58,43 +60,41 @@ const whyIsmrFeatures = [
 function WhyISMRPage() {
   return (
     <div className="font-poppins">
+      <SEO
+        title="Why Choose ISMR Pune | Top Reasons to Study at ISMR"
+        description="Discover 19+ distinct reasons to choose ISMR Pune: 100% placement track record, AICTE approved, SPPU affiliated, global exposure, 20-acre lush campus."
+        canonical="https://ismrpune.edu.in/about-us/why-ismr/"
+      />
       <style>{`
-        /* Fonts */
-        .font-roboto-slab {
-          font-family: "Roboto Slab", serif;
-        }
-        .font-poppins {
-          font-family: "Poppins", sans-serif;
-        }
-
-        /* Headings */
+        /* Fonts & Headings */
         .page-heading {
-          font-family: "Roboto Slab", serif;
-          font-size: 46px;
-          font-weight: 900;
+          font-family: 'Inter', Arial, Helvetica, sans-serif;
+          font-size: 40px;
+          font-weight: 700;
           text-align: center;
           color: #0a2240;
         }
 
         .section-heading {
-          font-family: "Roboto Slab", serif;
-          font-size: 36px;
-          font-weight: 900;
+          font-family: 'Inter', Arial, Helvetica, sans-serif;
+          font-size: 32px;
+          font-weight: 700;
           color: #0a2240;
           text-align: center;
         }
 
         .card-heading {
-          font-family: "Roboto Slab", serif;
-          font-size: 24px;
+          font-family: 'Inter', Arial, Helvetica, sans-serif;
+          font-size: 22px;
           font-weight: 700;
           color: #0a2240;
         }
 
         /* Body Text */
         .body-text, .caption-text {
-          font-family: "Poppins", sans-serif;
+          font-family: 'Inter', Arial, Helvetica, sans-serif;
           font-size: 16px;
+          line-height: 1.7;
           color: #444;
         }
 
@@ -103,10 +103,10 @@ function WhyISMRPage() {
         }
 
         @media (max-width: 768px) {
-          .page-heading { font-size: 36px; }
-          .section-heading { font-size: 28px; }
-          .card-heading { font-size: 20px; }
-          .body-text, .caption-text { font-size: 14px; }
+          .page-heading { font-size: 32px; }
+          .section-heading { font-size: 24px; }
+          .card-heading { font-size: 18px; }
+          .body-text, .caption-text { font-size: 14.5px; }
         }
       `}</style>
 

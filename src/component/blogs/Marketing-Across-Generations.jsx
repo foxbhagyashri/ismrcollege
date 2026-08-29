@@ -14,6 +14,7 @@ import {
     faCircle,
     faHandHoldingHeart
 } from "@fortawesome/free-solid-svg-icons";
+import SEO from "../SEO";
 
 // ---------------- STAT COUNTER ----------------
 const StatCounter = ({ endValue, duration, suffix }) => {
@@ -48,6 +49,11 @@ const StatCounter = ({ endValue, duration, suffix }) => {
 const MarketingAcrossGenerations = () => {
     return (
         <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
+            <SEO
+                title="Marketing Across Generations: From Boomers to Gen Alpha | ISMR Pune"
+                description="Explore how consumer psychology, digital habits, and marketing strategies differ across Baby Boomers, Gen X, Millennials, Gen Z, and Gen Alpha."
+                canonical="https://ismrpune.edu.in/blogs/Marketing-Across-Generations"
+            />
             {/* -------- HEADER -------- */}
             <section
                 className="py-5 text-white text-center position-relative"

@@ -4,6 +4,7 @@ import allsectionbg from "../../../assets/allsectionbg.jpg";
 // Font Awesome imports
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaptopCode, faGraduationCap, faBriefcase, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
+import SEO from "../../SEO";
 
 // Define the custom CSS styles
 const customStyles = `
@@ -214,6 +215,11 @@ function Courseduration() {
 
   return (
     <>
+      <SEO
+        title="Academics & Degree Programs | ISMR Pune"
+        description="Discover undergraduate and postgraduate management programs at ISMR Pune. SPPU affiliated degrees designed for career leadership."
+        canonical="https://ismrpune.edu.in/academics/programs/"
+      />
       <GlobalStyles />
       <section
         className="py-5 text-white text-center position-relative"

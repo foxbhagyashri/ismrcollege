@@ -5,6 +5,7 @@ import allsectionbg from "../../../assets/allsectionbg.jpg";
 
 import axios from "axios";
 import brochurePdf from "../../../assets/ISMR Brochure.pdf"; // Add your PDF in assets
+import SEO from "../../SEO";
 
 /**
  * MBA Program Page
@@ -264,6 +265,11 @@ function MbaProgramPage() {
 
     return (
         <>
+            <SEO
+                title="MBA in Business Analytics in Pune | MBA Programs | ISMR"
+                description="Explore MBA in Business Analytics & specializations at ISMR Pune. SPPU-affiliated, AICTE approved with 100% placement support."
+                canonical="https://ismrpune.edu.in/programs/mba-in-business-analytics-pune"
+            />
             <style>{`
         .mba-ticket {
           position: relative;

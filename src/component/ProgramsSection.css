@@ -15,7 +15,7 @@
 
 .programs-section {
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-  padding: 90px 5%;
+  padding: 65px 5%;
   font-family: 'Poppins', sans-serif;
   position: relative;
   overflow: hidden;
@@ -36,16 +36,16 @@
 .section-header {
   text-align: center;
   max-width: 900px;
-  margin: 0 auto 80px auto;
+  margin: 0 auto 50px auto;
   position: relative;
   z-index: 1;
 }
 
 .section-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
   color: var(--primary-blue);
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   position: relative;
   display: inline-block;
   letter-spacing: -0.5px;
@@ -56,18 +56,18 @@
 .section-title::after {
   content: '';
   display: block;
-  width: 80px;
-  height: 5px;
+  width: 70px;
+  height: 4px;
   background: linear-gradient(90deg, var(--accent-gold) 0%, var(--accent-yellow) 100%);
-  margin: 15px auto 0;
+  margin: 12px auto 0;
   border-radius: 3px;
   box-shadow: 0 4px 10px rgba(255, 184, 0, 0.3);
 }
 
 .section-subtitle {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   color: var(--text-grey);
-  line-height: 1.8;
+  line-height: 1.6;
   font-weight: 400;
 }
 
@@ -76,8 +76,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* centers the last row */
-  gap: 30px;
-  max-width: 1300px;
+  gap: 22px;
+  max-width: 1250px;
   margin: 0 auto;
 }
 
@@ -88,21 +88,20 @@
   position: relative;
   
   /* Layout: 4 columns on large screens (25% each) */
-  flex: 0 1 calc(25% - 30px);
-  max-width: 320px;
+  flex: 0 1 calc(25% - 22px);
+  max-width: 285px;
   
   /* Styling */
-  border-radius: 20px;
-  padding: 45px 35px 35px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 28px 20px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
-  min-height: 320px;
 }
 
 /* Hover State */
 .specialization-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.14);
 }
 
 /* Blue Cards */
@@ -147,60 +146,72 @@
 
 /* --- Icon Styling --- */
 .card-icon {
-  width: 70px;
-  height: 70px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
+  font-size: 22px;
   background: #ffffff;
   color: #C00D0D;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  margin: 0 auto 25px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  margin: 0 auto 14px;
   transition: all 0.3s ease;
 }
 
 .specialization-card:hover .card-icon {
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.08) rotate(4deg);
 }
 
 /* --- Card Content --- */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 .card-title {
-  font-size: 1.25rem;
-  font-weight: 800;
+  font-size: 1.02rem;
+  font-weight: 700;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
   line-height: 1.3;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-description {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.85rem;
+  line-height: 1.5;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   flex-grow: 1;
 }
 
 /* --- Button Styling --- */
 .view-more-btn {
-  padding: 12px 28px;
+  padding: 8px 22px;
   border: none;
-  border-radius: 25px;
-  font-size: 0.875rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
   cursor: pointer;
   transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   align-self: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  margin-top: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   font-family: 'Poppins', sans-serif;
+  text-decoration: none;
 }
 
 .view-more-btn svg {
@@ -208,7 +219,7 @@
 }
 
 .view-more-btn:hover svg {
-  transform: translateX(5px);
+  transform: translateX(4px);
 }
 
 /* --- Responsive Design --- */

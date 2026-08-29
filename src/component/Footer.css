@@ -29,34 +29,47 @@
 /* ---------- TITLES ---------- */
 .footer-title {
   font-weight: 700;
-  font-size: 22px;
-  margin-bottom: 1.2rem;
-  color: #002147;
-  letter-spacing: 0.5px;
-  padding-left: 20px;
+  font-size: 20px;
+  margin-bottom: 1.1rem;
+  color: #002a5c;
+  letter-spacing: 0.3px;
+  padding-left: 0;
 }
 
 /* ---------- LINKS ---------- */
 .footer-links {
   list-style: none;
-  padding-left: 20px;
+  padding-left: 0;
   margin: 0;
 }
 
 .footer-links li {
-  margin-bottom: 12px;
+  margin-bottom: 9px;
+  line-height: 1.4;
 }
 
-.footer-links a {
-  color: #555;
+.footer-links a,
+.footer-apply-link {
+  color: #4a5568;
+  font-size: 14px;
+  font-weight: 500;
   text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
-.footer-links a:hover {
-  color: #e63946;
+.footer-links a:hover,
+.footer-apply-link:hover {
+  color: #002a5c;
   transform: translateX(4px);
+  font-weight: 600;
 }
 
 /* ---------- CONTACT SECTION ---------- */
@@ -146,12 +159,23 @@
   border-top: 1px solid #ddd;
   color: #555;
   font-size: 0.9rem;
-  text-align: center;
+  text-align: left;
+}
+
+.footer-bottom-text {
+  text-align: left;
 }
 
 .footer-brand {
   color: #002a5c;
   font-weight: 600;
+  text-decoration: none !important;
+  transition: all 0.25s ease;
+}
+
+.footer-brand:hover {
+  color: #e63946;
+  text-decoration: none !important;
 }
 
 /* ---------- RESPONSIVE ---------- */

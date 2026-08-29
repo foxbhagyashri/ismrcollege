@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 import axios from "axios";
 import brochurePdf from "../../../assets/ISMR Brochure.pdf"; // Add your PDF in assets
+import SEO from "../../SEO";
 
 function ProgramOfferedPage() {
 
@@ -324,6 +325,11 @@ function ProgramOfferedPage() {
 
   return (
     <>
+      <SEO
+        title="Academic Programs Offered | MBA, BBA & BCA | ISMR Pune"
+        description="Explore all undergraduate and postgraduate academic management and IT programs offered at ISMR Pune with syllabus breakdowns and brochures."
+        canonical="https://ismrpune.edu.in/academics/programs-offered/"
+      />
       {/* ===== Header Section ===== */}
       <section
         className="py-5 text-white text-center position-relative"

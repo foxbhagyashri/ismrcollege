@@ -12,10 +12,10 @@ import "./CounterSection.css";
 
 const CounterSection = () => {
   const counters = [
-    { id: 1, end: 3500, label: "Students Passed", icon: faLaptopCode },
-    { id: 2, end: 3100, label: "Student Placed", icon: faUserGraduate },
-    { id: 3, end: 600, label: "Companies", icon: faBookOpen },
-    { id: 4, end: "12.6 LPA", label: "Highest Package", icon: faChalkboardTeacher, noCount: true },
+    { id: 1, end: 3500, label: "Students Passed", icon: faLaptopCode, suffix: "+" },
+    { id: 2, end: 3100, label: "Student Placed", icon: faUserGraduate, suffix: "+" },
+    { id: 3, end: 600, label: "Companies", icon: faBookOpen, suffix: "+" },
+    { id: 4, end: 12.6, decimals: 1, label: "Highest Package", icon: faChalkboardTeacher, suffix: " LPA" },
   ];
 
   return (
@@ -31,11 +31,15 @@ const CounterSection = () => {
                   </div>
                   <div className="counter-inline">
                     <h3 className="counter-number">
-                      {item.noCount ? (
-                        item.end
-                      ) : (
-                        <CountUp end={item.end} duration={2} separator="" suffix="+" />
-                      )}
+                      <CountUp
+                        end={item.end}
+                        decimals={item.decimals || 0}
+                        duration={2.5}
+                        separator=""
+                        suffix={item.suffix}
+                        enableScrollSpy={true}
+                        scrollSpyOnce={false}
+                      />
                     </h3>
                     <p className="counter-label">{item.label}</p>
                   </div>

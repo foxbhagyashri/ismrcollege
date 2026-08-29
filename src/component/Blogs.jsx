@@ -1,10 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import allsectionbg from "../assets/allsectionbg.jpg";
+import SEO from "./SEO";
 
 const BlogPage = () => {
   return (
     <section>
+      <SEO
+        title="Knowledge Insights & Articles | ISMR Pune Blogs"
+        description="Read latest thought leadership articles, industry insights, and management trends written by faculty and students at ISMR Pune."
+        canonical="https://ismrpune.edu.in/blogs"
+      />
 
       {/* ⭐ BREADCRUMB SECTION (Matches Screenshot Style) */}
       <section className="breadcrumb-wrapper" style={{

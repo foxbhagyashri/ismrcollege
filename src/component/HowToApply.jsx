@@ -25,7 +25,7 @@ const HowToApply = () => {
                         <span className="apply-step">02</span>
                         <h3 className="apply-heading">Counselling & Telephonic Interview</h3>
                         <p className="apply-text">
-                            Once the form is submitted, the admission cell initiates the counselling process followed by an telephonic interview session.
+                            Once the form is submitted, the admission cell initiates the counselling process followed by a telephonic interview session.
                         </p>
                     </article>
 
@@ -34,16 +34,16 @@ const HowToApply = () => {
                         <span className="apply-step">03</span>
                         <h3 className="apply-heading">Seat Confirmation</h3>
                         <p className="apply-text">
-                            After the telephonic interview, selected candidates will receive the Admission Letter via email. To confirm their seat, you must pay Rs. 30,000/- within four days of receiving the Admission Letter.
+                            After the telephonic interview, selected candidates will receive the Admission Letter via email. To confirm their seat, candidates must pay Rs. 30,000/- within four days.
                         </p>
                     </article>
 
                     <article className="apply-box">
                         <div className="apply-icon"><FaGraduationCap /></div>
                         <span className="apply-step">04</span>
-                        <h3 className="apply-heading"> Provisional Admission</h3>
+                        <h3 className="apply-heading">Provisional Admission</h3>
                         <p className="apply-text">
-                            After the seat confirmation , your admission is provisionally confirmed subject to fulfilment of all the required documents.
+                            After the seat confirmation, your admission is provisionally confirmed subject to fulfillment of all required documents.
                         </p>
                     </article>
 

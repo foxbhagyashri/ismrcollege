@@ -1,9 +1,15 @@
 import React from "react";
 import "./PlacementProcess.css";
+import SEO from "../../SEO";
 
 const PlacementProcess = () => {
     return (
         <>
+            <SEO
+                title="Placement Process & Methodology | ISMR Pune"
+                description="Explore the comprehensive 5-step placement and corporate hiring process at ISMR Pune ensuring multi-industry career placements."
+                canonical="https://ismrpune.edu.in/placements/process/"
+            />
             {/* ---------- TOP BANNER ---------- */}
             <div className="placement-banner">
                 <div className="placement-overlay">

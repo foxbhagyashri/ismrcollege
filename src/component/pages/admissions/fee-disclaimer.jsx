@@ -1,10 +1,16 @@
 import React from "react";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import Faq from "../../Faq";
+import SEO from "../../SEO";
 
 export default function DisclaimerFeePayment() {
     return (
         <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
+            <SEO
+                title="Disclaimer for Fee Payment | ISMR Pune"
+                description="Important notice and guidelines regarding official bank accounts, online payment security, and fee payment verification for ISMR Pune."
+                canonical="https://ismrpune.edu.in/admissions/fee-disclaimer/"
+            />
             {/* Add FontAwesome */}
             <link
                 rel="stylesheet"

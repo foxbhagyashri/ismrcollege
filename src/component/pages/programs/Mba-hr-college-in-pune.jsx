@@ -14,7 +14,7 @@ import atosLogo from "../../../assets/Homeimg/atos.png";
 import bajajLogo from "../../../assets/Homeimg/Bajaj-Finserv-Logo.jpg";
 import cognizantLogo from "../../../assets/Homeimg/Cognizant-Logo.png";
 import learningRoutesLogo from "../../../assets/Homeimg/Comp1.png";
-
+import SEO from "../../SEO";
 
 export default function HRManagement() {
 
@@ -69,6 +69,11 @@ export default function HRManagement() {
 
   return (
     <section className="apply-wrapper">
+      <SEO
+        title="MBA HR College in Pune | Best Human Resource Management | ISMR"
+        description="Join MBA in Human Resource Management (HR) at ISMR Pune. Top HR management college with 100% placement track record."
+        canonical="https://ismrpune.edu.in/programs/mba-hr-college-in-pune"
+      />
       <style>{`
 
 .content-container p{

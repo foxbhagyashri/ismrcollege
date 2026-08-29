@@ -1,5 +1,6 @@
 import React from 'react'
 import allsectionbg from "../../../assets/allsectionbg.jpg";
+import SEO from "../../SEO";
 
 function Corporate() {
   const testimonials = [
@@ -37,6 +38,11 @@ function Corporate() {
 
   return (
     <>
+      <SEO
+        title="Corporate Testimonials & Feedback | ISMR Pune"
+        description="Read what corporate recruiters and industry leaders say about ISMR Pune MBA graduates and campus recruitment drives."
+        canonical="https://ismrpune.edu.in/placements/internships-and-placements/"
+      />
       {/* ====== Banner Section ====== */}
       <section
         className="py-5 text-white text-center position-relative"

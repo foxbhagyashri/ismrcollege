@@ -120,16 +120,43 @@ const Testimonials = () => {
     slidesToScroll: 1,
     arrows: false,
     pauseOnHover: true,
+    lazyLoad: "ondemand",
+    accessibility: true,
     cssEase: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
     responsive: [
       { breakpoint: 1200, settings: { slidesToShow: 3 } },
       { breakpoint: 992, settings: { slidesToShow: 2 } },
-      { breakpoint: 768, settings: { slidesToShow: 1, centerMode: true, centerPadding: "30px" } },
+      { breakpoint: 768, settings: { slidesToShow: 1, centerMode: true, centerPadding: "20px" } },
     ],
+  };
+
+  // Structured data for Google SEO rich results
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "ISMR B-School Pune",
+    "url": "https://ismrpune.edu.in",
+    "review": testimonials.map((item) => ({
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": item.name,
+      },
+      "reviewBody": item.text,
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": item.rating,
+        "bestRating": "5",
+      },
+    })),
   };
 
   return (
     <section style={styles.section}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <div style={styles.container}>
         <div style={styles.header}>
 
@@ -159,7 +186,7 @@ const Testimonials = () => {
                   }}
                 >
                   <div style={styles.imageWrapper}>
-                    <img src={item.img} alt={item.name} style={styles.image} />
+                    <img src={item.img} alt={item.name} loading="lazy" style={styles.image} />
                     <div style={styles.curvedDivider}></div>
                   </div>
 
@@ -184,7 +211,8 @@ const Testimonials = () => {
         <div style={styles.controls}>
           <button
             style={styles.arrowBtn}
-            onClick={() => sliderRef.current.slickPrev()}
+            aria-label="Previous Testimonial"
+            onClick={() => sliderRef.current?.slickPrev?.()}
             onMouseEnter={(e) => {
               e.currentTarget.style.backgroundColor = "#f8b400";
               e.currentTarget.style.color = "#002147";
@@ -200,7 +228,8 @@ const Testimonials = () => {
           </button>
           <button
             style={styles.arrowBtn}
-            onClick={() => sliderRef.current.slickNext()}
+            aria-label="Next Testimonial"
+            onClick={() => sliderRef.current?.slickNext?.()}
             onMouseEnter={(e) => {
               e.currentTarget.style.backgroundColor = "#f8b400";
               e.currentTarget.style.color = "#002147";

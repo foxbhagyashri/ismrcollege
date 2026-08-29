@@ -87,10 +87,13 @@ import MBAHRCollegesInPune from "./component/pages/programs/Mba-hr-college-in-pu
 import MbaProgramPage from "./component/pages/academics/MBA-Program"
 import BBACourse from "./component/pages/programs/BBA-Programme-in-Pune";
 import BCACourse from "./component/pages/programs/BCA-Programme-inn-Pune";
+import ScrollToTop from "./component/ScrollToTop";
+import SEO from "./component/SEO";
 
 function App() {
     return (
         <Router>
+            <ScrollToTop />
             {/* <ChatbotLoader /> */}
             <Topbar />
             <Header />
@@ -101,6 +104,11 @@ function App() {
                     path="/"
                     element={
                         <>
+                            <SEO
+                                title="ISMR B-School Pune | Best MBA, BBA & BCA College in Pune"
+                                description="ISMR B-School Pune is a premier management institute offering AICTE approved & SPPU affiliated MBA, BBA and BCA programs with 100% placement assistance."
+                                canonical="https://ismrpune.edu.in/"
+                            />
                             <Banner />
                             <Marquee />
                             <CounterSection />
@@ -120,11 +128,23 @@ function App() {
 
                 {/* About Page Routes */}
                 <Route
+                    path="/about-us"
+                    element={<Aboutinstutue />}
+                />
+                <Route
                     path="/about-us/about-us"
                     element={<Aboutinstutue />}
                 />
                 <Route
+                    path="/Aboutpage/Aboutinstutue"
+                    element={<Aboutinstutue />}
+                />
+                <Route
                     path="/about-us/Leadership"
+                    element={<Leadership />}
+                />
+                <Route
+                    path="/about-us/leadership-team"
                     element={<Leadership />}
                 />
                 <Route
@@ -140,6 +160,10 @@ function App() {
                     element={<Chairman />}
                 />
                 <Route
+                    path="/about-us/leadership-team/chairman-message"
+                    element={<Chairman />}
+                />
+                <Route
                     path="/about-us/leadership-team/Director"
                     element={<Director />}
                 />
@@ -148,7 +172,15 @@ function App() {
                     element={<Secretary />}
                 />
                 <Route
+                    path="/about-us/leadership-team/secretary-message"
+                    element={<Secretary />}
+                />
+                <Route
                     path="/about-us/leadership-team/Treasure"
+                    element={<Treasure />}
+                />
+                <Route
+                    path="/about-us/leadership-team/treasurer-message"
                     element={<Treasure />}
                 />
 
@@ -190,6 +222,10 @@ function App() {
                 />
                 {/* Placement Page */}
                 <Route
+                    path="/placements"
+                    element={<Placementoverview />}
+                />
+                <Route
                     path="/placements/placements"
                     element={<Placementoverview />}
                 />
@@ -201,11 +237,19 @@ function App() {
                     path="/placements/Corporate"
                     element={<Corporate />}
                 />
+                <Route
+                    path="/placements/corporate"
+                    element={<Corporate />}
+                />
 
                 {/* Student Life Page */}
                 <Route
                     path="/campus-life/student-life"
                     element={<Studentcampus />}
+                />
+                <Route
+                    path="/campus-life/student-facilities"
+                    element={<StudentFacilities />}
                 />
                 <Route
                     path="/campus-life/student-facilities/"
@@ -214,8 +258,16 @@ function App() {
 
                 {/* Academics Page */}
                 <Route
+                    path="/academics/programs-offered"
+                    element={<ProgramOfferedPage />}
+                />
+                <Route
                     path="/Academics/programs-offered"
                     element={<ProgramOfferedPage />}
+                />
+                <Route
+                    path="/academics/programs"
+                    element={<Courseduration />}
                 />
                 <Route
                     path="/Academics/programs"
@@ -248,6 +300,10 @@ function App() {
                     path="/Addmissions/more-faqs"
                     element={<FAQPage />}
                 />
+                <Route
+                    path="/admissions/more-faqs"
+                    element={<FAQPage />}
+                />
 
                 {/* more PlacementRules */}
                 <Route
@@ -273,6 +329,10 @@ function App() {
                     element={<Blogs />}
                 />
                 <Route
+                    path="/blogs"
+                    element={<Blogs />}
+                />
+                <Route
                     path="/ApplyMba"
                     element={<ApplyMba />}
                 />
@@ -282,6 +342,10 @@ function App() {
                 />
                 <Route
                     path="/Termsconditions"
+                    element={<Termsconditions />}
+                />
+                <Route
+                    path="/terms-and-conditions"
                     element={<Termsconditions />}
                 />
 
@@ -327,6 +391,10 @@ function App() {
                 <Route
                     path="/programs/mba-hr-college-in-pune"
                     element={<MBAHRCollegesInPune />}
+                />
+                <Route
+                    path="/programs/mba-in-business-analytics-pune"
+                    element={<MbaProgramPage />}
                 />
 
                 <Route

@@ -14,6 +14,7 @@ import {
     faCircle,
     faHandHoldingHeart
 } from "@fortawesome/free-solid-svg-icons";
+import SEO from "../SEO";
 
 // ---------------- STAT COUNTER ----------------
 const StatCounter = ({ endValue, duration, suffix }) => {
@@ -48,6 +49,11 @@ const StatCounter = ({ endValue, duration, suffix }) => {
 const FutureInterfaceOfMarketing = () => {
     return (
         <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
+            <SEO
+                title="The Future Interface of Marketing: AI, Voice & Immersive Tech | ISMR Pune"
+                description="Explore emerging interfaces of marketing including conversational AI, augmented reality, voice search, and omnichannel customer experiences."
+                canonical="https://ismrpune.edu.in/blogs/Future-Interface-of-Marketing"
+            />
             {/* -------- HEADER -------- */}
             <section
                 className="py-5 text-white text-center position-relative"

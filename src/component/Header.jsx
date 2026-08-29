@@ -34,12 +34,36 @@ const Header = () => {
     }
   };
 
+  const handleHomeClick = (e) => {
+    closeAll();
+    if (window.location.pathname === "/" || window.location.pathname === "") {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+      document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
+      document.body.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }
+  };
+
   const handleNavLinkClick = () => {
     closeAll();
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
   };
 
   const handleDropdownItemClick = () => {
     closeAll();
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
   };
 
   const toggleNavbar = () => {
@@ -88,7 +112,7 @@ const Header = () => {
     >
       {/* Home */}
       <li className="nav-item">
-        <Link className="nav-link" to="/" onClick={handleNavLinkClick}>
+        <Link className="nav-link" to="/" onClick={handleHomeClick}>
           Home
         </Link>
       </li>
@@ -413,86 +437,104 @@ const Header = () => {
           </li>
 
           <li>
-            <Link
+            <a
               className="dropdown-item"
-              to="https://cetcell.mahacet.org/"
+              href="https://cetcell.mahacet.org/"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={handleDropdownItemClick}
             >
               Apply For MAH-CET Form
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
+            <a
               className="dropdown-item"
-              to="https://mahadbt.maharashtra.gov.in/Login/Login"
+              href="https://mahadbt.maharashtra.gov.in/Login/Login"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={handleDropdownItemClick}
             >
               Apply For EBC & Scholarship Form
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
+            <a
               className="dropdown-item"
-              to="https://atmaaims.com/"
+              href="https://atmaaims.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={handleDropdownItemClick}
             >
               Apply For ATMA Entrance Exam Form
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
+            <a
               className="dropdown-item"
-              to="https://mat.aima.in/?utm_source=collegedunia&utm_medium=text11&utm_campaign=online"
+              href="https://mat.aima.in/?utm_source=collegedunia&utm_medium=text11&utm_campaign=online"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={handleDropdownItemClick}
             >
               Apply For MAT Entrance Exam Form
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
+            <a
               className="dropdown-item"
-              to="https://cmat.nta.nic.in/"
+              href="https://cmat.nta.nic.in/"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={handleDropdownItemClick}
             >
               Apply For CMAT Entrance Exam Form
-            </Link>
+            </a>
           </li>
 
           <li>
-            <Link
+            <a
               className="dropdown-item"
-              to="https://exam.unipune.ac.in/Pages/ExamFormsOnline.html"
+              href="https://exam.unipune.ac.in/Pages/ExamFormsOnline.html"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={handleDropdownItemClick}
             >
               Apply For MBA Exam Form
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
+            <a
               className="dropdown-item"
-              to="https://ndl.iitkgp.ac.in/"
+              href="https://ndl.iitkgp.ac.in/"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={handleDropdownItemClick}
             >
               Apply For National Digital Library (NDL)
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
+            <a
               className="dropdown-item"
-              to="https://www.delnet.in/"
+              href="https://www.delnet.in/"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={handleDropdownItemClick}
             >
               Apply For DELNET
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
+            <a
               className="dropdown-item"
-              to="https://swayam.gov.in/"
+              href="https://swayam.gov.in/"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={handleDropdownItemClick}
             >
               Apply For SWAYAM
-            </Link>
+            </a>
           </li>
 
 
@@ -624,14 +666,15 @@ const Header = () => {
         /* Custom Navbar Styling */
         .custom-navbar {
           background-color: #002a5c !important;
-          // padding: 10px 0;
-          padding: 3px;
+          padding: 10px 0 !important;
+          min-height: 64px;
           position: sticky;
           top: 0;
-           
           z-index: 1030;
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
           font-family: 'Inter', Arial, Helvetica, sans-serif !important;
+          display: flex;
+          align-items: center;
         }
           
 
@@ -696,30 +739,24 @@ const Header = () => {
   white-space: nowrap;
 }
 
-
-
-        
         .custom-navbar .navbar-brand {
           position: relative;
           padding-left: 25px;
           margin-left: 15px;
-          
         }
 
         .custom-navbar .navbar-brand img {
-          height: 125px;
-            
-          width: 125px;
+          height: 115px;
+          width: 115px;
           border-radius: 50%;
           transition: transform 0.3s ease;
           object-fit: cover;
           position: absolute;
-          top: -20px;
-          
+          top: -26px;
           left: 18px;
           z-index: 1031;
-          border: 6px solid #002a5c;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+          border: 5px solid #002a5c;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
         
         .custom-navbar .navbar-brand img:hover {
@@ -727,23 +764,32 @@ const Header = () => {
         }
         
         .custom-navbar .nav-link {
-          color: rgba(255, 255, 255, 0.8) !important;
+          color: rgba(255, 255, 255, 0.9) !important;
           font-weight: 500;
-          font-size: 16px;
-          padding: 18px 22px;
-          margin: 2px 12px;
-          transition: all 0.3s ease;
+          font-size: 13.5px;
+          padding: 8px 11px !important;
+          margin: 0 1px !important;
+          border-radius: 6px;
+          transition: all 0.2s ease;
           text-transform: capitalize;
           cursor: pointer;
-          letter-spacing: 0.2px;
-          
+          letter-spacing: 0.15px;
+          white-space: nowrap !important;
+          display: inline-flex;
+          align-items: center;
         }
         
-        .custom-navbar .nav-link:hover,
-        .custom-navbar .nav-link.active,
-        .custom-navbar .nav-link.show {
+        .custom-navbar .nav-link:hover {
           color: #ffb100 !important;
-        
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .custom-navbar .nav-link.active,
+        .custom-navbar .nav-link.show,
+        .custom-navbar .nav-item.dropdown.show > .nav-link {
+          color: #ffb100 !important;
+          background-color: rgba(255, 177, 0, 0.15);
+          font-weight: 600;
         }
         
         .custom-navbar .dropdown-menu {
@@ -845,25 +891,29 @@ const Header = () => {
         /* Desktop-specific styles - FIXED DROPDOWN BEHAVIOR */
         @media (min-width: 992px) {
           
-          /* NEW: Apply desktop-only margins for ul */
           .custom-navbar .navbar-nav {
-            margin-left: 110px !important;
-            margin-right: 70px !important;
+            margin-left: 150px !important;
+            margin-right: 0 !important;
+            display: flex !important;
+            flex-wrap: nowrap !important;
+            align-items: center !important;
+            gap: 4px;
           }
 
           .custom-navbar .container-fluid {
             max-width: 100%;
-            padding: 0 1rem;
+            padding: 0 15px !important;
           }
           
           .custom-navbar .nav-item {
-            margin-right: 5px;
-            margin-left: 5px;
+            margin: 0 !important;
+            white-space: nowrap !important;
           }
           
           .custom-navbar .nav-link {
-            font-size: 14px;
-            padding: 12px 14px;
+            font-size: 13.2px !important;
+            padding: 7px 9px !important;
+            white-space: nowrap !important;
           }
           
           /* FIX: Proper Bootstrap dropdown behavior */
@@ -921,16 +971,22 @@ const Header = () => {
           }
           
           .apply-btn {
-            padding: 10px 16px;
+            padding: 8px 14px;
             font-size: 13px;
             white-space: nowrap;
           }
           
-          /* Compact navigation for smaller desktop screens */
+          /* Compact navigation for smaller desktop screens (992px to 1199px) */
           @media (max-width: 1199px) {
+            .custom-navbar .navbar-nav {
+              margin-left: 135px !important;
+              gap: 2px !important;
+            }
+
             .custom-navbar .nav-link {
-              font-size: 13px;
-              padding: 10px 12px;
+              font-size: 12px !important;
+              padding: 5px 6px !important;
+              white-space: nowrap !important;
             }
             
             .custom-navbar .dropdown-item {
@@ -939,16 +995,22 @@ const Header = () => {
             }
             
             .apply-btn {
-              padding: 8px 14px;
+              padding: 6px 12px;
               font-size: 12px;
             }
           }
           
-          /* Extra small desktop screens */
+          /* Extra small desktop screens (992px to 1024px) */
           @media (max-width: 1024px) {
+            .custom-navbar .navbar-nav {
+              margin-left: 130px !important;
+              gap: 1px !important;
+            }
+
             .custom-navbar .nav-link {
-              font-size: 12px;
-              padding: 8px 10px;
+              font-size: 11.5px !important;
+              padding: 5px 5px !important;
+              white-space: nowrap !important;
             }
             
             .custom-navbar .dropdown-item {
@@ -957,7 +1019,7 @@ const Header = () => {
             }
             
             .apply-btn {
-              padding: 6px 12px;
+              padding: 6px 10px;
               font-size: 11px;
             }
           }
@@ -1113,29 +1175,41 @@ const Header = () => {
           }
         }
         
-        /* Large desktop screens */
-        @media (min-width: 1200px) {
+        /* Large desktop screens (1200px to 1399px) */
+        @media (min-width: 1200px) and (max-width: 1399px) {
+          .custom-navbar .navbar-nav {
+            margin-left: 155px !important;
+            gap: 4px !important;
+          }
+          
           .custom-navbar .nav-link {
-            font-size: 15px;
-            padding: 12px 18px;
+            font-size: 13.2px !important;
+            padding: 7px 9px !important;
+            white-space: nowrap !important;
           }
           
           .apply-btn {
-            padding: 12px 20px;
-            font-size: 14px;
+            padding: 8px 14px;
+            font-size: 13px;
           }
         }
         
-        /* Extra large screens */
+        /* Extra large screens (1400px+) */
         @media (min-width: 1400px) {
+          .custom-navbar .navbar-nav {
+            margin-left: 165px !important;
+            gap: 6px !important;
+          }
+          
           .custom-navbar .nav-link {
-            font-size: 16px;
-            padding: 12px 20px;
+            font-size: 15.8px !important;
+            padding: 7px 11px !important;
+            white-space: nowrap !important;
           }
           
           .apply-btn {
-            padding: 12px 24px;
-            font-size: 15px;
+            padding: 8px 16px;
+            font-size: 14px;
           }
         }
           /* MOBILE FIX */
@@ -1156,9 +1230,9 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg custom-navbar" ref={navbarRef}>
         <div className="container-fluid">
           {/* Logo */}
-          <a href="/" className="navbar-brand">
+          <Link to="/" className="navbar-brand" onClick={handleHomeClick}>
             <img src="/ISMR logo_page-0001.jpg" alt="Institute Logo" />
-          </a>
+          </Link>
 
           {/* Apply Button - Mobile Top */}
           <div className="d-lg-none ms-auto me-2">

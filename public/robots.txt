@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow indexing of private or transient form submission states
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://ismrpune.edu.in/sitemap.xml

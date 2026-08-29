@@ -2,28 +2,35 @@ import { useEffect, useRef, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BriefcaseFill } from "react-bootstrap-icons";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
+import SEO from "../../SEO";
 
 /* =================== 3 CARD SLIDER =================== */
-const ImageSlider = ({ title, images }) => {
+const ImageSlider = ({ title, images = [] }) => {
   const [index, setIndex] = useState(0);
   const intervalRef = useRef(null);
-  const totalPages = Math.ceil(images.length / 3);
+  const safeImages = Array.isArray(images) ? images : [];
+  const totalPages = Math.max(1, Math.ceil(safeImages.length / 3));
 
   const startAuto = () => {
+    if (totalPages <= 1) return;
     intervalRef.current = setInterval(() => {
       setIndex((prev) => (prev + 1) % totalPages);
     }, 4000);
   };
 
   const resetAuto = () => {
-    clearInterval(intervalRef.current);
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
     startAuto();
   };
 
   useEffect(() => {
     startAuto();
-    return () => clearInterval(intervalRef.current);
-  }, []);
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [totalPages]);
 
   const next = () => {
     setIndex((prev) => (prev + 1) % totalPages);
@@ -35,12 +42,14 @@ const ImageSlider = ({ title, images }) => {
     resetAuto();
   };
 
+  if (safeImages.length === 0) return null;
+
   return (
     <div className="slider-block">
       <h6 className="text-center text-danger fw-semibold mb-3">{title}</h6>
 
       <div className="multi-slider">
-        <button className="arrow left" onClick={prev}>❮</button>
+        <button className="arrow left" aria-label={`Previous ${title}`} onClick={prev}>❮</button>
 
         <div className="slider-window">
           <div
@@ -49,9 +58,9 @@ const ImageSlider = ({ title, images }) => {
           >
             {[...Array(totalPages)].map((_, page) => (
               <div className="slide-page" key={page}>
-                {images.slice(page * 3, page * 3 + 3).map((img, i) => (
+                {safeImages.slice(page * 3, page * 3 + 3).map((img, i) => (
                   <div className="img-card" key={i}>
-                    <img src={img} alt={title} />
+                    <img src={img} alt={`${title} ${i + 1}`} loading="lazy" />
                   </div>
                 ))}
               </div>
@@ -59,7 +68,7 @@ const ImageSlider = ({ title, images }) => {
           </div>
         </div>
 
-        <button className="arrow right" onClick={next}>❯</button>
+        <button className="arrow right" aria-label={`Next ${title}`} onClick={next}>❯</button>
       </div>
     </div>
   );
@@ -166,6 +175,11 @@ function StudentCampusAndActivities() {
 
   return (
     <>
+      <SEO
+        title="Student Campus Life & Activities | ISMR Pune"
+        description="Experience vibrant campus life, cultural fests, sports events, industrial visits, study tours, and clubs at ISMR Pune."
+        canonical="https://ismrpune.edu.in/campus-life/student-life/"
+      />
       <style>{`
 
 

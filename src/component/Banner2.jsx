@@ -31,7 +31,7 @@ const Banner = () => {
             <div className="col-lg-6">
               <div className="banner-wrap-content">
                 <div className="title">
-                  <p>Sri Balaji Education Society's</p>
+                  <p style={{ color: "#ffffff", fontWeight: 600 }}>Sri Balaji Education Society's</p>
                   <h1 className="fs-2">
                     INTERNATIONAL SCHOOL OF <br></br> MANAGEMENT AND RESEARCH
                   </h1>

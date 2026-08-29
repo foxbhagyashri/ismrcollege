@@ -56,49 +56,65 @@
 /* each card */
 .apply-box {
     background: #ffffff;
-    padding: 25px;
-    border-radius: 12px;
+    padding: 30px 20px 25px;
+    border-radius: 14px;
     text-align: center;
     width: 23%;
-    /* updated width for 4 items */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
 }
 
 .apply-box:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
 /* icon */
 .apply-icon {
-    font-size: 36px;
+    font-size: 34px;
     color: #ef476f;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* big faint step number */
 .apply-step {
     position: absolute;
-    right: 18px;
-    top: 18px;
-    font-size: 44px;
-    font-weight: 400;
-    color: rgba(239, 71, 111, 0.10);
+    right: 16px;
+    top: 14px;
+    font-size: 38px;
+    font-weight: 700;
+    color: rgba(239, 71, 111, 0.12);
+    user-select: none;
 }
 
 /* heading and text */
 .apply-heading {
     color: #0a2259;
-    font-size: 18px;
+    font-size: 16.5px;
     font-weight: 700;
-    margin: 6px 0 12px;
+    margin: 4px 0 12px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.35;
 }
 
 .apply-text {
-    color: #666;
-    font-size: 18px;
-    line-height: 1.6;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.65;
     text-align: center;
+    margin: 0;
 }
 
 /* arrow in button */

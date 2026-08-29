@@ -2,11 +2,17 @@ import React from 'react';
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import loanImage from "../../../assets/Homeimg/loann.jpg";
 import Faq from "../../Faq";
+import SEO from "../../SEO";
 
 export default function EducationLoad() {
 
   return (
     <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
+      <SEO
+        title="Education Loan Assistance | ISMR Pune"
+        description="Learn about education loan facilities for MBA, BBA and BCA students at ISMR Pune through nationalized and private banking partners."
+        canonical="https://ismrpune.edu.in/admissions/education-loan/"
+      />
       {/* Add FontAwesome */}
       <link
         rel="stylesheet"

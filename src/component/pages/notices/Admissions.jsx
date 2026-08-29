@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
+import SEO from "../../SEO";
 
 // ---------------- STAT COUNTER ----------------
 const StatCounter = ({ endValue, duration, suffix }) => {
@@ -35,6 +36,11 @@ const StatCounter = ({ endValue, duration, suffix }) => {
 const Admissionsnote = () => {
   return (
     <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
+      <SEO
+        title="Admission Notices & Circulars | ISMR Pune"
+        description="Important announcements, dates, and official circulars regarding admissions at ISMR Pune."
+        canonical="https://ismrpune.edu.in/admissions/eligibility-criteria/"
+      />
       
       {/* -------- HEADER -------- */}
       <section

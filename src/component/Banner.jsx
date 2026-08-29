@@ -36,7 +36,7 @@ const Travel = () => {
             {/* Content */}
             <div className="content">
                 <div className="title">
-                    <p>Sri Balaji Education Society's</p>
+                    <p style={{ color: "#ffffff", fontWeight: 600 }}>Sri Balaji Education Society's</p>
 
                     <h1>
                         INTERNATIONAL SCHOOL OF <br />

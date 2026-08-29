@@ -97,43 +97,43 @@ const Footer = () => {
 
                     {/* Quick Links */}
                     <Col
-                        lg={2}
+                        lg={3}
                         md={6}
                         sm={12}
-                        className="mb-4"
+                        className="mb-4 ps-lg-4"
                     >
                         <h5 className="footer-title">Quick Links</h5>
                         <ul className="footer-links">
                             <li>
-                                <Link to="/Aboutpage/Ismr">Why ISMR?</Link>
+                                <Link to="/about-us/why-ismr">Why ISMR?</Link>
                             </li>
                             <li>
-                                <Link to="Aboutpage/Award">
+                                <Link to="/about-us/awards-and-rankings">
                                     Awards & Rankings
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/Addmissions/Eligibility-criteria">
+                                <Link to="/admissions/eligibility-criteria">
                                     Eligibility Criteria
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/Addmissions/Howtoapply">
+                                <Link to="/admissions/how-to-apply">
                                     How To Apply
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/Placementpage/PlacementProcess">
+                                <Link to="/placements/process">
                                     Placement Process
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/Addmissions/Disclaimer">
+                                <Link to="/admissions/disclaimer">
                                     Disclaimer for Admissions
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/Addmissions/DisclaimerFeePayment">
+                                <Link to="/admissions/fee-disclaimer">
                                     Disclaimer for Fees Payment
                                 </Link>
                             </li>
@@ -144,14 +144,9 @@ const Footer = () => {
                             </li>
                             <li>
                                 <button
+                                    type="button"
                                     onClick={() => setShowModal(true)}
-                                    style={{
-                                        marginTop: "10px",
-                                        background: "transparent",
-                                        border: "none",
-                                        color: "#555",
-                                        cursor: "pointer",
-                                    }}
+                                    className="footer-apply-link"
                                 >
                                     Apply Now
                                 </button>
@@ -250,10 +245,10 @@ const Footer = () => {
                         </div>
                     </Col>
 
-                    {/* Academics */}
+                    {/* Academics / Location */}
                     <Col
-                        lg={4}
-                        md={4}
+                        lg={3}
+                        md={6}
                         sm={12}
                         className="mb-4"
                     >
@@ -275,12 +270,17 @@ const Footer = () => {
 
             {/* Bottom Footer */}
             <div className="footer-bottom py-3 mt-4">
-                <Container className="d-flex flex-column flex-md-row align-items-center justify-content-between">
-                    <span className="footer-bottom-text text-center">
+                <Container className="d-flex flex-column flex-md-row align-items-center justify-content-start">
+                    <span className="footer-bottom-text text-start">
                         © Website Design & Developed By{" "}
-                        <span className="footer-brand">
+                        <a
+                            href="https://foxaircomm.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="footer-brand"
+                        >
                             Fox Aircomm Pvt Ltd
-                        </span>{" "}
+                        </a>{" "}
                         | All Rights Reserved.
                     </span>
                 </Container>
