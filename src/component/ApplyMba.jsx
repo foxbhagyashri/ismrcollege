@@ -44,7 +44,7 @@ export default function ApplyMba() {
             <SEO
                 title="Apply for MBA 2026 | Admission Application | ISMR Pune"
                 description="Apply online for AICTE approved MBA programs at ISMR Pune. Fill application form for direct admission and scholarship counselling."
-                canonical="https://ismrpune.edu.in/admissions/how-to-apply/"
+                canonical="https://ismrpune.edu.in/admissions/HowToApplyPage/"
             />
 
             {/* -------- HEADER SECTION -------- */}

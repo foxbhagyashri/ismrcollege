@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import Faq from "../../Faq";
 
-import ContactForm from "../../form/ContactForm";
-import Howtoaplydownoadform from "../../form/Howtoaplydownoadform";
+import ContactForm from "../../forms/ContactForm";
+import Howtoaplydownoadform from "../../forms/HowToApplyDownloadForm";
 import brochurePdf from "/ISMR Brochure.pdf"; // Add your PDF in assets
-import ISMRFormModal from "../../form/ISMRFormModal";
+import ISMRFormModal from "../../forms/ISMRFormModal";
 import britaniaLogo from "../../../assets/Homeimg/britania.png";
 import aisheLogo from "../../../assets/Homeimg/AISE.png";
 import allstateLogo from "../../../assets/Homeimg/allstate.png";
@@ -16,7 +16,7 @@ import cognizantLogo from "../../../assets/Homeimg/Cognizant-Logo.png";
 import learningRoutesLogo from "../../../assets/Homeimg/Comp1.png";
 import SEO from "../../SEO";
 
-export default function ISMRMarketingLanding() {
+export default function MBAAgribusinessManagement() {
 
   const [openFaq, setOpenFaq] = useState(0); // first item open by default
 
@@ -32,29 +32,39 @@ export default function ISMRMarketingLanding() {
 
   const faqs = [
     {
-      q: "What is the MBA Finance course in Pune offered by ISMR?",
-      a: "This MBA Finance course in Pune focuses on practical financial decision-making and real-world applications. MBA Finance at ISMR Pune is a 2-year, 4-semester programme. The syllabus is aligned with Savitribai Phule Pune University (SPPU) and supplemented by ISMR's practical application layer covering Excel, financial modelling, and case-based learning."
+      q: "What is an MBA in Agribusiness Management?",
+      a: "The MBA in Agribusiness Management is a two-year postgraduate program that integrates agricultural science with business disciplines, including supply chain management, commodity markets, rural finance, food processing, and agri-policy. The program prepares graduates for leadership roles across agribusiness, agri-tech, food processing,rural banking, commodity trading, and agricultural supply chains."
     },
     {
-      q: "What are the MBA Finance fees at ISMR Pune?",
-      a: "MBA Finance fees at ISMR Pune are approximately ₹2 lakh per year, totalling approximately ₹4 lakh for the complete 2-year programme."
+      q: "Who can apply for an MBA in Agribusiness Management in Pune?",
+      a: "The program is open to graduates from any stream — Agriculture, Science, Commerce, or Engineering — holding a minimum of 50% aggregate marks from a recognised university. Applicants must also hold a valid score from an accepted entrance exam such as MAH-MBA CET, CAT, CMAT, ATMA, or MAT."
     },
     {
-      q: "What is the MBA Finance eligibility in Pune at ISMR?",
-      a: "Bachelor's degree (minimum 3 years after 10+2) from a recognised university, minimum 50% aggregate marks (45% for reserved category candidates from Maharashtra), final-year graduation students eligible with a certificate from their institution, and a valid score in any accepted entrance exam."
+      q: "What is the duration of the MBA Agribusiness Management course?",
+      a: "The Agribusiness Management course in Pune at ISMR is a two-year full-time program structured across four semesters. Each semester progressively builds on the previous one, moving from foundational agri-economics and supply chain principles to advanced topics in commodity risk management, sustainability strategy, and agrientrepreneurship."
     },
     {
-      q: "Why do students fail in MBA Finance placements?",
-      a: "Most candidates can calculate outputs but cannot interpret them into business decisions. Case rounds test this directly — candidates who prepare only on concepts, not interpretation, fail this stage consistently."
+      q: "Is MBA Agribusiness Management suitable for non-agriculture graduates?",
+      a: "Yes. Commerce, Science, and Engineering graduates are fully eligible and regularly pursue this program to build a specialised career in agri-trade, food processing, rural finance, or commodity markets. The curriculum is structured to develop an agricultural context from the ground up for students without prior agri-science backgrounds."
     },
     {
-      q: "Are education loans available for MBA Finance at ISMR Pune?",
-      a: "Yes. Students can avail of education loans through SBI and other nationalised banks. Scholarship assistance is also available through the Maharashtra government for eligible candidates."
+      q: "Is ISMR AICTE-approved for MBA Agribusiness Management?",
+      a: "Yes. ISMR holds full AICTE approval and is affiliated with Savitribai Phule Pune University (SPPU). It also holds DTE and AIMS recognition, ensuring the degree meets all statutory requirements for employment, government recruitment, and further academic pursuits."
     },
     {
-      q: "Is there a separate eligibility requirement to sit for placement/analyst rounds?",
-      a: "All enrolled MBA Finance students are eligible for placement participation; there is no separate academic cutoff for placement rounds beyond regular programme requirements. What determines analyst-track vs backend-track outcomes is preparation, not eligibility — students who complete the dataset-based Excel training, case-analysis practice, and mock placement rounds are better positioned for analyst-round selection.",
-      note: "⚠ CONTENT NEEDED: Draft answer above is written to be directionally safe (no invented cutoffs, attendance %, or backlog rules) but is NOT confirmed ISMR policy — if ISMR does have a formal placement-eligibility criterion (e.g. attendance %, no active backlogs), this answer must be replaced with the real one before publishing."
+      q: "What is the scope of MBA Agribusiness Management in India?",
+      a: "Agribusiness management professionals are in active demand across commodity exchanges, food processing companies, agri-tech startups, and rural finance institutions, FMCG supply chains, and government development agencies. India's organised agri-economy continues to expand, and the shortage of trained management professionals within the sector makes this one of the more stable and opportunity-rich specialisations available today",
+
+    },
+    {
+      q: "What are the MBA Agribusiness Fees at ISMR Pune for 2026?",
+      a: "For accurate and current MBA Agribusiness fees Pune 2026 information, we recommend contacting ISMR's admissions office directly or downloading the program brochure, as fee structures are subject to annual revision and may vary based on category, scholarship eligibility, or government-regulated fee norms under the DTE Maharashtra framework.",
+
+    },
+    {
+      q: "How does an SPPU-affiliated MBA in Agribusiness Management benefit students at ISMR?",
+      a: "SPPU affiliation ensures that the degree awarded by ISMR carries full university recognition accepted by employers, public sector institutions, and postgraduate programs across India. It also means the curriculum, examination standards, and academic processes are governed by one of Maharashtra's most established and respected university frameworks, adding credibility to every credential ISMR graduates hold.",
+
     }
   ];
 
@@ -70,9 +80,9 @@ export default function ISMRMarketingLanding() {
   return (
     <section className="apply-wrapper">
       <SEO
-        title="MBA in Marketing Management in Pune | ISMR B-School"
-        description="Explore MBA in Marketing Management at ISMR Pune with 100% placement assistance, modern curriculum, and global corporate exposure."
-        canonical="https://ismrpune.edu.in/programs/mba-in-marketing-management-in-pune"
+        title="MBA in Agribusiness Management in Pune | ISMR"
+        description="Enroll in MBA in Agribusiness Management in Pune at ISMR. Agri-supply chains, commodity trading, food business management, 100% placement support."
+        canonical="https://ismrpune.edu.in/programs/mba-in-agribusiness-management-pune"
       />
       <style>{`
 
@@ -1045,11 +1055,10 @@ font-size:14px;
 .final-cta-panel p {
   color: #d9e6f2;
 }
-   h1{
+  h1{
       font-size: 20px;
     font-weight: 700;
   }
-
       `}</style>
 
       <section
@@ -1078,7 +1087,7 @@ font-size:14px;
               margin: 0,
             }}
           >
-            MBA in Marketing  <span className="text-warning">Management</span>
+            MBA in Agribusiness  <span className="text-warning">Management</span>
           </span>
           <p
             className="mb-0"
@@ -1089,7 +1098,7 @@ font-size:14px;
             }}
           >
             Courses •{" "}
-            <span className="text-warning">MBA in Marketing Management</span>
+            <span className="text-warning">MBA in Agribusiness  Management</span>
           </p>
         </div>
       </section>
@@ -1098,27 +1107,24 @@ font-size:14px;
       <section className="marketing-section">
         <div className="content-container">
           <div className=" hero-panel">
-            <span className="eyebrow">ISMR PUNE · MBA MARKETING</span>
-            <h1>Build a Job-Ready Marketing Career with Practical Industry Exposure</h1>
+            <span className="eyebrow">ISMR PUNE · AGRI BUSINESS MANAGEMENT</span>
+            <h1>Lead India's Agri-Business Transformation with ISMR</h1>
 
             <div className="two-col-layout">
               <div className="overview-col mt-4">
-                <h2>What is the MBA Marketing Course in Pune?</h2>
+                <h2>What is the Agri Business Management Course in Pune?</h2>
                 <p className="intro-text">
-                  This MBA program at ISMR focuses on real-world marketing
-                  skills through hands-on learning, not just classroom
-                  theory — with internships integrated into the curriculum,
-                  live campaign execution, and industry-aligned training
-                  modules. Ideal for students planning MBA Marketing
-                  admission in Pune for 2026 and looking for better ROI.
+                  India's agriculture sector is evolving fast — from
+                  traditional farming into organised supply chains,
+                  commodity markets, food processing industries, and
+                  agri-tech ventures.
                 </p>
                 <p className="intro-text">
-                  The MBA in Marketing Management in Pune at ISMR follows
-                  the syllabus prescribed by Savitribai Phule Pune
-                  University and is structured under the National Education
-                  Policy 2020 with a credit-based system. It combines
-                  academic learning with practical exposure to prepare
-                  students for real marketing roles.
+                  ISMR prepares you to lead at every level of this
+                  transformation through an SPPU-affiliated academic
+                  framework, industry-integrated learning, and experienced
+                  faculty that brings real agri-business experience into
+                  every classroom.
                 </p>
               </div>
 
@@ -1132,27 +1138,22 @@ font-size:14px;
                       </svg>
                     </span>
                     <div>
-
-                      <span className="facts-subtitle">MBA in Marketing Management, ISMR Pune</span>
-                    </div>
-                  </div>
-
-                  <div className="stat-strip">
-                    <div className="stat-block">
-                      <span className="stat-icon stat-icon--gold">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
-                          <path d="M8.5 12.5l2.3 2.3 4.7-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </span>
-                      <div>
-                        <span className="stat-number">92%</span>
-                        <span className="stat-label">Placement rate — highest among all ISMR specialisations</span>
-                      </div>
+                      {/* <h2 className="facts-title text-white">Quick Facts</h2> */}
+                      <span className="facts-subtitle">Program Snapshot, ISMR Pune</span>
                     </div>
                   </div>
 
                   <ul className="facts-list">
+                    <li className="facts-row">
+                      <span className="facts-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                          <path d="M6 10v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                        </svg>
+                      </span>
+                      <span className="facts-label">Specialisation</span>
+                      <span className="facts-value">Agri Business Management (ABM)</span>
+                    </li>
                     <li className="facts-row">
                       <span className="facts-icon">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1161,7 +1162,7 @@ font-size:14px;
                         </svg>
                       </span>
                       <span className="facts-label">Duration</span>
-                      <span className="facts-value">2 Years</span>
+                      <span className="facts-value">2 Years / 4 Semesters</span>
                     </li>
                     <li className="facts-row">
                       <span className="facts-icon">
@@ -1171,7 +1172,7 @@ font-size:14px;
                         </svg>
                       </span>
                       <span className="facts-label">Affiliation</span>
-                      <span className="facts-value">SPPU-affiliated (NEP 2020 compliant)</span>
+                      <span className="facts-value">Savitribai Phule Pune University (SPPU)</span>
                     </li>
                     <li className="facts-row">
                       <span className="facts-icon">
@@ -1181,25 +1182,45 @@ font-size:14px;
                         </svg>
                       </span>
                       <span className="facts-label">Approval</span>
-                      <span className="facts-value">AICTE Approved</span>
+                      <span className="facts-value">AICTE</span>
                     </li>
                     <li className="facts-row">
                       <span className="facts-icon">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M7 3h7l4 4v14H7z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                          <path d="M9.5 12h5M9.5 15.5h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                          <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" />
+                          <path d="M3 9h18M9 9v11" stroke="currentColor" strokeWidth="1.8" />
                         </svg>
                       </span>
-                      <span className="facts-label">Accepted Exams</span>
-                      <span className="facts-value">MAH-MBA CET, CAT, MAT, CMAT, ATMA, XAT</span>
+                      <span className="facts-label">Learning Format</span>
+                      <span className="facts-value">Case Studies, Field Visits, Live Projects</span>
+                    </li>
+                    <li className="facts-row">
+                      <span className="facts-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                          <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
+                        </svg>
+                      </span>
+                      <span className="facts-label">NAAC</span>
+                      <span className="facts-value">Accredited Institute</span>
+                    </li>
+                    <li className="facts-row">
+                      <span className="facts-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="9" cy="7" r="3" stroke="currentColor" strokeWidth="1.8" />
+                          <path d="M2 20c0-3 3-5.5 7-5.5s7 2.5 7 5.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                          <circle cx="17" cy="8" r="2.3" stroke="currentColor" strokeWidth="1.8" />
+                          <path d="M16.5 14.5c2.5 0.4 4.5 2.3 4.5 4.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                        </svg>
+                      </span>
+                      <span className="facts-label">Intake</span>
+                      <span className="facts-value">120</span>
                     </li>
                   </ul>
-
-
                 </div>
                 {/* <div className="cta-row">
-                  <a className="default-btn" href="tel:9923786079">Speak with Admissions</a>
-                  <a className="default-btn" href="/contact-us">Apply Now 2026</a>
+                  <a className="default-btn" href="#admissions">Speak with Admissions</a>
+                  <a className="default-btn" href="#apply">Apply Now 2026</a>
                 </div> */}
               </div>
             </div>
@@ -1547,79 +1568,17 @@ font-size:14px;
 
           {/* FAQ Panel */}
           <div className=" diff-panel">
-            <span className="eyebrow">CURRICULUM &amp; CORE DIFFERENTIATOR</span>
-            <h2>Specialisation Tracks &amp; ISMR Differentiator</h2>
+            <span className="eyebrow">CURRICULUM &amp; SKILL DEVELOPMENT</span>
+            <h2>MBA HR Syllabus &amp; What You Learn</h2>
 
             <div className="diff-layout">
               <div className="diff-left">
-                <h3 className="diff-col-title">Why Students Choose ISMR Over Other MBA Marketing Colleges in Pune</h3>
+                <h3 className="diff-col-title">MBA Agri Syllabus — Semester-Wise Breakdown</h3>
 
-                <p className="intro-text">
-                  Pune has over 100 colleges offering an MBA with a
-                  marketing specialisation. The difference between them is
-                  not always visible in a brochure — it shows up in how the
-                  program is structured and what students are doing before
-                  final placements.
-                </p>
-
-                <div className="tool-table-wrap">
-                  <div className="tool-row tool-row--head">
-                    <span>Parameter</span>
-                    <span>Most Pune MBA Colleges</span>
-                    <span>ISMR</span>
-                  </div>
-
-                  <div className="tool-row">
-                    <span className="tool-name">Learning approach</span>
-                    <span className="tool-applied">Theory-heavy curriculum</span>
-                    <span className="tool-applied">Execution-based — live campaigns, real assignments</span>
-                  </div>
-
-                  <div className="tool-row">
-                    <span className="tool-name">Internship structure</span>
-                    <span className="tool-applied">End-of-program, often unstructured</span>
-                    <span className="tool-applied">Integrated into the curriculum from early semesters</span>
-                  </div>
-
-                  <div className="tool-row">
-                    <span className="tool-name">Geographic career exposure</span>
-                    <span className="tool-applied">Primarily Pune-city opportunities</span>
-                    <span className="tool-applied">Dual exposure — Pune startup ecosystem</span>
-                  </div>
-
-                  <div className="tool-row">
-                    <span className="tool-name">University affiliation</span>
-                    <span className="tool-applied">Varies — autonomous or affiliated</span>
-                    <span className="tool-applied">SPPU-affiliated, NEP 2020 compliant, AICTE approved</span>
-                  </div>
-
-                  <div className="tool-row">
-                    <span className="tool-name">Marketing placement rate</span>
-                    <span className="tool-applied">Not publicly disclosed by most colleges</span>
-                    <span className="tool-applied">92% — 2024–25 batch, highest among all ISMR specialisations</span>
-                  </div>
-                </div>
-
-                <p className="intro-text diff-closing mt-4">
-                  ISMR is among the Top MBA colleges in Pune. It is a
-                  focused institute where marketing as a specialisation
-                  consistently outperforms other streams in placement
-                  outcomes — and where the program structure is built for
-                  students who want a job, not just a degree.
-                </p>
-
-                {/* <a href="/contact-us" className="default-btn diff-cta">
-                  Apply Now →
-                </a> */}
-              </div>
-
-              <div className="diff-right">
-                <h3 className="diff-col-title">MBA Marketing Syllabus — Semester-Wise Breakdown</h3>
-
-                <div className="tool-table-wrap">
+               <div className="tool-table-wrap">
                   <div className="tool-row tool-row--head">
                     <span>Semester</span>
-                    <span>Key Subjects Covered</span>
+                    <span>Key MBA Agribusiness Papers</span>
                   </div>
 
                   <div className="tool-row">
@@ -1633,9 +1592,9 @@ font-size:14px;
                       Semester 1
                     </span>
                     <span className="tool-applied">
-                      Principles of Management, Managerial Economics,
-                      Financial Accounting, Business Communication,
-                      Organizational Behavior, Quantitative Techniques
+                      Principles of Management, Organizational Behavior,
+                      Managerial Economics, Accounting for Managers, Business
+                      Communication, Quantitative Techniques
                     </span>
                   </div>
 
@@ -1650,9 +1609,9 @@ font-size:14px;
                       Semester 2
                     </span>
                     <span className="tool-applied">
-                      Marketing Management, Human Resource Management,
-                      Financial Management, Operations Management,
-                      Business Research Methods, Business Statistics
+                      Agricultural Economics, Marketing Management, Financial
+                      Management, Farm Management, Business Research Methods,
+                      Management Information Systems
                     </span>
                   </div>
 
@@ -1667,9 +1626,9 @@ font-size:14px;
                       Semester 3
                     </span>
                     <span className="tool-applied">
-                      Consumer Behavior, Brand Management, Sales and
-                      Distribution Management, Advertising Management,
-                      Market Research, Digital Marketing
+                      Agribusiness Marketing, Agricultural Finance, Supply
+                      Chain Management in Agribusiness, Agri-Input Marketing,
+                      Rural Marketing, Food Processing and Agro-Industries
                     </span>
                   </div>
 
@@ -1684,12 +1643,296 @@ font-size:14px;
                       Semester 4
                     </span>
                     <span className="tool-applied">
-                      Strategic Marketing Management, Marketing Analytics,
-                      Retail Management, International Marketing, Services
-                      Marketing, Project Work/Internship
+                      Agricultural Policy and Trade, International Agribusiness,
+                      Commodity Markets and Trading, Agripreneurship
+                      Development, Agri-Business Analytics, Project
+                      Work/Internship
                     </span>
                   </div>
                 </div>
+
+                <h3 className="diff-col-title mt-3">Practical Components</h3>
+                <ul className="method-list method-list--styled">
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Summer Internship
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Case Studies
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Industry Projects
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    HR Workshops
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Seminars
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Research Assignments
+                  </li>
+                </ul>
+
+                <h3 className="diff-col-title mt-4">Skill Development Focus</h3>
+                <ul className="method-list method-list--styled">
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Communication
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Leadership
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Negotiation
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Conflict Resolution
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Team Management
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Strategic Decision-Making
+                  </li>
+                </ul>
+              </div>
+
+              <div className="diff-right">
+                <h3 className="diff-col-title">Core Subjects &amp; Industry Tools</h3>
+                <p className="intro-text intro-text--strong">Core Subjects at a Glance</p>
+
+                <div className="app-card">
+                  <div className="app-row">
+                    <span className="app-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="8" width="14" height="9" rx="1.5" stroke="currentColor" strokeWidth="1.8" />
+                        <path d="M17 11h3l1.5 2.5V17H17" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                        <circle cx="7.5" cy="18.5" r="1.5" stroke="currentColor" strokeWidth="1.8" />
+                        <circle cx="17.5" cy="18.5" r="1.5" stroke="currentColor" strokeWidth="1.8" />
+                      </svg>
+                    </span>
+                    <div className="app-text">
+                      <span className="app-skill">1. Agri-Supply Chain &amp; Logistics</span>
+                      <span className="app-task">
+                        Learn how produce moves from farm gate to end
+                        consumer, covering procurement, cold chain
+                        infrastructure, warehousing, and last-mile
+                        distribution. Focus is on reducing post-harvest
+                        losses and improving margin realisation.
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="app-row">
+                    <span className="app-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 19h16M7 19V9M12 19V5M17 19v7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    <div className="app-text">
+                      <span className="app-skill">2. Agricultural Marketing &amp; Trade</span>
+                      <span className="app-task">
+                        Understand commodity branding, mandi-to-retail
+                        transitions, export documentation, and
+                        international agri-trade policy. Build market
+                        linkage strategies that deliver real value to
+                        producers.
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="app-row">
+                    <span className="app-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 15l5-5 4 4 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M14 7h6v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    <div className="app-text">
+                      <span className="app-skill">3. Rural Finance &amp; Microfinance</span>
+                      <span className="app-task">
+                        Study NABARD credit programmes, Kisan Credit Card
+                        structures, SHG models, and MFI lending frameworks.
+                        Learn to assess farm enterprise viability and design
+                        rural financial products for smallholder farmers.
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="app-row">
+                    <span className="app-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
+                        <path d="M8.5 12.5l2.3 2.3 4.7-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    <div className="app-text">
+                      <span className="app-skill">4. Commodity Markets &amp; Risk Management</span>
+                      <span className="app-task">
+                        Develop working knowledge of NCDEX and MCX
+                        exchanges, futures and options in agri-commodities,
+                        and enterprise-level hedging strategies to manage
+                        the price volatility inherent in agricultural
+                        business.
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="app-row">
+                    <span className="app-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    <div className="app-text">
+                      <span className="app-skill">5. Food Processing &amp; Value Chain Management</span>
+                      <span className="app-task">
+                        Explore how raw produce becomes consumer-ready
+                        products — with focus on FSSAI compliance, value
+                        addition economics, food safety systems, and retail
+                        integration in India's growing food processing
+                        sector.
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="app-row">
+                    <span className="app-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 3h7l4 4v14H7z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                        <path d="M9.5 12h5M9.5 15.5h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                      </svg>
+                    </span>
+                    <div className="app-text">
+                      <span className="app-skill">6. Agri-Policy, Regulation &amp; Sustainability</span>
+                      <span className="app-task">
+                        Examine APMC structures, MSP mechanisms, contract
+                        farming regulations, and FPO frameworks. Understand
+                        how climate-smart agriculture and global
+                        sustainability mandates are reshaping agri-business
+                        strategy.
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="app-row">
+                    <span className="app-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" />
+                        <path d="M3 9h18M9 9v11" stroke="currentColor" strokeWidth="1.8" />
+                      </svg>
+                    </span>
+                    <div className="app-text">
+                      <span className="app-skill">7. Farm Business Management</span>
+                      <span className="app-task">
+                        Apply core management principles — financial
+                        planning, operational efficiency, cash flow
+                        management — directly to farm enterprises. Build
+                        business plans suited to both smallholder contexts
+                        and commercial farming operations.
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="app-row">
+                    <span className="app-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
+                        <path d="M12 7v5l3.5 2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                      </svg>
+                    </span>
+                    <div className="app-text">
+                      <span className="app-skill">8. Agri-Entrepreneurship &amp; Startup Ecosystem</span>
+                      <span className="app-task">
+                        Explore FPO structures, agri-tech incubators, and
+                        government startup schemes. Identify unmet market
+                        opportunities and develop pitch-ready agri-business
+                        concepts capable of attracting institutional
+                        funding.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <h3 className="diff-col-title">Applied Tools</h3>
+                <p className="intro-text">
+                  Students work with tools actively deployed across the
+                  industry, including ERP systems used in food processing
+                  operations, GIS-based crop mapping tools for precision
+                  agriculture, and commodity risk models used on NCDEX and
+                  MCX. This operational fluency is what separates ISMR
+                  graduates from candidates with only classroom training.
+                </p>
+                <p className="intro-text diff-closing">
+                  Learning goes beyond the classroom. Students visit
+                  agricultural mandis, food processing units, and rural
+                  cooperatives, grounding theory in real operational
+                  environments before graduation.
+                </p>
+
+                {/* <a href="/Contactus" className="default-btn diff-cta">
+                  Apply Now →
+                </a> */}
               </div>
             </div>
           </div>
@@ -1902,20 +2145,14 @@ font-size:14px;
 
           {/* Top Recruiters Panel */}
           <div className="panel diff-panel">
-            <span className="eyebrow">CURRICULUM &amp; CAREER OPPORTUNITIES</span>
-            <h2>Curriculum &amp; Career Opportunities</h2>
+            <span className="eyebrow">ELIGIBILITY &amp; ADMISSION SUPPORT</span>
+            <h2>Eligibility &amp; Admission Support</h2>
 
             <div className="diff-layout">
               <div className="diff-left">
-                <h3 className="diff-col-title">Subjects &amp; Practical Exposure</h3>
+                <h3 className="diff-col-title">Eligibility Criteria</h3>
 
-                <p className="intro-text intro-text--strong">
-                  What subjects are covered in this MBA Marketing program in Pune?
-                </p>
-                <p className="intro-text">
-                  The program includes a mix of core business and
-                  marketing-focused subjects:
-                </p>
+                <p className="intro-text intro-text--strong"><b>Academic Qualification</b></p>
                 <ul className="method-list method-list--styled">
                   <li>
                     <span className="method-icon">
@@ -1923,7 +2160,7 @@ font-size:14px;
                         <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
-                    MBA marketing subjects in Pune: consumer behaviour, branding, digital marketing
+                    Bachelor's degree in any stream from a recognised university
                   </li>
                   <li>
                     <span className="method-icon">
@@ -1931,7 +2168,7 @@ font-size:14px;
                         <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
-                    Research components: field projects and business research
+                    Priority for: Agriculture, Horticulture, Food Technology, Dairy, Veterinary, Fisheries graduates
                   </li>
                   <li>
                     <span className="method-icon">
@@ -1939,17 +2176,11 @@ font-size:14px;
                         <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
-                    Internship integrated into the curriculum
+                    Commerce, Science &amp; Engineering graduates fully eligible
                   </li>
                 </ul>
 
-                <p className="intro-text intro-text--strong mt-4">
-                  How does ISMR provide practical learning in MBA Marketing?
-                </p>
-                <p className="intro-text">
-                  The MBA Marketing program in Pune at ISMR focuses on
-                  hands-on learning through:
-                </p>
+                <p className="intro-text intro-text--strong mt-3"><b>Minimum Marks</b></p>
                 <ul className="method-list method-list--styled">
                   <li>
                     <span className="method-icon">
@@ -1957,7 +2188,7 @@ font-size:14px;
                         <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
-                    Live marketing assignments
+                    General category: 50% aggregate at undergraduate level
                   </li>
                   <li>
                     <span className="method-icon">
@@ -1965,151 +2196,366 @@ font-size:14px;
                         <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
-                    Case-based learning using real business scenarios
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Campaign planning and execution exposure
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Internship-based learning
+                    SC / ST / OBC / PwD: 45% aggregate (as per Maharashtra state norms)
                   </li>
                 </ul>
 
-                <p className="intro-text diff-closing mt-3">
-                  This ensures students develop job-ready marketing skills,
-                  not just theoretical knowledge.
-                </p>
+                <p className="intro-text intro-text--strong mt-3"><b>Entrance Exams Accepted</b></p>
+                <ul className="method-list method-list--styled">
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    MAH-MBA CET (mandatory for Maharashtra domicile — CAP Round)
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    CAT / CMAT / ATMA / MAT (also accepted)
+                  </li>
+                </ul>
+
+                <p className="intro-text intro-text--strong mt-3"><b>Work Experience</b></p>
+                <ul className="method-list method-list--styled">
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Not mandatory
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Relevant experience in agri-inputs, rural banking, food processing, or agri-tech is an advantage during selection
+                  </li>
+                </ul>
               </div>
 
               <div className="diff-right">
-                <h3 className="diff-col-title">Career Outcomes &amp; Roles</h3>
+                <h3 className="diff-col-title">ISMR Enrolment Support</h3>
 
-                <p className="intro-text intro-text--strong">Key Roles You Can Explore</p>
-
-                <div className="tool-table-wrap">
-                  <div className="tool-row tool-row--head">
-                    <span>Role</span>
-                    <span>What You Will Do</span>
-                    <span>Salary Range</span>
-                    <span>Career Growth</span>
-                  </div>
-
-                  <div className="tool-row">
-                    <span className="tool-name">Digital Marketing Executive</span>
-                    <span className="tool-applied">Handle SEO, paid ads, social media campaigns, and performance tracking</span>
-                    <span className="tool-applied">₹3–6 LPA</span>
-                    <span className="tool-applied">Performance Marketing Manager → Digital Head</span>
-                  </div>
-
-                  <div className="tool-row">
-                    <span className="tool-name">Sales Manager</span>
-                    <span className="tool-applied">Focus on revenue generation, client acquisition, and managing sales teams</span>
-                    <span className="tool-applied">₹4–7 LPA + incentives</span>
-                    <span className="tool-applied">Regional Manager → Business Head</span>
-                  </div>
-
-                  <div className="tool-row">
-                    <span className="tool-name">Brand Manager</span>
-                    <span className="tool-applied">Work on brand positioning, campaign planning, and customer perception</span>
-                    <span className="tool-applied">₹5–8 LPA</span>
-                    <span className="tool-applied">Senior Brand Manager → Marketing Director</span>
-                  </div>
-
-                  <div className="tool-row">
-                    <span className="tool-name">Market Research Analyst</span>
-                    <span className="tool-applied">Analyze customer data, market trends, and competitor strategies</span>
-                    <span className="tool-applied">₹3–6 LPA</span>
-                    <span className="tool-applied">Senior Analyst → Strategy Consultant</span>
-                  </div>
-
-                  <div className="tool-row">
-                    <span className="tool-name">Product Marketing Executive</span>
-                    <span className="tool-applied">Work on product positioning, go-to-market strategies, and launches</span>
-                    <span className="tool-applied">₹4–7 LPA</span>
-                    <span className="tool-applied">Product Marketing Manager → Product Head</span>
-                  </div>
-
-                  <div className="tool-row">
-                    <span className="tool-name">Social Media Manager</span>
-                    <span className="tool-applied">Manage brand presence, content strategy, and audience engagement</span>
-                    <span className="tool-applied">₹3–5 LPA</span>
-                    <span className="tool-applied">Social Media Lead → Digital Marketing Manager</span>
-                  </div>
-                </div>
-
-                <p className="intro-text intro-text--strong mt-3">Industry Opportunities in Pune</p>
-                <ul className="method-list method-list--styled">
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Strong demand in IT companies, startups, and digital agencies
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Growing opportunities in FMCG, retail, and D2C brands
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Stable roles in the industrial and B2B sectors across Pune
-                  </li>
-                </ul>
-
-                <p className="intro-text intro-text--strong mt-4">What Actually Determines Your Career Growth</p>
-                <p className="intro-text">Your career after an MBA in Marketing is influenced by:</p>
-                <ul className="method-list method-list--styled">
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Internship experience — practical exposure to real work environments
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Skill development — tools, analytics, campaign execution
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Industry exposure — understanding different business models and markets
-                  </li>
-                </ul>
-
-                <p className="intro-text diff-closing mt-3">
-                  Focusing on these factors helps you move faster from
-                  entry-level roles to managerial and leadership positions.
+                <p className="intro-text">
+                  The DTE Maharashtra CAP Round process — CET registration,
+                  document verification, preference filling, and seat
+                  acceptance — can be complex for first-time applicants.
                 </p>
+
+                <p className="intro-text intro-text--strong">
+                  ISMR's admissions counseling team provides:
+                </p>
+                <ul className="method-list method-list--styled">
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Entrance exam identification and registration guidance
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Eligibility documentation support
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Error-free enrollment support
+                  </li>
+                </ul>
+
+                <p className="intro-text mt-3">
+                  Students seeking MBA in Agribusiness Management admission
+                  in Pune for the 2026 academic session receive end-to-end
+                  support from ISMR's admissions counselling team, including
+                  entrance exam guidance, eligibility verification,
+                  documentation assistance, and enrolment support.
+                </p>
+
+                <p className="intro-text diff-closing">
+                  With SPPU affiliation, AICTE approval, industry-focused
+                  learning, and dedicated admission assistance, ISMR helps
+                  students move from admission confusion to career clarity —
+                  one guided step at a time.
+                </p>
+
+                {/* <a href="/Contactus" className="default-btn diff-cta">
+                  Apply Now →
+                </a> */}
               </div>
             </div>
+          </div>
+
+          <div className="panel diff-panel mt-4">
+            <span className="eyebrow">WHO SHOULD PURSUE THIS COURSE</span>
+            <h2>Who Should Pursue This Course</h2>
+
+            <p className="intro-text">
+              Not every MBA is built for every ambition. This program is
+              specifically designed for students and professionals who want
+              to operate at the intersection of agriculture and business
+              leadership. Here's who benefits most:
+            </p>
+
+            <div className="app-card">
+              <div className="app-row">
+                <span className="app-icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="8" r="3.2" stroke="currentColor" strokeWidth="1.8" />
+                    <path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                  </svg>
+                </span>
+                <div className="app-text">
+                  <span className="app-skill">Agriculture &amp; Science Graduates</span>
+                  <span className="app-task">
+                    Your technical foundation is your biggest advantage —
+                    this program adds the business strategy layer on top of
+                    it. You graduate as the rare professional who
+                    understands both crop science and corporate
+                    decision-making, making you a priority hire for
+                    agri-input firms, consulting companies, and commodity
+                    trading houses.
+                  </span>
+                </div>
+              </div>
+
+              <div className="app-row">
+                <span className="app-icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 19h16M7 19V9M12 19V5M17 19v7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <div className="app-text">
+                  <span className="app-skill">Commerce &amp; Business Graduates</span>
+                  <span className="app-task">
+                    Financial literacy alone isn't enough to crack
+                    agri-commodity markets or rural supply chains. This
+                    program gives you the sector-specific grounding — APMC
+                    trade structures, commodity pricing mechanics,
+                    agri-supply chain logic that no general MBA covers.
+                  </span>
+                </div>
+              </div>
+
+              <div className="app-row">
+                <span className="app-icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" />
+                    <path d="M3 9h18M9 9v11" stroke="currentColor" strokeWidth="1.8" />
+                  </svg>
+                </span>
+                <div className="app-text">
+                  <span className="app-skill">Working Professionals in Agri, Seed, Fertilizer &amp; FMCG Firms</span>
+                  <span className="app-task">
+                    Already working in the sector but hitting a ceiling
+                    without formal management credentials? This curriculum
+                    addresses the strategic and operational challenges you
+                    face daily — making every module immediately applicable
+                    to your current role and your next one.
+                  </span>
+                </div>
+              </div>
+
+              <div className="app-row">
+                <span className="app-icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 15l5-5 4 4 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M14 7h6v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <div className="app-text">
+                  <span className="app-skill">Rural Economy &amp; Development Professionals</span>
+                  <span className="app-task">
+                    If your work touches NABARD programmes, FPOs, rural
+                    cooperatives, or microfinance institutions — this
+                    program sharpens both the financial analysis and policy
+                    understanding you need to design interventions that
+                    create real, measurable rural impact.
+                  </span>
+                </div>
+              </div>
+
+              <div className="app-row">
+                <span className="app-icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                    <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <div className="app-text">
+                  <span className="app-skill">Agri-Entrepreneurs &amp; Family Farm Business Members</span>
+                  <span className="app-task">
+                    Running or inheriting a farm enterprise, agri-input
+                    dealership, or rural processing unit? This program
+                    replaces guesswork with a framework that covers
+                    data-driven planning, enterprise financial management,
+                    and market linkage strategies that help traditional
+                    agri-businesses scale confidently.
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* <a href="/Contactus" className="default-btn diff-cta">
+              Apply Now →
+            </a> */}
+          </div>
+
+          <div className="panel diff-panel mt-3">
+            <span className="eyebrow">PROGRAM BENEFITS &amp; LOCATION ADVANTAGE</span>
+            <h2>Program Benefits &amp; Location Advantage</h2>
+
+            <h3 className="diff-col-title">Career Benefits</h3>
+            <div className="app-card">
+              <div className="app-row">
+                <span className="app-icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 15l5-5 4 4 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M14 7h6v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <div className="app-text">
+                  <span className="app-skill">1. Entering a Sector With Structural Long-Term Demand</span>
+                  <span className="app-task">
+                    Agriculture is one of India's largest economic
+                    contributors, yet organised management talent within
+                    the sector remains significantly scarce relative to its
+                    scale. This gap creates sustained hiring demand across
+                    commodity firms, food processing companies, agri-tech
+                    ventures, and rural financial institutions for
+                    precisely the kind of professional this program
+                    produces.
+                  </span>
+                </div>
+              </div>
+
+              <div className="app-row">
+                <span className="app-icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
+                    <path d="M8.5 12.5l2.3 2.3 4.7-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <div className="app-text">
+                  <span className="app-skill">2. Career Advantage Over General MBA Graduates</span>
+                  <span className="app-task">
+                    A general MBA graduate entering agri-sector roles lacks
+                    contextual fluency — commodity price cycles, mandi
+                    regulation, and rural credit infrastructure are
+                    invisible to them. ISMR MBA Agribusiness Pune graduates
+                    enter as specialists, translating directly into faster
+                    role progression and access to opportunities that
+                    generalist candidates cannot compete for.
+                  </span>
+                </div>
+              </div>
+
+              <div className="app-row">
+                <span className="app-icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                    <path d="M6 10v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <div className="app-text">
+                  <span className="app-skill">3. Cross-Sector Career Applicability</span>
+                  <span className="app-task">
+                    This degree opens doors well beyond traditional
+                    agriculture; graduates move into FMCG supply chains,
+                    agri-tech startups, cooperative banking, commodity
+                    brokerage, rural microfinance, export-import firms, and
+                    international development organisations. Few
+                    management specialisations offer this breadth of
+                    sectoral mobility.
+                  </span>
+                </div>
+              </div>
+
+              <div className="app-row">
+                <span className="app-icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                    <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <div className="app-text">
+                  <span className="app-skill">4. A Rare Combination of Technical and Strategic Competence</span>
+                  <span className="app-task">
+                    Most business professionals lack domain knowledge in
+                    agriculture. Most agricultural professionals lack
+                    strategic business skills. This program builds both —
+                    simultaneously. Employers across agri-input firms, food
+                    processing conglomerates, and rural development
+                    institutions actively seek this combination because it
+                    remains genuinely rare.
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/*
+              RELOCATED: Point 3 from the original "Benefits" list
+              ("Hands-On Exposure to Industry Tools and Platforms") has
+              been moved to Section 4 — Core Subjects & Industry Tools,
+              where the flow calls for applied-tools content. The list
+              above has been renumbered accordingly.
+            */}
+
+            <h3 className="diff-col-title">Location Advantage</h3>
+            <p className="intro-text diff-closing">
+              Studying in Pune provides access to Maharashtra's major
+              agri-industrial corridors, including Nashik's horticulture
+              and export clusters, Sangli's food processing ecosystem,
+              Kolhapur's cooperative sector, and Pune's growing agri-tech
+              industry. This proximity creates valuable opportunities for
+              internships, field visits, live projects, and industry
+              interaction throughout the program.
+            </p>
+
+            {/* <a href="/Contactus" className="default-btn diff-cta">
+              Apply Now →
+            </a> */}
+          </div>
+
+          <div className="panel diff-panel mt-4">
+            <span className="eyebrow">INDUSTRY COLLABORATIONS &amp; RECRUITERS</span>
+            <h2>Industry Collaborations &amp; Recruiters</h2>
+
+            <p className="intro-text">
+              Agribusiness management professionals are in active demand
+              across commodity exchanges, food processing companies,
+              agri-tech startups, and rural finance institutions, FMCG
+              supply chains, and government development agencies. India's
+              organised agri-economy continues to expand, and the shortage
+              of trained management professionals within the sector makes
+              this one of the more stable and opportunity-rich
+              specialisations available today.
+            </p>
+
+            {/*
+              CONTENT GAP: Unlike the Marketing and Pharma page docs, this
+              content doc never names specific recruiting companies — only
+              sector categories. The paragraph above (from FAQ answer 6) is
+              the closest available copy. Actual recruiter names/logos
+              still need to be sourced from the client before this section
+              can go live.
+            */}
           </div>
           <style jsx>{`
                 .gap-panel {
@@ -2244,211 +2690,43 @@ font-size:14px;
             `}</style>
 
           {/* Salary Panel */}
-          <div className=" curr-panel mt-4">
-            <span className="eyebrow">FEES &amp; ADMISSION</span>
-            <h2>Program Fees &amp; Admission Process</h2>
+          <div className="gt-wrap">
 
-            <h3 className="curr-subhead">Are the MBA Marketing course fees in Pune worth it at ISMR?</h3>
+            {/* LEFT: Get in Touch / Admission Form */}
+            {/* <div className="gt-card">
+                                <h2> Take the Next Step — MBA Finance Admission 2026</h2>
 
-            <p className="intro-text">
-              When evaluating MBA Marketing course fees in Pune, students
-              should look beyond brand value and focus on outcomes:
-            </p>
+                                <ISMRFormModal></ISMRFormModal>
 
-            <ul className="method-list method-list--styled">
-              <li>
-                <span className="method-icon">
-                  <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </span>
-                Placement opportunities
-              </li>
-              <li>
-                <span className="method-icon">
-                  <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </span>
-                Skill development
-              </li>
-              <li>
-                <span className="method-icon">
-                  <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </span>
-                Internship exposure
-              </li>
-            </ul>
+                            </div> */}
 
-            <p className="intro-text mt-3">
-              At ISMR, the focus is on ensuring that your investment leads to
-              real employability and career growth, not just degree
-              completion.
-            </p>
+            {/* RIGHT: FAQ Accordion */}
+            <div className="gt-card">
+              <h2>13. Frequently Asked Questions</h2>
 
-            <h3 className="curr-subhead">MBA Marketing Admission 2026 Pune — ISMR Eligibility &amp; Process</h3>
-            <p className="intro-text">
-              The following are the admission process details and eligibility
-              criteria.
-            </p>
-
-            <div className="curr-layout">
-              <div className="curr-left">
-                <h3 className="curr-col-title">Eligibility Criteria</h3>
-
-                <div className="tool-table-wrap">
-                  <div className="tool-row tool-row--head">
-                    <span>Parameter</span>
-                    <span>Requirement</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">Minimum Qualification</span>
-                    <span className="tool-applied">Graduate in any discipline from a recognised university</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">Minimum Marks</span>
-                    <span className="tool-applied">50% aggregate (45% for reserved category candidates)</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">Entrance Exam Accepted</span>
-                    <span className="tool-applied">MAH-MBA CET / CAT / MAT / CMAT / ATMA / XAT</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">Affiliation</span>
-                    <span className="tool-applied">SPPU-affiliated — admission follows CET Maharashtra norms</span>
-                  </div>
+              {faqs.map((item, idx) => (
+                <div className="gt-acc-item" key={idx}>
+                  <button
+                    className="gt-acc-question"
+                    type="button"
+                    onClick={() => setOpenIndex(openIndex === idx ? -1 : idx)}
+                  >
+                    <span>{item.q}</span>
+                    <span className="gt-acc-icon">{openIndex === idx ? "−" : "+"}</span>
+                  </button>
+                  {openIndex === idx && (
+                    <div className="gt-acc-answer">
+                      {item.a}
+                      {item.note && <div className="gt-acc-note">{item.note}</div>}
+                    </div>
+                  )}
                 </div>
-
-                <p className="curr-right-note mt-3">
-                  Final-year graduation students are eligible to apply
-                  provisionally.
-                </p>
-              </div>
-
-              <div className="curr-right">
-                <h3 className="curr-col-title">Admission Process — Step by Step</h3>
-
-                <div className="app-card">
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="8" r="3.2" stroke="currentColor" strokeWidth="1.8" />
-                        <path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">1. Profile Evaluation (Foundation Step)</span>
-                      <span className="app-task">
-                        ISMR evaluates your academic background, entrance exam
-                        score, and career goals to ensure your eligibility and
-                        clarify your goals before admission.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">2. Eligibility-Based Selection Process</span>
-                      <span className="app-task">
-                        Admission is based on alignment between your profile
-                        and the program's requirements — ensuring that
-                        students enter with clear expectations.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 3h7l4 4v14H7z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                        <path d="M9.5 12h5M9.5 15.5h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">3. Application &amp; Documentation Support</span>
-                      <span className="app-task">
-                        ISMR ensures your MBA Marketing Admission 2026 Pune
-                        process is complete and error-free.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">4. Final Admission &amp; Seat Confirmation</span>
-                      <span className="app-task">
-                        Admission is confirmed through eligibility
-                        verification, interaction (if applicable), and fee
-                        submission.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <p className="curr-closing">
-                  MBA Marketing Admission 2026 at ISMR in Pune is limited due
-                  to a fixed intake capacity.
-                </p>
-
-                {/* <a href="/Contactus" className="default-btn curr-cta">
-                  Apply Now →
-                </a> */}
-              </div>
-            </div>
-          </div>
-
-          <div className="panel recruiters-panel mt-4">
-            <span className="eyebrow">INDUSTRY COLLABORATIONS</span>
-            <h2>Industry Collaborations &amp; Top Recruiters</h2>
-
-            <h3 className="curr-subhead mt-4">Where MBA Marketing Graduates from ISMR Get Placed</h3>
-
-            <div className="tool-table-wrap">
-              <div className="tool-row tool-row--head">
-                <span>Company Category</span>
-                <span>Top Recruiters</span>
-              </div>
-              <div className="tool-row">
-                <span className="tool-name">FMCG &amp; Consumer Brands</span>
-                <span className="tool-applied">
-                  Hindustan Unilever, ITC, Nestlé India, Dabur, Marico,
-                  Britannia, P&amp;G, Godrej Consumer Products, Tata Consumer
-                  Products
-                </span>
-              </div>
-              <div className="tool-row">
-                <span className="tool-name">Retail &amp; E-commerce</span>
-                <span className="tool-applied">Reliance Retail, Amazon, Flipkart</span>
-              </div>
-              <div className="tool-row">
-                <span className="tool-name">Beverages</span>
-                <span className="tool-applied">Coca-Cola India, PepsiCo India</span>
-              </div>
-              <div className="tool-row">
-                <span className="tool-name">Paints &amp; Coatings</span>
-                <span className="tool-applied">Asian Paints</span>
-              </div>
+              ))}
             </div>
 
-            {/*
-              CONTENT GAP: Flow calls for recruiter logos in this section,
-              which is a design asset, not written copy — flag to the
-              design team separately.
-            */}
           </div>
+
+
 
           <style jsx>{`
                 .curr-panel {
@@ -2849,87 +3127,7 @@ font-size:14px;
   }
 `}</style>
 
-            <div className="ar-wrap">
 
-              {/* LEFT: Placements & Industry Exposure */}
-              <div className="ar-card">
-                <h2>Placements &amp; Industry Exposure</h2>
-                <p className="ar-intro">
-                  Why ISMR ranks among the Top MBA Marketing colleges in Pune
-                  for placement outcomes.
-                </p>
-
-                <div className="ar-subhead">MBA Marketing Placements at ISMR Pune</div>
-                <p className="ar-intro">
-                  A common concern students have is: "Will I actually get
-                  placed after the MBA?"
-                </p>
-                <p className="ar-intro">
-                  The answer is yes. 92% of MBA Marketing students from the
-                  2024–25 batch were placed — the highest placement rate
-                  across all MBA specialisations at ISMR.
-                </p>
-                <p className="ar-intro">
-                  This is not a blanket "placement assistance" claim. It
-                  reflects students securing roles in branding, sales,
-                  digital marketing, and B2B marketing across national-level
-                  companies.
-                </p>
-
-                <div className="ar-subhead">How ISMR Strengthens Placement Outcomes</div>
-                <div className="ar-table-wrap">
-                  <table className="ar-table">
-                    <thead>
-                      <tr>
-                        <th style={{ borderTopLeftRadius: "10px" }}>Focus Area</th>
-                        <th style={{ borderTopRightRadius: "10px" }}>What It Means for You</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td className="ar-analyst-col">Internship-Driven Learning</td>
-                        <td>You gain hands-on experience before final placements, reducing the fresher gap</td>
-                      </tr>
-                      <tr>
-                        <td className="ar-analyst-col">Skill-Based Training</td>
-                        <td>You learn skills aligned with real roles like digital marketing, sales, and branding</td>
-                      </tr>
-                      <tr>
-                        <td className="ar-analyst-col">Continuous Preparation</td>
-                        <td>You are trained for interviews, communication, and job expectations throughout the program</td>
-                      </tr>
-                      <tr>
-                        <td className="ar-analyst-col">Multi-Industry Exposure</td>
-                        <td>You get access to opportunities across startups, agencies, and industrial sectors</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              {/* RIGHT: Who Should Choose ISMR */}
-              <div className="ar-card">
-                <h2>Who Should Choose ISMR (Target Audience)</h2>
-                <p className="ar-intro">
-                  ISMR is ideal for students seeking a career-focused MBA
-                  with practical exposure, long-term growth, and strong ROI.
-                </p>
-
-                <div className="ar-steps ar-steps--list">
-                  <span className="ar-step">You want a career in marketing, not just an MBA degree</span>
-                  <span className="ar-step">You want to build a long-term career, not just secure a job</span>
-                  <span className="ar-step">You prefer practical exposure over theory-heavy learning</span>
-                  <span className="ar-step">You are targeting placements in Pune</span>
-                  <span className="ar-step">You are looking for ROI-focused education</span>
-                </div>
-
-                <p className="ar-callout">
-                  Not ideal if you only want a degree without focusing on
-                  outcomes.
-                </p>
-              </div>
-
-            </div>
           </>
           {/* Analyst vs Backend Panel */}
 
@@ -3268,7 +3466,7 @@ font-size:14px;
           <>
             <style>{`
                 .gt-wrap {
-                    display: grid;
+                    // display: grid;
                     grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
                     gap: 28px;
                     align-items: start;
@@ -3419,7 +3617,7 @@ font-size:14px;
             `}</style>
 
 
-            <div className="">
+            <div className="pb-4 pt-3">
               <div className="">
                 <marquee direction="left" behavior="alternate" scrollamount="6">
                   <div className="logo-marquee-item">

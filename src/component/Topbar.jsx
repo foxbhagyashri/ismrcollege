@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./TopHeader.css";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import ContactForm from "./form/ContactForm";
+import ContactForm from "./forms/ContactForm";
 import { Link } from "react-router-dom";
-import ISMRFormModal from "./form/ISMRFormModal";
+import ISMRFormModal from "./forms/ISMRFormModal";
 
 const TopHeader = () => {
     const [showModal, setShowModal] = useState(false);
@@ -85,7 +85,7 @@ const TopHeader = () => {
                                 {open && (
                                     <ul className="notice-menu">
                                         <li>
-                                            <Link to="/notices/Admissions">
+                                            <Link to="/notices/AdmissionNotice">
                                                 ADMISSIONS
                                             </Link>
                                         </li>

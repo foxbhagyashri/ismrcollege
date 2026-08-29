@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import Faq from "../../Faq";
 
-import ContactForm from "../../form/ContactForm";
-import Howtoaplydownoadform from "../../form/Howtoaplydownoadform";
+import ContactForm from "../../forms/ContactForm";
+import Howtoaplydownoadform from "../../forms/HowToApplyDownloadForm";
 import brochurePdf from "/ISMR Brochure.pdf"; // Add your PDF in assets
-import ISMRFormModal from "../../form/ISMRFormModal";
+import ISMRFormModal from "../../forms/ISMRFormModal";
 import britaniaLogo from "../../../assets/Homeimg/britania.png";
 import aisheLogo from "../../../assets/Homeimg/AISE.png";
 import allstateLogo from "../../../assets/Homeimg/allstate.png";
@@ -16,7 +16,7 @@ import cognizantLogo from "../../../assets/Homeimg/Cognizant-Logo.png";
 import learningRoutesLogo from "../../../assets/Homeimg/Comp1.png";
 import SEO from "../../SEO";
 
-export default function OperationSupplyChainManagement() {
+export default function ISMRMarketingLanding() {
 
   const [openFaq, setOpenFaq] = useState(0); // first item open by default
 
@@ -70,9 +70,9 @@ export default function OperationSupplyChainManagement() {
   return (
     <section className="apply-wrapper">
       <SEO
-        title="MBA in Operations & Supply Chain Management in Pune | ISMR"
-        description="Study MBA in Operations and Supply Chain Management in Pune at ISMR. Logistics, procurement, industry 4.0 training, and top placements."
-        canonical="https://ismrpune.edu.in/programs/mba-in-operations-and-supply-chain-management-in-pune"
+        title="MBA in Marketing Management in Pune | ISMR B-School"
+        description="Explore MBA in Marketing Management at ISMR Pune with 100% placement assistance, modern curriculum, and global corporate exposure."
+        canonical="https://ismrpune.edu.in/programs/mba-in-marketing-management-in-pune"
       />
       <style>{`
 
@@ -1045,7 +1045,7 @@ font-size:14px;
 .final-cta-panel p {
   color: #d9e6f2;
 }
-  h1{
+   h1{
       font-size: 20px;
     font-weight: 700;
   }
@@ -1078,7 +1078,7 @@ font-size:14px;
               margin: 0,
             }}
           >
-            MBA in Operations & Supply Chain <span className="text-warning">Management</span>
+            MBA in Marketing  <span className="text-warning">Management</span>
           </span>
           <p
             className="mb-0"
@@ -1089,7 +1089,7 @@ font-size:14px;
             }}
           >
             Courses •{" "}
-            <span className="text-warning">MBA in Operations & Supply Chain Management</span>
+            <span className="text-warning">MBA in Marketing Management</span>
           </p>
         </div>
       </section>
@@ -1098,24 +1098,27 @@ font-size:14px;
       <section className="marketing-section">
         <div className="content-container">
           <div className=" hero-panel">
-            <span className="eyebrow">ISMR PUNE · MBA OPERATIONS & SUPPLY CHAIN MANAGEMENT</span>
-            <h1>Build a Career in Operations & Supply Chain Management with Real Placement Outcomes</h1>
+            <span className="eyebrow">ISMR PUNE · MBA MARKETING</span>
+            <h1>Build a Job-Ready Marketing Career with Practical Industry Exposure</h1>
 
             <div className="two-col-layout">
               <div className="overview-col mt-4">
-                <h2>What is the MBA Operations & Supply Chain Management Course in Pune?</h2>
+                <h2>What is the MBA Marketing Course in Pune?</h2>
                 <p className="intro-text">
-                  An MBA in Operations and Supply Chain Management in Pune is
-                  a postgraduate management program focused on production
-                  planning, procurement, logistics, inventory management, and
-                  supply chain optimization. It prepares graduates for
-                  careers in manufacturing, e-commerce, retail, logistics,
-                  and consulting.
+                  This MBA program at ISMR focuses on real-world marketing
+                  skills through hands-on learning, not just classroom
+                  theory — with internships integrated into the curriculum,
+                  live campaign execution, and industry-aligned training
+                  modules. Ideal for students planning MBA Marketing
+                  admission in Pune for 2026 and looking for better ROI.
                 </p>
                 <p className="intro-text">
-                  ISMR, an SPPU-affiliated institute, combines this
-                  curriculum with industry-oriented learning, practical
-                  business exposure, and career-focused management training.
+                  The MBA in Marketing Management in Pune at ISMR follows
+                  the syllabus prescribed by Savitribai Phule Pune
+                  University and is structured under the National Education
+                  Policy 2020 with a credit-based system. It combines
+                  academic learning with practical exposure to prepare
+                  students for real marketing roles.
                 </p>
               </div>
 
@@ -1129,8 +1132,8 @@ font-size:14px;
                       </svg>
                     </span>
                     <div>
-                      <h2 className="facts-title text-white">Quick Facts</h2>
-                      <span className="facts-subtitle">MBA in Operations & Supply Chain Management, ISMR Pune</span>
+
+                      <span className="facts-subtitle">MBA in Marketing Management, ISMR Pune</span>
                     </div>
                   </div>
 
@@ -1143,8 +1146,8 @@ font-size:14px;
                         </svg>
                       </span>
                       <div>
-                        <span className="stat-number">85% Placement Rate</span>
-                        <span className="stat-label">Entry-level packages ₹4.5–6.8 LPA</span>
+                        <span className="stat-number">92%</span>
+                        <span className="stat-label">Placement rate — highest among all ISMR specialisations</span>
                       </div>
                     </div>
                   </div>
@@ -1158,7 +1161,17 @@ font-size:14px;
                         </svg>
                       </span>
                       <span className="facts-label">Duration</span>
-                      <span className="facts-value">2 Years (4 Semesters)</span>
+                      <span className="facts-value">2 Years</span>
+                    </li>
+                    <li className="facts-row">
+                      <span className="facts-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                          <path d="M6 10v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                        </svg>
+                      </span>
+                      <span className="facts-label">Affiliation</span>
+                      <span className="facts-value">SPPU-affiliated (NEP 2020 compliant)</span>
                     </li>
                     <li className="facts-row">
                       <span className="facts-icon">
@@ -1167,8 +1180,8 @@ font-size:14px;
                           <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </span>
-                      <span className="facts-label">Affiliation / Approval</span>
-                      <span className="facts-value">SPPU Affiliated | AICTE & DTE Approved</span>
+                      <span className="facts-label">Approval</span>
+                      <span className="facts-value">AICTE Approved</span>
                     </li>
                     <li className="facts-row">
                       <span className="facts-icon">
@@ -1178,13 +1191,15 @@ font-size:14px;
                         </svg>
                       </span>
                       <span className="facts-label">Accepted Exams</span>
-                      <span className="facts-value">MAH-MBA CET / CAT / CMAT</span>
+                      <span className="facts-value">MAH-MBA CET, CAT, MAT, CMAT, ATMA, XAT</span>
                     </li>
                   </ul>
+
+
                 </div>
                 {/* <div className="cta-row">
-                  <a className="default-btn" href="#apply">Apply Now 2026</a>
-                  <a className="default-btn" href="#fees">Get a Complete Cost Breakdown</a>
+                  <a className="default-btn" href="tel:9923786079">Speak with Admissions</a>
+                  <a className="default-btn" href="/contact-us">Apply Now 2026</a>
                 </div> */}
               </div>
             </div>
@@ -1532,17 +1547,79 @@ font-size:14px;
 
           {/* FAQ Panel */}
           <div className=" diff-panel">
-            <span className="eyebrow">CURRICULUM &amp; SKILL DEVELOPMENT</span>
-            <h2>MBA Operations &amp; Supply Chain Management Syllabus &amp; What You Learn</h2>
+            <span className="eyebrow">CURRICULUM &amp; CORE DIFFERENTIATOR</span>
+            <h2>Specialisation Tracks &amp; ISMR Differentiator</h2>
 
             <div className="diff-layout">
               <div className="diff-left">
-                <h3 className="diff-col-title">MBA OSCM Syllabus — Semester-Wise Breakdown</h3>
+                <h3 className="diff-col-title">Why Students Choose ISMR Over Other MBA Marketing Colleges in Pune</h3>
+
+                <p className="intro-text">
+                  Pune has over 100 colleges offering an MBA with a
+                  marketing specialisation. The difference between them is
+                  not always visible in a brochure — it shows up in how the
+                  program is structured and what students are doing before
+                  final placements.
+                </p>
+
+                <div className="tool-table-wrap">
+                  <div className="tool-row tool-row--head">
+                    <span>Parameter</span>
+                    <span>Most Pune MBA Colleges</span>
+                    <span>ISMR</span>
+                  </div>
+
+                  <div className="tool-row">
+                    <span className="tool-name">Learning approach</span>
+                    <span className="tool-applied">Theory-heavy curriculum</span>
+                    <span className="tool-applied">Execution-based — live campaigns, real assignments</span>
+                  </div>
+
+                  <div className="tool-row">
+                    <span className="tool-name">Internship structure</span>
+                    <span className="tool-applied">End-of-program, often unstructured</span>
+                    <span className="tool-applied">Integrated into the curriculum from early semesters</span>
+                  </div>
+
+                  <div className="tool-row">
+                    <span className="tool-name">Geographic career exposure</span>
+                    <span className="tool-applied">Primarily Pune-city opportunities</span>
+                    <span className="tool-applied">Dual exposure — Pune startup ecosystem</span>
+                  </div>
+
+                  <div className="tool-row">
+                    <span className="tool-name">University affiliation</span>
+                    <span className="tool-applied">Varies — autonomous or affiliated</span>
+                    <span className="tool-applied">SPPU-affiliated, NEP 2020 compliant, AICTE approved</span>
+                  </div>
+
+                  <div className="tool-row">
+                    <span className="tool-name">Marketing placement rate</span>
+                    <span className="tool-applied">Not publicly disclosed by most colleges</span>
+                    <span className="tool-applied">92% — 2024–25 batch, highest among all ISMR specialisations</span>
+                  </div>
+                </div>
+
+                <p className="intro-text diff-closing mt-4">
+                  ISMR is among the Top MBA colleges in Pune. It is a
+                  focused institute where marketing as a specialisation
+                  consistently outperforms other streams in placement
+                  outcomes — and where the program structure is built for
+                  students who want a job, not just a degree.
+                </p>
+
+                {/* <a href="/contact-us" className="default-btn diff-cta">
+                  Apply Now →
+                </a> */}
+              </div>
+
+              <div className="diff-right">
+                <h3 className="diff-col-title">MBA Marketing Syllabus — Semester-Wise Breakdown</h3>
 
                 <div className="tool-table-wrap">
                   <div className="tool-row tool-row--head">
                     <span>Semester</span>
-                    <span>Key MBA OSCM Papers</span>
+                    <span>Key Subjects Covered</span>
                   </div>
 
                   <div className="tool-row">
@@ -1556,9 +1633,9 @@ font-size:14px;
                       Semester 1
                     </span>
                     <span className="tool-applied">
-                      Principles of Management, Organizational Behavior,
-                      Managerial Economics, Accounting for Managers, Business
-                      Communication, Quantitative Techniques
+                      Principles of Management, Managerial Economics,
+                      Financial Accounting, Business Communication,
+                      Organizational Behavior, Quantitative Techniques
                     </span>
                   </div>
 
@@ -1573,9 +1650,9 @@ font-size:14px;
                       Semester 2
                     </span>
                     <span className="tool-applied">
-                      Operations Management, Marketing Management,
-                      Financial Management, Human Resource Management,
-                      Business Research Methods, Management Information Systems
+                      Marketing Management, Human Resource Management,
+                      Financial Management, Operations Management,
+                      Business Research Methods, Business Statistics
                     </span>
                   </div>
 
@@ -1590,10 +1667,9 @@ font-size:14px;
                       Semester 3
                     </span>
                     <span className="tool-applied">
-                      Supply Chain Strategy &amp; Global Logistics, Procurement
-                      &amp; Vendor Management, Warehouse &amp; Distribution
-                      Management, Lean &amp; Six Sigma, Demand Forecasting,
-                      ERP Systems &amp; Inventory Control
+                      Consumer Behavior, Brand Management, Sales and
+                      Distribution Management, Advertising Management,
+                      Market Research, Digital Marketing
                     </span>
                   </div>
 
@@ -1608,302 +1684,12 @@ font-size:14px;
                       Semester 4
                     </span>
                     <span className="tool-applied">
-                      Strategic Supply Chain Management, International Trade
-                      &amp; Customs Compliance, Logistics Analytics,
-                      Sustainable Supply Chain Practices, Project
-                      Work/Internship
+                      Strategic Marketing Management, Marketing Analytics,
+                      Retail Management, International Marketing, Services
+                      Marketing, Project Work/Internship
                     </span>
                   </div>
                 </div>
-
-                <h3 className="diff-col-title mt-4">Key Subjects &amp; Enterprise Tools</h3>
-                <h4 className="diff-col-subtitle">Core Modules</h4>
-                <p className="intro-text">
-                  ISMR's curriculum is meticulously designed to cover every
-                  touchpoint of the modern product lifecycle:
-                </p>
-                <ul className="method-list method-list--styled">
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Supply Chain Strategy &amp; Global Logistics — international
-                    trade barriers, customs compliance, cross-border risk
-                    management
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Logistics &amp; Warehouse Management — multimodal
-                    transport networks, distribution planning, automated
-                    warehousing layouts
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Procurement &amp; Vendor Management — strategic sourcing
-                    models, sustainable supplier networks
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Lean, Six Sigma &amp; Demand Forecasting — waste
-                    elimination, quality control, data-driven demand
-                    prediction
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    ERP Systems &amp; Inventory Control — SAP/Oracle
-                    literacy, Just-In-Time (JIT) inventory models
-                  </li>
-                </ul>
-
-                <h4 className="diff-col-subtitle mt-3">Tech Exposure</h4>
-                <p className="intro-text">
-                  Employers look for candidates who can contribute
-                  immediately without lengthy training cycles. Students gain
-                  hands-on experience with industry-standard systems like SAP
-                  and Oracle, alongside practical exposure to Lean and Six
-                  Sigma frameworks.
-                </p>
-
-                <h3 className="diff-col-title">Practical Components</h3>
-                <ul className="method-list method-list--styled">
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Summer Internship
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Case Studies
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Industry Projects
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Warehouse &amp; Logistics Simulations
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Seminars
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Research Assignments
-                  </li>
-                </ul>
-
-                <h3 className="diff-col-title mt-3">Skill Development Focus</h3>
-                <ul className="method-list method-list--styled">
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Analytical Thinking
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Process Optimization
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Vendor Negotiation
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Risk Management
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Cross-Functional Coordination
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Strategic Decision-Making
-                  </li>
-                </ul>
-              </div>
-
-              <div className="diff-right">
-                <h3 className="diff-col-title">Core Focus Areas — What You Actually Learn in MBA OSCM (Beyond Subjects)</h3>
-
-                <div className="app-card">
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 19h16M7 19V9M12 19V5M17 19v7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">ERP &amp; Enterprise Systems</span>
-                      <span className="app-task">
-                        Students learn how companies run inventory and
-                        production through tools such as SAP and Oracle,
-                        helping them understand real-world enterprise
-                        workflows.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="8" r="3.2" stroke="currentColor" strokeWidth="1.8" />
-                        <path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Procurement &amp; Vendor Management</span>
-                      <span className="app-task">
-                        Training includes strategic sourcing, supplier
-                        negotiation, and building sustainable vendor
-                        networks used in organisations.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" />
-                        <path d="M3 9h18M9 9v11" stroke="currentColor" strokeWidth="1.8" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Logistics &amp; Warehouse Operations</span>
-                      <span className="app-task">
-                        Covers multimodal transport, distribution planning,
-                        and automated warehousing layouts essential for
-                        managing supply chain operations.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 3h7l4 4v14H7z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                        <path d="M9.5 12h5M9.5 15.5h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Global Trade &amp; Compliance</span>
-                      <span className="app-task">
-                        Students gain a practical understanding of
-                        international trade barriers, customs compliance,
-                        and cross-border risk management.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Strategic Supply Chain Management</span>
-                      <span className="app-task">
-                        Focuses on aligning supply chain decisions with
-                        business goals, preparing students for leadership
-                        roles in operations.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <h3 className="diff-col-title mt-4">Before vs After ISMR Training</h3>
-                <div className="tool-table-wrap">
-                  <div className="tool-row tool-row--head">
-                    <span>Before MBA OSCM</span>
-                    <span>After ISMR Training</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">No interview confidence</span>
-                    <span className="tool-applied">Clear communication &amp; structured responses</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">No practical supply chain exposure</span>
-                    <span className="tool-applied">Internship + live logistics/procurement project experience</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">Generic graduate profile</span>
-                    <span className="tool-applied">Job-ready operations &amp; supply chain professional</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">Limited ERP/tools knowledge</span>
-                    <span className="tool-applied">Hands-on SAP/Oracle &amp; Lean Six Sigma understanding</span>
-                  </div>
-                </div>
-
-                {/* <a href="/Contactus" className="default-btn diff-cta">
-                  Apply Now →
-                </a> */}
               </div>
             </div>
           </div>
@@ -2116,119 +1902,20 @@ font-size:14px;
 
           {/* Top Recruiters Panel */}
           <div className="panel diff-panel">
-            <span className="eyebrow">CAREER OPPORTUNITIES &amp; ELIGIBILITY</span>
-            <h2>Career Opportunities &amp; Eligibility</h2>
+            <span className="eyebrow">CURRICULUM &amp; CAREER OPPORTUNITIES</span>
+            <h2>Curriculum &amp; Career Opportunities</h2>
 
             <div className="diff-layout">
               <div className="diff-left">
-                <h3 className="diff-col-title">Core Roles &amp; Strategic Relevance</h3>
+                <h3 className="diff-col-title">Subjects &amp; Practical Exposure</h3>
 
-                <div className="tool-table-wrap">
-                  <div className="tool-row tool-row--head">
-                    <span>Job Role</span>
-                    <span>Core Corporate Responsibility</span>
-                    <span>Strategic Career Relevance</span>
-                  </div>
-
-                  <div className="tool-row">
-                    <span className="tool-name">Supply Chain Manager</span>
-                    <span className="tool-applied">
-                      Governs the complete movement of products from raw
-                      materials to final consumers.
-                    </span>
-                    <span className="tool-applied">
-                      Critical for managing procurement protocols,
-                      international shipping, and lean inventory systems.
-                    </span>
-                  </div>
-
-                  <div className="tool-row">
-                    <span className="tool-name">Operations Manager</span>
-                    <span className="tool-applied">
-                      Focuses heavily on shop-floor orchestration, overall
-                      capacity planning, and resource allocation.
-                    </span>
-                    <span className="tool-applied">
-                      Utilizes engineering methodologies to eliminate
-                      production waste and boost output quality.
-                    </span>
-                  </div>
-
-                  <div className="tool-row">
-                    <span className="tool-name">Logistics &amp; Distribution Manager</span>
-                    <span className="tool-applied">
-                      Designs smart multimodal shipping networks and
-                      supervises large fulfillment facilities.
-                    </span>
-                    <span className="tool-applied">
-                      Focuses on maximizing fleet utilization, scaling
-                      automated sorting, and cutting delivery times.
-                    </span>
-                  </div>
-
-                  <div className="tool-row">
-                    <span className="tool-name">Procurement &amp; Vendor Manager</span>
-                    <span className="tool-applied">
-                      Analyzes global supplier markets and executes complex
-                      commercial agreements.
-                    </span>
-                    <span className="tool-applied">
-                      Balances data planning and communication to secure
-                      assets while reducing material costs.
-                    </span>
-                  </div>
-
-                  <div className="tool-row">
-                    <span className="tool-name">Demand Forecasting Analyst</span>
-                    <span className="tool-applied">
-                      Anticipates changing market patterns to avoid
-                      expensive overproduction or stock shortages.
-                    </span>
-                    <span className="tool-applied">
-                      Designs mathematical data models and reviews past
-                      retail patterns with marketing teams.
-                    </span>
-                  </div>
-
-                  <div className="tool-row">
-                    <span className="tool-name">ERP Implementation Analyst</span>
-                    <span className="tool-applied">
-                      Helps companies transition onto cloud platforms by
-                      configuring technical software modules.
-                    </span>
-                    <span className="tool-applied">
-                      Focuses on designing automated inventory tracking
-                      inside systems like SAP or Oracle.
-                    </span>
-                  </div>
-
-                  <div className="tool-row">
-                    <span className="tool-name">Operations Consultant</span>
-                    <span className="tool-applied">
-                      Audits third-party infrastructure to find hidden
-                      organizational inefficiencies.
-                    </span>
-                    <span className="tool-applied">
-                      Gives broad exposure to varied corporate models while
-                      deploying customized lean solutions.
-                    </span>
-                  </div>
-                </div>
-
-                <p className="intro-text mt-3">
-                  <strong>Key Hiring Industries:</strong> Our graduates enjoy
-                  high demand across massive automotive assembly hubs,
-                  high-volume FMCG businesses, complex pharmaceuticals
-                  cold-chains, rapid-delivery e-commerce platforms,
-                  multinational logistics enterprises, infrastructure
-                  conglomerates, and top-tier corporate consulting firms.
+                <p className="intro-text intro-text--strong">
+                  What subjects are covered in this MBA Marketing program in Pune?
                 </p>
-              </div>
-
-              <div className="diff-right">
-                <h3 className="diff-col-title">Eligibility &amp; Target Profiles</h3>
-
-                <h4 className="diff-col-subtitle mb-4">Academic Criteria</h4>
+                <p className="intro-text">
+                  The program includes a mix of core business and
+                  marketing-focused subjects:
+                </p>
                 <ul className="method-list method-list--styled">
                   <li>
                     <span className="method-icon">
@@ -2236,9 +1923,7 @@ font-size:14px;
                         <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
-                    A bachelor's degree in any stream or discipline from a
-                    recognized university, with a minimum aggregate of 50%
-                    marks (45% for reserved categories).
+                    MBA marketing subjects in Pune: consumer behaviour, branding, digital marketing
                   </li>
                   <li>
                     <span className="method-icon">
@@ -2246,372 +1931,182 @@ font-size:14px;
                         <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
-                    Admission is strictly merit-based, requiring valid scores
-                    in state or national-level management entrance tests,
-                    including MAH-MBA CET, CAT, or CMAT.
+                    Research components: field projects and business research
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Internship integrated into the curriculum
                   </li>
                 </ul>
 
-                <h4 className="diff-col-subtitle mt-3 mb-4">Target Profiles</h4>
-                <div className="app-card">
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="8" r="3.2" stroke="currentColor" strokeWidth="1.8" />
-                        <path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Recent Graduates from Any Stream</span>
-                      <span className="app-task">
-                        No prior experience required. ISMR trains graduates
-                        to manage procurement pipelines, distribution
-                        frameworks, and logistics networks from scratch —
-                        regardless of your academic background. Whether you
-                        come from engineering, commerce, science, or arts,
-                        the programme bridges the gap to a corporate
-                        launchpad.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 19h16M7 19V9M12 19V5M17 19v7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Working Professionals in Operations or Manufacturing</span>
-                      <span className="app-task">
-                        Break the growth ceiling. If you are already working
-                        on shop floors, managing warehouses, or handling
-                        vendors, you understand daily execution. This MBA
-                        provides the macro-level strategic insights and
-                        leadership credentials necessary to transition into
-                        high-paying managerial positions.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" />
-                        <path d="M3 9h18M9 9v11" stroke="currentColor" strokeWidth="1.8" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Professionals from BFSI, Retail, or E-Commerce</span>
-                      <span className="app-task">
-                        Lead cross-functional projects. Modern banking,
-                        retail, and digital marketplaces rely completely on
-                        backend processing speed and distribution
-                        efficiency. Professionals from these sectors learn
-                        how to optimize multi-city delivery routes and build
-                        tech-enabled fulfillment centers.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 3h7l4 4v14H7z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                        <path d="M9.5 12h5M9.5 15.5h5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Aspiring ERP and Tech-Enabled Professionals</span>
-                      <span className="app-task">
-                        Bridge business and technology. Technology has
-                        transformed traditional logistics, making data
-                        literacy a core requirement. ISMR's MBA in
-                        Operations and Supply Chain Management includes
-                        strong logistics management training in Pune,
-                        preparing you for specialized corporate roles in
-                        software implementation and cloud-based inventory
-                        tracking.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Entrepreneurs and Family Business Members</span>
-                      <span className="app-task">
-                        Protect and grow your margins. For those running or
-                        inheriting enterprises involving manufacturing or
-                        wholesale distribution, operational inefficiencies
-                        drain profits. This program equips you with Lean and
-                        Six Sigma methodologies to eliminate waste and
-                        negotiate smarter vendor contracts.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* <a href="/Contactus" className="default-btn diff-cta">
-                  Apply Now →
-                </a> */}
-              </div>
-            </div>
-          </div>
-
-          <div className="panel diff-panel mt-4">
-            <span className="eyebrow">STRATEGIC MARKET BENEFITS &amp; RECRUITER NETWORK</span>
-            <h2>Strategic Market Benefits &amp; Location Advantage</h2>
-
-            <p className="intro-text">
-              Supply chains have become one of the most important business
-              functions because companies now compete on speed, cost
-              efficiency, and customer delivery. Pursuing this specialization
-              at ISMR offers distinct, quantifiable advantages.
-            </p>
-
-            <h3 className="diff-col-title">Placement Snapshot</h3>
-            <div className="stat-strip">
-              <div className="stat-block">
-                <span className="stat-icon stat-icon--gold">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
-                    <path d="M8.5 12.5l2.3 2.3 4.7-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </span>
-                <div>
-                  <span className="stat-number">85%</span>
-                  <span className="stat-label">
-                    Placement Rate — reflects consistent recruiter demand
-                    across manufacturing, logistics, and e-commerce sectors
-                  </span>
-                </div>
-              </div>
-
-              <div className="stat-block">
-                <span className="stat-icon stat-icon--gold">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 15l5-5 4 4 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M14 7h6v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </span>
-                <div>
-                  <span className="stat-number">₹4.5–6.8 LPA</span>
-                  <span className="stat-label">
-                    Entry-Level Package — competitive starting packages with
-                    rapid increments in expanding hubs
-                  </span>
-                </div>
-              </div>
-
-              <div className="stat-block">
-                <span className="stat-icon stat-icon--gold">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
-                    <path d="M8.5 12.5l2.3 2.3 4.7-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </span>
-                <div>
-                  <span className="stat-number">15+</span>
-                  <span className="stat-label">
-                    Core Recruiting Partners — spanning logistics, e-commerce,
-                    automotive, and manufacturing majors
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="diff-layout mt-3">
-              <div className="diff-left">
-                <h3 className="diff-col-title mt-3">Strategic Market Benefits</h3>
-                <div className="app-card">
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Surging Global Industry Demand</span>
-                      <span className="app-task">
-                        Resilient career paths: Recent disruptions in global
-                        logistics have forced companies to completely rethink
-                        their sourcing strategies. This shift has created an
-                        urgent corporate demand for qualified managers who
-                        can anticipate bottlenecks and build resilient
-                        vendor networks.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Highly Competitive Earning Potential — Strong ROI</span>
-                      <span className="app-task">
-                        Companies value professionals who can reduce costs,
-                        improve productivity, and deliver products faster.
-                        This is why MBA graduates in supply chain management
-                        often receive competitive salary packages. The
-                        average MBA Supply Chain Management Salary in Pune
-                        reflects this value, offering graduates competitive
-                        starting packages and rapid increments within
-                        expanding e-commerce and manufacturing hubs.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Versatile Cross-Sector Applicability</span>
-                      <span className="app-task">
-                        Maximum career flexibility: Unlike narrow
-                        specializations, operations expertise transfers
-                        perfectly across multiple fields. Graduates can
-                        build their professional futures anywhere — from
-                        automotive assembly lines and FMCG networks to
-                        pharmaceutical cold chains and retail
-                        infrastructure.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Balanced Managerial Skill Development</span>
-                      <span className="app-task">
-                        Become a complete leader: True operational leadership
-                        requires a unique combination of sharp analytical
-                        thinking and team management. The program balances
-                        quantitative training, like mathematical demand
-                        forecasting, with essential modules covering
-                        corporate negotiation and leadership psychology.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <h3 className="diff-col-title">Location Advantage — Unmatched Regional Industrial Placement</h3>
-                <div className="app-card">
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Direct corporate access</span>
-                      <span className="app-task">
-                        Geography plays a critical role in management
-                        placements. Positioned near Pune and PCMC's massive
-                        industrial, automotive, and IT corridors, ISMR
-                        students benefit from regular corporate networking,
-                        plant visits, and direct recruitment pathways.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="diff-right mt-3">
-                <h3 className="diff-col-title">Industry Collaborations &amp; Recruiters</h3>
-                <p className="intro-text">
-                  As one of the MBA SCM colleges in Pune with placement
-                  support built into every semester, ISMR's end-to-end
-                  framework transitions you into high-growth leadership
-                  tracks designed around maximum efficiency. The programme
-                  records an 85% placement rate, with recruiters including:
+                <p className="intro-text intro-text--strong mt-4">
+                  How does ISMR provide practical learning in MBA Marketing?
                 </p>
+                <p className="intro-text">
+                  The MBA Marketing program in Pune at ISMR focuses on
+                  hands-on learning through:
+                </p>
+                <ul className="method-list method-list--styled">
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Live marketing assignments
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Case-based learning using real business scenarios
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Campaign planning and execution exposure
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Internship-based learning
+                  </li>
+                </ul>
+
+                <p className="intro-text diff-closing mt-3">
+                  This ensures students develop job-ready marketing skills,
+                  not just theoretical knowledge.
+                </p>
+              </div>
+
+              <div className="diff-right">
+                <h3 className="diff-col-title">Career Outcomes &amp; Roles</h3>
+
+                <p className="intro-text intro-text--strong">Key Roles You Can Explore</p>
 
                 <div className="tool-table-wrap">
                   <div className="tool-row tool-row--head">
-                    <span>Sr. No.</span>
-                    <span>Recruiting Company</span>
+                    <span>Role</span>
+                    <span>What You Will Do</span>
+                    <span>Salary Range</span>
+                    <span>Career Growth</span>
                   </div>
+
                   <div className="tool-row">
-                    <span className="tool-name">1</span>
-                    <span className="tool-applied">Amazon</span>
+                    <span className="tool-name">Digital Marketing Executive</span>
+                    <span className="tool-applied">Handle SEO, paid ads, social media campaigns, and performance tracking</span>
+                    <span className="tool-applied">₹3–6 LPA</span>
+                    <span className="tool-applied">Performance Marketing Manager → Digital Head</span>
                   </div>
+
                   <div className="tool-row">
-                    <span className="tool-name">2</span>
-                    <span className="tool-applied">Flipkart</span>
+                    <span className="tool-name">Sales Manager</span>
+                    <span className="tool-applied">Focus on revenue generation, client acquisition, and managing sales teams</span>
+                    <span className="tool-applied">₹4–7 LPA + incentives</span>
+                    <span className="tool-applied">Regional Manager → Business Head</span>
                   </div>
+
                   <div className="tool-row">
-                    <span className="tool-name">3</span>
-                    <span className="tool-applied">DHL</span>
+                    <span className="tool-name">Brand Manager</span>
+                    <span className="tool-applied">Work on brand positioning, campaign planning, and customer perception</span>
+                    <span className="tool-applied">₹5–8 LPA</span>
+                    <span className="tool-applied">Senior Brand Manager → Marketing Director</span>
                   </div>
+
                   <div className="tool-row">
-                    <span className="tool-name">4</span>
-                    <span className="tool-applied">Blue Dart</span>
+                    <span className="tool-name">Market Research Analyst</span>
+                    <span className="tool-applied">Analyze customer data, market trends, and competitor strategies</span>
+                    <span className="tool-applied">₹3–6 LPA</span>
+                    <span className="tool-applied">Senior Analyst → Strategy Consultant</span>
                   </div>
+
                   <div className="tool-row">
-                    <span className="tool-name">5</span>
-                    <span className="tool-applied">FedEx</span>
+                    <span className="tool-name">Product Marketing Executive</span>
+                    <span className="tool-applied">Work on product positioning, go-to-market strategies, and launches</span>
+                    <span className="tool-applied">₹4–7 LPA</span>
+                    <span className="tool-applied">Product Marketing Manager → Product Head</span>
                   </div>
+
                   <div className="tool-row">
-                    <span className="tool-name">6</span>
-                    <span className="tool-applied">Maersk</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">7</span>
-                    <span className="tool-applied">Reliance Industries</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">8</span>
-                    <span className="tool-applied">Tata Motors</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">9</span>
-                    <span className="tool-applied">Mahindra &amp; Mahindra</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">10</span>
-                    <span className="tool-applied">Maruti Suzuki</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">11</span>
-                    <span className="tool-applied">Bosch</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">12</span>
-                    <span className="tool-applied">Larsen &amp; Toubro (L&amp;T)</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">13</span>
-                    <span className="tool-applied">Asian Paints</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">14</span>
-                    <span className="tool-applied">Adani Logistics</span>
-                  </div>
-                  <div className="tool-row">
-                    <span className="tool-name">15</span>
-                    <span className="tool-applied">TVS Supply Chain Solutions</span>
+                    <span className="tool-name">Social Media Manager</span>
+                    <span className="tool-applied">Manage brand presence, content strategy, and audience engagement</span>
+                    <span className="tool-applied">₹3–5 LPA</span>
+                    <span className="tool-applied">Social Media Lead → Digital Marketing Manager</span>
                   </div>
                 </div>
 
+                <p className="intro-text intro-text--strong mt-3">Industry Opportunities in Pune</p>
+                <ul className="method-list method-list--styled">
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Strong demand in IT companies, startups, and digital agencies
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Growing opportunities in FMCG, retail, and D2C brands
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Stable roles in the industrial and B2B sectors across Pune
+                  </li>
+                </ul>
+
+                <p className="intro-text intro-text--strong mt-4">What Actually Determines Your Career Growth</p>
+                <p className="intro-text">Your career after an MBA in Marketing is influenced by:</p>
+                <ul className="method-list method-list--styled">
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Internship experience — practical exposure to real work environments
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Skill development — tools, analytics, campaign execution
+                  </li>
+                  <li>
+                    <span className="method-icon">
+                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    Industry exposure — understanding different business models and markets
+                  </li>
+                </ul>
+
                 <p className="intro-text diff-closing mt-3">
-                  This is why ISMR is counted among the leading MBA SCM
-                  colleges in Pune for placement outcomes.
+                  Focusing on these factors helps you move faster from
+                  entry-level roles to managerial and leadership positions.
                 </p>
               </div>
             </div>
@@ -2746,19 +2241,94 @@ font-size:14px;
                         margin: -0.1rem 0;
                     }
                 }
-                    h4{
-                    font-size:15px;
-                    }
             `}</style>
 
           {/* Salary Panel */}
-          <div className="panel curr-panel mt-4">
-            <span className="eyebrow">PROGRAM OUTCOMES &amp; LEARNING FORMAT</span>
-            <h2>Program Outcomes &amp; Learning Format</h2>
+          <div className=" curr-panel mt-4">
+            <span className="eyebrow">FEES &amp; ADMISSION</span>
+            <h2>Program Fees &amp; Admission Process</h2>
+
+            <h3 className="curr-subhead">Are the MBA Marketing course fees in Pune worth it at ISMR?</h3>
+
+            <p className="intro-text">
+              When evaluating MBA Marketing course fees in Pune, students
+              should look beyond brand value and focus on outcomes:
+            </p>
+
+            <ul className="method-list method-list--styled">
+              <li>
+                <span className="method-icon">
+                  <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                Placement opportunities
+              </li>
+              <li>
+                <span className="method-icon">
+                  <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                Skill development
+              </li>
+              <li>
+                <span className="method-icon">
+                  <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                Internship exposure
+              </li>
+            </ul>
+
+            <p className="intro-text mt-3">
+              At ISMR, the focus is on ensuring that your investment leads to
+              real employability and career growth, not just degree
+              completion.
+            </p>
+
+            <h3 className="curr-subhead">MBA Marketing Admission 2026 Pune — ISMR Eligibility &amp; Process</h3>
+            <p className="intro-text">
+              The following are the admission process details and eligibility
+              criteria.
+            </p>
 
             <div className="curr-layout">
               <div className="curr-left">
-                <h3 className="curr-col-title">Program Outcomes: What You Will Achieve</h3>
+                <h3 className="curr-col-title">Eligibility Criteria</h3>
+
+                <div className="tool-table-wrap">
+                  <div className="tool-row tool-row--head">
+                    <span>Parameter</span>
+                    <span>Requirement</span>
+                  </div>
+                  <div className="tool-row">
+                    <span className="tool-name">Minimum Qualification</span>
+                    <span className="tool-applied">Graduate in any discipline from a recognised university</span>
+                  </div>
+                  <div className="tool-row">
+                    <span className="tool-name">Minimum Marks</span>
+                    <span className="tool-applied">50% aggregate (45% for reserved category candidates)</span>
+                  </div>
+                  <div className="tool-row">
+                    <span className="tool-name">Entrance Exam Accepted</span>
+                    <span className="tool-applied">MAH-MBA CET / CAT / MAT / CMAT / ATMA / XAT</span>
+                  </div>
+                  <div className="tool-row">
+                    <span className="tool-name">Affiliation</span>
+                    <span className="tool-applied">SPPU-affiliated — admission follows CET Maharashtra norms</span>
+                  </div>
+                </div>
+
+                <p className="curr-right-note mt-3">
+                  Final-year graduation students are eligible to apply
+                  provisionally.
+                </p>
+              </div>
+
+              <div className="curr-right">
+                <h3 className="curr-col-title">Admission Process — Step by Step</h3>
 
                 <div className="app-card">
                   <div className="app-row">
@@ -2769,11 +2339,11 @@ font-size:14px;
                       </svg>
                     </span>
                     <div className="app-text">
-                      <span className="app-skill">Graduate as a Day-One Ready Specialist</span>
+                      <span className="app-skill">1. Profile Evaluation (Foundation Step)</span>
                       <span className="app-task">
-                        Transition from a general graduate to an
-                        industry-ready professional certified in global
-                        logistics and lean operations.
+                        ISMR evaluates your academic background, entrance exam
+                        score, and career goals to ensure your eligibility and
+                        clarify your goals before admission.
                       </span>
                     </div>
                   </div>
@@ -2781,33 +2351,15 @@ font-size:14px;
                   <div className="app-row">
                     <span className="app-icon">
                       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" />
-                        <path d="M3 9h18M9 9v11" stroke="currentColor" strokeWidth="1.8" />
+                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
                     <div className="app-text">
-                      <span className="app-skill">Master Top Enterprise Tech</span>
+                      <span className="app-skill">2. Eligibility-Based Selection Process</span>
                       <span className="app-task">
-                        Gain immediate career leverage by mastering corporate
-                        operations tools, including SAP, Oracle, and
-                        advanced inventory simulations.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Command Leadership Roles</span>
-                      <span className="app-task">
-                        Qualify directly for high-growth corporate tracks
-                        like Supply Chain Analyst, Logistics Manager, and
-                        Procurement Specialist.
+                        Admission is based on alignment between your profile
+                        and the program's requirements — ensuring that
+                        students enter with clear expectations.
                       </span>
                     </div>
                   </div>
@@ -2820,179 +2372,83 @@ font-size:14px;
                       </svg>
                     </span>
                     <div className="app-text">
-                      <span className="app-skill">Secure Hassle-Free Admissions</span>
+                      <span className="app-skill">3. Application &amp; Documentation Support</span>
                       <span className="app-task">
-                        Navigate your entry smoothly with step-by-step
-                        guidance, from management entrance test counseling
-                        to final enrollment.
+                        ISMR ensures your MBA Marketing Admission 2026 Pune
+                        process is complete and error-free.
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="app-row">
+                    <span className="app-icon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    <div className="app-text">
+                      <span className="app-skill">4. Final Admission &amp; Seat Confirmation</span>
+                      <span className="app-task">
+                        Admission is confirmed through eligibility
+                        verification, interaction (if applicable), and fee
+                        submission.
                       </span>
                     </div>
                   </div>
                 </div>
 
                 <p className="curr-closing">
-                  Have specific questions regarding the MBA SCM Admission in
-                  Pune 2026 criteria, accepted cutoff scores, or seat
-                  reservation timelines? Get in touch today for personalized
-                  counseling.
-                </p>
-
-                <h3 className="curr-col-title">Understanding the Programme</h3>
-                <p className="intro-text">
-                  Operations and supply chain management involves planning
-                  procurement, manufacturing, inventory, logistics, and
-                  product delivery to improve business efficiency.
-                </p>
-                <p className="intro-text">
-                  This specialized discipline balances day-to-day
-                  operational efficiency with long-term strategic planning,
-                  teaching students how to transform raw materials into
-                  finished products and deliver them globally with maximum
-                  speed and minimal cost.
-                </p>
-                <p className="intro-text">
-                  As one of the SPPU-affiliated MBA in Supply Chain colleges
-                  in Pune, ISMR offers a curriculum structured over 2 years
-                  and 4 comprehensive semesters in a full-time format,
-                  progressing from management fundamentals to advanced
-                  global logistics architecture.
+                  MBA Marketing Admission 2026 at ISMR in Pune is limited due
+                  to a fixed intake capacity.
                 </p>
 
                 {/* <a href="/Contactus" className="default-btn curr-cta">
                   Apply Now →
                 </a> */}
               </div>
-
-              <div className="curr-right">
-                <h3 className="curr-col-title">The Learning Format at ISMR</h3>
-                <p className="intro-text">
-                  To ensure you graduate with practical, actionable skills,
-                  our pedagogy utilizes active, industry-integrated learning
-                  methods:
-                </p>
-
-                <div className="app-card">
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Simulations &amp; Case Studies</span>
-                      <span className="app-task">
-                        Analyze real-world disruptions such as global
-                        shipping bottlenecks or sudden demand surges using
-                        interactive software to practice real-time risk
-                        mitigation.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Live Industry Projects</span>
-                      <span className="app-task">
-                        Partner with corporate brands across Pune's
-                        manufacturing belts to solve actual operational
-                        challenges on active shop floors.
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="app-row">
-                    <span className="app-icon">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div className="app-text">
-                      <span className="app-skill">Classroom Instruction</span>
-                      <span className="app-task">
-                        Master core management models delivered by
-                        experienced, university-vetted faculty and visiting
-                        supply chain veterans.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <h3 className="curr-col-title">Key Subjects &amp; Enterprise Tools</h3>
-                <h4 className="curr-col-subtitle">Core Modules</h4>
-                <p className="intro-text">
-                  ISMR's curriculum is meticulously designed to cover every
-                  touchpoint of the modern product lifecycle:
-                </p>
-                <ul className="method-list method-list--styled">
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Supply Chain Strategy &amp; Global Logistics —
-                    international trade barriers, customs compliance,
-                    cross-border risk management
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Logistics &amp; Warehouse Management — multimodal
-                    transport networks, distribution planning, automated
-                    warehousing layouts
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Procurement &amp; Vendor Management — strategic sourcing
-                    models, sustainable supplier networks
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    Lean, Six Sigma &amp; Demand Forecasting — waste
-                    elimination, quality control, data-driven demand
-                    prediction
-                  </li>
-                  <li>
-                    <span className="method-icon">
-                      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    ERP Systems &amp; Inventory Control — SAP/Oracle
-                    literacy, Just-In-Time (JIT) inventory models
-                  </li>
-                </ul>
-
-                <h4 className="curr-col-subtitle mt-4">Tech Exposure</h4>
-                <p className="intro-text">
-                  Employers look for candidates who can contribute
-                  immediately without lengthy training cycles. Students gain
-                  hands-on experience with industry-standard systems like
-                  SAP and Oracle, alongside practical exposure to Lean and
-                  Six Sigma frameworks.
-                </p>
-              </div>
             </div>
           </div>
 
+          <div className="panel recruiters-panel mt-4">
+            <span className="eyebrow">INDUSTRY COLLABORATIONS</span>
+            <h2>Industry Collaborations &amp; Top Recruiters</h2>
 
+            <h3 className="curr-subhead mt-4">Where MBA Marketing Graduates from ISMR Get Placed</h3>
 
+            <div className="tool-table-wrap">
+              <div className="tool-row tool-row--head">
+                <span>Company Category</span>
+                <span>Top Recruiters</span>
+              </div>
+              <div className="tool-row">
+                <span className="tool-name">FMCG &amp; Consumer Brands</span>
+                <span className="tool-applied">
+                  Hindustan Unilever, ITC, Nestlé India, Dabur, Marico,
+                  Britannia, P&amp;G, Godrej Consumer Products, Tata Consumer
+                  Products
+                </span>
+              </div>
+              <div className="tool-row">
+                <span className="tool-name">Retail &amp; E-commerce</span>
+                <span className="tool-applied">Reliance Retail, Amazon, Flipkart</span>
+              </div>
+              <div className="tool-row">
+                <span className="tool-name">Beverages</span>
+                <span className="tool-applied">Coca-Cola India, PepsiCo India</span>
+              </div>
+              <div className="tool-row">
+                <span className="tool-name">Paints &amp; Coatings</span>
+                <span className="tool-applied">Asian Paints</span>
+              </div>
+            </div>
+
+            {/*
+              CONTENT GAP: Flow calls for recruiter logos in this section,
+              which is a design asset, not written copy — flag to the
+              design team separately.
+            */}
+          </div>
 
           <style jsx>{`
                 .curr-panel {
@@ -3393,7 +2849,87 @@ font-size:14px;
   }
 `}</style>
 
+            <div className="ar-wrap">
 
+              {/* LEFT: Placements & Industry Exposure */}
+              <div className="ar-card">
+                <h2>Placements &amp; Industry Exposure</h2>
+                <p className="ar-intro">
+                  Why ISMR ranks among the Top MBA Marketing colleges in Pune
+                  for placement outcomes.
+                </p>
+
+                <div className="ar-subhead">MBA Marketing Placements at ISMR Pune</div>
+                <p className="ar-intro">
+                  A common concern students have is: "Will I actually get
+                  placed after the MBA?"
+                </p>
+                <p className="ar-intro">
+                  The answer is yes. 92% of MBA Marketing students from the
+                  2024–25 batch were placed — the highest placement rate
+                  across all MBA specialisations at ISMR.
+                </p>
+                <p className="ar-intro">
+                  This is not a blanket "placement assistance" claim. It
+                  reflects students securing roles in branding, sales,
+                  digital marketing, and B2B marketing across national-level
+                  companies.
+                </p>
+
+                <div className="ar-subhead">How ISMR Strengthens Placement Outcomes</div>
+                <div className="ar-table-wrap">
+                  <table className="ar-table">
+                    <thead>
+                      <tr>
+                        <th style={{ borderTopLeftRadius: "10px" }}>Focus Area</th>
+                        <th style={{ borderTopRightRadius: "10px" }}>What It Means for You</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="ar-analyst-col">Internship-Driven Learning</td>
+                        <td>You gain hands-on experience before final placements, reducing the fresher gap</td>
+                      </tr>
+                      <tr>
+                        <td className="ar-analyst-col">Skill-Based Training</td>
+                        <td>You learn skills aligned with real roles like digital marketing, sales, and branding</td>
+                      </tr>
+                      <tr>
+                        <td className="ar-analyst-col">Continuous Preparation</td>
+                        <td>You are trained for interviews, communication, and job expectations throughout the program</td>
+                      </tr>
+                      <tr>
+                        <td className="ar-analyst-col">Multi-Industry Exposure</td>
+                        <td>You get access to opportunities across startups, agencies, and industrial sectors</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {/* RIGHT: Who Should Choose ISMR */}
+              <div className="ar-card">
+                <h2>Who Should Choose ISMR (Target Audience)</h2>
+                <p className="ar-intro">
+                  ISMR is ideal for students seeking a career-focused MBA
+                  with practical exposure, long-term growth, and strong ROI.
+                </p>
+
+                <div className="ar-steps ar-steps--list">
+                  <span className="ar-step">You want a career in marketing, not just an MBA degree</span>
+                  <span className="ar-step">You want to build a long-term career, not just secure a job</span>
+                  <span className="ar-step">You prefer practical exposure over theory-heavy learning</span>
+                  <span className="ar-step">You are targeting placements in Pune</span>
+                  <span className="ar-step">You are looking for ROI-focused education</span>
+                </div>
+
+                <p className="ar-callout">
+                  Not ideal if you only want a degree without focusing on
+                  outcomes.
+                </p>
+              </div>
+
+            </div>
           </>
           {/* Analyst vs Backend Panel */}
 
@@ -3880,335 +3416,10 @@ font-size:14px;
                     line-height: 1.55;
                     margin-top: 10px;
                 }
-                    /* FAQ Accordion Styles */
-
-.diff-right {
-  width: 100%;
-}
-
-.accordion {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  font-family: inherit;
-}
-
-.accordion-item {
-  border: 1px solid #e2e6ee;
-  border-radius: 10px;
-  background-color: #ffffff;
-  overflow: hidden;
-  box-shadow: 0 1px 3px rgba(15, 34, 79, 0.06);
-  transition: box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.accordion-item:hover {
-  border-color: #c7d2f0;
-  box-shadow: 0 4px 10px rgba(15, 34, 79, 0.08);
-}
-
-.accordion-item summary {
-  list-style: none;
-  cursor: pointer;
-  padding: 18px 48px 18px 20px;
-  font-weight: 600;
-  font-size: 1rem;
-  color: #0f224f;
-  position: relative;
-  background-color: #f7f9fd;
-  transition: background-color 0.2s ease;
-}
-
-.accordion-item summary::-webkit-details-marker {
-  display: none;
-}
-
-.accordion-item summary::marker {
-  content: "";
-}
-
-/* Custom arrow icon */
-.accordion-item summary::after {
-  content: "";
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  width: 10px;
-  height: 10px;
-  border-right: 2px solid #0f224f;
-  border-bottom: 2px solid #0f224f;
-  transform: translateY(-65%) rotate(45deg);
-  transition: transform 0.25s ease;
-}
-
-.accordion-item[open] summary::after {
-  transform: translateY(-35%) rotate(-135deg);
-}
-
-.accordion-item[open] summary {
-  background-color: #eef2fc;
-  border-bottom: 1px solid #e2e6ee;
-}
-
-.accordion-item summary:hover {
-  background-color: #eef2fc;
-}
-
-.accordion-item p {
-  margin: 0;
-  padding: 18px 20px 20px 20px;
-  color: #495168;
-  font-size: 0.95rem;
-  line-height: 1.65;
-}
-
-/* Smooth open/close animation */
-.accordion-item[open] > p {
-  animation: fadeIn 0.25s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-4px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive */
-@media (max-width: 640px) {
-  .accordion-item summary {
-    font-size: 0.9rem;
-    padding: 14px 40px 14px 16px;
-  }
-  .accordion-item p {
-    font-size: 0.88rem;
-    padding: 14px 16px 16px 16px;
-  }
-}
             `}</style>
 
 
-            <div className="panel faq-panel">
-              <span className="eyebrow">FREQUENTLY ASKED QUESTIONS</span>
-              <h2>MBA Operations &amp; Supply Chain Management — FAQs</h2>
-
-              <div className="diff-layout">
-                <div className="diff-left">
-                  <h3 className="diff-col-title">Still Have Questions?</h3>
-                  <p className="intro-text">
-                    Get quick, clear answers on eligibility, duration,
-                    approvals, placements, and salary expectations for the MBA
-                    in Operations &amp; Supply Chain Management at ISMR Pune.
-                  </p>
-
-                  <div className="app-card">
-                    <div className="app-row">
-                      <span className="app-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                          <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </span>
-                      <div className="app-text">
-                        <span className="app-skill">AICTE &amp; DTE Approved</span>
-                        <span className="app-task">
-                          SPPU-affiliated programme with full statutory
-                          approvals, ensuring nationwide degree validity.
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="app-row">
-                      <span className="app-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
-                          <path d="M8.5 12.5l2.3 2.3 4.7-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </span>
-                      <div className="app-text">
-                        <span className="app-skill">85% Placement Rate</span>
-                        <span className="app-task">
-                          Recruiters include Amazon, Flipkart, DHL, Maersk,
-                          Tata Motors, and 10+ other core industry partners.
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="app-row">
-                      <span className="app-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="12" cy="8" r="3.2" stroke="currentColor" strokeWidth="1.8" />
-                          <path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                        </svg>
-                      </span>
-                      <div className="app-text">
-                        <span className="app-skill">Open to All Streams</span>
-                        <span className="app-task">
-                          Graduates from any discipline, including working
-                          professionals, are eligible to apply.
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <p className="intro-text diff-closing">
-                    Didn't find your answer? Our counselors are just a call
-                    away.
-                  </p>
-
-                  <a href="tel:9923786079" className="default-btn diff-cta">
-                    Talk to a Counselor →
-                  </a>
-                </div>
-
-                <div className="diff-right">
-                  <div className="accordion">
-                    <details className="accordion-item">
-                      <summary>What is an MBA in Operations and Supply Chain Management in Pune?</summary>
-                      <p>
-                        An MBA in Operations and Supply Chain Management in
-                        Pune is a specialized two-year postgraduate degree
-                        centered on making business production and
-                        distribution lines as efficient as possible. The
-                        program trains students to manage raw material
-                        sourcing, organize automated warehousing layouts, and
-                        coordinate international transportation networks. It
-                        blends traditional corporate leadership principles
-                        with modern analytical tools to prepare graduates for
-                        high-level management roles.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>Who can apply for an MBA in Supply Chain Management in Pune?</summary>
-                      <p>
-                        Any graduate holding a bachelor's degree in any stream
-                        from a recognized university with a minimum aggregate
-                        of 50% marks (45% for reserved categories) is fully
-                        eligible to apply. Additionally, candidates must
-                        possess a valid scorecard from state or national
-                        management entrance examinations like MAH-MBA CET,
-                        CAT, or CMAT. This ensures every student admitted to
-                        the programme meets the academic rigour that ISMR and
-                        Savitribai Phule Pune University demand.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>What is the duration of the MBA Operations and Supply Chain Management course?</summary>
-                      <p>
-                        The program spans a fixed duration of two academic
-                        years, which are systematically split into four
-                        comprehensive semesters. The first year focuses on
-                        building foundational management capabilities, while
-                        the second year dives deeply into advanced
-                        operations, ERP systems, and field-based industry
-                        projects. This full-time learning track ensures a
-                        complete transition from classroom theory to
-                        practical corporate readiness.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>Is an MBA in SCM suitable for working professionals?</summary>
-                      <p>
-                        Yes, this management track is exceptionally rewarding
-                        for working professionals currently employed in
-                        manufacturing units, logistics companies, or backend
-                        retail roles. The corporate frameworks, lean
-                        strategies, and software insights taught in the
-                        program provide the strategic domain authority needed
-                        to step away from daily frontline execution. It gives
-                        experienced individuals the formal credentials
-                        required to clear senior internal promotions.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>Is ISMR AICTE-approved for an MBA in Supply Chain Management?</summary>
-                      <p>
-                        Yes, ISMR holds complete statutory approvals from the
-                        All India Council for Technical Education (AICTE) and
-                        the Directorate of Technical Education (DTE),
-                        Maharashtra. The program is formally affiliated with
-                        Savitribai Phule Pune University (SPPU), guaranteeing
-                        that your postgraduate degree follows strict
-                        educational quality controls. This gives your
-                        qualification global validity across both corporate
-                        hiring boards and higher academic institutions.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>What is the scope of MBA Supply Chain Management in Pune?</summary>
-                      <p>
-                        The professional scope is exceptionally broad due to
-                        Pune's status as a booming automotive, manufacturing,
-                        and IT center. Graduates can step straight into
-                        diverse corporate tracks such as procurement
-                        logistics, inventory forecasting, warehouse
-                        automation, and strategic global sourcing. Because
-                        corporate profitability relies directly on lean
-                        operations, our graduates enjoy consistent, long-term
-                        demand across multiple industries.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>What is the typical MBA Supply Chain Management salary in Pune for fresh graduates?</summary>
-                      <p>
-                        ISMR graduates typically secure entry-level packages
-                        ranging between INR 4.5 Lakhs to INR 7.5 Lakhs per
-                        annum, with placements across Pune's automotive,
-                        logistics, and e-commerce sectors. Your final
-                        compensation depends heavily on your performance
-                        during interviews, your academic track record, and
-                        the recruiting company. As you gain hands-on
-                        experience managing large-scale global networks, your
-                        earning potential increases rapidly.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>Which companies recruit MBA graduates in Operations and Supply Chain Management from ISMR?</summary>
-                      <p>
-                        The MBA in Operations and Supply Chain Management
-                        programme at ISMR has an 85% placement rate, with
-                        recruiters including Amazon, Flipkart, DHL, Blue Dart,
-                        FedEx, Maersk, Reliance Industries, Tata Motors,
-                        Mahindra &amp; Mahindra, Maruti Suzuki, Bosch, Larsen
-                        &amp; Toubro, Asian Paints, Adani Logistics, and TVS
-                        Supply Chain Solutions.
-                      </p>
-                    </details>
-
-                    <details className="accordion-item">
-                      <summary>What is the difference between an MBA in Operations and Supply Chain Management and an MBA in Logistics Management?</summary>
-                      <p>
-                        MBA in Operations and Supply Chain Management covers
-                        the full scope of procurement, production, inventory,
-                        and distribution across an organization, while MBA in
-                        Logistics Management in Pune focuses more
-                        specifically on transportation, warehousing, and
-                        distribution execution. ISMR's Operations and Supply
-                        Chain Management programme includes logistics as one
-                        of several core modules, giving graduates broader
-                        managerial exposure across the entire supply chain
-                        rather than logistics alone.
-                      </p>
-                    </details>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
-            <div className="mt-4 mb-4 pb-4">
+            <div className="">
               <div className="">
                 <marquee direction="left" behavior="alternate" scrollamount="6">
                   <div className="logo-marquee-item">

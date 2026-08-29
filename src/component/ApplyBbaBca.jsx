@@ -44,7 +44,7 @@ export default function ApplyBba() {
             <SEO
                 title="Apply for BBA & BCA 2026 | Application Form | ISMR Pune"
                 description="Apply online for SPPU-affiliated BBA and BCA undergraduate courses at ISMR Pune. Direct counselling and enrollment guidance."
-                canonical="https://ismrpune.edu.in/admissions/how-to-apply/"
+                canonical="https://ismrpune.edu.in/admissions/HowToApplyPage/"
             />
 
             {/* -------- HEADER SECTION -------- */}

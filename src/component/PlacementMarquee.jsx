@@ -1,5 +1,5 @@
 import React from "react";
-import "./Placementmorque.css";
+import "./PlacementMarquee.css";
 
 // Imported company logos
 import Comp1 from "../assets/Homeimg/Comp1.png";

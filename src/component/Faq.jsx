@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import ContactForm from "./form/ContactForm";
+import ContactForm from "./forms/ContactForm";
 import { Link } from "react-router-dom";
 
 

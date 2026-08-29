@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import allsectionbg from "../../../assets/allsectionbg.jpg"; // update path based on your project
 import { Link } from "react-router-dom";
-import ContactForm from "../../form/ContactForm";
+import ContactForm from "../../forms/ContactForm";
 import SEO from "../../SEO";
 
 export default function FAQBba() {
@@ -174,7 +174,7 @@ export default function FAQBba() {
             <SEO
                 title="BBA & BCA Admissions FAQ | ISMR Pune"
                 description="Explore frequently asked questions on undergraduate BBA and BCA admissions, syllabus, fee structure, and eligibility at ISMR Pune."
-                canonical="https://ismrpune.edu.in/admissions/fee-structure/"
+                canonical="https://ismrpune.edu.in/admissions/more-faqs/"
             />
 
 

@@ -154,8 +154,8 @@ const BlogPage = () => {
           <div className="blog-card">
             <img className="blog-image" src="/Marketing-Across-Generations.jpg" alt="Blog 1" />
             <div className="blog-content">
-              <Link to="/blogs/Marketing-Across-Generations"> <h3 className="blog-title">Marketing Management</h3></Link>
-              <Link to="/blogs/Marketing-Across-Generations"> <p className="blog-desc">
+              <Link to="/blogs/MarketingAcrossGenerations"> <h3 className="blog-title">Marketing Management</h3></Link>
+              <Link to="/blogs/MarketingAcrossGenerations"> <p className="blog-desc">
                 Marketing Across Generations: How Brands Talk Differently to Baby Boomers, Gen Z & Gen Alpha
               </p></Link>
               <div className="blog-footer d-flex justify-content-between align-items-center">
@@ -168,8 +168,8 @@ const BlogPage = () => {
           <div className="blog-card">
             <img className="blog-image" src="/Bionics.png" alt="Blog 2" />
             <div className="blog-content">
-              <Link to="/blogs/Future-Interface-of-Marketing">  <h3 className="blog-title">The Future Interface of Marketing</h3></Link>
-              <Link to="/blogs/Future-Interface-of-Marketing">  <p className="blog-desc">
+              <Link to="/blogs/FutureInterfaceOfMarketing">  <h3 className="blog-title">The Future Interface of Marketing</h3></Link>
+              <Link to="/blogs/FutureInterfaceOfMarketing">  <p className="blog-desc">
                 The world of marketing is no longer limited to creative advertisements, catchy taglines, or persuasive sales pitches
               </p></Link>
               <div className="blog-footer d-flex justify-content-between align-items-center">
@@ -182,8 +182,8 @@ const BlogPage = () => {
           <div className="blog-card">
             <img className="blog-image" src="/Predictivemarketing .jpg" alt="Blog 3" />
             <div className="blog-content">
-              <Link to="/blogs/Predictive-Marketing-Explained"><h3 className="blog-title">Predictive Marketing Explained</h3></Link>
-              <Link to="/blogs/Predictive-Marketing-Explained"> <p className="blog-desc">
+              <Link to="/blogs/PredictiveMarketingExplained"><h3 className="blog-title">Predictive Marketing Explained</h3></Link>
+              <Link to="/blogs/PredictiveMarketingExplained"> <p className="blog-desc">
                 Predictive Marketing Explained: How Brands Anticipate What Customers Want Next
               </p></Link>
               <div className="blog-footer d-flex justify-content-between align-items-center">

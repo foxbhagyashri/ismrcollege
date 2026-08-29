@@ -10,8 +10,8 @@ import {
 } from "react-icons/fa";
 import "./Footer.css";
 import { Link } from "react-router-dom";
-import ContactForm from "./form/ContactForm";
-import ISMRFormModal from "./form/ISMRFormModal";
+import ContactForm from "./forms/ContactForm";
+import ISMRFormModal from "./forms/ISMRFormModal";
 
 const Footer = () => {
     const [form, setForm] = useState({
@@ -105,40 +105,40 @@ const Footer = () => {
                         <h5 className="footer-title">Quick Links</h5>
                         <ul className="footer-links">
                             <li>
-                                <Link to="/about-us/why-ismr">Why ISMR?</Link>
+                                <Link to="/about-us/WhyIsmr">Why ISMR?</Link>
                             </li>
                             <li>
-                                <Link to="/about-us/awards-and-rankings">
+                                <Link to="/about-us/AwardsAndRankings">
                                     Awards & Rankings
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/admissions/eligibility-criteria">
+                                <Link to="/admissions/EligibilityCriteria">
                                     Eligibility Criteria
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/admissions/how-to-apply">
+                                <Link to="/admissions/HowToApplyPage">
                                     How To Apply
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/placements/process">
+                                <Link to="/placements/PlacementProcess">
                                     Placement Process
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/admissions/disclaimer">
+                                <Link to="/admissions/AdmissionDisclaimer">
                                     Disclaimer for Admissions
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/admissions/fee-disclaimer">
+                                <Link to="/admissions/FeeDisclaimer">
                                     Disclaimer for Fees Payment
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/Termsconditions">
+                                <Link to="/TermsConditions">
                                     Terms & Conditions
                                 </Link>
                             </li>

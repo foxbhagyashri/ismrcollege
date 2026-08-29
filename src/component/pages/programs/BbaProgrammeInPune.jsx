@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import Faq from "../../Faq";
 
-import ContactForm from "../../form/ContactForm";
-import Howtoaplydownoadform from "../../form/Howtoaplydownoadform";
+import ContactForm from "../../forms/ContactForm";
+import Howtoaplydownoadform from "../../forms/HowToApplyDownloadForm";
 import brochurePdf from "/ISMR Brochure.pdf"; // Add your PDF in assets
-import ISMRFormModal from "../../form/ISMRFormModal";
+import ISMRFormModal from "../../forms/ISMRFormModal";
 import SEO from "../../SEO";
 
 export default function BBACourse() {

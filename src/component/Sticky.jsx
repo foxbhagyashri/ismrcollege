@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./sticky.css";
-import ContactForm from "./form/ContactForm.jsx";
+import ContactForm from "./forms/ContactForm.jsx";
 // import ReCAPTCHA from "react-google-recaptcha";
-import ISMRFormModal from "./form/ISMRFormModal.jsx";
+import ISMRFormModal from "./forms/ISMRFormModal.jsx";
 
 const Sticky = () => {
   const [form, setForm] = useState({
