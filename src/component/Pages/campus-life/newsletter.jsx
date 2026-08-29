@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { ChevronLeft, ChevronRight } from "react-bootstrap-icons";
+import SEO from "../../SEO";
 
 const newsletterData = {
   "May 2024": {
@@ -118,6 +119,11 @@ function MonthlyNewsletter() {
 
   return (
     <div className="monthly-newsletter-page pt-0 pb-5">
+      <SEO
+        title="Campus Newsletter & Chronicles | ISMR Pune"
+        description="Read monthly newsletters, research highlights, campus happenings, student achievements, and academic chronicles from ISMR Pune."
+        canonical="https://ismrpune.edu.in/campus-life/newsletter/"
+      />
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         .monthly-newsletter-page { font-family: 'Inter', Arial, Helvetica, sans-serif; color: #444; background-color: #f8f9fa; }

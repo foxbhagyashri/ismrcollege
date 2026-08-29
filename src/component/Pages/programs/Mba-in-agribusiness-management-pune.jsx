@@ -14,7 +14,7 @@ import atosLogo from "../../../assets/Homeimg/atos.png";
 import bajajLogo from "../../../assets/Homeimg/Bajaj-Finserv-Logo.jpg";
 import cognizantLogo from "../../../assets/Homeimg/Cognizant-Logo.png";
 import learningRoutesLogo from "../../../assets/Homeimg/Comp1.png";
-
+import SEO from "../../SEO";
 
 export default function MBAAgribusinessManagement() {
 
@@ -79,6 +79,11 @@ export default function MBAAgribusinessManagement() {
 
   return (
     <section className="apply-wrapper">
+      <SEO
+        title="MBA in Agribusiness Management in Pune | ISMR"
+        description="Enroll in MBA in Agribusiness Management in Pune at ISMR. Agri-supply chains, commodity trading, food business management, 100% placement support."
+        canonical="https://ismrpune.edu.in/programs/mba-in-agribusiness-management-pune"
+      />
       <style>{`
 
 .content-container p{

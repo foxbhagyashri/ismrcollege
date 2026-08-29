@@ -4,48 +4,47 @@ import allsectionbg from "../../../../assets/allsectionbg.jpg";
 import director from "../../../../assets/Homeimg/Director.png";
 import secretary from "../../../../assets/Homeimg/Secretary.png";
 import cairman from "../../../../assets/Homeimg/cairman.png";
+import SEO from "../../../SEO";
 
 function Leadership() {
   return (
     <div className="font-poppins">
+      <SEO
+        title="Director's Message | Academic Leadership | ISMR Pune"
+        description="Read the Director's message on experiential pedagogy, student innovation, and corporate excellence at ISMR Pune."
+        canonical="https://ismrpune.edu.in/about-us/leadership-team/director-message/"
+      />
 
       <style>{`
-        /* Fonts */
-        .font-roboto-slab {
-          font-family: "Roboto Slab", serif;
-        }
-        .font-poppins {
-          font-family: "Poppins", sans-serif;
-        }
-
-        /* Headings */
+        /* Fonts & Headings */
         .page-heading {
-          font-family: "Roboto Slab", serif;
-          font-size: 46px;
-          font-weight: 900;
+          font-family: 'Inter', Arial, Helvetica, sans-serif;
+          font-size: 40px;
+          font-weight: 700;
           text-align: center;
           color: #0a2240;
         }
 
         .section-heading {
-          font-family: "Roboto Slab", serif;
-          font-size: 36px;
-          font-weight: 900;
+          font-family: 'Inter', Arial, Helvetica, sans-serif;
+          font-size: 32px;
+          font-weight: 700;
           color: #0a2240;
           text-align: center;
         }
 
         .card-heading {
-          font-family: "Roboto Slab", serif;
-          font-size: 24px;
+          font-family: 'Inter', Arial, Helvetica, sans-serif;
+          font-size: 22px;
           font-weight: 700;
           color: #0a2240;
         }
 
         /* Body Text */
         .body-text, .caption-text {
-          font-family: "Poppins", sans-serif;
+          font-family: 'Inter', Arial, Helvetica, sans-serif;
           font-size: 16px;
+          line-height: 1.7;
           color: #444;
         }
 
@@ -54,12 +53,11 @@ function Leadership() {
         }
 
         @media (max-width: 768px) {
-          .page-heading { font-size: 36px; }
-          .section-heading { font-size: 28px; }
-          .card-heading { font-size: 20px; }
-          .body-text, .caption-text { font-size: 14px; }
+          .page-heading { font-size: 32px; }
+          .section-heading { font-size: 24px; }
+          .card-heading { font-size: 18px; }
+          .body-text, .caption-text { font-size: 14.5px; }
         }
-
       `}</style>
 
       {/* Hero Section */}

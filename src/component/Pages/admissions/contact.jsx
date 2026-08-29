@@ -3,6 +3,7 @@ import allsectionbg from "../../../assets/allsectionbg.jpg";
 import Faq from "../../Faq";
 import axios from "axios";
 import brochurePdf from "../../../assets/ISMR Brochure.pdf"; // Add your PDF in assets
+import SEO from "../../SEO";
 
 export default function AdmissionContact() {
 
@@ -100,6 +101,11 @@ export default function AdmissionContact() {
 
   return (
     <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
+      <SEO
+        title="Admission Contact | Helpline & Query Support | ISMR Pune"
+        description="Get in touch with the ISMR Pune admissions cell. Phone numbers, email, campus directions, and telephonic counselling assistance."
+        canonical="https://ismrpune.edu.in/admissions/contact/"
+      />
       {/* -------- HEADER SECTION -------- */}
       <section
         className="py-5 text-white text-center position-relative"

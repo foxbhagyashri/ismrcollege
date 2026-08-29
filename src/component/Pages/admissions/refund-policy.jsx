@@ -1,10 +1,16 @@
 import React from "react";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import Faq from "../../Faq";
+import SEO from "../../SEO";
 
 export default function RefundPolicy() {
   return (
     <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
+      <SEO
+        title="Refund Policy | Fee Cancellation Guidelines | ISMR Pune"
+        description="Official fee refund policy and cancellation guidelines for management admissions at ISMR Pune in accordance with AICTE & regulatory norms."
+        canonical="https://ismrpune.edu.in/admissions/refund-policy/"
+      />
       {/* -------- HEADER SECTION -------- */}
       <section
         className="py-5 text-white text-center position-relative"

@@ -14,7 +14,7 @@ import atosLogo from "../../../assets/Homeimg/atos.png";
 import bajajLogo from "../../../assets/Homeimg/Bajaj-Finserv-Logo.jpg";
 import cognizantLogo from "../../../assets/Homeimg/Cognizant-Logo.png";
 import learningRoutesLogo from "../../../assets/Homeimg/Comp1.png";
-
+import SEO from "../../SEO";
 
 export default function ISMRMarketingLanding() {
 
@@ -69,6 +69,11 @@ export default function ISMRMarketingLanding() {
 
   return (
     <section className="apply-wrapper">
+      <SEO
+        title="MBA in Marketing Management in Pune | ISMR B-School"
+        description="Explore MBA in Marketing Management at ISMR Pune with 100% placement assistance, modern curriculum, and global corporate exposure."
+        canonical="https://ismrpune.edu.in/programs/mba-in-marketing-management-in-pune"
+      />
       <style>{`
 
 .content-container p{

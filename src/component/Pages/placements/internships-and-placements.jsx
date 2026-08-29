@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import { Row, Col } from "react-bootstrap";
 import { BriefcaseFill, ChatSquareQuoteFill, StarFill } from "react-bootstrap-icons";
+import SEO from "../../SEO";
 
 // ---------------------------------------------------------------------
 // 1. Local Company Image Imports
@@ -137,6 +138,11 @@ const Ourplacement = () => {
 
   return (
     <>
+      <SEO
+        title="Our Internships & Top Recruiters | ISMR Pune"
+        description="Discover top marquee recruiters, summer internship partners, and placement records across IT, Core, and Service sectors at ISMR Pune."
+        canonical="https://ismrpune.edu.in/placements/internships-and-placements/"
+      />
       {/* ====== Banner Section ====== */}
       <section
         className="py-5 text-white text-center position-relative"

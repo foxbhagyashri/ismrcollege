@@ -14,7 +14,7 @@ import atosLogo from "../../../assets/Homeimg/atos.png";
 import bajajLogo from "../../../assets/Homeimg/Bajaj-Finserv-Logo.jpg";
 import cognizantLogo from "../../../assets/Homeimg/Cognizant-Logo.png";
 import learningRoutesLogo from "../../../assets/Homeimg/Comp1.png";
-
+import SEO from "../../SEO";
 
 export default function ISMRLanding() {
 
@@ -69,6 +69,11 @@ export default function ISMRLanding() {
 
     return (
         <section className="apply-wrapper">
+            <SEO
+                title="MBA in Finance Management in Pune | Top Finance B-School | ISMR"
+                description="Study MBA in Finance Management in Pune at ISMR. Practical financial modelling, corporate internships, and 100% placement track record."
+                canonical="https://ismrpune.edu.in/programs/mba-in-finance-management-in-pune"
+            />
             <style>{`
 
 .content-container p{

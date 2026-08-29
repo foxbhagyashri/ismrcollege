@@ -6,6 +6,7 @@ import ContactForm from "../../form/ContactForm";
 import Howtoaplydownoadform from "../../form/Howtoaplydownoadform";
 import brochurePdf from "/ISMR Brochure.pdf"; // Add your PDF in assets
 import ISMRFormModal from "../../form/ISMRFormModal";
+import SEO from "../../SEO";
 
 export default function BBACourse() {
 
@@ -58,6 +59,11 @@ export default function BBACourse() {
 
     return (
         <section className="apply-wrapper">
+            <SEO
+                title="BBA Programme in Pune | Top BBA College | ISMR Pune"
+                description="Join SPPU-affiliated BBA Programme in Pune at ISMR. Industry practical learning, corporate internships, and comprehensive placement support."
+                canonical="https://ismrpune.edu.in/programs/bba-programme-in-pune"
+            />
             <style>{`
 
   .sector-note {

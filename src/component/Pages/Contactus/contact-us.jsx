@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import { Link } from "react-router-dom";
+import SEO from "../../SEO";
 
 function Contactus() {
   const [email, setEmail] = useState("");
@@ -51,6 +52,11 @@ function Contactus() {
 
   return (
     <div className="contact-page">
+      <SEO
+        title="Contact Us | Reach ISMR B-School Pune"
+        description="Contact International School of Management & Research (ISMR) Pune. Campus address, admissions hotline, email, and Google map location."
+        canonical="https://ismrpune.edu.in/contact-us/"
+      />
       <style>{`
         :root {
           --primary-color: #1a1a2e;

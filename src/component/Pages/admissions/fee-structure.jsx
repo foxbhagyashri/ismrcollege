@@ -1,22 +1,17 @@
 import React, { useState } from "react";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import Faq from "../../Faq";
+import SEO from "../../SEO";
 
 export default function FeesStructure() {
 
-    <style>
-        {`
-    @media (max-width: 768px) {
-      .img-fluid {
-        max-width: 100% !important;
-      }
-    }
-  `}
-    </style>
-
-
     return (
         <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
+            <SEO
+                title="Fee Structure | MBA, BBA & BCA Course Fees | ISMR Pune"
+                description="Explore transparent course fee structures, instalment plans, and financial aid information for MBA, BBA & BCA programs at ISMR Pune."
+                canonical="https://ismrpune.edu.in/admissions/fee-structure/"
+            />
             {/* -------- HEADER SECTION -------- */}
             <section
                 className="py-5 text-white text-center position-relative"

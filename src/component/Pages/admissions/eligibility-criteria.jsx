@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import Faq from "../../Faq";
+import SEO from "../../SEO";
 
 export default function PrivacySection() {
   const [filter, setFilter] = useState("postgraduation");
 
   return (
     <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
+      <SEO
+        title="Eligibility Criteria | MBA, BBA & BCA Admissions | ISMR Pune"
+        description="Check admission eligibility criteria for MBA, BBA, and BCA programs at ISMR Pune. Minimum marks, entrance test cutoffs, and guidelines."
+        canonical="https://ismrpune.edu.in/admissions/eligibility-criteria/"
+      />
       {/* -------- HEADER SECTION -------- */}
       <section
         className="py-5 text-white text-center position-relative"

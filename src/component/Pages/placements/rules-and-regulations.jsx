@@ -1,9 +1,15 @@
 import React from "react";
 import "./PlacementRules.css";
+import SEO from "../../SEO";
 
 const PlacementRules = () => {
     return (
         <>
+            <SEO
+                title="Placement Rules & Regulations | ISMR Pune"
+                description="Read the official placement cell guidelines, student eligibility criteria, code of conduct, and recruitment rules at ISMR Pune."
+                canonical="https://ismrpune.edu.in/placements/rules-and-regulations"
+            />
             {/* ---------- TOP BANNER ---------- */}
             <div className="placement-banner">
                 <div className="placement-overlay">

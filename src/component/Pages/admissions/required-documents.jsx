@@ -6,6 +6,7 @@ import ContactForm from "../../form/ContactForm";
 import Howtoaplydownoadform from "../../form/Howtoaplydownoadform";
 import brochurePdf from "/ISMR Brochure 2026.pdf"; // Add your PDF in assets
 import ISMRFormModal from "../../form/ISMRFormModal";
+import SEO from "../../SEO";
 
 export default function Listofdocument() {
     const [form, setForm] = useState({
@@ -52,6 +53,11 @@ export default function Listofdocument() {
 
     return (
         <section className="apply-wrapper">
+            <SEO
+                title="Required Documents for Admission | Checklist | ISMR Pune"
+                description="Complete checklist of required documents for MBA, BBA & BCA admissions at ISMR Pune. Mark sheets, entrance scorecards, caste certificates, and photos."
+                canonical="https://ismrpune.edu.in/admissions/required-documents/"
+            />
             <style>{`
 
 .category-tabs {

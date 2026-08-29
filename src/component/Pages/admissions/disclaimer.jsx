@@ -1,10 +1,16 @@
 import React from "react";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import Faq from "../../Faq";
+import SEO from "../../SEO";
 
 export default function DisclaimerPage() {
   return (
     <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
+      <SEO
+        title="Disclaimer for Admissions | ISMR Pune"
+        description="Official admission disclaimer regarding authorized admission processes, fee payments, and policy verification at ISMR Pune."
+        canonical="https://ismrpune.edu.in/admissions/disclaimer/"
+      />
       {/* Add FontAwesome */}
       <link
         rel="stylesheet"

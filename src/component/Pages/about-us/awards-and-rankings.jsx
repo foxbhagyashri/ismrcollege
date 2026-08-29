@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrophy } from "@fortawesome/free-solid-svg-icons";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import TrophyImg from "../../../assets/Trophyimg.png";
+import SEO from "../../SEO";
 function AwardsRankings() {
   const awards = [
     {
@@ -95,69 +96,53 @@ function AwardsRankings() {
 
   return (
     <div className="custom-fonts">
+      <SEO
+        title="Awards & Rankings | ISMR B-School Pune"
+        description="Explore top awards, rankings, and institutional accolades awarded to ISMR Pune for academic and placement excellence."
+        canonical="https://ismrpune.edu.in/about-us/awards-and-rankings/"
+      />
       <style>{`
-        .custom-fonts {
-          font-family: 'Poppins', sans-serif;
-          font-size: 16px;
-        }
-
-        /* Hero Heading */
+        /* Fonts & Headings */
         .page-heading {
-          font-family: 'Roboto Slab', serif;
-          font-weight: 900;
-          font-size: 46px;
-          text-align: center;
-          color: #0a2240;
-        }
-
-        /* Section Headings */
-        .section-heading {
-          font-family: 'Roboto Slab', serif;
+          font-family: 'Inter', Arial, Helvetica, sans-serif;
+          font-size: 40px;
           font-weight: 700;
+          text-align: center;
+          color: #0a2240;
+        }
+
+        .section-heading {
+          font-family: 'Inter', Arial, Helvetica, sans-serif;
           font-size: 32px;
+          font-weight: 700;
           color: #0a2240;
           text-align: center;
         }
 
-        /* Card Headings */
         .card-heading {
-          font-family: 'Roboto Slab', serif;
-          font-weight: 600;
-          font-size: 24px;
+          font-family: 'Inter', Arial, Helvetica, sans-serif;
+          font-size: 22px;
+          font-weight: 700;
           color: #0a2240;
         }
 
         /* Body Text */
-        .body-text {
-          font-family: 'Poppins', sans-serif;
+        .body-text, .caption-text {
+          font-family: 'Inter', Arial, Helvetica, sans-serif;
           font-size: 16px;
-          line-height: 1.6;
+          line-height: 1.7;
           color: #444;
         }
 
-        /* Caption Text */
         .caption-text {
-          font-family: 'Poppins', sans-serif;
-          font-size: 14px;
           color: #666;
         }
 
         @media (max-width: 768px) {
-          .page-heading {
-            font-size: 32px;
-          }
-          .section-heading {
-            font-size: 24px;
-          }
-          .card-heading {
-            font-size: 20px;
-          }
-          .body-text {
-            font-size: 14px;
-          }
-          .caption-text {
-            font-size: 14px;
-          }
+          .page-heading { font-size: 32px; }
+          .section-heading { font-size: 24px; }
+          .card-heading { font-size: 18px; }
+          .body-text, .caption-text { font-size: 14.5px; }
         }
       `}</style>
 
@@ -451,75 +436,72 @@ function AwardsRankings() {
       {/* RANKINGS SECTION */}
       <section className="py-5 bg-white">
         <div className="container">
-          <h2
-            style={{
-              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-              fontSize: "32px",
-              fontWeight: 700,
-              color: "#0a2240",
-              marginBottom: "1.5rem",
-            }}
-          >
-            Our Rankings
-          </h2>
-          <p
-            style={{
-              fontSize: "18px",
-              color: "#444",
-              lineHeight: "1.7",
-              fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-              textAlign: "justify",
-              textJustify: "inter-word",
-              marginBottom: "2rem",
-            }}
-          >
-            Consistently ranked among the top institutions for excellence in
-            management education, research, and placement opportunities.
-          </p>
+          <div className="text-center text-md-start mb-4">
+            <h2
+              style={{
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                fontSize: "30px",
+                fontWeight: 700,
+                color: "#0a2240",
+                marginBottom: "10px",
+              }}
+            >
+              Our <span className="text-warning">Rankings</span>
+            </h2>
+            <p
+              style={{
+                fontSize: "16px",
+                color: "#555",
+                lineHeight: "1.6",
+                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                marginBottom: "1.5rem",
+              }}
+            >
+              Consistently ranked among the top institutions for excellence in
+              management education, research, and placement opportunities.
+            </p>
+          </div>
 
           <div className="row g-4">
             {rankings.map((ranking, index) => {
               const isEven = index % 2 === 0;
               const bgColor = isEven ? "#002A5C" : "#FFC333";
-              const textColor = isEven ? "#FFC333" : "#002A5C";
+              const titleColor = isEven ? "#FFC333" : "#002A5C";
+              const descColor = isEven ? "rgba(255, 255, 255, 0.9)" : "#002A5C";
 
               return (
                 <div className="col-12 col-md-6 col-lg-3" key={index}>
                   <div
-                    className="p-3 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-center align-items-center"
+                    className="p-4 rounded-4 shadow-sm h-100 d-flex flex-column text-center"
                     style={{
                       backgroundColor: bgColor,
-                      color: textColor,
-                      transition: "0.3s ease",
-                      minHeight: "180px",
+                      transition: "all 0.3s ease",
+                      border: isEven ? "none" : "1px solid rgba(0, 42, 92, 0.1)",
                     }}
                   >
-                    <div
-                      className="fw-bold mb-2"
+                    <h5
+                      className="fw-bold mb-3"
                       style={{
-                        fontSize: "1.5rem", // ↓ Smaller number font
-                        fontFamily: "Roboto, sans-serif",
-                      }}
-                    >
-                      {ranking.rank}
-                    </div>
-
-                    <h6
-                      className="fw-semibold mb-1"
-                      style={{
-                        fontSize: "1.4rem", // ↓ Smaller category text
-                        fontFamily: "Roboto, sans-serif",
+                        fontSize: "1.05rem",
+                        color: titleColor,
+                        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                        lineHeight: "1.35",
+                        minHeight: "44px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
                       }}
                     >
                       {ranking.category}
-                    </h6>
+                    </h5>
 
                     <p
                       className="mb-0"
                       style={{
-                        fontSize: "1rem", // ↓ Smaller description
-                        lineHeight: "1.4",
-                        fontFamily: "Poppins, sans-serif",
+                        fontSize: "0.88rem",
+                        color: descColor,
+                        lineHeight: "1.55",
+                        fontFamily: "'Poppins', sans-serif",
                       }}
                     >
                       {ranking.description}
