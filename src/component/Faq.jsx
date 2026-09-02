@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import ContactForm from "./forms/ContactForm";
 import { Link } from "react-router-dom";
-import { cn } from "../../../New-sara-spa/src/lib/utils";
-
 
 export default function FaqAndContactSection() {
 
