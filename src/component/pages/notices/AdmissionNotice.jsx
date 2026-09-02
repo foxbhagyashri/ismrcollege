@@ -64,12 +64,13 @@ const Admissionsnote = () => {
             style={{
               fontSize: "40px",
               fontWeight: 700,
+              color: "#ffffff",
               margin: 0,
             }}
           >
             Admissions Notice
           </h1>
-          <p className="mb-0" style={{ fontSize: "15px" }}>
+          <p className="mb-0" style={{ fontSize: "15px", color: "#ffffff" }}>
             Notice • <span className="text-warning">Admissions</span>
           </p>
         </div>

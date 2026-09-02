@@ -105,40 +105,48 @@ const Footer = () => {
                         <h5 className="footer-title">Quick Links</h5>
                         <ul className="footer-links">
                             <li>
-                                <Link to="/about-us/WhyIsmr">Why ISMR?</Link>
+                                <Link to="/about-us/why-ismr">Why ISMR?</Link>
                             </li>
                             <li>
-                                <Link to="/about-us/AwardsAndRankings">
+                                <Link to="/naac">NAAC Accreditation</Link>
+                            </li>
+                            <li>
+                                <Link to="/about-us/awards-and-rankings">
                                     Awards & Rankings
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/admissions/EligibilityCriteria">
+                                <Link to="/academics/programs">
+                                    Programs & Duration
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/admissions/eligibility-criteria">
                                     Eligibility Criteria
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/admissions/HowToApplyPage">
+                                <Link to="/admissions/how-to-apply">
                                     How To Apply
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/placements/PlacementProcess">
+                                <Link to="/placements/process">
                                     Placement Process
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/admissions/AdmissionDisclaimer">
+                                <Link to="/admissions/disclaimer">
                                     Disclaimer for Admissions
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/admissions/FeeDisclaimer">
+                                <Link to="/admissions/fee-disclaimer">
                                     Disclaimer for Fees Payment
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/TermsConditions">
+                                <Link to="/terms-and-conditions">
                                     Terms & Conditions
                                 </Link>
                             </li>

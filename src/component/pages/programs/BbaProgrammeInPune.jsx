@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import Faq from "../../Faq";
 
@@ -9,7 +10,7 @@ import ISMRFormModal from "../../forms/ISMRFormModal";
 import SEO from "../../SEO";
 
 export default function BBACourse() {
-
+    const navigate = useNavigate();
     const [openFaq, setOpenFaq] = useState(0); // first item open by default
 
     const toggleFaq = (index) => {
@@ -60,9 +61,9 @@ export default function BBACourse() {
     return (
         <section className="apply-wrapper">
             <SEO
-                title="BBA Programme in Pune | Top BBA College | ISMR Pune"
-                description="Join SPPU-affiliated BBA Programme in Pune at ISMR. Industry practical learning, corporate internships, and comprehensive placement support."
-                canonical="https://ismrpune.edu.in/programs/bba-programme-in-pune"
+                title="BBA College in Pune | Top BBA Programme | ISMR Pune"
+                description="Explore BBA College in Pune at ISMR. SPPU-affiliated Bachelor of Business Administration offering practical business learning, internships, and top placements."
+                canonical="https://ismrpune.edu.in/programs/bba-college-in-pune"
             />
             <style>{`
 
@@ -1126,27 +1127,74 @@ export default function BBACourse() {
 
                 <div className="container position-relative py-5">
                     <span
-                        className="mb-3"
+                        className="mb-2 d-block"
                         style={{
                             fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                            fontSize: "30px",
+                            fontSize: "32px",
                             fontWeight: 700,
+                            color: "#ffffff",
                             margin: 0,
                         }}
                     >
                         BBA   <span className="text-warning">Programme</span>
                     </span>
-                    <p
-                        className="mb-0"
-                        style={{
-                            fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                            fontSize: "15px",
-                            marginTop: "0.5rem",
-                        }}
-                    >
-                        Courses •{" "}
-                        <span className="text-warning">BBA programme</span>
-                    </p>
+
+                    <div className="d-flex align-items-center justify-content-center gap-2 flex-wrap mt-2">
+                        <button
+                            type="button"
+                            onClick={() => {
+                                if (window.history.length > 1) {
+                                    navigate(-1);
+                                } else {
+                                    navigate("/academics/programs");
+                                }
+                            }}
+                            className="btn btn-sm d-inline-flex align-items-center gap-1"
+                            style={{
+                                backgroundColor: "rgba(255, 255, 255, 0.16)",
+                                color: "#ffd76d",
+                                border: "1px solid rgba(255, 215, 109, 0.6)",
+                                borderRadius: "20px",
+                                padding: "3px 13px",
+                                fontSize: "13px",
+                                fontWeight: 600,
+                                lineHeight: "1.4",
+                                backdropFilter: "blur(4px)",
+                                transition: "all 0.25s ease",
+                                cursor: "pointer",
+                            }}
+                            onMouseEnter={(e) => {
+                                e.currentTarget.style.backgroundColor = "#ffd76d";
+                                e.currentTarget.style.color = "#0a2240";
+                            }}
+                            onMouseLeave={(e) => {
+                                e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.16)";
+                                e.currentTarget.style.color = "#ffd76d";
+                            }}
+                        >
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                <polyline points="12 19 5 12 12 5"></polyline>
+                            </svg>
+                            Back
+                        </button>
+
+                        <span style={{ color: "rgba(255, 255, 255, 0.5)", fontSize: "14px" }}>•</span>
+
+                        <p
+                            className="mb-0"
+                            style={{
+                                fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                                fontSize: "15px",
+                                color: "#ffffff",
+                            }}
+                        >
+                            <Link to="/academics/programs" style={{ color: "#ffffff", textDecoration: "none" }}>
+                                Courses
+                            </Link>{" "}
+                            • <span className="text-warning">BBA College in Pune</span>
+                        </p>
+                    </div>
                 </div>
             </section>
 

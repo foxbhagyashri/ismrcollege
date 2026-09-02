@@ -353,6 +353,7 @@ function ProgramOfferedPage() {
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               fontSize: "40px",
               fontWeight: 700,
+              color: "#ffffff",
               margin: 0,
             }}
           >
@@ -364,6 +365,7 @@ function ProgramOfferedPage() {
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               fontSize: "15px",
               marginTop: "0.5rem",
+              color: "#ffffff",
             }}
           >
             Academics • <span className="text-warning">Programs</span>

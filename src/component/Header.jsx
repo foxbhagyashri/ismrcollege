@@ -1,11 +1,35 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/" || location.pathname === "";
   const navbarRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY =
+        window.pageYOffset ||
+        window.scrollY ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop ||
+        0;
+      setIsScrolled(scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true, capture: true });
+    document.addEventListener("scroll", handleScroll, { passive: true, capture: true });
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll, { capture: true });
+      document.removeEventListener("scroll", handleScroll, { capture: true });
+    };
+  }, [location.pathname]);
 
   const toggleDropdown = (index) => {
     // Only toggle if the navbar is open (mobile view) or if on desktop
@@ -135,7 +159,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/about-us/AboutUs"
+              to="/about-us"
               onClick={handleDropdownItemClick}
             >
               About Institute
@@ -155,13 +179,13 @@ const Header = () => {
             </a>
 
             <ul className={`submenu ${activeSubmenu === 0 ? "show" : ""}`}>
-              <li> <Link className="dropdown-item" to="/about-us/leadership-team/Chairman" onClick={handleDropdownItemClick} > Message From Founder President </Link> </li> <li> <Link className="dropdown-item" to="/about-us/leadership-team/Secretary" onClick={handleDropdownItemClick} > Message From Secretary </Link> </li> <li> <Link className="dropdown-item" to="/about-us/leadership-team/Treasure" onClick={handleDropdownItemClick} > Message From Treasurer </Link> </li> {/* <li> <Link className="dropdown-item" to="AboutPage/Director" onClick={handleDropdownItemClick} > Message From Director </Link> </li> */} </ul>
+              <li> <Link className="dropdown-item" to="/about-us/leadership-team/chairman-message" onClick={handleDropdownItemClick} > Message From Founder President </Link> </li> <li> <Link className="dropdown-item" to="/about-us/leadership-team/secretary-message" onClick={handleDropdownItemClick} > Message From Secretary </Link> </li> <li> <Link className="dropdown-item" to="/about-us/leadership-team/treasurer-message" onClick={handleDropdownItemClick} > Message From Treasurer </Link> </li> </ul>
           </li>
 
           <li>
             <Link
               className="dropdown-item"
-              to="/about-us/WhyIsmr"
+              to="/about-us/why-ismr"
               onClick={handleDropdownItemClick}
             >
               Why ISMR?
@@ -170,7 +194,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/about-us/AwardsAndRankings"
+              to="/about-us/awards-and-rankings"
               onClick={handleDropdownItemClick}
             >
               Awards & Ranking
@@ -197,7 +221,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/admissions/EligibilityCriteria"
+              to="/admissions/eligibility-criteria"
               onClick={handleDropdownItemClick}
             >
               Eligibility Criteria
@@ -206,25 +230,16 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/admissions/HowToApplyPage"
+              to="/admissions/how-to-apply"
               onClick={handleDropdownItemClick}
             >
               How To Apply
             </Link>
           </li>
-          {/* <li>
-            <Link
-              className="dropdown-item"
-              to="/Addmissions/FaqBbaBca" // Note: This link path is a duplicate
-              onClick={handleDropdownItemClick}
-            >
-              FAQ's For BBA & BCA
-            </Link>
-          </li> */}
           <li>
             <Link
               className="dropdown-item"
-              to="/admissions/EducationLoan"
+              to="/admissions/education-loan"
               onClick={handleDropdownItemClick}
             >
               Education Loan
@@ -234,7 +249,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/admissions/RefundPolicy"
+              to="/admissions/refund-policy"
               onClick={handleDropdownItemClick}
             >
               Refund Policy
@@ -244,7 +259,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/admissions/AdmissionContact"
+              to="/admissions/contact"
               onClick={handleDropdownItemClick}
             >
               Admission Contact
@@ -253,7 +268,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/admissions/AdmissionDisclaimer"
+              to="/admissions/disclaimer"
               onClick={handleDropdownItemClick}
             >
               Disclaimer for Admissions
@@ -262,7 +277,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/admissions/FeeDisclaimer"
+              to="/admissions/fee-disclaimer"
               onClick={handleDropdownItemClick}
             >
               Disclaimer for Fees Payment
@@ -271,7 +286,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/admissions/FeeStructure"
+              to="/admissions/fee-structure"
               onClick={handleDropdownItemClick}
             >
               Fees Structure
@@ -280,7 +295,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/admissions/RequiredDocuments"
+              to="/admissions/required-documents"
               onClick={handleDropdownItemClick}
             >
               List Of Documents
@@ -306,26 +321,26 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/academics/ProgramsOffered"
+              to="/academics/programs-offered"
               onClick={handleDropdownItemClick}
             >
-              Academics
+              Academics Overview
             </Link>
           </li>
 
-          {/* <li>
-            <Link
-              className="dropdown-item"
-              to="/academics/CourseDuration"
-              onClick={handleDropdownItemClick}
-            >
-              Course Duration
-            </Link>
-          </li> */}
           <li>
             <Link
               className="dropdown-item"
-              to="/Academics/MBA-Program"
+              to="/academics/programs"
+              onClick={handleDropdownItemClick}
+            >
+              Programs & Duration
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="dropdown-item"
+              to="/programs/mba-in-business-analytics-pune"
               onClick={handleDropdownItemClick}
             >
               MBA Program
@@ -353,7 +368,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/placements/PlacementsOverview"
+              to="/placements"
               onClick={handleDropdownItemClick}
             >
               Placement Overview
@@ -363,7 +378,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/placements/PlacementRules"
+              to="/placements/rules-and-regulations"
               onClick={handleDropdownItemClick}
             >
               Placement Rules & Regulations
@@ -372,21 +387,17 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/placements/PlacementProcess"
+              to="/placements/process"
               onClick={handleDropdownItemClick}
             >
               Placement Process
             </Link>
           </li>
 
-
-
-          {/* Cleaned up commented links */}
-
           <li>
             <Link
               className="dropdown-item"
-              to="/placements/InternshipsAndPlacements"
+              to="/placements/internships-and-placements"
               onClick={handleDropdownItemClick}
             >
               Our Internship & Placement
@@ -563,18 +574,16 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/campus-life/StudentLifePage"
+              to="/campus-life/student-life"
               onClick={handleDropdownItemClick}
             >
               Student Campus life
             </Link>
           </li>
-          {/* Cleaned up commented links */}
-
           <li>
             <Link
               className="dropdown-item"
-              to="/campus-life/student-facilities/"
+              to="/campus-life/student-facilities"
               onClick={handleDropdownItemClick}
             >
               Student Facilities
@@ -584,71 +593,23 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/campus-life/CampusNewsletter"
+              to="/campus-life/newsletter"
               onClick={handleDropdownItemClick}
             >
               Newsletters
             </Link>
           </li>
-
         </ul>
 
       </li>
 
 
 
-      {/* NAAC Dropdown */}
-      <li className={`nav-item dropdown ${activeDropdown === 7 ? "show" : ""}`}>
-        <a
-          href="#"
-          className="nav-link dropdown-toggle"
-          role="button"
-          onClick={(e) => {
-            e.preventDefault();
-            toggleDropdown(7);
-          }}
-          aria-expanded={activeDropdown === 7}
-        >
+      {/* NAAC */}
+      <li className="nav-item">
+        <Link to="/naac" className="nav-link" onClick={handleNavLinkClick}>
           NAAC
-        </a>
-        {/* <ul className={`dropdown-menu ${activeDropdown === 7 ? "show" : ""}`}>
-          <li>
-            <a
-              href="accreditation-certificate.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              Accreditation Certificate
-            </a>
-          </li>
-          <li>
-            <a
-              href="ssr-cycle1.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              SSR – Cycle 1
-            </a>
-          </li>
-          <li>
-            <a
-              href="assessment-sheet-cycle1.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              Assessment Sheet – Cycle 1
-            </a>
-          </li>
-          <li>
-            <a
-              href="iqac.html"
-              className="dropdown-item"
-              onClick={handleDropdownItemClick}
-            >
-              IQAC
-            </a>
-          </li>
-        </ul> */}
+        </Link>
       </li>
 
       {/* Contact Us */}
@@ -665,16 +626,43 @@ const Header = () => {
       <style>{`
         /* Custom Navbar Styling */
         .custom-navbar {
-          background-color: #002a5c !important;
           padding: 10px 0 !important;
           min-height: 64px;
-          position: sticky;
-          top: 0;
-          z-index: 1030;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+          width: 100%;
           font-family: 'Inter', Arial, Helvetica, sans-serif !important;
           display: flex;
           align-items: center;
+          transition: background-color 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        /* Transparent over Hero Video (Home Page at top) - Pure Transparent, No Blur */
+        .custom-navbar.navbar-transparent {
+          position: relative !important;
+          z-index: 1030;
+          background: transparent !important;
+          background-color: transparent !important;
+          backdrop-filter: none !important;
+          -webkit-backdrop-filter: none !important;
+          box-shadow: none !important;
+          border: none !important;
+          border-bottom: none !important;
+        }
+
+        .custom-navbar.navbar-transparent .nav-link {
+          text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+        }
+
+        /* Scrolled state or on other internal pages - Fixed at top */
+        .custom-navbar.navbar-scrolled {
+          position: fixed !important;
+          top: 0 !important;
+          left: 0 !important;
+          right: 0 !important;
+          width: 100% !important;
+          z-index: 1050 !important;
+          background-color: #002a5c !important;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+          border-bottom: none;
         }
           
 
@@ -1227,50 +1215,73 @@ const Header = () => {
 }
       `}</style>
 
-      <nav className="navbar navbar-expand-lg custom-navbar" ref={navbarRef}>
-        <div className="container-fluid">
-          {/* Logo */}
-          <Link to="/" className="navbar-brand" onClick={handleHomeClick}>
-            <img src="/ISMR logo_page-0001.jpg" alt="Institute Logo" />
-          </Link>
+      <div
+        className="header-wrapper"
+        style={{
+          minHeight: !isHomePage && isScrolled ? "84px" : "auto",
+        }}
+      >
+        <nav
+          className={`navbar navbar-expand-lg custom-navbar ${
+            isHomePage && !isScrolled ? "navbar-transparent" : "navbar-scrolled"
+          }`}
+          style={{
+            position: isHomePage && !isScrolled ? "relative" : "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            width: "100%",
+            zIndex: 1050,
+            backgroundColor: isHomePage && !isScrolled ? "transparent" : "#002a5c",
+            transition: "background-color 0.35s ease, box-shadow 0.35s ease",
+            boxShadow: isHomePage && !isScrolled ? "none" : "0 4px 20px rgba(0, 0, 0, 0.25)",
+          }}
+          ref={navbarRef}
+        >
+          <div className="container-fluid">
+            {/* Logo */}
+            <Link to="/" className="navbar-brand" onClick={handleHomeClick}>
+              <img src="/ISMR logo_page-0001.jpg" alt="Institute Logo" />
+            </Link>
 
-          {/* Apply Button - Mobile Top */}
-          <div className="d-lg-none ms-auto me-2">
-            <a
-              href="admission.html"
-              className="apply-btn d-none d-sm-inline-flex"
-              onClick={handleNavLinkClick}
+            {/* Apply Button - Mobile Top */}
+            <div className="d-lg-none ms-auto me-2">
+              <a
+                href="admission.html"
+                className="apply-btn d-none d-sm-inline-flex"
+                onClick={handleNavLinkClick}
+              >
+                Apply Now
+                <i className="bx bx-right-arrow-alt"></i>
+              </a>
+            </div>
+
+            {/* Mobile Toggler */}
+            <button
+              className="navbar-toggler"
+              type="button"
+              // data-bs-toggle="collapse"
+              // data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded={isNavbarOpen}
+              aria-label="Toggle navigation"
+              onClick={toggleNavbar}
             >
-              Apply Now
-              <i className="bx bx-right-arrow-alt"></i>
-            </a>
+              <span className="navbar-toggler-icon"></span>
+            </button>
+
+            {/* Desktop & Mobile Navigation */}
+            <div
+              className={`collapse navbar-collapse ${isNavbarOpen ? "show" : ""}`}
+              id="navbarNav"
+            >
+              {navItems}
+              {/* Mobile-specific Apply Now Button (inside the collapsed menu) */}
+
+            </div>
           </div>
-
-          {/* Mobile Toggler */}
-          <button
-            className="navbar-toggler"
-            type="button"
-            // data-bs-toggle="collapse"
-            // data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded={isNavbarOpen}
-            aria-label="Toggle navigation"
-            onClick={toggleNavbar}
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-
-          {/* Desktop & Mobile Navigation */}
-          <div
-            className={`collapse navbar-collapse ${isNavbarOpen ? "show" : ""}`}
-            id="navbarNav"
-          >
-            {navItems}
-            {/* Mobile-specific Apply Now Button (inside the collapsed menu) */}
-
-          </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </>
   );
 };

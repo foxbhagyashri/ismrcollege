@@ -169,10 +169,10 @@ function Applicationform() {
                 ></div>
 
                 <div className="container position-relative py-5">
-                    <h1 className="mb-3" style={{ fontSize: "40px", fontWeight: 700 }}>
+                    <h1 className="mb-3" style={{ fontSize: "40px", fontWeight: 700, color: "#ffffff" }}>
                         Application <span className="text-warning">Form</span>
                     </h1>
-                    <p className="mb-0">
+                    <p className="mb-0" style={{ fontSize: "15px", color: "#ffffff" }}>
                         Application • <span className="text-warning">Form</span>
                     </p>
                 </div>

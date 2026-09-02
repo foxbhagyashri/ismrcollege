@@ -36,21 +36,22 @@ const SEO = ({
     metaKeywords.setAttribute("content", keywords);
 
     // 4. Update / Create Canonical Tag
-    if (canonical) {
+    const targetCanonical = canonical || (typeof window !== "undefined" ? `https://ismrpune.edu.in${window.location.pathname}` : "https://ismrpune.edu.in/");
+    if (targetCanonical) {
       let canonicalLink = document.querySelector('link[rel="canonical"]');
       if (!canonicalLink) {
         canonicalLink = document.createElement("link");
         canonicalLink.setAttribute("rel", "canonical");
         document.head.appendChild(canonicalLink);
       }
-      canonicalLink.setAttribute("href", canonical);
+      canonicalLink.setAttribute("href", targetCanonical);
     }
 
     // 5. Update / Create OpenGraph Tags
     const ogTags = [
       { property: "og:title", content: title },
       { property: "og:description", content: description },
-      { property: "og:url", content: canonical },
+      { property: "og:url", content: targetCanonical },
       { property: "og:image", content: ogImage },
       { property: "og:type", content: "website" }
     ];

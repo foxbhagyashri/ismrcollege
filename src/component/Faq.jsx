@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import ContactForm from "./forms/ContactForm";
 import { Link } from "react-router-dom";
+import { cn } from "../../../New-sara-spa/src/lib/utils";
 
 
 export default function FaqAndContactSection() {
@@ -262,7 +263,7 @@ export default function FaqAndContactSection() {
           You can apply online only through the ISMR website. Or click on the following link
           <br />
           <button
-            className="btn btn-secondary mt-2"
+            className={cn('btn', 'btn-secondary', 'mt-2')}
             onClick={() => setShowModal(true)}
           >
             Apply Now
@@ -622,15 +623,15 @@ export default function FaqAndContactSection() {
                 zIndex: 9999,
               }}
             >
-              <div className="bg-white p-4 rounded" style={{ width: "90%", maxWidth: 500 }}>
+              <div className={cn('bg-white', 'p-4', 'rounded')} style={{ width: "90%", maxWidth: 500 }}>
                 <h4>Enquiry Form</h4>
 
                 <ContactForm />
 
-                {successMsg && <p className="text-success mt-2">{successMsg}</p>}
+                {successMsg && <p className={cn('text-success', 'mt-2')}>{successMsg}</p>}
 
                 <button
-                  className="btn btn-link text-danger mt-2"
+                  className={cn('btn', 'btn-link', 'text-danger', 'mt-2')}
                   onClick={() => setShowModal(false)}
                 >
                   Close
@@ -658,7 +659,7 @@ export default function FaqAndContactSection() {
               value={form.name}
               onChange={handleChange}
               placeholder="Full Name"
-              className="form-control mb-2"
+              className={cn('form-control', 'mb-2')}
             />
             {errors.name && <small className="text-danger">{errors.name}</small>}
 
@@ -668,7 +669,7 @@ export default function FaqAndContactSection() {
               value={form.email}
               onChange={handleChange}
               placeholder="Email"
-              className="form-control mb-2"
+              className={cn('form-control', 'mb-2')}
             />
             {errors.email && <small className="text-danger">{errors.email}</small>}
 
@@ -682,7 +683,7 @@ export default function FaqAndContactSection() {
                   setForm({ ...form, phone: nums });
               }}
               placeholder="Phone"
-              className="form-control mb-2"
+              className={cn('form-control', 'mb-2')}
             />
             {errors.phone && <small className="text-danger">{errors.phone}</small>}
 
@@ -690,7 +691,7 @@ export default function FaqAndContactSection() {
               name="city"
               value={form.city}
               onChange={handleChange}
-              className="form-control mb-2"
+              className={cn('form-control', 'mb-2')}
             >
               <option value="">Select City</option>
               {cities.map((city) => (
@@ -704,7 +705,7 @@ export default function FaqAndContactSection() {
               name="program"
               value={form.program}
               onChange={handleChange}
-              className="form-control mb-2"
+              className={cn('form-control', 'mb-2')}
             >
               <option value="">Select Programme *</option>
               <option value="MBA">MBA</option>
@@ -721,7 +722,7 @@ export default function FaqAndContactSection() {
               value={form.message}
               onChange={handleChange}
               placeholder="Write your query"
-              className="form-control mb-2"
+              className={cn('form-control', 'mb-2')}
             />
 
             <div className="consent-wrapper">
@@ -744,7 +745,7 @@ export default function FaqAndContactSection() {
 
             <button
               type="submit"
-              className="btn w-100 mt-3"
+              className={cn('btn', 'w-100', 'mt-3')}
               disabled={loading}
               style={{
                 backgroundColor: "#0a2240",
@@ -757,7 +758,7 @@ export default function FaqAndContactSection() {
             </button>
 
             {successMsg && (
-              <div className="alert alert-success mt-3">{successMsg}</div>
+              <div className={cn('alert', 'alert-success', 'mt-3')}>{successMsg}</div>
             )}
           </form>
 

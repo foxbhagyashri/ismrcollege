@@ -243,10 +243,11 @@ function Courseduration() {
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               fontSize: "40px",
               fontWeight: 700,
+              color: "#ffffff",
               margin: 0,
             }}
           >
-            Program <span className="text-warning">Offered</span>
+            Programs & <span className="text-warning">Duration</span>
           </h1>
           <p
             className="mb-0"
@@ -254,9 +255,10 @@ function Courseduration() {
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               fontSize: "15px",
               marginTop: "0.5rem",
+              color: "#ffffff",
             }}
           >
-            Academics • <span className="text-warning">Programs</span>
+            Academics • <span className="text-warning">Programs & Duration</span>
           </p>
         </div>
       </section>

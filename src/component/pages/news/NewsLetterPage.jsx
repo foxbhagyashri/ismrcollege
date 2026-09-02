@@ -206,6 +206,7 @@ function MonthlyNewsletter() {
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               fontSize: "40px",
               fontWeight: 700,
+              color: "#ffffff",
               margin: 0,
               marginBottom: "10px",
             }}
@@ -216,6 +217,7 @@ function MonthlyNewsletter() {
             style={{
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               fontSize: "15px",
+              color: "#ffffff",
               margin: 0,
             }}
           >

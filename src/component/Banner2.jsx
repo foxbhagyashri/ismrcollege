@@ -53,7 +53,7 @@ const Banner = () => {
                 </div>
                 <ul className="list-unstyled  d-flex align-items-center btn-list">
                   <li className="d-inline-block">
-                    <Link className="default-btn" to="Aboutpage/Aboutinstutue">
+                    <Link className="default-btn" to="/about-us">
                       Institute Overview &nbsp;
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

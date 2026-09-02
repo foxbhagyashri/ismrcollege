@@ -305,7 +305,14 @@ function StudentCampusAndActivities() {
           backgroundSize: "cover",
         }}
       >
-        <h1 className="fw-bold">Student <span className="text-warning">Campus Life</span></h1>
+        <div className="container position-relative py-4">
+          <h1 className="fw-bold mb-2" style={{ color: "#ffffff", fontSize: "40px" }}>
+            Student <span className="text-warning">Campus Life</span>
+          </h1>
+          <p className="mb-0" style={{ fontSize: "15px", color: "#ffffff" }}>
+            Campus Life • <span className="text-warning">Student Campus Life</span>
+          </p>
+        </div>
       </section>
 
       <div className="container py-5">

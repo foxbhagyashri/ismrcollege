@@ -10,6 +10,8 @@ import {
   faTractor,
   faTruckFast,
   faNotesMedical,
+  faGraduationCap,
+  faLaptopCode,
 } from "@fortawesome/free-solid-svg-icons";
 
 const ProgramsSection = () => {
@@ -19,49 +21,63 @@ const ProgramsSection = () => {
       description:
         "The MBA in Marketing Management at ISMR Pune is a 2-year, SPPU-affiliated program under NEP 2020.",
       icon: faChartLine,
-      link: "/Academics/MBA-Program",
+      link: "/programs/mba-in-marketing-management-in-pune",
     },
     {
       title: "MBA in Finance Management",
       description:
         "MBA in Finance Management in Pune at ISMR is a 2-year full-time postgraduate programme affiliated with Savitribai Phule Pune University (SPPU) and approved by AICTE.",
       icon: faSackDollar,
-      link: "/Academics/MBA-Program",
+      link: "/programs/mba-in-finance-management-in-pune",
     },
     {
       title: "MBA in Human Resource Management",
       description:
         "The MBA in Human Resource Management at ISMR is offered by an AICTE-approved MBA HR College in Pune, designed to prepare students for careers in recruitment, HR operations, talent management, and strategic human resources. ",
       icon: faUsersLine,
-      link: "/Academics/MBA-Program",
+      link: "/programs/mba-hr-college-in-pune",
     },
     {
-      title: "Business Analytics",
+      title: "MBA in Business Analytics",
       description:
         "Business Analytics is the practice of using data-driven techniques to inform strategic and operational decision-making across organizations.",
       icon: faMagnifyingGlassChart,
-      link: "/Academics/MBA-Program",
+      link: "/programs/mba-in-business-analytics-pune",
     },
     {
       title: "MBA in Operations and Supply Chain Management",
       description:
         "Operations and supply chain management involves planning procurement, manufacturing, inventory, logistics, and product delivery to improve business efficiency.",
       icon: faTruckFast,
-      link: "/Academics/MBA-Program",
+      link: "/programs/mba-in-operations-and-supply-chain-management-in-pune",
     },
     {
       title: "MBA in Pharma & Healthcare Management",
       description:
         "An MBA in Pharma & Healthcare Management in Pune prepares science, pharmacy, and allied health graduates, as well as working professionals in hospitals and pharma companies, to move into leadership roles across one of India's fastest-growing industries. ",
       icon: faNotesMedical,
-      link: "/Academics/MBA-Program",
+      link: "/programs/mba-in-pharma-healthcare-management-in-pune",
     },
     {
       title: "MBA in Agribusiness Management",
       description:
         "MBA in Agribusiness Management in Pune is a two-year postgraduate program that combines agricultural science with business management, supply chain operations, rural finance, commodity markets, and strategic decision-making.",
       icon: faTractor,
-      link: "/Academics/MBA-Program",
+      link: "/programs/mba-in-agribusiness-management-pune",
+    },
+    {
+      title: "BBA Programme in Pune",
+      description:
+        "Bachelor of Business Administration at ISMR Pune equips students with practical business skills, industry internships, and managerial leadership foundations.",
+      icon: faGraduationCap,
+      link: "/programs/bba-college-in-pune",
+    },
+    {
+      title: "BCA Programme in Pune",
+      description:
+        "Bachelor of Computer Applications at ISMR Pune offers hands-on training in software development, cloud computing, and high-growth IT placements.",
+      icon: faLaptopCode,
+      link: "/programs/bca-college-in-pune",
     },
   ];
 

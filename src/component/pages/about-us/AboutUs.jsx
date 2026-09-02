@@ -62,7 +62,7 @@ const InstitutionStats = () => {
         }}
       >
         <div
-          className="position-absolute top-0   end-0 w-100 h-100 opacity-25"
+          className="position-absolute top-0 end-0 w-100 h-100 opacity-25"
           style={{
             backgroundImage: `url(${allsectionbg})`,
             backgroundPosition: "center",
@@ -77,6 +77,7 @@ const InstitutionStats = () => {
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               fontSize: "40px",
               fontWeight: 700,
+              color: "#ffffff",
               margin: 0,
             }}
           >
@@ -88,6 +89,7 @@ const InstitutionStats = () => {
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               fontSize: "15px",
               marginTop: "0.5rem",
+              color: "#ffffff",
             }}
           >
             About • <span className="text-warning">About Institute</span>

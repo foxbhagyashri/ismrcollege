@@ -1,17 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./TopHeader.css";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import ContactForm from "./forms/ContactForm";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ISMRFormModal from "./forms/ISMRFormModal";
 
 const TopHeader = () => {
     const [showModal, setShowModal] = useState(false);
     const [open, setOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+    const location = useLocation();
+    const isHomePage = location.pathname === "/" || location.pathname === "";
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollY =
+                window.pageYOffset ||
+                window.scrollY ||
+                document.documentElement.scrollTop ||
+                document.body.scrollTop ||
+                0;
+            setIsScrolled(scrollY > 20);
+        };
+
+        window.addEventListener("scroll", handleScroll, { passive: true, capture: true });
+        document.addEventListener("scroll", handleScroll, { passive: true, capture: true });
+        handleScroll();
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll, { capture: true });
+            document.removeEventListener("scroll", handleScroll, { capture: true });
+        };
+    }, [location.pathname]);
 
     return (
         <>
-            <div className="top-header-area">
+            <div className={`top-header-area ${isHomePage && !isScrolled ? "topbar-transparent" : "topbar-solid"}`}>
                 <div className="container-fluid d-flex justify-content-between align-items-center top-header-container">
                     {/* Left Section */}
                     <div className="top-header-left">
@@ -67,7 +91,7 @@ const TopHeader = () => {
                         <ul className="list-unstyled d-flex gap-2 mb-0">
                             <li>
                                 <Link
-                                    to="/Blogs"
+                                    to="/blogs"
                                     className="btn btn-sm text-white"
                                 >
                                     Blogs

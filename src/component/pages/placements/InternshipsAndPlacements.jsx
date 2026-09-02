@@ -166,6 +166,7 @@ const Ourplacement = () => {
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               fontSize: "40px",
               fontWeight: 700,
+              color: "#ffffff",
               margin: 0,
             }}
           >
@@ -177,6 +178,7 @@ const Ourplacement = () => {
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               fontSize: "15px",
               marginTop: "0.5rem",
+              color: "#ffffff",
             }}
           >
             Placement • <span className="text-warning">Our Internship & Placement</span>

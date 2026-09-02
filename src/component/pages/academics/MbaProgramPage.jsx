@@ -73,13 +73,14 @@ function MbaProgramPage() {
     const navigate = useNavigate();
 
     const specializationRoutes = {
-        "Financial Management": "/Programs/mba-in-finance-management-in-pune",
-        "Marketing Management": "/Programs/mba-in-marketing-management-in-pune",
-        "Human Resource Management": "/Programs/mba-hr-college-in-pune",
-        "Operations & Supply Chain Management": "/Programs/mba-in-operations-and-supply-chain-management-in-pune",
-        "Business Analytics": "/mba/mba-in-business-analytics-pune",
-        "Agribusiness Management": "/Programs/mba-in-agribusiness-management-pune",
-        "Pharma Management": "/Programs/mba-in-pharma-healthcare-management-in-pune",
+        "Financial Management": "/programs/mba-in-finance-management-in-pune",
+        "Marketing Management": "/programs/mba-in-marketing-management-in-pune",
+        "Human Resource Management": "/programs/mba-hr-college-in-pune",
+        "Operations & Supply Chain Management": "/programs/mba-in-operations-and-supply-chain-management-in-pune",
+        "Business Analytics": "/programs/mba-in-business-analytics-pune",
+        "Agribusiness Management": "/programs/mba-in-agribusiness-management-pune",
+        "Pharma Management": "/programs/mba-in-pharma-healthcare-management-in-pune",
+        "Pharma & Healthcare Management": "/programs/mba-in-pharma-healthcare-management-in-pune",
     };
 
     const validateForm = () => {
@@ -240,7 +241,7 @@ function MbaProgramPage() {
         "Business Analytics": {
             title: "Business Analytics",
             description:
-                "Business Analytics is the practice of using data-driven techniques to inform strategic and operational decision-making. It integrates statistical analysis, predictive modelling, data visualization, and machine learning to uncover patterns, forecast trends, and optimize performance across the organization.",
+                "Business Analytics is the practice of using data-driven techniques to inform strategic and operational decision-making. It integrates statistical analysis, predictive modelling, data visualization, and machine learning to uncover patterns, forecast trends, and optimize performance across the organization. Students gain expertise in tools such as Advanced Excel, SQL, Python, Tableau, and Power BI, preparing graduates to translate complex analytical datasets into impactful executive strategies. With a strong blend of data science and business administration, students are trained for high-impact careers in data analytics, consulting, financial modeling, and AI-enabled decision management.",
         },
         "Agribusiness Management": {
             title: "Agribusiness Management",
@@ -379,10 +380,12 @@ function MbaProgramPage() {
                             <h1
                                 style={{
                                     ...display,
+                                    color: "#ffffff",
                                     fontSize: "3rem",
                                     fontWeight: 800,
                                     margin: 0,
                                     lineHeight: 1.15,
+                                    textShadow: "0 2px 8px rgba(0, 0, 0, 0.45)",
                                 }}
                             >
                                 Master of Business
@@ -392,9 +395,11 @@ function MbaProgramPage() {
                             <p
                                 style={{
                                     ...body,
-                                    fontSize: "17px",
-                                    opacity: 0.9,
-
+                                    color: "#ffffff",
+                                    fontSize: "18px",
+                                    fontWeight: 400,
+                                    lineHeight: 1.65,
+                                    textShadow: "0 1px 4px rgba(0, 0, 0, 0.5)",
                                     marginTop: "1.25rem",
                                 }}
                             >
@@ -570,13 +575,30 @@ function MbaProgramPage() {
                                         </p>
 
                                         {descriptionIsLong && (
-                                            <button
-                                                type="button"
-                                                className="mba-readmore-btn mb-3"
-                                                onClick={() => navigate(specializationRoutes[activeSection])}
-                                            >
-                                                Read More
-                                            </button>
+                                            <div className="d-flex align-items-center gap-3 mb-3">
+                                                {activeSection === "Business Analytics" ? (
+                                                    <button
+                                                        type="button"
+                                                        className="mba-readmore-btn"
+                                                        onClick={() => setShowFullDescription(!showFullDescription)}
+                                                    >
+                                                        {showFullDescription ? "Read Less" : "Read More"}
+                                                    </button>
+                                                ) : (
+                                                    <button
+                                                        type="button"
+                                                        className="mba-readmore-btn"
+                                                        onClick={() => {
+                                                            if (specializationRoutes[activeSection]) {
+                                                                navigate(specializationRoutes[activeSection]);
+                                                                window.scrollTo({ top: 0, behavior: "smooth" });
+                                                            }
+                                                        }}
+                                                    >
+                                                        Read More →
+                                                    </button>
+                                                )}
+                                            </div>
                                         )}
 
                                         <div style={{ textAlign: "right" }}>

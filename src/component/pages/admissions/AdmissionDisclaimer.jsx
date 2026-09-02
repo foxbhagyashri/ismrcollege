@@ -40,6 +40,7 @@ export default function DisclaimerPage() {
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               fontSize: "40px",
               fontWeight: 700,
+              color: "#ffffff",
               margin: 0,
             }}
           >
@@ -50,7 +51,8 @@ export default function DisclaimerPage() {
             style={{
               fontFamily: "'Inter', Arial, Helvetica, sans-serif",
               fontSize: "15px",
-              marginTop: "0.5rem"
+              marginTop: "0.5rem",
+              color: "#ffffff",
             }}
           >
             Admissions • <span className="text-warning">Disclaimer for Admissions</span>
