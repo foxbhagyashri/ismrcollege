@@ -148,9 +148,74 @@ function faviconPlugin() {
   };
 }
 
+import fs from 'fs';
+import path from 'path';
+
+function ssgPrerenderPlugin() {
+  return {
+    name: 'ssg-prerender-plugin',
+    apply: 'build',
+    closeBundle() {
+      const distDir = path.resolve(__dirname, 'dist');
+      const templatePath = path.join(distDir, 'index.html');
+      if (!fs.existsSync(templatePath)) return;
+
+      const template = fs.readFileSync(templatePath, 'utf8');
+      const seoRoutesFile = path.resolve(__dirname, 'src/seoRoutes.json');
+      if (!fs.existsSync(seoRoutesFile)) return;
+
+      const seoRoutes = JSON.parse(fs.readFileSync(seoRoutesFile, 'utf8'));
+      let generatedCount = 0;
+
+      for (const [route, meta] of Object.entries(seoRoutes)) {
+        if (!route || route === '/') continue;
+
+        const cleanRoute = route.replace(/^\/+/, '').replace(/\/+$/, '');
+        const targetDir = path.join(distDir, cleanRoute);
+        const targetIndexFile = path.join(targetDir, 'index.html');
+        const targetHtmlFile = path.join(distDir, `${cleanRoute}.html`);
+
+        let html = template;
+
+        // 1. Title
+        if (meta.title) {
+          html = html.replace(/<title>[^<]*<\/title>/i, `<title>${meta.title}</title>`);
+          html = html.replace(/<meta\s+property=["']og:title["']\s+content=["'][^"']*["']\s*\/?>/i, `<meta property="og:title" content="${meta.title}" />`);
+        }
+
+        // 2. Canonical Tag & OG URL
+        if (meta.canonical) {
+          html = html.replace(/<link\s+rel=["']canonical["']\s+href=["'][^"']*["']\s*\/?>/i, `<link rel="canonical" href="${meta.canonical}" />`);
+          html = html.replace(/<meta\s+property=["']og:url["']\s+content=["'][^"']*["']\s*\/?>/i, `<meta property="og:url" content="${meta.canonical}" />`);
+        }
+
+        // 3. Description
+        if (meta.description) {
+          html = html.replace(/<meta\s+name=["']description["']\s+content=["'][^"']*["']\s*\/?>/i, `<meta name="description" content="${meta.description}" />`);
+          html = html.replace(/<meta\s+property=["']og:description["']\s+content=["'][^"']*["']\s*\/?>/i, `<meta property="og:description" content="${meta.description}" />`);
+        }
+
+        // Write both /route/index.html (for Hostinger Apache) AND /route.html (for Vercel cleanUrls)
+        fs.mkdirSync(targetDir, { recursive: true });
+        fs.writeFileSync(targetIndexFile, html, 'utf8');
+
+        const parentOfHtml = path.dirname(targetHtmlFile);
+        if (!fs.existsSync(parentOfHtml)) {
+          fs.mkdirSync(parentOfHtml, { recursive: true });
+        }
+        fs.writeFileSync(targetHtmlFile, html, 'utf8');
+
+        generatedCount++;
+      }
+
+      console.log(`\n[SSG Prerender] Successfully generated ${generatedCount} static HTML pages for Hostinger and Vercel!\n`);
+    }
+  };
+}
+
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), dynamicCanonicalPlugin(), faviconPlugin()],
+  plugins: [react(), dynamicCanonicalPlugin(), faviconPlugin(), ssgPrerenderPlugin()],
   build: {
     sourcemap: true
   }
