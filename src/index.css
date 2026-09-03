@@ -35,8 +35,44 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-family: var(--font-primary) !important;
-  color: var(--color-text);
   line-height: 1.65;
+}
+
+/* =========================================================
+   TEXT VISIBILITY & HIGH CONTRAST UTILITIES
+   Ensures all subtitles, paragraphs, and sub-content
+   inside dark containers, banners, and cards are clearly legible
+   ========================================================= */
+.text-white,
+.text-white p,
+.text-white span:not([class*="text-warning"]):not([class*="text-gold"]):not([class*="text-danger"]):not([class*="text-success"]):not([class*="text-primary"]),
+.text-white div:not([class*="text-"]),
+.text-white li,
+.text-white small,
+.text-white label,
+.text-white strong,
+.text-white b,
+section.text-white p,
+section[style*="#0a2240"] p,
+section[style*="#002a5c"] p,
+div[style*="#002a5c"] p,
+div[style*="#0a2240"] p {
+  color: #ffffff !important;
+}
+
+/* Ensure warning / gold accent text stays vibrant gold */
+.text-white .text-warning,
+.text-warning,
+span.text-warning,
+section[style*="#0a2240"] .text-warning {
+  color: #ffc107 !important;
+}
+
+/* Muted text on dark backgrounds */
+.text-white-50,
+.text-white-50 p,
+.text-white-50 span {
+  color: rgba(255, 255, 255, 0.8) !important;
 }
 
 /* =========================================================

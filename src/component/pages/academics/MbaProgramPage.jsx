@@ -632,7 +632,7 @@ function MbaProgramPage() {
                                             its syllabus.
                                         </p>
                                         <Link
-                                            to="/Addmissions/FaqBbaBca"
+                                            to="/admissions/faq-bba-bca"
                                             className="btn btn-sm"
                                             style={{
                                                 backgroundColor: GOLD,

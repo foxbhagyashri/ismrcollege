@@ -2506,7 +2506,7 @@ font-size:14px;
                                     not just which concepts they know.
                                 </p>
 
-                                {/* <a href="/Contactus" className="default-btn curr-cta">
+                                {/* <a href="/contact-us" className="default-btn curr-cta">
                                     Evaluate your placement readiness — speak to an ISMR counsellor →
                                 </a> */}
                             </div>

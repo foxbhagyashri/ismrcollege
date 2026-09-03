@@ -1220,9 +1220,9 @@ export default function BCACourse() {
               Request the Detailed BCA Course Brochure and Fee Structure
             </p>
 
-            <a href="/Contactus" className="default-btn">
+            <Link to="/contact-us" className="default-btn">
               Request Brochure →
-            </a>
+            </Link>
           </div>
         </div>
       </section>

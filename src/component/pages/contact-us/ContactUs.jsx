@@ -376,7 +376,7 @@ function Contactus() {
               </p>
             </div>
             <div className="col-lg-4 text-lg-end text-center">
-              <Link to="/Applicationform"> <button className="btn btn-custom btn-primary-custom">
+              <Link to="/application-form"> <button className="btn btn-custom btn-primary-custom">
                 Application Form <i className="fas fa-arrow-right ms-2"></i>
               </button></Link>
             </div>
@@ -396,11 +396,11 @@ function Contactus() {
                 }}
               >
                 <div className="text-center">
-                  <i className="fas fa-map-marker-alt fa-3x mb-3"></i>
-                  <h5>Interactive Map Location</h5>
+                  <i className="fas fa-map-marker-alt fa-3x mb-3 text-warning"></i>
+                  <h5 className="text-white fw-bold mb-3">Interactive Map Location</h5>
                   <p
-                    className="mt-3"
-                    style={{ fontSize: "0.9rem", lineHeight: "1.4" }}
+                    className="mt-3 text-white"
+                    style={{ fontSize: "0.95rem", lineHeight: "1.6", color: "#ffffff", opacity: 0.95 }}
                   >
                     Bypass Pune Saswad Road, Sr. No 907, Opp Hotel Vijay
                     Executive, Gaidhara Kanifnath College Road, Wadki, Pune -

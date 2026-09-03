@@ -7,12 +7,19 @@ const CANONICAL_MAP = {
 
   // 1-7: Course Degree Pages (No trailing slash as specified)
   '/programs/mba-in-marketing-management-in-pune': 'https://ismrpune.edu.in/programs/mba-in-marketing-management-in-pune',
+  '/Programs/MBA-Marketing-management-in-pune': 'https://ismrpune.edu.in/programs/mba-in-marketing-management-in-pune',
   '/programs/mba-hr-college-in-pune': 'https://ismrpune.edu.in/programs/mba-hr-college-in-pune',
+  '/Programs/MBA-HR-Management-in-Pune': 'https://ismrpune.edu.in/programs/mba-hr-college-in-pune',
   '/programs/mba-in-finance-management-in-pune': 'https://ismrpune.edu.in/programs/mba-in-finance-management-in-pune',
+  '/Programs/MBA-in-Finance-Management-in-Pune': 'https://ismrpune.edu.in/programs/mba-in-finance-management-in-pune',
   '/programs/mba-in-business-analytics-pune': 'https://ismrpune.edu.in/programs/mba-in-business-analytics-pune',
+  '/Programs/MBA-Business-Analytics': 'https://ismrpune.edu.in/programs/mba-in-business-analytics-pune',
   '/programs/mba-in-pharma-healthcare-management-in-pune': 'https://ismrpune.edu.in/programs/mba-in-pharma-healthcare-management-in-pune',
+  '/Programs/MBA-in-Pharma-Healthcare-Management-in-Pune': 'https://ismrpune.edu.in/programs/mba-in-pharma-healthcare-management-in-pune',
   '/programs/mba-in-operations-and-supply-chain-management-in-pune': 'https://ismrpune.edu.in/programs/mba-in-operations-and-supply-chain-management-in-pune',
+  '/Programs/MBA-in-Operations-and-Supply-Chain-Management-Programme-in-pune': 'https://ismrpune.edu.in/programs/mba-in-operations-and-supply-chain-management-in-pune',
   '/programs/mba-in-agribusiness-management-pune': 'https://ismrpune.edu.in/programs/mba-in-agribusiness-management-pune',
+  '/Programs/MBA-in-Agribusiness-Management-College-in-Pune': 'https://ismrpune.edu.in/programs/mba-in-agribusiness-management-pune',
   '/programs/bba-college-in-pune': 'https://ismrpune.edu.in/programs/bba-college-in-pune',
   '/programs/bca-college-in-pune': 'https://ismrpune.edu.in/programs/bca-college-in-pune',
 

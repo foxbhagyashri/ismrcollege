@@ -1,9 +1,90 @@
+# =========================================================
+# Hostinger Apache / LiteSpeed Configuration for ISMR Pune (SPA)
+# =========================================================
+
+# Set default charset
+AddDefaultCharset UTF-8
+
+# Enable Rewrite Engine
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME} !-l
-  RewriteRule . /index.html [L]
+
+  # 301 Permanent Redirects for Old Course URLs to SEO-friendly URLs
+  RewriteRule ^Programs/MBA-Marketing-management-in-pune/?$ /programs/mba-in-marketing-management-in-pune [R=301,L,NC]
+  RewriteRule ^Programs/MBA-HR-Management-in-Pune/?$ /programs/mba-hr-college-in-pune [R=301,L,NC]
+  RewriteRule ^Programs/MBA-in-Finance-Management-in-Pune/?$ /programs/mba-in-finance-management-in-pune [R=301,L,NC]
+  RewriteRule ^Programs/MBA-Business-Analytics/?$ /programs/mba-in-business-analytics-pune [R=301,L,NC]
+  RewriteRule ^Programs/MBA-in-Pharma-Healthcare-Management-in-Pune/?$ /programs/mba-in-pharma-healthcare-management-in-pune [R=301,L,NC]
+  RewriteRule ^Programs/MBA-in-Operations-and-Supply-Chain-Management-Programme-in-pune/?$ /programs/mba-in-operations-and-supply-chain-management-in-pune [R=301,L,NC]
+  RewriteRule ^Programs/MBA-in-Agribusiness-Management-College-in-Pune/?$ /programs/mba-in-agribusiness-management-pune [R=301,L,NC]
+
+  # 301 Permanent Redirects for Common Legacy Aliases
+  RewriteRule ^Contactus/?$ /contact-us/ [R=301,L,NC]
+  RewriteRule ^Applicationform/?$ /application-form [R=301,L,NC]
+  RewriteRule ^aboutus/?$ /about-us/ [R=301,L,NC]
+  RewriteRule ^NAAC/?$ /naac/ [R=301,L,NC]
+  RewriteRule ^Reach-?Us/?$ /contact-us/ [R=301,L,NC]
+
+  # 301 Permanent Redirects for Section Prefix Variations
+  RewriteRule ^Addmissions/Howtoapply/?$ /admissions/how-to-apply/ [R=301,L,NC]
+  RewriteRule ^Addmissions/Educationloan/?$ /admissions/education-loan/ [R=301,L,NC]
+  RewriteRule ^Addmissions/Refundpolicy/?$ /admissions/refund-policy/ [R=301,L,NC]
+  RewriteRule ^Addmissions/Admissioncontact/?$ /admissions/contact/ [R=301,L,NC]
+  RewriteRule ^Addmissions/DisclaimerFeePayment/?$ /admissions/fee-disclaimer/ [R=301,L,NC]
+  RewriteRule ^Addmissions/Feesstructure/?$ /admissions/fee-structure/ [R=301,L,NC]
+  RewriteRule ^Addmissions/FaqBbaBca/?$ /admissions/faq-bba-bca/ [R=301,L,NC]
+  RewriteRule ^Addmissions/(.*)$ /admissions/$1 [R=301,L,NC]
+
+  RewriteRule ^Placementpage/Placementoverview/?$ /placements/ [R=301,L,NC]
+  RewriteRule ^Placementpage/PlacementProcess/?$ /placements/process/ [R=301,L,NC]
+  RewriteRule ^Placementpage/(.*)$ /placements/$1 [R=301,L,NC]
+
+  RewriteRule ^Life@campus/(.*)$ /campus-life/$1 [R=301,L,NC]
+  RewriteRule ^Academics/(.*)$ /academics/$1 [R=301,L,NC]
+
+  # 1. Never rewrite existing files, directories, or symlinks
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d [OR]
+  RewriteCond %{REQUEST_FILENAME} -l
+  RewriteRule ^ - [L]
+
+  # 2. Redirect all other requests to index.html for client-side routing
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# =========================================================
+# Browser Caching for Fast Performance on Hostinger
+# =========================================================
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+
+  # HTML - no cache to always pick up new releases
+  ExpiresByType text/html "access plus 0 seconds"
+
+  # CSS and JavaScript
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+
+  # Images and Favicons
+  ExpiresByType image/x-icon "access plus 1 week"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+
+  # Fonts
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+</IfModule>
+
+# =========================================================
+# Security Headers
+# =========================================================
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>

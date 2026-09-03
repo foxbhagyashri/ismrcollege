@@ -781,7 +781,7 @@ function ProgramOfferedPage() {
                       </p>
 
                       <Link
-                        to="/Addmissions/FaqBbaBca"
+                        to="/admissions/faq-bba-bca"
                         className="btn btn-sm"
                         style={{
                           backgroundColor: "rgb(255, 195, 51)",
@@ -827,7 +827,7 @@ function ProgramOfferedPage() {
                         The BCA program focuses on computer science, software development, data handling, and IT applications. With hands-on training, coding skills, and practical project exposure, ISMR’s BCA program equips students for careers in IT, software development, data analysis, and emerging tech roles. It is the perfect pathway for students aiming for a future in the technology sector. Andprepare higher studies like MCA.
                       </p>
                       <Link
-                        to="/Addmissions/FaqBbaBca"
+                        to="/admissions/faq-bba-bca"
                         className="btn btn-sm"
                         style={{
                           backgroundColor: "rgb(255, 195, 51)",

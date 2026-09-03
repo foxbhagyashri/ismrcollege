@@ -8,7 +8,7 @@ export default function FAQPage() {
   const faqs = [
     {
       question: "What documents are required during MBA admission?",
-      answer: `Documents Required :	10th & 12th mark sheets, Graduation mark sheets (all semesters), Entrance exam scorecard, Aadhaar Card, Passport-size photographs. For more details, For more details, please click on the link give – <a href="/Addmissions/Howtoapply" target="_blank" rel="noopener noreferrer">List of Document</a>`
+      answer: `Documents Required :	10th & 12th mark sheets, Graduation mark sheets (all semesters), Entrance exam scorecard, Aadhaar Card, Passport-size photographs. For more details, please click on the link give – <a href="/admissions/how-to-apply" rel="noopener noreferrer">List of Document</a>`
 
     },
 

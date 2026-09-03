@@ -1492,9 +1492,9 @@ export default function BBACourse() {
                             Apply now for BBA Admissions 2026 at ISMR Pune.
                         </p>
 
-                        <a href="/Contactus" className="default-btn">
+                        <Link to="/contact-us" className="default-btn">
                             Apply Now →
-                        </a>
+                        </Link>
                     </div>
 
                     {/* Fees & Placements Panel */}

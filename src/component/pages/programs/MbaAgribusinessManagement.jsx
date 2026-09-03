@@ -1978,7 +1978,7 @@ font-size:14px;
                   environments before graduation.
                 </p>
 
-                {/* <a href="/Contactus" className="default-btn diff-cta">
+                {/* <a href="/contact-us" className="default-btn diff-cta">
                   Apply Now →
                 </a> */}
               </div>
@@ -2343,7 +2343,7 @@ font-size:14px;
                   one guided step at a time.
                 </p>
 
-                {/* <a href="/Contactus" className="default-btn diff-cta">
+                {/* <a href="/contact-us" className="default-btn diff-cta">
                   Apply Now →
                 </a> */}
               </div>
@@ -2460,7 +2460,7 @@ font-size:14px;
               </div>
             </div>
 
-            {/* <a href="/Contactus" className="default-btn diff-cta">
+            {/* <a href="/contact-us" className="default-btn diff-cta">
               Apply Now →
             </a> */}
           </div>
@@ -2576,7 +2576,7 @@ font-size:14px;
               interaction throughout the program.
             </p>
 
-            {/* <a href="/Contactus" className="default-btn diff-cta">
+            {/* <a href="/contact-us" className="default-btn diff-cta">
               Apply Now →
             </a> */}
           </div>

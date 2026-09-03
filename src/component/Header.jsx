@@ -409,7 +409,7 @@ const Header = () => {
           {/* <li>
             <Link
               className="dropdown-item"
-              to="/Placementpage/Corporate"
+              to="/placements/corporate-partners"
               onClick={handleDropdownItemClick}
             >
               Corporate & Student Testimonials
@@ -1222,9 +1222,8 @@ const Header = () => {
         }}
       >
         <nav
-          className={`navbar navbar-expand-lg custom-navbar ${
-            isHomePage && !isScrolled ? "navbar-transparent" : "navbar-scrolled"
-          }`}
+          className={`navbar navbar-expand-lg custom-navbar ${isHomePage && !isScrolled ? "navbar-transparent" : "navbar-scrolled"
+            }`}
           style={{
             position: isHomePage && !isScrolled ? "relative" : "fixed",
             top: 0,

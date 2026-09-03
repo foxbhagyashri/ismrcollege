@@ -109,7 +109,7 @@ const TopHeader = () => {
                                 {open && (
                                     <ul className="notice-menu">
                                         <li>
-                                            <Link to="/notices/AdmissionNotice">
+                                            <Link to="/notices/admission-notice">
                                                 ADMISSIONS
                                             </Link>
                                         </li>

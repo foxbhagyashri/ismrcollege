@@ -4,9 +4,10 @@ import allsectionbg from "../../../assets/allsectionbg.jpg";
 import naacLogo from "../../../assets/Homeimg/NAAC.png";
 import sppuLogo from "../../../assets/Homeimg/SPPU.png";
 import aicteLogo from "../../../assets/Homeimg/AICTE.png";
-import brochurePdf from "/ISMR Brochure.pdf";
 import SEO from "../../SEO";
 import Faq from "../../Faq";
+
+const brochurePdf = "/ISMR Brochure.pdf";
 
 export default function NaacPage() {
   const [activeTab, setActiveTab] = useState("overview");
@@ -215,7 +216,7 @@ export default function NaacPage() {
       </section>
 
       {/* -------- TAB NAVIGATION -------- */}
-      <section className="bg-light border-bottom sticky-top shadow-sm" style={{ zIndex: 10 }}>
+      <section className="bg-light border-bottom sticky-top shadow-sm" style={{ zIndex: 1040, top: "0px" }}>
         <div className="container">
           <ul className="nav nav-pills justify-content-center py-3 gap-2 flex-wrap" style={{ listStyle: "none", padding: 0, margin: 0 }}>
             {[

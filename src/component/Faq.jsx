@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 
 export default function FaqAndContactSection() {
 
-
+  // Simple className joiner utility
+  const cn = (...classes) => classes.filter(Boolean).join(' ');
 
   const cities = [
     { id: 3302, name: "Ahmednagar (Ahmednagar)" },
@@ -261,7 +262,7 @@ export default function FaqAndContactSection() {
           You can apply online only through the ISMR website. Or click on the following link
           <br />
           <button
-            className={cn('btn', 'btn-secondary', 'mt-2')}
+            className="btn btn-secondary mt-2"
             onClick={() => setShowModal(true)}
           >
             Apply Now
@@ -276,7 +277,7 @@ export default function FaqAndContactSection() {
   const filtered = faqs.filter(
     (f) =>
       f.q.toLowerCase().includes(faqQuery.toLowerCase()) ||
-      f.a.toLowerCase().includes(faqQuery.toLowerCase())
+      (typeof f.a === 'string' && f.a.toLowerCase().includes(faqQuery.toLowerCase()))
   );
 
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
@@ -603,7 +604,7 @@ export default function FaqAndContactSection() {
             )}
           </div>
 
-          <Link to="/Addmissions/more-faqs" class="default-btn">More FAQ's</Link>
+          <Link to="/admissions/more-faqs" className="default-btn">More FAQ's</Link>
 
 
 

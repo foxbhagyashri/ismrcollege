@@ -1949,7 +1949,7 @@ font-size:14px;
                   </div>
                 </div>
 
-                {/* <a href="/Contactus" className="default-btn diff-cta">
+                {/* <a href="/contact-us" className="default-btn diff-cta">
                   Apply Now →
                 </a> */}
               </div>
@@ -2405,7 +2405,7 @@ font-size:14px;
                   </div>
                 </div>
 
-                {/* <a href="/Contactus" className="default-btn diff-cta">
+                {/* <a href="/contact-us" className="default-btn diff-cta">
                   Apply Now →
                 </a> */}
               </div>
@@ -2906,7 +2906,7 @@ font-size:14px;
                   global logistics architecture.
                 </p>
 
-                {/* <a href="/Contactus" className="default-btn curr-cta">
+                {/* <a href="/contact-us" className="default-btn curr-cta">
                   Apply Now →
                 </a> */}
               </div>
