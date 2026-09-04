@@ -8,7 +8,7 @@ const SEO = ({
   title = "ISMR B-School Pune | Best MBA, BBA & BCA College in Pune",
   description = "ISMR B-School Pune is a premier management institute offering AICTE approved & SPPU affiliated MBA, BBA and BCA programs with 100% placement assistance.",
   keywords = "ISMR Pune, MBA College in Pune, BBA College in Pune, BCA College in Pune, Best B-School in Pune, Top MBA Placements",
-  canonical = "https://ismrpune.edu.in/",
+  canonical = "",
   ogImage = "https://ismrpune.edu.in/ISMR%20logo_page-0001.png"
 }) => {
   useEffect(() => {
@@ -35,8 +35,13 @@ const SEO = ({
     }
     metaKeywords.setAttribute("content", keywords);
 
-    // 4. Update / Create Canonical Tag
-    const targetCanonical = canonical || (typeof window !== "undefined" ? `https://ismrpune.edu.in${window.location.pathname}` : "https://ismrpune.edu.in/");
+    // 4. Update / Create Canonical Tag (Dynamic fallback if not explicitly passed)
+    let currentPath = "";
+    if (typeof window !== "undefined") {
+      currentPath = window.location.pathname;
+    }
+    const targetCanonical = canonical || (currentPath && currentPath !== "/" ? `https://ismrpune.edu.in${currentPath}` : "https://ismrpune.edu.in/");
+
     if (targetCanonical) {
       let canonicalLink = document.querySelector('link[rel="canonical"]');
       if (!canonicalLink) {
@@ -47,7 +52,7 @@ const SEO = ({
       canonicalLink.setAttribute("href", targetCanonical);
     }
 
-    // 5. Update / Create OpenGraph Tags
+    // 5. Update / Create OpenGraph & Twitter Meta Tags
     const ogTags = [
       { property: "og:title", content: title },
       { property: "og:description", content: description },
@@ -61,6 +66,23 @@ const SEO = ({
       if (!tag) {
         tag = document.createElement("meta");
         tag.setAttribute("property", property);
+        document.head.appendChild(tag);
+      }
+      tag.setAttribute("content", content);
+    });
+
+    const twitterTags = [
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
+      { name: "twitter:image", content: ogImage }
+    ];
+
+    twitterTags.forEach(({ name, content }) => {
+      let tag = document.querySelector(`meta[name="${name}"]`);
+      if (!tag) {
+        tag = document.createElement("meta");
+        tag.setAttribute("name", name);
         document.head.appendChild(tag);
       }
       tag.setAttribute("content", content);
