@@ -5,10 +5,24 @@
 # Set default charset
 AddDefaultCharset UTF-8
 
+# Default index
+DirectoryIndex index.html
+
+# 404 Fallback
+ErrorDocument 404 /index.html
+
 # Enable Rewrite Engine
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # 1. Force HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # 2. Force non-WWW (Canonical Domain)
+  RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+  RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
   # 301 Permanent Redirects for Old Course URLs to SEO-friendly URLs
   RewriteRule ^Programs/MBA-Marketing-management-in-pune/?$ /programs/mba-in-marketing-management-in-pune [R=301,L,NC]
@@ -43,26 +57,42 @@ AddDefaultCharset UTF-8
   RewriteRule ^Life@campus/(.*)$ /campus-life/$1 [R=301,L,NC]
   RewriteRule ^Academics/(.*)$ /academics/$1 [R=301,L,NC]
 
-  # 1. Never rewrite existing files
+  # Never rewrite existing files
   RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
 
-  # 2. Check if pre-rendered .html file exists (e.g. /about-us -> /about-us.html)
+  # Check if pre-rendered .html file exists
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.+?)/?$ $1.html [L]
+
   RewriteCond %{DOCUMENT_ROOT}/$1.html -f
   RewriteRule ^(.+?)/?$ $1.html [L]
 
-  # 3. Check if pre-rendered subfolder index.html exists (e.g. /admissions/eligibility-criteria -> /admissions/eligibility-criteria/index.html)
+  # Check if pre-rendered subfolder index.html exists
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^(.+?)/?$ $1/index.html [L]
+
   RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
   RewriteRule ^(.+?)/?$ $1/index.html [L]
 
-  # 4. If directory exists, serve it
+  # If directory exists, serve it
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # 5. SPA Fallback: Redirect all other requests to index.html for client-side routing
+  # SPA Fallback: Redirect all other requests to index.html for client-side routing
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^ index.html [L]
+</IfModule>
+
+# =========================================================
+# GZIP / Deflate Compression for Speed & Core Web Vitals
+# =========================================================
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript application/json
+  AddOutputFilterByType DEFLATE application/xml application/xhtml+xml application/rss+xml
+  AddOutputFilterByType DEFLATE image/svg+xml
 </IfModule>
 
 # =========================================================
@@ -100,3 +130,4 @@ AddDefaultCharset UTF-8
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
+
