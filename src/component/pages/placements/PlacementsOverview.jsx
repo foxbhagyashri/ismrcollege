@@ -15,7 +15,6 @@ import {
   FileEarmarkSpreadsheet,
 } from "react-bootstrap-icons";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
-import SEO from "../../SEO";
 
 
 
@@ -147,12 +146,7 @@ function EnhancedPlacementStatus() {
         fontFamily: "'Inter', Arial, Helvetica, sans-serif",
       }}
     >
-      <SEO
-        title="Placement Overview | Statistics & Recruiters | ISMR Pune"
-        description="Explore 100% placement track record at ISMR Pune. ₹12.6 LPA highest package, leading corporate recruiters, and sector-wise placement stats."
-        canonical="https://ismrpune.edu.in/placements/"
-      />
-      <Container>
+            <Container>
         <Row className="mb-4  text-md-start">
           <Col>
             <h1

@@ -1,7 +1,6 @@
 import { useState, useRef } from "react";
 import axios from "axios";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
-import SEO from "../../SEO";
 
 function Applicationform() {
     const fileRef = useRef(null);
@@ -147,12 +146,7 @@ function Applicationform() {
 
     return (
         <div className="contact-page">
-            <SEO
-                title="Career Application & Job Openings | ISMR Pune"
-                description="Join the team of visionary educators and professionals at ISMR Pune. Apply for faculty and administrative positions."
-                canonical="https://ismrpune.edu.in/contact-us/"
-            />
-            {/* Header */}
+                        {/* Header */}
             <section
                 className="py-5 text-white text-center position-relative"
                 style={{

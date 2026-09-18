@@ -31,7 +31,6 @@ import {
   faBus,
   faBookOpen,
 } from "@fortawesome/free-solid-svg-icons";
-import SEO from "../../SEO";
 
 const whyIsmrFeatures = [
   { id: 1, title: "Best Institute in Western Region for Academics and Placements Excellence", icon: faAward },
@@ -60,12 +59,7 @@ const whyIsmrFeatures = [
 function WhyISMRPage() {
   return (
     <div className="font-poppins">
-      <SEO
-        title="Why Choose ISMR Pune | Top Reasons to Study at ISMR"
-        description="Discover 19+ distinct reasons to choose ISMR Pune: 100% placement track record, AICTE approved, SPPU affiliated, global exposure, 20-acre lush campus."
-        canonical="https://ismrpune.edu.in/about-us/why-ismr/"
-      />
-      <style>{`
+            <style>{`
         /* Fonts & Headings */
         .page-heading {
           font-family: 'Inter', Arial, Helvetica, sans-serif;

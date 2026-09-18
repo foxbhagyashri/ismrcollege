@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import allsectionbg from "../../../assets/allsectionbg.jpg"; // update path based on your project
-import SEO from "../../SEO";
 
 export default function FAQPage() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -101,12 +100,7 @@ export default function FAQPage() {
 
   return (
     <>
-      <SEO
-        title="Frequently Asked Questions (FAQs) | Admissions | ISMR Pune"
-        description="Find answers to commonly asked questions regarding MBA, BBA & BCA admissions, documents, fee payments, hostels, and placements at ISMR Pune."
-        canonical="https://ismrpune.edu.in/admissions/more-faqs/"
-      />
-      {/* ---------- PAGE HEADING + BREADCRUMB SECTION ---------- */}
+            {/* ---------- PAGE HEADING + BREADCRUMB SECTION ---------- */}
       <section
         className="py-5 text-white text-center position-relative"
         style={{

@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BriefcaseFill } from "react-bootstrap-icons";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
-import SEO from "../../SEO";
 
 /* =================== 3 CARD SLIDER =================== */
 const ImageSlider = ({ title, images = [] }) => {
@@ -175,12 +174,7 @@ function StudentCampusAndActivities() {
 
   return (
     <>
-      <SEO
-        title="Student Campus Life & Activities | ISMR Pune"
-        description="Experience vibrant campus life, cultural fests, sports events, industrial visits, study tours, and clubs at ISMR Pune."
-        canonical="https://ismrpune.edu.in/campus-life/student-life/"
-      />
-      <style>{`
+            <style>{`
 
 
         .campus-tabs {

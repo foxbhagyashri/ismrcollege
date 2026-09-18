@@ -340,7 +340,7 @@ const Header = () => {
           <li>
             <Link
               className="dropdown-item"
-              to="/programs/mba-in-business-analytics-pune"
+              to="/academics/mba-program"
               onClick={handleDropdownItemClick}
             >
               MBA Program

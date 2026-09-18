@@ -6,7 +6,6 @@ import ContactForm from "../../forms/ContactForm";
 import Howtoaplydownoadform from "../../forms/HowToApplyDownloadForm";
 import brochurePdf from "/ISMR Brochure.pdf"; // Add your PDF in assets
 import ISMRFormModal from "../../forms/ISMRFormModal";
-import SEO from "../../SEO";
 
 export default function HowToApply() {
     const [form, setForm] = useState({
@@ -53,12 +52,7 @@ export default function HowToApply() {
 
     return (
         <section className="apply-wrapper">
-            <SEO
-                title="How to Apply | Admission Process & Form | ISMR Pune"
-                description="Step-by-step application guide for MBA, BBA & BCA admissions at ISMR Pune. Online registration, telephonic interview, document verification, and seat confirmation."
-                canonical="https://ismrpune.edu.in/admissions/how-to-apply/"
-            />
-            <style>{`
+                        <style>{`
 
 .category-tabs {
   display: flex;

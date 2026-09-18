@@ -14,7 +14,6 @@ import {
     faCircle,
     faHandHoldingHeart
 } from "@fortawesome/free-solid-svg-icons";
-import SEO from "../SEO";
 
 // ---------------- STAT COUNTER ----------------
 const StatCounter = ({ endValue, duration, suffix }) => {
@@ -49,12 +48,7 @@ const StatCounter = ({ endValue, duration, suffix }) => {
 const PredictiveMarketingExplained = () => {
     return (
         <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
-            <SEO
-                title="Predictive Marketing Explained: Data, AI & Analytics | ISMR Pune"
-                description="Understand how predictive analytics, machine learning, customer lifetime value models, and AI algorithms power modern predictive marketing strategies."
-                canonical="https://ismrpune.edu.in/blogs/Predictive-Marketing-Explained"
-            />
-            {/* -------- HEADER -------- */}
+                        {/* -------- HEADER -------- */}
             <section
                 className="py-5 text-white text-center position-relative"
                 style={{

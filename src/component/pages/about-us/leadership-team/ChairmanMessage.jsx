@@ -4,17 +4,11 @@ import allsectionbg from "../../../../assets/allsectionbg.jpg";
 import director from "../../../../assets/Homeimg/Director.png";
 import secretary from "../../../../assets/Homeimg/Secretary.png";
 import cairman from "../../../../assets/Homeimg/cairman.png";
-import SEO from "../../../SEO";
 
 function Leadership() {
   return (
     <div className="font-poppins">
-      <SEO
-        title="Chairman's Message | Founder President | ISMR Pune"
-        description="Read the inspiring message from the Founder President & Chairman of ISMR Pune on shaping global business leaders."
-        canonical="https://ismrpune.edu.in/about-us/leadership-team/chairman-message/"
-      />
-
+      
       <style>{`
         /* Fonts & Headings */
         .page-heading {

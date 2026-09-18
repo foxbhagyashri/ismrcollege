@@ -7,290 +7,280 @@ import {
     FaPhoneAlt,
     FaEnvelope,
     FaMapMarkerAlt,
+    FaChevronRight,
+    FaPaperPlane,
 } from "react-icons/fa";
 import "./Footer.css";
 import { Link } from "react-router-dom";
-import ContactForm from "./forms/ContactForm";
 import ISMRFormModal from "./forms/ISMRFormModal";
 
-const Footer = () => {
-    const [form, setForm] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        city: "",
-        message: "",
-        program: "",
-    });
+const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+};
 
-    const [submitted, setSubmitted] = useState(false);
+const Footer = () => {
     const [showModal, setShowModal] = useState(false);
 
-    const handleChange = (e) =>
-        setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        if (!captchaValue) {
-            alert("Please verify that you are not a robot!");
-            return;
-        }
-
-        setShowModal(false);
-        setForm({
-            name: "",
-            email: "",
-            phone: "",
-            city: "",
-            message: "",
-            program: "",
-        });
-        setCaptchaValue(null);
-        setSubmitted(true);
-
-        setTimeout(() => setSubmitted(false), 3000);
-    };
-
     return (
-        <footer className="footer-section pt-5 pb-4">
-            <Container>
-                <Row>
-                    {/* About ISMR */}
-                    <Col
-                        lg={3}
-                        md={6}
-                        sm={12}
-                        className="mb-4 text-center text-md-start"
-                    >
-                        <img
-                            src="/ISMR logo_page-0001.png"
-                            alt="ISMR Logo"
-                            className="mb-3 footerlogo"
-                        />
-                        <div className="social-icons mt-3">
-                            <a
-                                href="https://www.facebook.com/ismrcollegepune/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <FaFacebookF />
-                            </a>
+        <footer className="footer-section">
+            {/* Main Footer Content */}
+            <div className="footer-main">
+                <Container>
+                    <Row className="g-3 align-items-start">
+                        {/* 1. Brand & About Column */}
+                        <Col lg={4} md={6} sm={12} className="footer-col brand-col">
+                            <div className="footer-brand-wrap mb-2">
+                                <Link to="/" onClick={scrollToTop} className="d-inline-block">
+                                    <img
+                                        src="/ISMR logo_page-0001.png"
+                                        alt="ISMR College Pune Logo"
+                                        className="footer-logo mb-2"
+                                    />
+                                </Link>
+                                <p className="footer-brand-desc mb-2">
+                                    International School of Management & Research (ISMR) — AICTE-approved, SPPU-affiliated, NAAC-accredited business school in Pune.
+                                </p>
+                            </div>
 
-                            <a
-                                href="https://www.instagram.com/ismrofficial/?hl=en"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <FaInstagram />
-                            </a>
+                            <div className="footer-affiliations mb-3">
+                                <span className="badge-pill">AICTE Approved</span>
+                                <span className="badge-pill">SPPU Affiliated</span>
+                                <span className="badge-pill">NAAC Accredited</span>
+                            </div>
 
-                            <a
-                                href="https://www.linkedin.com/school/international-school-of-management-and-research-pune/?originalSubdomain=in"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <FaLinkedinIn />
-                            </a>
-                        </div>
-                    </Col>
+                            <div className="social-links-wrap">
+                                <span className="social-heading mb-1">Connect With Us</span>
+                                <div className="social-icons">
+                                    <a
+                                        href="https://www.facebook.com/ismrcollegepune/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="ISMR Facebook"
+                                        className="social-btn"
+                                        title="Facebook"
+                                    >
+                                        <FaFacebookF className="social-svg-icon" />
+                                    </a>
+                                    <a
+                                        href="https://www.instagram.com/ismrofficial/?hl=en"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="ISMR Instagram"
+                                        className="social-btn"
+                                        title="Instagram"
+                                    >
+                                        <FaInstagram className="social-svg-icon" />
+                                    </a>
+                                    <a
+                                        href="https://www.linkedin.com/school/international-school-of-management-and-research-pune/?originalSubdomain=in"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="ISMR LinkedIn"
+                                        className="social-btn"
+                                        title="LinkedIn"
+                                    >
+                                        <FaLinkedinIn className="social-svg-icon" />
+                                    </a>
+                                </div>
+                            </div>
+                        </Col>
 
-                    {/* Quick Links */}
-                    <Col
-                        lg={3}
-                        md={6}
-                        sm={12}
-                        className="mb-4 ps-lg-4"
-                    >
-                        <h5 className="footer-title">Quick Links</h5>
-                        <ul className="footer-links">
-                            <li>
-                                <Link to="/about-us/why-ismr">Why ISMR?</Link>
-                            </li>
-                            <li>
-                                <Link to="/naac">NAAC Accreditation</Link>
-                            </li>
-                            <li>
-                                <Link to="/about-us/awards-and-rankings">
-                                    Awards & Rankings
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="/academics/programs">
-                                    Programs & Duration
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="/admissions/eligibility-criteria">
-                                    Eligibility Criteria
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="/admissions/how-to-apply">
-                                    How To Apply
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="/placements/process">
-                                    Placement Process
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="/admissions/disclaimer">
-                                    Disclaimer for Admissions
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="/admissions/fee-disclaimer">
-                                    Disclaimer for Fees Payment
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="/terms-and-conditions">
-                                    Terms & Conditions
-                                </Link>
-                            </li>
-                            <li>
+                        {/* 2. Top Programs Column */}
+                        <Col lg={2} md={6} sm={6} className="footer-col">
+                            <h5 className="footer-heading">Top Programs</h5>
+                            <ul className="footer-nav-list">
+                                <li>
+                                    <Link to="/programs/mba-in-marketing-management-in-pune" onClick={scrollToTop}>
+                                        <FaChevronRight className="bullet-icon" /> MBA Marketing
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/programs/mba-in-finance-management-in-pune" onClick={scrollToTop}>
+                                        <FaChevronRight className="bullet-icon" /> MBA Finance
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/programs/mba-hr-college-in-pune" onClick={scrollToTop}>
+                                        <FaChevronRight className="bullet-icon" /> MBA Human Resources
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/programs/mba-in-business-analytics-pune" onClick={scrollToTop}>
+                                        <FaChevronRight className="bullet-icon" /> MBA Business Analytics
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/programs/mba-in-operations-and-supply-chain-management-in-pune" onClick={scrollToTop}>
+                                        <FaChevronRight className="bullet-icon" /> MBA Operations & SCM
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/programs/mba-in-agribusiness-management-pune" onClick={scrollToTop}>
+                                        <FaChevronRight className="bullet-icon" /> MBA Agribusiness
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/programs/bba-college-in-pune" onClick={scrollToTop}>
+                                        <FaChevronRight className="bullet-icon" /> BBA Programme
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/programs/bca-college-in-pune" onClick={scrollToTop}>
+                                        <FaChevronRight className="bullet-icon" /> BCA Programme
+                                    </Link>
+                                </li>
+                            </ul>
+                        </Col>
+
+                        {/* 3. Quick Links & Admissions Column */}
+                        <Col lg={2} md={6} sm={6} className="footer-col">
+                            <h5 className="footer-heading">Quick Links</h5>
+                            <ul className="footer-nav-list">
+                                <li>
+                                    <Link to="/about-us/why-ismr" onClick={scrollToTop}>
+                                        <FaChevronRight className="bullet-icon" /> Why ISMR?
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/naac" onClick={scrollToTop}>
+                                        <FaChevronRight className="bullet-icon" /> NAAC Accreditation
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/about-us/awards-and-rankings" onClick={scrollToTop}>
+                                        <FaChevronRight className="bullet-icon" /> Awards & Rankings
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/placements/process" onClick={scrollToTop}>
+                                        <FaChevronRight className="bullet-icon" /> Placement Process
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/admissions/eligibility-criteria" onClick={scrollToTop}>
+                                        <FaChevronRight className="bullet-icon" /> Eligibility Criteria
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/admissions/how-to-apply" onClick={scrollToTop}>
+                                        <FaChevronRight className="bullet-icon" /> How To Apply
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/admissions/education-loan" onClick={scrollToTop}>
+                                        <FaChevronRight className="bullet-icon" /> Education Loan
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/admissions/fee-structure" onClick={scrollToTop}>
+                                        <FaChevronRight className="bullet-icon" /> Fee Structure
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/terms-and-conditions" onClick={scrollToTop}>
+                                        <FaChevronRight className="bullet-icon" /> Terms & Conditions
+                                    </Link>
+                                </li>
+                            </ul>
+
+                            <div className="mt-2">
                                 <button
                                     type="button"
                                     onClick={() => setShowModal(true)}
-                                    className="footer-apply-link"
+                                    className="footer-cta-btn"
                                 >
-                                    Apply Now
-                                </button>
-                            </li>
-                        </ul>
-                    </Col>
-
-                    {/* -------- FORM MODAL -------- */}
-                    {showModal && (
-                        <ISMRFormModal
-                            open={showModal}
-                            onClose={() => setShowModal(false)}
-                        />
-                    )}
-
-                    {/* {showModal && (
-                        <div
-                            className="modal-backdrop"
-                            style={{
-                                position: "fixed",
-                                top: 0,
-                                left: 0,
-                                width: "100%",
-                                height: "100%",
-                                backgroundColor: "rgba(0,0,0,0.6)",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                zIndex: 9999,
-                            }}
-                        >
-                            <div
-                                className="modal-content rounded-3 p-4"
-                                style={{
-                                    backgroundColor: "#fff",
-                                    maxWidth: "500px",
-                                    width: "90%",
-                                }}
-                            >
-                                <h4
-                                    style={{
-                                        color: "#0a2240",
-                                        marginBottom: "1rem",
-                                    }}
-                                >
-                                    Enquiry Form
-                                </h4>
-
-                                <ContactForm />
-
-                                <button
-                                    onClick={() => setShowModal(false)}
-                                    style={{
-                                        marginTop: "10px",
-                                        background: "transparent",
-                                        border: "none",
-                                        color: "#d95c5c",
-                                        cursor: "pointer",
-                                    }}
-                                >
-                                    Close
+                                    <FaPaperPlane className="me-1" /> Apply Now 2026
                                 </button>
                             </div>
-                        </div>
-                    )} */}
+                        </Col>
 
-                    {/* Contact Us + Map Section */}
-                    <Col
-                        lg={3}
-                        md={3}
-                        sm={12}
-                        className="mb-5"
-                    >
-                        <div className="contact-section">
-                            <h5 className="footer-title">Contact Us</h5>
-                            <ul className="footer-contact">
-                                <li>
-                                    <FaPhoneAlt className="icon" /> +91
-                                    9923786079
-                                </li>
-                                <li>
-                                    <FaEnvelope className="icon" />{" "}
-                                    admissions@ismrpune.edu.in
-                                </li>
-                                <li>
-                                    <FaMapMarkerAlt
-                                        size={30}
-                                        className="icon"
-                                    />
-                                    ISMR Campus Bypass Pune Saswad Road,
-                                    Sr.No.907, Opp Hotel Vijay Executive,
-                                    Gaidhara Kanifnath College Road, Wadki, Pune
-                                    – 412 308.
-                                </li>
-                            </ul>
-                        </div>
-                    </Col>
+                        {/* 4. Campus Location & Contact Column */}
+                        <Col lg={4} md={6} sm={12} className="footer-col contact-col">
+                            <h5 className="footer-heading">Campus & Contact</h5>
+                            
+                            <div className="contact-info-list mb-2">
+                                <div className="contact-item">
+                                    <div className="contact-icon-box">
+                                        <FaPhoneAlt />
+                                    </div>
+                                    <div className="contact-text">
+                                        <span className="contact-label">Admission Helpline:</span>
+                                        <a href="tel:+919923786079" className="contact-link">
+                                            +91 9923786079
+                                        </a>
+                                    </div>
+                                </div>
 
-                    {/* Academics / Location */}
-                    <Col
-                        lg={3}
-                        md={6}
-                        sm={12}
-                        className="mb-4"
-                    >
-                        {/* <h5 className="footer-title">Location</h5> */}
-                        <div className="footer-map mt-0">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3785.4852719774135!2d73.9687828737175!3d18.41626317235503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c058e8d9e15b%3A0x541eee74dbde91ba!2sISMR%20-%20MBA%20College%20Pune!5e0!3m2!1sen!2sin!4v1764314251873!5m2!1sen!2sin"
-                                width="600"
-                                height="400"
-                                style={{ border: 0, borderRadius: "10px" }}
-                                allowfullscreen=""
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
-                            ></iframe>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
+                                <div className="contact-item">
+                                    <div className="contact-icon-box">
+                                        <FaEnvelope />
+                                    </div>
+                                    <div className="contact-text">
+                                        <span className="contact-label">Official Email:</span>
+                                        <a href="mailto:admissions@ismrpune.edu.in" className="contact-link">
+                                            admissions@ismrpune.edu.in
+                                        </a>
+                                    </div>
+                                </div>
 
-            {/* Bottom Footer */}
-            <div className="footer-bottom py-3 mt-4">
-                <Container className="d-flex flex-column flex-md-row align-items-center justify-content-start">
-                    <span className="footer-bottom-text text-start">
-                        © Website Design & Developed By{" "}
-                        <a
-                            href="https://foxaircomm.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="footer-brand"
-                        >
-                            Fox Aircomm Pvt Ltd
-                        </a>{" "}
-                        | All Rights Reserved.
-                    </span>
+                                <div className="contact-item">
+                                    <div className="contact-icon-box">
+                                        <FaMapMarkerAlt />
+                                    </div>
+                                    <div className="contact-text">
+                                        <span className="contact-label">Campus Address:</span>
+                                        <p className="contact-address mb-0">
+                                            ISMR Campus Bypass Pune Saswad Road, Sr.No.907, Opp Hotel Vijay Executive, Gaidhara Kanifnath College Road, Wadki, Pune – 412 308.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Styled Map Container */}
+                            <div className="footer-map-card">
+                                <iframe
+                                    title="ISMR Pune Campus Map"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3785.4852719774135!2d73.9687828737175!3d18.41626317235503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c058e8d9e15b%3A0x541eee74dbde91ba!2sISMR%20-%20MBA%20College%20Pune!5e0!3m2!1sen!2sin!4v1764314251873!5m2!1sen!2sin"
+                                    width="100%"
+                                    height="125"
+                                    style={{ border: 0 }}
+                                    allowFullScreen=""
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                ></iframe>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
+
+            {/* -------- FORM MODAL -------- */}
+            {showModal && (
+                <ISMRFormModal
+                    open={showModal}
+                    onClose={() => setShowModal(false)}
+                />
+            )}
+
+            {/* Bottom Sub-Footer Bar */}
+            <div className="footer-bottom py-2">
+                <Container>
+                    <div className="d-flex flex-column flex-md-row align-items-center justify-content-between text-center text-md-start gap-1">
+                        <span className="footer-bottom-text">
+                            © {new Date().getFullYear()} International School of Management and Research (ISMR Pune). All Rights Reserved.
+                        </span>
+                        <span className="footer-bottom-text developer-credit">
+                            Website Designed & Developed By{" "}
+                            <a
+                                href="https://foxaircomm.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="footer-brand"
+                            >
+                                Fox Aircomm Pvt Ltd
+                            </a>
+                        </span>
+                    </div>
                 </Container>
             </div>
         </footer>
@@ -298,3 +288,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

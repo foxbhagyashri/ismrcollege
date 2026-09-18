@@ -4,17 +4,11 @@ import allsectionbg from "../../../../assets/allsectionbg.jpg";
 import director from "../../../../assets/Homeimg/Director.png";
 import secretary from "../../../../assets/Homeimg/Secretary.png";
 import cairman from "../../../../assets/Homeimg/cairman.png";
-import SEO from "../../../SEO";
 
 function Leadership() {
   return (
     <div className="font-poppins">
-      <SEO
-        title="Secretary's Message | ISMR B-School Pune"
-        description="Read the Secretary's message about student-centric development, academic integrity, and future vision at ISMR Pune."
-        canonical="https://ismrpune.edu.in/about-us/leadership-team/secretary-message/"
-      />
-
+      
       <style>{`
         /* Fonts & Headings */
         .page-heading {

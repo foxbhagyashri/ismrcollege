@@ -4,17 +4,11 @@ import allsectionbg from "../../../assets/allsectionbg.jpg";
 import director from "../../../assets/Homeimg/Director.png";
 import secretary from "../../../assets/Homeimg/Secretary.png";
 import cairman from "../../../assets/Homeimg/cairman.png";
-import SEO from "../../SEO";
 
 function Leadership() {
   return (
     <div className="font-poppins">
-      <SEO
-        title="Leadership Team | ISMR B-School Pune"
-        description="Meet the visionary leadership team at ISMR Pune guiding excellence in management education and industry placement success."
-        canonical="https://ismrpune.edu.in/about-us/leadership-team/"
-      />
-
+      
       <style>{`
         /* Fonts & Headings */
         .page-heading {

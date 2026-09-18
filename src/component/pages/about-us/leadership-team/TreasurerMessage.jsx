@@ -4,17 +4,11 @@ import allsectionbg from "../../../../assets/allsectionbg.jpg";
 import director from "../../../../assets/Homeimg/Director.png";
 import secretary from "../../../../assets/Homeimg/Secretary.png";
 import cairman from "../../../../assets/Homeimg/cairman.png";
-import SEO from "../../../SEO";
 
 function Leadership() {
     return (
         <div className="font-poppins">
-            <SEO
-                title="Treasurer's Message | ISMR B-School Pune"
-                description="Read the Treasurer's message detailing financial stewardship, world-class infrastructure investment, and sustainable growth at ISMR Pune."
-                canonical="https://ismrpune.edu.in/about-us/leadership-team/treasurer-message/"
-            />
-
+            
             <style>{`
         /* Fonts & Headings */
         .page-heading {

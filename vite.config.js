@@ -1,5 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const CANONICAL_MAP = {
   // Home
@@ -98,14 +103,26 @@ const CANONICAL_MAP = {
 function dynamicCanonicalPlugin() {
   return {
     name: 'dynamic-canonical-plugin',
-    transformIndexHtml(html, { originalUrl, path }) {
-      const reqUrl = originalUrl || path || '/';
+    transformIndexHtml(html, { originalUrl, path: ctxPath }) {
+      const reqUrl = originalUrl || ctxPath || '/';
       const cleanPath = reqUrl.split('?')[0].split('#')[0];
       // Normalize by removing trailing slash for lookup
       const lookupPath = cleanPath === '/' ? '/' : cleanPath.replace(/\/+$/, '');
 
-      // Lookup exact canonical URL from map, or generate cleanly
-      let canonicalUrl = CANONICAL_MAP[lookupPath] || CANONICAL_MAP[cleanPath];
+      // 1. Read route metadata from src/seoRoutes.json if present
+      let meta = null;
+      try {
+        const seoRoutesFile = path.resolve(__dirname, 'src/seoRoutes.json');
+        if (fs.existsSync(seoRoutesFile)) {
+          const seoRoutes = JSON.parse(fs.readFileSync(seoRoutesFile, 'utf8'));
+          meta = seoRoutes[lookupPath] || seoRoutes[lookupPath.toLowerCase()] || seoRoutes[cleanPath];
+        }
+      } catch (err) {
+        console.error('Error reading seoRoutes.json in dynamicCanonicalPlugin:', err);
+      }
+
+      // Lookup exact canonical URL from seoRoutes.json or CANONICAL_MAP
+      let canonicalUrl = (meta && meta.canonical) || CANONICAL_MAP[lookupPath] || CANONICAL_MAP[cleanPath];
       if (!canonicalUrl) {
         if (cleanPath && cleanPath !== '/' && cleanPath !== '/index.html') {
           const normalized = cleanPath.replace(/^\/+/, '');
@@ -115,13 +132,31 @@ function dynamicCanonicalPlugin() {
         }
       }
 
-      // Replace <link rel="canonical" ... /> in raw HTML served to View Page Source
-      let updatedHtml = html.replace(
+      let updatedHtml = html;
+
+      // 1. Title & OG Title (Visible in View Page Source)
+      if (meta && meta.title) {
+        updatedHtml = updatedHtml.replace(/<title>[^<]*<\/title>/i, `<title>${meta.title}</title>`);
+        updatedHtml = updatedHtml.replace(/<meta\s+property=["']og:title["']\s+content=["'][^"']*["']\s*\/?>/i, `<meta property="og:title" content="${meta.title}" />`);
+      }
+
+      // 2. Description & OG Description (Visible in View Page Source)
+      if (meta && meta.description) {
+        updatedHtml = updatedHtml.replace(/<meta\s+name=["']description["']\s+content=["'][^"']*["']\s*\/?>/i, `<meta name="description" content="${meta.description}" />`);
+        updatedHtml = updatedHtml.replace(/<meta\s+property=["']og:description["']\s+content=["'][^"']*["']\s*\/?>/i, `<meta property="og:description" content="${meta.description}" />`);
+      }
+
+      // 3. Keywords (Visible in View Page Source)
+      if (meta && meta.keywords) {
+        updatedHtml = updatedHtml.replace(/<meta\s+name=["']keywords["']\s+content=["'][^"']*["']\s*\/?>/i, `<meta name="keywords" content="${meta.keywords}" />`);
+      }
+
+      // 4. Canonical Tag & OG URL (Visible in View Page Source)
+      updatedHtml = updatedHtml.replace(
         /<link\s+rel=["']canonical["']\s+href=["'][^"']*["']\s*\/?>/i,
         `<link rel="canonical" href="${canonicalUrl}" />`
       );
 
-      // Replace <meta property="og:url" ... /> in raw HTML
       updatedHtml = updatedHtml.replace(
         /<meta\s+property=["']og:url["']\s+content=["'][^"']*["']\s*\/?>/i,
         `<meta property="og:url" content="${canonicalUrl}" />`
@@ -148,78 +183,10 @@ function faviconPlugin() {
   };
 }
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-function ssgPrerenderPlugin() {
-  return {
-    name: 'ssg-prerender-plugin',
-    apply: 'build',
-    closeBundle() {
-      const distDir = path.resolve(__dirname, 'dist');
-      const templatePath = path.join(distDir, 'index.html');
-      if (!fs.existsSync(templatePath)) return;
-
-      const template = fs.readFileSync(templatePath, 'utf8');
-      const seoRoutesFile = path.resolve(__dirname, 'src/seoRoutes.json');
-      if (!fs.existsSync(seoRoutesFile)) return;
-
-      const seoRoutes = JSON.parse(fs.readFileSync(seoRoutesFile, 'utf8'));
-      let generatedCount = 0;
-
-      for (const [route, meta] of Object.entries(seoRoutes)) {
-        if (!route || route === '/') continue;
-
-        const cleanRoute = route.replace(/^\/+/, '').replace(/\/+$/, '');
-        const targetDir = path.join(distDir, cleanRoute);
-        const targetIndexFile = path.join(targetDir, 'index.html');
-        const targetHtmlFile = path.join(distDir, `${cleanRoute}.html`);
-
-        let html = template;
-
-        // 1. Title
-        if (meta.title) {
-          html = html.replace(/<title>[^<]*<\/title>/i, `<title>${meta.title}</title>`);
-          html = html.replace(/<meta\s+property=["']og:title["']\s+content=["'][^"']*["']\s*\/?>/i, `<meta property="og:title" content="${meta.title}" />`);
-        }
-
-        // 2. Canonical Tag & OG URL
-        if (meta.canonical) {
-          html = html.replace(/<link\s+rel=["']canonical["']\s+href=["'][^"']*["']\s*\/?>/i, `<link rel="canonical" href="${meta.canonical}" />`);
-          html = html.replace(/<meta\s+property=["']og:url["']\s+content=["'][^"']*["']\s*\/?>/i, `<meta property="og:url" content="${meta.canonical}" />`);
-        }
-
-        // 3. Description
-        if (meta.description) {
-          html = html.replace(/<meta\s+name=["']description["']\s+content=["'][^"']*["']\s*\/?>/i, `<meta name="description" content="${meta.description}" />`);
-          html = html.replace(/<meta\s+property=["']og:description["']\s+content=["'][^"']*["']\s*\/?>/i, `<meta property="og:description" content="${meta.description}" />`);
-        }
-
-        // Write both /route/index.html (for Hostinger Apache) AND /route.html (for Vercel cleanUrls)
-        fs.mkdirSync(targetDir, { recursive: true });
-        fs.writeFileSync(targetIndexFile, html, 'utf8');
-
-        const parentOfHtml = path.dirname(targetHtmlFile);
-        if (!fs.existsSync(parentOfHtml)) {
-          fs.mkdirSync(parentOfHtml, { recursive: true });
-        }
-        fs.writeFileSync(targetHtmlFile, html, 'utf8');
-
-        generatedCount++;
-      }
-
-      console.log(`\n[SSG Prerender] Successfully generated ${generatedCount} static HTML pages for Hostinger and Vercel!\n`);
-    }
-  };
-}
-
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), dynamicCanonicalPlugin(), faviconPlugin(), ssgPrerenderPlugin()],
+  plugins: [react(), dynamicCanonicalPlugin(), faviconPlugin()],
   build: {
     sourcemap: true
   }
-})
+})

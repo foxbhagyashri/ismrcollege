@@ -15,7 +15,6 @@ import atosLogo from "../../../assets/Homeimg/atos.png";
 import bajajLogo from "../../../assets/Homeimg/Bajaj-Finserv-Logo.jpg";
 import cognizantLogo from "../../../assets/Homeimg/Cognizant-Logo.png";
 import learningRoutesLogo from "../../../assets/Homeimg/Comp1.png";
-import SEO from "../../SEO";
 
 export default function OperationSupplyChainManagement() {
   const navigate = useNavigate();
@@ -70,12 +69,7 @@ export default function OperationSupplyChainManagement() {
 
   return (
     <section className="apply-wrapper">
-      <SEO
-        title="MBA in Operations & Supply Chain Management in Pune | ISMR"
-        description="Study MBA in Operations and Supply Chain Management in Pune at ISMR. Logistics, procurement, industry 4.0 training, and top placements."
-        canonical="https://ismrpune.edu.in/programs/mba-in-operations-and-supply-chain-management-in-pune"
-      />
-      <style>{`
+            <style>{`
 
 .content-container p{
 font-size:14px;

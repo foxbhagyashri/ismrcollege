@@ -13,6 +13,7 @@ import {
 } from "react-icons/fa";
 import "./WhyChooseAdma.css";
 import { Link } from "react-router-dom";
+import { cn } from "../../../New-sara-spa/src/lib/utils";
 
 const WhyChooseAdma = () => {
   const features = [
@@ -55,12 +56,12 @@ const WhyChooseAdma = () => {
   ];
 
   return (
-    <section className="why-choose-section py-5">
+    <section className={cn('why-choose-section', 'py-5')}>
       <Container>
         <Row className="justify-content-center">
           <Col lg={10}>
             <div className="section-header">
-              <h2 className="section-title text-center mb-5">Why Choose ISMR?</h2>
+              <h2 className={cn('section-title', 'text-center', 'mb-5')}>Why Choose ISMR?</h2>
             </div>
             <div className="why-list">
               {features.map((item, index) => {
@@ -79,7 +80,7 @@ const WhyChooseAdma = () => {
               })}
             </div>
 
-            <div className="text-center mt-5">
+            <div className={cn('text-center', 'mt-5')}>
               <Link to="Aboutpage/Ismr" className="overview-btn">
                 More reasons to join ISMR →
               </Link>

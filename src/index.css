@@ -39,6 +39,67 @@ p {
 }
 
 /* =========================================================
+   GLOBAL DESIGN SYSTEM: UNIFIED CONTAINER, ALIGNMENT & HEADINGS
+   Guarantees 100% consistent container width, alignment, and title scale across the Home Page
+   ========================================================= */
+.container,
+.site-container {
+  max-width: 1240px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+  width: 100% !important;
+}
+
+/* Global Section Title Standardization */
+.section-title {
+  font-size: 2.25rem !important;
+  font-weight: 800 !important;
+  color: #002a5c !important;
+  margin-bottom: 10px !important;
+  line-height: 1.25 !important;
+  text-align: center !important;
+  letter-spacing: -0.015em !important;
+}
+
+.section-title::after {
+  content: '' !important;
+  display: block !important;
+  width: 55px !important;
+  height: 3.5px !important;
+  background: linear-gradient(90deg, #ffc333 0%, #ff9800 100%) !important;
+  margin: 10px auto 0 !important;
+  border-radius: 2px !important;
+}
+
+/* Global Section Subtitle Standardization */
+.section-subtitle,
+.hta-subtitle,
+.why-subtitle,
+.partners-subtitle {
+  font-size: 15px !important;
+  color: #64748b !important;
+  max-width: 680px !important;
+  margin: 8px auto 0 !important;
+  line-height: 1.55 !important;
+  text-align: center !important;
+  font-weight: 400 !important;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem !important;
+  }
+  .section-subtitle,
+  .hta-subtitle,
+  .why-subtitle,
+  .partners-subtitle {
+    font-size: 13.5px !important;
+  }
+}
+
+/* =========================================================
    TEXT VISIBILITY & HIGH CONTRAST UTILITIES
    Ensures all subtitles, paragraphs, and sub-content
    inside dark containers, banners, and cards are clearly legible
@@ -630,8 +691,8 @@ section[style*="#0a2240"] .text-warning {
   margin-top: 3px;
 }
 
-/* Social Icons */
-.social-icons a {
+/* Social Icons (Default fallback) */
+.social-icons a:not(.social-btn) {
   color: #002147;
   margin-right: 10px;
   display: inline-block;
@@ -642,7 +703,7 @@ section[style*="#0a2240"] .text-warning {
   transition: all 0.3s ease;
 }
 
-.social-icons a:hover {
+.social-icons a:not(.social-btn):hover {
   background-color: #e63946;
   color: #fff;
   border-color: #e63946;
@@ -1224,119 +1285,219 @@ section[style*="#0a2240"] .text-warning {
 /* Grid Layout */
 .specializations-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1240px;
   margin: 0 auto;
 }
 
-/* Card Styling */
+/* Card Styling - Perfectly Proportioned Height with Alternating Blue & Yellow Scheme */
 .specialization-card {
-  border-radius: 20px;
-  padding: 40px 30px;
+  border-radius: 16px !important;
+  min-height: 298px !important;
+  padding: 18px 18px 16px 18px !important;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease !important;
   cursor: pointer;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Alternate Card Background Colors */
+/* --- ODD CARDS: Deep Royal Blue / Navy --- */
 .specialization-card:nth-child(odd) {
-  background-color: #002A5C;
-  /* Dark blue */
+  background: linear-gradient(145deg, #002A5C 0%, #0a2240 100%) !important;
+  border: 1.5px solid rgba(255, 195, 51, 0.35) !important;
+  border-bottom: 5px solid #FFC333 !important;
+  box-shadow: 0 8px 24px rgba(0, 42, 92, 0.18) !important;
 }
 
-.specialization-card:nth-child(even) {
-  background-color: #FFC333;
-  /* Yellow */
+.specialization-card:nth-child(odd):hover {
+  transform: translateY(-6px) !important;
+  border-bottom-color: #ffffff !important;
+  box-shadow: 0 14px 34px rgba(0, 42, 92, 0.30) !important;
 }
 
-/* Icon Styling */
-.card-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
-  font-size: 26px;
-  background: white;
-  color: #C00D0D;
-  /* red icon */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.specialization-card:nth-child(odd) .card-badge {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #FFC333 !important;
+  border: 1px solid rgba(255, 195, 51, 0.45) !important;
 }
 
-/* Icon background adjustment for alternating cards */
 .specialization-card:nth-child(odd) .card-icon {
-  background: rgba(255, 255, 255, 0.9);
-  color: #C00D0D;
+  background: #ffffff !important;
+  color: #002A5C !important;
+  border: 2px solid #FFC333 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+}
+
+.specialization-card:nth-child(odd) .card-title {
+  color: #ffffff !important;
+}
+
+.specialization-card:nth-child(odd):hover .card-title {
+  color: #FFC333 !important;
+}
+
+.specialization-card:nth-child(odd) .card-description {
+  color: #e2e8f0 !important;
+}
+
+.specialization-card:nth-child(odd) .view-more-btn {
+  background: #FFC333 !important;
+  color: #002A5C !important;
+  box-shadow: 0 4px 14px rgba(255, 195, 51, 0.35) !important;
+}
+
+.specialization-card:nth-child(odd) .view-more-btn:hover {
+  background: #ffffff !important;
+  color: #002A5C !important;
+  transform: translateY(-2px);
+}
+
+/* --- EVEN CARDS: Vibrant Warm Gold / Amber --- */
+.specialization-card:nth-child(even) {
+  background: linear-gradient(145deg, #FFC333 0%, #ffb100 100%) !important;
+  border: 1.5px solid rgba(0, 42, 92, 0.18) !important;
+  border-bottom: 5px solid #002A5C !important;
+  box-shadow: 0 8px 24px rgba(255, 195, 51, 0.22) !important;
+}
+
+.specialization-card:nth-child(even):hover {
+  transform: translateY(-6px) !important;
+  border-bottom-color: #002A5C !important;
+  box-shadow: 0 14px 34px rgba(255, 195, 51, 0.40) !important;
+}
+
+.specialization-card:nth-child(even) .card-badge {
+  background: #ffffff !important;
+  color: #002A5C !important;
+  border: 1px solid rgba(0, 42, 92, 0.2) !important;
 }
 
 .specialization-card:nth-child(even) .card-icon {
-  background: rgba(255, 255, 255, 0.95);
-  color: #C00D0D;
+  background: #002A5C !important;
+  color: #FFC333 !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 4px 14px rgba(0, 42, 92, 0.25) !important;
 }
 
-/* Force readable text for card title & description */
-.specialization-card:nth-child(odd) .card-title,
-.specialization-card:nth-child(odd) .card-description {
-  color: #ffffff;
-  /* White text on dark blue */
+.specialization-card:nth-child(even) .card-title {
+  color: #002A5C !important;
 }
 
-.specialization-card:nth-child(even) .card-title,
+.specialization-card:nth-child(even):hover .card-title {
+  color: #0a2240 !important;
+}
+
 .specialization-card:nth-child(even) .card-description {
-  color: #ffffff;
-  /* White text on yellow */
+  color: #0a2240 !important;
+  font-weight: 500 !important;
 }
 
-/* Hover Effect */
-.specialization-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+.specialization-card:nth-child(even) .view-more-btn {
+  background: #002A5C !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(0, 42, 92, 0.25) !important;
+}
+
+.specialization-card:nth-child(even) .view-more-btn:hover {
+  background: #ffffff !important;
+  color: #002A5C !important;
+  transform: translateY(-2px);
+}
+
+/* Shared Card Elements */
+.card-top-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6px !important;
+}
+
+.card-badge {
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  padding: 2px 9px !important;
+  border-radius: 12px !important;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.card-icon {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 8px !important;
+  font-size: 16px !important;
+  transition: transform 0.3s ease;
 }
 
 .specialization-card:hover .card-icon {
-  transform: scale(1.2) rotate(5deg);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  transform: scale(1.1) rotate(4deg);
 }
 
-/* Card Title & Description */
 .card-title {
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 10px;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  margin-bottom: 5px !important;
+  line-height: 1.3 !important;
+  min-height: 38px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.25s ease;
 }
 
 .card-description {
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 12px !important;
+  line-height: 1.48 !important;
+  margin-bottom: 8px !important;
+  flex-grow: 1;
+}
+
+.view-more-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  align-self: center;
+  padding: 6px 18px !important;
+  border-radius: 20px !important;
+  font-size: 11.5px !important;
+  font-weight: 800 !important;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  margin-top: auto;
 }
 
 /* Responsive Styling */
-
-/* Laptop / Tablet */
 @media (max-width: 1024px) {
   .specializations-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
   }
 
   .specialization-card {
-    padding: 35px 25px;
+    min-height: 310px !important;
+    padding: 20px 16px 16px 16px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .specializations-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
-  .card-icon {
-    width: 55px;
-    height: 55px;
-    font-size: 24px;
-  }
-
-  .card-title {
-    font-size: 17px;
+  .specialization-card {
+    min-height: auto !important;
+    padding: 22px 16px !important;
   }
 }
 

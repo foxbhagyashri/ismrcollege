@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrophy } from "@fortawesome/free-solid-svg-icons";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import TrophyImg from "../../../assets/Trophyimg.png";
-import SEO from "../../SEO";
 function AwardsRankings() {
   const awards = [
     {
@@ -96,12 +95,7 @@ function AwardsRankings() {
 
   return (
     <div className="custom-fonts">
-      <SEO
-        title="Awards & Rankings | ISMR B-School Pune"
-        description="Explore top awards, rankings, and institutional accolades awarded to ISMR Pune for academic and placement excellence."
-        canonical="https://ismrpune.edu.in/about-us/awards-and-rankings/"
-      />
-      <style>{`
+            <style>{`
         /* Fonts & Headings */
         .page-heading {
           font-family: 'Inter', Arial, Helvetica, sans-serif;

@@ -7,7 +7,6 @@ import ContactForm from "../../forms/ContactForm";
 import Howtoaplydownoadform from "../../forms/HowToApplyDownloadForm";
 import brochurePdf from "/ISMR Brochure.pdf"; // Add your PDF in assets
 import ISMRFormModal from "../../forms/ISMRFormModal";
-import SEO from "../../SEO";
 
 export default function BCACourse() {
   const navigate = useNavigate();
@@ -60,12 +59,7 @@ export default function BCACourse() {
 
   return (
     <section className="apply-wrapper">
-      <SEO
-        title="BCA College in Pune | Best BCA Programme | ISMR Pune"
-        description="Study at the top BCA College in Pune at ISMR. SPPU affiliated BCA programme with software engineering, AI, cloud computing, and high IT placement packages."
-        canonical="https://ismrpune.edu.in/programs/bca-college-in-pune"
-      />
-      <style>{`
+            <style>{`
 
   .sector-note {
   margin-top: 20px;

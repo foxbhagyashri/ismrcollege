@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import allsectionbg from "../assets/allsectionbg.jpg";
-import SEO from "./SEO";
 
 
 export default function ApplyMba() {
@@ -41,12 +40,7 @@ export default function ApplyMba() {
 
     return (
         <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
-            <SEO
-                title="Apply for MBA 2026 | Admission Application | ISMR Pune"
-                description="Apply online for AICTE approved MBA programs at ISMR Pune. Fill application form for direct admission and scholarship counselling."
-                canonical="https://ismrpune.edu.in/admissions/how-to-apply/"
-            />
-
+            
             {/* -------- HEADER SECTION -------- */}
             <section
                 className="py-5 text-white text-center position-relative"

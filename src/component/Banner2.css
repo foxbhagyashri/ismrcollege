@@ -1,6 +1,6 @@
 /* Banner Main Area */
 .banner-wrap-area {
-  padding: 70px 80px;
+  padding: 50px 0;
   background-color: #fffaf5;
   position: relative;
   overflow: hidden;
@@ -11,43 +11,58 @@
 .banner-wrap-image {
   position: relative;
   text-align: center;
-  padding-top: 30px;
 }
 
-.banner-wrap-image .main-img {
+.student-badge-wrap {
+  position: relative;
+  display: inline-block;
+  max-width: 430px;
   width: 100%;
-  max-width: 500px;
+}
+
+.student-badge-wrap .student-img {
+  width: 100%;
+  max-width: 430px;
+  height: auto;
   z-index: 3;
   position: relative;
+  display: block;
 }
 
-.banner-wrap-image .image-2 {
+.student-badge-wrap .legacy-badge {
   position: absolute;
-  width: 250px;
-  top: 185px;
-  left: 0;
+  width: 155px;
+  height: 155px;
+  top: 24%;
+  left: -20px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.15));
 }
 
-.banner-wrap-image .city-img {
-  width: 100%;
-  max-width: 550px;
-  /* opacity: 0.9; */
-}
-
-.banner-wrap-image .middle-img {
+.student-badge-wrap .middle-img {
   position: absolute;
-  bottom: 50px;
-  right: 52px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
 }
 
-.banner-wrap-image .middle-img img {
-  width: 150px;
+.student-badge-wrap .middle-img img {
+  width: 95px;
+  height: auto;
 }
 
 .banner-wrap-content {
-  padding-left: 30px;
+  padding-left: 15px;
 }
+
 
 .banner-wrap-content .title p {
   font-size: 18px;
@@ -108,15 +123,27 @@
 }
 
 .user-list {
-  margin-top: 40px;
+  margin-top: 35px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
+  list-style: none;
+  padding-left: 0;
+}
+
+.user-list > li {
+  list-style: none;
+}
+
+.user-list .image {
+  list-style: none;
+  padding-left: 0;
 }
 
 .user-list .image li {
   margin-right: -10px;
+  list-style: none;
 }
 
 .user-list .image img {
@@ -125,6 +152,7 @@
   border-radius: 50%;
   border: 2px solid #fff;
 }
+
 
 .user-listtext {
   display: flex;
@@ -165,9 +193,10 @@
 }
 
 .rotating-img {
-  width: 250px;
-  height: auto;
-  animation: rotate 10s linear infinite;
+  width: 165px;
+  height: 165px;
+  animation: rotate 12s linear infinite;
+  display: block;
 }
 
 @keyframes rotate {
@@ -185,30 +214,35 @@
 /* Large Tablet */
 @media (max-width: 1199px) {
   .banner-wrap-area {
-    padding: 50px 40px;
+    padding: 50px 30px;
   }
 
   .banner-wrap-content .title h1 {
-    font-size: 36px;
+    font-size: 34px;
+  }
+
+  .banner-wrap-image .student-img,
+  .banner-wrap-image .main-img {
+    max-width: 360px;
   }
 
   .banner-wrap-image .image-2 {
-    top: 120px;
-  }
-
-  .banner-wrap-image .middle-img {
-    bottom: 30px;
-    right: 30px;
+    width: 140px;
+    height: 140px;
+    top: 110px;
+    left: calc(50% - 180px);
   }
 
   .banner-wrap-image .middle-img img {
-    width: 120px;
+    width: 85px;
   }
 
   .rotating-img {
-    width: 220px;
+    width: 140px;
+    height: 140px;
   }
 }
+
 
 /* Tablet */
 @media (max-width: 991px) {
@@ -243,25 +277,29 @@
   .banner-wrap-image .image-2 {
     position: relative;
     top: 0;
-    margin: 20px auto;
-    width: 200px;
+    left: 0;
+    margin: 15px auto 0 auto;
+    width: 140px;
+    height: 140px;
   }
 
   .banner-wrap-image .middle-img {
-    position: relative;
-    bottom: 0;
-    right: 0;
-    margin-top: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .banner-wrap-image .middle-img img {
-    width: 100px;
+    width: 85px;
   }
 
   .rotating-img {
-    width: 200px;
+    width: 140px;
+    height: 140px;
   }
 }
+
 
 /* Mobile */
 @media (max-width: 768px) {

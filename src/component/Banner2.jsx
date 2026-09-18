@@ -7,23 +7,25 @@ const Banner = () => {
   return (
     <div>
       <div className="banner-wrap-area">
-        <div className="container-fluid">
+        <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-6">
+            <div className="col-lg-6 text-center text-lg-start">
               <div className="banner-wrap-image">
-                <img
-                  src="/banner-wrap-1.png"
-                  alt="banner-wrap-image"
-                  className="student-img"
-                ></img>
-                <div className="image-2">
+                <div className="student-badge-wrap">
                   <img
-                    src="/banner-wrap-city.png"
-                    alt="banner-wrap"
-                    className="rotating-img"
-                  ></img>
-                  <div className="middle-img">
-                    <img src="/banner-wrap-city-2.png" alt="banner-wrap"></img>
+                    src="/banner-wrap-1.png"
+                    alt="ISMR Pune MBA Graduate"
+                    className="student-img"
+                  />
+                  <div className="legacy-badge">
+                    <img
+                      src="/banner-wrap-city.png"
+                      alt="19 Years of Legacy"
+                      className="rotating-img"
+                    />
+                    <div className="middle-img">
+                      <img src="/banner-wrap-city-2.png" alt="Sri Balaji Education Society" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -84,32 +86,6 @@ const Banner = () => {
                       </li>
                     </ul>
                   </li> */}
-                </ul>
-
-                {/*  */}
-                <ul className="ps-0 mb-0 d-flex align-items-center user-list">
-                  <li>
-                    <ul className="list-unstyled ps-0 mb-0 d-flex align-items-center image">
-                      <li>
-                        <img src="/hero-user-1.jpg" alt="hero-user" />
-                      </li>
-                      <li>
-                        <img src="/hero-user-2.jpg" alt="hero-user" />
-                      </li>
-                      <li>
-                        <img src="/hero-user-3.jpg" alt="hero-user" />
-                      </li>
-                      <li>
-                        <img src="/hero-user-4.jpg" alt="hero-user" />
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="user-listtext">
-                    <h2>
-                      <span className="counter">3500</span>+
-                    </h2>
-                    <p className="subtext"> Pan India Students</p>
-                  </li>
                 </ul>
               </div>
             </div>

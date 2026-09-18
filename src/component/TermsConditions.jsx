@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import allsectionbg from "../assets/allsectionbg.jpg";
-import SEO from "./SEO";
 
 // ---------------- STAT COUNTER ----------------
 const StatCounter = ({ endValue, duration, suffix }) => {
@@ -36,12 +35,7 @@ const StatCounter = ({ endValue, duration, suffix }) => {
 const InstitutionStats = () => {
     return (
         <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
-            <SEO
-                title="Terms & Conditions | Legal & Privacy Policies | ISMR Pune"
-                description="Terms and conditions, privacy policies, and institutional usage guidelines for ISMR Pune."
-                canonical="https://ismrpune.edu.in/terms-and-conditions"
-            />
-
+            
             {/* -------- HEADER -------- */}
             <section
                 className="py-5 text-white text-center position-relative"

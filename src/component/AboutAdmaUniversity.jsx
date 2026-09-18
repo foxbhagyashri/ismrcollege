@@ -4,64 +4,111 @@ import AICTE from "../assets/Homeimg/AICTE.png";
 import DOTE from "../assets/Homeimg/DOTE.png";
 import NAAC from "../assets/Homeimg/NAAC.png";
 import SPPU from "../assets/Homeimg/SPPU.png";
-import LOAN from "../assets/Homeimg/LOAN.png";
 import AIMA from "../assets/Homeimg/AIMA.png";
 import AIMS from "../assets/Homeimg/AIMS.png";
 import AISE from "../assets/Homeimg/AISE.png";
 import CET from "../assets/Homeimg/cetcell.png";
 
+const affiliations = [
+  {
+    name: "AICTE",
+    subtitle: "Technical Council",
+    fullName: "All India Council for Technical Education (Govt. of India)",
+    logo: AICTE,
+    url: "https://www.aicte.gov.in/"
+  },
+  {
+    name: "DTE",
+    subtitle: "Maharashtra Govt.",
+    fullName: "Directorate of Technical Education, Maharashtra",
+    logo: DOTE,
+    url: "https://dte.maharashtra.gov.in/home-en/"
+  },
+  {
+    name: "CET CELL",
+    subtitle: "State Entrance",
+    fullName: "State Common Entrance Test Cell, Maharashtra",
+    logo: CET,
+    url: "https://cetcell.mahacet.org/"
+  },
+  {
+    name: "SPPU",
+    subtitle: "Pune University",
+    fullName: "Savitribai Phule Pune University (Affiliating Body)",
+    logo: SPPU,
+    url: "https://www.unipune.ac.in/"
+  },
+  {
+    name: "AIMA",
+    subtitle: "Management Assoc.",
+    fullName: "All India Management Association",
+    logo: AIMA,
+    url: "https://www.aima.in/"
+  },
+  {
+    name: "AIMS",
+    subtitle: "Management Schools",
+    fullName: "Association of Indian Management Schools",
+    logo: AIMS,
+    url: "https://aims.org.in/"
+  },
+  {
+    name: "AISHE",
+    subtitle: "Higher Education",
+    fullName: "All India Survey on Higher Education",
+    logo: AISE,
+    url: "https://aishe.gov.in/"
+  },
+  {
+    name: "NAAC",
+    subtitle: "Accredited Body",
+    fullName: "National Assessment and Accreditation Council",
+    logo: NAAC,
+    url: "https://naac.gov.in/index.php/en/"
+  }
+];
+
 const AboutAdmaUniversity = () => {
   return (
-    <section className="about-container">
-      {/* Top Row */}
-<div className="section-header">
-      <h1 className="section-title">Affiliation and Accreditations</h1>
-</div>
-      {/* Bottom Row */}
-      <div className="about-bottom">
-        <div className="logos-section">
-
-          <div className="logo-card">
-            {/* add specific class so we can style AICTE separately */}
-            <a href="https://www.aicte.gov.in/" target="_blank">  <img src={AICTE} alt="AICTE Logo" className="logo-image aicte" /></a>
-            <a href="https://www.aicte.gov.in/" target="_blank"><span>All India Council for Technical Education</span></a>
-          </div>
-
-          <div className="logo-card">
-            <a href="https://dte.maharashtra.gov.in/home-en/" target="_blank">   <img src={DOTE} alt="DOTE Logo" className="logo-image" /></a>
-            <a href="https://dte.maharashtra.gov.in/home-en/" target="_blank">    <span>Directorate of Technical Education, Maharashtra</span></a>
-          </div>
-          <div className="logo-card">
-            <a href="https://cetcell.mahacet.org/" target="_blank"> <img src={CET} alt="LOAN Logo" className="logo-image" /></a>
-            <a href="https://cetcell.mahacet.org/" target="_blank">  <span>CET Cell</span></a>
-          </div>
-          <div className="logo-card">
-            <a href="https://www.unipune.ac.in/" target="_blank"> <img src={SPPU} alt="SPPU Logo" className="logo-image" /></a>
-            <a href="https://www.unipune.ac.in/" target="_blank"> <span>Savitribai Phule Pune University</span></a>
-          </div>
-
+    <section className="accreditation-timeline-section">
+      <div className="container">
+        <div className="section-header text-center mb-4">
+          <h2 className="section-title text-center">Affiliation and Accreditations</h2>
         </div>
-      </div>
-      <div className="about-bottom">
-        <div className="logos-section">
-          <div className="logo-card">
-            {/* add specific class so we can style AICTE separately */}
-            <a href="https://www.aima.in/" target="_blank"> <img src={AIMA} alt="AIMA Logo" className="logo-image aima" /></a>
-            <a href="https://www.aima.in/" target="_blank">  <span>All India Management Association</span></a>
-          </div>
-          <div className="logo-card">
-            <a href="https://aims.org.in/" target="_blank"> <img src={AIMS} alt="DOTE Logo" className="logo-image" /></a>
-            <a href="https://aims.org.in/" target="_blank"> <span>Association of Indian
-              Management Schools</span></a>
-          </div>
-          <div className="logo-card">
-            <a href="https://aishe.gov.in/" target="_blank">  <img src={AISE} alt="AISE Logo" className="logo-image" /></a>
-            <a href="https://aishe.gov.in/" target="_blank">  <span>All India Survey on
-              Higher Education</span></a>
-          </div>
-          <div className="logo-card">
-            <a href="https://naac.gov.in/index.php/en/" target="_blank"> <img src={NAAC} alt="NAAC Logo" className="logo-image" /></a>
-            <a href="https://naac.gov.in/index.php/en/" target="_blank">  <span>National Assessment and Accreditation Council</span></a>
+
+        {/* 1-Line Connected Track Design (Referencing 3rd Image) */}
+        <div className="timeline-track-wrapper">
+          {/* Continuous golden connecting track line */}
+          <div className="timeline-connecting-line"></div>
+
+          <div className="timeline-nodes-container">
+            {affiliations.map((item, index) => (
+              <a
+                key={index}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="timeline-node-item"
+                title={item.fullName}
+              >
+                {/* Circular White Badge with ring and shadow */}
+                <div className="timeline-badge-outer">
+                  <div className="timeline-badge-inner">
+                    <img
+                      src={item.logo}
+                      alt={`${item.name} Logo`}
+                      className="timeline-node-logo"
+                    />
+                  </div>
+                </div>
+
+                {/* Typography below badge */}
+                <div className="timeline-node-info">
+                  <h4 className="timeline-node-title">{item.name}</h4>
+                  <p className="timeline-node-sub">{item.subtitle}</p>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </div>

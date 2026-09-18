@@ -1,22 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
-
 :root {
-  --primary-blue: #002A5C;
-  --secondary-blue: #003D7A;
-  --accent-gold: #FFB800;
-  --accent-yellow: #FFC333;
-  --dark-navy: #001433;
-  --text-dark: #1a1a1a;
-  --text-grey: #5a6c7d;
-  --bg-light: #f8f9fa;
-  --card-shadow: 0 15px 40px rgba(0, 42, 92, 0.12);
-  --card-shadow-hover: 0 25px 60px rgba(0, 42, 92, 0.2);
+  --ismr-navy: #002a5c;
+  --ismr-navy-deep: #0a2240;
+  --ismr-gold: #ffc333;
+  --ismr-gold-hover: #e6ac20;
+  --ismr-text: #2d3748;
+  --ismr-text-muted: #475569;
 }
 
 .programs-section {
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-  padding: 65px 5%;
-  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #f8fafc 0%, #edf2f7 100%);
+  padding: 55px 0;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
   position: relative;
   overflow: hidden;
 }
@@ -24,250 +18,277 @@
 .programs-section::before {
   content: '';
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 400px;
-  height: 400px;
+  top: -100px;
+  right: -100px;
+  width: 450px;
+  height: 450px;
   background: radial-gradient(circle, rgba(255, 195, 51, 0.08) 0%, transparent 70%);
   pointer-events: none;
 }
 
-/* --- Header Section --- */
+/* --- Section Header --- */
 .section-header {
   text-align: center;
-  max-width: 900px;
-  margin: 0 auto 50px auto;
+  max-width: 800px;
+  margin: 0 auto 32px;
   position: relative;
   z-index: 1;
 }
 
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--primary-blue);
-  margin-bottom: 15px;
-  position: relative;
+.section-eyebrow {
   display: inline-block;
-  letter-spacing: -0.5px;
-  line-height: 1.2;
-}
-
-/* Enhanced underline decoration */
-.section-title::after {
-  content: '';
-  display: block;
-  width: 70px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--accent-gold) 0%, var(--accent-yellow) 100%);
-  margin: 12px auto 0;
-  border-radius: 3px;
-  box-shadow: 0 4px 10px rgba(255, 184, 0, 0.3);
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #c9922b;
+  text-transform: uppercase;
+  margin-bottom: 6px;
 }
 
 .section-subtitle {
-  font-size: 1.05rem;
-  color: var(--text-grey);
-  line-height: 1.6;
+  font-size: 15px;
+  color: var(--ismr-text-muted);
+  line-height: 1.55;
   font-weight: 400;
+  margin: 0;
 }
 
-/* --- The Grid Structure --- */
+/* --- 3x3 Balanced Grid --- */
 .specializations-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* centers the last row */
-  gap: 22px;
-  max-width: 1250px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1240px;
   margin: 0 auto;
 }
 
-/* --- Card Design matching image --- */
+/* --- Card Base: Perfectly Proportioned Height --- */
 .specialization-card {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  
-  /* Layout: 4 columns on large screens (25% each) */
-  flex: 0 1 calc(25% - 22px);
-  max-width: 285px;
-  
-  /* Styling */
-  border-radius: 16px;
-  padding: 28px 20px 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  border-radius: 16px !important;
+  min-height: 298px !important;
+  padding: 18px 18px 16px 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  position: relative !important;
+  overflow: hidden !important;
+  text-align: center !important;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer !important;
 }
 
-/* Hover State */
-.specialization-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.14);
+/* --- ODD CARDS: Deep Royal Blue / Navy --- */
+.specialization-card:nth-child(odd) {
+  background: linear-gradient(145deg, #002A5C 0%, #0a2240 100%) !important;
+  border: 1.5px solid rgba(255, 195, 51, 0.35) !important;
+  border-bottom: 5px solid #FFC333 !important;
+  box-shadow: 0 8px 24px rgba(0, 42, 92, 0.18) !important;
 }
 
-/* Blue Cards */
-.card-theme-blue {
-  background: linear-gradient(135deg, #003366 0%, #00478F 100%);
+.specialization-card:nth-child(odd):hover {
+  transform: translateY(-6px) !important;
+  border-bottom-color: #ffffff !important;
+  box-shadow: 0 14px 34px rgba(0, 42, 92, 0.30) !important;
 }
 
-.card-theme-blue .card-title,
-.card-theme-blue .card-description {
-  color: #ffffff;
+.specialization-card:nth-child(odd) .card-badge {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #FFC333 !important;
+  border: 1px solid rgba(255, 195, 51, 0.45) !important;
 }
 
-.card-theme-blue .view-more-btn {
-  background: #FFC333;
-  color: #002A5C;
+.specialization-card:nth-child(odd) .card-icon {
+  background: #ffffff !important;
+  color: #002A5C !important;
+  border: 2px solid #FFC333 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
 }
 
-.card-theme-blue .view-more-btn:hover {
-  background: #FFD700;
+.specialization-card:nth-child(odd) .card-title {
+  color: #ffffff !important;
+}
+
+.specialization-card:nth-child(odd):hover .card-title {
+  color: #FFC333 !important;
+}
+
+.specialization-card:nth-child(odd) .card-description {
+  color: #e2e8f0 !important;
+}
+
+.specialization-card:nth-child(odd) .view-more-btn {
+  background: #FFC333 !important;
+  color: #002A5C !important;
+  box-shadow: 0 4px 14px rgba(255, 195, 51, 0.35) !important;
+}
+
+.specialization-card:nth-child(odd) .view-more-btn:hover {
+  background: #ffffff !important;
+  color: #002A5C !important;
   transform: translateY(-2px);
 }
 
-/* Yellow Cards */
-.card-theme-yellow {
-  background: linear-gradient(135deg, #FFB800 0%, #FFC333 100%);
+/* --- EVEN CARDS: Vibrant Warm Gold / Amber --- */
+.specialization-card:nth-child(even) {
+  background: linear-gradient(145deg, #FFC333 0%, #ffb100 100%) !important;
+  border: 1.5px solid rgba(0, 42, 92, 0.18) !important;
+  border-bottom: 5px solid #002A5C !important;
+  box-shadow: 0 8px 24px rgba(255, 195, 51, 0.22) !important;
 }
 
-.card-theme-yellow .card-title,
-.card-theme-yellow .card-description {
-  color: #002A5C;
+.specialization-card:nth-child(even):hover {
+  transform: translateY(-6px) !important;
+  border-bottom-color: #002A5C !important;
+  box-shadow: 0 14px 34px rgba(255, 195, 51, 0.40) !important;
 }
 
-.card-theme-yellow .view-more-btn {
-  background: #002A5C;
-  color: #ffffff;
+.specialization-card:nth-child(even) .card-badge {
+  background: #ffffff !important;
+  color: #002A5C !important;
+  border: 1px solid rgba(0, 42, 92, 0.2) !important;
 }
 
-.card-theme-yellow .view-more-btn:hover {
-  background: #001a3d;
+.specialization-card:nth-child(even) .card-icon {
+  background: #002A5C !important;
+  color: #FFC333 !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 4px 14px rgba(0, 42, 92, 0.25) !important;
+}
+
+.specialization-card:nth-child(even) .card-title {
+  color: #002A5C !important;
+}
+
+.specialization-card:nth-child(even):hover .card-title {
+  color: #0a2240 !important;
+}
+
+.specialization-card:nth-child(even) .card-description {
+  color: #0a2240 !important;
+  font-weight: 500 !important;
+}
+
+.specialization-card:nth-child(even) .view-more-btn {
+  background: #002A5C !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(0, 42, 92, 0.25) !important;
+}
+
+.specialization-card:nth-child(even) .view-more-btn:hover {
+  background: #ffffff !important;
+  color: #002A5C !important;
   transform: translateY(-2px);
 }
 
-/* --- Icon Styling --- */
-.card-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
+/* Shared Card Top Bar & Badge */
+.card-top-bar {
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-size: 22px;
-  background: #ffffff;
-  color: #C00D0D;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
-  margin: 0 auto 14px;
-  transition: all 0.3s ease;
+  margin-bottom: 6px !important;
+}
+
+.card-badge {
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  padding: 2px 9px !important;
+  border-radius: 12px !important;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* Shared Icon */
+.card-icon {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 16px !important;
+  margin: 0 auto 8px !important;
+  transition: transform 0.3s ease !important;
 }
 
 .specialization-card:hover .card-icon {
-  transform: scale(1.08) rotate(4deg);
+  transform: scale(1.1) rotate(4deg) !important;
 }
 
-/* --- Card Content --- */
+/* Shared Content */
 .card-content {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+  text-align: center !important;
+  margin-bottom: 8px !important;
 }
 
 .card-title {
-  font-size: 1.02rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-  line-height: 1.3;
-  min-height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  margin-bottom: 5px !important;
+  line-height: 1.3 !important;
+  min-height: 38px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: color 0.25s ease;
 }
 
 .card-description {
-  font-size: 0.85rem;
-  line-height: 1.5;
-  text-align: center;
-  margin-bottom: 20px;
-  flex-grow: 1;
+  font-size: 12px !important;
+  line-height: 1.48 !important;
+  margin: 0 !important;
+  flex-grow: 1 !important;
 }
 
-/* --- Button Styling --- */
+/* Shared Button */
 .view-more-btn {
-  padding: 8px 22px;
-  border: none;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  align-self: center;
-  margin-top: auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  font-family: 'Poppins', sans-serif;
-  text-decoration: none;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  align-self: center !important;
+  padding: 6px 18px !important;
+  border-radius: 20px !important;
+  font-size: 11.5px !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease !important;
+  margin-top: auto !important;
 }
 
 .view-more-btn svg {
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease;
 }
 
 .view-more-btn:hover svg {
   transform: translateX(4px);
 }
 
-/* --- Responsive Design --- */
-@media (max-width: 1200px) {
-  .specialization-card { flex: 0 1 calc(33.333% - 24px); max-width: 360px; }
-  .section-title { font-size: 2.5rem; }
-}
-
+/* Responsive */
 @media (max-width: 1024px) {
-  .specialization-card { flex: 0 1 calc(50% - 20px); max-width: 520px; }
-}
+  .specializations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
 
-@media (max-width: 768px) {
-  .specialization-card { flex: 0 1 calc(100% - 20px); max-width: 100%; padding: 35px 25px 30px; }
-  .section-title { font-size: 2rem; }
-  .section-subtitle { font-size: 1rem; }
-}
-
-@media (max-width: 480px) {
-  .programs-section { padding: 60px 5%; }
-  .section-title { font-size: 1.75rem; }
-  .card-icon { width: 60px; height: 60px; font-size: 26px; }
-  .card-title { font-size: 1.1rem; }
-  .card-description { font-size: 0.9rem; }
-}
-.view-more-btn:hover {
-  background-color: #e9ecef;
-  gap: 12px; /* Expands space between text and arrow */
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
   .specialization-card {
-    flex: 0 1 calc(50% - 15px); /* 2 per row */
+    min-height: 310px !important;
+    padding: 20px 16px 16px 16px !important;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .programs-section {
-    padding: 60px 5%;
+    padding: 38px 0 42px;
   }
-  
+  .specializations-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
   .specialization-card {
-    flex: 0 1 100%; /* 1 per row */
-    margin-top: 40px;
-  }
-  
-  .section-title {
-    font-size: 2rem;
+    min-height: auto !important;
+    padding: 22px 16px !important;
   }
 }

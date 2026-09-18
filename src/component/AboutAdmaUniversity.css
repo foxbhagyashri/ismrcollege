@@ -1,191 +1,218 @@
-/* Apply font globally */
-.about-container, .about-container * {
+/* ==========================================================================
+   AFFILIATIONS & ACCREDITATIONS (1-Line Connected Track Design)
+   Deep Navy (#0a2240), Radiant Gold (#ffc333), 100% Fit without Cutoff
+   ========================================================================== */
+
+.accreditation-timeline-section {
+  background: linear-gradient(180deg, #ffffff 0%, #fffbf2 100%);
+  padding: 75px 0 70px 0;
+  min-height: 380px;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
   font-family: 'Inter', Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
-}
-.logo-card a{
-  font-weight: 700;
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
-    color: #002A5C;
-    text-decoration: none; /* removes underline */
-    color: inherit; /* keeps the text color same as parent */
 }
 
-/* Main container */
-.about-container {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Header */
+.accreditation-timeline-section .section-header {
+  margin-bottom: 30px;
 }
 
-/* Top Row */
-.about-top {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  margin-bottom: 4rem;
-}
-
-.about-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.about-title {
-  font-size: 2.5rem;
-  color: #002A5C;
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 700;
-}
-
-.about-icon {
-  font-size: 2.5rem;
-}
-
-.about-text {
-  font-size: 17px;
-  line-height: 1.8;
-  color: #333;
-  text-align: justify;
-  text-justify: inter-word;
-  margin-top: 10px;
-}
-
-.about-right img {
+/* 1-Line Connected Track Wrapper */
+.timeline-track-wrapper {
+  position: relative;
   width: 100%;
-  height: 100%;
-  max-height: 400px;
-  /* Use contain so the full image is visible and any transparent background stays transparent */
-  object-fit: contain;
-  background: transparent;
-  border-radius: 10px;
-  /* remove heavy shadow so image appears without a colored background */
-  box-shadow: none;
+  padding: 36px 0 24px 0;
+  overflow-x: visible; /* Fits all 8 items at 100% and 90% scale without scrollbar */
 }
 
-/* Bottom Row */
-.about-bottom {
-  
-  border-radius: 12px;
-  margin-top: 4rem;
-  /* box-shadow: 0 6px 20px rgba(0,0,0,0.2); */
+/* Continuous Horizontal Connecting Line (Centered through all 8 Badges from 1st to 8th) */
+.timeline-connecting-line {
+  position: absolute;
+  top: 95px; /* Perfectly centered with 118px circle + 36px padding */
+  left: calc(100% / 16); /* Centers on 1st node */
+  right: calc(100% / 16); /* Centers on 8th node */
+  height: 4.5px;
+  background: linear-gradient(90deg, #0a2240 0%, #ffc333 20%, #ffc333 80%, #0a2240 100%);
+  z-index: 1;
+  border-radius: 3px;
 }
 
-/* Logos Section */
-.logos-section {
-  /* Use flex so cards sit in a single equal-width row on wide screens */
+/* Nodes Row (8 items in 1 single line with 100% visibility) */
+.timeline-nodes-container {
   display: flex;
-  gap: 2rem;
-  align-items: stretch; /* make cards equal height */
   justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
 }
 
-.logo-card {
+/* Individual Node */
+.timeline-node-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* center content vertically so cards look uniform */
-  background-color: white;
-  /* color: black; */
-  padding: 1.5rem 1rem;
-  border-radius: 18px;
-  width: 100%;
-  /* allow cards to share available space equally */
+  text-decoration: none;
   flex: 1 1 0;
-  max-width: none;
-  /* enforce same visual height for all cards and allow larger logos */
-  min-height: 280px;
+  min-width: 0;
   text-align: center;
-  box-shadow: 0px 1px 1px 2px  #002A5C;;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  gap: 1.2rem;
-  /* Make every card stretch to the same height inside the grid */
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  padding: 0 2px;
+}
+
+.timeline-node-item:hover {
+  transform: translateY(-8px);
+}
+
+/* Outer Circular Badge - Balanced scale fitting all 8 without being hidden */
+.timeline-badge-outer {
+  width: 118px;
+  height: 118px;
+  min-width: 118px;
+  min-height: 118px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 4px solid #0a2240;
+  padding: 6px;
+  box-shadow: 0 10px 26px rgba(10, 34, 64, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.timeline-node-item:hover .timeline-badge-outer {
+  border-color: #ffc333;
+  box-shadow: 0 14px 34px rgba(255, 195, 51, 0.45);
+  transform: scale(1.08);
+}
+
+/* Inner Circle Ring with dashed accent */
+.timeline-badge-inner {
+  width: 100%;
   height: 100%;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px dashed rgba(255, 195, 51, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  transition: all 0.3s ease;
 }
 
-.logo-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+.timeline-node-item:hover .timeline-badge-inner {
+  border-color: #0a2240;
+  border-style: solid;
 }
 
-.logo-card .logo-image {
-  /* Fixed square area for all logos so they appear equal regardless of original image dimensions */
-  width: 130px;
-  height: 130px;
+/* Logo inside circle */
+.timeline-node-logo {
+  max-width: 80px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
   object-fit: contain;
-  margin-bottom: 0.5rem;
-  background: transparent; /* preserve transparency for PNG/SVG */
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
 }
 
-/* Slightly smaller AICTE logo (use class added in JSX) so it looks balanced */
-.logo-image.aicte {
-  width: 105px;
-  height: 120px;
+.timeline-node-item:hover .timeline-node-logo {
+  transform: scale(1.1);
 }
 
-/* Ensure grid items (cards) stretch to equal heights */
-.logos-section {
-  align-items: stretch;
+/* Info below badge */
+.timeline-node-info {
+  margin-top: 18px;
+  width: 100%;
 }
 
-/* Make the caption/text under each logo bold and explicitly use Inter */
-.logo-card > span {
-  font-weight: 700;
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
-  color: #002A5C; /* make caption stand out on white cards */
+.timeline-node-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0a2240;
+  margin-bottom: 4px;
+  letter-spacing: 0.2px;
+  transition: color 0.2s ease;
+  white-space: nowrap;
 }
 
-/* Removed AICTE-specific size override so all logos use the same size */
+.timeline-node-item:hover .timeline-node-title {
+  color: #ff7a00;
+}
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .about-top {
-    grid-template-columns: 1fr;
+.timeline-node-sub {
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+/* Responsive adjustments for smaller devices */
+@media (max-width: 1100px) {
+  .timeline-badge-outer {
+    width: 102px;
+    height: 102px;
+    min-width: 102px;
+    min-height: 102px;
   }
-  .logos-section {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+
+  .timeline-connecting-line {
+    top: 87px;
   }
-  /* slightly smaller logos on tablet */
-  .logo-card .logo-image {
-    width: 100px;
-    height: 100px;
+
+  .timeline-node-logo {
+    max-width: 68px;
+    max-height: 68px;
   }
-  /* AICTE slightly smaller on tablet */
-  .logo-image.aicte {
-    width: 90px;
-    height: 90px;
+
+  .timeline-node-title {
+    font-size: 14.5px;
+  }
+
+  .timeline-node-sub {
+    font-size: 12px;
   }
 }
 
-@media (max-width: 600px) {
-  .logos-section {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+@media (max-width: 900px) {
+  .accreditation-timeline-section .section-title {
+    font-size: 1.85rem;
   }
-  /* smaller logos on mobile */
-  .logo-card .logo-image {
-    width: 80px;
-    height: 80px;
+
+  .timeline-track-wrapper {
+    overflow-x: auto;
+    padding: 20px 10px 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #ffc333 #f1f5f9;
   }
-  /* AICTE slightly smaller on mobile */
-  .logo-image.aicte {
-    width: 70px;
-    height: 70px;
+
+  .timeline-nodes-container {
+    min-width: 780px;
+    gap: 12px;
   }
-  .logo-card {
-    max-width: 100%;
+
+  .timeline-connecting-line {
+    left: 48px;
+    right: 48px;
+    top: 65px;
   }
-  .about-title {
-    font-size: 2rem;
+
+  .timeline-badge-outer {
+    width: 82px;
+    height: 82px;
+    min-width: 82px;
+    min-height: 82px;
   }
-  .about-text {
-    font-size: 15px;
+
+  .timeline-node-logo {
+    max-width: 50px;
+    max-height: 50px;
   }
 }

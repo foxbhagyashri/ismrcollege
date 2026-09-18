@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 import { ArrowRight } from "lucide-react";
 import { BriefcaseFill } from "react-bootstrap-icons";
-import SEO from "../../SEO";
 
 function StudentFacilities() {
   const facilities = [
@@ -97,12 +96,7 @@ function StudentFacilities() {
 
   return (
     <>
-      <SEO
-        title="Student Facilities & Campus Infrastructure | ISMR Pune"
-        description="Explore top-class facilities at ISMR Pune: modern computer labs, library, sports arena, gym, Wi-Fi campus, seminar halls, and cafeteria."
-        canonical="https://ismrpune.edu.in/campus-life/student-facilities/"
-      />
-      <style>{`
+            <style>{`
         :root {
           --text-dark: #0a2240;
           --accent: #FFC333;

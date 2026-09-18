@@ -7,7 +7,6 @@ import ContactForm from "../../forms/ContactForm";
 import Howtoaplydownoadform from "../../forms/HowToApplyDownloadForm";
 import brochurePdf from "/ISMR Brochure.pdf"; // Add your PDF in assets
 import ISMRFormModal from "../../forms/ISMRFormModal";
-import SEO from "../../SEO";
 
 export default function BBACourse() {
     const navigate = useNavigate();
@@ -60,12 +59,7 @@ export default function BBACourse() {
 
     return (
         <section className="apply-wrapper">
-            <SEO
-                title="BBA College in Pune | Top BBA Programme | ISMR Pune"
-                description="Explore BBA College in Pune at ISMR. SPPU-affiliated Bachelor of Business Administration offering practical business learning, internships, and top placements."
-                canonical="https://ismrpune.edu.in/programs/bba-college-in-pune"
-            />
-            <style>{`
+                        <style>{`
 
   .sector-note {
   margin-top: 20px;

@@ -4,17 +4,11 @@ import allsectionbg from "../../../../assets/allsectionbg.jpg";
 import director from "../../../../assets/Homeimg/Director.png";
 import secretary from "../../../../assets/Homeimg/Secretary.png";
 import cairman from "../../../../assets/Homeimg/cairman.png";
-import SEO from "../../../SEO";
 
 function Leadership() {
   return (
     <div className="font-poppins">
-      <SEO
-        title="Director's Message | Academic Leadership | ISMR Pune"
-        description="Read the Director's message on experiential pedagogy, student innovation, and corporate excellence at ISMR Pune."
-        canonical="https://ismrpune.edu.in/about-us/leadership-team/director-message/"
-      />
-
+      
       <style>{`
         /* Fonts & Headings */
         .page-heading {

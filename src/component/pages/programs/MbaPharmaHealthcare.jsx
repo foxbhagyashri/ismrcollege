@@ -15,7 +15,6 @@ import atosLogo from "../../../assets/Homeimg/atos.png";
 import bajajLogo from "../../../assets/Homeimg/Bajaj-Finserv-Logo.jpg";
 import cognizantLogo from "../../../assets/Homeimg/Cognizant-Logo.png";
 import learningRoutesLogo from "../../../assets/Homeimg/Comp1.png";
-import SEO from "../../SEO";
 
 export default function MBAPharmaCollegesInPune() {
   const navigate = useNavigate();
@@ -105,12 +104,7 @@ export default function MBAPharmaCollegesInPune() {
 
   return (
     <section className="apply-wrapper">
-      <SEO
-        title="MBA in Pharma & Healthcare Management in Pune | ISMR"
-        description="Pursue MBA in Pharma and Healthcare Management in Pune at ISMR. Specialised industry curriculum, clinical & regulatory exposure, 100% placement."
-        canonical="https://ismrpune.edu.in/programs/mba-in-pharma-healthcare-management-in-pune"
-      />
-      <style>{`
+            <style>{`
 
 .content-container p{
 font-size:14px;

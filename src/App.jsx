@@ -70,6 +70,7 @@ import CampusNewsletter from "./component/pages/campus-life/CampusNewsletter";
 import MbaMarketingManagement from "./component/pages/programs/MbaMarketingManagement";
 import MbaHrCollegeInPune from "./component/pages/programs/MbaHrCollegeInPune";
 import MbaFinanceManagement from "./component/pages/programs/MbaFinanceManagement";
+import MbaBusinessAnalytics from "./component/pages/programs/MbaBusinessAnalytics";
 import MbaPharmaHealthcare from "./component/pages/programs/MbaPharmaHealthcare";
 import MbaOperationsSupplyChain from "./component/pages/programs/MbaOperationsSupplyChain";
 import MbaAgribusinessManagement from "./component/pages/programs/MbaAgribusinessManagement";
@@ -110,6 +111,9 @@ const LEGACY_REDIRECTS = [
     { from: "/programs/mba-business-analytics", to: "/programs/mba-in-business-analytics-pune" },
     { from: "/programs/mba-in-operations-and-supply-chain-management-programme-in-pune", to: "/programs/mba-in-operations-and-supply-chain-management-in-pune" },
     { from: "/programs/mba-in-agribusiness-management-college-in-pune", to: "/programs/mba-in-agribusiness-management-pune" },
+    { from: "/programs/mba-program", to: "/academics/mba-program" },
+    { from: "/academics/mba-programme", to: "/academics/mba-program" },
+    { from: "/programs/mba-programme", to: "/academics/mba-program" },
 
     // Old Section Aliases
     { from: "/reach-us", to: "/contact-us" },
@@ -132,6 +136,7 @@ function App() {
         <Router>
             <ScrollToTop />
             <LowercaseRedirect />
+            <SEO />
             <Topbar />
             <Header />
 
@@ -141,11 +146,6 @@ function App() {
                     path="/"
                     element={
                         <>
-                            <SEO
-                                title="ISMR B-School Pune | Best MBA, BBA & BCA College in Pune"
-                                description="ISMR B-School Pune is a premier management institute offering AICTE approved & SPPU affiliated MBA, BBA and BCA programs with 100% placement assistance."
-                                canonical="https://ismrpune.edu.in/"
-                            />
                             <Banner />
                             <Marquee />
                             <CounterSection />
@@ -186,6 +186,7 @@ function App() {
                 {/* 3. Academics */}
                 <Route path="/academics/programs-offered" element={<ProgramsOffered />} />
                 <Route path="/academics/programs" element={<CourseDuration />} />
+                <Route path="/academics/mba-program" element={<MbaProgramPage />} />
 
                 {/* 4. Placements */}
                 <Route path="/placements" element={<PlacementsOverview />} />
@@ -203,7 +204,7 @@ function App() {
                 <Route path="/programs/mba-in-marketing-management-in-pune" element={<MbaMarketingManagement />} />
                 <Route path="/programs/mba-hr-college-in-pune" element={<MbaHrCollegeInPune />} />
                 <Route path="/programs/mba-in-finance-management-in-pune" element={<MbaFinanceManagement />} />
-                <Route path="/programs/mba-in-business-analytics-pune" element={<MbaProgramPage />} />
+                <Route path="/programs/mba-in-business-analytics-pune" element={<MbaBusinessAnalytics />} />
                 <Route path="/programs/mba-in-pharma-healthcare-management-in-pune" element={<MbaPharmaHealthcare />} />
                 <Route path="/programs/mba-in-operations-and-supply-chain-management-in-pune" element={<MbaOperationsSupplyChain />} />
                 <Route path="/programs/mba-in-agribusiness-management-pune" element={<MbaAgribusinessManagement />} />

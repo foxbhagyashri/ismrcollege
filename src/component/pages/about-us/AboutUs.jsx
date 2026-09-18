@@ -14,7 +14,6 @@ import {
   faCircle,
   faHandHoldingHeart
 } from "@fortawesome/free-solid-svg-icons";
-import SEO from "../../SEO";
 
 // ---------------- STAT COUNTER ----------------
 const StatCounter = ({ endValue, duration, suffix }) => {
@@ -49,12 +48,7 @@ const StatCounter = ({ endValue, duration, suffix }) => {
 const InstitutionStats = () => {
   return (
     <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
-      <SEO
-        title="About Us | ISMR B-School Pune | Top Management Institute"
-        description="Learn about International School of Management & Research (ISMR) Pune. Vision, mission, leadership, academic excellence, and 100% placement track record."
-        canonical="https://ismrpune.edu.in/about-us/"
-      />
-      {/* -------- HEADER -------- */}
+            {/* -------- HEADER -------- */}
       <section
         className="py-5 text-white text-center position-relative"
         style={{

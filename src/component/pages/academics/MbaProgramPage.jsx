@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import allsectionbg from "../../../assets/allsectionbg.jpg";
 
 import axios from "axios";
 import brochurePdf from "../../../assets/ISMR Brochure.pdf"; // Add your PDF in assets
-import SEO from "../../SEO";
 
 /**
  * MBA Program Page
@@ -51,8 +50,22 @@ function MbaProgramPage() {
     const [modalMode, setModalMode] = useState(null); // null | "syllabus" | "apply"
     const [loading, setLoading] = useState(false);
     const [errors, setErrors] = useState({});
-    const [activeSection, setActiveSection] = useState("");
-    const [showFullDescription, setShowFullDescription] = useState(false);
+    const location = useLocation();
+    const isAnalyticsPage = location.pathname.includes("business-analytics");
+
+    const [activeSection, setActiveSection] = useState(
+        isAnalyticsPage ? "Business Analytics" : "Financial Management"
+    );
+    const [showFullDescription, setShowFullDescription] = useState(isAnalyticsPage);
+
+    useEffect(() => {
+        if (isAnalyticsPage) {
+            setActiveSection("Business Analytics");
+            setShowFullDescription(true);
+        } else if (!activeSection) {
+            setActiveSection("Financial Management");
+        }
+    }, [isAnalyticsPage]);
 
     const handleChange = (e) =>
         setForm((s) => ({ ...s, [e.target.name]: e.target.value }));
@@ -266,12 +279,7 @@ function MbaProgramPage() {
 
     return (
         <>
-            <SEO
-                title="MBA in Business Analytics in Pune | MBA Programs | ISMR"
-                description="Explore MBA in Business Analytics & specializations at ISMR Pune. SPPU-affiliated, AICTE approved with 100% placement support."
-                canonical="https://ismrpune.edu.in/programs/mba-in-business-analytics-pune"
-            />
-            <style>{`
+                        <style>{`
         .mba-ticket {
           position: relative;
           background: #fff;
@@ -388,9 +396,15 @@ function MbaProgramPage() {
                                     textShadow: "0 2px 8px rgba(0, 0, 0, 0.45)",
                                 }}
                             >
-                                Master of Business
-                                <br />
-                                Administration
+                                {isAnalyticsPage ? (
+                                    <>MBA in Business Analytics</>
+                                ) : (
+                                    <>
+                                        Master of Business
+                                        <br />
+                                        Administration
+                                    </>
+                                )}
                             </h1>
                             <p
                                 style={{
@@ -403,9 +417,11 @@ function MbaProgramPage() {
                                     marginTop: "1.25rem",
                                 }}
                             >
-                                A two-year, AICTE-approved MBA with seven industry-aligned
-                                specializations — built on practical exposure, expert
-                                faculty, and corporate interaction from day one.
+                                {isAnalyticsPage ? (
+                                    "Master Python, Tableau, predictive modeling, and AI strategy with ISMR's industry-aligned MBA in Business Analytics in Pune."
+                                ) : (
+                                    "A two-year, AICTE-approved MBA with seven industry-aligned specializations — built on practical exposure, expert faculty, and corporate interaction from day one."
+                                )}
                             </p>
 
                             <div className="gap-5 mt-4">
@@ -576,28 +592,18 @@ function MbaProgramPage() {
 
                                         {descriptionIsLong && (
                                             <div className="d-flex align-items-center gap-3 mb-3">
-                                                {activeSection === "Business Analytics" ? (
-                                                    <button
-                                                        type="button"
-                                                        className="mba-readmore-btn"
-                                                        onClick={() => setShowFullDescription(!showFullDescription)}
-                                                    >
-                                                        {showFullDescription ? "Read Less" : "Read More"}
-                                                    </button>
-                                                ) : (
-                                                    <button
-                                                        type="button"
-                                                        className="mba-readmore-btn"
-                                                        onClick={() => {
-                                                            if (specializationRoutes[activeSection]) {
-                                                                navigate(specializationRoutes[activeSection]);
-                                                                window.scrollTo({ top: 0, behavior: "smooth" });
-                                                            }
-                                                        }}
-                                                    >
-                                                        Read More →
-                                                    </button>
-                                                )}
+                                                <button
+                                                    type="button"
+                                                    className="mba-readmore-btn"
+                                                    onClick={() => {
+                                                        if (specializationRoutes[activeSection]) {
+                                                            navigate(specializationRoutes[activeSection]);
+                                                            window.scrollTo({ top: 0, behavior: "smooth" });
+                                                        }
+                                                    }}
+                                                >
+                                                    Read More →
+                                                </button>
                                             </div>
                                         )}
 
