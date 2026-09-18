@@ -5,7 +5,6 @@ import naacLogo from "../../../assets/Homeimg/NAAC.png";
 import sppuLogo from "../../../assets/Homeimg/SPPU.png";
 import aicteLogo from "../../../assets/Homeimg/AICTE.png";
 import Faq from "../../Faq";
-import { cn } from "../../../../../New-sara-spa/src/lib/utils";
 
 const brochurePdf = "/ISMR Brochure.pdf";
 
