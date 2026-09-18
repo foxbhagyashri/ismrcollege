@@ -54,8 +54,8 @@ const ISMRFormModal = ({ open, onClose }) => {
             script.async = true;
 
             script.onload = async () => {
-                if (typeof eeFormWidget === "function") {
-                    window._eeFormWidget = new eeFormWidget();
+                if (typeof window.eeFormWidget === "function") {
+                    window._eeFormWidget = new window.eeFormWidget();
                     await window._eeFormWidget.init(
                         "ismr",
                         "form-1",
