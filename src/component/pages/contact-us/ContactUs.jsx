@@ -19,7 +19,7 @@ function Contactus() {
       icon: "fa-building",
       title: "Admissions",
       email: "admissions@ismrpune.edu.in",
-      phones: ["+91 9923786079"],
+      phones: ["+91 9373513331"],
       phone: ["+91 9158000595"],
     },
 
@@ -35,14 +35,14 @@ function Contactus() {
       icon: "fa-briefcase",
       title: "Placements",
       email: "placements@ismrpune.edu.in",
-      phones: ["+91 9923786079"],
+      phones: ["+91 9373513331"],
       phone: ["+91 9158000595"],
     },
     {
       icon: "fa-graduation-cap",
       title: "Careers",
       email: "careers@ismrpune.edu.in",
-      phones: ["+91 9923786079"],
+      phones: ["+91 9373513331"],
       phone: ["+91 9158000595"],
     },
 

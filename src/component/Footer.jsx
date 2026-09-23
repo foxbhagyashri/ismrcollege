@@ -205,8 +205,8 @@ const Footer = () => {
                                     </div>
                                     <div className="contact-text">
                                         <span className="contact-label">Admission Helpline:</span>
-                                        <a href="tel:+919923786079" className="contact-link">
-                                            +91 9923786079
+                                        <a href="tel:+919373513331" className="contact-link">
+                                            +91 9373513331
                                         </a>
                                     </div>
                                 </div>
