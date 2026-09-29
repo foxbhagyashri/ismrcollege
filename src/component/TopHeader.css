@@ -1,4 +1,46 @@
 /* ===== Top Header Area ===== */
+
+.brand-text {
+    /* display: flex;
+    flex-direction: column; */
+    line-height: 1.25;
+    min-width: 0;
+}
+hr{
+        margin: 1px;
+
+}
+
+.brand-text h1 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #000!important;
+}
+
+.brand-text h2 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffb100;
+}
+
+.brand-text p {
+    margin: 2px 0 0;
+    font-size: 11px;
+    font-weight: 400;
+    color: #000!important;
+    white-space: normal;
+}
+
+.navbar-transparent .brand-text h1,
+.navbar-transparent .brand-text p {
+    color: #000;
+}
+
+
+
+
 .top-header-area {
     background-color: #002147;
     color: #fff;
@@ -24,11 +66,11 @@
     -webkit-backdrop-filter: none !important;
 }
 
-.top-header-area.topbar-transparent a,
+/* .top-header-area.topbar-transparent a,
 .top-header-area.topbar-transparent span,
 .top-header-area.topbar-transparent i {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
-}
+} */
 
 .top-header-area ul {
     list-style: none;
@@ -43,7 +85,7 @@
 /* LEFT SIDE CONTACT LINKS */
 .top-header-left a {
     text-decoration: none;
-    color: #ffffffcc;
+    color: #000;
     transition: color 0.3s ease;
     font-weight: 400;
     display: flex;

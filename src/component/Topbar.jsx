@@ -41,18 +41,20 @@ const TopHeader = () => {
                     <div className="top-header-left">
                         <ul>
                             <li>
-                                <a href="tel:+919923786079">
-                                    <i className="ri-phone-fill"></i> +91
-                                    9923786079
-                                </a>
+                                <div className="brand-text">
+                                    <h1>International School of</h1>
+                                    <h2>ISMR Management &amp; Research</h2>
+                                    <p>(Approved by AICTE, Affiliated to University of Pune (SPPU))</p>
+                                    <p>NAAC Accredited</p>
+                                </div>
                             </li>
 
-                            <li>
+                            {/* <li>
                                 <a href="mailto:admissions@ismrpune.edu.in">
                                     <i className="ri-mail-line"></i>{" "}
                                     admissions@ismrpune.edu.in
                                 </a>
-                            </li>
+                            </li> */}
 
                             <li>
                                 <a
@@ -92,7 +94,7 @@ const TopHeader = () => {
                             <li>
                                 <Link
                                     to="/blogs"
-                                    className="btn btn-sm text-white"
+                                    className="btn btn-sm text-black"
                                 >
                                     Blogs
                                 </Link>
@@ -173,22 +175,36 @@ const TopHeader = () => {
                             </li>
 
                             <li>
-                                <button
-                                    onClick={() => setShowModal(true)}
+                                <Link to="/contact-us"
+
                                     className="btn btn-sm"
                                     style={{
-                                        backgroundColor: "#ffc333",
+                                        // backgroundColor: "#ffc333",
                                         color: "#2c2626ff",
                                         fontWeight: "600",
                                     }}
                                 >
-                                    Apply for BBA / BCA
-                                </button>
+                                    NACC
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/contact-us"
+
+                                    className="btn btn-sm"
+                                    style={{
+                                        // backgroundColor: "#ffc333",
+                                        color: "#2c2626ff",
+                                        fontWeight: "600",
+                                    }}
+                                >
+                                    Reach Us
+                                </Link>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
+            <hr></hr>
 
             {/* -------- MODAL -------- */}
 

@@ -4,7 +4,15 @@ import { Link } from "react-router-dom";
 import ISMRFormModal from "./forms/ISMRFormModal";
 
 const Travel = () => {
-    const videos = ["hC3H64UZGA8"]; // YouTube Video ID
+    // 🖼️ Replace these with your actual image paths (place files in /public or /src/assets)
+    const images = [
+        "/IMG_7011.jpg",
+        "/IMG_7331.jpg",
+        "/Industry Visit @ National Paints Abu Dhabi.jpg",
+        "/Industry-Visit-to-Spark-Minda-1.png",
+        "/_DSC3779.jpg",
+       
+    ];
 
     const [activeIndex, setActiveIndex] = useState(0);
     const [isVisible, setIsVisible] = useState(true);
@@ -19,13 +27,14 @@ const Travel = () => {
         { white: "AICTE Approved &", yellow: "SPPU Affiliated" }
     ];
 
+    // 🔁 Rotate background image slides
     useEffect(() => {
-        if (videos.length <= 1) return;
+        if (images.length <= 1) return;
         const timer = setInterval(() => {
-            setActiveIndex((prev) => (prev + 1) % videos.length);
-        }, 7000);
+            setActiveIndex((prev) => (prev + 1) % images.length);
+        }, 5000);
         return () => clearInterval(timer);
-    }, [videos.length]);
+    }, [images.length]);
 
     useEffect(() => {
         // Center text stays visible before fading out
@@ -47,23 +56,21 @@ const Travel = () => {
     return (
         <section className="home">
 
-            {/* 🎥 YouTube Background - Continuous Loop */}
-            {videos.map((id, i) => (
+            {/* 🖼️ Image Background Slider */}
+            {images.map((src, i) => (
                 <div
                     key={i}
-                    className="video-slide active"
+                    className={`image-slide ${i === activeIndex ? "active" : ""}`}
                 >
-                    <iframe
-                        src={`https://www.youtube.com/embed/${id}?autoplay=1&mute=1&loop=1&playlist=${id}&controls=0&disablekb=1&fs=0&rel=0&iv_load_policy=3&cc_load_policy=0&modestbranding=1&playsinline=1`}
-                        title="YouTube video"
-                        frameBorder="0"
-                        allow="autoplay; fullscreen"
-                        allowFullScreen
-                    ></iframe>
+                    <img
+                        src={src}
+                        alt={`Banner slide ${i + 1}`}
+                        loading={i === 0 ? "eager" : "lazy"}
+                    />
                 </div>
             ))}
 
-            {/* Center Content (Fades out after 2s) */}
+            {/* Center Content (Fades out after 6.5s) */}
             <div className={`content ${!isVisible ? "content-hidden" : ""}`}>
                 <div className="title">
                     <p style={{ color: "#ffffff", fontWeight: 600 }}>Sri Balaji Education Society's</p>
@@ -109,10 +116,10 @@ const Travel = () => {
                 })}
             </div>
 
-            {/* Navigation (only if multiple videos) */}
-            {videos.length > 1 && (
+            {/* Navigation dots (only if multiple images) */}
+            {images.length > 1 && (
                 <div className="slide-navigation">
-                    {videos.map((_, i) => (
+                    {images.map((_, i) => (
                         <div
                             key={i}
                             className={`nav-btn ${i === activeIndex ? "active" : ""}`}
