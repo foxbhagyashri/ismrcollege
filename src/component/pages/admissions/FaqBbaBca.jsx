@@ -138,7 +138,7 @@ export default function FAQBba() {
         },
         {
             question: "How can I contact ISMR for queries?",
-            answer: "You can reach us at:</br>📩admissions@ismrpune.edu.in</br>📞 Institute phone number - 9923786079</br>Or visit the campus during working hours 9AM – 6 PM from Monday to Saturday"
+            answer: "You can reach us at:</br>📩admissions@ismrpune.edu.in</br>📞 Institute phone number - 7798316866</br>Or visit the campus during working hours 9AM – 6 PM from Monday to Saturday"
         },
     ];
 
@@ -170,7 +170,7 @@ export default function FAQBba() {
 
     return (
         <>
-            
+
 
 
 

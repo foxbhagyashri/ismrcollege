@@ -930,7 +930,7 @@ export default function HowToApply() {
                                                 <li>
                                                     For any documents related
                                                     queries contact us on
-                                                    +91-9923786079 /
+                                                    +91-7798316866 /
                                                     +91-9158000595
                                                 </li>
                                                 <li>
@@ -1068,7 +1068,7 @@ export default function HowToApply() {
                                                     <li>
                                                         For any documents related
                                                         queries contact us on
-                                                        +91-9923786079 /
+                                                        +91-7798316866 /
                                                         +91-9158000595
                                                     </li>
                                                     <li>
@@ -1212,7 +1212,7 @@ export default function HowToApply() {
                                                     <li>
                                                         For any documents related
                                                         queries contact us on
-                                                        +91-9923786079 /
+                                                        +91-7798316866 /
                                                         +91-9158000595
                                                     </li>
                                                     <li>
@@ -1338,7 +1338,7 @@ export default function HowToApply() {
                                                     <li>
                                                         For any documents related
                                                         queries contact us on
-                                                        +91-9923786079 /
+                                                        +91-7798316866 /
                                                         +91-9158000595
                                                     </li>
                                                     <li>

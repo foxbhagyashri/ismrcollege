@@ -526,7 +526,7 @@ export default function NaacPage() {
                   <div className={cn('p-3', 'rounded-3')} style={{ backgroundColor: "#f8f9fa" }}>
                     <h6 className={cn('fw-bold', 'mb-1')} style={{ color: "#0a2240" }}>Appellate Authority</h6>
                     <p className={cn('mb-0', 'text-muted')} style={{ fontSize: "14px" }}>Director, ISMR Pune</p>
-                    <small className="text-primary">Phone: +91 9923786079</small>
+                    <small className="text-primary">Phone: +91 7798316866</small>
                   </div>
                 </div>
               </div>

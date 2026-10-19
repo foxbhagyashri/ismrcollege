@@ -173,7 +173,7 @@ const InstitutionStats = () => {
                         <p>By visiting this page on our website: <a href="https://ismrpune.edu.in/" rel="external nofollow noopener" target="_blank">https://ismrpune.edu.in/</a></p>
                     </li>
                     <li>
-                        <p>By phone: 9923786079</p>
+                        <p>By phone: 7798316866</p>
                     </li>
                 </ul>
             </div>
