@@ -187,15 +187,7 @@ function Courseduration() {
   const globeIcon = faGlobeAmericas;
 
   const programs = [
-    {
-      id: 'ug',
-      bgColorClass: 'bg-deep-blue',
-      icon: undergraduateIcon,
-      title: 'Undergraduate Programs',
-      description: 'Undergraduate programs provide foundational knowledge and skills for entry-level careers in various fields.',
-      courses: [ 'BBA (Business Admin.)', 'BCA (Comp. Applications)'],
-     
-    },
+
     {
       id: 'grad',
       bgColorClass: 'bg-accent-yellow',
@@ -203,9 +195,9 @@ function Courseduration() {
       title: 'Post Graduate Programs',
       description: 'Graduate programs offer advanced specialization and research opportunities, deepening expertise in a chosen discipline.',
       courses: ['MBA (Master of Business Admin.)'],
-     
+
     },
-    
+
   ];
 
   const GlobalStyles = () => (
@@ -214,7 +206,7 @@ function Courseduration() {
 
   return (
     <>
-            <GlobalStyles />
+      <GlobalStyles />
       <section
         className="py-5 text-white text-center position-relative"
         style={{
@@ -257,11 +249,11 @@ function Courseduration() {
         </div>
       </section>
       <Container className="my-4 program-page-container">
-        
+
         <h1 className="  main-program-title">
           Graduates, Undergraduate and Online Education
         </h1>
-          <p
+        <p
           style={{
             fontSize: "18px",
             color: "#444",
@@ -276,7 +268,7 @@ function Courseduration() {
           mission is to combine <strong>science and spirituality</strong> to
           create an environment that fosters holistic development. From
           state-of-the-art infrastructure to experienced faculty, ISMR is
-          committed to nurturing future leaders in every field. 
+          committed to nurturing future leaders in every field.
 
         </p>
         <Row className="justify-content-center">
@@ -289,11 +281,10 @@ function Courseduration() {
                   </div>
                   <Card.Title className="text-center">{program.title}</Card.Title>
                   <Card.Text
-                    className={`text-center ${
-                      program.id === 'ug' || program.id === 'online'
+                    className={`text-center ${program.id === 'ug' || program.id === 'online'
                         ? 'program-card-description-yellow'
                         : ''
-                    }`}
+                      }`}
                   >
                     {program.description}
                   </Card.Text>

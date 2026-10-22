@@ -45,7 +45,7 @@ const Banner = () => {
                         fontSize: "18px",
                       }}
                     >
-                      MBA : DTE College Code 6798 | BBA & BCA College Code 16301
+                      MBA : DTE College Code 6798 
                       <br /> Approved by AICTE, Ministry of Education, Govt of India.
                       <br />
                       Affiliated to Savitribai Phule Pune University<br></br>
