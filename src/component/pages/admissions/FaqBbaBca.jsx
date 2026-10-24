@@ -26,26 +26,20 @@ export default function FAQBba() {
     const faqs = [
         {
             question: "What courses does ISMR Pune offer?",
-            answer: `ISMR offers a full-time SPPU Affiliated MBA, BBA & BCA program with specializations in Marketing, Finance, Human Resource, Business Analytics, Operations & Supply Chain, Agri-Business Management & Pharma Health Care Management.`
+            answer: `ISMR offers a full-time SPPU Affiliated MBA program with specializations in Marketing, Finance, Human Resource, Business Analytics, Operations & Supply Chain, Agri-Business Management & Pharma Health Care Management.`
 
         },
 
         {
-            question: "Is the MBA, BBA & BCA program at ISMR affiliated?",
-            answer: "Yes. The MBA, BBA, & BCA programs are affiliated with SavitribaiPhule Pune University (SPPU)."
+            question: "Is the MBA program at ISMR affiliated?",
+            answer: "Yes. The MBA programs are affiliated with SavitribaiPhule Pune University (SPPU)."
         },
         {
-            question: "Is the MBA, BBA & BCA program at ISMR approved?",
-            answer: "Yes. The MBA, BBA & BCA programs areapproved by AICTE, New Delhi."
+            question: "Is the MBA program at ISMR approved?",
+            answer: "Yes. The MBA programs areapproved by AICTE, New Delhi."
         },
-        {
-            question: "What is the eligibility Criteria for BBA/BCA Program?",
-            answer: "• The candidate should have passed 10+2 examination with eligibility as per the Admission Policy of the Affiliating University. •	A valid score card in state-level entrance tests like MAH-BBA/BCA"
-        },
-        {
-            question: "Which entrance exams are accepted for BBA/BCA Program ?",
-            answer: "MAH-CET entrance exam score is accepted."
-        },
+       
+      
         {
             question: "What is the campus environment like?",
             answer: "The ISMR campus offers a modern, industry-oriented learning environment with classrooms, labs, seminar hall, library, recreational facilities, conference room etc."
@@ -91,10 +85,7 @@ export default function FAQBba() {
             question: "Does ISMR provide educational loan assistance?",
             answer: "Yes. The institute provides full support with loan-related documents for easy processing through major banks."
         },
-        {
-            question: "What is syllabus of BBA/BCA?",
-            answer: "We follow the syllabus prescribed by SavitribaiPhule Pune University."
-        },
+       
         {
             question: "Is there any value addition apart from the syllabus?",
             answer: "Yes. We provide value added courses with certifications throughout the semesters."
@@ -138,7 +129,7 @@ export default function FAQBba() {
         },
         {
             question: "How can I contact ISMR for queries?",
-            answer: "You can reach us at:</br>📩admissions@ismrpune.edu.in</br>📞 Institute phone number - 7798316866</br>Or visit the campus during working hours 9AM – 6 PM from Monday to Saturday"
+            answer: "You can reach us at:</br>📩admissions@ismrpune.edu.in</br>📞 Institute phone number - 9923786079</br>Or visit the campus during working hours 9AM – 6 PM from Monday to Saturday"
         },
     ];
 
@@ -170,7 +161,7 @@ export default function FAQBba() {
 
     return (
         <>
-
+            
 
 
 

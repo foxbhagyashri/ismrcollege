@@ -1269,7 +1269,7 @@ font-size:14px;
                   </ul>
                 </div>
                 <div className="cta-row">
-                  <a className="default-btn" href="tel:7798316866">Check Your Eligibility for MBA HR Admission 2026 in Pune</a>
+                  <a className="default-btn" href="tel:9923786079">Check Your Eligibility for MBA HR Admission 2026 in Pune</a>
                   {/* <a className="default-btn" href="/contact-us">Limited seats open for MBA HR Admission 2026 in Pune</a> */}
                 </div>
               </div>

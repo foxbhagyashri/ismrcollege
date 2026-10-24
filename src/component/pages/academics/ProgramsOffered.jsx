@@ -35,14 +35,7 @@ function ProgramOfferedPage() {
       "Agribusiness Management": brochurePdf,
       "Pharma Management": brochurePdf
     },
-    BBA: {
-      Programme: brochurePdf,
-      Features: brochurePdf,
-    },
-    BCA: {
-      Programme: brochurePdf,
-      Features: brochurePdf,
-    },
+ 
   };
   const validateForm = () => {
     const newErrors = {};
@@ -148,12 +141,11 @@ function ProgramOfferedPage() {
   };
 
   // Tab options
-  const tabs = ["MBA", "BBA", "BCA"];
+  const tabs = ["MBA"];
 
   // Sections for each tab
   const sectionsByTab = {
-    "BCA": ["Programme", "Features"],
-    "BBA": ["Programme", "Features"],
+   
     "MBA": [
       "Financial Management",
       "Marketing Management",
@@ -169,90 +161,8 @@ function ProgramOfferedPage() {
 
   // Content for each section
   const sectionContent = {
-    "BCA-Programme": {
-      title: "Bachelor of Computer Applications (BCA)",
-      description:
-        "In today’s rapidly advancing technological world, the demand for skilled IT professionals continues to grow exponentially. The Bachelor of Computer Applications (BCA) program is designed to meet this demand by building a strong academic and practical foundation for students aspiring to excel in the field of computer applications and information technology.The BCA curriculum emphasizes both theoretical understanding and hands-on experience, enabling students to gain in-depth knowledge of computing concepts and their practical applications. The program equips learners with the technical expertise and problem-solving skills needed to thrive in diverse IT roles and to achieve remarkable milestones in their professional careers.",
+   
 
-
-    },
-    "BCA-Features": {
-      title: "Program Highlights",
-
-      details: [
-        {
-          subtitle: "1. Comprehensive Curriculum",
-          points: [
-            "Core Subjects: Programming Languages (C, C++, Java, Python), Data Structures, Database Management Systems, Computer Networks, Operating Systems, Software Engineering",
-            "Mathematics Foundation: Discrete Mathematics, Probability, Statistics, and other analytical subjects",
-            "Web & Mobile Development: HTML, CSS, JavaScript, web technologies, and mobile application development",
-            "Networking & Security: Computer Networks, Data Communication, Cybersecurity, and Ethical Hacking",
-          ],
-        },
-        {
-          subtitle: "2. Practical Exposure",
-          points: [
-            "Lab Sessions: Extensive hands-on lab work to strengthen technical skills and reinforce theoretical concepts",
-            "Projects: Mini-projects and a final capstone project focused on solving real-world problems using the latest tools and technologies",
-
-          ],
-        },
-
-      ],
-    },
-    "BBA-Programme": {
-      title: "Bachelor of Business Administration (BBA)",
-      description:
-        "The Bachelor of Business Administration (BBA) program is designed to equip students with a strong foundation in business principles and modern management practices. The curriculum blends four core disciplines—business, management, communication, and information systems—to provide a comprehensive understanding of today’s corporate environment.Through a balanced mix of theoretical knowledge and practical learning, the program prepares students to develop strategic thinking, leadership abilities, and effective decision-making skills. Upon completion, graduates are well-positioned to pursue diverse career opportunities and build successful professional pathways in the field of business management.",
-
-    },
-    "BBA-Features": {
-      title: "Program Highlights – Bachelor of Business Administration (BBA)",
-
-      details: [
-        {
-          subtitle: "1. Comprehensive Curriculum",
-          points: [
-            "Foundation courses in Business, Management, Marketing, Finance, and Human Resource Management",
-            "Integrated learning in Communication Skills and Information Systems",
-            "Curriculum aligned with contemporary industry practices and emerging business trends",
-          ],
-        },
-        {
-          subtitle: "2. Practical Learning Approach",
-          points: [
-            "Case studies, business simulations, group projects, and presentations",
-            "Industry-oriented assignments and real-world problem-solving activities",
-            "Hands-on exposure to business tools and software",
-          ],
-        },
-        {
-          subtitle: "3. Industry Interaction",
-          points: [
-            "Guest lectures and workshops conducted by industry experts",
-            "Industrial visits to companies and business institutions",
-            "Internship opportunities to gain practical corporate experience",
-          ],
-        },
-        {
-          subtitle: "4. Skill Development",
-          points: [
-            "Focus on leadership, teamwork, critical thinking, and decision-making",
-            "Training in communication, negotiation, and interpersonal skills",
-            "Emphasis on developing entrepreneurial mindset and managerial competencies",
-          ],
-        },
-        {
-          subtitle: "5. Career-Oriented Education",
-          points: [
-            "Guidance for career planning and professional development",
-            "Exposure to diverse job roles in management, marketing, finance, HR, and entrepreneurship",
-            "Strong foundation for higher studies like MBA, M.Com, or professional certifications",
-          ],
-        },
-      ],
-
-    },
     "Financial Management": {
       title: "Financial Management",
       description:
@@ -419,7 +329,7 @@ function ProgramOfferedPage() {
               marginTop: "50px",
             }}
           >
-            ISMR, affiliated to Savitribai Phule Pune University, offers a comprehensive range of programs including MBA, BBA, and BCA which are approved by AICTE new Delhi. Our MBA program provides seven industry-oriented specializations.—The BBA and BCA programs are designed to build strong foundations in business management and computer applications, equipping students with essential skills for modern careers. With practical learning, expert faculty, and a career-focused approach, ISMR ensures holistic development and prepares students for success in the dynamic professional world.
+            ISMR, affiliated to Savitribai Phule Pune University, offers a comprehensive range of programs including MBA which are approved by AICTE new Delhi. Our MBA program provides seven industry-oriented specializations. With practical learning, expert faculty, and a career-focused approach, ISMR ensures holistic development and prepares students for success in the dynamic professional world.
           </p>
 
 
@@ -774,7 +684,7 @@ function ProgramOfferedPage() {
                         The BBA program provides students with a strong foundation in management, entrepreneurship, and business administration. With a curriculum designed to build analytical, communication, and leadership skills, ISMR’s BBA program prepares students for career in marketing, finance, HR, and business operations, as well as for higher studies like MBA.
                       </p>
 
-                      <Link
+                      {/* <Link
                         to="/admissions/faq-bba-bca"
                         className="btn btn-sm"
                         style={{
@@ -784,7 +694,7 @@ function ProgramOfferedPage() {
                         }}
                       >
                         FAQ's For BBA & BCA
-                      </Link>
+                      </Link> */}
 
 
                     </div>
@@ -797,7 +707,7 @@ function ProgramOfferedPage() {
                           paddingLeft: "1rem",
                         }}
                       >
-                        <h3
+                        {/* <h3
                           style={{
                             ...interFont,
                             fontWeight: 800,
@@ -807,10 +717,10 @@ function ProgramOfferedPage() {
                           }}
                         >
                           BCA Program
-                        </h3>
+                        </h3> */}
                       </div>
 
-                      <p
+                      {/* <p
                         style={{
                           ...interFont,
                           maxWidth: "900px",
@@ -819,8 +729,8 @@ function ProgramOfferedPage() {
                         }}
                       >
                         The BCA program focuses on computer science, software development, data handling, and IT applications. With hands-on training, coding skills, and practical project exposure, ISMR’s BCA program equips students for careers in IT, software development, data analysis, and emerging tech roles. It is the perfect pathway for students aiming for a future in the technology sector. Andprepare higher studies like MCA.
-                      </p>
-                      <Link
+                      </p> */}
+                      {/* <Link
                         to="/admissions/faq-bba-bca"
                         className="btn btn-sm"
                         style={{
@@ -830,7 +740,7 @@ function ProgramOfferedPage() {
                         }}
                       >
                         FAQ's For BBA & BCA
-                      </Link>
+                      </Link> */}
 
 
                     </div>

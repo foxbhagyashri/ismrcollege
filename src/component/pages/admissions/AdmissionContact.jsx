@@ -100,7 +100,7 @@ export default function AdmissionContact() {
 
   return (
     <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
-      {/* -------- HEADER SECTION -------- */}
+            {/* -------- HEADER SECTION -------- */}
       <section
         className="py-5 text-white text-center position-relative"
         style={{
@@ -294,14 +294,14 @@ export default function AdmissionContact() {
                 >
                   Call{" "}
                   <a
-                    href="tel:7798316866"
+                    href="tel:9923786079"
                     style={{
                       color: "#d95c5c",
                       textDecoration: "none",
                       fontWeight: "600",
                     }}
                   >
-                    7798316866
+                    9923786079
                   </a>{" "}
                   for urgent admissions help.
                 </p>

@@ -57,7 +57,7 @@ export default function ApplyBba() {
                     }}
                 ></div>
 
-                <div className="container position-relative py-5">
+                {/* <div className="container position-relative py-5">
                     <h1
                         className="mb-3"
                         style={{
@@ -78,7 +78,7 @@ export default function ApplyBba() {
                     >
                         Admissions • <span className="text-warning">Apply for BBA / BCA</span>
                     </p>
-                </div>
+                </div> */}
             </section>
 
             {/* -------- MAIN REFUND POLICY SECTION -------- */}
@@ -162,7 +162,7 @@ export default function ApplyBba() {
                     <div className="row justify-content-center">
                         <div className="col-lg-8 col-md-10">
                             <div className="contact-form">
-                                <h2 className="text-center mb-5">Apply for BBA/BCA Programme 2026</h2>
+                                <h2 className="text-center mb-5">Apply for MBA Programme 2026</h2>
 
                                 <form onSubmit={handleSubmit}>
 

@@ -47,42 +47,16 @@ const TopHeader = () => {
                                 </a>
                             </li>
 
-                            <li>
+                            {/* <li>
                                 <a href="mailto:admissions@ismrpune.edu.in">
                                     <i className="ri-mail-line"></i>{" "}
                                     admissions@ismrpune.edu.in
                                 </a>
-                            </li>
+                            </li> */}
 
-                            <li>
-                                <a
-                                    href="https://www.facebook.com/ismrcollegepune/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <FaFacebookF />
-                                </a>
-                            </li>
 
-                            <li>
-                                <a
-                                    href="https://www.instagram.com/ismrofficial/?hl=en"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <FaInstagram />
-                                </a>
-                            </li>
 
-                            <li>
-                                <a
-                                    href="https://www.linkedin.com/school/international-school-of-management-and-research-pune/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <FaLinkedinIn />
-                                </a>
-                            </li>
+
                         </ul>
                     </div>
 
@@ -92,7 +66,12 @@ const TopHeader = () => {
                             <li>
                                 <Link
                                     to="/blogs"
-                                    className="btn btn-sm text-white"
+                                    className="btn btn-sm"
+                                    style={{
+                                        // backgroundColor: "#ffc333",
+                                        color: "#fff",
+                                        fontWeight: "600",
+                                    }}
                                 >
                                     Blogs
                                 </Link>
@@ -172,23 +151,37 @@ const TopHeader = () => {
                                 </button>
                             </li>
 
-                            <li>
-                                <button
-                                    onClick={() => setShowModal(true)}
+                            {/* <li>
+                                <Link to="/contact-us"
+
                                     className="btn btn-sm"
                                     style={{
-                                        backgroundColor: "#ffc333",
-                                        color: "#2c2626ff",
+                                       
+                                        color: "#fff",
                                         fontWeight: "600",
                                     }}
                                 >
-                                    Apply for BBA / BCA
-                                </button>
+                                    NACC
+                                </Link>
+                            </li> */}
+                            <li>
+                                <Link to="/contact-us"
+
+                                    className="btn btn-sm"
+                                    style={{
+                                        // backgroundColor: "#ffc333",
+                                        color: "#fff",
+                                        fontWeight: "600",
+                                    }}
+                                >
+                                    Reach Us
+                                </Link>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
+            <hr></hr>
 
             {/* -------- MODAL -------- */}
 

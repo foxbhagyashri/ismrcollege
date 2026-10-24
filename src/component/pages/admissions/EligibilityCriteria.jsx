@@ -80,25 +80,7 @@ export default function PrivacySection() {
               </button>
 
 
-              <button
-                className={`btn fw-semibold ${filter === "graduation" ? "" : "btn-outline-secondary"
-                  }`}
-                onClick={() => setFilter("graduation")}
-                style={{
-                  padding: "12px 24px",
-                  backgroundColor:
-                    filter === "graduation" ? "#0a2240" : "transparent",
-                  color: filter === "graduation" ? "#fff" : "#0a2240",
-                  border: `2px solid ${filter === "graduation" ? "#0a2240" : "#0a2240"
-                    }`,
-                  borderRadius: "8px",
-                  fontSize: "16px",
-                  fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                  transition: "all 0.3s ease",
-                }}
-              >
-                BBA & BCA
-              </button>
+             
 
             </div>
           </div>
@@ -118,7 +100,7 @@ export default function PrivacySection() {
               {/* INTRODUCTION TEXT */}
 
               {/* GRADUATION CONTENT */}
-              {filter === "graduation" && (
+              {/* {filter === "graduation" && (
                 <div>
                   <h2
                     style={{
@@ -156,7 +138,7 @@ export default function PrivacySection() {
                   </p>
 
                 </div>
-              )}
+              )} */}
 
               {/* POST GRADUATION CONTENT */}
               {filter === "postgraduation" && (
