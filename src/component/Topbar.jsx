@@ -41,9 +41,9 @@ const TopHeader = () => {
                     <div className="top-header-left">
                         <ul>
                             <li>
-                                <a href="tel:+917798316866">
+                                <a href="tel:+919158000595">
                                     <i className="ri-phone-fill"></i> +91
-                                    7798316866
+                                    9158000595
                                 </a>
                             </li>
 

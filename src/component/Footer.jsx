@@ -197,7 +197,7 @@ const Footer = () => {
                         {/* 4. Campus Location & Contact Column */}
                         <Col lg={4} md={6} sm={12} className="footer-col contact-col">
                             <h5 className="footer-heading">Campus & Contact</h5>
-                            
+
                             <div className="contact-info-list mb-2">
                                 <div className="contact-item">
                                     <div className="contact-icon-box">
