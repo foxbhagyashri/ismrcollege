@@ -137,7 +137,7 @@ const TopHeader = () => {
                                         fontWeight: "600",
                                     }}
                                 >
-                                    Apply For MAH – CET
+                                    Apply for MH-CET Exam
                                 </button>
                             </li>
 
@@ -168,7 +168,7 @@ const TopHeader = () => {
                                         fontWeight: "600",
                                     }}
                                 >
-                                    Apply for MBA
+                                    Registration Form
                                 </button>
                             </li>
 
