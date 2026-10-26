@@ -78,12 +78,12 @@ const keyframes = `
 const getWidgetConstructor = () => {
     try {
         if (typeof window.eeFormWidget === "function") return window.eeFormWidget;
-    } catch (e) {}
+    } catch (e) { }
     try {
         // Handles a top-level `class eeFormWidget` that isn't attached to window
         // eslint-disable-next-line no-undef
         if (typeof eeFormWidget === "function") return eeFormWidget;
-    } catch (e) {}
+    } catch (e) { }
     return null;
 };
 
