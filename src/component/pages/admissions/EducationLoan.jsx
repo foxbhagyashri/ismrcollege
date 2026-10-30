@@ -7,7 +7,7 @@ export default function EducationLoad() {
 
   return (
     <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
-      {/* Add FontAwesome */}
+            {/* Add FontAwesome */}
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -378,7 +378,7 @@ export default function EducationLoad() {
                 Need Help with Your Loan Application?
               </h4> */}
 
-              <h4
+               <h4
                 style={{
                   fontFamily: "'Inter', Arial, Helvetica, sans-serif",
                   fontSize: "24px",
@@ -387,7 +387,7 @@ export default function EducationLoad() {
                   marginBottom: "1rem",
                 }}
               >
-
+              
                 Admissions
               </h4>
               <p style={{ fontSize: "16px", color: "#0a2240", marginBottom: "1.5rem" }}>
@@ -397,9 +397,9 @@ export default function EducationLoad() {
               <p style={{ fontSize: "16px", color: "#0a2240", marginBottom: "1.5rem" }}>
 
 
-                <i className="fas fa-phone-alt me-2"></i>   +91 7798316866
+                <i className="fas fa-phone-alt me-2"></i>   +91 9923786079
               </p>
-              <a href="tel:7798316866">   <button
+              <a href="tel:9923786079">   <button
                 className="btn fw-semibold"
                 style={{
                   padding: "12px 40px",
@@ -427,7 +427,7 @@ export default function EducationLoad() {
           </div>
         </div>
       </div>
-      <Faq />
+    
     </div>
   );
 }

@@ -125,7 +125,7 @@ export default function DisclaimerFeePayment() {
 
                 </div>
             </div>
-            <Faq />
+         
         </div>
     );
 }

@@ -232,15 +232,15 @@ export default function FaqAndContactSection() {
   const faqs = [
     {
       q: "What courses does ISMR Pune offer?",
-      a: "ISMR offers a full-time SPPU Affiliated MBA, BBA & BCA program with specializations in Marketing, Finance, Human Resource, Business Analytics, Operations & Supply Chain, Agri-Business Management & Pharma Health Care Management.",
+      a: "ISMR offers a full-time SPPU Affiliated MBA program with specializations in Marketing, Finance, Human Resource, Business Analytics, Operations & Supply Chain, Agri-Business Management & Pharma Health Care Management.",
     },
     {
-      q: "Is the MBA, BBA & BCA program at ISMR affiliated?",
-      a: "Yes. The MBA, BBA, & BCA programs are affiliated with SavitribaiPhule Pune University (SPPU).",
+      q: "Is the MBA program at ISMR affiliated?",
+      a: "Yes. The MBA programs are affiliated with SavitribaiPhule Pune University (SPPU).",
     },
     {
-      q: "Is the MBA, BBA & BCA program at ISMR approved?",
-      a: "Yes. The MBA, BBA & BCA programs areapproved by AICTE, New Delhi.",
+      q: "Is the MBA,program at ISMR approved?",
+      a: "Yes. The MBA programs areapproved by AICTE, New Delhi.",
     },
     {
       q: "What is the eligibility Criteria for MBA Program?",
@@ -708,8 +708,8 @@ export default function FaqAndContactSection() {
             >
               <option value="">Select Programme *</option>
               <option value="MBA">MBA</option>
-              <option value="BBA">BBA</option>
-              <option value="BCA">BCA</option>
+
+
             </select>
             {errors.program && (
               <small className="text-danger">{errors.program}</small>

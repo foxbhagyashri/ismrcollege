@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import axios from "axios";
 import brochurePdf from "../../assets/ISMR Brochure 2026.pdf";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Howtoaplydownoadform = () => {
     const [form, setForm] = useState({
@@ -10,6 +11,11 @@ const Howtoaplydownoadform = () => {
         city: "",
     });
 
+    const SITE_KEY = "6Lf2KwYuAAAAAGJ7HMW2Rurfz1F67O5gZWklWjN_";
+
+    // inside your component
+const recaptchaRef = useRef(null);
+const [captchaToken, setCaptchaToken] = useState(null);
 
     /* ================= PDF DOWNLOAD ================= */
     const downloadBrochure = () => {
@@ -59,43 +65,57 @@ const Howtoaplydownoadform = () => {
 
     /* ================= SUBMIT ================= */
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        setSuccessMsg("");
+    e.preventDefault();
+    setSuccessMsg("");
 
-        if (!validate()) return;
+    if (!validate()) return;
 
-        try {
-            setLoading(true);
+    if (!captchaToken) {
+        setErrors((prev) => ({ ...prev, captcha: "Please verify you are not a robot" }));
+        return;
+    }
 
-            const res = await axios.post(
-                "https://api.ismrpune.edu.in/api/send-mail",
-                form,
-                {
-                    headers: { "Content-Type": "application/json" },
-                }
-            );
+    try {
+        setLoading(true);
 
-            if (res.data?.success) {
-                setSuccessMsg(
-                    "✅ Thank you for downloading the brochure. For any further queries, kindly reach us."
-                );
-                downloadBrochure();
+        // send the form data together with the captcha token
+        const payload = { ...form, captchaToken };
 
-                setForm({
-                    name: "",
-                    email: "",
-                    phone: "",
-                    city: "",
-                });
-
-                setErrors({});
+        const res = await axios.post(
+            "https://api.ismrpune.edu.in/api/send-mail",
+            payload,
+            {
+                headers: { "Content-Type": "application/json" },
             }
-        } catch (error) {
-            alert("❌ Failed to submit form. Please try again.");
-        } finally {
-            setLoading(false);
+        );
+
+        if (res.data?.success) {
+            setSuccessMsg(
+                "✅ Thank you for downloading the brochure. For any further queries, kindly reach us."
+            );
+            downloadBrochure();
+
+            setForm({
+                name: "",
+                email: "",
+                phone: "",
+                city: "",
+                state: "",
+            });
+
+            setErrors({});
         }
-    };
+    } catch (error) {
+        const msg =
+            error.response?.data?.message || "Failed to submit form. Please try again.";
+        alert("❌ " + msg);
+    } finally {
+        // captcha tokens are single-use, so always reset after the request
+        recaptchaRef.current?.reset();
+        setCaptchaToken(null);
+        setLoading(false);
+    }
+};
 
     return (
         <form onSubmit={handleSubmit}>
@@ -143,6 +163,33 @@ const Howtoaplydownoadform = () => {
             {successMsg && (
                 <div className="alert alert-success mt-3">{successMsg}</div>
             )}
+            <input
+                type="text"
+                name="state"
+                value={form.state}
+                onChange={handleChange}
+                placeholder="State"
+                className="form-control mb-3 mt-2"
+            />
+            {errors.state && <small className="text-danger">{errors.state}</small>}
+
+            {successMsg && (
+                <div className="alert alert-success mt-3">{successMsg}</div>
+            )}
+
+
+            <div className="mt-3">
+    <ReCAPTCHA
+        ref={recaptchaRef}
+        sitekey={SITE_KEY}
+        onChange={(token) => {
+            setCaptchaToken(token);
+            setErrors((prev) => ({ ...prev, captcha: "" }));
+        }}
+        onExpired={() => setCaptchaToken(null)}
+    />
+    {errors.captcha && <small className="text-danger">{errors.captcha}</small>}
+</div>
 
             <button
                 type="submit"

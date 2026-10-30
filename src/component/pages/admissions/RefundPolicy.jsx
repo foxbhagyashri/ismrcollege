@@ -439,7 +439,7 @@ export default function RefundPolicy() {
                 <ul className="list">
                   {/* <li>Fee Refund & Admission Cancellation Guidelines
                   </li> */}
-                  <li>Refunds of fees will be processed on or after 15th December 2026.
+                  <li>Refunds of fees will be processed on or after 15th December 2027.
                   </li>
                   <li>For admission cancellation and refund requests, please send a detailed email to: <a href="mailto:admissions@ismrpune.edu.in"> admissions@ismrpune.edu.in</a></li>
                   <li>When submitting your request, ensure that you include the following:
@@ -470,7 +470,7 @@ export default function RefundPolicy() {
           </div>
         </div>
       </section>
-      <Faq />
+     
     </div>
   );
 }

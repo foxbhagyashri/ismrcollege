@@ -7,7 +7,7 @@ export default function PrivacySection() {
 
   return (
     <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
-            {/* -------- HEADER SECTION -------- */}
+      {/* -------- HEADER SECTION -------- */}
       <section
         className="py-5 text-white text-center position-relative"
         style={{
@@ -80,25 +80,7 @@ export default function PrivacySection() {
               </button>
 
 
-              <button
-                className={`btn fw-semibold ${filter === "graduation" ? "" : "btn-outline-secondary"
-                  }`}
-                onClick={() => setFilter("graduation")}
-                style={{
-                  padding: "12px 24px",
-                  backgroundColor:
-                    filter === "graduation" ? "#0a2240" : "transparent",
-                  color: filter === "graduation" ? "#fff" : "#0a2240",
-                  border: `2px solid ${filter === "graduation" ? "#0a2240" : "#0a2240"
-                    }`,
-                  borderRadius: "8px",
-                  fontSize: "16px",
-                  fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                  transition: "all 0.3s ease",
-                }}
-              >
-                BBA & BCA
-              </button>
+
 
             </div>
           </div>
@@ -118,7 +100,7 @@ export default function PrivacySection() {
               {/* INTRODUCTION TEXT */}
 
               {/* GRADUATION CONTENT */}
-              {filter === "graduation" && (
+              {/* {filter === "graduation" && (
                 <div>
                   <h2
                     style={{
@@ -156,7 +138,7 @@ export default function PrivacySection() {
                   </p>
 
                 </div>
-              )}
+              )} */}
 
               {/* POST GRADUATION CONTENT */}
               {filter === "postgraduation" && (
@@ -180,9 +162,10 @@ export default function PrivacySection() {
                       lineHeight: "1.7",
                       marginBottom: "1.5rem",
                       fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                      textAlign: "justify"
                     }}
                   >
-                    Candidates with minimum 50% marks in graduation (45% for reserved categories) from any recognized university and with a valid score card in national-level entrance tests like with MAH-MBA CET/CMAT/CAT/MAT/XAT/ATMA/GMAT are eligible to apply (all such exams shall be treated at par) enabling the candidate to appear for selection Process directly.
+                    Candidates with minimum 50% marks in graduation (45% for reserved categories) from any recognized university and with a valid score card in national-level entrance tests like with MAH-MBA CET/CMAT/CAT/MAT/XAT/ATMA are eligible to apply (all such exams shall be treated at par) enabling the candidate to appear for selection Process directly.
                   </p>
 
                   <p
@@ -192,9 +175,10 @@ export default function PrivacySection() {
                       lineHeight: "1.7",
                       marginBottom: "1.5rem",
                       fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                      textAlign: "justify"
                     }}
                   >
-                    Candidates appearing for final year degree examination up to July 2026 can also apply. Such candidates, whose final year degree results is not declared at the time of admission will be admitted provisionally and after submitting a bonafide certificate from the Head of the Institute stating that he/she is a regular student. The admission of such a candidate will be confirmed only if he/she provides a proof of passing the final year degree examination marksheet on or before 31st July 2026.
+                    Candidates appearing for final year degree examination up to July 2027 can also apply. Such candidates, whose final year degree results is not declared at the time of admission will be admitted provisionally and after submitting a bonafide certificate from the Head of the Institute stating that he/she is a regular student. The admission of such a candidate will be confirmed only if he/she provides a proof of passing the final year mark sheet & degree examination on or before 31st July 2027.
                   </p>
 
                   <p
@@ -204,6 +188,7 @@ export default function PrivacySection() {
                       lineHeight: "1.7",
                       marginBottom: "1.5rem",
                       fontFamily: "'Inter', Arial, Helvetica, sans-serif",
+                      textAlign: "justify"
                     }}
                   >
                     Candidates with 60% throughout their academic career, will be given preference.
@@ -297,7 +282,7 @@ export default function PrivacySection() {
           </div>
         </div>
       </div>
-      <Faq />
+      
     </div>
   );
 }

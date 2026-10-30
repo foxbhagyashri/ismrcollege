@@ -199,6 +199,70 @@ function MbaProgramPage() {
 
     /* ---------------- content ---------------- */
 
+
+
+const programFacts = [
+    { label: "Programme", value: "Master of Business Administration (MBA)" },
+    { label: "Awarding university", value: "Savitribai Phule Pune University (SPPU)" },
+    { label: "Institution", value: "International School of Management & Research (ISMR), Pune" },
+    { label: "Level", value: "Postgraduate" },
+    { label: "Duration", value: "Two years" },
+    { label: "Structure", value: "Four semesters" },
+    { label: "Mode of study", value: "Full-time" },
+    { label: "Curriculum framework", value: "As prescribed by SPPU and applicable regulatory authorities" },
+    { label: "Academic pattern", value: "Applicable SPPU curriculum pattern for the admitted batch" },
+];
+
+
+const programObjectives = [
+    "Develop a comprehensive understanding of management principles, business functions and organizational practices.",
+    "Enhance analytical, critical-thinking and problem-solving abilities.",
+    "Build leadership, teamwork, communication and interpersonal skills.",
+    "Develop competencies in managerial decision-making, planning and strategic thinking.",
+    "Promote entrepreneurship, innovation and responsible business practices.",
+    "Provide exposure to contemporary business challenges, industry practices and market developments.",
+    "Encourage ethical leadership, social responsibility and lifelong learning.",
+];
+ 
+const learningMethods = [
+    "Classroom lectures and interactive discussions",
+    "Case studies and business simulations",
+    "Individual and group assignments",
+    "Presentations and communication activities",
+    "Research-based assignments and field projects",
+    "Industry-oriented learning and practical exposure",
+    "On-the-Job Training and research projects, as prescribed",
+    "Seminars, workshops and expert interactions, wherever conducted",
+];
+ 
+const programOutcomes = [
+    { title: "Apply management knowledge", text: "Use management concepts and frameworks to address business challenges." },
+    { title: "Analyse business problems", text: "Interpret business information and apply analytical tools to support decisions." },
+    { title: "Demonstrate leadership", text: "Work effectively in teams and demonstrate leadership and interpersonal skills." },
+    { title: "Communicate effectively", text: "Present ideas, analyses and recommendations through appropriate communication methods." },
+    { title: "Develop strategic perspectives", text: "Evaluate business environments and contribute to organizational planning." },
+    { title: "Promote innovation and entrepreneurship", text: "Identify opportunities and develop solutions to business problems." },
+    { title: "Practise ethical management", text: "Apply ethical principles and responsible decision-making in professional situations." },
+    { title: "Undertake research", text: "Use appropriate research methods to investigate business issues and recommend solutions." },
+    { title: "Adapt to change", text: "Respond to changing market conditions, technology and organizational requirements." },
+    { title: "Pursue lifelong learning", text: "Continue developing professional knowledge and managerial competencies." },
+];
+ 
+const careerAreas = [
+    "Marketing and Sales Management",
+    "Financial Management and Banking",
+    "Human Resource Management",
+    "Operations and Supply Chain Management",
+    "Business Analytics",
+    "Consulting and Business Development",
+    "Project Management",
+    "Entrepreneurship and Start-up Management",
+    "Corporate Administration",
+    "Research and Management Analysis",
+];
+ 
+
+
     const quickFacts = [
         { label: "Duration", value: "2 Years", sub: "4 semesters" },
         { label: "Eligibility", value: "Graduate", sub: "Any discipline, 45%+" },
@@ -279,7 +343,7 @@ function MbaProgramPage() {
 
     return (
         <>
-                        <style>{`
+            <style>{`
         .mba-ticket {
           position: relative;
           background: #fff;
@@ -372,7 +436,7 @@ function MbaProgramPage() {
                 <div className="container position-relative py-5">
                     <div className="row align-items-center py-4 text-center">
                         <div className="col-lg-10 m-auto">
-                            <p
+                            {/* <p
                                 style={{
                                     ...body,
                                     letterSpacing: "0.14em",
@@ -384,7 +448,7 @@ function MbaProgramPage() {
                                 }}
                             >
                                 ISMR Pune · Academics · Postgraduate
-                            </p>
+                            </p> */}
                             <h1
                                 style={{
                                     ...display,
@@ -394,15 +458,14 @@ function MbaProgramPage() {
                                     margin: 0,
                                     lineHeight: 1.15,
                                     textShadow: "0 2px 8px rgba(0, 0, 0, 0.45)",
+                                    marginTop: "40px"
                                 }}
                             >
                                 {isAnalyticsPage ? (
                                     <>MBA in Business Analytics</>
                                 ) : (
                                     <>
-                                        Master of Business
-                                        <br />
-                                        Administration
+                                        Master of Business Administration (MBA)
                                     </>
                                 )}
                             </h1>
@@ -420,50 +483,18 @@ function MbaProgramPage() {
                                 {isAnalyticsPage ? (
                                     "Master Python, Tableau, predictive modeling, and AI strategy with ISMR's industry-aligned MBA in Business Analytics in Pune."
                                 ) : (
-                                    "A two-year, AICTE-approved MBA with seven industry-aligned specializations — built on practical exposure, expert faculty, and corporate interaction from day one."
+                                    "It’s a Two-Year Full-Time Regular MBA Program with Six Specilaisation"
                                 )}
                             </p>
 
-                            <div className="gap-5 mt-4">
-                                <button
-                                    className="btn mba-cta-btn"
-                                    style={{
-                                        backgroundColor: GOLD,
-                                        color: NAVY,
-                                        fontWeight: 700,
-                                        padding: "12px 28px",
-                                        borderRadius: "8px",
-                                        border: "none",
-                                        fontFamily: body.fontFamily,
-                                        marginRight: "20px"
-                                    }}
-                                    onClick={() => openModal("apply")}
-                                >
-                                    Apply Now
-                                </button>
-                                <button
-                                    className="btn mba-outline-btn"
-                                    style={{
-                                        backgroundColor: "transparent",
-                                        color: "#fff",
-                                        fontWeight: 600,
-                                        padding: "12px 28px",
-                                        borderRadius: "8px",
-                                        border: "1.5px solid rgba(255,255,255,0.6)",
-                                        fontFamily: body.fontFamily,
-                                    }}
-                                    onClick={() => openModal("syllabus")}
-                                >
-                                    Download Syllabus
-                                </button>
-                            </div>
+                           
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* ===== ADMISSION TICKET — QUICK FACTS ===== */}
-            <div className="container" style={{ marginTop: "-42px", position: "relative", zIndex: 2 }}>
+            {/* <div className="container" style={{ marginTop: "-42px", position: "relative", zIndex: 2 }}>
                 <div className="mba-ticket mba-ticket-stub row gx-0 py-4 px-2">
                     {quickFacts.map((fact) => (
                         <div key={fact.label} className="col-6 col-md mba-fact text-center py-2 px-2">
@@ -487,206 +518,284 @@ function MbaProgramPage() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div> */}
 
             {/* ===== PROGRAM DETAILS ===== */}
-            <div className="container-fluid py-5" style={{ backgroundColor: "#f8f9fa" }}>
-                <div className="container">
-                    <div className="mb-5">
-                        <p
-                            style={{
-                                ...body,
-                                letterSpacing: "0.1em",
-                                textTransform: "uppercase",
-                                fontSize: "12.5px",
-                                fontWeight: 700,
-                                color: NAVY_SOFT,
-                                marginBottom: "0.4rem",
-                            }}
-                        >
-                            What to know
-                        </p>
-                        <h2 style={{ ...display, fontSize: "2rem", fontWeight: 800, color: NAVY }}>
-                            Program Details
-                        </h2>
-                    </div>
-
-                    <div className="row g-4 mb-5">
-                        {programDetails.map((d) => (
-                            <div className="col-md-6" key={d.heading}>
-                                <div
-                                    className="mba-detail-card bg-white rounded-3 p-4 h-100"
-                                    style={{ borderTop: `3px solid ${GOLD}` }}
-                                >
-                                    <h5 style={{ ...display, color: NAVY, fontWeight: 700, marginBottom: "0.6rem" }}>
-                                        {d.heading}
-                                    </h5>
-                                    <p style={{ ...body, fontSize: "15px", color: "#444", textAlign: "justify", margin: 0 }}>
-                                        {d.body}
-                                    </p>
+            <style>{`
+        .mbx-heading { font-size: 1.9rem; font-weight: 800; margin: 0 0 1.25rem; }
+        .mbx-rule { width: 56px; height: 4px; background: ${GOLD}; border-radius: 2px; margin: -0.6rem 0 1.5rem; }
+        .mbx-fact { display: grid; grid-template-columns: 170px 1fr; gap: 1rem; padding: 0.8rem 0; border-bottom: 1px solid #e3e6ec; }
+        .mbx-fact:last-child { border-bottom: 0; }
+        .mbx-fact dt { font-weight: 700; color: ${NAVY_SOFT}; font-size: 14px; margin: 0; }
+        .mbx-fact dd { margin: 0; color: #222; font-size: 15px; }
+        .mbx-tick { flex: 0 0 22px; height: 22px; border-radius: 50%; background: ${NAVY}; color: ${GOLD}; font-size: 12px; display: inline-flex; align-items: center; justify-content: center; margin-top: 2px; }
+        .mbx-spec { padding: 0.85rem 1rem; margin-bottom: 0.5rem; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 15px; border: 1px solid #dee2e6; background: #f8f9fa; color: #212529; transition: background-color .15s, color .15s; text-align: left; width: 100%; }
+        .mbx-spec:hover { background: #eef1f7; }
+        .mbx-spec.is-active { background: ${NAVY}; color: #fff; border-color: ${NAVY}; }
+        .mbx-spec:focus-visible, .mbx-link:focus-visible { outline: 3px solid ${GOLD}; outline-offset: 2px; }
+        .mbx-link { background: none; border: 0; padding: 0; font-weight: 700; color: ${NAVY}; text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+        .mbx-pill { display: inline-block; padding: 0.55rem 1rem; margin: 0 0.5rem 0.6rem 0; border: 1.5px solid ${NAVY}; color: ${NAVY}; border-radius: 999px; font-weight: 600; font-size: 14.5px; background: #fff; }
+        @media (max-width: 575px) { .mbx-fact { grid-template-columns: 1fr; gap: 0.15rem; } }
+    `}</style>
+ 
+    {/* ===== 1. OVERVIEW + AT A GLANCE ===== */}
+    <section className="container-fluid py-5 bg-white">
+        <div className="container">
+            <div className="row g-5">
+                <div className="col-lg-6">
+                    <h2 className="mbx-heading" style={{ ...display, color: NAVY }}>Programme overview</h2>
+                    <div className="mbx-rule" />
+                    <p style={{ ...body, fontSize: "16px", lineHeight: 1.75, color: "#333", textAlign: "justify" }}>
+                        The Master of Business Administration (MBA) is a two-year, full-time postgraduate
+                        management programme designed to develop managerial competence, leadership
+                        capabilities, analytical thinking and entrepreneurial skills among students.
+                    </p>
+                    <p style={{ ...body, fontSize: "16px", lineHeight: 1.75, color: "#333", textAlign: "justify" }}>
+                        The programme follows the applicable curriculum prescribed by Savitribai Phule Pune
+                        University (SPPU) and is designed to provide a strong foundation in business
+                        administration, strategic management, finance, marketing, human resource management,
+                        operations and other functional areas of management.
+                    </p>
+                    <p style={{ ...body, fontSize: "16px", lineHeight: 1.75, color: "#333", textAlign: "justify", marginBottom: 0 }}>
+                        The curriculum emphasizes conceptual understanding, practical application, industry
+                        exposure, research, professional communication and ethical decision-making to prepare
+                        students for managerial responsibilities in a dynamic business environment.
+                    </p>
+                </div>
+ 
+                <div className="col-lg-6">
+                    <div
+                        className="rounded-3 p-4"
+                        style={{ background: "#f8f9fa", borderTop: `4px solid ${GOLD}` }}
+                    >
+                        <h3 style={{ ...display, color: NAVY, fontWeight: 800, fontSize: "1.3rem", marginBottom: "0.5rem" }}>
+                            Programme details
+                        </h3>
+                        <dl style={{ margin: 0, ...body }}>
+                            {programFacts.map((f) => (
+                                <div className="mbx-fact" key={f.label}>
+                                    <dt>{f.label}</dt>
+                                    <dd>{f.value}</dd>
                                 </div>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* ===== SPECIALIZATION EXPLORER ===== */}
-                    <div className="mb-4">
-                        <p
-                            style={{
-                                ...body,
-                                letterSpacing: "0.1em",
-                                textTransform: "uppercase",
-                                fontSize: "12.5px",
-                                fontWeight: 700,
-                                color: NAVY_SOFT,
-                                marginBottom: "0.4rem",
-                            }}
-                        >
-                            Choose your path
-                        </p>
-                        <h2 style={{ ...display, fontSize: "2rem", fontWeight: 800, color: NAVY }}>
-                            Specializations
-                        </h2>
-                    </div>
-
-                    <div className="row g-4">
-                        <div className="col-md-4 col-lg-3">
-                            <div
-                                className="shadow-sm bg-white rounded-3 p-3"
-                                style={{ borderLeft: `4px solid ${NAVY}`, minHeight: "100%" }}
-                            >
-                                {specializations.map((section) => (
-                                    <div
-                                        key={section}
-                                        onClick={() => handleSelectSpecialization(section)}
-                                        className={`mba-spec-item p-3 mb-2 rounded ${activeSection === section ? "text-white" : "text-dark"
-                                            }`}
-                                        style={{
-                                            fontWeight: 600,
-                                            fontSize: "15px",
-                                            cursor: "pointer",
-                                            fontFamily: body.fontFamily,
-                                            backgroundColor: activeSection === section ? NAVY : "#f8f9fa",
-                                            border:
-                                                activeSection === section
-                                                    ? `2px solid ${NAVY}`
-                                                    : "1px solid #dee2e6",
-                                        }}
-                                    >
-                                        {section}
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        <div className="col-md-8 col-lg-9">
-                            <div className="bg-white shadow-sm rounded-3 p-4 p-md-5">
-                                {currentContent ? (
-                                    <div>
-                                        <h3 style={{ ...display, fontWeight: 800, fontSize: "1.6rem", color: NAVY, marginBottom: "0.9rem" }}>
-                                            {currentContent.title}
-                                        </h3>
-                                        <p style={{ ...body, maxWidth: "800px", textAlign: "justify", marginBottom: "0.5rem" }}>
-                                            {visibleDescription}
-                                        </p>
-
-                                        {descriptionIsLong && (
-                                            <div className="d-flex align-items-center gap-3 mb-3">
-                                                <button
-                                                    type="button"
-                                                    className="mba-readmore-btn"
-                                                    onClick={() => {
-                                                        if (specializationRoutes[activeSection]) {
-                                                            navigate(specializationRoutes[activeSection]);
-                                                            window.scrollTo({ top: 0, behavior: "smooth" });
-                                                        }
-                                                    }}
-                                                >
-                                                    Read More →
-                                                </button>
-                                            </div>
-                                        )}
-
-                                        <div style={{ textAlign: "right" }}>
-                                            <button
-                                                className="btn"
-                                                style={{
-                                                    padding: "12px",
-                                                    backgroundColor: NAVY,
-                                                    color: "#fff",
-                                                    border: "none",
-                                                    borderRadius: "8px",
-                                                    fontSize: "16px",
-                                                    fontWeight: 500,
-                                                    fontFamily: body.fontFamily,
-                                                }}
-                                                onClick={() => openModal("syllabus", activeSection)}
-                                            >
-                                                <span>📄</span> Download Syllabus
-                                            </button>
-                                        </div>
-                                    </div>
-                                ) : (
-                                    <div>
-                                        <h3 style={{ ...display, fontWeight: 800, fontSize: "1.6rem", color: NAVY, marginBottom: "0.9rem" }}>
-                                            Seven specializations, one strong core
-                                        </h3>
-                                        <p style={{ ...body, maxWidth: "900px", textAlign: "justify" }}>
-                                            The first year builds a common management foundation;
-                                            the second year lets you specialize. Select a
-                                            specialization from the left to read more and download
-                                            its syllabus.
-                                        </p>
-                                        <Link
-                                            to="/admissions/faq-bba-bca"
-                                            className="btn btn-sm"
-                                            style={{
-                                                backgroundColor: GOLD,
-                                                color: "#2c2626",
-                                                fontWeight: 600,
-                                                fontSize: "16px",
-                                            }}
-                                        >
-                                            FAQ's
-                                        </Link>
-                                    </div>
-                                )}
-                            </div>
-                        </div>
+                            ))}
+                        </dl>
                     </div>
                 </div>
             </div>
-
-            {/* ===== APPLY CTA STRIP ===== */}
-            <section
-                className="py-5 text-center text-white"
-                style={{ background: `linear-gradient(135deg, ${NAVY_SOFT} 0%, ${NAVY} 100%)` }}
-            >
-                <div className="container">
-                    <h3 style={{ ...display, fontWeight: 800, fontSize: "1.8rem", marginBottom: "0.6rem" }}>
-                        Ready to begin your MBA journey?
-                    </h3>
-                    <p style={{ ...body, opacity: 0.9, maxWidth: "560px", margin: "0 auto 1.5rem" }}>
-                        Seats are limited for the July intake. Submit your details and
-                        our admissions team will get in touch.
-                    </p>
-                    <button
-                        className="btn mba-cta-btn"
-                        style={{
-                            backgroundColor: GOLD,
-                            color: NAVY,
-                            fontWeight: 700,
-                            padding: "12px 32px",
-                            borderRadius: "8px",
-                            border: "none",
-                            fontFamily: body.fontFamily,
-                        }}
-                        onClick={() => openModal("apply")}
-                    >
-                        Apply Now
-                    </button>
+        </div>
+    </section>
+ 
+    {/* ===== 2. OBJECTIVES ===== */}
+    <section className="container-fluid py-5" style={{ backgroundColor: "#f8f9fa" }}>
+        <div className="container">
+            <h2 className="mbx-heading" style={{ ...display, color: NAVY }}>Programme objectives</h2>
+            <div className="mbx-rule" />
+            <p style={{ ...body, fontSize: "16px", color: "#444", maxWidth: "720px" }}>
+                The MBA programme aims to:
+            </p>
+            <div className="row g-3">
+                {programObjectives.map((text) => (
+                    <div className="col-md-6" key={text}>
+                        <div className="d-flex gap-3 bg-white rounded-3 p-3 h-100 border">
+                            <span className="mbx-tick" aria-hidden="true">✓</span>
+                            <span style={{ ...body, fontSize: "15px", color: "#333", lineHeight: 1.6 }}>{text}</span>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+ 
+    {/* ===== 3. CURRICULUM + SPECIALIZATION TABS (syllabus download) ===== */}
+    <section className="container-fluid py-5 bg-white">
+        <div className="container">
+            <h2 className="mbx-heading" style={{ ...display, color: NAVY }}>Curriculum and course structure</h2>
+            <div className="mbx-rule" />
+            <p style={{ ...body, fontSize: "16px", lineHeight: 1.75, color: "#333", maxWidth: "820px", marginBottom: "2rem" }}>
+                The MBA curriculum is organized into four semesters. It integrates core management
+                subjects, electives, research-oriented learning, practical assignments and project-based
+                learning, as applicable under the prescribed SPPU curriculum.
+            </p>
+ 
+            <div className="row g-4">
+                <div className="col-md-4 col-lg-3">
+                    <div className="rounded-3 p-3 h-100" style={{ background: "#f8f9fa", borderLeft: `4px solid ${NAVY}` }}>
+                        <p style={{ ...body, fontWeight: 700, color: NAVY_SOFT, fontSize: "14px", marginBottom: "0.75rem" }}>
+                            Select a specialization
+                        </p>
+                        {specializations.map((section) => (
+                            <button
+                                type="button"
+                                key={section}
+                                onClick={() => handleSelectSpecialization(section)}
+                                className={`mbx-spec ${activeSection === section ? "is-active" : ""}`}
+                                aria-pressed={activeSection === section}
+                                style={{ fontFamily: body.fontFamily }}
+                            >
+                                {section}
+                            </button>
+                        ))}
+                    </div>
                 </div>
-            </section>
+ 
+                <div className="col-md-8 col-lg-9">
+                    <div className="rounded-3 p-4 p-md-5 h-100 border" style={{ background: "#fff" }}>
+                        {currentContent ? (
+                            <div>
+                                <h3 style={{ ...display, fontWeight: 800, fontSize: "1.6rem", color: NAVY, marginBottom: "0.9rem" }}>
+                                    {currentContent.title}
+                                </h3>
+                                <p style={{ ...body, maxWidth: "800px", lineHeight: 1.75, textAlign: "justify", marginBottom: "0.75rem" }}>
+                                    {visibleDescription}
+                                </p>
+ 
+                                {descriptionIsLong && (
+                                    <button
+                                        type="button"
+                                        className="mbx-link mb-4"
+                                        style={{ fontFamily: body.fontFamily }}
+                                        onClick={() => {
+                                            if (specializationRoutes[activeSection]) {
+                                                navigate(specializationRoutes[activeSection]);
+                                                window.scrollTo({ top: 0, behavior: "smooth" });
+                                            }
+                                        }}
+                                    >
+                                        Read more about {activeSection}
+                                    </button>
+                                )}
+ 
+                                <div style={{ textAlign: "right" }}>
+                                    <button
+                                        className="btn"
+                                        style={{
+                                            padding: "12px 20px",
+                                            backgroundColor: NAVY,
+                                            color: "#fff",
+                                            border: "none",
+                                            borderRadius: "8px",
+                                            fontSize: "16px",
+                                            fontWeight: 500,
+                                            fontFamily: body.fontFamily,
+                                        }}
+                                        onClick={() => openModal("syllabus", activeSection)}
+                                    >
+                                        <span aria-hidden="true">📄</span> Download syllabus
+                                    </button>
+                                </div>
+                            </div>
+                        ) : (
+                            <div>
+                                <h3 style={{ ...display, fontWeight: 800, fontSize: "1.6rem", color: NAVY, marginBottom: "0.9rem" }}>
+                                    Seven specializations, one strong core
+                                </h3>
+                                <p style={{ ...body, maxWidth: "720px", lineHeight: 1.75, textAlign: "justify" }}>
+                                    The first year builds a common management foundation; the second year lets
+                                    you specialize. Select a specialization on the left to read more and
+                                    download its syllabus.
+                                </p>
+                                <Link
+                                    to="/admissions/faq-bba-bca"
+                                    className="btn btn-sm"
+                                    style={{ backgroundColor: GOLD, color: "#2c2626", fontWeight: 600, fontSize: "16px" }}
+                                >
+                                    FAQs
+                                </Link>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    {/* ===== 4. LEARNING METHODOLOGY ===== */}
+    <section className="container-fluid py-5" style={{ backgroundColor: "#f8f9fa" }}>
+        <div className="container">
+            <h2 className="mbx-heading" style={{ ...display, color: NAVY }}>Learning methodology</h2>
+            <div className="mbx-rule" />
+            <p style={{ ...body, fontSize: "16px", color: "#444", maxWidth: "720px", marginBottom: "1.5rem" }}>
+                The programme promotes an application-oriented approach to management education through
+                suitable teaching and learning methods, including:
+            </p>
+            <div className="row g-3">
+                {learningMethods.map((m) => (
+                    <div className="col-sm-6 col-lg-3" key={m}>
+                        <div
+                            className="bg-white rounded-3 p-3 h-100"
+                            style={{ borderTop: `3px solid ${GOLD}`, ...body, fontSize: "15px", color: "#333", lineHeight: 1.6 }}
+                        >
+                            {m}
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+ 
+    {/* ===== 5. PROGRAMME OUTCOMES ===== */}
+    <section className="container-fluid py-5 bg-white">
+        <div className="container">
+            <h2 className="mbx-heading" style={{ ...display, color: NAVY }}>Programme outcomes</h2>
+            <div className="mbx-rule" />
+            <p style={{ ...body, fontSize: "16px", color: "#444", maxWidth: "720px", marginBottom: "1.5rem" }}>
+                Upon successful completion of the MBA programme, graduates are expected to be able to:
+            </p>
+            <div className="row g-4">
+                {programOutcomes.map((o) => (
+                    <div className="col-md-6" key={o.title}>
+                        <div className="h-100 ps-3" style={{ borderLeft: `4px solid ${GOLD}` }}>
+                            <h3 style={{ ...display, color: NAVY, fontWeight: 700, fontSize: "1.1rem", marginBottom: "0.3rem" }}>
+                                {o.title}
+                            </h3>
+                            <p style={{ ...body, fontSize: "15px", color: "#444", lineHeight: 1.65, margin: 0 }}>{o.text}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+ 
+    {/* ===== 6. CAREER OPPORTUNITIES ===== */}
+    <section className="container-fluid py-5" style={{ backgroundColor: "#f8f9fa" }}>
+        <div className="container">
+            <h2 className="mbx-heading" style={{ ...display, color: NAVY }}>Career opportunities</h2>
+            <div className="mbx-rule" />
+            <p style={{ ...body, fontSize: "16px", color: "#444", maxWidth: "720px", marginBottom: "1.25rem" }}>
+                MBA graduates may pursue career opportunities in areas such as:
+            </p>
+            <div style={{ ...body }}>
+                {careerAreas.map((c) => (
+                    <span className="mbx-pill" key={c}>{c}</span>
+                ))}
+            </div>
+            <p style={{ ...body, fontSize: "14px", color: "#666", marginTop: "0.75rem", marginBottom: 0 }}>
+                Career opportunities depend on individual competencies, specialization, experience,
+                recruitment requirements and market conditions.
+            </p>
+        </div>
+    </section>
+ 
+    {/* ===== 7. ASSESSMENT ===== */}
+    <section className="container-fluid py-5" style={{ backgroundColor: NAVY }}>
+        <div className="container">
+            <div className="row">
+                <div className="col-lg-9">
+                    <h2 className="mbx-heading" style={{ ...display, color: "#fff" }}>Assessment and evaluation</h2>
+                    <p style={{ ...body, fontSize: "16px", lineHeight: 1.75, color: "#e6eaf2", textAlign: "justify" }}>
+                        Student assessment and evaluation shall be conducted according to the examination
+                        rules, assessment scheme, credit requirements and other academic regulations
+                        prescribed by Savitribai Phule Pune University and applicable authorities.
+                    </p>
+                    <p style={{ ...body, fontSize: "16px", lineHeight: 1.75, color: "#e6eaf2", textAlign: "justify", marginBottom: 0 }}>
+                        Evaluation may include internal assessment, university examinations, assignments,
+                        presentations, practical work, training evaluation and project assessment, wherever
+                        prescribed under the applicable curriculum.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
             {/* ===== MODAL (Apply / Syllabus) ===== */}
             {modalMode && (
@@ -762,6 +871,8 @@ function MbaProgramPage() {
                                 className="form-control mb-2"
                             />
                             {errors.city && <small className="text-danger d-block mb-2">{errors.city}</small>}
+
+
 
                             {modalMode === "apply" && (
                                 <>

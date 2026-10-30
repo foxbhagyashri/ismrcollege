@@ -79,11 +79,11 @@ const WhyChooseAdma = () => {
               })}
             </div>
 
-            <div className="text-center mt-5">
+            {/* <div className="text-center mt-5">
               <Link to="Aboutpage/Ismr" className="overview-btn">
                 More reasons to join ISMR →
               </Link>
-            </div>
+            </div> */}
           </Col>
         </Row>
       </Container>

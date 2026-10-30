@@ -100,7 +100,7 @@ export default function AdmissionContact() {
 
   return (
     <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
-      {/* -------- HEADER SECTION -------- */}
+            {/* -------- HEADER SECTION -------- */}
       <section
         className="py-5 text-white text-center position-relative"
         style={{
@@ -127,7 +127,7 @@ export default function AdmissionContact() {
               margin: 0,
             }}
           >
-            Admissions & <span className="text-warning">Contact</span>
+            Admission <span className="text-warning">Contact</span>
           </h1>
           <p
             className="mb-0"
@@ -138,7 +138,7 @@ export default function AdmissionContact() {
               color: "#ffffff",
             }}
           >
-            Admissions • <span className="text-warning">Admissions & Contact</span>
+            Admissions • <span className="text-warning">Admission Contact</span>
           </p>
         </div>
       </section>
@@ -294,14 +294,14 @@ export default function AdmissionContact() {
                 >
                   Call{" "}
                   <a
-                    href="tel:7798316866"
+                    href="tel:9158000595"
                     style={{
                       color: "#d95c5c",
                       textDecoration: "none",
                       fontWeight: "600",
                     }}
                   >
-                    7798316866
+                    9158000595
                   </a>{" "}
                   for urgent admissions help.
                 </p>
@@ -419,7 +419,18 @@ export default function AdmissionContact() {
               )}
 
 
+ <input
+                type="text"
+                name="state"
+                value={form.state}
+                onChange={handleChange}
+                placeholder="State"
+                className="form-control mb-3"
+              />
 
+              {errors.state && (
+                <small className="text-danger">{errors.state}</small>
+              )}
 
 
               <button
@@ -457,7 +468,7 @@ export default function AdmissionContact() {
         </div>
       )}
 
-      <Faq />
+    
     </div>
   );
 }

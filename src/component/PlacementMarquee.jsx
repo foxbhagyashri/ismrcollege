@@ -60,7 +60,7 @@ const PartnersMarquee = () => {
       <div className="partners-trust-strip">
         <div className="partners-trust-item">
           <span className="trust-dot"></span>
-          <span><strong>500+</strong> Recruiting Companies</span>
+          <span><strong>250+</strong> Recruiting Companies</span>
         </div>
         <div className="partners-trust-item">
           <span className="trust-dot"></span>
@@ -68,11 +68,11 @@ const PartnersMarquee = () => {
         </div>
         <div className="partners-trust-item">
           <span className="trust-dot"></span>
-          <span><strong>Highest CTC:</strong> ₹ 18 LPA</span>
+          <span><strong>Highest CTC:</strong> ₹ 12.6 LPA</span>
         </div>
         <div className="partners-trust-item">
           <span className="trust-dot"></span>
-          <span><strong>Average CTC:</strong> ₹ 7.5 LPA</span>
+          <span><strong>Average CTC:</strong> ₹ 5.5 LPA</span>
         </div>
       </div>
     </section>

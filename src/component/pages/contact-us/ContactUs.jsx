@@ -128,7 +128,7 @@ function Contactus() {
           justify-content: flex-start;
           padding: 8px 0;
           color: var(--text-light);
-          font-size: 0.95rem;
+          font-size: 13px;
           transition: all 0.3s ease;
         }
 
@@ -361,21 +361,7 @@ function Contactus() {
         </div>
 
         {/* CTA Section */}
-        <div className="cta-section">
-          <div className="row align-items-center">
-            <div className="col-lg-8">
-              <h2>Build your career with ISMR.</h2>
-              <p>
-                Apply now and become a part of our growing institution. Explore exciting career opportunities in academics, administration, and support services, and grow with a reputed educational organization.
-              </p>
-            </div>
-            <div className="col-lg-4 text-lg-end text-center">
-              <Link to="/application-form"> <button className="btn btn-custom btn-primary-custom">
-                Application Form <i className="fas fa-arrow-right ms-2"></i>
-              </button></Link>
-            </div>
-          </div>
-        </div>
+       
 
         {/* Map Section */}
         <div className="map-section container my-5">

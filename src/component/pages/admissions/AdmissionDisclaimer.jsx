@@ -5,7 +5,7 @@ import Faq from "../../Faq";
 export default function DisclaimerPage() {
   return (
     <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif" }}>
-            {/* Add FontAwesome */}
+      {/* Add FontAwesome */}
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -143,20 +143,26 @@ export default function DisclaimerPage() {
               textAlign: "justify"
             }}
           >
-           Admission to the institution is subject to the rules, regulations, and policies in force at the time of admission. Submission of the application form does not guarantee admission. The institution reserves the right to accept or reject any application without assigning any reason. All information provided by the applicant must be accurate and complete; any false or misleading information may lead to cancellation of admission at any stage. The institution also reserves the right to modify academic policies at any time.
+            Admission to the International School of Management & Research (ISMR), Pune, is subject to the rules, regulations, eligibility criteria, and policies applicable at the time of admission.
           </p>
 
+          <ul>
+            <li><b>Application Submission:</b> Submission of an application form does not guarantee admission to the institution.</li>
+            <li><b>	Admission Decision: </b>ISMR reserves the right to approve or reject any application in accordance with applicable admission criteria and institutional policies.</li>
+            <li><b>Accuracy of Information: </b>Applicants are responsible for providing accurate, complete, and authentic information, along with all required documents.</li>
+            <li><b>	Misrepresentation of Information: </b>Any false, incorrect, incomplete, or misleading information or documentation may result in the cancellation of admission at any stage, subject to applicable rules and regulations.</li>
+            <li><b>	Policy Amendments: </b>ISMR reserves the right to revise or update its academic policies, admission procedures, and institutional regulations from time to time, in accordance with applicable laws and regulatory requirements.</li>
+            <li><b>Compliance: </b>All applicants and admitted students are required to comply with the institution’s rules, regulations, and policies as applicable.</li>
 
+          </ul>
+          <p>By submitting an application, applicants acknowledge that they have read and understood the above terms and agree to abide by the applicable admission policies of ISMR. </p>
 
           {/* IMPORTANT NOTE BOX */}
-         
-
-
 
 
         </div>
       </div>
-      <Faq />
+
     </div>
   );
 }

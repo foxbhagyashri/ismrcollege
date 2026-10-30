@@ -13,7 +13,8 @@ import Footer from "./component/Footer";
 import Sticky from "./component/Sticky";
 import ScrollToTop from "./component/ScrollToTop";
 import SEO from "./component/SEO";
-
+import MbaTabsSection from "./component/Mbatabssection";
+import Careers from "./component/Careers"
 // Home Page Sections
 import Banner from "./component/Banner";
 import Banner2 from "./component/Banner2";
@@ -25,6 +26,7 @@ import HowToApply from "./component/HowToApply";
 import PlacementMarquee from "./component/PlacementMarquee";
 import StudentLife from "./component/StudentLife";
 import WhyChooseAdma from "./component/WhyChooseAdma";
+import VideoSection from "./component/Video";
 
 // 1. About Us Pages
 import AboutUs from "./component/pages/about-us/AboutUs";
@@ -147,12 +149,14 @@ function App() {
                     element={
                         <>
                             <Banner />
+                            <MbaTabsSection />
                             <Marquee />
                             <CounterSection />
-                            <Banner2 />
+                            {/* <Banner2 /> */}
                             <ProgramsSection />
                             <AboutAdmaUniversity />
-                            <HowToApply />
+                            <VideoSection id="https://youtu.be/hC3H64UZGA8" />
+                            {/* <HowToApply /> */}
                             <PlacementMarquee />
                             <StudentLife />
                             <WhyChooseAdma />
@@ -169,6 +173,7 @@ function App() {
                 <Route path="/about-us/leadership-team/treasurer-message" element={<TreasurerMessage />} />
                 <Route path="/about-us/why-ismr" element={<WhyIsmr />} />
                 <Route path="/about-us/awards-and-rankings" element={<AwardsAndRankings />} />
+                   <Route path="/Careers" element={<Careers />} />
 
                 {/* 2. Admissions */}
                 <Route path="/admissions/eligibility-criteria" element={<EligibilityCriteria />} />

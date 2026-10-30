@@ -68,13 +68,13 @@ export default function FeesStructure() {
                             marginBottom: "0.5rem",
                         }}
                     >
-                        Fees 2026 - 2027
+                     Fees Sturcture for 2027 Batch
                     </h3>
 
 
                 </div>
 
-                <div
+                {/* <div
                     className="rounded-3 p-4 p-md-5 text-center"
                     style={{
                         backgroundColor: "#fff",
@@ -86,12 +86,12 @@ export default function FeesStructure() {
                         src="/WhatsApp Image 2025-12-29 at 2.24.21 PM.jpeg"
                         alt="Fees Structure"
                         className="img-fluid mx-auto d-block"
-                    // normal width
+
                     />
-                </div>
+                </div> */}
 
             </div>
-            <Faq />
+           
         </div>
     );
 }

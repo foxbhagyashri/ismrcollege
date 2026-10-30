@@ -25,7 +25,7 @@ const Sticky = () => {
           aria-label="Apply Now"
           onClick={() => setShowModal(true)}
         >
-          Apply Now
+          Apply Online
         </button>
       </div>
 

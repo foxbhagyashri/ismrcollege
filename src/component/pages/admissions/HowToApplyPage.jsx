@@ -42,7 +42,7 @@ export default function HowToApply() {
         setTimeout(() => setSubmitted(false), 3000);
     };
 
-    const [tab, setTab] = useState("overview");
+    const [tab, setTab] = useState("steps");
 
     const [openIndex, setOpenIndex] = useState(null);
 
@@ -52,7 +52,7 @@ export default function HowToApply() {
 
     return (
         <section className="apply-wrapper">
-                        <style>{`
+            <style>{`
 
 .category-tabs {
   display: flex;
@@ -675,10 +675,10 @@ export default function HowToApply() {
                         aria-label="Apply tabs"
                     >
                         {[
-                            "overview",
+
                             "steps",
-                            "documents",
-                            "Important Dates",
+                            "Documents Required for Admissions",
+                            "Important Dates for Admissions",
                         ].map((tabName) => (
                             <button
                                 key={tabName}
@@ -700,111 +700,92 @@ export default function HowToApply() {
                         role="region"
                         aria-live="polite"
                     >
-                        {tab === "overview" && (
-                            <div
-                                id="panel-overview"
-                                aria-labelledby="tab-overview"
-                            >
-                                <h2>Quick Overview</h2>
-                                <p>
-                                    Admission consideration is based on valid
-                                    entrance exam scores (MAH-MBA
-                                    CET/CMAT/CAT/MAT/XAT/ATMA/GMAT) and a
-                                    minimum of 50% marks in graduation (45% for
-                                    reserved categories), along with performance
-                                    in the telephonic interview.
-                                </p>
-                                <div className="cta-row">
-                                    <button
-                                        className="btn-primary"
-                                        aria-label="Apply Now"
-                                        onClick={() => setOpenModal(true)}
-                                    >
-                                        Apply Now
-                                    </button>
-                                    <button
-                                        className="btn-secondary"
-                                        onClick={() => setShowModal(true)}
-                                    >
-                                        Download Brochure
-                                    </button>
-                                </div>
-                            </div>
-                        )}
+
 
                         {tab === "steps" && (
-                            <div
-                                id="panel-steps"
-                                aria-labelledby="tab-steps"
-                            >
+                            <div id="panel-steps" aria-labelledby="tab-steps">
                                 <h2>Step-by-Step Admission Process</h2>
                                 <p>
-                                    Follow these simple steps to complete your
-                                    Admission successfully:
+                                    Follow these simple steps to complete your Admission successfully:
                                 </p>
                                 <div className="step-list">
                                     {[
                                         {
-                                            title: "1. Apply Now",
-                                            desc: "Visit the official website, click on “Apply Online,” fill out the institute’s application form, and pay the registration fee of ₹ 1100 /-.",
+                                            title: "1. Apply Now Rename to Online Registration Form",
+                                            desc: "Visit the official website, click on “Apply Online,” fill out the institute’s application form, and pay the registration fee of ₹ 1100 /-. (Non-Refundable)",
                                         },
-
                                         {
                                             title: "2. Counselling & Telephonic Interview",
-                                            desc: "Once the form is submitted, the admission cell initiates the counselling process followed by an telephonic interview session.",
+                                            desc: "Once the application form is submitted, the ISMR Pune Admissions Cell reviews the candidate’s profile and initiates the counselling process. During this interaction, candidates receive guidance regarding the admission procedure, eligibility criteria, MBA specializations, academic structure, and career opportunities. This is followed by a telephonic or personal interview to understand the candidate’s academic background, career aspirations, communication skills, and interest in the chosen programme. The admissions team also assists candidates with their queries and guides them through the next steps of the admission process.",
                                         },
-
                                         {
-                                            title: "3. Seat Confirmation",
+                                            title: "3. Admission Letter & Seat Confirmation",
                                             desc: (
                                                 <>
-                                                    After the telephonic
-                                                    interview, selected
-                                                    candidates will receive the
-                                                    Admission Letter via email.
-                                                    To confirm their seat, you
-                                                    must pay Rs. 30,000/- within
-                                                    four days of receiving the
-                                                    Admission Letter. Please
-                                                    click on the given link to
-                                                    book your seat –{" "}
-                                                    <a
-                                                        href="https://forms.easebuzz.in/register/ISMR_Pune/ISMR_30k_2026-2028"
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        style={{
-                                                            color: "#0066cc",
-                                                            fontWeight: "600",
-                                                        }}
-                                                    >
-                                                        Click here
-                                                    </a>
+                                                    <p style={{ textAlign: "justify" }}>
+                                                        After successfully completing the telephonic
+                                                        interview, shortlisted candidates will receive their
+                                                        Admission Letter via email from the ISMR Pune
+                                                        Admissions Cell. The letter will contain the
+                                                        relevant admission details and instructions for
+                                                        confirming their admission.
+                                                    </p>
+                                                    <p style={{ textAlign: "justify" }}>
+                                                        To secure your seat at ISMR Pune, candidates are
+                                                        required to pay a seat confirmation fee of
+                                                        ₹30,000/- within three days of receiving the
+                                                        Admission Letter. Timely payment is essential to
+                                                        confirm your admission and proceed with the
+                                                        subsequent admission formalities.
+                                                    </p>
+                                                    <p style={{ textAlign: "justify" }}>
+                                                        Candidates are requested to complete the seat
+                                                        booking process through the official payment link
+                                                        provided below and retain the payment receipt for
+                                                        future reference.
+                                                    </p>
+                                                    <p>
+                                                        <strong>Book Your Seat Now:</strong>{" "}
+                                                        <a
+                                                            href="https://forms.easebuzz.in/register/ISMR_Pune/ISMR_30k_2026-2028"
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            style={{
+                                                                color: "#0066cc",
+                                                                fontWeight: "600",
+                                                            }}
+                                                        >
+                                                            Click Here to Pay ₹30,000/-
+                                                        </a>
+                                                    </p>
+                                                    <p>
+                                                        For any assistance or clarification regarding the
+                                                        admission process, candidates may contact the ISMR
+                                                        Pune Admissions Cell.
+                                                    </p>
                                                 </>
                                             ),
                                         },
                                         {
-                                            title: "4. Provisional Admission",
-                                            desc: "After the seat confirmation , your admission is provisionally confirmed subject to fulfilment of all the required documents.",
+                                            title: "4. Provisional Admission Confirmation",
+                                            desc: "Upon successful payment of the seat confirmation fee, your admission to ISMR Pune will be considered provisionally confirmed, subject to the submission and verification of all required documents and fulfilment of the prescribed eligibility criteria. Candidates must ensure that all necessary academic certificates, entrance examination scorecards, identity proofs, and other applicable documents are submitted to the Admissions Cell within the stipulated timeline. The final confirmation of admission will be granted upon successful verification of the documents and completion of all admission formalities.",
                                         },
                                     ].map((step, index) => (
-                                        <div
-                                            key={index}
-                                            className="step"
-                                        >
+                                        <div key={index} className="step">
                                             <h3>{step.title}</h3>
-                                            <p>{step.desc}</p>
+                                            {typeof step.desc === "string" ? <p style={{ textAlign: "justify" }}>{step.desc}</p> : step.desc}
                                         </div>
                                     ))}
                                 </div>
                             </div>
                         )}
 
-                        {tab === "documents" && (
+                        {tab === "Documents Required for Admissions" && (
                             <div
                                 id="panel-documents"
                                 aria-labelledby="tab-documents"
                             >
-                                <h2>Required Documents</h2>
+                                <h2>Documents Required for Admissions</h2>
                                 <h5>(Documents required for MBA)</h5>
                                 <p>
                                     List of Originals Documents to be Submitted
@@ -930,12 +911,12 @@ export default function HowToApply() {
                                                 <li>
                                                     For any documents related
                                                     queries contact us on
-                                                    +91-7798316866 /
+
                                                     +91-9158000595
                                                 </li>
                                                 <li>
                                                     Last date of documents
-                                                    submission 31 july 2026 .
+                                                    submission 31 july 2027 .
                                                 </li>
                                             </ul>
                                         </div>
@@ -1068,12 +1049,12 @@ export default function HowToApply() {
                                                     <li>
                                                         For any documents related
                                                         queries contact us on
-                                                        +91-7798316866 /
+
                                                         +91-9158000595
                                                     </li>
                                                     <li>
                                                         Last date of documents
-                                                        submission 31 july 2026 .
+                                                        submission 31 july 2027 .
                                                     </li>
                                                 </ul>
                                             </div>
@@ -1212,12 +1193,12 @@ export default function HowToApply() {
                                                     <li>
                                                         For any documents related
                                                         queries contact us on
-                                                        +91-7798316866 /
+
                                                         +91-9158000595
                                                     </li>
                                                     <li>
                                                         Last date of documents
-                                                        submission 31 july 2026 .
+                                                        submission 31 july 2027.
                                                     </li>
                                                 </ul>
                                             </div>
@@ -1338,7 +1319,7 @@ export default function HowToApply() {
                                                     <li>
                                                         For any documents related
                                                         queries contact us on
-                                                        +91-7798316866 /
+
                                                         +91-9158000595
                                                     </li>
                                                     <li>
@@ -1350,7 +1331,7 @@ export default function HowToApply() {
                                                     </li>
                                                     <li>
                                                         Last date of documents
-                                                        submission 31 july 2026 .
+                                                        submission 31 july 2027.
                                                     </li>
                                                 </ul>
                                                 <a
@@ -1369,7 +1350,7 @@ export default function HowToApply() {
                             </div>
                         )}
 
-                        {tab === "Important Dates" && (
+                        {tab === "Important Dates for Admissions" && (
                             <div
                                 id="panel-fees"
                                 aria-labelledby="tab-fees"
@@ -1377,21 +1358,25 @@ export default function HowToApply() {
                                 <h2>Important Dates for Admissions </h2>
                                 <p>
                                     Application fee: <strong>₹ 1100 /-</strong>{" "}
-                                    (online). Fee waiver for eligible categories
-                                    may apply. Payment can be made by clicking
+                                    (Non-Refundable). Payment can be made by clicking
                                     on this link.{" "}
-                                    <a
-                                        href="https://forms.easebuzz.in/register/ISMR_Pune/ISMR_30k_2026-2028"
-                                        target="_blank"
+                                    <button type="button" className="btn btn-sm" onClick={() => setShowModal(true)} style={{
+                                   
+                                    color: "rgb(44, 38, 38)",
+                                    fontWeight: 600,
+                                    fontSize: "18px",
+                                    marginTop: "20px",
+                                    marginBottom: "20px"
+                                }}
                                     >
                                         Click Here
-                                    </a>
+                                    </button>
                                 </p>
                                 <ul>
                                     {[
-                                        "Application Open: Dec 1, 2025",
-                                        "Application Close: 30 June 2026",
-                                        "Eligible Entrance Exam: MAH-MBA CET/CMAT/CAT/MAT/XAT/ATMA/GMAT",
+                                        "Application Start Date: 1st November 2026",
+                                        "Application Closing Date: 30th June 2027",
+                                        "Eligible Entrance Examinations: MAH-MBA CET / CMAT / CAT / MAT / XAT / ATMA",
 
                                         // "Last Date for fee payment: 30 June 2026",
                                     ].map((item, index) => (
@@ -1402,7 +1387,18 @@ export default function HowToApply() {
                                             {item.split(": ")[1]}
                                         </li>
                                     ))}
+
                                 </ul>
+                                <button type="button" className="btn btn-sm" onClick={() => setShowModal(true)} style={{
+                                    backgroundColor: "rgb(255, 195, 51)",
+                                    color: "rgb(44, 38, 38)",
+                                    fontWeight: 600,
+                                    fontSize: "20px",
+                                    marginTop: "20px",
+                                    marginBottom: "20px"
+                                }}>Online Registration Form </button>
+
+                                <p>Apply Now and Take the First Step Towards Your Successful Management Career!</p>
                             </div>
                         )}
                     </div>
@@ -1410,10 +1406,19 @@ export default function HowToApply() {
             </div>
 
             {/* -------- FORM MODAL -------- */}
-            {openModal && (
+            {
+                openModal && (
+                    <ISMRFormModal
+                        open={openModal}
+                        onClose={() => setOpenModal(false)}
+                    />
+                )
+            }
+
+            {showModal && (
                 <ISMRFormModal
-                    open={openModal}
-                    onClose={() => setOpenModal(false)}
+                    open={showModal}
+                    onClose={() => setShowModal(false)}
                 />
             )}
 
@@ -1465,53 +1470,8 @@ export default function HowToApply() {
       )} */}
 
             {/* -------- FORM MODAL -------- */}
-            {showModal && (
-                <div
-                    className="modal-backdrop"
-                    style={{
-                        position: "fixed",
-                        top: 0,
-                        left: 0,
-                        width: "100%",
-                        height: "100%",
-                        backgroundColor: "rgba(0,0,0,0.6)",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        zIndex: 9999,
-                    }}
-                >
-                    <div
-                        className="modal-content rounded-3 p-4"
-                        style={{
-                            backgroundColor: "#fff",
-                            maxWidth: "500px",
-                            width: "90%",
-                        }}
-                    >
-                        <h4 style={{ color: "#0a2240", marginBottom: "1rem" }}>
-                            Fill the form to download brochure
-                        </h4>
+           
 
-                        <Howtoaplydownoadform />
-
-                        <button
-                            onClick={() => setShowModal(false)}
-                            style={{
-                                marginTop: "10px",
-                                background: "transparent",
-                                border: "none",
-                                color: "#d95c5c",
-                                cursor: "pointer",
-                            }}
-                        >
-                            Close
-                        </button>
-                    </div>
-                </div>
-            )}
-
-            <Faq />
-        </section>
+        </section >
     );
 }

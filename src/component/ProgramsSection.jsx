@@ -56,14 +56,7 @@ const ProgramsSection = () => {
       icon: faTruckFast,
       link: "/programs/mba-in-operations-and-supply-chain-management-in-pune",
     },
-    {
-      title: "MBA in Pharma & Healthcare",
-      badge: "2 Years · SPPU Affiliated",
-      description:
-        "Prepare science, pharmacy, and healthcare graduates for leadership roles across hospitals, biotech, and pharmaceutical enterprises.",
-      icon: faNotesMedical,
-      link: "/programs/mba-in-pharma-healthcare-management-in-pune",
-    },
+    
     {
       title: "MBA in Agribusiness Management",
       badge: "2 Years · SPPU Affiliated",
@@ -72,22 +65,8 @@ const ProgramsSection = () => {
       icon: faTractor,
       link: "/programs/mba-in-agribusiness-management-pune",
     },
-    {
-      title: "BBA Programme in Pune",
-      badge: "3 Years · Under Graduate",
-      description:
-        "Bachelor of Business Administration at ISMR Pune equips students with practical business skills, corporate internships, and managerial foundations.",
-      icon: faGraduationCap,
-      link: "/programs/bba-college-in-pune",
-    },
-    {
-      title: "BCA Programme in Pune",
-      badge: "3 Years · Under Graduate",
-      description:
-        "Bachelor of Computer Applications offers hands-on training in software development, AI, cloud computing, and high-growth IT placements.",
-      icon: faLaptopCode,
-      link: "/programs/bca-college-in-pune",
-    },
+
+
   ];
 
   return (

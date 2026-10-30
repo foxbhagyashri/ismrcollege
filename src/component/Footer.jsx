@@ -189,7 +189,7 @@ const Footer = () => {
                                     onClick={() => setShowModal(true)}
                                     className="footer-cta-btn"
                                 >
-                                    <FaPaperPlane className="me-1" /> Apply Now 2026
+                                    <FaPaperPlane className="me-1" /> Apply Now 2027
                                 </button>
                             </div>
                         </Col>
@@ -197,7 +197,7 @@ const Footer = () => {
                         {/* 4. Campus Location & Contact Column */}
                         <Col lg={4} md={6} sm={12} className="footer-col contact-col">
                             <h5 className="footer-heading">Campus & Contact</h5>
-                            
+
                             <div className="contact-info-list mb-2">
                                 <div className="contact-item">
                                     <div className="contact-icon-box">
@@ -205,8 +205,8 @@ const Footer = () => {
                                     </div>
                                     <div className="contact-text">
                                         <span className="contact-label">Admission Helpline:</span>
-                                        <a href="tel:+919373513331" className="contact-link">
-                                            +91 9373513331
+                                        <a href="tel:+919158000595" className="contact-link">
+                                            +91 9158000595
                                         </a>
                                     </div>
                                 </div>
