@@ -7,7 +7,7 @@ const Marquee = () => {
     { id: 1, title: "AICTE Approved" },
     { id: 2, title: "NAAC Accredited" },
     { id: 3, title: "MBA: DTE College Code 6798" },
-    { id: 4, title: "Admission Open for MBA Course 2026-27" },
+    { id: 4, title: "Admission Open for MBA 2027 A.Y" },
     { id: 5, title: "Scholarships for Meritorious Students" },
     { id: 5, title: "Ranked 6th among top Business Schools in the Western Region" },
     { id: 5, title: "Placements: 90% students secured jobs" },

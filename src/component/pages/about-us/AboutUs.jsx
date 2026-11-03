@@ -255,7 +255,7 @@ const InstitutionStats = () => {
         </div>
       </div>
 
-    
+
       {/* -------- VISION, MISSION & PHILOSOPHY SECTION -------- */}
       <section
         className="py-5"

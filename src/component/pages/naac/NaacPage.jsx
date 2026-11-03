@@ -8,6 +8,8 @@ import Faq from "../../Faq";
 
 const brochurePdf = "/ISMR Brochure.pdf";
 
+const cn = (...classes) => classes.filter(Boolean).join(" ");
+
 export default function NaacPage() {
   const [activeTab, setActiveTab] = useState("overview");
 
@@ -121,7 +123,7 @@ export default function NaacPage() {
 
   return (
     <div style={{ fontFamily: "'Inter', Arial, Helvetica, sans-serif", color: "#212529" }}>
-      
+
       {/* -------- HERO BANNER -------- */}
       <section
         className={cn('py-5', 'text-white', 'text-center', 'position-relative')}
@@ -224,9 +226,8 @@ export default function NaacPage() {
                 <button
                   type="button"
                   onClick={() => setActiveTab(tab.id)}
-                  className={`btn btn-sm px-3 py-2 rounded-pill fw-semibold ${
-                    activeTab === tab.id ? "text-dark" : "text-muted"
-                  }`}
+                  className={`btn btn-sm px-3 py-2 rounded-pill fw-semibold ${activeTab === tab.id ? "text-dark" : "text-muted"
+                    }`}
                   style={{
                     backgroundColor: activeTab === tab.id ? "#ffd76d" : "#ffffff",
                     border: activeTab === tab.id ? "2px solid #e5a812" : "1px solid #dee2e6",
@@ -536,7 +537,7 @@ export default function NaacPage() {
       </div>
 
       {/* -------- FAQ COMPONENT -------- */}
-      <Faq />
+   
     </div>
   );
 }

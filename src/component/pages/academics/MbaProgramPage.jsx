@@ -561,6 +561,25 @@ const careerAreas = [
                         exposure, research, professional communication and ethical decision-making to prepare
                         students for managerial responsibilities in a dynamic business environment.
                     </p>
+
+ <button
+                                        className="btn"
+                                        style={{
+                                            padding: "12px 20px",
+                                            backgroundColor: NAVY,
+                                            color: "#fff",
+                                            border: "none",
+                                            borderRadius: "8px",
+                                            fontSize: "16px",
+                                            fontWeight: 500,
+                                            fontFamily: body.fontFamily,
+                                            marginTop: "1.5rem",
+                                        }}
+                                        onClick={() => openModal("syllabus", activeSection)}
+                                    >
+                                        <span aria-hidden="true">📄</span> Download syllabus
+                                    </button>
+
                 </div>
  
                 <div className="col-lg-6">
@@ -607,7 +626,7 @@ const careerAreas = [
     </section>
  
     {/* ===== 3. CURRICULUM + SPECIALIZATION TABS (syllabus download) ===== */}
-    <section className="container-fluid py-5 bg-white">
+    {/* <section className="container-fluid py-5 bg-white">
         <div className="container">
             <h2 className="mbx-heading" style={{ ...display, color: NAVY }}>Curriculum and course structure</h2>
             <div className="mbx-rule" />
@@ -707,7 +726,7 @@ const careerAreas = [
                 </div>
             </div>
         </div>
-    </section>
+    </section> */}
  
     {/* ===== 4. LEARNING METHODOLOGY ===== */}
     <section className="container-fluid py-5" style={{ backgroundColor: "#f8f9fa" }}>
@@ -890,24 +909,7 @@ const careerAreas = [
                                 </>
                             )}
 
-                            <select
-                                name="specialization"
-                                value={form.specialization}
-                                onChange={handleChange}
-                                className="form-select mb-2"
-                            >
-                                <option value="">
-                                    {modalMode === "apply" ? "Preferred Specialization (optional)" : "Select Specialization"}
-                                </option>
-                                {specializations.map((s) => (
-                                    <option key={s} value={s}>
-                                        {s}
-                                    </option>
-                                ))}
-                            </select>
-                            {errors.specialization && (
-                                <small className="text-danger d-block mb-2">{errors.specialization}</small>
-                            )}
+                           
 
                             <button
                                 type="submit"

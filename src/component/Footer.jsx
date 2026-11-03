@@ -86,7 +86,7 @@ const Footer = () => {
                         </Col>
 
                         {/* 2. Top Programs Column */}
-                        <Col lg={2} md={6} sm={6} className="footer-col">
+                        {/* <Col lg={2} md={6} sm={6} className="footer-col">
                             <h5 className="footer-heading">Top Programs</h5>
                             <ul className="footer-nav-list">
                                 <li>
@@ -130,10 +130,10 @@ const Footer = () => {
                                     </Link>
                                 </li>
                             </ul>
-                        </Col>
+                        </Col> */}
 
                         {/* 3. Quick Links & Admissions Column */}
-                        <Col lg={2} md={6} sm={6} className="footer-col">
+                        <Col lg={3} md={6} sm={6} className="footer-col">
                             <h5 className="footer-heading">Quick Links</h5>
                             <ul className="footer-nav-list">
                                 <li>
@@ -142,7 +142,7 @@ const Footer = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/naac" onClick={scrollToTop}>
+                                    <Link to="/naac/NaacPage" onClick={scrollToTop}>
                                         <FaChevronRight className="bullet-icon" /> NAAC Accreditation
                                     </Link>
                                 </li>
@@ -195,7 +195,7 @@ const Footer = () => {
                         </Col>
 
                         {/* 4. Campus Location & Contact Column */}
-                        <Col lg={4} md={6} sm={12} className="footer-col contact-col">
+                        <Col lg={5} md={6} sm={12} className="footer-col contact-col">
                             <h5 className="footer-heading">Campus & Contact</h5>
 
                             <div className="contact-info-list mb-2">

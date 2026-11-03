@@ -224,7 +224,7 @@ function App() {
                 <Route path="/terms-and-conditions" element={<TermsConditions />} />
 
                 {/* 8. NAAC & Notices */}
-                <Route path="/naac" element={<NaacPage />} />
+                <Route path="/naac/NaacPage" element={<NaacPage />} />
                 <Route path="/notices/admission-notice" element={<AdmissionNotice />} />
 
                 {/* 9. Blogs */}

@@ -12,9 +12,9 @@ import "./CounterSection.css";
 
 const CounterSection = () => {
   const counters = [
-    { id: 1, end: 3500, label: "Students Passed", icon: faLaptopCode, suffix: "+" },
-    { id: 2, end: 3100, label: "Student Placed", icon: faUserGraduate, suffix: "+" },
-    { id: 3, end: 600, label: "Companies", icon: faBookOpen, suffix: "+" },
+    { id: 1, end: 1200, label: "Students Passed", icon: faLaptopCode, suffix: "+" },
+    { id: 2, end: 1080, label: "Student Placed", icon: faUserGraduate, suffix: "+" },
+    { id: 3, end: 250, label: "Companies", icon: faBookOpen, suffix: "+" },
     { id: 4, end: 12.6, decimals: 1, label: "Highest Package", icon: faChalkboardTeacher, suffix: " LPA" },
   ];
 

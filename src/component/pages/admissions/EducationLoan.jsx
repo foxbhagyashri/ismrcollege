@@ -357,75 +357,7 @@ export default function EducationLoad() {
         </div>
 
         {/* Call to Action */}
-        <div className="row mt-5">
-          <div className="col-12">
-            <div
-              className="rounded-3 p-4 text-center"
-              style={{
-                backgroundColor: "#FFC333",
-              }}
-            >
-              {/* <h4
-                style={{
-                  fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                  fontSize: "24px",
-                  fontWeight: "700",
-                  color: "#0a2240",
-                  marginBottom: "1rem",
-                }}
-              >
-                <i className="fas fa-phone-alt me-2"></i>
-                Need Help with Your Loan Application?
-              </h4> */}
-
-               <h4
-                style={{
-                  fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                  fontSize: "24px",
-                  fontWeight: "700",
-                  color: "#0a2240",
-                  marginBottom: "1rem",
-                }}
-              >
-              
-                Admissions
-              </h4>
-              <p style={{ fontSize: "16px", color: "#0a2240", marginBottom: "1.5rem" }}>
-
-                <i class='fas fa-envelope'></i>    admissions@ismrpune.edu.in
-              </p>
-              <p style={{ fontSize: "16px", color: "#0a2240", marginBottom: "1.5rem" }}>
-
-
-                <i className="fas fa-phone-alt me-2"></i>   +91 9923786079
-              </p>
-              <a href="tel:9923786079">   <button
-                className="btn fw-semibold"
-                style={{
-                  padding: "12px 40px",
-                  backgroundColor: "#0a2240",
-                  color: "#fff",
-                  border: "none",
-                  borderRadius: "8px",
-                  fontSize: "16px",
-                  fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-                  transition: "all 0.3s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "#1a4d7a";
-                  e.currentTarget.style.transform = "translateY(-2px)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "#0a2240";
-                  e.currentTarget.style.transform = "translateY(0)";
-                }}
-              >
-                <i className="fas fa-envelope me-2"></i>
-                Contact Us
-              </button></a>
-            </div>
-          </div>
-        </div>
+    
       </div>
     
     </div>
